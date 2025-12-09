@@ -313,7 +313,7 @@
 
 #### Q41. When working with objects in your drawings, you normally define their properties via their respective layers. However, you can define individual object properties with the Properties panel on the Home tab of the AutoCAD ribbon. Individual color and linetype can be defined there, along with what other typical object property?
 
-![q42](images/q42_autocad.png?raw=png)
+![q42](images/q42_autocad.png)
 
 - [ ] description
 - [x] plottable or not plottable
@@ -418,7 +418,7 @@
 - [ ] When in the PEDIT command, select multiple lines to convert; then when selecting the Join option, you are prompted for a MINIGAP DISTANCE. This is the minimum gap distance for automatic joining.
 - [ ] When in the PEDIT command, select multiple lines to convert; then when selecting the Join option, you are prompted for a MIN GAP DISTANCE. This is the minimum gap distance for automatic joining.
 
-![q55](images/q75_autocad.png?raw=png)
+![q55](images/q75_autocad.png)
 
 #### Q56. When creating a block with attributes, why should you use underscores (\_) between words in the attribute tag?
 
@@ -548,7 +548,7 @@
 
 #### Q74. When using the POLYGON command in AutoCAD, you can create an inscribed polygon and a circumscribed polygon. What other type of polygon is available?
 
-![q75](images/q75_autocad.png?raw=png)
+![q75](images/q75_autocad.png)
 
 - [ ] side polygon
 - [ ] polyline polygon
@@ -557,7 +557,7 @@
 
 #### Q75. When using blocks in a drawing, a selected block displays only one grip: the insertion point. How would you get a block to display all of its associated grips?
 
-![q76](images/q76_autocad.png?raw=png)
+![q76](images/q76_autocad.png)
 
 - [x] Change the GRIPBLOCK system variable to 1.
 - [ ] Select the block and change it in the Properties palette.

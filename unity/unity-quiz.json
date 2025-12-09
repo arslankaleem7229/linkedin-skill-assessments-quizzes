@@ -1,0 +1,860 @@
+{
+  "quizz": {
+    "id": "8bef854203fa7a13e3507fd4",
+    "title": "Unity (Animation, Asset Management, C# Scripting, Gameplay, Programming)",
+    "description": "Seeded from unity/unity-quiz.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "1b7b13af356ecb25db195ace",
+        "question": "What can you use to visually distinguish between Play mode and Design mode in the editor?",
+        "answer": "Play mode tint",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Play mode tint"],
+        "options": ["The object inspector", "Handles", "Gizmos", "Play mode tint"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5900155178b3051b5c4af2f7",
+        "question": "A developer executes the C# code below, which finds any game objects tagged as \"enemy\" in a start event. But the developer notices that, when executed, FindGameObjectsWithTag returns NULL even though the scene contains objects tagged as \"Enemy\". What is a possible cause?\n`GameObject[] MyEnemies = GameObject.FindGameObjectsWithTag(\"Enemy\");`",
+        "answer": "The objects are deactivated",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["The objects are deactivated"],
+        "options": [
+          "The objects are animated",
+          "The objects are on the UI layer",
+          "The objects are not named \"Enemy\"",
+          "The objects are deactivated"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "201c9225333a28c75f933ed3",
+        "question": "What does this code sample achieve? Float Answer = Random.value \\* 10f;",
+        "answer": "It selects a random number between 0 and 10",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It selects a random number between 0 and 10"],
+        "options": [
+          "It selects a random number that is less than 10",
+          "It selects a random number greater than 10",
+          "It selects a random number between 0 and 10",
+          "It selects a random number that is multiple of 10"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3176aa93225fff784b43c719",
+        "question": "Unity scenes may be saved entirely in the YAML format. Why might you do this?",
+        "answer": "To externally parse a scene and its objects",
+        "explanation": "> Also, the text data can be generated and parsed by tools, making it possible to create and analyze scenes automatically.\n> [Reference](https://docs.unity3d.com/2021.2/Documentation/Manual/TextSceneFormat.html)",
+        "hint": null,
+        "correctAnswer": ["To externally parse a scene and its objects"],
+        "options": [
+          "To reduce scene file size",
+          "To externally parse a scene and its objects",
+          "To optimize scene loading and unloading",
+          "To improve platform compatibility"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6d59c6ce7b04a3a98ec185c9",
+        "question": "Which visual effects are removed by Orthographic cameras?",
+        "answer": "Foreshortening",
+        "explanation": "Gamma color space and bloom are related to graphics. Depth of field is related to objects blurring when at a certain distance from the camera.\n1. [Reference](https://docs.unity3d.com/2022.3/Documentation/Manual/CamerasOverview.html)\n2. [Reference](https://pbr-book.org/3ed-2018/Camera_Models/Projective_Camera_Models#OrthographicCamera)",
+        "hint": null,
+        "correctAnswer": ["Foreshortening"],
+        "options": ["Gamma color space", "Depth of field", "Foreshortening", "Bloom"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "03610b6448047af6e52c9fb3",
+        "question": "What is Cinemachine Virtual Camera used for?",
+        "answer": "To create predefined camera presets to apply to standard cameras",
+        "explanation": "> Use the Aim, Body, and Noise properties to specify how the Virtual Camera animates position, rotation, and other properties. The Virtual Camera applies these settings to the Unity Camera when Cinemachine Brain or Timeline transfers control of the Unity camera to the Virtual Camera.\n> [Reference](https://docs.unity3d.com/Packages/com.unity.cinemachine@2.9/manual/CinemachineVirtualCamera.html)",
+        "hint": null,
+        "correctAnswer": ["To create predefined camera presets to apply to standard cameras"],
+        "options": [
+          "To override standard scene cameras with cinematic behaviors",
+          "To determine what cameras will see when arriving at specific locations",
+          "To create predefined camera presets to apply to standard cameras",
+          "To act as dummy cameras for fooling meshes into thinking they are being seen"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dd80b1f35c434bfd4de24cf3",
+        "question": "What does the Microphone class save captured audio data as?",
+        "answer": "An audio clip asset",
+        "explanation": "The Microphone class saves captured audio as an audio clip asset, which may then be stored as an OGG file.\n[Reference](https://docs.unity3d.com/ScriptReference/Microphone.html)",
+        "hint": null,
+        "correctAnswer": ["An audio clip asset"],
+        "options": ["An audio clip asset", "An MP3 file", "A WAV file", "An OGG file"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6e95ccebb638be5b7fa8de26",
+        "question": "Cinemachine offers tools for building gameplay behaviors. Which component makes spline-based paths for moving objects?",
+        "answer": "Cinemachine Smooth Path",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Cinemachine Smooth Path"],
+        "options": [
+          "Cinemachine Target Group",
+          "Cinemachine Smooth Path",
+          "Cinemachine Free Look",
+          "Cinemachine Brain"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "85199917f433bb69f169a05e",
+        "question": "When building assets like meshes for Unity. Which measurement unit is the most suitable to use?",
+        "answer": "Meters",
+        "explanation": "[Reference](https://docs.unity3d.com/2019.3/Documentation/Manual/BestPracticeMakingBelievableVisuals1.html)Unity's default units are in meters (Unreal Engine too). If you keep this in mind and model with your units aligned to meters, the lighting system will work with minimal artifacts.",
+        "hint": null,
+        "correctAnswer": ["Meters"],
+        "options": ["Cubits", "Feet", "Inches", "Meters"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7467d148307a8efa52ee478d",
+        "question": "The Collaborate feature of Unity Teams empowers whom to do what.",
+        "answer": "Team members to save, share, and sync unity projects",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Team members to save, share, and sync unity projects"],
+        "options": [
+          "Developers to contribute to the unity source code",
+          "Companies to raise money for projects through crowdfunding",
+          "Team members to save, share, and sync unity projects",
+          "Developers to integrate version control systems, like git, into projects"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eab28f89e61ea3a6527265c6",
+        "question": "The Clear Flags property of the Camera components affects which behavior?",
+        "answer": "How the camera renders its background on each frame",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["How the camera renders its background on each frame"],
+        "options": [
+          "How the camera renders UI objects on top of the scene",
+          "How the camera renders transparent objects by default",
+          "How the camera renders its background on each frame",
+          "How the camera occludes background objects"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1ed8a50be1e8e17cc59c74e1",
+        "question": "What is the OnAnimatorMove event on MonoBehaviour objects commonly used for?",
+        "answer": "Modifying the root motion of an animated object",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Modifying the root motion of an animated object"],
+        "options": [
+          "Detecting when an object moves",
+          "Updating a navigation agent in response to keyframe data",
+          "Replaying an animation when it has been completed",
+          "Modifying the root motion of an animated object"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8209af6a5fb9a99459a5fb3f",
+        "question": "Which MonoBehaviour method runs by default in Editor mode?",
+        "answer": "Reset",
+        "explanation": "* Explain- The Reset method is a MonoBehaviour method that runs by default in Editor mode. This method is called when the script is attached to a GameObject or reset in the Inspector. It allows you to initialize or reset the values of variables in the script, ensuring a consistent initial state when working in the Unity Editor.",
+        "hint": null,
+        "correctAnswer": ["Reset"],
+        "options": ["OnBecameInvisible", "OnAnimatorMove", "Reset", "OnTriggerEnter"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1e90995ae5489854fa9e5cb1",
+        "question": "For the OnTriggerEnter function to invoke successfully on a collision between two objects, at least one must have which two components?",
+        "answer": "A Rigidbody and a Collider",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["A Rigidbody and a Collider"],
+        "options": [
+          "A Collider and a MeshRenderer",
+          "A Collider and a MeshFilter",
+          "A Rigidbody and a Collider",
+          "A MeshRenderer and a MeshFilter"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5d6e2b27c66332151f454925",
+        "question": "UI elements, such as images and buttons, may be fixed at specific screen positions to build responsive interfaces. Which Unity features help achieve this?",
+        "answer": "Anchors and pivots",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Anchors and pivots"],
+        "options": [
+          "Events and raycasts",
+          "Quaternions and Euler angles",
+          "Opacity and transparency",
+          "Anchors and pivots"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "80cb893c5ac7d539a4041568",
+        "question": "The occlusion map of a material is often a grayscale image with pixels ranging between black and white. What does this map contribute to an object\u2019s material?",
+        "answer": "White pixels receive full indirect illumination, and black pixels receive none",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "White pixels receive full indirect illumination, and black pixels receive none"
+        ],
+        "options": [
+          "White pixels reveal the detailed map and black pixels reveal none",
+          "White pixels allow emission, and black pixels allow none",
+          "White pixels receive shadows, and black pixels receive none",
+          "White pixels receive full indirect illumination, and black pixels receive none"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "98549f2bf217303a56ce17aa",
+        "question": "What can you use to organize different game objects into groups inside the Hierarchy panel?",
+        "answer": "Empty objects",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Empty objects"],
+        "options": ["Canvas objects", "Event systems", "Empty objects", "Mesh renderers"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9ad4a508ebac9a4a98251450",
+        "question": "The Project Windows search box can filter the display of assets with text commands. Which command displays only texture assets?",
+        "answer": "T:texture",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["T:texture"],
+        "options": ["T:mesh", "T:texture", "T:mesh", "Show textures"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bded225e0d9e54870c739f1e",
+        "question": "A bullet game object is fired from a weapon and travels quickly through the scene using a RigidBody component. It sometimes passes through solid objects even though they have colliders. What is a reasonable strategy for correcting this?",
+        "answer": "Change the Collision Detection property of the Rigidbody to Continuous Dynamic or Continous Speculative",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Change the Collision Detection property of the Rigidbody to Continuous Dynamic or Continous Speculative"
+        ],
+        "options": [
+          "Expand the collider size of all scene objects and the bullets to detect collisions with better time",
+          "Increase the Fixed Time Step value from the Project Settings dialog to change the frequency of the FixedUpdate event",
+          "Change the Collision Detection property of the Rigidbody to Continuous Dynamic or Continous Speculative",
+          "Enable the IsKinematic property of the Rigidbody"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6c53dc94c1e20ce87e781e04",
+        "question": "Some material types may include normal map textures. What does a normal map achieve?",
+        "answer": "It creates the appearance of surface detail on mesh-like bumps, dents, and scratches",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "It creates the appearance of surface detail on mesh-like bumps, dents, and scratches"
+        ],
+        "options": [
+          "It programmatically reduces the polycount of your meshes.",
+          "It displaces mesh geometry with extrusion and bevels to generate higher-poly versions.",
+          "It creates the appearance of surface detail on mesh-like bumps, dents, and scratches",
+          "It is a level-of-detail system that progressively reduces a mesh\u2019s polygons as a scene camera moves farther away from it"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fb0bdb8247ae85495b8720ae",
+        "question": "A SkinnedMeshRenderer component is attached automatically by Unity to some mesh objects when they are added to a scene. Which reason best explains why?",
+        "answer": "The mesh file contains bones and rig data",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["The mesh file contains bones and rig data"],
+        "options": [
+          "The mesh file contains bones and rig data",
+          "The game object also features an animator component",
+          "The game object is a Player-Controlled character",
+          "The mesh file contains a humanoid character"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2660398164896834460e762b",
+        "question": "Which C# attribute can show a private variable in the object inspector?",
+        "answer": "SerializedField",
+        "explanation": "[Reference](https://docs.unity3d.com/ScriptReference/SerializeField.html)",
+        "hint": null,
+        "correctAnswer": ["SerializedField"],
+        "options": ["Range", "HideInInspector", "Serializable", "SerializedField"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b94cc33f9e836a7dd20d7603",
+        "question": "What is a technique for optimizing Unity UI elements?",
+        "answer": "Group static UI elements on one canvas, and dynamic elements on a separate canvas",
+        "explanation": "[Reference](https://unity.com/how-to/unity-ui-optimization-tips) Every time an element on a canvas is updated, the whole canvas is redrawn. If elements are never being updated, keeping them on a single canvas is ideal.",
+        "hint": null,
+        "correctAnswer": [
+          "Group static UI elements on one canvas, and dynamic elements on a separate canvas"
+        ],
+        "options": [
+          "Group static UI elements on one canvas, and dynamic elements on a separate canvas",
+          "Position all canvas objects to the world origin",
+          "Group as many UI elements as possible onto only one canvas",
+          "Divide the screen into multiple canvas objects, each sized to a quarter of the screen size"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eecb4b08a374ed6786de206e",
+        "question": "What does the C# Space attribute used below achieve?\n```c#\n[Space(20)]\nPublic string PlayerName;\n```",
+        "answer": "It inserts 20 pixels of empty space above the variable inside the Object Inspector",
+        "explanation": "[Reference](https://docs.unity3d.com/ScriptReference/SpaceAttribute.html) This is a great way to customize your inspector without writing a new inspector script for it.",
+        "hint": null,
+        "correctAnswer": [
+          "It inserts 20 pixels of empty space above the variable inside the Object Inspector"
+        ],
+        "options": [
+          "It inserts 20 space characters as a default value into the string variable below",
+          "It inserts 20 pixels of margin on all edges around the variable inside the Object Inspector",
+          "It inserts 20 pixels of empty space above the variable inside the Object Inspector",
+          "It inserts 20 pixels of empty space below the variable inside the Object Inspector"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "775958c6222882bbbead9925",
+        "question": "Every time you double-click a C# script file from the Project window, Unity prints the message below (or something very similar) to the console. What is a reasonable step in trying to solve this? Cannot start the process because a file name has not been provided",
+        "answer": "Set Visual Studio as the code default editor via the External Tools tab of the Preferences menu",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Set Visual Studio as the code default editor via the External Tools tab of the Preferences menu"
+        ],
+        "options": [
+          "Search the Project windows for all script files and then rename all of them",
+          "Set Visual Studio as the code default editor via the External Tools tab of the Preferences menu",
+          "Ensure you have specified a Play mode tint color from the Colors tab of the Preferences menu",
+          "Select the Script file, and then select Assets > Find references in Scene from the Application menu"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "45483864c6aa11605cb21f6d",
+        "question": "What are the Console windows useful for?",
+        "answer": "Identifying errors in your script files and project",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Identifying errors in your script files and project"],
+        "options": [
+          "Viewing and editing text files",
+          "Downloading data packets and asset packages",
+          "Typing and executing command line instructions through a shell interface",
+          "Identifying errors in your script files and project"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "817bf590d28243479d38c558",
+        "question": "Sprite atlas assets, large textures containing many smaller sprites, can be optimized by batching together what?",
+        "answer": "Sprites using the same color palette",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Sprites using the same color palette"],
+        "options": [
+          "Sprites that are non-animated",
+          "Sprites that appear together in-game",
+          "Sprites using the same color palette",
+          "Sprites of the same dimensions"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3825dc7d74defa4f799a71cf",
+        "question": "You are making a game where you need to execute your own functions in response to critical animation events for a rigged character. Specifically, there are two events you must handle: when an animation state is entered and when it is exited in the Animator graph. Which class may be used to invoke your code when those two events happen?",
+        "answer": "StateMachineBehaviour",
+        "explanation": "[Reference](https://docs.unity3d.com/ScriptReference/StateMachineBehaviour.html) `OnStateMachineEnter()` and `OnStateMachineExit()` are the methods of the StateMachineBehavior class that handle this. AnimatorClipInfo displays information about the current clip being played, AnimatiorUtility deals with transform hierarchy, and AnimationInfo was removed in version 5.0.",
+        "hint": null,
+        "correctAnswer": ["StateMachineBehaviour"],
+        "options": [
+          "AnimatorClipInfo",
+          "StateMachineBehaviour",
+          "AnimationInfo",
+          "AnimatorUtility"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "832180d4fb455d746b0dcf26",
+        "question": "How can you change the unique bundle identifier for a mobile build?",
+        "answer": "Select Edit > Project Settings > Player from the menu, and then expand the Other Settings tab",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Select Edit > Project Settings > Player from the menu, and then expand the Other Settings tab"
+        ],
+        "options": [
+          "Select Assets > import Package, and then import the Cross-Platform Input Asset Package",
+          "Select Windows > Asset Management > Version Control, and then enter an identifier in the Source field",
+          "Select File > Build Settings. Then, from the Build dialog box, select Android or iOS, and select the Bundle Identifier from the Compression Method drop-down menu.",
+          "Select Edit > Project Settings > Player from the menu, and then expand the Other Settings tab"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6f88aa451a51a6aa81ef3bf9",
+        "question": "Rigidbody components may be added to objects with colliders to make them affected by physical forces. What does the IsKinematic property achieve?",
+        "answer": "It suspends physical forces on the object, allowing manual transofrmations",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "It suspends physical forces on the object, allowing manual transofrmations"
+        ],
+        "options": [
+          "It removes gravity from an object but retains all other forces",
+          "It removes all physical forces from the object, except gravity",
+          "It converts the object into physical forces that affect other objects",
+          "It suspends physical forces on the object, allowing manual transofrmations"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "aad175442aef24df453b2ff2",
+        "question": "The primary directional light in a scene is linked by default to a procedural scene Skybox. What does the rotation of this light control?",
+        "answer": "The night and day status of the skybox",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["The night and day status of the skybox"],
+        "options": [
+          "The orientation of the Skybox",
+          "The night and day status of the skybox",
+          "The acoustics of all audio sources",
+          "The resolution of the skybox"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "797dd5f86d4c95f1cdba7ee8",
+        "question": "You can combine quaternions together through which arithmetic operation?",
+        "answer": "Multiplication",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Multiplication"],
+        "options": ["Multiplication", "Division", "Addition", "Subtraction"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5fc7edc095a9b7b4c5341b2b",
+        "question": "Which feature generates binary tree data to optimize camera rendering in a scene?",
+        "answer": "Occlusion Culling",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Occlusion Culling"],
+        "options": ["Render textures", "Navigation mesh", "Profiler", "Occlusion Culling"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cc83f945ca857b16f53e0429",
+        "question": "How does the Range C# attribute control the interaction behavior of numerical variables in the Object Inspector?",
+        "answer": "It restricts the variable value using a slider widget",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It restricts the variable value using a slider widget"],
+        "options": [
+          "It restricts the variable value using a slider widget",
+          "It validates the variable values through a text box widget",
+          "It restricts the variable values using a color picker widget",
+          "It presents valid options in a drop-down list"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6679db6daf1b4054744b0c9c",
+        "question": "What does this code fragment do when attached to a rigged character?\n```c#\n    public Animator avatar;\n    public Transform lookAtObj;\n    void OnAnimatorIK(int layerIndex)\n    {\n        avatar.SetLookAtPosition(lookAtObj).position;\n        avatar.SetLookAtWeight(If);\n    }\n```",
+        "answer": null,
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [],
+        "options": [
+          "It blends the character's head animation with a second predefined animation",
+          "It makes the character's head face toward the specified target",
+          "It returns the character's head back to a neutral position",
+          "It makes a game object face toward the character's head"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5dea6beec732f1a546e191f2",
+        "question": "The variable Transform.forward is a Vector3 measured in what?",
+        "answer": "Local space",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Local space"],
+        "options": ["Local space", "Innerspace", "Normal space", "World space"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "37feda7b5219001d02ed5537",
+        "question": "De-lighting is associated with which technology?",
+        "answer": "Photogrammetry",
+        "explanation": "`When you use photogrammetry to scan in models from the real world, and bring in those models into Unity (or any renderer), you will notice that the lighting information is baked into the texture. You can remove the baked in lighting information with various tools online, but even Unity themeless wrote a custom tool for just this; check it out!`\n1. [Reference](https://github.com/Unity-Technologies/DeLightingTool)\n2. [Reference](https://github.com/Unity-Technologies/DeLightingTool/blob/master/Assets/DeLightingTool/Documentation/De-LightingTool.pdf)",
+        "hint": null,
+        "correctAnswer": ["Photogrammetry"],
+        "options": ["Virtual reality", "Augmented reality", "Motion capture", "Photogrammetry"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b948f1126be4bc50f070035d",
+        "question": "Humanoid character assets, like NPCs and the player character, feature on Avatar object. Which statement best describes its purpose?",
+        "answer": "Avatar facilitate animation retargeting across different humanoid characters",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Avatar facilitate animation retargeting across different humanoid characters"
+        ],
+        "options": [
+          "Avatars define parameter sets for facial muscle blendshapes",
+          "Avatar facilitate animation retargeting across different humanoid characters",
+          "Avatar define IK data for animated characters",
+          "Avatars describe how textures map on deforming objects during animation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e53dce81ef652dc7ce327c77",
+        "question": "You can perfectly align two mesh objects together at the vertices by using vertex snapping. How do you best access this tool?\n![Vertex](images/Q39.png)",
+        "answer": "While holding down the V key, click and drag your object from a corner vertex to its destination",
+        "explanation": "[Reference](https://docs.unity3d.com/Manual/PositioningGameObjects.html#VtxSnapping)",
+        "hint": null,
+        "correctAnswer": [
+          "While holding down the V key, click and drag your object from a corner vertex to its destination"
+        ],
+        "options": [
+          "Select a mesh object and press the W key over the destination vertex",
+          "While holding down the C key, click and drag from the source to the destination mesh",
+          "Select **Edit > Enable Vertex Snap** from the menu, and then select your object",
+          "While holding down the V key, click and drag your object from a corner vertex to its destination"
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "3902e9089bdc4c98397d68a7",
+            "url": "images/Q39.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "897cfac8f302a39a1ccddeba",
+        "question": "Which statement best describes the function Quaternion.Euler?",
+        "answer": "It converts a 3D orientation that is measured in degrees into a Quaternion",
+        "explanation": "Simplfying the math: Unity uses Quaternions internally to avoid Gimbal lock.\nThe Euler XYZ (Pitch, Yaw, and Roll) axises can lock up when two axies are aligned.\nQuaternion.Euler converts the Euler number provided to the internally used Quarternion, to prevent this problem.\n[Reference](https://docs.unity3d.com/ScriptReference/Quaternion.Euler.html)",
+        "hint": null,
+        "correctAnswer": [
+          "It converts a 3D orientation that is measured in degrees into a Quaternion"
+        ],
+        "options": [
+          "It prints a Quaternion to a string that shows its X, Y, and Z rotation in degrees",
+          "It converts a 3D orientation from Radiens to a Quaternion",
+          "It converts a 3D orientation that is measured in degrees into a Quaternion",
+          "It converts a Quaternion into a Vector3 in which X, Y, and Z are measured in degrees"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0374d03d1827e8652e9dea7e",
+        "question": "What does the Destroy function do?",
+        "answer": "It deletes the specified game object after the current update loop",
+        "explanation": "[Reference](https://docs.unity3d.com/ScriptReference/Object.Destroy.html)`The object obj is destroyed immediately after the current Update loop, or t seconds from now if a time is specified.`",
+        "hint": null,
+        "correctAnswer": ["It deletes the specified game object after the current update loop"],
+        "options": [
+          "It deactivates the specified game object immidiately",
+          "It deletes the specified game object after the current update loop",
+          "It deletes the specified game object when the application terminates",
+          "It deletes the specified game object immidaitely"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c86eab6feb078d9f7cf0451d",
+        "question": "You can programmatically control audio effects, like Pitch and Reverb, from C# scripts using which feature of an Audio Mixer asset?",
+        "answer": "exposed parameters",
+        "explanation": "[Official Unity Tutorial:](https://www.youtube.com/watch?v=9tqi1aXlcpE)`Audio attenuation is about energy loss, commonly refered to as \"gain\". ParamEQ allows you to change the frequency of the audio - \"pitch\", with no C# support. Audio Mixer groups do allow you to control audio effects, but not through C#.`",
+        "hint": null,
+        "correctAnswer": ["exposed parameters"],
+        "options": ["audio attenuation", "exposed parameters", "ParamEQ", "Audio Mixer groups"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1a122ebf0bb43f49a8e5d3d3",
+        "question": "Multiple animations may be mixed together on a single character, selectively on different limbs. Which Mecanim feature supports this?",
+        "answer": "avatar masks",
+        "explanation": "[Reference](https://docs.unity3d.com/Manual/class-AvatarMask.html)`Mip Maps are a technique that improves image quality and reduces rendering speed, at the cost of storage space, by including smaller copies of the image in the same file. Animation events allow you to call functions at points in the timeline.`",
+        "hint": null,
+        "correctAnswer": ["avatar masks"],
+        "options": [
+          "Mip Maps",
+          "avatar masks",
+          "StateMachineBehaviour scripts",
+          "animation events"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "96c5284c9a6262203ad6f3f3",
+        "question": "What does the PlayableDirector component allow you to do?",
+        "answer": "control the playback of a timeline instance in the scene",
+        "explanation": "[Reference](https://docs.unity3d.com/2019.2/Documentation/Manual/class-PlayableDirector.html)`The PlayableDirector component stores the link between a Timeline instance and a Timeline Asset.`",
+        "hint": null,
+        "correctAnswer": ["control the playback of a timeline instance in the scene"],
+        "options": [
+          "run multiple functions on different game objects in parallel",
+          "switch between different scene cameras on demand",
+          "control the playback of a timeline instance in the scene",
+          "record a gameplay session to a video file"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "212f51edeb5efdadf71a1978",
+        "question": "What does the Grid component do?",
+        "answer": "helps you move objects to fixed grid increments",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["helps you move objects to fixed grid increments"],
+        "options": [
+          "generate a grid sprite at world origin",
+          "helps you move objects to fixed grid increments",
+          "reders and isometric grid in the scene during gameplay",
+          "generates a grid mesh at the world origin"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7f20a2c44032b2038b5227bd",
+        "question": "Timeline sequences can initiate code during an animation using which feature?",
+        "answer": "markers",
+        "explanation": "`EventSystem is not a timeline feature, neither are packets. Timeline signals are a subfeature of the markers, markers can directly initiate code, while a signal can only send the signal to a reciver.`\n1. [Reference](https://forum.unity.com/threads/new-in-2019-1-marker-customization.594712)\n2. [Reference](https://blog.unity.com/technology/how-to-create-custom-timeline-markers)",
+        "hint": null,
+        "correctAnswer": ["markers"],
+        "options": ["EventSystem", "markers", "signals", "packets"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3cd47605df29da94a9c1f35c",
+        "question": "Which code sample uses C# properties for creating the health functionality?",
+        "answer": "C",
+        "explanation": "```c#\npublic class Health : MonoBehavior\n{\nprivate float HealthPoints = 100f;\npublic float GetHealth()\n{\nreturn HealthPoints;\n}\npublic void SetHealth(float Change)\n{\nHealthPoints += Change;\nif (HealthPoints <= 0)\nDestroy(gameObject);\n}\n}\n```\n```c#\npublic class Health : MonoBehavior\n{\npublic UnityEvent OnHealthChanged;\nprivate float HealthPoints = 100f;\npublic void SetHealth(float Change)\n{\nHealthPoints += Change;\nOnHealthChanged.Invoke();\n}\npublic void Die()\n{\nDestroy(gameObject);\n}\n}\n```\n```c#\npublic class Health : MonoBehavior\n{\npublic float HealthPoints\n{\nget { return _healthpoints; }\nset\n{\n_healthpoints = value;\nif(_healthpoints <= 0 )\n{\nDestroy(gameObjects);\n}\n}\n}\nprivate float _healthpoints = 100f;\n}\n```\n```c#\npublic class Health : MonoBehaviour\n{\npublic float HealthPoints = 100f;\nprivate void Update()\n{\nif (HealthPoints <- 0)\nDestroy(gameObject);\n}\n}\n```\n`get` and `set` are the clear indicators that a C# property is being used.\n[Reference](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties)",
+        "hint": null,
+        "correctAnswer": ["C"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0f992cd88323a2c70f67560a",
+        "question": "Which statement is not true?",
+        "answer": "C Only humanoid characters feature bones",
+        "explanation": "[Reference](https://docs.unity3d.com/2017.3/Documentation/Manual/GenericAnimations.html)",
+        "hint": null,
+        "correctAnswer": ["C Only humanoid characters feature bones"],
+        "options": [
+          "A Coroutines will continue running on deactivated objects",
+          "B All component scripts inherit from `MonoBehaviour`",
+          "C Only humanoid characters feature bones",
+          "D The `Update` function is never called automatically while an object is deactivated"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c9174d533d8678045ba0c3d3",
+        "question": "When is the `Reset` method of `MonoBehaviour` invoked automatically?",
+        "answer": "B When adding a component to an object or resetting its values in Edit mode",
+        "explanation": "[Reference](https://docs.unity3d.com/ScriptReference/MonoBehaviour.Reset.html)`Reset` is called when the user hits the Reset button in the Inspector's context menu or when adding the component the first time. This function is only called in editor mode.",
+        "hint": null,
+        "correctAnswer": [
+          "B When adding a component to an object or resetting its values in Edit mode"
+        ],
+        "options": [
+          "A When a game object moves from one scene to another",
+          "B When adding a component to an object or resetting its values in Edit mode",
+          "C When a scene begins or is restarted",
+          "D When the scene begins or restarts for a deactivated game object"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "26e726047db91fe3cd925346",
+        "question": "Which C# attribute allows a class and its methods to run inside the editor during Edit mode?",
+        "answer": "D [ExecuteAlways]",
+        "explanation": "`ExecuteAlways` makes instances of a script always execute, both as part of Play Mode and when editing. By default, MonoBehaviours are only executed in Play Mode and only if they are on GameObjects in the main stage containing the user Scenes. By adding this attribute, any instance of the MonoBehaviour will have its callback functions executed at all times.\n1. [Reference](https://docs.unity3d.com/ScriptReference/ExecuteAlways.html)\nDo not fall for `[RunInEditor]`! It looks similar to `MonoBehaviour.runInEditMode` and `[ExecuteInEditMode]` both of which are legit but not mentioned as possible answers.\n2. [Reference](https://docs.unity3d.com/ScriptReference/MonoBehaviour-runInEditMode.html)",
+        "hint": null,
+        "correctAnswer": ["D [ExecuteAlways]"],
+        "options": ["A [Range(0,10)]", "B [Live]", "C [RunInEditor]", "D [ExecuteAlways]"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6cf8d66ed38aa3d922720dcb",
+        "question": "The `IsPointerOverGameObject` static function of the `EventSystem` class is useful for creating which behaviour?",
+        "answer": "C preventing mouse clicks on game objects behind the UI canvas <- i believe this is the correct answer but supervision would be helpful",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "C preventing mouse clicks on game objects behind the UI canvas <- i believe this is the correct answer but supervision would be helpful"
+        ],
+        "options": [
+          "A moving UI elements in sync with the cursor as it drags across the screen",
+          "B changing the highlight of buttons as the cursor moves over them",
+          "C preventing mouse clicks on game objects behind the UI canvas <- i believe this is the correct answer but supervision would be helpful",
+          "D identifying which 3D object the cursor is hovering over"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2d42469406447d7e9deb86cd",
+        "question": "Which C# code fragment continuously updates an object's yaw (Y rotation)?",
+        "answer": "`c# transform.Rotate(Vector3.right, RotSpeed * Time.deltaTime);`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`c# transform.Rotate(Vector3.right, RotSpeed * Time.deltaTime);`"],
+        "options": [
+          "`c# transform.localRotation *= Quaternion.Euler(0f, RotSpeed * Time.deltaTime, 0f);`",
+          "`c# transform.Rotate(Vector3.right, RotSpeed * Time.deltaTime);`",
+          "`c# transform.RotateAround(Vector3.up, RotSpeed * Time.deltaTime);`",
+          "`c# transform.SetParent(null);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7dd62c4fc98b3526408c2586",
+        "question": "What can you do to improve the searchability of your project's assets?",
+        "answer": "labels",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["labels"],
+        "options": ["labels", "tags", "instance IDs", "layers"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d49723ffcaf97da2155751de",
+        "question": "The Y keyboard shortcut activates which in-editor tool?",
+        "answer": "Rotate",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Rotate"],
+        "options": ["Hide", "Scale", "Transform", "Rotate"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "09d7ac365f4c6b18910dbfcf",
+        "question": "What does the Input.touchCount variable represent?",
+        "answer": "The number of touches currently present on the screen.",
+        "explanation": "[Reference](https://docs.unity3d.com/ScriptReference/Input-touchCount.html)",
+        "hint": null,
+        "correctAnswer": ["The number of touches currently present on the screen."],
+        "options": [
+          "The number of keyboard inputs.",
+          "The number of mouse clicks.",
+          "The number of touches currently present on the screen.",
+          "The number of frame updates."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c365603b2fe63483601574dd",
+        "question": "During gameplay, you need to serialize selected variables (data) of all enemies to send over a network for parsing to generate statistics about the current play session. Which Unity class helps convert object data to JSON text format?",
+        "answer": "JsonUtility",
+        "explanation": "[Reference](https://docs.unity3d.com/Manual/script-Serialization.html)",
+        "hint": null,
+        "correctAnswer": ["JsonUtility"],
+        "options": ["XMLSerializer", "BinaryFormatter", "JsonSerializer", "JsonUtility"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1e59a1055389157a92b95833",
+        "question": "Which texture format is generally avoided in Unity?",
+        "answer": "Uncompressed",
+        "explanation": "[Reference](https://docs.unity3d.com/Manual/texture-compression-formats.html)\n> `Observation`: I tested it in Unity itself and pressing it activated the rotate, scale and transform function, in the documentation (unity 2018.2) it says that it is a unified one, in the documentation of the most recent unity (2022.2) I did not find anything different",
+        "hint": null,
+        "correctAnswer": ["Uncompressed"],
+        "options": ["PNG", "Uncompressed", "JPEG", "GIF"],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "unity/unity-quiz.md",
+    "language": "md",
+    "generatedAt": "2025-12-09T14:56:14.475889+00:00",
+    "warnings": ["Question 35 has no marked correct answers"]
+  }
+}

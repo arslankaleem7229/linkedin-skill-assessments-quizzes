@@ -23,7 +23,7 @@
 
 #### D4. Quanti fori sono stati utilizzati nella realizzazione di questo oggetto?
 
-![image](images/question_4.png?raw=true)
+![image](images/question_4.png)
 
 - [x] 1
 - [ ] 2
@@ -198,7 +198,7 @@
 
 #### D28. Quanti schizzi sono necessari per creare questo oggetto?
 
-![image](images/question_28.png?raw=png)
+![image](images/question_28.png)
 
 - [x] Due
 - [ ] Tre

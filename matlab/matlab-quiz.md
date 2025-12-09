@@ -1000,7 +1000,7 @@ a = [ 1 2 3 4];
 
 #### Q68. This graph could be the result of which block of code?
 
-![MatLab Q41](images/matlab_Q41.png?raw=png)
+![MatLab Q41](images/matlab_Q41.png)
 
 - [x] `a = randn(1,1000); histogram(a) ylabel('counts')`
 - [ ] `a = rand(1,1000); histogram(a) ylabel('counts')`

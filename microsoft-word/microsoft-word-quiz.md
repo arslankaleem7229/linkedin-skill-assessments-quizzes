@@ -116,7 +116,7 @@
 
 #### Q17. What happens in this SmartArt object when you press the Delete key?
 
-![image](images/001.png?raw=png)
+![image](images/001.png)
 
 - [x] The boxes resize to maintain the same overall height.
 - [ ] The object is deleted and a hole is left behind.
@@ -125,7 +125,7 @@
 
 #### Q18. What happens in this SmartArt diagram when you delete the selected object?
 
-![image](images/001.png?raw=png)
+![image](images/001.png)
 
 - [ ] The text from the deleted box merges with the next box's text.
 - [ ] The selected object is deleted and the spacing is preserved where the object was.
@@ -191,7 +191,7 @@
 
 #### Q26. Your document contains two columns of content with a vertical line between the columns, as shown. From where can you delete the line?
 
-![image](images/003.png?raw=png)
+![image](images/003.png)
 
 - [ ] Insert > Text
 - [x] Columns dialog box
@@ -251,7 +251,7 @@
 
 #### Q34. Which formatting option was used to create the effect shown below?
 
-![image](images/004.png?raw=png)
+![image](images/004.png)
 
 - [ ] Drop Cap
 - [x] Subscript
@@ -387,7 +387,7 @@ D. Inserts and Deletions and Formatting are turned off in Show Markup.
 
 #### Q50. In the image below, what do the red bars next to the text indicate?
 
-![image](images/002.png?raw=png)
+![image](images/002.png)
 
 - [ ] Draw tools were used in these areas.
 - [x] Changes were made to these areas.
@@ -521,7 +521,7 @@ A pie chart only reads a single data series from a data source and ignores all o
 
 #### Q65. In the image below, where do you click to hide comments when a document prints?
 
-![image](https://i.imgur.com/JjdzceL.png?raw=png)
+![image](https://i.imgur.com/JjdzceL.png)
 
 - [ ] A
 - [x] B

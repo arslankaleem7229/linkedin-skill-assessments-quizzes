@@ -1,0 +1,1109 @@
+{
+  "quizz": {
+    "id": "af3f296bff5d99f2eca0c3f1",
+    "title": "Androide",
+    "description": "Seeded from android/android-quiz-es.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "b6ba9e44be2daf6d7aaf9e9b",
+        "question": "Para agregar caracter\u00edsticas, componentes y permisos a tu aplicaci\u00f3n de Android, \u00bfqu\u00e9 archivo debe editarse?",
+        "answer": "AndroidManifest.xml",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["AndroidManifest.xml"],
+        "options": [
+          "AndroidManifest.xml",
+          "Componentes.xml",
+          "AppManifest.xml",
+          "ComponentManifest.xml"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "504ef4bea854b3a9ba3eed14",
+        "question": "\u00bfQu\u00e9 atributo XML se debe utilizar para que una vista de imagen sea accesible?",
+        "answer": "android:contentDescription",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["android:contentDescription"],
+        "options": [
+          "android:talkBack",
+          "androide:labelFor",
+          "androide:sugerencia",
+          "android:contentDescription"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c721145068bda72ac8f99744",
+        "question": "Inicias tu aplicaci\u00f3n y cuando navegas a una nueva pantalla se bloquea, \u00bfqu\u00e9 acci\u00f3n NO te ayudar\u00e1 a diagnosticar el problema?",
+        "answer": "Agregue una llamada Thread.sleep() antes de iniciar la nueva actividad.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Agregue una llamada Thread.sleep() antes de iniciar la nueva actividad."
+        ],
+        "options": [
+          "Establezca puntos de interrupci\u00f3n y, a continuaci\u00f3n, recorra el c\u00f3digo l\u00ednea por l\u00ednea",
+          "Utilice las herramientas de generador de perfiles en Android Studio para detectar anomal\u00edas en la CPU y el uso de la red.",
+          "Agregue una llamada Thread.sleep() antes de iniciar la nueva actividad.",
+          "inspeccionar los registros en Logcat."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f8e892309e546bb2cfdfe21a",
+        "question": "\u00bfPor qu\u00e9 las notificaciones push podr\u00edan dejar de funcionar?",
+        "answer": "todas estas respuestas",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["todas estas respuestas"],
+        "options": [
+          "todas estas respuestas",
+          "El token del dispositivo no se est\u00e1 enviando correctamente al proveedor de inserci\u00f3n.",
+          "Google Play Services no est\u00e1 instalado en el deivce/emulador.",
+          "La optimizaci\u00f3n de la bater\u00eda est\u00e1 activada en el dispositivo."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "635d2e99c11280f2f0d60877",
+        "question": "\u00bfCu\u00e1l es el conjunto correcto de clases de componentes necesarias para implementar una RecyclerView de elementos que muestra una lista de widgets verticalmente?",
+        "answer": "&shy;",
+        "explanation": "```java\nRecycleView\nRecyclerView.Adapter<T extends BaseAdapter>\nRecyclerView.ViewHolder<T extends BaseViewHolder>\nLinearLayoutManager\n```\n```java\nRecycleView\nRecyclerView.Adapter\nRecyclerView.ViewHolder<T extends BaseViewHolder>\nLinearLayoutManager\n```\n```java\nRecycleView\nRecyclerView.Adapter\nRecyclerView.ViewHolder\nLinearLayoutManager\n```\n```java\nRecycleView\nRecyclerView.Adapter<VH extends ViewHolder>\nRecyclerView.ViewHolder\nLinearLayoutManager\n```",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "20279f3a3982dc4a926e3e5f",
+        "question": "El sistema Android mata el proceso cuando necesita liberar memoria. La probabilidad de que el sistema mate un proceso dado depende del estado del proceso y de la actividad en ese momento. \u00bfCon la combinaci\u00f3n de proceso y estado de actividad es m\u00e1s probable que sea asesinado?",
+        "answer": "Proceso: En segundo plano; Actividad:Est\u00e1 detenida",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Proceso: En segundo plano; Actividad:Est\u00e1 detenida"],
+        "options": [
+          "Proceso: En segundo plano; Actividad:Est\u00e1 detenida",
+          "Proceso:En segundo plano; Actividad:Est\u00e1 en pausa",
+          "Proceso:En primer plano; Actividad:Se ha iniciado",
+          "Proceso:En primer plano; Actividad:Est\u00e1 en pausa"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d8fa7e8ef7b59e170201782f",
+        "question": "Ha creado una clase NextActivity que se basa en una cadena que contiene algunos datos que pasan dentro de la intenci\u00f3n \u00bfQu\u00e9 fragmento de c\u00f3digo le permite iniciar su actividad?",
+        "answer": "&shy;",
+        "explanation": "```java\nIntent(this, NextActivity::class.java).also { intent ->\nstartActivity(intent)\n}\n```\n```java\nIntent(this, NextActivity::class.java).apply {\nput(EXTRA_NEXT, \"some data\")\n}.also { intent ->\nactivityStart(intent)\n}\n```\n```java\nIntent(this, NextActivity::class.java).apply {\nputExtra(EXTRA_NEXT, \"some data\")\n}.also { intent ->\nstartActivity(intent)\n}\n```\n```java\nIntent(this, NextActivity::class.java).apply {\nput(EXTRA_NEXT, \"some data\")\n}.also { intent ->\nactivityStart(intent)\n}\n```",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6446ce3ba2527fbf0db92c58",
+        "question": "Desea incluir m\u00f3dulos acerca de y de configuraci\u00f3n en el proyecto. \u00bfQu\u00e9 archivos reflejan con precisi\u00f3n su inclusi\u00f3n?",
+        "answer": "en settings.gradle:include ':app',':about' ':settings'",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["en settings.gradle:include ':app',':about' ':settings'"],
+        "options": [
+          "en build.gradle:include ':app',':about' ':settings'",
+          "en settings.gradle:include ':app',':about' ':settings'",
+          "en settings.gradle:include ':about',':settings'",
+          "en gradle.properties:include ':app',':about' ':settings'"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "624a338bc2700469347c7b74",
+        "question": "\u00bfCu\u00e1l es el beneficio de usar @VisibleForTesting anotaci\u00f3n?",
+        "answer": "para denotar que una clase, metos o campo tiene su visibilidad relajada para que el c\u00f3digo sea comprobable",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "para denotar que una clase, metos o campo tiene su visibilidad relajada para que el c\u00f3digo sea comprobable"
+        ],
+        "options": [
+          "para denotar que una clase, metos o campo tiene su visibilidad relajada para que el c\u00f3digo sea comprobable",
+          "para indicar que una clase, m\u00e9todo o campo s\u00f3lo es visible en el c\u00f3digo de prueba",
+          "para denotar que una clase, m\u00e9todo o campo tiene su visibilidad aumentada para que el c\u00f3digo sea menos comprobable",
+          "para generar un error en tiempo de ejecuci\u00f3n si se accede incorrectamente a una clase, metos o campo con esta anotaci\u00f3n"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b0f32565dcfb1dfb06705668",
+        "question": "\u00bfC\u00f3mo especificar\u00eda en el archivo build.gradle que la aplicaci\u00f3n requer\u00eda al menos el nivel de API 21 para ejecutarse, pero que se puede probar en el nivel de API 28?",
+        "answer": "&shy;",
+        "explanation": "```\ndefaultConfig {\n...\nminApiVersion 21\ntargetApiVersion 28\n}\n```\n```\ndefaultConfig {\n...\ntargetSdkVersion 21\ntestSdkVersion 28\n}\n```\n```\ndefaultConfig {\n...\nminSdkVersion 21\ntestApiVersion 28\n}\n```\n```\ndefaultConfig {\n...\nminSdkVersion 21\ntargetSdkVersion 28\n}\n```",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3053caf7722b15ff13af1ad0",
+        "question": "\u00bfCu\u00e1ndo se llamar\u00e1 a onActivityResult() de una actividad?",
+        "answer": "al llamar a finish() en la actividad de destino",
+        "explanation": "[Para m\u00e1s informaci\u00f3n](https://developer.android.com/reference/android/app/Activity)",
+        "hint": null,
+        "correctAnswer": ["al llamar a finish() en la actividad de destino"],
+        "options": [
+          "al llamar a finish()en la actividad principal",
+          "al colocar una aplicaci\u00f3n en segundo plano al vincularla a otra aplicaci\u00f3n",
+          "Cuando se llama a onStop() en la actividad objetivo",
+          "al llamar a finish() en la actividad de destino"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "870c8186068579ddf5363c47",
+        "question": "Debe eliminar un evento basado en su identificador de su API, \u00bfQu\u00e9 fragmento de c\u00f3digo define esa solicitud en Retrofit?",
+        "answer": "@DELETE(\"events/{id}\"); @DELETE(\"events/{id}\")",
+        "explanation": "fun deleteEvent(@Path(\"id\") id: Long): Llamar<Unit>\nfun deleteEvent(@Path(\"id\") id: Long): Llamar<Unit>\nfun deleteEvent(@Path(\"id\") id: Long): Llamar<Unit>\nfun deleteEvent(@Path(\"id\") id: Long): Llamar<Unit>",
+        "hint": null,
+        "correctAnswer": ["@DELETE(\"events/{id}\")", "@DELETE(\"events/{id}\")"],
+        "options": [
+          "@DELETE(\"eventos))",
+          "@DELETE(\"events/{id}\")",
+          "@REMOVE(\"events/{id}\")",
+          "@DELETE(\"events/{id}\")"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "9200a43d58dca285e18914ff",
+        "question": "\u00bfCu\u00e1ndo usar\u00eda un sabor de producto en su configuraci\u00f3n de construcci\u00f3n?",
+        "answer": "cuando desee proporcionar una versi\u00f3n diferente de la aplicaci\u00f3n con configuraci\u00f3n y recursos personalizados",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "cuando desee proporcionar una versi\u00f3n diferente de la aplicaci\u00f3n con configuraci\u00f3n y recursos personalizados"
+        ],
+        "options": [
+          "cuando necesite tener las cadenas de la aplicaci\u00f3n presentes en varios lanuages",
+          "cuando tiene que proporcionar diferentes versiones de la aplicaci\u00f3n en funci\u00f3n del tama\u00f1o del dispositivo f\u00edsico",
+          "cuando desee proporcionar diferentes versiones de la aplicaci\u00f3n en funci\u00f3n de la densidad de la pantalla del dispositivo",
+          "cuando desee proporcionar una versi\u00f3n diferente de la aplicaci\u00f3n con configuraci\u00f3n y recursos personalizados"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c64bc8605c71e295af07128f",
+        "question": "Dado el fragmento siguiente, \u00bfc\u00f3mo obtendr\u00eda acceso a un TextView con un ID de text_home contenido en el archivo de dise\u00f1o de una clase Fragment?\n```java\n  private lateinit var textView: TextView\n  override fun onCreateView(...): View? {\n      val root = inflator.inflator(R>layout.fragment_home, container, false)\n      textView = ??\n      return root\n  }\n```",
+        "answer": "root.findViewById(R.id.text_home)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["root.findViewById(R.id.text_home)"],
+        "options": [
+          "root.getById(R.id.text_home)",
+          "findViewByID(R.id.text_home)",
+          "root.findViewById(R.id.text_home)",
+          "root.find(R.id.text_home)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3e835aec2351a57d24d66e8d",
+        "question": "\u00bfPor qu\u00e9 usas AndroidJUnitRunner cuando ejecutas pruebas de interfaz de usuario?\nAviso: AndroidJUnitRunner nos permite ejecutar pruebas de estilo JUnit3/4 en dispositivos Android",
+        "answer": "El ejecutor de pruebas facilita la carga del paquete de prueba y la aplicaci\u00f3n en prueba en un dispositivo o emulador, ejecuta la prueba e informa de los resultados.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "El ejecutor de pruebas facilita la carga del paquete de prueba y la aplicaci\u00f3n en prueba en un dispositivo o emulador, ejecuta la prueba e informa de los resultados."
+        ],
+        "options": [
+          "El ejecutor de pruebas facilita la carga del paquete de prueba y la aplicaci\u00f3n en prueba en un dispositivo o emulador, ejecuta la prueba e informa de los resultados.",
+          "El ejecutor de pruebas crea capturas de pantalla de cada pantalla que se muestra mientras se ejecutan las pruebas.",
+          "El ejecutor de la prueba facilita la paralelizaci\u00f3n de las clases de prueba al proporcionar para cada clase de prueba.",
+          "El ejecutor de la prueba facilita la interacci\u00f3n con elementos visibles en un dispositivo, independientemente de la actividad o fragmento que tenga foco."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "53284d955b5366a5a01087db",
+        "question": "\u00bfQu\u00e9 le permite restaurar correctamente el estado de un usuario cuando se reinicia una actividad?",
+        "answer": "todas estas respuestas",
+        "explanation": "[Refrencia](https://developer.android.com/topic/libraries/architecture/saving-states)",
+        "hint": null,
+        "correctAnswer": ["todas estas respuestas"],
+        "options": [
+          "el m\u00e9todo onSaveInstance()",
+          "todas estas respuestas",
+          "almacenamiento persistente",
+          "Objetos ViewModel"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6e34f436996f5d2ff66bf1b8",
+        "question": "Dada la definici\u00f3n a continuaci\u00f3n. \u00bfC\u00f3mo se obtendr\u00eda acceso a un TextView con un ID de text_home contenido en el archivo de dise\u00f1o thr de una clase Fragment?",
+        "answer": "root.findViewById(R.id.text_home)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["root.findViewById(R.id.text_home)"],
+        "options": [
+          "root.find(R.id.text_home)",
+          "findViewById(R.id.text_home)",
+          "root.getById(R.id.text_home)",
+          "root.findViewById(R.id.text_home)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a459eba70a374cd2ffa1e623",
+        "question": "SI el subproceso principal est\u00e1 bloqueado durante demasiado tiempo, \u00bfel sistema muestra el cuadro de di\u00e1logo \\_?",
+        "answer": "La aplicaci\u00f3n no responde",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["La aplicaci\u00f3n no responde"],
+        "options": [
+          "El hilo no responde",
+          "Aplicaci\u00f3n en pausa",
+          "La aplicaci\u00f3n no responde",
+          "Aplicaci\u00f3n bloqueada"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1391a53811d437dd581a640d",
+        "question": "\u00bfC\u00f3mo recuperar\u00eda el valor del correo electr\u00f3nico de un usuario de SharedPreferences mientras se asegura de que el valor devuelto no sea nulo?",
+        "answer": "getDefaultSharedPreferances(this).getString(EMAIL,\"\")",
+        "explanation": "**Explicaci\u00f3n:** En el m\u00e9todo \"getDefaultSharedPrefarances(this).getString()\" se pasa el segundo par\u00e1metro para que se pueda devolver, en caso de que la clave no exista. Por lo tanto, debemos pasar una cadena vac\u00eda para devolverla en caso de que la clave no exista.",
+        "hint": null,
+        "correctAnswer": ["getDefaultSharedPreferances(this).getString(EMAIL,\"\")"],
+        "options": [
+          "getPreferances(this).getString(Email,\"\")",
+          "getDefaultSharedPrefarances(this).getString(EMAIL,null)",
+          "getDefaultSharedPreferances(this).getString(EMAIL,\"\")",
+          "getPreferances(this).getString(EMAIL,null)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fea727f6c346b67a475a3571",
+        "question": "\u00bfPor qu\u00e9 es problem\u00e1tico definir tama\u00f1os usando p\u00edxeles en Android?",
+        "answer": "El mismo n\u00famero de p\u00edxeles puede corresponder a diferentes tama\u00f1os f\u00edsicos, lo que afecta a la apariencia de los elementos de la interfaz de usuario.",
+        "explanation": "[Referencia](https://developer.android.com/training/multiscreen/screendensities#:~:text=The%20first%20pitfall%20you%20must,physical%20sizes%20on%20different%20devices.)",
+        "hint": null,
+        "correctAnswer": [
+          "El mismo n\u00famero de p\u00edxeles puede corresponder a diferentes tama\u00f1os f\u00edsicos, lo que afecta a la apariencia de los elementos de la interfaz de usuario."
+        ],
+        "options": [
+          "Aunque la densidad de p\u00edxeles de la pantalla var\u00eda, esto no afecta el uso de p\u00edxeles para definir tama\u00f1os.",
+          "Los dispositivos grandes siempre tienen m\u00e1s p\u00edxeles, por lo que los elementos de la interfaz de usuario se ver\u00e1n afectados si los define con p\u00edxeles.",
+          "El mismo n\u00famero de p\u00edxeles puede corresponder a diferentes tama\u00f1os f\u00edsicos, lo que afecta a la apariencia de los elementos de la interfaz de usuario.",
+          "Los diferentes dispositivos tienen una comprensi\u00f3n diferente de lo que es un p\u00edxel, lo que afecta la apariencia de los elementos de la interfaz de usuario"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "222e9a3442b10cace70d21ea",
+        "question": "Debe obtener una lista de los dispositivos que est\u00e1n conectados a su computadora con la depuraci\u00f3n USB habilitada. \u00bfQu\u00e9 comando se ejecutar\u00eda usando Android Debug Bridge?",
+        "answer": "dispositivos adb",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["dispositivos adb"],
+        "options": ["enumerar dispositivos", "dispositivos adb", "lista avd", "dispositivos dir"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1a67b6d1131de4c8ae1bb527",
+        "question": "\u00bfQu\u00e9 definici\u00f3n dibujable le permite lograr la forma a continuaci\u00f3n?\n![img](image/shape.png)",
+        "answer": "&shy;",
+        "explanation": "```xml\n<shape xmlns:android=\"http://schemas.android.com/apk/res/android\"\nandroid:shape=\"oval\">\n<stroke\nandroid:width=\"4dp\"\nandroid:color=\"@android:color/white\" />\n<solid android:color=\"@android:color/black\" />\n</shape>\n```\n```xml\n<oval xmlns:android=\"http://schemas.android.com/apk/res/android\">\n<stroke android:width=\"4dp\" android:color=\"@android:color/black\"/>\n<solid android:color=\"@android:color/white\"/>\n</oval>\n```\n```xml\n<shape xmlns:android=\"http://schemas.android.com/apk/res/android\"\nandroid:shape=\"oval\">\n<stroke\nandroid:width=\"4dp\"\nandroid:color=\"@android:color/black\" />\n<solid android:color=\"@android:color/white\" />\n</shape>\n```\n```xml\n<shape xmlns:android=\"http://schemas.android.com/apk/res/android\"\nandroid:shape=\"oval\">\n<stroke\nandroid:width=\"4dp\"\nandroid:color=\"@android:color/white\" />\n<solid android:color=\"@android:color/white\" />\n</shape>\n```",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "6d364fd0c616a61e853ef747",
+            "url": "image/shape.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "d393d125d6e9088ca10b3a06",
+        "question": "Para conservar una peque\u00f1a colecci\u00f3n de datos clave-valor, \u00bfqu\u00e9 debe usar?",
+        "answer": "SharedPereferences",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["SharedPereferences"],
+        "options": [
+          "almacenamiento externo de archivos",
+          "SharedPereferences",
+          "SQLite",
+          "almacenamiento interno de archivos"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5df6ba46e57e16c08d7f0dad",
+        "question": "Debe recuperar una lista de fotos de una API. \u00bfQu\u00e9 fragmento de c\u00f3digo define una solicitud HTML GET en Retrofit?",
+        "answer": "@GET(\"foto\")",
+        "explanation": "fun listPhotos(@Path(\"id\") id:Long?) : Llamar<Photo>\nlista divertidaFotos() : Call\\<List<Photo>>\nfun listPhotos() : Llamar<Photo>\nlista divertidaFotos() : Call\\<List<Photo>>",
+        "hint": null,
+        "correctAnswer": ["@GET(\"foto\")"],
+        "options": ["@GET(\"foto/{id}\"}", "@LIST(\"foto\")", "@GET(\"foto\")", "@GET(\"foto\")"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1597afc5a429d4f727b564e0",
+        "question": "Dada la clase de prueba a continuaci\u00f3n, \u00bfqu\u00e9 fragmento de c\u00f3digo ser\u00eda una afirmaci\u00f3n correcta?",
+        "answer": "assertNotNull(resultAdd)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["assertNotNull(resultAdd)"],
+        "options": [
+          "assertThat(resultAdd).is(2.0)",
+          "assertNotNull(resultAdd)",
+          "assertThat(resultAdd).isWqualTo(2.0)",
+          "assertThat(resultAdd)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b4b92b6fee9d5f55e7d7c831",
+        "question": "\u00bfQu\u00e9 etiqueta debe usar para agregar un componente de vista reutilizable a un archivo de dise\u00f1o?",
+        "answer": "`<include/>`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`<include/>`"],
+        "options": ["`<merge/>`", "`<include/>`", "`<layout/>`", "`<add/>`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cf052f057d0e0225bfefe711",
+        "question": "Desea proporcionar un dibujo diferente para los dispositivos que est\u00e1n en modo horizontal y cuyo idioma est\u00e1 establecido en franc\u00e9s. \u00bfQu\u00e9 directorio tiene el nombre correcto?",
+        "answer": "drawable-fr-land",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["drawable-fr-land"],
+        "options": [
+          "fr-land-drawable",
+          "drawable-fr-land",
+          "drawable-french-land",
+          "french-land-drawable"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4ad5c5f57e8e3a5f51dbbd0d",
+        "question": "\u00bfPor qu\u00e9 es posible que debas incluir el siguiente permiso en tu aplicaci\u00f3n?\n`android.permission.ACCESS_NETWORK_STATE`",
+        "answer": "para supervisar el estado de red de los dispositivos para que no intente realizar llamadas de red cuando la red no est\u00e9 disponible",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "para supervisar el estado de red de los dispositivos para que no intente realizar llamadas de red cuando la red no est\u00e9 disponible"
+        ],
+        "options": [
+          "para supervisar la ubicaci\u00f3n de los dispositivos de modo que no intente realizar llamadas de red cuando el usuario est\u00e1 parado",
+          "para solicitar la capacidad de realizar llamadas de red desde la aplicaci\u00f3n",
+          "para supervisar el estado de red del dispositivo de modo que pueda mostrar un banner en la aplicaci\u00f3n al usuario",
+          "para supervisar el estado de red de los dispositivos para que no intente realizar llamadas de red cuando la red no est\u00e9 disponible"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "be537e436a55f8da64b3e9c4",
+        "question": "Qu\u00e9 imagen corresponde mejor a la siguiente `LinearLayout`?\n```xml\n  <LinearLayout\n      android:layout_width=\"match_parent\"\n      android:layout_height=\"match_parent\"\n      android:orientation=\"horizontal\"\n      android:gravity=\"center\">\n      <Button\n                android:layout_width=\"wrap_content\"\n                android:layout_height=\"wrap_content\"\n                android:text=\"Button\" />\n      <Button\n                android:layout_width=\"wrap_content\"\n                android:layout_height=\"wrap_content\"\n                android:text=\"Button\" />\n  </LinearLayout>\n```",
+        "answer": "B",
+        "explanation": "![img](image/00.jpeg)\n![img](image/01.jpeg)\n![img](image/02.jpeg)\n![img](image/03.jpeg)",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "f2214b74027681e7e50e43d2",
+            "url": "image/00.jpeg",
+            "type": "question"
+          },
+          {
+            "id": "b8e2fb3b3f422a5798c2c34e",
+            "url": "image/01.jpeg",
+            "type": "question"
+          },
+          {
+            "id": "eb557c00310466b5662b2632",
+            "url": "image/02.jpeg",
+            "type": "question"
+          },
+          {
+            "id": "740f7d024b14f5b6865f0261",
+            "url": "image/03.jpeg",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "ff4e0873804d17515754ae38",
+        "question": "Desea abrir la aplicaci\u00f3n Marcador predeterminada en un dispositivo. \u00bfQu\u00e9 tiene de malo este c\u00f3digo?\n```java\n  val dialerIntent = Intent()\n  val et = findViewById(R.id.some_edit_text)\n  dialerIntent.action = Intent.ACTION_DIAL\n  dialerIntent.data = Uri.parse(\"tel:\" + et.getText()?.toString())\n  startActivity(dialerIntent)\n```",
+        "answer": "`startActivityWithResult()` debe usarse en lugar de `startActivity()` cuando se utiliza `Intent.ACTION_DIAL`.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`startActivityWithResult()` debe usarse en lugar de `startActivity()` cuando se utiliza `Intent.ACTION_DIAL`."
+        ],
+        "options": [
+          "`startActivityWithResult()` debe usarse en lugar de `startActivity()` cuando se utiliza `Intent.ACTION_DIAL`.",
+          "Para `Intent.ACTION_DIAL`el `Intent` opci\u00f3n `Intent.FLAG_ACTIVITY_NEW_TASK` Debe agregarse al utilizar esto `dialerIntent`.",
+          "El `dialerIntent` provocar\u00e1 que se lance una excepci\u00f3n ActivityNotFoundException en dispositivos que no admiten `Intent.ACTION_DIAL`.",
+          "El permiso `android.permission.CALL_PHONE` debe solicitarse primero antes `Intent.ACTION_DIAL` se puede utilizar."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f71caee8b7e0279cdf039258",
+        "question": "\u00bfCu\u00e1ndo debe almacenar archivos en el `/assets` \u00bfdirectorio?",
+        "answer": "cuando necesite acceso a los nombres de archivo originales y a la jerarqu\u00eda de archivos [(Referencia)](https://medium.com/mobile-app-development-publication/assets-or-resource-raw-folder-of-android-5bdc042570e0)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "cuando necesite acceso a los nombres de archivo originales y a la jerarqu\u00eda de archivos [(Referencia)](https://medium.com/mobile-app-development-publication/assets-or-resource-raw-folder-of-android-5bdc042570e0)"
+        ],
+        "options": [
+          "cuando necesite acceso a los nombres de archivo originales y a la jerarqu\u00eda de archivos [(Referencia)](https://medium.com/mobile-app-development-publication/assets-or-resource-raw-folder-of-android-5bdc042570e0)",
+          "cuando necesite acceder al archivo con su `resource ID`gustar `R.assets.filename`",
+          "cuando tiene archivos XML que definen animaciones de interpolaci\u00f3n",
+          "cuando necesite acceder al archivo en su forma sin formato utilizando `Resources.openRawResource()`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a4feec63f4b48a2a88dff8f2",
+        "question": "Quieres permitir que los usuarios tomen fotograf\u00edas en tu aplicaci\u00f3n. Que es _no_ una ventaja de crear un `intent`, en lugar de solicitar el permiso de la c\u00e1mara directamente?",
+        "answer": "Usted tiene control total sobre la experiencia del usuario. La aplicaci\u00f3n que controla la c\u00e1mara `intent` respetar\u00e1 sus elecciones de dise\u00f1o.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Usted tiene control total sobre la experiencia del usuario. La aplicaci\u00f3n que controla la c\u00e1mara `intent` respetar\u00e1 sus elecciones de dise\u00f1o."
+        ],
+        "options": [
+          "Los usuarios pueden seleccionar sus aplicaciones de fotos favoritas para tomar fotos.",
+          "No tienes que hacer una solicitud de permiso en tu aplicaci\u00f3n para tomar una foto.",
+          "Usted tiene control total sobre la experiencia del usuario. La aplicaci\u00f3n que controla la c\u00e1mara `intent` respetar\u00e1 sus elecciones de dise\u00f1o.",
+          "No es necesario dise\u00f1ar la interfaz de usuario. La aplicaci\u00f3n que controla la c\u00e1mara `intent` proporcionar\u00e1 la interfaz de usuario."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b3c2ba50a18472fb3062bd76",
+        "question": "\u00bfCu\u00e1ndo usar\u00eda el `ActivityCompat.shouldShowRequestPermissionRationale()` \u00bffunci\u00f3n?",
+        "answer": "cuando un usuario ha denegado previamente la solicitud de un permiso determinado y ha seleccionado \"No volver a preguntar\", pero necesita el permiso para que su aplicaci\u00f3n funcione",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "cuando un usuario ha denegado previamente la solicitud de un permiso determinado y ha seleccionado \"No volver a preguntar\", pero necesita el permiso para que su aplicaci\u00f3n funcione"
+        ],
+        "options": [
+          "cuando un usuario abre la aplicaci\u00f3n por primera vez y desea proporcionar una explicaci\u00f3n para el uso de un permiso determinado",
+          "cuando un usuario ha denegado previamente la solicitud de un permiso determinado y selecciona \"Cu\u00e9ntame m\u00e1s\"",
+          "cuando un usuario ha denegado previamente la solicitud de un permiso determinado y desea proporcionar una explicaci\u00f3n de su uso",
+          "cuando un usuario ha denegado previamente la solicitud de un permiso determinado y ha seleccionado \"No volver a preguntar\", pero necesita el permiso para que su aplicaci\u00f3n funcione"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a0aaf45d693ba289f8f4de37",
+        "question": "Desea habilitar el seguimiento anal\u00edtico solo en `release` Construye. \u00bfC\u00f3mo se puede crear un nuevo campo en el generado? `BuildConfig` para almacenar ese valor?",
+        "answer": "&shy;",
+        "explanation": "```\nbuildTypes {\ndebug {\nbuildConfig 'boolean', 'ENABLE_ANALYTICS', 'false'\n}\nrelease {\nbuildConfig 'boolean', 'ENABLE_ANALYTICS', 'true'\n}\n}\n```\n```\nbuildTypes {\ndebug {\nbuildConfig 'String', 'ENABLE_ANALYTICS', 'false'\n}\nrelease {\nbuildConfig 'String', 'ENABLE_ANALYTICS', 'true'\n}\n}\n```\n```\nbuildTypes {\ndebug {\nbuildConfigField 'boolean', 'ENABLE_ANALYTICS', 'false'\n}\nrelease {\nbuildConfigField 'boolean', 'ENABLE_ANALYTICS', 'true'\n}\n}\n```\n```\nbuildTypes {\ndebug {\nbuildConfigField 'boolean', 'ENABLE_ANALYTICS', 'true'\n}\nrelease {\nbuildConfigField 'boolean', 'ENABLE_ANALYTICS', 'false'\n}\n}\n```",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e0c568e80939b3ea7183e8db",
+        "question": "Para optimizar el tama\u00f1o de tu APK, \u00bfqu\u00e9 c\u00f3dec de imagen debes usar?",
+        "answer": "WebP [(Referencia)](https://developer.android.com/topic/performance/reduce-apk-size#:~:text=packJPG%20and%20guetzli.-,Use%20WebP%20file%20format,than%20either%20JPEG%20or%20PNG.)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "WebP [(Referencia)](https://developer.android.com/topic/performance/reduce-apk-size#:~:text=packJPG%20and%20guetzli.-,Use%20WebP%20file%20format,than%20either%20JPEG%20or%20PNG.)"
+        ],
+        "options": [
+          "JPG",
+          "PNG",
+          "MPEG",
+          "WebP [(Referencia)](https://developer.android.com/topic/performance/reduce-apk-size#:~:text=packJPG%20and%20guetzli.-,Use%20WebP%20file%20format,than%20either%20JPEG%20or%20PNG.)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "54d4a4cf9047ee8699082fcc",
+        "question": "Ha creado c\u00f3digo para realizar una llamada de red y ha probado que funciona en su entorno de desarrollo. Sin embargo, cuando lo publicas en Play Console, la llamada de red no funciona. \u00bfQu\u00e9 ser\u00e1? _no_ ayudarle a solucionar este problema?",
+        "answer": "uso de las herramientas de generador de perfiles en Android Studio para detectar anomal\u00edas en el uso de la CPU, la memoria y la red",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "uso de las herramientas de generador de perfiles en Android Studio para detectar anomal\u00edas en el uso de la CPU, la memoria y la red"
+        ],
+        "options": [
+          "comprobar si `ProGuard` -KeepClassmembers se han a\u00f1adido a los objetos de transferencia de datos de red (DTO) en cuesti\u00f3n",
+          "uso de las herramientas de generador de perfiles en Android Studio para detectar anomal\u00edas en el uso de la CPU, la memoria y la red",
+          "comprobaci\u00f3n de excepciones en los registros del servidor o en la consola del servidor",
+          "comprobaci\u00f3n de que el objeto de transferencia de datos de red tiene `@SerizlizedName` aplicado a sus propiedades miembro"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bfbee052ae17de6a756f765e",
+        "question": "\u00bfQu\u00e9 fragmento de c\u00f3digo lograr\u00eda el dise\u00f1o que se muestra a continuaci\u00f3n?\n![img](image/04.jpeg)",
+        "answer": "&shy;",
+        "explanation": "```xml\n<androidx.constraintlayout.widget.ConstraintLayout\n...>\n<TextView\nandroid:id=\"@+id/text_dashboard\"\nandroid:layout_width=\"match_parent\"\nandroid:layout_height=\"wrap_content\"\nandroid:layout_marginTop=\"16dp\"\nandroid:padding=\"8dp\"\nandroid:textAlignment=\"center\"\nandroid:text=\"Dashboard\"\napp:layout_constraintEnd_toEndOf=\"parent\"\napp:layout_constraintStart_toStartOf=\"parent\"\napp:layout_constraintTop_toTopOf=\"parent\" />\n</androidx.constraintlayout.widget.ConstraintLayout>\n```\n```xml\n<androidx.constraintlayout.widget.ConstraintLayout\n...>\n<TextView\nandroid:id=\"@+id/text_dashboard\"\nandroid:layout_width=\"match_parent\"\nandroid:layout_height=\"wrap_content\"\nandroid:layout_marginStart=\"8dp\"\nandroid:layout_marginEnd=\"8dp\"\nandroid:textAlignment=\"center\"\nandroid:text=\"Dashboard\"\napp:layout_constraintEnd_toEndOf=\"parent\"\napp:layout_constraintStart_toStartOf=\"parent\"\napp:layout_constraintTop_toTopOf=\"parent\" />\n</androidx.constraintlayout.widget.ConstraintLayout>\n```\n```xml\n<androidx.constraintlayout.widget.ConstraintLayout\n...>\n<TextView\nandroid:id=\"@+id/text_dashboard\"\nandroid:layout_width=\"match_parent\"\nandroid:layout_height=\"wrap_content\"\nandroid:layout_marginStart=\"8dp\"\nandroid:layout_marginTop=\"16dp\"\nandroid:layout_marginEnd=\"8dp\"\nandroid:padding=\"8dp\"\nandroid:textAlignment=\"center\"\nandroid:text=\"Dashboard\"\napp:layout_constraintEnd_toEndOf=\"parent\"\napp:layout_constraintStart_toStartOf=\"parent\"\napp:layout_constraintTop_toTopOf=\"parent\" />\n</androidx.constraintlayout.widget.ConstraintLayout>\n```\n```xml\n<androidx.constraintlayout.widget.ConstraintLayout\n...>\n<TextView\nandroid:id=\"@+id/text_dashboard\"\nandroid:layout_width=\"match_parent\"\nandroid:layout_height=\"wrap_content\"\nandroid:layout_marginStart=\"8dp\"\nandroid:layout_marginTop=\"16dp\"\nandroid:layout_marginEnd=\"8dp\"\nandroid:padding=\"8dp\"\nandroid:text=\"Dashboard\"\napp:layout_constraintEnd_toEndOf=\"parent\"\napp:layout_constraintStart_toStartOf=\"parent\"\n/>\n</androidx.constraintlayout.widget.ConstraintLayout>\n```",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "1ff0158dddb6ee2e4677b2a8",
+            "url": "image/04.jpeg",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "734fd50516884403f34b4861",
+        "question": "Qu\u00e9 conjunto de fuentes es `_not_` disponible para usted de forma predeterminada cuando Android Studio crea un nuevo proyecto?",
+        "answer": "principal",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["principal"],
+        "options": ["prueba", "androidTest", "aplicaci\u00f3n", "principal"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "10a082a1d965419c50662a4a",
+        "question": "\u00bfQu\u00e9 definici\u00f3n impedir\u00e1 que otras aplicaciones accedan a su `Activity` clase a trav\u00e9s de un `intent`?",
+        "answer": "&shy;",
+        "explanation": "```xml\n<activity android:name=\".ExampleActivity\" />\n```\n```xml\n<activity android:name=\".ExampleActivity\">\n<intent-filter>\n<action android:name=\"android.intent.action.SEND\" />\n</intent-filter>\n</activity>\n```\n```xml\n<activity android:name=\".ExampleActivity\">\n<intent-filter>\n<action android:name=\"android.intent.action.MAIN\" />\n<category android:name=\"android.intent.category.LAUNCHER\" />\n</intent-filter>\n</activity>\n```\n```xml\n<activity android:name=\".ExampleActivity\">\n<intent-filter>\n<action android:name=\"android.intent.action.VIEW\" />\n</intent-filter>\n</activity>\n```\n**Explicaci\u00f3n:** Los filtros de intenci\u00f3n se usan para hacer que las actividades sean accesibles para otras aplicaciones mediante intenciones. Por lo tanto, tenemos que elegir opciones que no tengan filtro de intenci\u00f3n para asegurarnos de que no sea accesible por intenci\u00f3n.",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "79b399ce7e4073e0d9680294",
+        "question": "Para preservar la memoria en el dispositivo, \u00bfc\u00f3mo podr\u00eda determinar que el dispositivo del usuario tiene capacidades de almacenamiento limitadas?",
+        "answer": "Utilice el bot\u00f3n `ActivityManager.isLowRamDevice()` m\u00e9todo para averiguar si un dispositivo se define a s\u00ed mismo como \"baja RAM\".",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Utilice el bot\u00f3n `ActivityManager.isLowRamDevice()` m\u00e9todo para averiguar si un dispositivo se define a s\u00ed mismo como \"baja RAM\"."
+        ],
+        "options": [
+          "Utilice el bot\u00f3n `ActivityManager.isLowRamDevice()` m\u00e9todo para averiguar si un dispositivo se define a s\u00ed mismo como \"baja RAM\".",
+          "Utilice el bot\u00f3n `Activity.islowRam()` m\u00e9todo para averiguar si un dispositivo se define a s\u00ed mismo como \"baja RAM\".",
+          "Utilice el bot\u00f3n `ConnectivityManager.hasLowMemory()` m\u00e9todo para averiguar si un dispositivo se define a s\u00ed mismo como \"baja RAM\".",
+          "Realice una solicitud de descarga de im\u00e1genes y compruebe el uso de almacenamiento del dispositivo restante."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ca8e00bc5f540b589bff214a",
+        "question": "Qu\u00e9 es `_not_` una buena manera de reutilizar el c\u00f3digo de Android?",
+        "answer": "Prefiere construir actividades en lugar de fragmentos.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Prefiere construir actividades en lugar de fragmentos."],
+        "options": [
+          "Utilice un m\u00f3dulo Gradle com\u00fan compartido por diferentes proyectos de Android.",
+          "Prefiere crear vistas o fragmentos personalizados sobre las actividades.",
+          "Prefiere construir actividades en lugar de fragmentos.",
+          "Desglose los dise\u00f1os de la interfaz de usuario en elementos comunes y use `<include/>` para incluirlos en otros archivos XML de dise\u00f1o."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "539cfcb9b8041575860a4b1b",
+        "question": "\u00bfQu\u00e9 dise\u00f1o es mejor para jerarqu\u00edas grandes y complejas?",
+        "answer": "ConstraintLayout",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["ConstraintLayout"],
+        "options": ["LinearLayout", "ConstraintLayout", "FrameLayout", "RelativeLayout"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5c19b91f36fc200b47a48497",
+        "question": "Debe actualizar a la \u00faltima versi\u00f3n del complemento Android Gradle. \u00bfQu\u00e9 archivo debe modificar?",
+        "answer": "root_project_dir/build.gradle.",
+        "explanation": "[referencia](https://developer.android.com/studio/releases/gradle-plugin#updating-plugin)",
+        "hint": null,
+        "correctAnswer": ["root_project_dir/build.gradle."],
+        "options": [
+          "root_project_dir/app/build.gradle.",
+          "root_project_dir/settings.gradle.",
+          "root_project_dir/build.gradle.",
+          "root_project_dir/app/gradle.properties."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4c62f52e0591edbb47226b32",
+        "question": "\u00bfPor qu\u00e9 los desarrolladores suelen poner c\u00f3digo de inicializaci\u00f3n de aplicaciones en la clase Application?",
+        "answer": "Se crea una instancia de la clase Application antes que cualquier otra clase cuando se crea el proceso para la aplicaci\u00f3n.",
+        "explanation": "[referencia](https://developer.android.com/reference/android/app/Application)",
+        "hint": null,
+        "correctAnswer": [
+          "Se crea una instancia de la clase Application antes que cualquier otra clase cuando se crea el proceso para la aplicaci\u00f3n."
+        ],
+        "options": [
+          "Se crea una instancia de la clase Application antes que cualquier otra clase cuando se crea el proceso para la aplicaci\u00f3n.",
+          "La clase Application se crea una instancia despu\u00e9s de cualquier solicitud de permisos cuando se crea el proceso para la aplicaci\u00f3n.",
+          "La clase Application se crea cada vez que se inicia una nueva actividad, lo que la hace ideal para el c\u00f3digo de inicializaci\u00f3n.",
+          "La clase Application se crea cada vez que se llama a un servicio en segundo plano, lo que la hace ideal para el c\u00f3digo de inicializaci\u00f3n."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "86a4ad2cc0248c855d74080d",
+        "question": "\u00bfQu\u00e9 carpeta debes usar para los iconos del iniciador de tu aplicaci\u00f3n?",
+        "answer": "/mipmap",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["/mipmap"],
+        "options": ["/dibujable", "/icon", "/mipmap", "/lanzador"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "62c73809f570f951d3b9a191",
+        "question": "\u00bfQu\u00e9 definici\u00f3n dibujable le permite lograr la forma a continuaci\u00f3n?\n![img](image/43.jpeg)",
+        "answer": "&shy;",
+        "explanation": "```xml\n<shape xmlns:android-\"http://schemas.android.com/apk/res/android\"\nandroid:shape-\"oval\">\n<gradient\nandroid:startColor-\"@android:color/white\"\nandroid:endColor-\"@android:color/black\"\nandroid:angle-\"45\"/>\n</shape>\n```\n```xml\n<rectangle xmlns:android-\"http://schemas.android.com/apk/res/android\">\n<gradient\nandroid:startColor-\"@android:color/white\"\nandroid:endColor-\"android:color/black\"\nandroid:angle-\"135\"/>\n</rectangle>\n```\n```xml\n<shape xmlns:android-\"http://schemas.android.com/apk/res/android\"\nandroid:shape-\"rectangle\">\n<gradient\nandroid:startColor-\"@android:color/white\"\nandroid:endColor-\"@android:color/black\"\nandroid:angle-\"135\"/>\n</shape>\n```\n```xml\n<shape xmlns:android-\"http://schemas.android.com/apk/res/android\"\nandroid:shape-\"rectangle\">\n<gradient\nandroid:startColor-\"@android:color/white\"\nandroid:endColor-\"@android:color/black\"\nandroid:angle-\"98\"/>\n</shape>\n```",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "196dff4470fba60afb4620ee",
+            "url": "image/43.jpeg",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "2ecd4db310b587ed4b0ca289",
+        "question": "Dado el ConstraintLayout a continuaci\u00f3n, \u00bfqu\u00e9 afirmaci\u00f3n es verdadera?\n![img](image/44.jpeg)",
+        "answer": "La vista B no est\u00e1 restringida verticalmente.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["La vista B no est\u00e1 restringida verticalmente."],
+        "options": [
+          "La vista B no est\u00e1 restringida horizontalmente.",
+          "La vista C tiene demasiadas restricciones.",
+          "La vista B no est\u00e1 restringida verticalmente.",
+          "La vista C est\u00e1 restringida al padre."
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "60c097b3767864f2c8ccdafb",
+            "url": "image/44.jpeg",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "4355c203cb3812115e64fd7d",
+        "question": "Dado este c\u00f3digo snippey de un archivo build.gradle, \u00bfqu\u00e9 opci\u00f3n no es una posible variante de compilaci\u00f3n?\n```\n  android {\n      ...\n      defaultConfig{...}\n      buildTypes{\n      debug{...}\n      releasae{...}\n  }\n    flavorDimensions \"environment\"\n    productFlavors {\n        producation {...}\n        staging {...}\n    }\n  }\n```",
+        "answer": "developmentDebug.",
+        "explanation": "[Referencia](https://developer.android.com/studio/build/build-variants#flavor-dimensions)",
+        "hint": null,
+        "correctAnswer": ["developmentDebug."],
+        "options": [
+          "productionDebug.",
+          "developmentDebug.",
+          "stagingDebug.",
+          "puesta en escenaRelease."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4e0ba81036f8abd20ec1b9ba",
+        "question": "\u00bfCu\u00e1ndo debe usar el directorio androidTest para almacenar sus clases de prueba?",
+        "answer": "cuando las pruebas necesitan ejecutarse en dispositivos reales o virtuales.",
+        "explanation": "[Referencia](https://developer.android.com/studio/test#test_types_and_location)",
+        "hint": null,
+        "correctAnswer": [
+          "cuando las pruebas necesitan ejecutarse en dispositivos reales o virtuales."
+        ],
+        "options": [
+          "cuando las pruebas consistan \u00fanicamente en pruebas unitarias.",
+          "cuando el n\u00famero de pruebas a ejecutar es grande(500+).",
+          "cuando las pruebas deben ejecutarse en su m\u00e1quina local.",
+          "cuando las pruebas necesitan ejecutarse en dispositivos reales o virtuales."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "271da6ab62fc77f9ee8f88b3",
+        "question": "Dado un APK llamado app-internal-debug.apk producido a partir del proceso de compilaci\u00f3n, \u00bfqu\u00e9 afirmaci\u00f3n es probable que sea cierta?",
+        "answer": "Este APK se crea a partir del tipo de compilaci\u00f3n de depuraci\u00f3n y el sabor interno del producto.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Este APK se crea a partir del tipo de compilaci\u00f3n de depuraci\u00f3n y el sabor interno del producto."
+        ],
+        "options": [
+          "Este APK se crea en una m\u00e1quina desarrolladora a partir del sabor del producto de depuraci\u00f3n.",
+          "Este APK se crea a partir del sabor del producto internalDebug.",
+          "Este APK creado a partir del sabor del producto de depuraci\u00f3n y el tipo de compilaci\u00f3n interna.",
+          "Este APK se crea a partir del tipo de compilaci\u00f3n de depuraci\u00f3n y el sabor interno del producto."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3cc88f6c79db7ed893456ea7",
+        "question": "Al intentar compilar el proyecto, \u00bfqu\u00e9 podr\u00eda indicar el siguiente error?\n`Conversion to Dalvik format filed: Unable to execute dex: method ID not in [0, 0xffff]: 65536`",
+        "answer": "Ha superado el n\u00famero total de m\u00e9todos a los que se puede hacer referencia en un \u00fanico archivo DEX.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Ha superado el n\u00famero total de m\u00e9todos a los que se puede hacer referencia en un \u00fanico archivo DEX."
+        ],
+        "options": [
+          "Ha incluido informaci\u00f3n de formato incorect en el archivo build.gradle.",
+          "Ha agregado m\u00e1s de 20 dependencias a su build.gradle.",
+          "Ha superado el n\u00famero total de m\u00e9todos a los que se puede hacer referencia en un \u00fanico archivo DEX.",
+          "Tiene una excepci\u00f3n NullPointerException en el c\u00f3digo."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f96eaaeaa11ea67d99f7cfcf",
+        "question": "\u00bfQu\u00e9 declaraci\u00f3n, en el archivo build.gradle, denota correctamente que el m\u00f3dulo correspondiente es un m\u00f3dulo de biblioteca de Android?",
+        "answer": "aplicar plugin: 'com.android.library'",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["aplicar plugin: 'com.android.library'"],
+        "options": [
+          "aplicar plugin: 'com.module.library'",
+          "aplicar plugin: 'com.android.library'",
+          "aplicar plugin: 'com.module.library'",
+          "incluye plugin: 'com.module.library'"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "78677b3e1a32613631cc180b",
+        "question": "Teniendo en cuenta los siguientes dimens.xml archivo, \u00bfc\u00f3mo definir\u00eda un ImageView con espaciado medio en la parte inferior?\n```xml\n<?xml version=1.0 encoding=\"utf-8\"?>\n<resources>\n    <dimen name=\"spacing_medium\">8dp</dimen>\n    <dimen name=\"spacing_large\">12dp</dimen>\n</resources>\n```",
+        "answer": "&shy;",
+        "explanation": "```xml\n<ImageView\nandroid:id=\"@+id/image_map_pin\"\nandroid:layout_width=\"wrap_content\"\nandroid:layout_heignt=\"wrap_content\"\nandroid:src=@drawable/map_pin />\n```\n```xml\n<ImageView\nandroid:id=\"@+id/image_map_pin\"\nandroid:layout_width=\"wrap_content\"\nandroid:layout_heignt=\"wrap_content\"\nandroi:layout_botttom=\"@dimen/spacing_medium\"\nandroid:src=@drawable/map_pin />\n```\n```xml\n<ImageView\nandroid:id=\"@+id/image_map_pin\"\nandroid:layout_width=\"wrap_content\"\nandroid:layout_heignt=\"wrap_content\"\nandroid:layout_marginBottom=\"@resources/spacing_medium\"\nandroid:src=@drawable/map_pin />\n```\n```xml\n<ImageView\nandroid:id=\"@+id/image_map_pin\"\nandroid:layout_width=\"wrap_content\"\nandroid:layout_heignt=\"wrap_content\"\nandroid:layout_marginBottom=\"@dimen/spacing_medium\"\nandroid:src=@drawable/map_pin />\n```",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3312694c8fff9837f7dca85b",
+        "question": "\u00bfQu\u00e9 no es beneficioso de externalizar los recursos de la aplicaci\u00f3n, como la imagen y la cadena, a partir de un c\u00f3digo?",
+        "answer": "Le permite tener aplicaciones de mayor rendimiento porque el c\u00f3digo y los recursos est\u00e1n separados.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Le permite tener aplicaciones de mayor rendimiento porque el c\u00f3digo y los recursos est\u00e1n separados."
+        ],
+        "options": [
+          "Permite a Android elegir el recurso apropiado en funci\u00f3n de la configuraci\u00f3n actual durante el tiempo de ejecuci\u00f3n.",
+          "Le permite tener aplicaciones de mayor rendimiento porque el c\u00f3digo y los recursos est\u00e1n separados.",
+          "Le permite proporcionar una experiencia Ul diferente basada en la configuraci\u00f3n de idioma del usuario.",
+          "Le permite proporcionar una experiencia Ul diferente basada en el tama\u00f1o del dispositivo del usuario."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba0c32fdaf10adbeb973e708",
+        "question": "\u00bfCu\u00e1l es el prop\u00f3sito principal de la l\u00ednea cinco en este fragmento de c\u00f3digo?\n```java\n  override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanceState) setContentView(R.layout.activity_post_create)\n    if (savedInstanceState != null) return\n    val fragment = CreatePostFragment()\n      supportFragmentManager\n      .beginTransaction()\n      .add(R.id. fragment_container, fragment)\n      .commit()\n  }\n```",
+        "answer": "para asegurarse de que la actividad crea un nuevo fragmento cada vez que se restaura desde un estado anterior",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "para asegurarse de que la actividad crea un nuevo fragmento cada vez que se restaura desde un estado anterior"
+        ],
+        "options": [
+          "para asegurarse de que la actividad finaliza cuando savedInstanceState no es null",
+          "para asegurarse de que la actividad crea un nuevo fragmento cada vez que se restaura desde un estado anterior",
+          "para evitar la visualizaci\u00f3n de dos fragmentos uno al lado del otro en los casos en que la actividad se restaura desde un estado anterior",
+          "para evitar la creaci\u00f3n de fragmentos superpuestos en los casos en que la actividad se restablezca de un estado anterior"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a784a5f0bd28343d75b80a60",
+        "question": "\u00bfQu\u00e9 componente no es un punto de entrada a trav\u00e9s del cual el sistema o un usuario pueden ingresar a su aplicaci\u00f3n?",
+        "answer": "fragmento",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["fragmento"],
+        "options": ["actividad", "proveedor de contenido", "fragmento", "servicio"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8e70860923399b12d544f395",
+        "question": "\u00bfQu\u00e9 debe usar para mostrar una gran lista de elementos de desplazamiento?",
+        "answer": "Vista del reciclador",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Vista del reciclador"],
+        "options": ["ListView", "Vista del reciclador", "LinearLayout", "Scrollview"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6c5b240a8f8ba5d26feb70b9",
+        "question": "Ha creado una clase AboutActivity que muestra detalles sobre la aplicaci\u00f3n. \u00bfQu\u00e9 fragmento de c\u00f3digo te permite iniciar tu actividad?",
+        "answer": "Intent(this, AboutActivity::class.java).also { intent ->",
+        "explanation": "startService(intenci\u00f3n)\n}\nstartActivity(intenci\u00f3n)\n}\nactividad(intenci\u00f3n)\n}\nstartActivity(intenci\u00f3n)\n}\nExplicaci\u00f3n: Intenci\u00f3n(Context packageContext, Class\\<?> cls)\nAviso: Clase no KClass",
+        "hint": null,
+        "correctAnswer": ["Intent(this, AboutActivity::class.java).also { intent ->"],
+        "options": [
+          "Intent(this, AboutActivity::class).also { intent ->",
+          "Intent(this, AboutActivity::class.java).also { intent ->",
+          "Intent(this, AboutActivity::class).also { intent ->",
+          "Intent(this, AboutActivity::class).also { intent ->"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e72e32e39c40e2ee10aabab9",
+        "question": "\u00bfCu\u00e1l es el uso del archivo AndroidManifest.xml?",
+        "answer": "Describe el componente de la aplicaci\u00f3n",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Describe el componente de la aplicaci\u00f3n"],
+        "options": [
+          "Describe el componente de la aplicaci\u00f3n",
+          "Declara el nivel m\u00ednimo de la API de Android que requiere la aplicaci\u00f3n",
+          "Facilita proporcionar un nombre uinque para la aplicaci\u00f3n especificando el nombre del paquete",
+          "Todo lo anterior"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ea46eb62c06b6a3726c4fd4e",
+        "question": "Qu\u00e9 atributo del elemento <uses-sdk> se utiliza para especificar el nivel m\u00ednimo de API necesario para que la aplicaci\u00f3n se ejecute?",
+        "answer": "android:minSdkVersion",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["android:minSdkVersion"],
+        "options": [
+          "android:targetSdkVersion",
+          "android:minSdkVersion",
+          "android:maxSdkVersion",
+          "Nada de lo anterior"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "75c057335a81da3058ff68d2",
+        "question": "Para reducir el c\u00f3digo en las compilaciones de lanzamiento, \u00bfqu\u00e9 herramienta utiliza Android Studio?",
+        "answer": "R8",
+        "explanation": "Explicaci\u00f3n: Cuando crea su proyecto utilizando el complemento Android Gradle 3.4.0 o superior, el complemento ya no utiliza ProGuard para realizar la optimizaci\u00f3n del c\u00f3digo en tiempo de compilaci\u00f3n. En cambio, el complemento funciona con el compilador R8 para manejar\n[Referencia](https://developer.android.com/studio/build/shrink-code)",
+        "hint": null,
+        "correctAnswer": ["R8"],
+        "options": ["R8", "ProGuard", "Encogedor", "D8"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "af3abc24686a509cef9cc28e",
+        "question": "\u00bfQu\u00e9 jerarqu\u00eda de dise\u00f1o es probable que se dibuje m\u00e1s r\u00e1pidamente?",
+        "answer": "A",
+        "explanation": "![img](https://i.imgur.com/mT08jag.png)\n![img](https://i.imgur.com/rz9eKYc.png)\n![img](https://i.imgur.com/ETaHhaS.png)\n![img](https://i.imgur.com/1QBrTwR.png)",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "4d35c06fc7c57e06eef2c0f2",
+            "url": "https://i.imgur.com/mT08jag.png",
+            "type": "question"
+          },
+          {
+            "id": "2ff9adffd40717f1982d86f6",
+            "url": "https://i.imgur.com/rz9eKYc.png",
+            "type": "question"
+          },
+          {
+            "id": "f2ebb170ccef64e692a3a422",
+            "url": "https://i.imgur.com/ETaHhaS.png",
+            "type": "question"
+          },
+          {
+            "id": "49de9c051229783d619502f1",
+            "url": "https://i.imgur.com/1QBrTwR.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "c2c43da668f3741d6c685f15",
+        "question": "\u00bfCu\u00e1l es la forma recomendada actual de manejar tareas en segundo plano de larga duraci\u00f3n?",
+        "answer": "WorkManager",
+        "explanation": "[Referencia](https://developer.android.com/guide/background)",
+        "hint": null,
+        "correctAnswer": ["WorkManager"],
+        "options": ["WorkManager", "AsyncTask", "IntentService", "Hilo"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "80540f50a196d205ec112dda",
+        "question": "Debe proporcionar a sus usuarios ciertas funciones de su aplicaci\u00f3n bajo demanda o como experiencias instant\u00e1neas a trav\u00e9s de Google Play. \u00bfQu\u00e9 tipo de m\u00f3dulo debe crear?",
+        "answer": "m\u00f3dulo de caracter\u00edsticas din\u00e1micas",
+        "explanation": "1.  [Referencia](https://youtu.be/QdfStuj-MuA?t=86)\n2.  [Referencia](https://developer.android.com/guide/playcore/feature-delivery/on-demand)",
+        "hint": null,
+        "correctAnswer": ["m\u00f3dulo de caracter\u00edsticas din\u00e1micas"],
+        "options": [
+          "m\u00f3dulo de biblioteca",
+          "m\u00f3dulo de caracter\u00edsticas din\u00e1micas",
+          "M\u00f3dulo de aplicaci\u00f3n android",
+          "M\u00f3dulo de Google Cloud"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5b210f52944f21775f61bb12",
+        "question": "\u00bfQu\u00e9 enfoque no se recomienda para proporcionar un estado sin conexi\u00f3n \u00fatil en la aplicaci\u00f3n?",
+        "answer": null,
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [],
+        "options": [
+          "datos de almacenamiento en cach\u00e9",
+          "almacenar datos localmente",
+          "poner en cola las solicitudes salientes a la acci\u00f3n cuando se ha perdido la conectividad",
+          "siempre notificando a los usuarios que se ha perdido la conectividad"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "598aca620d240019875b27e7",
+        "question": "Si necesitas el c\u00f3digo de la aplicaci\u00f3n para inspeccionar la informaci\u00f3n sobre la compilaci\u00f3n actual, \u00bfqu\u00e9 clase debes usar?",
+        "answer": "`BuildConfig`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`BuildConfig`"],
+        "options": ["`BuildConfig`", "`BuildInfo`", "`ConfigParams`", "`ConfigInfo`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5d6e024dbb1972daf13792a9",
+        "question": "En el ConstraintLayout a continuaci\u00f3n, \u00bfpor qu\u00e9 no se expandir\u00eda el bot\u00f3n para llenar el ancho del padre?\n```xml\n  <androidx.constraintlayout.widget.ConstrantLayout\n      ...>\n    <Button\n          android:layout_width=\"0dp\"\n          android:layout_height=\"wrap_content\"\n          android:text=\"Button\"\n          app:layout_constraintStart_toStartOf=\"parent\"\n          app:layout_constraintTop_toTopOf=\"parent\"/>\n  </androidx.constraintlayout.widget.ConstrantLayout>\n```",
+        "answer": "`The button is not constrained to the end of the parent container`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`The button is not constrained to the end of the parent container`"],
+        "options": [
+          "`The button does not have a size`",
+          "`The button is not constrained to the end of the parent container`",
+          "`Buttons cannot expand beyond their default size`",
+          "`The button should have its height set to 0dp as well`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "df696f6b919494ca7263e712",
+        "question": "\u00bfQu\u00e9 no es un caso de uso para los recursos al ralent\u00ed en sus pruebas de Espresso?",
+        "answer": "`processing user input events`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`processing user input events`"],
+        "options": [
+          "`managing system services`",
+          "`processing user input events`",
+          "`loading data from the internet or a local data source`",
+          "`perfoming bitmap transformatinos`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7fee95028747293800aa70ae",
+        "question": "\u00bfQu\u00e9 no es un tipo de recurso para proporcionar cadenas a la aplicaci\u00f3n?",
+        "answer": "`Text`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`Text`"],
+        "options": ["`String`", "`Text`", "`String-array`", "`Plurals`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "android/android-quiz-es.md",
+    "language": "es",
+    "generatedAt": "2025-12-09T14:56:13.965481+00:00",
+    "warnings": ["Question 65 has no marked correct answers"]
+  }
+}

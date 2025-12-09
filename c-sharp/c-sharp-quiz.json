@@ -1,0 +1,1618 @@
+{
+  "quizz": {
+    "id": "f5b1f0d6a0a302bb5c8b9b2c",
+    "title": "C#",
+    "description": "Seeded from c-sharp/c-sharp-quiz.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "3a6a7ff589d873025e9fe7d4",
+        "question": "In which of these situations are interfaces better than abstract classes?",
+        "answer": "When you need a list of capabilities and data that are classes-agnostic, use an interface. When you need a certain object type to share characteristics, use an abstract class.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "When you need a list of capabilities and data that are classes-agnostic, use an interface. When you need a certain object type to share characteristics, use an abstract class."
+        ],
+        "options": [
+          "When you need to define an object type's characteristics, use an interface. When you need to define an object type's capabilities, use an abstract class.",
+          "Interfaces are a legacy of older versions of C#, and are interchangeable with the newer abstract class feature.",
+          "When you need a list of capabilities and data that are classes-agnostic, use an interface. When you need a certain object type to share characteristics, use an abstract class.",
+          "You should use both an interface and an abstract class when defining any complex object."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b886247ddd188a0c2fd9eccf",
+        "question": "Which statement is true of delegates?",
+        "answer": "They can be chained together.",
+        "explanation": "[Official documentation: Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/#delegates-overview)",
+        "hint": null,
+        "correctAnswer": [
+          "They can be chained together."
+        ],
+        "options": [
+          "Delegates are not supported in the current version of C#",
+          "They cannot be used as callbacks.",
+          "Only variables can be passed to delegates as parameters.",
+          "They can be chained together."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "30874eff6e7ba5266d03f5df",
+        "question": "Which choice best defines C#'s asynchronous programming model?",
+        "answer": "task-based",
+        "explanation": "[Official documentation: Task asynchronous programming model](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model) resposta correta --> var contacts = new List<string>();",
+        "hint": null,
+        "correctAnswer": [
+          "task-based"
+        ],
+        "options": [
+          "reactive",
+          "inherited callback",
+          "task-based",
+          "callback-based"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0064c04d82d513f0b4ef91ca",
+        "question": "How would you determine if a class has a particular attribute?",
+        "answer": ".",
+        "explanation": "```cs\nvar type = typeof(SomeType);\nvar attribute = type.GetCustomAttribute<SomeAttribute>();\n```\n```cs\nvar typeof(MyPresentationModel).Should().BeDecoratedWith<SomeAttribute>();\n```\n```cs\nAttribute.GetCustomAttribute, typeof(SubControllerActionToViewDataAttribute)\n```\n```cs\nAttribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActionToViewDataAttribute))\n```\n1. [Official documentation: Attribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.attribute?view=net-5.0)\n2. [Official documentation: Attribute.GetCustomAttribute Method](https://docs.microsoft.com/en-us/dotnet/api/system.attribute.getcustomattribute?view=net-5.0)",
+        "hint": null,
+        "correctAnswer": [
+          "."
+        ],
+        "options": [
+          ".",
+          ".",
+          ".",
+          "."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8b9ce68a78253b18fd0e173a",
+        "question": "What is the difference between the ref and out keywords?",
+        "answer": "Variables passed to out can be passed to a function without being initialized, while ref specifies that the value is a reference value that can be changed inside the calling method.",
+        "explanation": "1. [Official documentation: ref](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref)\n2. [Official documentation: out parameter modifier](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier)",
+        "hint": null,
+        "correctAnswer": [
+          "Variables passed to out can be passed to a function without being initialized, while ref specifies that the value is a reference value that can be changed inside the calling method."
+        ],
+        "options": [
+          "Variables passed to specify that the parameter is an output parameter, while ref specifies that a variable may be passed to a function without being initialized.",
+          "Variables passed to ref can be passed to a function without being initialized, while out specifies that the value is a reference value that can be changed inside the calling method.",
+          "Variables passed to out can be passed to a function without being initialized, while ref specifies that the value is a reference value that can be changed inside the calling method.",
+          "Variables passed to ref specify that the parameter is an output parameter, while out specifies that a variable may be passed to a function without being initialized."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "38d6a87c3cd5f6e2ede4c73a",
+        "question": "How could you retrieve information about a class, as well as create an instance at runtime?",
+        "answer": "reflection",
+        "explanation": "[Official documentation: Reflection ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection)",
+        "hint": null,
+        "correctAnswer": [
+          "reflection"
+        ],
+        "options": [
+          "reflection",
+          "serialization",
+          "abstraction",
+          "dependency injection"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "56482acf0d5bd45c7e0c9bd5",
+        "question": "What is this code an example of?\n```cs\n    private static object objA;\n    private static object objB;\n    private static void performTaskA()\n    {\n        lock (objB)\n        {\n            Thread.Sleep(1000);\n            lock (objA) { }\n        }\n    }\n    private static void PerformTaskB()\n    {\n        lock (objA)\n        {\n            lock (objB) { }\n        }\n    }\n```",
+        "answer": "a potential deadlock",
+        "explanation": "[Official documentation: Deadlocks and race conditions](https://docs.microsoft.com/en-us/dotnet/standard/threading/managed-threading-best-practices#deadlocks-and-race-conditions)",
+        "hint": null,
+        "correctAnswer": [
+          "a potential deadlock"
+        ],
+        "options": [
+          "a private class that uses multithreading",
+          "multithread coding",
+          "thread mismanagement",
+          "a potential deadlock"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6cee4594a7815bca00cf92c5",
+        "question": "What is the difference between an anonymous type and a regular data type?",
+        "answer": "Anonymous types don't have type names",
+        "explanation": "[Official documentation: Anonymous Types](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types)",
+        "hint": null,
+        "correctAnswer": [
+          "Anonymous types don't have type names"
+        ],
+        "options": [
+          "Anonymous types don't have type names",
+          "Anonymous types can only be static",
+          "Anonymous types can be used only in struts",
+          "Anonymous types don't work with LINQ."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d3f83902d907ed6f9d93fb28",
+        "question": "When would you use a Dictionary rather than an Array type in your application?",
+        "answer": "When you need to store key-value pairs rather than single values",
+        "explanation": "[Official documentation: Dictionary<TKey,TValue> Class](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-5.0)",
+        "hint": null,
+        "correctAnswer": [
+          "When you need to store key-value pairs rather than single values"
+        ],
+        "options": [
+          "When you need a jagged collection structure",
+          "When you need to store values of the same type",
+          "When you need to store key-value pairs rather than single values",
+          "When you need an ordered, searchable list"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "49d7dd458b6ecf84600723f4",
+        "question": "What is the difference between a.Equals(b) and a == b?",
+        "answer": "The .Equals method compares contents while `==` compares reference identity.",
+        "explanation": "1. [Official documentation: Object.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals)\n2. [c-sharpcorner: Equality Operator(==) vs .Equals()](https://www.c-sharpcorner.com/UploadFile/3d39b4/difference-between-operator-and-equals-method-in-C-Sharp)",
+        "hint": null,
+        "correctAnswer": [
+          "The .Equals method compares contents while `==` compares reference identity."
+        ],
+        "options": [
+          "The .Equals method compares reference identities while the `==` compares contents.",
+          "The .Equals method compares primitive values while `==` compares all values.",
+          "The .Equals method compares contents while `==` compares reference identity.",
+          "The .Equals method compares reference types while `==` compares primitive value types"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cf2e26c88ed8c927d3319e29",
+        "question": "Which choice best describes a deadlock situation?",
+        "answer": "when simultaneous instructions are waiting on each other to finish before executing",
+        "explanation": "[Official documentation: Deadlocks and race conditions](https://docs.microsoft.com/en-us/dotnet/standard/threading/managed-threading-best-practices#deadlocks-and-race-conditions)",
+        "hint": null,
+        "correctAnswer": [
+          "when simultaneous instructions are waiting on each other to finish before executing"
+        ],
+        "options": [
+          "when you try to instantiate two objects at the same time in the same class or struct",
+          "when you are trying to execute an action after a user event is registered",
+          "when simultaneous instructions are waiting on each other to finish before executing",
+          "when you try to execute a series of events simultaneously on multiple threads"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5faf5224001a7f937b7b4c81",
+        "question": "How does the async keyword work?",
+        "answer": "It allows the await keyword to be used in a method",
+        "explanation": "[Official documentation: async](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async)",
+        "hint": null,
+        "correctAnswer": [
+          "It allows the await keyword to be used in a method"
+        ],
+        "options": [
+          "It allows access to asynchronous methods in the C# API",
+          "It allows thread pooling and synchronous processes in static classes.",
+          "It allows the await keyword to be used in a method",
+          "It allows access to synchronous methods in the C# API"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6004f5b0833dd5f06f10eb24",
+        "question": "What is an object in C#?",
+        "answer": "an instance of a class or struct that includes fields, properties, and/or methods",
+        "explanation": "[Official documentation: Objects](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/objects)",
+        "hint": null,
+        "correctAnswer": [
+          "an instance of a class or struct that includes fields, properties, and/or methods"
+        ],
+        "options": [
+          "a class or struct, including its variables and functions",
+          "a primitive data type that can be created only at compile time",
+          "a value type that can be used only with an abstract class",
+          "an instance of a class or struct that includes fields, properties, and/or methods"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "913d988db95c8a8dd9b60992",
+        "question": "Which code snippet declares an anonymous type named userData?",
+        "answer": "`var userData = new { name = \"John\", age = 32 };`",
+        "explanation": "[Official documentation: Anonymous Types](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types)",
+        "hint": null,
+        "correctAnswer": [
+          "`var userData = new { name = \"John\", age = 32 };`"
+        ],
+        "options": [
+          "`var<<!---->T> userData = new <<!---->T> { name = \"John\", age = 32 };`",
+          "`var userData = new { name = \"John\", age = 32 };`",
+          "`AType userData = new AType { name = \"John\", age = 32 };`",
+          "`Anonymous<T> userData = new Anonymous<T> { name = \"John\", age = 32 };`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c317a2e593ce81b212e58ef4",
+        "question": "What will be returned when this method is executed?\n`public void userInput(string charParameters) { }`",
+        "answer": "Nothing",
+        "explanation": "[Official documentation: void](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/void)",
+        "hint": null,
+        "correctAnswer": [
+          "Nothing"
+        ],
+        "options": [
+          "Nothing",
+          "a Boolean",
+          "a string variable",
+          "an integer"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f5731af6d90b5725f2180d68",
+        "question": "In what order would the employee names in this example be printed to the console?\n```cs\nstring[] employees = { \"Joe\", \"Bob\", \"Carol\", \"Alice\", \"Will\" };\nIEnumerable<string> employeeQuery = from person in employees\n                                    orderby person\n                                    select person;\nforeach(string employee in employeeQuery)\n{\n    Console.WriteLine(employee);\n}\n```",
+        "answer": "ascending",
+        "explanation": "[dotnetpattern: LINQ OrderBy Operator](http://dotnetpattern.com/linq-orderby-operator)",
+        "hint": null,
+        "correctAnswer": [
+          "ascending"
+        ],
+        "options": [
+          "ascending",
+          "unordered",
+          "descending",
+          "first in, first out"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5d105ee82245b1665ac57b10",
+        "question": "Lambda expressions are often used in tandem with which of the following?",
+        "answer": "LINQ",
+        "explanation": "[Official documentation: Language Integrated Query (LINQ) Overview](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/)",
+        "hint": null,
+        "correctAnswer": [
+          "LINQ"
+        ],
+        "options": [
+          "Namespaces",
+          "LINQ",
+          "Type Aliasing",
+          "Assemblies"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1df5e7580f93c3322b6cbbfb",
+        "question": "What is the correct formatting for single-line and multiline comments?",
+        "answer": "`// Single Line`",
+        "explanation": "`/_ - Multiline`\n`/_ Single Line _/`\n`/ Single Line`\n`/* Multiline */`\n[w3schools: C# Comments](https://www.w3schools.com/cs/cs_comments.php)",
+        "hint": null,
+        "correctAnswer": [
+          "`// Single Line`"
+        ],
+        "options": [
+          "`/_/ - Single Line`",
+          "`// Multiline`",
+          "`//\\* Multiline`",
+          "`// Single Line`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "19ba98cbacfb85286bd867b4",
+        "question": "How do you make a method in an abstract class overridable?",
+        "answer": "Make it virtual",
+        "explanation": "1. [Official documentation: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)\n2. [Official documentation: abstract](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)",
+        "hint": null,
+        "correctAnswer": [
+          "Make it virtual"
+        ],
+        "options": [
+          "Make it public",
+          "Make it static",
+          "Make it private",
+          "Make it virtual"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "63ac9ef3c89732892901bc8d",
+        "question": "How would you write code for an integer property called Age with a getter and setter?",
+        "answer": "public int Age { get; set; }",
+        "explanation": "[Official documentation: Using Properties](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties)",
+        "hint": null,
+        "correctAnswer": [
+          "public int Age { get; set; }"
+        ],
+        "options": [
+          "public int Age { get - set }",
+          "public int Age: get set;",
+          "public int Age (get, set );",
+          "public int Age { get; set; }"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "992b4226031711f27f98dd9b",
+        "question": "What is an abstract class?",
+        "answer": "a class that can be used only as a base class",
+        "explanation": "[Official documentation: Abstract and Sealed Classes and Class Members](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members)",
+        "hint": null,
+        "correctAnswer": [
+          "a class that can be used only as a base class"
+        ],
+        "options": [
+          "a class that is denoted by the class keyword (can be seen and used by any other class in the system--thus it is by default public)",
+          "something denoted by the abstract keyword and used system-wide; if you want any program to create an object of a class you use the abstract class",
+          "a class that is denoted by the virtual keyword",
+          "a class that can be used only as a base class"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cb58a55debfafa48b27c9cba",
+        "question": "When using a thread pool what happens to a given thread after it finishes its task?",
+        "answer": "The thread returns to the pool for reuse.",
+        "explanation": "[Official documentation: Thread pool characteristics](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool#thread-pool-characteristics)",
+        "hint": null,
+        "correctAnswer": [
+          "The thread returns to the pool for reuse."
+        ],
+        "options": [
+          "The thread is destroyed and memory is freed up.",
+          "The thread runs in a loop until the next assignment.",
+          "The thread goes inactive in the background and waits for garbage collection.",
+          "The thread returns to the pool for reuse."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "905d6610b08e3a785d4d17e5",
+        "question": "Which choice represents a class that inherits behavior from a base class?",
+        "answer": "a derived class",
+        "explanation": "[Official documentation: Inheritance](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)",
+        "hint": null,
+        "correctAnswer": [
+          "a derived class"
+        ],
+        "options": [
+          "a second base class",
+          "a revised class",
+          "a derived class",
+          "a parent class"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "26e855254f32e61e98eaf614",
+        "question": "What does operator overloading allow you to do?",
+        "answer": "define custom functionality for common operators like addition and equality",
+        "explanation": "[Official documentation: Operator overloading](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading)",
+        "hint": null,
+        "correctAnswer": [
+          "define custom functionality for common operators like addition and equality"
+        ],
+        "options": [
+          "hide built-in operators when necessary",
+          "add methods to be interpreted by the compiler at runtime",
+          "define how enums and other primitive value types work within the rest of the application",
+          "define custom functionality for common operators like addition and equality"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "830317ea5a27773191daabcf",
+        "question": "What is the main purpose of LINQ?",
+        "answer": "to query and transform data",
+        "explanation": "[Official documentation: Language Integrated Query (LINQ) Overview](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/#query-expression-overview)",
+        "hint": null,
+        "correctAnswer": [
+          "to query and transform data"
+        ],
+        "options": [
+          "to delete duplicate data",
+          "to bind namespaces and assemblies",
+          "to query and transform data",
+          "to connect assemblies"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ce23c81b29b39f7d549c794f",
+        "question": "What is the correct syntax for a new generic list of strings named contacts?",
+        "answer": "var contacts = new List<string>();",
+        "explanation": "[Official documentation: List<T> Class](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-5.0)",
+        "hint": null,
+        "correctAnswer": [
+          "var contacts = new List<string>();"
+        ],
+        "options": [
+          "public List<string names> contacts = new List<string names>();",
+          "public List(string names) contacts = new List(string names)();",
+          "var contacts = new List<string>();",
+          "var contacts = new List(string);"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "05e81bca64c0e4a2ac1c801d",
+        "question": "What is the difference between throw exceptions and throw clauses?",
+        "answer": "Throw exceptions overwrite the stack trace, while throw clauses retain the stack information.",
+        "explanation": "1. [Official documentation: throw](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw)\n2. [c-sharpcorner: Difference Between Throw Exception and Throw Clause](https://www.c-sharpcorner.com/UploadFile/akkiraju/difference-between-throw-exception-and-throw-clause/)",
+        "hint": null,
+        "correctAnswer": [
+          "Throw exceptions overwrite the stack trace, while throw clauses retain the stack information."
+        ],
+        "options": [
+          "Throw clauses fire only at runtime, while throw exceptions can fire at any time.",
+          "Throw exceptions overwrite the stack trace, while throw clauses retain the stack information.",
+          "Throw clauses overwrite the stack trace, while throw exceptions retain the stack information.",
+          "Throw exceptions fire only at runtime, while throw clauses can fire during compile time."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "91fc1943c923b5bbbce93e5d",
+        "question": "When an asynchronous method is executed, the code runs but nothing happens other than a compiler warning. What is most likely causing the method to not return anything?",
+        "answer": "The method is missing an await keyword in its body.",
+        "explanation": "[Official documentation: Starting tasks concurrently](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/#start-tasks-concurrently)",
+        "hint": null,
+        "correctAnswer": [
+          "The method is missing an await keyword in its body."
+        ],
+        "options": [
+          "The return yield statement is missing at the end of the method.",
+          "The method is missing an await keyword in its body.",
+          "The wait keyword is missing from the end of the method.",
+          "The yield keyword is missing from the method."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6db0a05a50ec25af79bcbb8a",
+        "question": "What are C# events?",
+        "answer": "actions that generate notifications, which are sent to their registered listeners",
+        "explanation": "[Official documentation: Introduction to events](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)",
+        "hint": null,
+        "correctAnswer": [
+          "actions that generate notifications, which are sent to their registered listeners"
+        ],
+        "options": [
+          "system actions that communicate directly with the compiler at runtime",
+          "actions that execute when the code compiles, generating logs and test output",
+          "actions that generate notifications, which are sent to their registered listeners",
+          "user-only methods that send data to the application's back end"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6178c16bdd6719318758c260",
+        "question": "What kind of values can arrays store?",
+        "answer": "multiple variables, or collections, of the same type",
+        "explanation": "[Official documentation: Arrays](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/)",
+        "hint": null,
+        "correctAnswer": [
+          "multiple variables, or collections, of the same type"
+        ],
+        "options": [
+          "unordered collections of numeric values",
+          "key-value pairs of any C# supported type",
+          "class and struct instances",
+          "multiple variables, or collections, of the same type"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "97c53c559b3ec7efdaea6100",
+        "question": "Given this enumeration, how would you access the integer-type value of 'AppState.Loading'?\n`enum AppState { OffLine, Loading, Ready }`",
+        "answer": "int currentState = (int)AppState.Loading;",
+        "explanation": "[Official documentation: Enumeration types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum#conversions)",
+        "hint": null,
+        "correctAnswer": [
+          "int currentState = (int)AppState.Loading;"
+        ],
+        "options": [
+          "string currentState = (string)AppState.Loading;",
+          "string currentState = AppState.Loading.integralVal;",
+          "int currentState = AppState.Loading.rawValue;",
+          "int currentState = (int)AppState.Loading;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d8711f3cbed023290412591e",
+        "question": "What character would you use to start a regular expression pattern at a word boundary?",
+        "answer": "\\b",
+        "explanation": "1. [regular-expressions: Word Boundaries](https://www.regular-expressions.info/wordboundaries.html)\n2. [Official documentation: Regular Expression Language - Quick Reference](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)",
+        "hint": null,
+        "correctAnswer": [
+          "\\b"
+        ],
+        "options": [
+          "d",
+          "\\a",
+          "\\b",
+          "\\w"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a6873b3b7a65e0b3185f0eb0",
+        "question": "To conform to the following interface, which of its members need to be implemented?\n```cs\npublic interface INameable\n{\n    string FirstName { get; set; }\n    string LastName { get; }\n}\n```",
+        "answer": "Both the FirstName and LastName properties need to be implemented.",
+        "explanation": "[Official documentation: interface](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface)",
+        "hint": null,
+        "correctAnswer": [
+          "Both the FirstName and LastName properties need to be implemented."
+        ],
+        "options": [
+          "Both the FirstName and LastName properties need to be implemented.",
+          "Neither, they are both optional.",
+          "Only the LastName property needs to be implemented.",
+          "Only the FirstName property needs to be implemented."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e73e65d73cd709a8d075a8fc",
+        "question": "You're dealing with multiple assemblies in your program, but are worried about memory allocation. At what point in the program life cycle are assemblies loaded into memory?",
+        "answer": "only when required",
+        "explanation": "1. [Official documentation: Assembly Loading](https://docs.microsoft.com/en-us/dotnet/framework/deployment/best-practices-for-assembly-loading)\n2. [Stackoverflow: When exactly are assemblies loaded?](https://stackoverflow.com/questions/21914692/when-exactly-are-assemblies-loaded)",
+        "hint": null,
+        "correctAnswer": [
+          "only when required"
+        ],
+        "options": [
+          "at runtime",
+          "at compile time",
+          "only when required",
+          "only when programmatically loaded"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a236c589e22df2936711b853",
+        "question": "What is the most accurate description of a regular expression?",
+        "answer": "A regular expression is a special text string for describing a search pattern.",
+        "explanation": "1. [Official documentation: Regular Expression Language - Quick Reference](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)\n2. [Official documentation: .NET regular expressions](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions)",
+        "hint": null,
+        "correctAnswer": [
+          "A regular expression is a special text string for describing a search pattern."
+        ],
+        "options": [
+          "A regular expression is a C# tool used to parse HTML",
+          "A regular expression is a special text string for describing a search pattern.",
+          "A regular expression allows a variable to be passed by reference.",
+          "A regular expression allows a class to conform to the Equatable protocol."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "38ebbf696168392a5b32ec08",
+        "question": "Why would you use a class field in C#",
+        "answer": "To hold information and data contained in the class object",
+        "explanation": "[Official documentation: Introduction to classes](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes)",
+        "hint": null,
+        "correctAnswer": [
+          "To hold information and data contained in the class object"
+        ],
+        "options": [
+          "To define the behaviors of the class",
+          "To hold information and data contained in the class object",
+          "To communicate between classes and object",
+          "To store the class definition value"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "80618ee4989b2c4161053012",
+        "question": "When would you use generics in your code?",
+        "answer": "all of these answers",
+        "explanation": "[Official documentation: Generic classes and methods](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics)",
+        "hint": null,
+        "correctAnswer": [
+          "all of these answers"
+        ],
+        "options": [
+          "to increase code performance",
+          "all of these answers",
+          "when code reuse is a priority",
+          "when type safety is important"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6e1ed29d9074fdc8aebfdbc9",
+        "question": "What prints to the console when this code is executed?\n```cs\npublic delegate void AuthCallback(bool validUser);\npublic static AuthCallback loginCallback = Login;\npublic static void Login()\n{\n    Console.WriteLine(\"Valid user!\");\n}\npublic static void Main(string[] args)\n{\n    loginCallback(true);\n}\n```",
+        "answer": "an error, because the method signature of Login doesn't match the delegate",
+        "explanation": "1. [Official documentation: Introduction to Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/delegates-overview)\n2. [Official documentation: Introduction to Events](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)",
+        "hint": null,
+        "correctAnswer": [
+          "an error, because the method signature of Login doesn't match the delegate"
+        ],
+        "options": [
+          "Login successful...",
+          "Valid user!",
+          "an error, because the method signature of Login doesn't match the delegate",
+          "Login successful... Valid user!"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8b54d491cdc028c928a93ef4",
+        "question": "How would you declare a sealed class named User?",
+        "answer": "sealed class User {}",
+        "explanation": "[Official documentation: Abstract and Sealed Classes and Class Members](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members)",
+        "hint": null,
+        "correctAnswer": [
+          "sealed class User {}"
+        ],
+        "options": [
+          "public class User {}",
+          "abstract User {}",
+          "sealed class User {}",
+          "private sealed class User {}"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "08be46e4cb32481f681831d2",
+        "question": "What is the difference between non-static and static classes?",
+        "answer": "non-static classes need to be initialized before use, while static classes do not",
+        "explanation": "1. [stackoverflow](https://stackoverflow.com/questions/20451554/whats-the-function-of-a-static-constructor-in-a-non-static-class)\n2. [Official documentation: Static Constructors](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-constructors)",
+        "hint": null,
+        "correctAnswer": [
+          "non-static classes need to be initialized before use, while static classes do not"
+        ],
+        "options": [
+          "non-static classes need to be initialized before use, while static classes do not",
+          "non-static classes are accessible only from an interface while static classes are accessible from anywhere",
+          "non-static classes need to initialize all class members at runtime, while static classes do not",
+          "non-static classes do not need to be initialized while static classes do"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c84685e36a0c377f738a768c",
+        "question": "Which characteristic prevents this code from compiling?\n`public int age=\"28\"`",
+        "answer": "type safety",
+        "explanation": "[c-sharpcorner: Type Safety in .NET](https://www.c-sharpcorner.com/UploadFile/vikie4u/type-safety-in-net/)",
+        "hint": null,
+        "correctAnswer": [
+          "type safety"
+        ],
+        "options": [
+          "type safety",
+          "single inheritance",
+          "dependency injection",
+          "multiple inheritance"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "334f44fd88e56aa91ace5a9b",
+        "question": "How would you serialize this class?\n`public class User {}`",
+        "answer": "Mark the User class with the `SerializableAttribute` attribute.",
+        "explanation": "[Official documentation: SerializableAttribute Class](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=net-5.0)",
+        "hint": null,
+        "correctAnswer": [
+          "Mark the User class with the `SerializableAttribute` attribute."
+        ],
+        "options": [
+          "Mark the User class with the `DeserializableAttribute`.",
+          "Declare the class as `public serializable class User {}`.",
+          "Mark the User class with the `SerializableAttribute` attribute.",
+          "Declare the class as `private serializable class User {}`."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "91d6f8619772927522583939",
+        "question": "How would you write a delegate named ResultCallback with an int parameter named responseCode?",
+        "answer": "public delegate void ResultCallback(int responseCode);",
+        "explanation": "[Official documentation: Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)",
+        "hint": null,
+        "correctAnswer": [
+          "public delegate void ResultCallback(int responseCode);"
+        ],
+        "options": [
+          "public delegate ResultCallback(int responseCode);",
+          "public delegate void ResultCallback<(int) responseCode>;",
+          "public void delegate ResultCallback\\<int responseCode\\>;",
+          "public delegate void ResultCallback(int responseCode);"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "475098627ca6d2a1bd608449",
+        "question": "What is the difference between a static and non-static method?",
+        "answer": "static methods do not have to instantiate an instance of the class to call the method",
+        "explanation": "[Official documentation: Static Members](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members#static-members)",
+        "hint": null,
+        "correctAnswer": [
+          "static methods do not have to instantiate an instance of the class to call the method"
+        ],
+        "options": [
+          "non-static methods always need to have a void return type",
+          "non-static methods do not have access to static member variables",
+          "static methods do not have to instantiate an instance of the class to call the method",
+          "static methods always have to be public"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "02b9b2bdc680d9bb08140f04",
+        "question": "What is the correct way to write an event named apiResult based on a delegate named ResultCallback?",
+        "answer": "public event ResultCallback apiResult;",
+        "explanation": "[Official documentation: Introduction to events](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)",
+        "hint": null,
+        "correctAnswer": [
+          "public event ResultCallback apiResult;"
+        ],
+        "options": [
+          "public void event ResultCallback apiResult;",
+          "public event ResultCallback(() -> apiResult);",
+          "public event void ResultCallback",
+          "public event ResultCallback apiResult;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b7e4d65fb2faa4f978e5a4d7",
+        "question": "When will the code inside finally block be executed in a try-catch statement?",
+        "answer": "after the try and catch blocks",
+        "explanation": "[Official documentation: try-catch](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch)",
+        "hint": null,
+        "correctAnswer": [
+          "after the try and catch blocks"
+        ],
+        "options": [
+          "if there is an error, it won't execute at all",
+          "between the try and catch blocks",
+          "after the try and catch blocks",
+          "when the finally block overrides the catch block and executes in its place"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "945dc561778f02b35d3cd3ca",
+        "question": "What method correctly extends the string class?",
+        "answer": "public static string IsvalidName(this string i, string value) {}",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "public static string IsvalidName(this string i, string value) {}"
+        ],
+        "options": [
+          "public static string IsvalidName(this string i, string value) {}",
+          "public static void IsvalidName(this string i, string value) {}",
+          "public string IsvalidName(this string i, string value) {}",
+          "public void IsvalidName(this string i, string value) {}"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3d5c3375b7b0ea0d8f105807",
+        "question": "How are C# classes limited?",
+        "answer": "They do not support multiple inheritance.",
+        "explanation": "[Official documentation: Class inheritance](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes#class-inheritance)",
+        "hint": null,
+        "correctAnswer": [
+          "They do not support multiple inheritance."
+        ],
+        "options": [
+          "They do not support multiple inheritance.",
+          "They support multiple inheritance.",
+          "They can have only a set number of properties.",
+          "They can have only a set number of methods."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "58b47e93957663bc2c449de4",
+        "question": "What function do namespaces perform?",
+        "answer": "Namespaces separate code into groupings, control access, and avoid naming collisions.",
+        "explanation": "[Official documentation: namespace](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/namespace)",
+        "hint": null,
+        "correctAnswer": [
+          "Namespaces separate code into groupings, control access, and avoid naming collisions."
+        ],
+        "options": [
+          "Namespaces calculate code coverage at runtime.",
+          "Namespaces compile application code together at compile time.",
+          "Namespaces group code together into a single repository.",
+          "Namespaces separate code into groupings, control access, and avoid naming collisions."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f6d27f51f2946539ee91b657",
+        "question": "What is the correct way to write a public property with a private backing field?",
+        "answer": "D",
+        "explanation": "```cs\nprivate int _password;\npubic int Password = { get; set; }\n```\n```cs\nprivate int _password;\npublic int Password = _password;\n```\n```cs\nprivate int _password;\npublic int Password\n{\nget -> _password;\nset-> _password = value;\n}\n```\n```cs\nprivate int _password;\npublic int Password\n{\nget { return _password; }\nset { _password = value; }\n}\n```\n[Official documentation: Using Properties](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties)",
+        "hint": null,
+        "correctAnswer": [
+          "D"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dc6742f7a721ffb7fba2f325",
+        "question": "What is a thread pool?",
+        "answer": "a collection of threads created during initialization that can be reused",
+        "explanation": "[Official documentation: ThreadPool Class](https://docs.microsoft.com/en-us/dotnet/api/system.threading.threadpool?view=net-5.0)",
+        "hint": null,
+        "correctAnswer": [
+          "a collection of threads created during initialization that can be reused"
+        ],
+        "options": [
+          "a collection of synchronous methods created during initialization that cannot be reused",
+          "a collection of threads created during initialization that can be reused",
+          "a collection of threads only recognized at compile time that can be reused",
+          "a collection of asynchronous methods created at compile time that cannot be reused"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9d1a608713f75b363de225a0",
+        "question": "When an object in C# is serialized, what is it converted to?",
+        "answer": "byte stream",
+        "explanation": "[Official documentation: Serialization](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/)",
+        "hint": null,
+        "correctAnswer": [
+          "byte stream"
+        ],
+        "options": [
+          "XML",
+          "JSON",
+          "byte stream",
+          "value stream"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "95e581bed54955cb779b44d0",
+        "question": "What is a delegate",
+        "answer": "a type that holds a reference to a method with a particular parameter list and return type",
+        "explanation": "[Official documentation: Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)",
+        "hint": null,
+        "correctAnswer": [
+          "a type that holds a reference to a method with a particular parameter list and return type"
+        ],
+        "options": [
+          "a variable that holds a reference to a value type and its content",
+          "a specific value type that can be used only in callback methods",
+          "a type that holds a reference to a method with a particular parameter list and return type",
+          "a custom variable type that can be used in abstract classes"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "83904d3553cb66e4f5dfee1b",
+        "question": "What are the four keywords associated with exception handling in C#?",
+        "answer": "try, catch, finally, throw",
+        "explanation": "[Tutorial Point](https://www.tutorialspoint.com/csharp/csharp_exception_handling.htm#:~:text=Exceptions%20provide%20a%20way%20to,catch%2C%20finally%2C%20and%20throw.)",
+        "hint": null,
+        "correctAnswer": [
+          "try, catch, finally, throw"
+        ],
+        "options": [
+          "try, catch, valid, invalid",
+          "try, valid, finally, throw",
+          "try, catch, finally, throw",
+          "finally, throw, valid, invalid"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dcec627f9d68dffd08dae369",
+        "question": "What is the main difference between the is and as operators?",
+        "answer": "The is operator checks the object type, while the as operator attempts to cast an object to a specific type.",
+        "explanation": "[Pluralsight guide](https://www.pluralsight.com/guides/csharp-is-as-operators-is-expressions)",
+        "hint": null,
+        "correctAnswer": [
+          "The is operator checks the object type, while the as operator attempts to cast an object to a specific type."
+        ],
+        "options": [
+          "The is operator checks instance types, while the as operator checks the inherited type.",
+          "The is operator checks primitive data types, while the as operator checks the object type.",
+          "The as operator checks the object type, while the is operator attempts to cast an object to a specific type.",
+          "The is operator checks the object type, while the as operator attempts to cast an object to a specific type."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "421a2b19ea5db54c0913c67f",
+        "question": "What is the difference between finally and finalize blocks?",
+        "answer": "The finally block is called after the execution of a try and catch block, while the finalize method is called just before garbage collection.",
+        "explanation": "[C-sharpcorner](https://www.c-sharpcorner.com/forums/final-finally-and-finalize)",
+        "hint": null,
+        "correctAnswer": [
+          "The finally block is called after the execution of a try and catch block, while the finalize method is called just before garbage collection."
+        ],
+        "options": [
+          "The finally block is called during the execution of a try and catch block, while the finalize method is called after garbage collection.",
+          "The finally block is called after the execution of a try and catch block, while the finalize method is called just before garbage collection.",
+          "The finalize block is called before the execution of a try and catch block, while the finally method is called just before garbage collection.",
+          "The finalize block is called during the execution of a try and catch block, while the finally method is called after garbage collection."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1191e8e5cc411219b76df9b7",
+        "question": "Your application has a value type called username that needs to be able to accept null values, but this is generating compile-time errors. How would you fix this in code?",
+        "answer": "string? username = null;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "string? username = null;"
+        ],
+        "options": [
+          "Null<string> username = null;",
+          "string? username = null;",
+          "Type<string>? username = null;",
+          "Optional<string> username = null;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ebd8e9ba65166765745c4439",
+        "question": "Which code snippet correctly declares a custom exception named InvalidResponse?",
+        "answer": "class InvalidResponse: Exception {}",
+        "explanation": "[Official documentation: Exceptions](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/how-to-create-user-defined-exceptions)",
+        "hint": null,
+        "correctAnswer": [
+          "class InvalidResponse: Exception {}"
+        ],
+        "options": [
+          "struct InvalidResponse: Exception {}",
+          "class InvalidResponse: Exception {}",
+          "public Exception InvalidResponse = new Exception ();",
+          "public Exception InvalidResponse () -> Exception;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9c490be1e7831d1052afeeae",
+        "question": "How would you write an enum variable called AppState with values for Offline, Loading, and Ready?",
+        "answer": "enum AppState {Offline, Loading, Ready}",
+        "explanation": "[Official documentation: Enum](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum)",
+        "hint": null,
+        "correctAnswer": [
+          "enum AppState {Offline, Loading, Ready}"
+        ],
+        "options": [
+          "enum AppState = [Offline, Loading, Ready]",
+          "enum AppState {\"Offline\", \"Loading\", \"Ready\"}",
+          "enum AppState = {Offline, Loading, Ready}",
+          "enum AppState {Offline, Loading, Ready}"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "efde0674d6841f79a36d2361",
+        "question": "What is the main difference between a value type and a reference type?",
+        "answer": "A value type stores an actual value, while a reference type is a pointer to a value.",
+        "explanation": "1. [Official documentation: Value types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types)\n2. [Official documentation: Reference types](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types)",
+        "hint": null,
+        "correctAnswer": [
+          "A value type stores an actual value, while a reference type is a pointer to a value."
+        ],
+        "options": [
+          "A value type can be any primitive type, while reference types must be type-agnostic.",
+          "A value type refers to another value, while a reference type refers to a value in memory.",
+          "A value type stores an actual value, while a reference type is a pointer to a value.",
+          "A value type is available only at runtime, while a reference type is available only at compile time."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "01513ebeea40ae9cbd8665a1",
+        "question": "What is the difference between the `break` and `continue` keywords?",
+        "answer": "The `break` keyword literally breaks out of a control flow statement, while `continue` ignores the rest of the control statement or iteration and starts the next one.",
+        "explanation": "[Official documentation: Jump statements](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements)",
+        "hint": null,
+        "correctAnswer": [
+          "The `break` keyword literally breaks out of a control flow statement, while `continue` ignores the rest of the control statement or iteration and starts the next one."
+        ],
+        "options": [
+          "The `break` keyword is used to break out of multiple iteration statements, while `continue` can only break out of code blocks that have single iterations.",
+          "The `break` keyword literally breaks out of a control flow statement, while `continue` ignores the rest of the control statement or iteration and starts the next one.",
+          "The `break` keyword literally breaks out of the current control flow code and stops it dead, while `continue` keeps executing the code after an exception is thrown.",
+          "The `break` keyword jumps out of an iteration and then proceeds with the rest of the control flow code, while `continue` stops the executing code dead."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "be5b26f74ac1a3a05b3fc00e",
+        "question": "Which code snippet correctly declares a variable named userId with a public `get` and private `set`?",
+        "answer": "`public int userID { get; private set; }`",
+        "explanation": "[Official documentation: Properties](https://docs.microsoft.com/en-us/dotnet/csharp/properties)",
+        "hint": null,
+        "correctAnswer": [
+          "`public int userID { get; private set; }`"
+        ],
+        "options": [
+          "`public int userID <get, set>;`",
+          "`public int userID [get, private set];`",
+          "`public int userID { get; private set; }`",
+          "`public int userID = { public get, private set };`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e04d30dbd6c978d4c42599fa",
+        "question": "What is true about virtual methods?",
+        "answer": "`Virtual methods always need a default implementation.`",
+        "explanation": "1. [Official documentation: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)\n2. [c-sharpcorner: Virtual Method in C#](https://www.c-sharpcorner.com/UploadFile/3d39b4/virtual-method-in-C-Sharp/)",
+        "hint": null,
+        "correctAnswer": [
+          "`Virtual methods always need a default implementation.`"
+        ],
+        "options": [
+          "`Overriding virtual methods in a derived class is mandatory.`",
+          "`Overriding virtual methods in a derived class is not possible.`",
+          "`Virtual methods always need a default implementation.`",
+          "`Virtual methods cannot have a default implementation.`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eb674844921c019e7d3c3d2e",
+        "question": "What is likely to happen if you have multiple threads accessing the same resource in your program?",
+        "answer": "`deadlock and race conditions`",
+        "explanation": "[Official documentation: race conditions](https://docs.microsoft.com/en-us/archive/msdn-magazine/2008/october/concurrency-hazards-solving-problems-in-your-multithreaded-code)",
+        "hint": null,
+        "correctAnswer": [
+          "`deadlock and race conditions`"
+        ],
+        "options": [
+          "`resource overload`",
+          "`thread jumping`",
+          "`deadlock and race conditions`",
+          "`nothing, since this is what threading is for`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cf93eab517beb0593e1ad6fd",
+        "question": "How do you indicate that a string might be null?",
+        "answer": "`string? myVariable`",
+        "explanation": "[Official documentation: nullable value types](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types#declaration-and-assignment)",
+        "hint": null,
+        "correctAnswer": [
+          "`string? myVariable`"
+        ],
+        "options": [
+          "`A string cannot be nullable.`",
+          "`string? myVariable`",
+          "`string myVariable = null`",
+          "`string(null) myVariable`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bf3b433af6797642c7d913d4",
+        "question": "Do you need to declare an out variable before you use it?",
+        "answer": "`No, you can declare an out in the parameter list.`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`No, you can declare an out in the parameter list.`"
+        ],
+        "options": [
+          "`No, you can declare an out in the parameter list.`",
+          "`No, Out variables are no longer part of C#.`",
+          "`You must declare it if it is a primitive type.`",
+          "`Yes.`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0f0429bd3ab49f01181fd7f7",
+        "question": "How would you access the last two people in an array named People?",
+        "answer": "`People[..^2]`",
+        "explanation": "Explain: You **can** do this in C#. However, none of the above answers are correct. You can access the last two items by using `People[^2..]`. Please see [issue #3354](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/issues/3354) for more information.\nSee also: [Official Documentation: Ranges](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/ranges)",
+        "hint": null,
+        "correctAnswer": [
+          "`People[..^2]`"
+        ],
+        "options": [
+          "`People[..^2]`",
+          "`You cannot do this in C#.`",
+          "`People[..^3]`",
+          "`People[^2]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2654267c9051274125618cb9",
+        "question": "When can anonymous types be created?",
+        "answer": "`at compile time`",
+        "explanation": "[C-sharpcorner: Anonymous Types](https://www.c-sharpcorner.com/UploadFile/ff2f08/anonymous-types-in-C-Sharp/)",
+        "hint": null,
+        "correctAnswer": [
+          "`at compile time`"
+        ],
+        "options": [
+          "`at compile time`",
+          "`after runtime`",
+          "`at runtime`",
+          "`after compile time`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f6115f0aebb6dd98658922f4",
+        "question": "What is true about thread multitasking?",
+        "answer": "`Thread multitasking allows code to be executed concurrently`",
+        "explanation": "[Official Documentation: Threads](https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading)",
+        "hint": null,
+        "correctAnswer": [
+          "`Thread multitasking allows code to be executed concurrently`"
+        ],
+        "options": [
+          "`Thread multitasking allows code to be executed concurrently`",
+          "`Thread multitasking allows code to be executed only when handling a user event.`",
+          "`Thread multitasking blocks code from being executed simultaneously to guard memory.`",
+          "`Thread multitasking adds single-threaded code blocks together.`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9d7b42b11d1aaae30563635c",
+        "question": "What accessibility level does this class field have?\n`private string LastName;`",
+        "answer": "It can be used by other code only in the same class or struct.",
+        "explanation": "[Official Documentation: Accessibility Levels](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/accessibility-levels)",
+        "hint": null,
+        "correctAnswer": [
+          "It can be used by other code only in the same class or struct."
+        ],
+        "options": [
+          "It can be used by other code only in the same class or struct.",
+          "It can be used by other code in a referenced assembly.",
+          "It can be used only by code contained in a derived class.",
+          "It can be used by other code in the same assembly."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a258c36fc456d3d697dc1f97",
+        "question": "How would you correctly declare a jagged array called 'partyInvites' with 10 empty elements?",
+        "answer": "`string[][] partyInvites = new string[10][];`",
+        "explanation": "[Official Documentation: Jagged Arrays](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/jagged-arrays)",
+        "hint": null,
+        "correctAnswer": [
+          "`string[][] partyInvites = new string[10][];`"
+        ],
+        "options": [
+          "`string[] partyInvites = new string[10];`",
+          "`string[][] partyInvites = new string[10][];`",
+          "`string[][] partyInvites = new string[10]();`",
+          "`string <[]> partyInvites = new string <[10]>;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c188eacfb5e9447feeb4b30a",
+        "question": "How could you pause a thread for three seconds?",
+        "answer": "Thread.Sleep(3000);",
+        "explanation": "[Reference](https://docs.microsoft.com/en-us/dotnet/api/system.threading.thread.sleep?view=net-6.0)",
+        "hint": null,
+        "correctAnswer": [
+          "Thread.Sleep(3000);"
+        ],
+        "options": [
+          "Thread.Pause(3000);",
+          "Thread.Resume(-3000);",
+          "Thread.Suspend(3000);",
+          "Thread.Sleep(3000);"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "18fc098c436b3e662686278a",
+        "question": "What is wrong with this code?\n```cs\nvoid MyFunction()\n{\n    {\n        int a = 10;\n        int b = 20;\n        int c = a + b;\n    }\n    Console.WriteLine(c);\n}\n```",
+        "answer": "Variable c no longer exists outside the block.",
+        "explanation": "[Reference](https://stackoverflow.com/a/6136865)",
+        "hint": null,
+        "correctAnswer": [
+          "Variable c no longer exists outside the block."
+        ],
+        "options": [
+          "Variable c is never used; displaying it on the console does not count as usage.",
+          "Variables a and b are never used.",
+          "You cannot place code inside brackets inside another block.",
+          "Variable c no longer exists outside the block."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0dc637f4a0914d215316a77e",
+        "question": "Which statement is True?",
+        "answer": "string is an alias for String",
+        "explanation": "[Reference](https://stackoverflow.com/q/7074)",
+        "hint": null,
+        "correctAnswer": [
+          "string is an alias for String"
+        ],
+        "options": [
+          "All are true.",
+          "None are true.",
+          "string is a value type.",
+          "string is an alias for String"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "91c3ca8265ee88b158a18164",
+        "question": "How would you return more than one value from a method?",
+        "answer": "Use either a tuple or an out variable.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Use either a tuple or an out variable."
+        ],
+        "options": [
+          "Use either a tuple or an out variable.",
+          "The only way is to use an out variable.",
+          "The only way is to use a tuple.",
+          "This cannot be done"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1aeaaf2dd566b7c0d882a7f6",
+        "question": "Which is a valid example of a derived class?",
+        "answer": "`public class PremiumUser: User {}`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`public class PremiumUser: User {}`"
+        ],
+        "options": [
+          "`public class PremiumUser sub User {}`",
+          "`public class PremiumUser: User {}`",
+          "`public class PremiumUser -> sub User {}`",
+          "`public class User: PremiumUser {}`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f63c323cb6eb6ebddc402387",
+        "question": "What is the correct way to call a static method named DebugString from a static class called InputManager?",
+        "answer": "`InputManager.DebugString();`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`InputManager.DebugString();`"
+        ],
+        "options": [
+          "`static InputManager.DebugString();`",
+          "`InputManager().DebugString;`",
+          "`new InputManager().DebugString();`",
+          "`InputManager.DebugString();`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f2406c2b397208cd2f89d82e",
+        "question": "What values can be assigned to this variable?\n```cs\npublic string? nickname\n```",
+        "answer": "String values or null",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "String values or null"
+        ],
+        "options": [
+          "null",
+          "String values",
+          "String values or null",
+          "String values with more than one character"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "91c1dbffd3745f0b0bcd633b",
+        "question": "What is a destructor?",
+        "answer": "`a special method called automatically whenever an object is deleted or destroyed`",
+        "explanation": "[Reference](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors)",
+        "hint": null,
+        "correctAnswer": [
+          "`a special method called automatically whenever an object is deleted or destroyed`"
+        ],
+        "options": [
+          "`a special called automatically whenever an object is created or updated`",
+          "`an implicit method called automatically when thread pools are processed concurrently`",
+          "`an explicit method called automatically when the compiler starts running`",
+          "`a special method called automatically whenever an object is deleted or destroyed`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "49a0d28f32ab3dad71b9ac2c",
+        "question": "Which code snippet correctly declares a CustomInt type alias of type Int32?",
+        "answer": "`using CustomInt = System.Int32;`",
+        "explanation": "[Reference](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive)",
+        "hint": null,
+        "correctAnswer": [
+          "`using CustomInt = System.Int32;`"
+        ],
+        "options": [
+          "`typealias CustomInt = System.Int32;`",
+          "`var<T> CustomInt = Int32;`",
+          "`using CustomInt = System.Int32;`",
+          "`type CustomInt = System<Int32>;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "11ff5bae7697c6cb62f396f2",
+        "question": "What is an enumeration type?",
+        "answer": "`set of named integral constants`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`set of named integral constants`"
+        ],
+        "options": [
+          "`an object of pass by reference type`",
+          "`a value type that cannot hold constants`",
+          "`set of named integral constants`",
+          "`an object of pass-by-value type`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "afa873e38f8294b1e886ac50",
+        "question": "What is the readonly keyword used for in-field declarations?",
+        "answer": "`to declare a field whose value can be assigned only before the constructor exits`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`to declare a field whose value can be assigned only before the constructor exits`"
+        ],
+        "options": [
+          "`to declare a member variable that cannot be calculated at runtime`",
+          "`to declare a field whose value can be assigned only before the constructor exits`",
+          "`to declare a static variable that must be set at compile time`",
+          "`to declare a static variable that must be set at runtime`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3b9432303b90e032c1456eff",
+        "question": "Which statement is true of C# methods?",
+        "answer": "`Methods are actions that an object can take`",
+        "explanation": "[Official documentation: Methods (C# Programming Guide)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods)",
+        "hint": null,
+        "correctAnswer": [
+          "`Methods are actions that an object can take`"
+        ],
+        "options": [
+          "`Methods store variables.`",
+          "`Methods are actions that an object can take`",
+          "`A method can be used only once per C# file.`",
+          "`A method determines the state of a given property.`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0a52b870ed2ce45e6addb358",
+        "question": "Which is a valid built-in C# Exception class?",
+        "answer": "`ArgumentNullException`",
+        "explanation": "[Official documentation: ArgumentNullException Class](https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception?view=net-5.0)",
+        "hint": null,
+        "correctAnswer": [
+          "`ArgumentNullException`"
+        ],
+        "options": [
+          "`ArgumentNullValue`",
+          "`InvalidFormatFoundException`",
+          "`IndexOutOfPocket`",
+          "`ArgumentNullException`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "76f21cbb4240841244dca63f",
+        "question": "What is the purpose of an interface in C#?",
+        "answer": "Interfaces define a contract that classes must adhere to, specifying a set of methods and properties that implementing classes must provide.",
+        "explanation": "[Official Documentation: Interfaces (C# Programming Guide)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/)",
+        "hint": null,
+        "correctAnswer": [
+          "Interfaces define a contract that classes must adhere to, specifying a set of methods and properties that implementing classes must provide."
+        ],
+        "options": [
+          "Interfaces are used to store data.",
+          "Interfaces define a contract that classes must adhere to, specifying a set of methods and properties that implementing classes must provide.",
+          "Interfaces are used to create instances of classes.",
+          "Interfaces are used for code organization."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "44e9fad042c4e434f8a97b06",
+        "question": "What is the primary purpose of the `finally` block in a C# try-catch-finally statement?",
+        "answer": "The `finally` block is used to ensure that certain code is executed regardless of whether an exception occurs.",
+        "explanation": "[Official Documentation: try-catch (C# Reference)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch)",
+        "hint": null,
+        "correctAnswer": [
+          "The `finally` block is used to ensure that certain code is executed regardless of whether an exception occurs."
+        ],
+        "options": [
+          "The `finally` block is used to handle exceptions.",
+          "The `finally` block is used to define the main logic of the try-catch statement.",
+          "The `finally` block is optional and not required in try-catch statements.",
+          "The `finally` block is used to ensure that certain code is executed regardless of whether an exception occurs."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1a365ea51628fe99b3edff34",
+        "question": "Which data structure in C# allows you to store key-value pairs and is often used for quick data retrieval?",
+        "answer": "Dictionary",
+        "explanation": "[Official Documentation: Dictionary<TKey, TValue> Class](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)",
+        "hint": null,
+        "correctAnswer": [
+          "Dictionary"
+        ],
+        "options": [
+          "ArrayList",
+          "List",
+          "Array",
+          "Dictionary"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2c329ace13b1279d031e2644",
+        "question": "The execution of the program begins with?",
+        "answer": "Main()",
+        "explanation": "[Reference]: https://www.gkseries.com/c-sharp-programming/multiple-choice-questions-and-answers",
+        "hint": null,
+        "correctAnswer": [
+          "Main()"
+        ],
+        "options": [
+          "Main()",
+          "Get()",
+          "Class()",
+          "Display()"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2de2bddcd611c79d9a45a814",
+        "question": "In C# 'using' is a?",
+        "answer": "Directive",
+        "explanation": "[Reference]: https://www.gkseries.com/c-sharp-programming/multiple-choice-questions-and-answers",
+        "hint": null,
+        "correctAnswer": [
+          "Directive"
+        ],
+        "options": [
+          "Class",
+          "Directive",
+          "Function",
+          "Keyword"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "c-sharp/c-sharp-quiz.md",
+    "language": "md",
+    "generatedAt": "2025-12-09T14:56:14.151541+00:00",
+    "warnings": []
+  }
+}

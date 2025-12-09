@@ -1,0 +1,1450 @@
+{
+  "quizz": {
+    "id": "800d4c04aeced3b2300d5b37",
+    "title": "Servicios web de Amazon (AWS)",
+    "description": "Seeded from aws/aws-quiz-es.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "6360d92efc3d043e73b9ed0c",
+        "question": "Tiene una aplicaci\u00f3n que utiliza una base de datos MySQL de 100 GB que est\u00e1 migrando a AWS. \u00bfQu\u00e9 debe tener en cuenta al decidir si desea alojar la base de datos en RDS para MySQL o Aurora?",
+        "answer": "todas estas respuestas",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["todas estas respuestas"],
+        "options": [
+          "costo",
+          "facilidad de mantenimiento vs. granularidad del control",
+          "todas estas respuestas",
+          "el motor de almacenamiento actual utilizado por la aplicaci\u00f3n, como InnoDB o MyISAM"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4017eff5d4141fd7a7a00a74",
+        "question": "\u00bfQu\u00e9 base de datos es un tipo de base de datos NoSQL que puede almacenar y recuperar r\u00e1pidamente pares clave-valor?",
+        "answer": "DynamoDB",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["DynamoDB"],
+        "options": ["Aurora", "Neptuno", "RDS para MySQL", "DynamoDB"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fd2bea187460a4f3d7782a55",
+        "question": "La base de datos es una instancia de RDS que ejecuta SQL Server con replicaci\u00f3n Multi-AZ y tiene varias utilidades de consola de .NET m\u00e1s antiguas que realizan operaciones de base de datos cada 15 segundos. Cuando el cl\u00faster tiene que cambiar el servidor de base de datos principal a la zona de disponibilidad secundaria, las utilidades de .NET comienzan a informar de errores de conexi\u00f3n a la base de datos, aunque otras aplicaciones pueden tener acceso a la base de datos. \u00bfC\u00f3mo se corrige este problema?",
+        "answer": "Las utilidades net deben cambiar el extremo de SQL Server en las cadenas de conexi\u00f3n para leer desde el servidor de base de datos secundario mediante un try/catch.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Las utilidades net deben cambiar el extremo de SQL Server en las cadenas de conexi\u00f3n para leer desde el servidor de base de datos secundario mediante un try/catch."
+        ],
+        "options": [
+          "Utilice la consola rdsi para forzar un reinicio de la instancia de base de datos de modo que el servidor principal vuelva a ser el servidor maestro.",
+          "El servidor que ejecuta las utilidades .NET est\u00e1 almacenando en cach\u00e9 la b\u00fasqueda DNS en la direcci\u00f3n del cl\u00faster de base de datos. Vac\u00ede la cach\u00e9 DNS del servidor y fuerce las utilidades de C# para abrir nuevas conexiones a la base de datos.",
+          "A.NET aplicaci\u00f3n conservar\u00e1 la direcci\u00f3n IP de una cadena de conexi\u00f3n hasta que se reinicie el equipo host.",
+          "Las utilidades net deben cambiar el extremo de SQL Server en las cadenas de conexi\u00f3n para leer desde el servidor de base de datos secundario mediante un try/catch."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e0986bd77041262d5d9708f4",
+        "question": "\u00bfQu\u00e9 servicios de AWS pueden ayudarle a automatizar su canalizaci\u00f3n de desarrollo para la integraci\u00f3n continua y la implementaci\u00f3n continua?",
+        "answer": "todas estas respuestas",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["todas estas respuestas"],
+        "options": ["CodePipeline", "CodeDeploy", "todas estas respuestas", "CodeBuild"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f89b7c25ac9ba276df5ebee3",
+        "question": "\u00bfQu\u00e9 servicio de AWS cumple con los est\u00e1ndares descritos en el Nivel 1 del Est\u00e1ndar de seguridad de datos de la industria de tarjetas de pago (PCI DSS) para el manejo y la transmisi\u00f3n de datos de tarjetas de cr\u00e9dito?",
+        "answer": "todas estas respuestas",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["todas estas respuestas"],
+        "options": [
+          "Puerta de enlace API",
+          "todas estas respuestas",
+          "Servicio de cola simple (SQS)",
+          "Kinesis Data Streams"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "afb43928ad8a557213286b0c",
+        "question": "Tiene una gran cantidad de archivos en su arreglo de discos de almacenamiento de informaci\u00f3n conectado a la red que deben archivarse y mantenerse durante un per\u00edodo de 10 a\u00f1os debido a las regulaciones de la industria. Se acceder\u00e1 a estos datos con poca frecuencia, pero deben conservarse \u00bfCu\u00e1l es el mejor servicio de AWS para almacenar estos datos?",
+        "answer": "Glaciar S3",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Glaciar S3"],
+        "options": ["EFS", "Bola de nieve", "OEBS", "Glaciar S3"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4663f87254635ad2112626d9",
+        "question": "Para su cuenta ra\u00edz de AWS, ha generado una contrase\u00f1a aleatoria de la longitud m\u00e1xima permitida e incluido caracteres especiales. \u00bfQu\u00e9 pasos adicionales debe seguir para proteger su cuenta ra\u00edz de AWS?",
+        "answer": "Cree un rol de IAM para el administrador de la cuenta con los privilegios m\u00e1s altos y no utilice la cuenta ra\u00edz en las operaciones diarias. Habilitar la autenticaci\u00f3n de dos factores en la cuenta ra\u00edz",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Cree un rol de IAM para el administrador de la cuenta con los privilegios m\u00e1s altos y no utilice la cuenta ra\u00edz en las operaciones diarias. Habilitar la autenticaci\u00f3n de dos factores en la cuenta ra\u00edz"
+        ],
+        "options": [
+          "Cree un rol de AM para el administrador de la cuenta con los privilegios m\u00e1s altos. No almacene la contrase\u00f1a ra\u00edz, pero cuando sea necesaria la cuenta ra\u00edz, restablezca la contrase\u00f1a en la cuenta ra\u00edz mediante confirmaci\u00f3n por correo electr\u00f3nico y repita este procedimiento.",
+          "Almacene su contrase\u00f1a generada aleatoriamente en su base de datos de secretos de organizaci\u00f3n utilizando un servicio como 1Password o LastPass, y solo otorgue acceso a este secreto al equipo de DevOps.",
+          "Cree cuentas de IAM para sus administradores y adjunte la pol\u00edtica AdministratorAccess a sus cuentas. Deshabilite la cuenta ra\u00edz en la configuraci\u00f3n del usuario.",
+          "Cree un rol de IAM para el administrador de la cuenta con los privilegios m\u00e1s altos y no utilice la cuenta ra\u00edz en las operaciones diarias. Habilitar la autenticaci\u00f3n de dos factores en la cuenta ra\u00edz"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8dfda44fe664bcc8b6ba06dc",
+        "question": "\u00bfQu\u00e9 opci\u00f3n de Elastic Load Balancing admite Lambda como destino?",
+        "answer": "Balanceador de carga de aplicaciones",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Balanceador de carga de aplicaciones"],
+        "options": [
+          "Equilibrador de carga de red",
+          "Lambda no puede ser llamado directamente por las solicitudes web entrantes. Debe utilizar API Gateway.",
+          "Equilibrador de carga cl\u00e1sico",
+          "Balanceador de carga de aplicaciones"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dcd68599e73833896572343f",
+        "question": "\u00bfC\u00f3mo se dise\u00f1a una soluci\u00f3n para que una base de datos de SQL Server se replique en todas las regiones de AWS en una arquitectura activa-activa?",
+        "answer": "Use RDS para SQL Server 2016 o 2017 Enterprise Edition. Habilite la compatibilidad con Multi-AZ y seleccione la opci\u00f3n Duplicaci\u00f3n/Siempre activada. Seleccione otra regi\u00f3n para la opci\u00f3n de duplicaci\u00f3n.",
+        "explanation": "[Referencia](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html?opt_id=oeu1612780272452r0.9199525073583283)",
+        "hint": null,
+        "correctAnswer": [
+          "Use RDS para SQL Server 2016 o 2017 Enterprise Edition. Habilite la compatibilidad con Multi-AZ y seleccione la opci\u00f3n Duplicaci\u00f3n/Siempre activada. Seleccione otra regi\u00f3n para la opci\u00f3n de duplicaci\u00f3n."
+        ],
+        "options": [
+          "Utilice RDS para SQL Server y cree la misma instancia en dos regiones diferentes. Utilice el Servicio de migraci\u00f3n de bases de datos para mantener cada base de datos sincronizada.",
+          "Utilice un emparejamiento vpn o VPC para establecer una conexi\u00f3n entre las VPC de cada regi\u00f3n. Instale SQL Server Enterprise Edition en instancias EC2 de cada regi\u00f3n y configure un grupo de disponibilidad Always On.",
+          "Use RDS para SQL Server 2016 o 2017 Enterprise Edition. Habilite la compatibilidad con Multi-AZ y seleccione la opci\u00f3n Duplicaci\u00f3n/Siempre activada. Seleccione otra regi\u00f3n para la opci\u00f3n de duplicaci\u00f3n.",
+          "No puede configurar una arquitectura activo-activa para SQL Server que abarque regiones geogr\u00e1ficas."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "459ed124d6cef6553f799f3a",
+        "question": "\u00bfCu\u00e1nto cuesta lanzar una instancia EC2 desde AWS Marketplace?",
+        "answer": "Cada imagen tiene su propio precio que podr\u00eda ser gratuito o incluir cargos por los costos de licencia de software. Tambi\u00e9n pagar\u00e1 por la instancia en la que se ejecuta la imagen",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Cada imagen tiene su propio precio que podr\u00eda ser gratuito o incluir cargos por los costos de licencia de software. Tambi\u00e9n pagar\u00e1 por la instancia en la que se ejecuta la imagen"
+        ],
+        "options": [
+          "Todas las im\u00e1genes de AWS Marketplace incurren en tarifas por hora adicionales adem\u00e1s de los cargos del tama\u00f1o de instancia que seleccione.",
+          "Solo puede lanzar im\u00e1genes creadas por otros usuarios en su cuenta de AWS, por lo que solo paga por el tama\u00f1o de instancia que seleccione y los costos de almacenamiento de S3 para la imagen base.",
+          "Cada imagen tiene su propio precio que podr\u00eda ser gratuito o incluir cargos por los costos de licencia de software. Tambi\u00e9n pagar\u00e1 por la instancia en la que se ejecuta la imagen",
+          "Todas las im\u00e1genes de AWS Marketplace contienen solo software de c\u00f3digo abierto sin cargos adicionales y son creadas por otros usuarios de AWS. Solo pagar\u00e1 por el tama\u00f1o de instancia que seleccione."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3e4c42ad68ca325a3d131b0a",
+        "question": "Cuando se utiliza un cl\u00faster de ECS con instancias EC2, \u00bfqu\u00e9 tareas de mantenimiento debe realizar en ec2?",
+        "answer": "Actualice el cl\u00faster con instancias creadas a partir de la AMI de ECS m\u00e1s reciente.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Actualice el cl\u00faster con instancias creadas a partir de la AMI de ECS m\u00e1s reciente."
+        ],
+        "options": [
+          "Las instancias creadas por ECS no tienen parches que deban aplicarse; sin embargo, debe asegurarse de que los contenedores contengan actualizaciones de seguridad importantes.",
+          "Actualice el cl\u00faster con instancias creadas a partir de la AMI de ECS m\u00e1s reciente.",
+          "Los cl\u00fasteres de ECS no utilizan instancias EC2.",
+          "No debe manipular directamente las instancias EC2 creadas por ECS. AWS actualizar\u00e1 autom\u00e1ticamente estas instancias."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4bb6413b4d8290cabd6a7b94",
+        "question": "\u00bfQu\u00e9 servidor de almacenamiento en cach\u00e9 en memoria no es compatible con ElastiCache?",
+        "answer": "Elasticsearch",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Elasticsearch"],
+        "options": ["Redis 5", "Memcached", "Elasticsearch", "Redis 3"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ccd31d58efce95ddb938c532",
+        "question": "\u00bfQu\u00e9 servicio de AWS se puede utilizar para ayudar a generar la documentaci\u00f3n requerida por varios est\u00e1ndares de conformidad, como el Est\u00e1ndar de seguridad de datos de la industria de tarjetas de pago (PCI DSS) Nivel 1 para el manejo de datos de tarjetas de cr\u00e9dito?",
+        "answer": "Artefacto",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Artefacto"],
+        "options": [
+          "Artefacto",
+          "DocumentDB",
+          "Imprima el resumen de conformidad de AWS y gu\u00e1rdelo con la documentaci\u00f3n necesaria para una auditor\u00eda.",
+          "Gestor de secretos"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ab7a6ced24233f48d1540c8e",
+        "question": "Cuando se utiliza AWS para investigaci\u00f3n y desarrollo antes de una migraci\u00f3n planificada, \u00bfc\u00f3mo se evitan aumentos inesperados o picos en la facturaci\u00f3n?",
+        "answer": "Con la cuenta ra\u00edz de AWS, habilite alertas de facturaci\u00f3n en las preferencias del usuario. A continuaci\u00f3n, utilice CloudWatch para crear una alarma de facturaci\u00f3n y establecer un umbral en un importe espec\u00edfico en d\u00f3lares para sus cargos mensuales estimados.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Con la cuenta ra\u00edz de AWS, habilite alertas de facturaci\u00f3n en las preferencias del usuario. A continuaci\u00f3n, utilice CloudWatch para crear una alarma de facturaci\u00f3n y establecer un umbral en un importe espec\u00edfico en d\u00f3lares para sus cargos mensuales estimados."
+        ],
+        "options": [
+          "Utilice el panel de facturaci\u00f3n para crear un presupuesto de costos. Ingrese la cantidad m\u00e1xima que desea que se le cobre cada mes. Cualquier cargo que se produzca por encima de esta cantidad har\u00e1 que AWS suspenda autom\u00e1ticamente esos recursos.",
+          "Con la cuenta ra\u00edz de AWS, active el acceso de IAM a la informaci\u00f3n de facturaci\u00f3n de la cuenta. Aseg\u00farese de que los usuarios de IAM tengan la pol\u00edtica Billing FullAccessGroup. Luego, desde el panel de facturaci\u00f3n, verifique los cargos acumulados una vez al d\u00eda.",
+          "Si est\u00e1 utilizando la capa gratuita de AWS, tendr\u00e1 que confirmar el uso de cualquier servicio que supere los l\u00edmites de la capa gratuita de AWS.",
+          "Con la cuenta ra\u00edz de AWS, habilite alertas de facturaci\u00f3n en las preferencias del usuario. A continuaci\u00f3n, utilice CloudWatch para crear una alarma de facturaci\u00f3n y establecer un umbral en un importe espec\u00edfico en d\u00f3lares para sus cargos mensuales estimados."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "499062c89b2b81850cc61ed8",
+        "question": "Est\u00e1 creando una tabla de DynamoDB para almacenar todas las pel\u00edculas que se han estrenado desde 1938. Su aplicaci\u00f3n permitir\u00e1 a los usuarios buscar por t\u00edtulo de pel\u00edcula y ver los detalles de esa pel\u00edcula. Dado el ejemplo siguiente que muestra los datos de pel\u00edcula que va a importar, \u00bfcu\u00e1l es el mejor conjunto de claves para aplicar a esta tabla?\n```json\n{\n  \"title\": \"The Avengers\",\n  \"year\": 2012,\n  \"cast\": [\"Mark Ruffalo\", \"Robert Downey, Jr.\"],\n  \"genres\": [\"Action\"]\n}\n```",
+        "answer": "La clave principal debe crearse como un valor completamente \u00fanico, como una lista num\u00e9rica secuencial de ID de pel\u00edcula. La clave de partici\u00f3n debe ser el campo de t\u00edtulo para una b\u00fasqueda r\u00e1pida.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "La clave principal debe crearse como un valor completamente \u00fanico, como una lista num\u00e9rica secuencial de ID de pel\u00edcula. La clave de partici\u00f3n debe ser el campo de t\u00edtulo para una b\u00fasqueda r\u00e1pida."
+        ],
+        "options": [
+          "La clave principal debe ser una clave de partici\u00f3n del campo de t\u00edtulo.",
+          "La clave principal debe ser el campo de t\u00edtulo y la clave de partici\u00f3n debe ser el campo de g\u00e9neros.",
+          "La clave principal debe ser una clave compuesta por una clave de partici\u00f3n en el campo de t\u00edtulo y una clave de ordenaci\u00f3n en el campo de a\u00f1o.",
+          "La clave principal debe crearse como un valor completamente \u00fanico, como una lista num\u00e9rica secuencial de ID de pel\u00edcula. La clave de partici\u00f3n debe ser el campo de t\u00edtulo para una b\u00fasqueda r\u00e1pida."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ac26eeb1da97c1310d89973c",
+        "question": "\u00bfQu\u00e9 almac\u00e9n de datos proporciona una forma sencilla y r\u00e1pida de almacenar atributos b\u00e1sicos de usuario en un formato basado en objetos?",
+        "answer": "DynamoDB",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["DynamoDB"],
+        "options": ["ORDS para Oracle", "Corrimiento al rojo", "Neptuno", "DynamoDB"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "aaf9bd29eefe2a279c6b5d66",
+        "question": "Necesita una base de datos sin esquema. \u00bfQu\u00e9 servicio de base de datos de Amazon proporciona esa soluci\u00f3n?",
+        "answer": "DynamoDB",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["DynamoDB"],
+        "options": ["ORDS", "Aurora", "Corrimiento al rojo", "DynamoDB"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5112447c7f6e9150d3ee81ca",
+        "question": "\u00bfQu\u00e9 canal de comunicaci\u00f3n no admite SNS de forma nativa?",
+        "answer": "llamada telef\u00f3nica automatizada",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["llamada telef\u00f3nica automatizada"],
+        "options": [
+          "Mensaje de texto de OSMS",
+          "notificaci\u00f3n push",
+          "correo electr\u00f3nico",
+          "llamada telef\u00f3nica automatizada"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f222a46e87955bc4206433e0",
+        "question": "Al dise\u00f1ar una aplicaci\u00f3n web sin servidor con Lambda, \u00bfqu\u00e9 concepto clave debe tener en cuenta en su dise\u00f1o?",
+        "answer": "Lambda no tiene estado, por lo que no recordar\u00e1 qui\u00e9n es un usuario entre las solicitudes.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Lambda no tiene estado, por lo que no recordar\u00e1 qui\u00e9n es un usuario entre las solicitudes."
+        ],
+        "options": [
+          "Las aplicaciones web sin servidor se ejecutan dentro del navegador web del usuario, por lo que deber\u00e1 almacenar cualquier dato que el usuario cambie directamente en una base de datos.",
+          "Lambda solo permite escribir funciones en JavaScript.",
+          "Lambda no utiliza servidores, por lo que solo puede devolver la misma solicitud a todos los usuarios.",
+          "Lambda no tiene estado, por lo que no recordar\u00e1 qui\u00e9n es un usuario entre las solicitudes."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0c5d3ce9f5a410bd14887660",
+        "question": "Un principio de DevOps es ver la infraestructura como c\u00f3digo. \u00bfQu\u00e9 servicio de AWS le permite crear scripts de su infraestructura de AWS?",
+        "answer": "CloudFormation",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["CloudFormation"],
+        "options": [
+          "CloudTrail",
+          "CloudFormation",
+          "AWS Config",
+          "Cat\u00e1logo de servicios de AWS"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "927e0bf0f998f2654e80fe11",
+        "question": "Ha creado una instancia EC2 de Windows con una direcci\u00f3n IP p\u00fablica e instalado SQL Server. Al intentar conectarse a SQL Server desde el Administrador corporativo de SQL Server en el equipo local, la instancia EC2 de Windows no puede establecer una conexi\u00f3n con el servidor. \u00bfQu\u00e9 es lo primero que debes comprobar?",
+        "answer": "Compruebe que los grupos de seguridad asignados permiten el tr\u00e1fico del puerto TCP 1433 desde su direcci\u00f3n IP actual.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Compruebe que los grupos de seguridad asignados permiten el tr\u00e1fico del puerto TCP 1433 desde su direcci\u00f3n IP actual."
+        ],
+        "options": [
+          "Compruebe las tablas de enrutamiento de la VPC.",
+          "Compruebe que los grupos de seguridad asignados permiten el tr\u00e1fico del puerto TCP 1433 desde su direcci\u00f3n IP actual.",
+          "Compruebe las directivas de Firewall de Windows.",
+          "Compruebe que se est\u00e1 conectando a la instancia mediante un usuario que no es sa."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "db097f07420ce77348d32a8c",
+        "question": "Est\u00e1 hospedando una aplicaci\u00f3n configurada para transmitir medios a sus clientes en los puertos TCP 3380-3384, 3386-3388 y 3390. La ficha Entrantes siguiente muestra tres directivas de grupo de seguridad entrantes asociadas a esta instancia. \u00bfQu\u00e9 pol\u00edtica debe utilizar?\n![image](images/001.png)",
+        "answer": "La regla que expone los puertos TCP 3380-3390 tambi\u00e9n expondr\u00eda p\u00fablicamente el puerto 3389 (RDP) a todo Internet. Escriba reglas separadas para exponer solo los puertos necesarios.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "La regla que expone los puertos TCP 3380-3390 tambi\u00e9n expondr\u00eda p\u00fablicamente el puerto 3389 (RDP) a todo Internet. Escriba reglas separadas para exponer solo los puertos necesarios."
+        ],
+        "options": [
+          "La regla que expone los puertos TCP 3380-3390 tambi\u00e9n expondr\u00eda p\u00fablicamente el puerto 3389 (RDP) a todo Internet. Escriba reglas separadas para exponer solo los puertos necesarios.",
+          "La primera regla de grupo de seguridad permite todo el tr\u00e1fico en esta instancia. Exponer toda la instancia a todo Internet deja el servidor abierto a varios ataques de los otros servicios que se ejecutan en diferentes n\u00fameros de puerto.",
+          "Verifique que los propietarios de las cuentas de AWS realmente controlan todo el bloque CIDR C para 12.228.11.0-255 y que estas son IP seguras para el acceso RDP en esta instancia.",
+          "No hay recomendaciones que hacer."
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "d08fd1cecb43d921758e107f",
+            "url": "images/001.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "4ea0772cf69558d52e3b8d1d",
+        "question": "Tiene cuatro servidores front-end web detr\u00e1s de un equilibrador de carga, que usan NFS para acceder a otra instancia EC2 que cambia el tama\u00f1o y almacena im\u00e1genes para la aplicaci\u00f3n front-end. \u00bfQu\u00e9 directivas de grupo de seguridad se deben asignar a estos servidores?",
+        "answer": "Los servidores front-end web deben permitir HTTPS. Asigne otro grupo a todas las instancias que permita que todo el tr\u00e1fico pase entre instancias mediante ese grupo.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Los servidores front-end web deben permitir HTTPS. Asigne otro grupo a todas las instancias que permita que todo el tr\u00e1fico pase entre instancias mediante ese grupo."
+        ],
+        "options": [
+          "Asigne IP el\u00e1sticas a todas las instancias y cree un grupo que permita que todo el tr\u00e1fico pase entre cada una de las cinco El\u00e1sticas direcciones IP y permiten todo el tr\u00e1fico HTTPS entrante.",
+          "Los servidores front-end web deben permitir HTTPS. Asigne otro grupo a todas las instancias que permita que todo el tr\u00e1fico pase entre instancias mediante ese grupo.",
+          "Cree un grupo de seguridad que permita el tr\u00e1fico NFS, HTTP y HTTPS entrante desde todas las direcciones IP. Aplique este grupo a todos los servidores.",
+          "Cree un grupo de seguridad que permita el tr\u00e1fico HTTP y HTTPS entrante desde todas las direcciones IP y apl\u00edquelo a los servidores web. Cree un segundo grupo de seguridad para el almac\u00e9n de archivos NFS que permita el tr\u00e1fico NFS saliente al intervalo IP privado de los servidores front-end web."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "de080e46059cf3f785a24b5c",
+        "question": "Tiene un servidor web Linux EC2 que de repente se agota el tiempo de espera en todas las solicitudes HTTP y sus intentos de conexi\u00f3n SSH se agotan. Observa que est\u00e1 fallando la comprobaci\u00f3n del estado del sistema en la consola de EC2. \u00bfQu\u00e9 medidas debe tomar?",
+        "answer": "Restaure la instancia desde la \u00faltima imagen de la AMI. Las comprobaciones de estado del sistema indican que el sistema de archivos de la instancia est\u00e1 da\u00f1ado.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Restaure la instancia desde la \u00faltima imagen de la AMI. Las comprobaciones de estado del sistema indican que el sistema de archivos de la instancia est\u00e1 da\u00f1ado."
+        ],
+        "options": [
+          "Restaure la instancia desde la \u00faltima imagen de la AMI. Las comprobaciones de estado del sistema indican que el sistema de archivos de la instancia est\u00e1 da\u00f1ado.",
+          "Detenga e inicie la instancia. Esto mover\u00e1 la instancia a otro host.",
+          "P\u00f3ngase en contacto con el soporte t\u00e9cnico de AWS. El error de una comprobaci\u00f3n del estado del sistema indica un error en el hardware subyacente y debe ser abordado por un representante de AWS.",
+          "Reinicie la instancia. Esto detendr\u00e1 e iniciar\u00e1 la instancia y la mover\u00e1 a otro host."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7589da67503aa1b369bf8b41",
+        "question": "Tiene varios servidores locales y le gustar\u00eda almacenar sus copias de seguridad externas en AWS. \u00bfQu\u00e9 servicio de copia de seguridad totalmente administrado puede utilizar para enviar sus copias de seguridad a AWS?",
+        "answer": "Utilice Storage Gateway.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Utilice Storage Gateway."],
+        "options": [
+          "Windows Server 2016 admite S3 como destino cuando se usan r\u00e9plicas de almacenamiento.",
+          "Utilice Storage Gateway.",
+          "Sincronice archivos directamente con S3 con la AWS CLI.",
+          "Utilice la consola rdsi para forzar un reinicio de la instancia de base de datos de modo que el servidor principal vuelva a ser el servidor maestro."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d85bb20dd3631bb80e4ed462",
+        "question": "\u00bfCu\u00e1l es la pr\u00e1ctica recomendada para crear una base de datos PostgreSQL de alta disponibilidad en RDS que pueda soportar la p\u00e9rdida de una sola regi\u00f3n de AWS?",
+        "answer": "Cree r\u00e9plicas de lectura en otras regiones de AWS. Aseg\u00farese de que las operaciones de lectura en la base de datos se producen en una r\u00e9plica de lectura disponible y env\u00ede las operaciones de escritura a otra regi\u00f3n si necesita promover una r\u00e9plica de lectura a una base de datos independiente si el maestro est\u00e1 inactivo.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Cree r\u00e9plicas de lectura en otras regiones de AWS. Aseg\u00farese de que las operaciones de lectura en la base de datos se producen en una r\u00e9plica de lectura disponible y env\u00ede las operaciones de escritura a otra regi\u00f3n si necesita promover una r\u00e9plica de lectura a una base de datos independiente si el maestro est\u00e1 inactivo."
+        ],
+        "options": [
+          "PostgreSQL no se puede replicar en todas las regiones. Restaure las copias de seguridad de la base de datos desde un bucket de S3 y vuelva a apuntar las conexiones de la base de datos a la nueva instancia.",
+          "Cree r\u00e9plicas de lectura en otras regiones de AWS. Puede designar una nueva base de datos maestra a partir de cualquiera de las r\u00e9plicas de lectura hasta que se resuelva el error regional.",
+          "Compruebe que la instancia est\u00e1 configurada para la compatibilidad con Multi-AZ. Los cambios en la base de datos se sincronizar\u00e1n autom\u00e1ticamente con otra regi\u00f3n en caso de error y RDS seleccionar\u00e1 autom\u00e1ticamente un nuevo maestro hasta que se resuelva el error regional.",
+          "Cree r\u00e9plicas de lectura en otras regiones de AWS. Aseg\u00farese de que las operaciones de lectura en la base de datos se producen en una r\u00e9plica de lectura disponible y env\u00ede las operaciones de escritura a otra regi\u00f3n si necesita promover una r\u00e9plica de lectura a una base de datos independiente si el maestro est\u00e1 inactivo."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b37661a2608b53f2dd9926a4",
+        "question": "Ha creado una nueva instancia EC2 de Linux e instalado PostgreSQL, pero no puede establecer una conexi\u00f3n con el servidor desde el equipo local. \u00bfQu\u00e9 pasos toma para resolver este problema?",
+        "answer": "Compruebe que los grupos de seguridad asignados permiten el tr\u00e1fico desde su direcci\u00f3n IP al puerto 5432. Compruebe que PostgreSQL est\u00e1 configurado para escuchar el tr\u00e1fico externo y est\u00e1 enlazado a la interfaz p\u00fablica.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Compruebe que los grupos de seguridad asignados permiten el tr\u00e1fico desde su direcci\u00f3n IP al puerto 5432. Compruebe que PostgreSQL est\u00e1 configurado para escuchar el tr\u00e1fico externo y est\u00e1 enlazado a la interfaz p\u00fablica."
+        ],
+        "options": [
+          "Cree una regla de grupo de seguridad que permita todo el tr\u00e1fico de 0.0.0.0/0. Esto verificar\u00e1 si otra regla est\u00e1 denegando o no el tr\u00e1fico.",
+          "Compruebe que los grupos de seguridad asignados permiten el tr\u00e1fico desde su direcci\u00f3n IP al puerto 5432. Compruebe que PostgreSQL est\u00e1 configurado para escuchar el tr\u00e1fico externo y est\u00e1 enlazado a la interfaz p\u00fablica.",
+          "Aseg\u00farese de que est\u00e1 utilizando una IP el\u00e1stica y que est\u00e1 incluida dentro de la `postgresql.conf` archivo de configuraci\u00f3n.",
+          "Detenga e inicie la instancia. Las nuevas reglas de grupo de seguridad solo entrar\u00e1n en vigor despu\u00e9s de un reinicio."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7d207cfe8cb7c295355b3879",
+        "question": "\u00bfQu\u00e9 hace el cuerpo de la declaraci\u00f3n de esta pol\u00edtica de bucket de S3?\n```json\n{\n  \"Sid\": \"bucketpolicy1\",\n  \"Effect\": \"Allow\",\n  \"Principal\": \"*\",\n  \"Action\": \"s3:GetObject\",\n  \"Resource\": \"arn:aws:s3:::userreports/*\",\n  \"Condition\": {\n    \"IpAddress\": { \"aws:SourceIp\": \"68.249.108.0/24\" },\n    \"NotIpAddress\": { \"aws:SourceIp\": \"68.249.108.128/32\" }\n  }\n}\n```",
+        "answer": "bucketpolicy1 permite a cualquier usuario que provenga del intervalo IP de 68.249.108.0 a 68.249.108.255 acceder a objetos del bucket userreports, excepto cualquier persona que provenga de la IP de 68.249.108.128.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "bucketpolicy1 permite a cualquier usuario que provenga del intervalo IP de 68.249.108.0 a 68.249.108.255 acceder a objetos del bucket userreports, excepto cualquier persona que provenga de la IP de 68.249.108.128."
+        ],
+        "options": [
+          "bucketpolicy1 permite a cualquier usuario realizar cualquier acci\u00f3n en los objetos del bucket userreports, pero limita los objetos a permisos de solo lectura para cualquier persona que provenga de 68.249.108.0 a 68.249.108.255, excepto 68.249.108.128.",
+          "bucketpolicy1 permite a cualquier usuario procedente del intervalo IP de 68.249.108.0 acceder a objetos del bucket userreports y deniega el acceso a 68.249.108.128.",
+          "bucketpolicy1 permite a cualquier usuario realizar cualquier acci\u00f3n en los objetos del bucket userreports , excepto cualquier persona que provenga de la IP de 68.249.108.128.",
+          "bucketpolicy1 permite a cualquier usuario que provenga del intervalo IP de 68.249.108.0 a 68.249.108.255 acceder a objetos del bucket userreports, excepto cualquier persona que provenga de la IP de 68.249.108.128."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cf5f9e13160dbc336d5aefc6",
+        "question": "Se ha agregado un nuevo desarrollador al equipo y se le ha pedido que proporcione acceso a la cuenta de AWS de la organizaci\u00f3n. \u00bfCu\u00e1l es la mejor pr\u00e1ctica para conceder acceso?",
+        "answer": "Cree un usuario de IAM para el nuevo desarrollador. Asigne al nuevo desarrollador un grupo de desarrolladores que ya haya creado para los dem\u00e1s desarrolladores.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Cree un usuario de IAM para el nuevo desarrollador. Asigne al nuevo desarrollador un grupo de desarrolladores que ya haya creado para los dem\u00e1s desarrolladores."
+        ],
+        "options": [
+          "Proporcione al nuevo desarrollador el inicio de sesi\u00f3n de IAM que se asigna al equipo de desarrollo. Este usuario de IAM ya deber\u00eda incluir todas las pol\u00edticas que un desarrollador necesitar\u00eda.",
+          "Cree un usuario de IAM para el nuevo desarrollador. Asigne pol\u00edticas manualmente a la nueva cuenta de usuario de IAM.",
+          "No otorgue al nuevo desarrollador acceso a la consola de AWS. Con el usuario de IAM asignado al grupo de desarrollo, genere un nuevo conjunto de claves de acceso y etiqu\u00e9telas con el nombre del desarrollador.",
+          "Cree un usuario de IAM para el nuevo desarrollador. Asigne al nuevo desarrollador un grupo de desarrolladores que ya haya creado para los dem\u00e1s desarrolladores."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "820196066e7ca371da5de675",
+        "question": "Al lanzar una instancia EC2 con un tipo de instancia que admita el almacenamiento de instancias, \u00bfqu\u00e9 caso de uso es mejor para el almacenamiento de instancias?",
+        "answer": "Utilice el almacenamiento de instancias para servir archivos temporales que requieren una latencia de E/S baja.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Utilice el almacenamiento de instancias para servir archivos temporales que requieren una latencia de E/S baja."
+        ],
+        "options": [
+          "Utilice el almacenamiento de instancias para servir archivos temporales que requieren una latencia de E/S baja.",
+          "Utilice el almacenamiento de instancias para gestionar los archivos cargados por los usuarios. Dado que es m\u00e1s seguro que un volumen de EBS, puede aislar cualquier archivo malicioso para que no infecte el servidor.",
+          "El almacenamiento de instancias es m\u00e1s r\u00e1pido que los vol\u00famenes de EBS, as\u00ed que instale la ra\u00edz del sistema operativo en este volumen para acelerar el rendimiento del servidor.",
+          "El almacenamiento de instancias es una opci\u00f3n obsoleta para el almacenamiento y no debe utilizarse."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "96c322b18136449c0603ecb0",
+        "question": "\u00bfCu\u00e1l es la pr\u00e1ctica recomendada para escalar horizontalmente una aplicaci\u00f3n web heredada ASP.NET que se basa en Active Directory y que actualmente se implementa en una \u00fanica instancia EC2 de Windows?",
+        "answer": "Utilice Sysprep para apagar la instancia durante una ventana de mantenimiento. Cree una imagen AMI y coloque ambos servidores detr\u00e1s de Application Load Balancer con sesiones adhesivas.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Utilice Sysprep para apagar la instancia durante una ventana de mantenimiento. Cree una imagen AMI y coloque ambos servidores detr\u00e1s de Application Load Balancer con sesiones adhesivas."
+        ],
+        "options": [
+          "Utilice Sysprep para apagar la instancia durante una ventana de mantenimiento. Cree una imagen AMI y coloque ambos servidores detr\u00e1s de Application Load Balancer con sesiones adhesivas.",
+          "Inicie un nuevo EC2 con la \u00faltima versi\u00f3n de Windows Server e instale la aplicaci\u00f3n de nuevo. Utilice Application Load Balancer y sesiones adhesivas para equilibrar entre ambos servidores.",
+          "Cree un clon del servidor utilizando una imagen AMI y el usuario Application Load Balancer para equilibrar el tr\u00e1fico entre ambas instancias mediante sesiones adhesivas.",
+          "El escalado horizontal no es la mejor pr\u00e1ctica en esta situaci\u00f3n. Aumente el tama\u00f1o de la instancia EC2 existente y escale verticalmente la aplicaci\u00f3n."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dda07170f908337be6e54daa",
+        "question": "\u00bfQu\u00e9 hace esta peque\u00f1a secci\u00f3n de una plantilla de CloudFormation?\n```yaml\nFlowLog:\n  Type: AWS::EC2::FlowLog\n  Properties:\n    DeliverLogsPermissionArn: !GetAtt IamRole.Arn\n    LogGroupName: FlowLogsGroup\n    ResourceId: !Ref LogVpcId\n    ResourceType: VPC\n    TrafficType: ALL\n```",
+        "answer": "Escribe los registros de flujo de red de la VPC en el grupo de registros FlowLogsGroup de CloudWatch. Puede utilizar esto para inspeccionar las conexiones de red de su VPC.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Escribe los registros de flujo de red de la VPC en el grupo de registros FlowLogsGroup de CloudWatch. Puede utilizar esto para inspeccionar las conexiones de red de su VPC."
+        ],
+        "options": [
+          "Escribe los registros de flujo de red de la VPC en el grupo de registros FlowLogsGroup de CloudWatch. Puede utilizar esto para inspeccionar las conexiones de red de su VPC.",
+          "Registra todo el tr\u00e1fico de red dentro de una VPC excepto los ID de instancia definidos por LogVpcID y lo registra en el grupo de registros FlowLogsGroup de CloudWatch.",
+          "Registra todo el tr\u00e1fico de red que va hacia y desde una sola instancia EC2 en el grupo de registros De CloudWatch FlowLogsGroup. Puede usar esto para inspeccionar el tr\u00e1fico de red sospechoso que ingresa a una instancia EC2.",
+          "Registra todas las solicitudes de DNS realizadas por los recursos dentro de una VPC y las registra en CloudWatch FlowLogsGroup. Utilice esta opci\u00f3n para diagnosticar errores de b\u00fasqueda dns en su entorno."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "72fad9c1cb7ef35e59895f2c",
+        "question": "Est\u00e1 ejecutando contenedores docker en ECS. \u00bfCu\u00e1l es la m\u00e9trica m\u00e1s importante para monitorear?",
+        "answer": "El consumo de memoria de cada instancia EC2 en su cl\u00faster desde CloudWatch.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "El consumo de memoria de cada instancia EC2 en su cl\u00faster desde CloudWatch."
+        ],
+        "options": [
+          "El recuento de contenedores en ejecuci\u00f3n para cada servicio desde CloudWatch.",
+          "El estado de la instancia de cada instancia EC2 del cl\u00faster desde CloudWatch.",
+          "Supervise el panel de servicio de EC2. Est\u00e9 atento a las interrupciones publicadas en el servicio ECS.",
+          "El consumo de memoria de cada instancia EC2 en su cl\u00faster desde CloudWatch."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "de448ed9f0e707a06f17a7d4",
+        "question": "Application Load Balancer puede enrutar el tr\u00e1fico a varios grupos de destino diferentes en funci\u00f3n de varias condiciones. \u00bfCu\u00e1l de estos casos de uso no es compatible con Application Load Balancer?",
+        "answer": "Una cadena de consulta Http POST de ? action=createuser se puede enrutar a un grupo de destino para un servicio ECS.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Una cadena de consulta Http POST de ? action=createuser se puede enrutar a un grupo de destino para un servicio ECS."
+        ],
+        "options": [
+          "Una solicitud con un encabezado HTTP de X-Requested-With: staging se puede enrutar a un grupo de destino para un servicio ECS en su entorno de ensayo.",
+          "Las direcciones IP de origen que coincidan con 192.0.2.0/24 en un puerto de escucha de 1433 se pueden enrutar a un grupo de destino para un cl\u00faster de RDS para SQL Server.",
+          "Una ruta de /signup\\* se puede enrutar a un grupo de destino para una funci\u00f3n de Lambda que procesa nuevos registros de usuarios.",
+          "Una cadena de consulta Http POST de ? action=createuser se puede enrutar a un grupo de destino para un servicio ECS."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b9efe22847c92ac22ae69dbd",
+        "question": "\u00bfQu\u00e9 hace una VPC?",
+        "answer": "crea una red basada en la nube para interconectar un conjunto de servidores y dispositivos virtuales",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "crea una red basada en la nube para interconectar un conjunto de servidores y dispositivos virtuales"
+        ],
+        "options": [
+          "crea una red basada en la nube para interconectar un conjunto de servidores y dispositivos virtuales",
+          "crea un t\u00fanel seguro entre dos redes",
+          "crea un plano de almacenamiento compartido para que los datos de la aplicaci\u00f3n se compartan entre varias instancias.",
+          "crea una red privada que est\u00e1 completamente aislada de la Internet p\u00fablica."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e89c7fafc21373ad17f339c2",
+        "question": "\u00bfPuede perder la direcci\u00f3n IP p\u00fablica asociada a su instancia EC2?",
+        "answer": "S\u00ed, puede perderlo si detiene e inicia la instancia.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["S\u00ed, puede perderlo si detiene e inicia la instancia."],
+        "options": [
+          "S\u00ed, puede perderlo si reinicia la instancia.",
+          "S\u00ed, puede perderlo si detiene e inicia la instancia.",
+          "No, nunca perder\u00e1 la direcci\u00f3n IP p\u00fablica de su instancia.",
+          "S\u00ed, puede perderlo cuando edite las propiedades de la instancia y libere la direcci\u00f3n IP."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eb36c16b85afb8039c31930e",
+        "question": "\u00bfD\u00f3nde est\u00e1 el mejor lugar para almacenar copias de seguridad de bases de datos en una instancia EC2 configurada como servidor de bases de datos?",
+        "answer": "un bucket de S3, sincronizado con las copias de seguridad de la base de datos a trav\u00e9s de un script que llama a la AWS CLI",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "un bucket de S3, sincronizado con las copias de seguridad de la base de datos a trav\u00e9s de un script que llama a la AWS CLI"
+        ],
+        "options": [
+          "un bucket de S3, sincronizado con las copias de seguridad de la base de datos a trav\u00e9s de un script que llama a la AWS CLI",
+          "Volumen de EBS adjunto a la instancia",
+          "instancia adjunta a la instancia",
+          "almacenamiento de instancias, con un script que replica las copias de seguridad de la base de datos en otra instancia en una zona de disponibilidad diferente."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7d4ffd0b4b51b5264ee0c4f5",
+        "question": "\u00bfCu\u00e1l de estas es una restricci\u00f3n v\u00e1lida en las propiedades de una VPC?",
+        "answer": "No se puede crear un bloque CIDR con una m\u00e1scara de red mayor que /16",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "No se puede crear un bloque CIDR con una m\u00e1scara de red mayor que /16"
+        ],
+        "options": [
+          "Solo puede tener 10 gateways de Internet por regi\u00f3n en una nueva cuenta de AWS.",
+          "Solo puede tener 10 VPC por regi\u00f3n en una nueva cuenta de AWS",
+          "No se puede crear un bloque CIDR con una m\u00e1scara de red mayor que /16",
+          "Solo puede tener 10 subredes dentro de una VPC"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "be32fe6936477ceb3ab06cf5",
+        "question": "Tiene una instancia EC2 de Linux que no responde a las solicitudes y no puede conectarse a ella a trav\u00e9s de SSH. Con la consola de EC2, emiti\u00f3 un comando para detener la instancia, pero durante los \u00faltimos 10 minutos la instancia ha estado en el estado de \"detenci\u00f3n\". \u00bfCu\u00e1l es el siguiente paso que debes dar?",
+        "answer": "Realice otra acci\u00f3n de detenci\u00f3n a trav\u00e9s de la consola de EC2 y elija la opci\u00f3n para detener la instancia con fuerza.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Realice otra acci\u00f3n de detenci\u00f3n a trav\u00e9s de la consola de EC2 y elija la opci\u00f3n para detener la instancia con fuerza."
+        ],
+        "options": [
+          "Realice otra acci\u00f3n de detenci\u00f3n a trav\u00e9s de la consola de EC2 y elija la opci\u00f3n para detener la instancia con fuerza.",
+          "Cree una imagen AMI de la instancia y elija la opci\u00f3n para tomar la imagen sin reiniciar la instancia.",
+          "Edite las propiedades de la instancia y aumente el tama\u00f1o de la instancia.",
+          "P\u00f3ngase en contacto con el soporte t\u00e9cnico de AWS. Cualquier otra acci\u00f3n podr\u00eda da\u00f1ar el sistema de archivos."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b7d791d7354b6d3fca40ad48",
+        "question": "Tiene 14 servidores web locales, 4 servidores de bases de datos, 6 servidores que utilizan software SIG, 3 servidores de archivos y 4 servidores de desarrollo. \u00bfQu\u00e9 consideraciones debe tener en cuenta al migrar estos servidores a AWS?",
+        "answer": "Las nuevas cuentas de AWS est\u00e1n limitadas a 20 instancias EC2 bajo demanda. Env\u00ede una solicitud para aumentar sus l\u00edmites de velocidad antes de iniciar una migraci\u00f3n.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Las nuevas cuentas de AWS est\u00e1n limitadas a 20 instancias EC2 bajo demanda. Env\u00ede una solicitud para aumentar sus l\u00edmites de velocidad antes de iniciar una migraci\u00f3n."
+        ],
+        "options": [
+          "AWS no tiene una forma de separar la facturaci\u00f3n de los costos inform\u00e1ticos, por lo que deber\u00e1 dise\u00f1ar una forma de dividir el presupuesto entre departamentos.",
+          "Las nuevas cuentas de AWS est\u00e1n limitadas a 20 instancias EC2 bajo demanda. Env\u00ede una solicitud para aumentar sus l\u00edmites de velocidad antes de iniciar una migraci\u00f3n."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f34c9ecaf893566ea101d531",
+        "question": "A medida que su aplicaci\u00f3n web crece y sus necesidades de supervisi\u00f3n de aplicaciones se vuelven m\u00e1s complejas, \u00bfqu\u00e9 servicio adicional de supervisi\u00f3n de registros NO debe considerar?",
+        "answer": "PRTG",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["PRTG"],
+        "options": [
+          "Pila ELK: Elasticsearch, Loggly y Kibana",
+          "PRTG",
+          "Nueva Reliquia",
+          "Datadog"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "56a184bd29472750341fde4a",
+        "question": "Tiene una instancia T2 EC2 que es cr\u00edtica para su infraestructura. \u00bfC\u00f3mo supervisar\u00eda la m\u00e9trica m\u00e1s importante para este caso?",
+        "answer": "Active CloudWatch Auto Recovery y coloque monitores en las comprobaciones de estado del sistema y estado de la instancia para que la instancia le notifique cuando cualquiera de las dos est\u00e9 en alarma.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Active CloudWatch Auto Recovery y coloque monitores en las comprobaciones de estado del sistema y estado de la instancia para que la instancia le notifique cuando cualquiera de las dos est\u00e9 en alarma."
+        ],
+        "options": [
+          "Active CloudWatch Auto Recovery y coloque monitores en las comprobaciones de estado del sistema y estado de la instancia para que la instancia le notifique cuando cualquiera de las dos est\u00e9 en alarma.",
+          "Utilice CloudWatch para colocar monitores en los cr\u00e9ditos de CPU restantes. Si se queda sin cr\u00e9dito de CPU, la instancia se detendr\u00e1."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0404d6b63e040a72ba7ea68a",
+        "question": "\u00bfQu\u00e9 funci\u00f3n se puede utilizar para responder a un aumento repentino del tr\u00e1fico web?",
+        "answer": "todas estas respuestas",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["todas estas respuestas"],
+        "options": [
+          "Grupos de EC2 Auto Scaling",
+          "AWS Shield Advanced",
+          "R\u00e9plicas de lectura de RDS",
+          "todas estas respuestas"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f57564aeb838ae3ad44c0b22",
+        "question": "Si un conjunto de servidores se encuentra dentro de una subred privada de la VPC, \u00bfc\u00f3mo puede conectar esos servidores a servidores locales?",
+        "answer": "Todas estas opciones pueden establecer una conexi\u00f3n a una subred privada.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Todas estas opciones pueden establecer una conexi\u00f3n a una subred privada."
+        ],
+        "options": [
+          "Establezca una conexi\u00f3n con AWS Direct Connect.",
+          "Utilice AWS Client VPN.",
+          "Instale un servidor OpenVPN en una instancia que se encuentra dentro de la subred con una IP el\u00e1stica.",
+          "Todas estas opciones pueden establecer una conexi\u00f3n a una subred privada."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "baaff20a8f2d69c6e1fc8393",
+        "question": "Tiene un equilibrador de carga UDP creado por una instancia que ejecuta un proxy NGINX. La soluci\u00f3n de administraci\u00f3n del rendimiento de las aplicaciones (APM) puede detectar errores en la instancia del equilibrador de carga y transferir la ELASTIC IP a una instancia de espera pasiva. Con la AWS CLI, \u00bfqu\u00e9 script programa en su APM para mover la IP el\u00e1stica?",
+        "answer": "A",
+        "explanation": "<!---->\naws ec2 disassociate-address --association-id eipassoc-2bebb712\naws ec2 associate-address --instance-id i-8b953 --allocation-id eipalloc-02d021a\n<!---->\naws ec2 release-address --association-id eipassoc-2bebb712\naws ec2 assign-address --instance-id i-8b953 --allocation-id eipalloc-02d021a\n<!---->\naws ec2 stop-instances --instance-ids i-8b953\nwait 30\naws ec2 disassociate-address --association-id eipassoc-2bebb712\naws ec2 associate-address --instance-id i-8b953 --allocation-id eipalloc-02d021a\naws ec2 start-instances --instance-ids i-8b953\n<!---->\naws ec2 release-address --association-id eipassoc-2bebb712\naws ec2 associate-address --instance-id i-8b953 --allocation-id eipalloc-02d021a",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9b9e5a78e6388b8288e1c8b7",
+        "question": "\u00bfQu\u00e9 servicio puede alojar sus contenedores Docker?",
+        "answer": "Todos estos servicios pueden alojar un contenedor docker.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Todos estos servicios pueden alojar un contenedor docker."],
+        "options": [
+          "Vela de luz",
+          "Elastic Container Service (ECS)",
+          "Elastic Compute Cloud (EC2)",
+          "Todos estos servicios pueden alojar un contenedor docker."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "305591897828778991dcb5d5",
+        "question": "En la consola de S3, debajo de la columna Acceso, \u00bfqu\u00e9 indica la insignia p\u00fablica junto al nombre del bucket?\n![image](images/002.png)",
+        "answer": "A todos los objetos de este bucket se les asigna acceso p\u00fablico y cualquier persona en Internet puede leerlos o escribirlos. Aseg\u00farese de que no se compartan p\u00fablicamente datos confidenciales dentro de este bucket.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "A todos los objetos de este bucket se les asigna acceso p\u00fablico y cualquier persona en Internet puede leerlos o escribirlos. Aseg\u00farese de que no se compartan p\u00fablicamente datos confidenciales dentro de este bucket."
+        ],
+        "options": [
+          "A todos los objetos de este bucket se les asigna acceso p\u00fablico y cualquier persona en Internet puede leerlos o escribirlos. Aseg\u00farese de que no se compartan p\u00fablicamente datos confidenciales dentro de este bucket.",
+          "Todos los objetos dentro de este bucket son grabables, lo que significa que la Internet p\u00fablica tiene la capacidad de cargar cualquier archivo directamente en su bucket de S3. Su bucket de S3 podr\u00eda usarse para servir malware.",
+          "A algunos objetos de este bucket se les asigna acceso p\u00fablico. Compruebe que los objetos compartidos p\u00fablicamente dentro de este bucket no contengan datos confidenciales.",
+          "Los objetos dentro de este bucket se pueden hacer p\u00fablicos, si la ACL de ese objeto est\u00e1 configurada para permitir el acceso de todos. Los buckets privados no permiten establecer permisos p\u00fablicos en ning\u00fan objeto."
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "ec6acf2766d6cf5cf4bb10df",
+            "url": "images/002.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "a180e805fb4d2a812009edad",
+        "question": "\u00bfQu\u00e9 privilegio es espec\u00edfico de la cuenta ra\u00edz de AWS y no se puede conceder a otro usuario de IAM en la cuenta?",
+        "answer": "Elimine la cuenta de AWS.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Elimine la cuenta de AWS."],
+        "options": [
+          "Revocar el rol AdministratorAccess o concederlo a otro usuario de IAM.",
+          "Cree una nueva zona hospedada en Route 53.",
+          "Elimine la cuenta de AWS.",
+          "Modificar los detalles de facturaci\u00f3n."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3775e0ee16ec6fc8ef0ca021",
+        "question": "Su aplicaci\u00f3n est\u00e1 enviando 50,000 correos electr\u00f3nicos a trav\u00e9s de SES cada d\u00eda. Dado que debe mantener una tasa de rebote baja para evitar ser puesto en libertad condicional, \u00bfqu\u00e9 sistema simple dise\u00f1a para procesar autom\u00e1ticamente los rebotes duros?",
+        "answer": "Configure SES para enviar todos los eventos de rebote a un tema de SNS. Cree una funci\u00f3n de Lambda que procese cada evento de rebote duro y marque autom\u00e1ticamente esa cuenta como rebote en la aplicaci\u00f3n para evitar m\u00e1s intentos de env\u00edo.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Configure SES para enviar todos los eventos de rebote a un tema de SNS. Cree una funci\u00f3n de Lambda que procese cada evento de rebote duro y marque autom\u00e1ticamente esa cuenta como rebote en la aplicaci\u00f3n para evitar m\u00e1s intentos de env\u00edo."
+        ],
+        "options": [
+          "Configure SES para enviar todos los eventos de rebote a un tema de SNS. Cree una funci\u00f3n de Lambda que procese cada evento de rebote duro y marque autom\u00e1ticamente esa cuenta como rebote en la aplicaci\u00f3n para evitar m\u00e1s intentos de env\u00edo.",
+          "Configure SES para que ya no se env\u00ede a direcciones de correo electr\u00f3nico que est\u00e9n en su lista de rebotes.",
+          "Configure SES para enviar los registros de todos los intentos de entrega a trav\u00e9s de Kinesis Firehose. Procesa cada evento y busca tipos de rebote y elimina estos correos electr\u00f3nicos de tu lista.",
+          "Env\u00ede todos los correos electr\u00f3nicos a trav\u00e9s de SES con un encabezado de respuesta personalizado. Configure SES para escuchar los eventos en esta direcci\u00f3n de correo electr\u00f3nico y marque cualquier direcci\u00f3n de correo electr\u00f3nico que responda a esta cuenta como un mensaje rebotado y elim\u00ednela de su lista de correo electr\u00f3nico."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1b297267c99a43bea788348d",
+        "question": "Su aplicaci\u00f3n web est\u00e1 recibiendo una cantidad sospechosa de solicitudes incorrectas de direcciones IP extranjeras. Su negocio est\u00e1 operando en solo unos pocos pa\u00edses y le gustar\u00eda bloquear cualquier otro tr\u00e1fico. \u00bfCu\u00e1l es la mejor pr\u00e1ctica para limitar el acceso a su aplicaci\u00f3n web por pa\u00eds?",
+        "answer": "Utilice Web Application Firewall y cree una condici\u00f3n de coincidencia geogr\u00e1fica para eliminar todas las solicitudes de pa\u00edses que no est\u00e1n en su lista de permitidos.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Utilice Web Application Firewall y cree una condici\u00f3n de coincidencia geogr\u00e1fica para eliminar todas las solicitudes de pa\u00edses que no est\u00e1n en su lista de permitidos."
+        ],
+        "options": [
+          "Utilice Web Application Firewall y cree una condici\u00f3n de coincidencia geogr\u00e1fica para eliminar todas las solicitudes de pa\u00edses que no est\u00e1n en su lista de permitidos.",
+          "Utilice Application Load Balancer para crear una nueva regla de enrutamiento que examine la direcci\u00f3n IP de origen. Agregue un bloque de IP para los pa\u00edses que tienen acceso.",
+          "Aloje el front-end de su sitio web en CloudFront y configure una restricci\u00f3n geogr\u00e1fica en la distribuci\u00f3n.",
+          "Utilice CloudTrail para supervisar las direcciones IP de las solicitudes incorrectas. Utilice Lambda para agregar estas direcciones IP a una regla del equilibrador de carga de aplicaciones que bloquea las direcciones IP."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "aaffb1d82584e5520ab08d8b",
+        "question": "\u00bfCu\u00e1l es la pr\u00e1ctica recomendada para mantener las instancias EC2 de Windows y aplicar actualizaciones?",
+        "answer": "Utilice AWS Systems Manager Patch Manager para buscar instancias de parche que requieran actualizaciones durante una ventana de mantenimiento establecida.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Utilice AWS Systems Manager Patch Manager para buscar instancias de parche que requieran actualizaciones durante una ventana de mantenimiento establecida."
+        ],
+        "options": [
+          "Active la actualizaci\u00f3n autom\u00e1tica en Windows Update en cada EC2 que se lance, o cree su propia AMI con esta caracter\u00edstica habilitada y lance todas sus instancias EC2 desde esta AMI.",
+          "Cree un programa de mantenimiento que un empleado debe completar cada semana confirmando que se realiz\u00f3 una inspecci\u00f3n visual de cada instancia y qu\u00e9 parches se aplicaron.",
+          "Utilice AWS Systems Manager Patch Manager para buscar instancias de parche que requieran actualizaciones durante una ventana de mantenimiento establecida.",
+          "Instale Windows Server Update Services en el controlador principal de Active Directory."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "28fdf1d922eaaa376f31d8c7",
+        "question": "Adem\u00e1s de CloudFormation, puede utilizar otras herramientas de orquestaci\u00f3n para automatizar la formaci\u00f3n y el mantenimiento de servidores. \u00bfQu\u00e9 herramienta es _no_ una opci\u00f3n eficiente para la orquestaci\u00f3n de una gran infraestructura?",
+        "answer": "Vagabundo",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Vagabundo"],
+        "options": ["Chef", "Ansible", "T\u00edtere", "Vagabundo"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5621ad90ca9c6e175d7cd3d7",
+        "question": "\u00bfQu\u00e9 sucede con una instancia rds de SQL Server si las bases de datos aumentan de tama\u00f1o y superan el espacio asignado?",
+        "answer": "La instancia de base de datos informar\u00e1 de un estado de STORAGE_FULL y se volver\u00e1 inaccesible si la instancia no tiene suficiente almacenamiento restante para funcionar. Asigne m\u00e1s espacio a la instancia.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "La instancia de base de datos informar\u00e1 de un estado de STORAGE_FULL y se volver\u00e1 inaccesible si la instancia no tiene suficiente almacenamiento restante para funcionar. Asigne m\u00e1s espacio a la instancia."
+        ],
+        "options": [
+          "RDS aumentar\u00e1 autom\u00e1ticamente el espacio asignado en un 10 % y enviar\u00e1 a la cuenta ra\u00edz de AWS un correo electr\u00f3nico con los pasos de resoluci\u00f3n. Asigne m\u00e1s espacio para evitar cargos por exceso de edad.",
+          "La instancia de base de datos informar\u00e1 de un estado de STORAGE_FULL y se volver\u00e1 inaccesible si la instancia no tiene suficiente almacenamiento restante para funcionar. Asigne m\u00e1s espacio a la instancia.",
+          "SQL Server cerrar\u00e1 todas las conexiones existentes a las bases de datos e intentar\u00e1 reducir sus archivos de registro para recuperar espacio de almacenamiento.",
+          "RDS aumentar\u00e1 autom\u00e1ticamente el espacio asignado en un 5% y continuar\u00e1 asignando nuevo espacio hasta el 50% del espacio original asignado. Cuando el espacio de almacenamiento ha aumentado un 50%, RDS detendr\u00e1 autom\u00e1ticamente la instancia para preservar la integridad de los datos."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a90f0c810cfab22593d6d535",
+        "question": "Tiene una flota de dispositivos IoT que env\u00edan telemetr\u00eda a una aplicaci\u00f3n del lado del servidor proporcionada por su proveedor de IoT para decodificar un formato de mensajer\u00eda propietario. Los dispositivos se aprovisionan para enviar informes de telemetr\u00eda al servidor a trav\u00e9s de UDP en el puerto 6339. \u00bfCu\u00e1l es la mejor manera de escalar este servidor a medida que se agregan m\u00e1s dispositivos Iot a su flota?",
+        "answer": "Utilice Route 53 con comprobaciones de estado HTTP. Cree una aplicaci\u00f3n en el servidor para informar del estado de preparaci\u00f3n del software de servidor proporcionado por el proveedor a Route 53 a trav\u00e9s de HTTP.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Utilice Route 53 con comprobaciones de estado HTTP. Cree una aplicaci\u00f3n en el servidor para informar del estado de preparaci\u00f3n del software de servidor proporcionado por el proveedor a Route 53 a trav\u00e9s de HTTP."
+        ],
+        "options": [
+          "Utilice un equilibrador de carga de red para distribuir el tr\u00e1fico entre sus servidores. Utilice las comprobaciones de estado de UDP para determinar si el servidor est\u00e1 disponible para recibir tr\u00e1fico.",
+          "Utilice Route 53 con comprobaciones de estado HTTP. Cree una aplicaci\u00f3n en el servidor para informar del estado de preparaci\u00f3n del software de servidor proporcionado por el proveedor a Route 53 a trav\u00e9s de HTTP.",
+          "Utilice Route 53 con comprobaciones de estado de UDP. A medida que se ampl\u00eda la escala, Route 53 enrutar\u00e1 el tr\u00e1fico a los nuevos servidores si pasan las comprobaciones de estado.",
+          "Utilice Application Load Balancer para distribuir el tr\u00e1fico entre los servidores."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ad8071d38046d2c19d5efee7",
+        "question": "las reglas de salida de un grupo de seguridad solo permiten que el tr\u00e1fico vaya a 0.0.0.0/0 en el puerto TCP 22 (SSH) y el puerto TCP 3306 (MySQL). Revise las reglas de entrada enumeradas en la imagen a continuaci\u00f3n. \u00bfCu\u00e1l es el problema m\u00e1s importante a solucionar con esta configuraci\u00f3n de grupo de seguridad, para una instancia EC2 de Ubuntu que act\u00faa como servidor web?\n![image](https://user-images.githubusercontent.com/8637045/112515574-c077e780-8d6c-11eb-96a6-11f27a0547cf.png)",
+        "answer": "Las reglas de salida no permiten que el tr\u00e1fico HTTP salga de la instancia, por lo que las solicitudes HTTP entrantes fallar\u00e1n porque los clientes nunca obtendr\u00e1n respuestas HTTP.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Las reglas de salida no permiten que el tr\u00e1fico HTTP salga de la instancia, por lo que las solicitudes HTTP entrantes fallar\u00e1n porque los clientes nunca obtendr\u00e1n respuestas HTTP."
+        ],
+        "options": [
+          "Las reglas de salida bloquean el puerto UDP 53, por lo que el servidor no podr\u00e1 resolver ninguna b\u00fasqueda DNS.",
+          "Las reglas de salida no permiten que el tr\u00e1fico HTTP salga de la instancia, por lo que las solicitudes HTTP entrantes fallar\u00e1n porque los clientes nunca obtendr\u00e1n respuestas HTTP.",
+          "El puerto SSH entrante no debe estar abierto al p\u00fablico. Limite SSH a una sola direcci\u00f3n IP o rango de IP de direcci\u00f3n controlada, o utilice una VPN para acceder a la VPC de este servidor.",
+          "Se exponen todos los puertos TCP entrantes, lo que anula las reglas HTTP y SSH y expone todos los puertos TCP a la Internet p\u00fablica."
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "526e383471050de6397cad15",
+            "url": "https://user-images.githubusercontent.com/8637045/112515574-c077e780-8d6c-11eb-96a6-11f27a0547cf.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "3975e11be16659edf60202e8",
+        "question": "Una instancia EC2 que ejecuta un sitio de WordPress sigue siendo pirateada, a pesar de que ha restaurado el servidor varias veces y ha parcheado WordPress. \u00bfQu\u00e9 servicio de AWS puede ayudarle a detectar y prevenir nuevos ataques?",
+        "answer": "GuardDuty",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["GuardDuty"],
+        "options": ["CloudWatch", "GuardDuty", "Escudo", "Asesor de seguridad"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "01d55717396fa5bca4f7d54f",
+        "question": "Un cliente no t\u00e9cnico desea migrar un sitio de WordPress a AWS desde un servidor privado administrado por una empresa de alojamiento de terceros. \u00bfA qu\u00e9 servicio de AWS deber\u00eda recomendar migrar el sitio?",
+        "answer": "Vela ligera",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Vela ligera"],
+        "options": [
+          "CloudFront",
+          "Una instancia EC2 lanzada desde la AMI oficial de WordPress",
+          "S3",
+          "Vela ligera"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4099e2c5cfb469e542ffc244",
+        "question": "Su empresa tiene servidores locales con una soluci\u00f3n de copia de seguridad en el sitio existente que tambi\u00e9n replica las copias de seguridad en otro campus en el otro lado del pa\u00eds con su propia soluci\u00f3n de copia de seguridad en el sitio. Se le ha pedido que cree un tercer nivel de redundancia almacenando tambi\u00e9n estas copias de seguridad en la nube. En el caso de una falla de copia de seguridad primaria y secundaria, su jefe quiere saber que las copias de seguridad en la nube pueden ser accesibles lo m\u00e1s r\u00e1pido posible para reducir el tiempo de inactividad durante la recuperaci\u00f3n. \u00bfQu\u00e9 clase de almacenamiento de S3 recomienda por costo y rendimiento?",
+        "answer": "Acceso poco frecuente a una zona de S3",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Acceso poco frecuente a una zona de S3"],
+        "options": [
+          "Est\u00e1ndar S3",
+          "S3 Intelligent-Tiering",
+          "Glaciar S3",
+          "Acceso poco frecuente a una zona de S3"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f054a7b2a0f73c61852a7378",
+        "question": "\u00bfQu\u00e9 big data store le permitir\u00e1 almacenar grandes flujos de datos de actividad del usuario procedentes de aplicaciones web y m\u00f3viles?",
+        "answer": "Corrimiento al rojo",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Corrimiento al rojo"],
+        "options": ["Neptuno", "Aurora", "RDS para SQL Server", "Corrimiento al rojo"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "da101b4c139d0b8374aff5cb",
+        "question": "\u00bfQu\u00e9 opci\u00f3n es la mejor para Auto Scaling sus instancias EC2 para patrones de tr\u00e1fico predecibles?",
+        "answer": "escala basada en un cronograma",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["escala basada en un cronograma"],
+        "options": [
+          "escala basada en un cronograma",
+          "escalado manual",
+          "escala basada en la demanda",
+          "mantener los niveles actuales en todo momento"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "07bac048bf3428fee4f55bda",
+        "question": "Est\u00e1 migrando un cl\u00faster de RabbitMQ local a AWS. \u00bfQu\u00e9 ruta de migraci\u00f3n debe elegir para facilitar tanto el mantenimiento como la implementaci\u00f3n?",
+        "answer": "Vuelva a escribir las partes de la aplicaci\u00f3n que utilizan RabbitMQ para utilizar Amazon MQ.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Vuelva a escribir las partes de la aplicaci\u00f3n que utilizan RabbitMQ para utilizar Amazon MQ."
+        ],
+        "options": [
+          "Vuelva a escribir las partes de su aplicaci\u00f3n que usan RabbitMQ para usar SQS.",
+          "Lance un cl\u00faster de RabbitMQ con instancias EC2 utilizando una AMI compatible.",
+          "Vuelva a escribir las partes de su aplicaci\u00f3n que usan RabbitMQ para usar Kinesis.",
+          "Vuelva a escribir las partes de la aplicaci\u00f3n que utilizan RabbitMQ para utilizar Amazon MQ."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6bcedaae3bbded389bdac842",
+        "question": "Al crear una nueva instancia de RDS, \u00bfqu\u00e9 hace la opci\u00f3n Multi-AZ?",
+        "answer": "crea una segunda instancia de base de datos pasiva dentro de la misma regi\u00f3n que se convertir\u00e1 en la base de datos principal durante una conmutaci\u00f3n por error",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "crea una segunda instancia de base de datos pasiva dentro de la misma regi\u00f3n que se convertir\u00e1 en la base de datos principal durante una conmutaci\u00f3n por error"
+        ],
+        "options": [
+          "replica las copias de seguridad de su base de datos en S3 y las pone a disposici\u00f3n en todas las regiones para evitar cualquier p\u00e9rdida de datos",
+          "crea una segunda instancia de base de datos pasiva dentro de la misma regi\u00f3n que se convertir\u00e1 en la base de datos principal durante una conmutaci\u00f3n por error",
+          "crea un cl\u00faster de bases de datos de alta disponibilidad que hospedar\u00e1 el cl\u00faster de bases de datos en al menos dos regiones",
+          "crea otra instancia de base de datos en otra regi\u00f3n y mantiene activo un modo de espera activo para la conmutaci\u00f3n por error durante los errores regionales"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "90f9de292f5f98f91af2957e",
+        "question": "\u00bfCu\u00e1l es la mejor clase de instancia EC2 para un servidor que continuamente tiene una carga pesada de CPU?",
+        "answer": "C5",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["C5"],
+        "options": ["C5", "T2", "R5", "H1"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ac8d0d8512ed629fefa6f13a",
+        "question": "El sistema de gesti\u00f3n del rendimiento de las aplicaciones (APM) puede leer el estado de los monitores de CloudWatch y realizar acciones programadas. Cuando la m\u00e9trica de CloudWatch StatusCheckFailed entra en un estado de error (un valor de 1), desea que su APM repare autom\u00e1ticamente la instancia. \u00bfQu\u00e9 script utilizas?",
+        "answer": "A",
+        "explanation": "<!---->\naws ec2 stop-instances --instance-ids i-0b263919b6498b123\naws ec2 start-instances --instance-ids i-0b263919b6498b123\n<!---->\naws ec2 reboot-instances --instance-ids i-0b263919b6498b123\n<!---->\naws ec2 reboot-instances --instance-ids i-0b263919b6498b123\nwait 30\naws ec2 start-instance --instance-ids i-0b263919b6498b123\n<!---->\naws ec2 reboot-instances --instance-ids i-0b263919b6498b123\naws ec2 start-instances --instance-ids i-0b263919b6498b123",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2477aa1ef372c71e81884293",
+        "question": "\u00bfQu\u00e9 hay de malo en la tercera regla de grupo de seguridad entrante, que permite que todo el tr\u00e1fico de sg-269afc5e vaya a una instancia EC2 de Ubuntu configurada como servidor web?\n![065](https://user-images.githubusercontent.com/33999631/179728393-8a2636ea-04e7-4597-b0cc-8150e2bc91de.png)",
+        "answer": "La instancia se lanz\u00f3 con el grupo de seguridad predeterminado, pero no hay forma de que un administrador entre SSH en la instancia.",
+        "explanation": "Agregue otra regla que permita el acceso SSH desde un origen seguro, como una sola IP o un rango de direcciones IP administradas.\nprotegido, esta regla permite que pase todo el tr\u00e1fico que tambi\u00e9n est\u00e1 asignado al grupo de seguridad sg-269afc5e.\nsobrescribe la regla HTTP entrante.",
+        "hint": null,
+        "correctAnswer": [
+          "La instancia se lanz\u00f3 con el grupo de seguridad predeterminado, pero no hay forma de que un administrador entre SSH en la instancia."
+        ],
+        "options": [
+          "Todo el tr\u00e1fico en todos los puertos se est\u00e1 denegando en esta instancia, lo que sobrescribe la regla HTTP y la hace redundante.",
+          "La instancia se lanz\u00f3 con el grupo de seguridad predeterminado, pero no hay forma de que un administrador entre SSH en la instancia.",
+          "No hay nada de malo en esta regla de grupo de seguridad. Suponiendo que sg-269afc5e se aplica a otros recursos que son correctamente",
+          "Todo el tr\u00e1fico en todos los puertos est\u00e1 permitido en esta instancia. Esto expone la instancia a todo el tr\u00e1fico p\u00fablico de Internet y"
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "9aea4bb491e0188274600b7d",
+            "url": "https://user-images.githubusercontent.com/33999631/179728393-8a2636ea-04e7-4597-b0cc-8150e2bc91de.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "f22bb77a0798eaadb98aad09",
+        "question": "Tiene una VPC que tiene una subred p\u00fablica y privada. Hay una puerta de enlace NAT en la subred p\u00fablica que permite a las instancias de la subred privada acceder a Internet sin tener exposici\u00f3n p\u00fablica fuera de la VPC. \u00bfCu\u00e1les deben ser las tablas de enrutamiento para la subred privada?\n![image](images/003.png)",
+        "answer": "A",
+        "explanation": "<!---->\nDestination 1: 10.0.0.0/16, Target 1: local;\nDestination 2: 0.0.0.0/0, Target 2: nat-09b4832\n<!---->\nDestination 1: 10.0.0.0/24, Target 1: local;\nDestination 2: 0.0.0.0/0, Target 2: igw-b2ff47d6\n<!---->\nDestination 1: 10.0.0.0/24, Target 1: subnet-1948ba2;\nDestination 2: 0.0.0.0/0, Target 2: nat-09b4832\n<!---->\nDestination 1: 10.0.0.0/16, Target 1: vpc-12bd09ac2;\nDestination 2: 0.0.0.0/0, Target 2: igw-b2ff47d6",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "d2dc84926fb58151a6c9ac0e",
+            "url": "images/003.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "8657d979f9b2e4629702defd",
+        "question": "Para cumplir con los requisitos de auditor\u00eda de algunos est\u00e1ndares de conformidad, \u00bfqu\u00e9 herramienta de AWS se puede habilitar para mantener un registro de auditor\u00eda del acceso y los cambios en su infraestructura de AWS?",
+        "answer": "CloudTrail",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["CloudTrail"],
+        "options": [
+          "CloudTrail",
+          "CloudWatch",
+          "Herramienta de auditor\u00eda y conformidad de AWS",
+          "GuardDuty"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0347e10287f65c790dd2a659",
+        "question": "Tiene una aplicaci\u00f3n que genera informes de larga duraci\u00f3n, los almacena en un bucket de S3 y, a continuaci\u00f3n, env\u00eda un correo electr\u00f3nico al usuario que solicit\u00f3 el informe con un v\u00ednculo para descargarlo. \u00bfCu\u00e1l es la pr\u00e1ctica recomendada para almacenar los datos del informe en S3?",
+        "answer": "Cree un bucket de S3 privado. El enlace en el correo electr\u00f3nico debe llevar al usuario a su aplicaci\u00f3n, donde puede verificar el usuario activo",
+        "explanation": "nombres de carpeta y coloque el archivo dentro de la subcarpeta m\u00e1s profunda. Establezca la pol\u00edtica de retenci\u00f3n en el objeto en una hora y env\u00ede este enlace por correo electr\u00f3nico a\nel usuario. El enlace estar\u00e1 activo durante una hora.\nnombre \u00fanico del objeto. Env\u00ede este v\u00ednculo por correo electr\u00f3nico al usuario y haga que se ejecute una tarea programada dentro de la aplicaci\u00f3n para quitar objetos que son m\u00e1s antiguos\nque siete d\u00edas.\nsesi\u00f3n u obligar al usuario a iniciar sesi\u00f3n. Despu\u00e9s de comprobar que el usuario tiene derechos para acceder a este archivo, haga que la aplicaci\u00f3n recupere el objeto\ndesde S3 y devolverlo en la respuesta HTTP. Elimine el archivo del bucket de S3 una vez completada la solicitud.\nsesi\u00f3n u obligar al usuario a iniciar sesi\u00f3n. Establezca el objeto de informe en S3 en public. Mostrar al usuario un bot\u00f3n \"Descargar\" en el navegador que enlaza\nal objeto p\u00fablico.",
+        "hint": null,
+        "correctAnswer": [
+          "Cree un bucket de S3 privado. El enlace en el correo electr\u00f3nico debe llevar al usuario a su aplicaci\u00f3n, donde puede verificar el usuario activo"
+        ],
+        "options": [
+          "Cree un bucket p\u00fablico de S3. Cuando la aplicaci\u00f3n cree el objeto de informe en S3, genere dos long generados aleatoriamente",
+          "Cree un bucket p\u00fablico de S3. Utilice un hash de la direcci\u00f3n de correo electr\u00f3nico del usuario y la fecha y hora en que se solicit\u00f3 el informe para generar un",
+          "Cree un bucket de S3 privado. El enlace en el correo electr\u00f3nico debe llevar al usuario a su aplicaci\u00f3n, donde puede verificar el usuario activo",
+          "Cree un bucket de S3 privado. El enlace en el correo electr\u00f3nico debe llevar al usuario a su aplicaci\u00f3n, donde puede verificar el usuario activo"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b54f04967f78457083863c07",
+        "question": "Al enviar un gran volumen de correo electr\u00f3nico a trav\u00e9s de SES, \u00bfcu\u00e1l es el conjunto de m\u00e9tricas m\u00e1s importante para monitorear?",
+        "answer": "sus quejas y tasas de rebote",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["sus quejas y tasas de rebote"],
+        "options": [
+          "sus quejas y tasas de rebote",
+          "se abre y hace clic en",
+          "clics y entregas",
+          "volumen de env\u00edo en los \u00faltimos 15 minutos y durante un d\u00eda para observar los picos de facturaci\u00f3n"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2215bc0aa6fa2b4646350fdf",
+        "question": "Va a alojar una aplicaci\u00f3n que utiliza una base de datos MySQL. \u00bfQu\u00e9 base de datos debe seleccionar si no desea administrar las tareas de escalado o administraci\u00f3n de bases de datos?",
+        "answer": "Aurora",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Aurora"],
+        "options": [
+          "Inicie una imagen AMI desde el mercado que contenga un servidor MySQL preconfigurado.",
+          "Aurora",
+          "RDS para MySQL",
+          "Corrimiento al rojo"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2f307b4ea000f96ed608630f",
+        "question": "Un formulario en una aplicaci\u00f3n web est\u00e1 enviando datos de registro a \"http://example.com/signup/new?source=web\" y estos datos deben ser manejados por un servicio ECS detr\u00e1s de Application Load Balancer (ALB). \u00bfQu\u00e9 regla ALB enrutar\u00e1 esta solicitud?\n![image](images/004.png)",
+        "answer": "D ... Solo uno con Get",
+        "explanation": "<!---->\nIF (all match)\nPath is /signup*\nQuery string is signup:new\nThen\nForward to ecs-cluse-service <there is a typo - yes!\n<!---->\nIF (all match)\nPath is /sign/new/&\nQuery request method is POST\nThen\nForward to ecs-cluse-service",
+        "hint": null,
+        "correctAnswer": ["D ... Solo uno con Get"],
+        "options": ["A", "B", "C ... Uno m\u00e1s con POST", "D ... Solo uno con Get"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "a3a17cc5a5d40358818e2cef",
+            "url": "images/004.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "4b675b0d7284110878b5e0ad",
+        "question": "\u00bfQu\u00e9 servicio de AWS puede alojar el servidor de aplicaciones web para un sitio de WordPress?",
+        "answer": "Elastic BeanStalk",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Elastic BeanStalk"],
+        "options": ["S3", "Elastic BeanStalk", "ElasticCache", "CloudFront"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fd63cc37603bcad87a734deb",
+        "question": "\u00bfQu\u00e9 hace la siguiente AWS CLI? `create-service` comando para ECS do?\naws ecs create-service \\\n     --cluster production \\\n     --service-name rest-api \\\n     --task-definition rest-api:1 \\\n     --desired-count 2 \\\n     --launch-type \"FARGATE\" \\\n     --network-configuration \\\n     \"awsvpcConfiguration={subnets=[subnet-0b29129ab],securityGroups=[sg-0b29129ab]}\"",
+        "answer": "lanza dos contenedores en Fargate en el existente **producci\u00f3n** cl\u00faster mediante el **rest-api** definici\u00f3n de tareas",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "lanza dos contenedores en Fargate en el existente **producci\u00f3n** cl\u00faster mediante el **rest-api** definici\u00f3n de tareas"
+        ],
+        "options": [
+          "cambia los grupos de seguridad de la ejecuci\u00f3n **rest-api** tarea",
+          "crea un cl\u00faster llamado **producci\u00f3n** y lanza dos contenedores a Fargate con el **rest-api** definici\u00f3n de tareas",
+          "lanza dos contenedores en Fargate en el existente **producci\u00f3n** cl\u00faster mediante el **rest-api** definici\u00f3n de tareas",
+          "crea una definici\u00f3n de servicio para el **rest-api** tarea; Coloque dos contenedores en el cl\u00faster de producci\u00f3n cuando se inicie **ecs-cli** comando up"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "923c5689ea5c551c38ccf335",
+        "question": "Desea que su API p\u00fablica sea r\u00e1pidamente accesible desde todas las regiones. \u00bfCu\u00e1l es la mejor manera de hacerlo?",
+        "answer": "Cree puntos de enlace de puerta de enlace de API optimizados para el borde e implem\u00e9ntelos en una red de CloudFront.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Cree puntos de enlace de puerta de enlace de API optimizados para el borde e implem\u00e9ntelos en una red de CloudFront."
+        ],
+        "options": [
+          "Cree un \u00fanico extremo de puerta de enlace de API en una regi\u00f3n central.",
+          "Cree un punto de enlace de puerta de enlace de API privada para cada regi\u00f3n.",
+          "Cree un punto de enlace de puerta de enlace de API regional para cada regi\u00f3n.",
+          "Cree puntos de enlace de puerta de enlace de API optimizados para el borde e implem\u00e9ntelos en una red de CloudFront."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0083659959ecd5a09be5fc26",
+        "question": "\u00bfQu\u00e9 tipo de soluci\u00f3n de datos debe utilizar para los datos procedentes de datos no relacionales y relacionales de dispositivos IoT, sitios web, aplicaciones m\u00f3viles, etc.?",
+        "answer": "Formaci\u00f3n de AWS Lake",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Formaci\u00f3n de AWS Lake"],
+        "options": [
+          "Amazon DynamoDB",
+          "Formaci\u00f3n de AWS Lake",
+          "Amazon Redshift",
+          "Aurora amaz\u00f3nica"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "16e44f2d6ab72ade082be9fd",
+        "question": "Tiene un conjunto de an\u00e1lisis que produce informes sobre los patrones de uso de la aplicaci\u00f3n web. Despu\u00e9s de completar la migraci\u00f3n a AWS y utilizar Application Load Balancer para equilibrar la carga en toda la aplicaci\u00f3n web, el departamento de marketing observ\u00f3 que los informes basados en la ubicaci\u00f3n del tr\u00e1fico web solo muestran el tr\u00e1fico que se origina en una \u00fanica ubicaci\u00f3n. \u00bfCu\u00e1l es el problema?",
+        "answer": "Application Load Balancer no conserva la direcci\u00f3n IP de origen original. El software de an\u00e1lisis debe configurarse para mirar el encabezado de solicitud HTTP 'X-Forwarded-For' para la direcci\u00f3n IP de origen correcta.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Application Load Balancer no conserva la direcci\u00f3n IP de origen original. El software de an\u00e1lisis debe configurarse para mirar el encabezado de solicitud HTTP 'X-Forwarded-For' para la direcci\u00f3n IP de origen correcta."
+        ],
+        "options": [
+          "Utilice un equilibrador de carga cl\u00e1sico, no un equilibrador de carga de aplicaciones.",
+          "Application Load Balancer no conserva la direcci\u00f3n IP de origen original. El software de an\u00e1lisis debe configurarse para mirar el encabezado de solicitud HTTP 'X-Forwarded-For' para la direcci\u00f3n IP de origen correcta.",
+          "Application Load Balencer debe configurarse para conservar la direcci\u00f3n IP de origen del tr\u00e1fico que est\u00e1 reenviando. Cree una pol\u00edtica que habilite la compatibilidad con ProxyProtocol y adj\u00fantela al ALB mediante la AWS CLI.",
+          "Configure las instancias EC2 del servidor web para que solo tengan direcciones IP privadas. Las direcciones IP p\u00fablicas de las instancias se registran en los registros del servidor web, solo al ALB de errores debe tener una interfaz p\u00fablica y enrutar\u00e1 el tr\u00e1fico a las instancias a trav\u00e9s de la interfaz privada."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8499d9da98f4f9d5a74af0a4",
+        "question": "Qu\u00e9 es `not` un usuario predeterminado de una instancia com\u00fan de Linux lanzada desde una AMI?",
+        "answer": "usuario del sistema",
+        "explanation": "[Referencia](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/connection-prereqs.html)",
+        "hint": null,
+        "correctAnswer": ["usuario del sistema"],
+        "options": ["ubuntu", "usuario del sistema", "ec2-usuario", "admin"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c72d8f69bccac16c33c784d5",
+        "question": "Ha replicado la infraestructura que sirve a la API de back-end para su aplicaci\u00f3n web en todas las regiones para servir mejor a sus clientes en los EE. UU. y la UE. \u00bfCu\u00e1l es la mejor manera de dirigir su aplicaci\u00f3n web al centro de datos m\u00e1s cercano?",
+        "answer": "Utilice Route 53 con b\u00fasquedas de geolocalizaci\u00f3n para dirigir el tr\u00e1fico entre las dos regiones.",
+        "explanation": "[Referencia](https://aws.amazon.com/premiumsupport/knowledge-center/geolocation-routing-policy/)",
+        "hint": null,
+        "correctAnswer": [
+          "Utilice Route 53 con b\u00fasquedas de geolocalizaci\u00f3n para dirigir el tr\u00e1fico entre las dos regiones."
+        ],
+        "options": [
+          "Utilice Route 53 con b\u00fasquedas de geolocalizaci\u00f3n para dirigir el tr\u00e1fico entre las dos regiones.",
+          "Cree una regla de redirecci\u00f3n WAF que redirija el tr\u00e1fico en el centro de datos de la UE si la IP de origen proviene de ciertos pa\u00edses.",
+          "Compre una extensi\u00f3n de dominio de pa\u00eds y dirija a sus usuarios al sitio correcto, como example.com y example.co",
+          "Haga que su aplicaci\u00f3n front-end pruebe la latencia entre cada centro de datos y use el centro de datos que responde m\u00e1s r\u00e1pido."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0b3e7dd4607808712866e31f",
+        "question": "Recientemente ha lanzado su nuevo producto web y espera 1,000 nuevos usuarios cada mes. Sin embargo, acaba de recibir la noticia del CEO de que su producto se presentar\u00e1 en una pr\u00f3xima conferencia cubierta por varios medios de comunicaci\u00f3n, y esto podr\u00eda llevar a 20,000 nuevos usuarios durante la pr\u00f3xima semana. \u00bfC\u00f3mo planea un aumento repentino en el tr\u00e1fico?",
+        "answer": "Utilice grupos de Auto Scaling para crear m\u00e1s servidores front-end cuando las m\u00e9tricas de CloudWatch para el uso de CPU en una sola instancia superen el 80 % durante cinco minutos.",
+        "explanation": "[Referencia](https://aws.amazon.com/ec2/autoscaling/)",
+        "hint": null,
+        "correctAnswer": [
+          "Utilice grupos de Auto Scaling para crear m\u00e1s servidores front-end cuando las m\u00e9tricas de CloudWatch para el uso de CPU en una sola instancia superen el 80 % durante cinco minutos."
+        ],
+        "options": [
+          "Replique su infraestructura en dos regiones. Endurecer\u00e1 la aplicaci\u00f3n a un fallo regional y duplicar\u00e1 su capacidad.",
+          "Tome una imagen AMI de un servidor front-end para guardar la configuraci\u00f3n y, a continuaci\u00f3n, agregue m\u00e1s servidores al cluster pror a la conferencia. Quite los servidores del cl\u00faster despu\u00e9s del pico de la conferencia.",
+          "Prueba para determinar su rendimiento y cu\u00e1ntos usuarios puede admitir. Desarrolle un plan de escalado para su front-end, microservicios y base de datos basado en m\u00e9tricas de CloudWatch que se alineen con los cuellos de botella probados.",
+          "Utilice grupos de Auto Scaling para crear m\u00e1s servidores front-end cuando las m\u00e9tricas de CloudWatch para el uso de CPU en una sola instancia superen el 80 % durante cinco minutos."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "011d3c69f2e57dabeeca4479",
+        "question": "\u00bfC\u00f3mo se conecta a trav\u00e9s de SSH a una instancia EC2 de Linux con un volumen de EBS si perdi\u00f3 su par de claves?",
+        "answer": "Adjunte el volumen de EBS a una instancia temporal lanzada con un nuevo par de claves y sobrescriba ~/.ssh/authorized_keys utilizando el mismo archivo de la nueva instancia.",
+        "explanation": "[Referencia](https://medium.com/the-10x-dev/how-to-recover-access-login-to-your-aws-instance-after-losing-your-pem-keypair-file-e0d31bae2da4)",
+        "hint": null,
+        "correctAnswer": [
+          "Adjunte el volumen de EBS a una instancia temporal lanzada con un nuevo par de claves y sobrescriba ~/.ssh/authorized_keys utilizando el mismo archivo de la nueva instancia."
+        ],
+        "options": [
+          "Detenga la instancia y cree una imagen AMI. Inicie la imagen con un nuevo par de claves.",
+          "P\u00f3ngase en contacto con el soporte t\u00e9cnico de AWS. Un especialista de soporte puede restaurar de forma remota el acceso a su instancia y enviarle un nuevo par de claves.",
+          "No puede conectarse a esta instancia EC2. El par de claves se muestra solo una vez. Si lo pierde, habr\u00e1 perdido todo el acceso a esta instancia. Conecte el volumen de EBS a otra instancia para recuperar los archivos.",
+          "Adjunte el volumen de EBS a una instancia temporal lanzada con un nuevo par de claves y sobrescriba ~/.ssh/authorized_keys utilizando el mismo archivo de la nueva instancia."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f3eeb27a7e33e769645f3f9f",
+        "question": "Su centro de datos local (172.16.128.0/24) ya est\u00e1 conectado a su AWS VPC (10.0.0.0/16) mediante una gateway de cliente. Desea conectar otro centro de datos para una empresa que acaba de adquirir (172.16.130.0/24) a su VPC como se muestra en la imagen. \u00bfCu\u00e1l es la mejor manera de crear este enlace?\n![image](images/Q80.png)",
+        "answer": "Cree una segunda puerta de enlace privada virtual (VPG) y con\u00e9ctela a la VPC. Cree una puerta de enlace de cliente para la nueva puerta de enlace privada virtual y use su cliente VPN en su segundo centro de datos para establecer una conexi\u00f3n con el VPG.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Cree una segunda puerta de enlace privada virtual (VPG) y con\u00e9ctela a la VPC. Cree una puerta de enlace de cliente para la nueva puerta de enlace privada virtual y use su cliente VPN en su segundo centro de datos para establecer una conexi\u00f3n con el VPG."
+        ],
+        "options": [
+          "Establezca una conexi\u00f3n entre sus dos centros de datos y conecte el segundo centro de datos al primero a trav\u00e9s de un t\u00fanel privado. El tr\u00e1fico fluir\u00e1 desde el segundo centro de datos y luego a trav\u00e9s de los primeros datos, y luego a AWS.",
+          "Cree una segunda puerta de enlace de cliente y configure su cliente VPN en su segundo centro de datos para conectarse a la puerta de enlace privada virtual.",
+          "Cree una segunda puerta de enlace privada virtual (VPG) y con\u00e9ctela a la VPC. Cree una puerta de enlace de cliente para la nueva puerta de enlace privada virtual y use su cliente VPN en su segundo centro de datos para establecer una conexi\u00f3n con el VPG.",
+          "No puede tener m\u00e1s de una puerta de enlace de cliente por VPC, por lo que la soluci\u00f3n propuesta no funcionar\u00e1. Cree una segunda VPC con una puerta de enlace privada virtual y una puerta de enlace de cliente. Conecte las dos VPC mediante el emparejamiento de VPC."
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "84aa95e337132a1393aa54b1",
+            "url": "images/Q80.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "83a1b96f5314e9a1c0c51ac4",
+        "question": "Est\u00e1 migrando una base de datos de 200 GB de un servidor SQL Server local a RDS para SQL Server. La base de datos debe tener un tiempo de inactividad m\u00ednimo durante la migraci\u00f3n. \u00bfCu\u00e1l es la pr\u00e1ctica recomendada para migrar esta base de datos?",
+        "answer": "Utilice el Servicio de migraci\u00f3n de bases de datos para replicar la base de datos en RDS y mantenerla sincronizada durante la migraci\u00f3n. Reoriente las aplicaciones para que usen el nuevo extremo de RDS.",
+        "explanation": "[Referencia](https://aws.amazon.com/dms/)",
+        "hint": null,
+        "correctAnswer": [
+          "Utilice el Servicio de migraci\u00f3n de bases de datos para replicar la base de datos en RDS y mantenerla sincronizada durante la migraci\u00f3n. Reoriente las aplicaciones para que usen el nuevo extremo de RDS."
+        ],
+        "options": [
+          "Cierre todas las conexiones existentes a la base de datos de SQL Server y use el Servicio de migraci\u00f3n de bases de datos para transferir los datos a RDS.",
+          "Utilice el Servicio de migraci\u00f3n de bases de datos para replicar la base de datos en RDS y mantenerla sincronizada durante la migraci\u00f3n. Reoriente las aplicaciones para que usen el nuevo extremo de RDS.",
+          "Separe la base de datos de SQL Server durante la migraci\u00f3n. Realice una copia de seguridad de la base de datos y utilice SQ con transferencia acelerada para cargar las copias de seguridad en S3. Restaure las copias de seguridad en la instancia de RDS.",
+          "Utilice el Asistente para importaci\u00f3n y exportaci\u00f3n del Administrador corporativo de SQL Server para crear una tarea de exportaci\u00f3n y exportar las tablas a la instancia de RDS."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d25d310e18e5b3aba352b01e",
+        "question": "Ha habilitado la autenticaci\u00f3n multifactor (MFA) para su cuenta ra\u00edz de AWS y ha perdido su dispositivo MFA. \u00bfQu\u00e9 necesita hacer para recuperar el acceso a su cuenta?",
+        "answer": "Se enviar\u00e1 un correo electr\u00f3nico a la direcci\u00f3n de correo electr\u00f3nico registrada para verificar la propiedad de la cuenta. A continuaci\u00f3n, deber\u00e1 proporcionar el n\u00famero de tel\u00e9fono en la cuenta.",
+        "explanation": "[Referencia](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_lost-or-broken.html)",
+        "hint": null,
+        "correctAnswer": [
+          "Se enviar\u00e1 un correo electr\u00f3nico a la direcci\u00f3n de correo electr\u00f3nico registrada para verificar la propiedad de la cuenta. A continuaci\u00f3n, deber\u00e1 proporcionar el n\u00famero de tel\u00e9fono en la cuenta."
+        ],
+        "options": [
+          "No puede recuperar el acceso a su cuenta ra\u00edz de AWS. P\u00f3ngase en contacto con el soporte t\u00e9cnico de AWS.",
+          "Se enviar\u00e1 un correo electr\u00f3nico a la direcci\u00f3n de correo electr\u00f3nico registrada para verificar la propiedad de la cuenta. A continuaci\u00f3n, deber\u00e1 proporcionar el n\u00famero de tel\u00e9fono en la cuenta.",
+          "Se enviar\u00e1 un correo electr\u00f3nico a la direcci\u00f3n de correo electr\u00f3nico registrada. Despu\u00e9s de hacer clic en el enlace de su correo electr\u00f3nico, proporcione uno de los c\u00f3digos de recuperaci\u00f3n de MFA que se crearon cuando MFA estaba habilitado.",
+          "Utilice la AWS CLI con el token de acceso a la cuenta ra\u00edz para deshabilitar MFA en la cuenta ra\u00edz. A continuaci\u00f3n, utilice la CLI para establecer una nueva contrase\u00f1a en la cuenta ra\u00edz."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "78d39056adf9766b787ed270",
+        "question": "\u00bfC\u00f3mo se asigna una IP el\u00e1stica a varias instancias EC2?",
+        "answer": "No se puede asignar una IP el\u00e1stica a varias instancias EC2. Solo se puede asociar a una sola instancia EC2.",
+        "explanation": "[Referencia](https://stackoverflow.com/questions/54742522/assign-multiple-ec2-instances-to-one-elastic-ip)",
+        "hint": null,
+        "correctAnswer": [
+          "No se puede asignar una IP el\u00e1stica a varias instancias EC2. Solo se puede asociar a una sola instancia EC2."
+        ],
+        "options": [
+          "En el panel de la VPC, haga clic en Elastic IPs. Seleccione la IP el\u00e1stica y haga clic en Asociar direcci\u00f3n. Seleccione cada instancia EC2 a la que desee asignar esta direcci\u00f3n.",
+          "En el panel de EC2, haga clic en Instancia EC2. En Acciones, seleccione > Administrar direcciones IP. haga clic para agregar una nueva direcci\u00f3n IP y escriba la direcci\u00f3n de la IP el\u00e1stica. Repita el proceso para cada instancia EC2 a la que desee asignar esta IP el\u00e1stica.",
+          "Utilice la AWS CLI y pase varias opciones '--instance-id' al comando aws ec2 assosiate-address.",
+          "No se puede asignar una IP el\u00e1stica a varias instancias EC2. Solo se puede asociar a una sola instancia EC2."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eb3c619a075fcc0687f8c991",
+        "question": "Ha creado una VPC que tiene una subred p\u00fablica y una subred privada. Se coloc\u00f3 un servidor web en la subred p\u00fablica y un servidor de base de datos en la subred privada. El servidor web puede conectarse al servidor de base de datos; sin embargo, el servidor de base de datos en 10.0.1.2 no puede obtener actualizaciones de software. \u00bfCu\u00e1l es la causa de este problema?",
+        "answer": "No hay una puerta de enlace NAT para la subred privada, por lo que el servidor de base de datos no tiene rutas que le den acceso p\u00fablico a Internet para descargar actualizaciones de software.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "No hay una puerta de enlace NAT para la subred privada, por lo que el servidor de base de datos no tiene rutas que le den acceso p\u00fablico a Internet para descargar actualizaciones de software."
+        ],
+        "options": [
+          "No hay una puerta de enlace NAT para la subred privada, por lo que el servidor de base de datos no tiene rutas que le den acceso p\u00fablico a Internet para descargar actualizaciones de software.",
+          "Al servidor de base de datos se le debe asignar una direcci\u00f3n p\u00fablica del grupo o asignar una IP el\u00e1stica similar a la instancia 10.0.0.2.",
+          "El router no est\u00e1 configurado correctamente en la VPC. Agregue una tabla de ruta a ruta para la VPC que enruta todo el tr\u00e1fico de 0.0.0.0/0 al ID de la puerta de enlace de Internet.",
+          "No hay ninguna puerta de enlace de Internet de salida conectada a la subred privada de la VPC."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a8639157b32a419b0d8b3a34",
+        "question": "\u00bfBeneficio de usar S3 Glacier?",
+        "answer": "costo",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["costo"],
+        "options": [
+          "tiempo de acceso",
+          "almacenar por peque\u00f1a duraci\u00f3n",
+          "costo",
+          "interregional"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "aws/aws-quiz-es.md",
+    "language": "es",
+    "generatedAt": "2025-12-09T14:56:14.044109+00:00",
+    "warnings": []
+  }
+}

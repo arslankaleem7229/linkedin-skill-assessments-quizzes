@@ -43,7 +43,7 @@ add();
 - [ ] 0
 - [ ] undefined
 
-![image](https://user-images.githubusercontent.com/62549240/160531605-bf8790d5-5eb9-4291-a9bd-4232f2fd7b6e.png?raw=png)
+![image](https://user-images.githubusercontent.com/62549240/160531605-bf8790d5-5eb9-4291-a9bd-4232f2fd7b6e.png)
 
 Explanation: function that called without parameter will use its param default value, thus x will always be default to 1 and y will always be default to 2.
 

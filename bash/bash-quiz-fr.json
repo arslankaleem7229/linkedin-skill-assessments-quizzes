@@ -1,0 +1,1223 @@
+{
+  "quizz": {
+    "id": "c06966eb56308e61ae5dc984",
+    "title": "Cogner",
+    "description": "Seeded from bash/bash-quiz-fr.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "3393f1983eb3d7ecd3f4a219",
+        "question": "Laquelle des trois m\u00e9thodes copiera le r\u00e9pertoire nomm\u00e9 \u00ab\u00a0photo dir\u00a0\u00bb de mani\u00e8re r\u00e9cursive du r\u00e9pertoire de base de l\u2019utilisateur vers /backups ?\n```bash\ncp -R \"~/photo dir\" /backups #method1\ncp -R ~\"/photo dir\" /backups #method2\ncp -R ~/\"photo dir\" /backups #method3\n```",
+        "answer": "Seule la m\u00e9thode 3 se d\u00e9veloppera `\"~/\"` au r\u00e9pertoire de base de l\u2019utilisateur, puis ajoutez le nom du r\u00e9pertoire entre guillemets qui inclut un espace.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Seule la m\u00e9thode 3 se d\u00e9veloppera `\"~/\"` au r\u00e9pertoire de base de l\u2019utilisateur, puis ajoutez le nom du r\u00e9pertoire entre guillemets qui inclut un espace."
+        ],
+        "options": [
+          "Aucune des trois m\u00e9thodes ne s\u2019\u00e9tendra au r\u00e9pertoire de base de l\u2019utilisateur. Utilisation uniquement `\"$HOME/photo dir\"`sera couronn\u00e9 de succ\u00e8s.",
+          "Seule la m\u00e9thode 1 se d\u00e9veloppera `\"~/\"` au r\u00e9pertoire de base de l\u2019utilisateur, puis ajoutez le nom du r\u00e9pertoire entre guillemets qui inclut un espace.",
+          "Seule la m\u00e9thode 2 se d\u00e9veloppera `\"~/\"` au r\u00e9pertoire de base de l\u2019utilisateur, puis ajoutez le nom du r\u00e9pertoire entre guillemets qui inclut un espace.",
+          "Seule la m\u00e9thode 3 se d\u00e9veloppera `\"~/\"` au r\u00e9pertoire de base de l\u2019utilisateur, puis ajoutez le nom du r\u00e9pertoire entre guillemets qui inclut un espace."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1a89021cd382b4e225936436",
+        "question": "Si script.sh est ex\u00e9cut\u00e9 dans le r\u00e9pertoire actif, il \u00e9chouera. Pourquoi?\n```bash\n$ ls -1\nBeach photo1.jpg\nPhoto1.jpg\nPhoto2.jpg\nScript.sh\n$ cat script.sh\nfor i in $(ls *.jpg); do\n\tmv $i ${i}.bak\ndone\n```",
+        "answer": "La boucle for se divisera sur les limites des mots et Beach photo1.jpg a un espace dedans.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "La boucle for se divisera sur les limites des mots et Beach photo1.jpg a un espace dedans."
+        ],
+        "options": [
+          "ls: impossible d\u2019acc\u00e9der au fichier inexistant: Aucun fichier ou r\u00e9pertoire de ce type",
+          "La boucle for se divisera sur les limites des mots et Beach photo1.jpg a un espace dedans.",
+          "La commande mv \u00e9chouera car le crochet boucl\u00e9 est un caract\u00e8re sp\u00e9cial dans Bash et ne peut pas \u00eatre utilis\u00e9 dans les noms de fichiers.",
+          "L\u2019ex\u00e9cution de script.sh r\u00e9ussira car la commande ls cr\u00e9e une liste de fichiers dans le r\u00e9pertoire actif et pour les boucles \u00e0 travers cette liste en renommant les fichiers avec une extension .bak."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dbeede54b11e7799909b685d",
+        "question": "Pour ex\u00e9cuter une commande de copie dans un sous-shell, quelle syntaxe utiliseriez-vous ?",
+        "answer": "`( command )`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`( command )`"],
+        "options": ["`( command )`", "`sh command`", "`{ command; }`", "`(( command ))`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9832f16b4492099a6bbe354f",
+        "question": "En utilisant \u00ab\u00a0awk\u00a0\u00bb, quelle serait la sortie de cette cha\u00eene de commande ?\n```bash\necho \"1 2 3\" | awk '{for (i=1; i<=NF; i++) s=s+$i};END {print s}'\n```",
+        "answer": "6",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["6"],
+        "options": ["6", "123", "3", "600"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9dc3de47ccfedb9b06f19d6f",
+        "question": "La commande ci-dessous recherchera dans le syst\u00e8me de fichiers racine les fichiers nomm\u00e9s \u00ab\u00a0finance.db\u00a0\u00bb. Dans ce contexte, quelles informations sont envoy\u00e9es \u00e0 /dev/null ?\n```bash\nfind / -name \"finance.db\" 1>results.txt 2>/dev/null\n```",
+        "answer": "informations envoy\u00e9es \u00e0 l\u2019erreur standard - par exemple, les erreurs que la commande find affiche lors de son ex\u00e9cution",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "informations envoy\u00e9es \u00e0 l\u2019erreur standard - par exemple, les erreurs que la commande find affiche lors de son ex\u00e9cution"
+        ],
+        "options": [
+          "les noms des fichiers qui ne correspondent pas au financement.db",
+          "informations envoy\u00e9es \u00e0 l\u2019erreur standard - par exemple, les erreurs que la commande find affiche lors de son ex\u00e9cution",
+          "les noms des fichiers qui correspondent au financement.db",
+          "informations envoy\u00e9es \u00e0 la sortie standard, c\u2019est-\u00e0-dire le chemin d\u2019acc\u00e8s aux fichiers que la commande find a localis\u00e9s"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a53dad9a3ba558676012c872",
+        "question": "Pour supprimer d\u00e9finitivement les lignes vides d\u2019un fichier appel\u00e9 textfile, quelle commande pourriez-vous utiliser ?",
+        "answer": "`sed -i '/^$/d' textfile`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`sed -i '/^$/d' textfile`"],
+        "options": [
+          "`sed -i '/^$/d' textfile`",
+          "`sed '/^$/d' textfile`",
+          "`cat textfile | sed '/^$/d`",
+          "`sed -i 's/^$//' textfile`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7c1c47900d47d70278b7c6c2",
+        "question": "En supposant que user1 existe, quel serait le r\u00e9sultat de cette cha\u00eene de commande ?\n```bash\nawk -F: '/user1/{print $1 \"-\" $3 \"-\" $6}' /etc/passwd\n```",
+        "answer": "Il afficherait le nom d\u2019utilisateur, l\u2019UID et le r\u00e9pertoire de base de user1 s\u00e9par\u00e9s par des traits d\u2019union.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Il afficherait le nom d\u2019utilisateur, l\u2019UID et le r\u00e9pertoire de base de user1 s\u00e9par\u00e9s par des traits d\u2019union."
+        ],
+        "options": [
+          "Il afficherait le nom d\u2019utilisateur, l\u2019UID et le r\u00e9pertoire de base de user1 s\u00e9par\u00e9s par deux-points.",
+          "Il imprimerait l\u2019UID, le GID et le r\u00e9pertoire de base de user1 s\u00e9par\u00e9s par des traits d\u2019union.",
+          "Il imprimerait l\u2019UID, le commentaire et le r\u00e9pertoire de base de user1 s\u00e9par\u00e9s par des tirets.",
+          "Il afficherait le nom d\u2019utilisateur, l\u2019UID et le r\u00e9pertoire de base de user1 s\u00e9par\u00e9s par des traits d\u2019union."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9fb5895fc1fe8ce6f4b9ca20",
+        "question": "Que se passe-t-il si vous utilisez le `\"set -e\"` dans un script Bash ?",
+        "answer": "Bash se ferme si une commande, une liste de commandes, une commande compos\u00e9e ou potentiellement un pipeline renvoie un code d\u2019\u00e9tat diff\u00e9rent de z\u00e9ro.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Bash se ferme si une commande, une liste de commandes, une commande compos\u00e9e ou potentiellement un pipeline renvoie un code d\u2019\u00e9tat diff\u00e9rent de z\u00e9ro."
+        ],
+        "options": [
+          "La fermeture de Bash se produit si une fonction ou un sous-shell renvoie un code d\u2019\u00e9tat diff\u00e9rent de z\u00e9ro.",
+          "Cela entra\u00eenera la fermeture de Bash si un conditionnel renvoie un code d\u2019\u00e9tat diff\u00e9rent de z\u00e9ro.",
+          "Cela entra\u00eenera la fermeture de Bash si les affectations locales, d\u00e9claratives ou typographiques renvoient un code d\u2019\u00e9tat diff\u00e9rent de z\u00e9ro.",
+          "Bash se ferme si une commande, une liste de commandes, une commande compos\u00e9e ou potentiellement un pipeline renvoie un code d\u2019\u00e9tat diff\u00e9rent de z\u00e9ro."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1c1fdb4faa93b57d2c0fd2c0",
+        "question": "Le **\\_** le mot-cl\u00e9 met le script en pause pour obtenir l\u2019entr\u00e9e \u00e0 partir de l\u2019entr\u00e9e standard.",
+        "answer": "lire",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["lire"],
+        "options": ["obtenir", "argument", "lire", "entr\u00e9e"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c578cdbb81f1e628e2200c8c",
+        "question": "Si file.sql contient des instructions SQL \u00e0 ex\u00e9cuter, qu\u2019y aura-t-il dans file.txt ?\n```bash\nmysql < file.sql > file.txt\n```",
+        "answer": "la sortie sans erreur de la commande MySQL",
+        "explanation": "**Remarque:** v\u00e9rifiez la question ci-dessous pour une variante.",
+        "hint": null,
+        "correctAnswer": ["la sortie sans erreur de la commande MySQL"],
+        "options": [
+          "une copie du contenu du fichier.sql",
+          "une erreur indiquant qu\u2019il s\u2019agit d\u2019une syntaxe non valide",
+          "la sortie d\u2019erreur de la commande MySQL",
+          "la sortie sans erreur de la commande MySQL"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "759d3ba8e8765e6f6a5937aa",
+        "question": "Quelle sera la diff\u00e9rence entre la sortie \u00e0 l\u2019\u00e9cran et le contenu de la sortie.txt\n```bash\nmysql < file.sql > out.txt\n```",
+        "answer": "Il n\u2019y aura pas de sortie \u00e0 l\u2019\u00e9cran car il est redirig\u00e9 vers out.txt.",
+        "explanation": "**Remarque:** v\u00e9rifiez la question ci-dessus pour une variante.",
+        "hint": null,
+        "correctAnswer": [
+          "Il n\u2019y aura pas de sortie \u00e0 l\u2019\u00e9cran car il est redirig\u00e9 vers out.txt."
+        ],
+        "options": [
+          "La sortie \u00e0 l\u2019\u00e9cran sera identique \u00e0 la sortie.txt",
+          "Il n\u2019y aura pas de sortie \u00e0 l\u2019\u00e9cran car il est redirig\u00e9 vers out.txt.",
+          "La sortie \u00e0 l\u2019\u00e9cran sera identique \u00e0 out.txt plus les num\u00e9ros de ligne.",
+          "Le fichier out.txt contiendra STDERR et STDOUT ira \u00e0 l\u2019\u00e9cran."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e93d61df60d149e78d5a4ecb",
+        "question": "Comment le SUID ou le setuid affecte-t-il les commandes ex\u00e9cutables ?",
+        "answer": "Lorsque la commande est ex\u00e9cut\u00e9e, ses privil\u00e8ges d\u2019ex\u00e9cution s\u2019\u00e9l\u00e8vent au rang d\u2019utilisateur propri\u00e9taire de la commande.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Lorsque la commande est ex\u00e9cut\u00e9e, ses privil\u00e8ges d\u2019ex\u00e9cution s\u2019\u00e9l\u00e8vent au rang d\u2019utilisateur propri\u00e9taire de la commande."
+        ],
+        "options": [
+          "Lorsque la commande cr\u00e9e des fichiers, ils appartiennent au propri\u00e9taire du groupe de la commande.",
+          "Le bit SUID permet \u00e0 quiconque d\u2019ex\u00e9cuter la commande, quelles que soient les autres autorisations d\u00e9finies.",
+          "Lorsque la commande est ex\u00e9cut\u00e9e, ses privil\u00e8ges d\u2019ex\u00e9cution s\u2019\u00e9l\u00e8vent au rang d\u2019utilisateur propri\u00e9taire de la commande.",
+          "Lorsque la commande est ex\u00e9cut\u00e9e, ses privil\u00e8ges d\u2019ex\u00e9cution s\u2019\u00e9l\u00e8vent au rang de propri\u00e9taire du groupe de la commande."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8840e147db2aae2e3b15a1f9",
+        "question": "Pour extraire du texte de la premi\u00e8re colonne du fichier appel\u00e9 textfile, quelle commande utiliseriez-vous ?",
+        "answer": "`cat textfile | awk '{print $1}'`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`cat textfile | awk '{print $1}'`"],
+        "options": [
+          "`cat {$1,textfile}`",
+          "`cat textfile | awk [print $1]`",
+          "`cat textfile | awk '{print $1}'`",
+          "`awk textfile {print $1}`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eb856e9d6c96f24ce6c6487b",
+        "question": "Quel est le raccourci clavier pour appeler la recherche dans l\u2019historique Bash comme indiqu\u00e9 ci-dessous?\n```bash\n(reverse-i-search)`':\n```",
+        "answer": "Ctrl + R",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Ctrl + R"],
+        "options": ["\u00c9chap + R", "Ctrl + H", "Ctrl + R", "Alt + R"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "839b61fbd4e5755095c52a41",
+        "question": "Quelle expression arithm\u00e9tique donnera la r\u00e9ponse la plus pr\u00e9cise ?",
+        "answer": "`var=$(echo 'scale=2; 10 / 8' | bc)`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`var=$(echo 'scale=2; 10 / 8' | bc)`"],
+        "options": [
+          "`var=$( expr 10 / 8 )`",
+          "`(( var= 10 /8 ))`",
+          "`var=$(( 10 / 8 ))`",
+          "`var=$(echo 'scale=2; 10 / 8' | bc)`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "09f76afb6ad4f10d340605bf",
+        "question": "Quel est le r\u00e9sultat de ce script ?\n```bash\ntxt=Penguins\n[[ $txt =~ [a-z]{8} ]]; echo $?\n```",
+        "answer": "1, repr\u00e9sentant 'false', car la variable \u00ab\u00a0txt\u00a0\u00bb ne contient pas huit lettres minuscules entre a et z",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "1, repr\u00e9sentant 'false', car la variable \u00ab\u00a0txt\u00a0\u00bb ne contient pas huit lettres minuscules entre a et z"
+        ],
+        "options": [
+          "0, repr\u00e9sentant 'true', car la variable \u00ab\u00a0txt\u00a0\u00bb contient huit lettres",
+          "0, repr\u00e9sentant \u00ab vrai \u00bb, parce que tout le monde aime les pingouins !",
+          "1, repr\u00e9sentant 'false', car la variable \u00ab\u00a0txt\u00a0\u00bb est plus longue que huit caract\u00e8res",
+          "1, repr\u00e9sentant 'false', car la variable \u00ab\u00a0txt\u00a0\u00bb ne contient pas huit lettres minuscules entre a et z"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7f7d78a9ce9da2d409374b27",
+        "question": "Comment modifieriez-vous votre invite de shell Bash comme suit ?\n```bash\nHAL>\n```",
+        "answer": "`export PS1=\"HAL>\"`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`export PS1=\"HAL>\"`"],
+        "options": [
+          "`SHELL=\"HAL\\>\"`",
+          "`SHELL=\"HAL>\"`",
+          "`export PS1=\"HAL>\"`",
+          "`PS1=\"HAL\\>\"`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8ca296a701724fa576c7c5de",
+        "question": "Quelle est la sortie de ce code ?\n```bash\nVAR=\"/var/www/html/website.com/html/\"\necho \"${VAR#*/html}\"\n```",
+        "answer": "`/website.com/html/`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`/website.com/html/`"],
+        "options": [
+          "`/website.com/html/`",
+          "`/html/website.com/html/`",
+          "`/var/www/html/website.com/`",
+          "Rien ne sera repris \u00e0 l\u2019\u00e9cran."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9cb7d5c402aad0f6fd6a3049",
+        "question": "Si vous \u00eates invit\u00e9 \u00e0 entrer du texte \u00e0 l\u2019entr\u00e9e standard, vous pouvez indiquer \u00e0 la commande que vous avez termin\u00e9 de saisir du texte avec quelle combinaison de touches?",
+        "answer": "Ctrl + D (Windows) ou Commande + D (Mac)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Ctrl + D (Windows) ou Commande + D (Mac)"],
+        "options": [
+          "Ctrl + A (Windows) ou Commande + A (Mac)",
+          "Ctrl + E (Windows) ou Commande + E (Mac)",
+          "Ctrl + D (Windows) ou Commande + D (Mac)",
+          "Ctrl + Z (Windows) ou Commande + Z (Mac)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "91c2777033dcf3acff3a0cc8",
+        "question": "Pour qu\u2019un script Bash soit ex\u00e9cut\u00e9 comme une commande du syst\u00e8me d\u2019exploitation, il doit commencer par une ligne shebang. \u00c0 quoi cela ressemble-t-il?",
+        "answer": "`#!/usr/bin/env bash`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`#!/usr/bin/env bash`"],
+        "options": [
+          "`#!/usr/bin/env bash`",
+          "`~/usr/bin/env bash`",
+          "`'$!/usr/bin/env bash`",
+          "`#/usr/bin/env bash`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ca7d768f68ae2903f587d84e",
+        "question": "Quelle ligne de script Bash a probablement produit la sortie montr\u00e9e ci-dessous?\n```bash\nThe date is: Sun Mar 24 12:30:06 CST 2019!\n```",
+        "answer": "`echo \"The date is: $(date)!\"`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`echo \"The date is: $(date)!\"`"],
+        "options": [
+          "`echo \"The date is: !\"`",
+          "`echo \"The date is: date!\"`",
+          "`echo \"The date is: (date)!\"`",
+          "`echo \"The date is: $(date)!\"`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "594c4fae7ca7748ac961cd2c",
+        "question": "Supposons que votre r\u00e9pertoire de travail actuel soit votre r\u00e9pertoire personnel. Comment pouvez-vous ex\u00e9cuter le script demo.sh qui se trouve dans votre r\u00e9pertoire personnel ? Trouvez trois bonnes r\u00e9ponses.\n```bash\nA. /home/demo.sh\nB. ./demo.sh\nC. ~/demo.sh\nD. bash /home/demo.sh\nE. bash demo.sh\n```",
+        "answer": "B, C, E",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["B, C, E"],
+        "options": ["B, C, E", "A, B, C", "C, D, E", "B, D, E"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3133e72361942c22256c0d66",
+        "question": "Comment pourriez-vous obtenir une liste de tous les fichiers .html de votre arbre?",
+        "answer": "`find . -name \\*.html -print`",
+        "explanation": "Le second semble bien, mais d\u00e9veloppera le \\* s\u2019il y a un fichier .html sur votre r\u00e9pertoire de travail.",
+        "hint": null,
+        "correctAnswer": ["`find . -name \\*.html -print`"],
+        "options": [
+          "`find . -type html`",
+          "`find . -name *.html`",
+          "`find *.html`",
+          "`find . -name \\*.html -print`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c1a63c9b7fdd9f1f32ce7b4c",
+        "question": "Qu\u2019y aurait-il dans l\u2019out.txt?\n```bash\ncat < in.txt > out.txt\n```",
+        "answer": "Ce serait le contenu de in.txt.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Ce serait le contenu de in.txt."],
+        "options": [
+          "Sortie de la ligne de commande. Par d\u00e9faut, STDIN provient du clavier.",
+          "Rien car vous ne pouvez pas rediriger du fichier (in.txt) vers un autre fichier (out.txt). Vous pouvez uniquement rediriger d\u2019une commande vers un fichier.",
+          "Ce serait le contenu de in.txt.",
+          "Rien. La redirection cr\u00e9era un nouveau fichier vide mais il n\u2019y aura aucune sortie de la commande cat \u00e0 rediriger."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2c43a699e3b44cc7d7c8b2ca",
+        "question": "Que fait cette d\u00e9claration bash ?\n```bash\n(( $a == $b ))\necho $?\n```",
+        "answer": "Il teste si les valeurs des variables `$a` et `$b` sont \u00e9gaux.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Il teste si les valeurs des variables `$a` et `$b` sont \u00e9gaux."],
+        "options": [
+          "Il effectue une boucle entre les valeurs de `$a` et `$b`.",
+          "Il teste si les valeurs des variables `$a` et `$b` sont \u00e9gaux.",
+          "Il renvoie `$b` s\u2019il est plus grand que `$a`.",
+          "Il renvoie `$a` s\u2019il est plus grand que `$b`."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8304e85671a7fb6673e8b050",
+        "question": "Qu\u2019utilisez-vous dans une d\u00e9claration de cas pour dire \u00e0 Bash que vous avez termin\u00e9 avec un test sp\u00e9cifique?",
+        "answer": "`; ;`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`; ;`"],
+        "options": ["`; ;`", "`: :`", "`done`", "`$$`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "67bc8011b61a52166aa165c4",
+        "question": "Que repr\u00e9sente l\u2019ast\u00e9risque dans cette d\u00e9claration ?\n```bash\n#!/usr/bin/env bash\ncase $num in\n\t1)\n\techo \"one\"\n\t;;\n\t2)\n\techo \"two\"\n\t;;\n\t*)\n\techo \"a mystery\"\n\t;;\nesac\n```",
+        "answer": "un cas qui correspond \u00e0 n\u2019importe quelle valeur, fournissant une option par d\u00e9faut si rien d\u2019autre n\u2019attrape cette valeur",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "un cas qui correspond \u00e0 n\u2019importe quelle valeur, fournissant une option par d\u00e9faut si rien d\u2019autre n\u2019attrape cette valeur"
+        ],
+        "options": [
+          "un cas qui correspond \u00e0 n\u2019importe quelle valeur, fournissant une option par d\u00e9faut si rien d\u2019autre n\u2019attrape cette valeur",
+          "un cas uniquement pour ce qui se passe lorsque le caract\u00e8re ast\u00e9risque est pass\u00e9 dans le script",
+          "l\u2019action de toutes les autres affaires combin\u00e9es ensemble",
+          "une action qui est effectu\u00e9e pour n\u2019importe quelle entr\u00e9e, m\u00eame si elle correspond \u00e0 une condition sp\u00e9cifi\u00e9e"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bb318c242d0fc43fde4be68d",
+        "question": "Quel script Bash cr\u00e9era correctement ces fichiers ?",
+        "answer": "`touch file{1..10}.txt`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`touch file{1..10}.txt`"],
+        "options": [
+          "`touch file{1+10}.txt`",
+          "`touch file{1-10}.txt`",
+          "`touch file{1..10}.txt`",
+          "`touch file(1..10).txt`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cbc2afbb98319c5f5905e651",
+        "question": "Quelle variable v\u00e9rifieriez-vous pour v\u00e9rifier que la derni\u00e8re commande a \u00e9t\u00e9 ex\u00e9cut\u00e9e avec succ\u00e8s ?",
+        "answer": "`$?`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`$?`"],
+        "options": ["`$$`", "`$?`", "`$!`", "`$@`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e3864e980a249a0a7188c018",
+        "question": "Quelle est la sortie de ce script ?\n```bash\n#!/bin/bash\nfname=john\njohn=thomas\necho ${!fname}\n```",
+        "answer": "thomas",
+        "explanation": "[r\u00e9f\u00e9rence](https://unix.stackexchange.com/questions/41292/variable-substitution-with-an-exclamation-mark-in-bash)",
+        "hint": null,
+        "correctAnswer": ["thomas"],
+        "options": ["jean", "thomas", "Erreur de syntaxe", "vide"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fdd62178366b3d3aaed424fb",
+        "question": "Quelle sera la sortie de ce script ?\n![question](images/Q30/question.png)",
+        "answer": "`C` ![C](images/Q30/C.png); D",
+        "explanation": "Voici une version textuelle de Q.30 :\n```bash\nll\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file1.txt\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file2.txt\n..\nll | sed -e 's,file,text,g'\n```\n<!---->\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file1.file\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file2.file\n..\n<!---->\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file1.txt\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file2.txt\n..\n<!---->\n-rw-r--r-- 1 frankmolev staff 68    Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n<!---->\n-rw-r--r-- 1 frankmolev staff 374     Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666    Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0       Jun 3 19:30 text1.txt\n-rw-r--r-- 1 frankmolev staff 0       Jun 3 19:30 text.txt\n..",
+        "hint": null,
+        "correctAnswer": ["`C` ![C](images/Q30/C.png)", "D"],
+        "options": [
+          "`A` ![A](images/Q30/A.png)",
+          "`B` ![B](images/Q30/B.png)",
+          "`C` ![C](images/Q30/C.png)",
+          "`D` ![D](images/Q30/D.png)",
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseMany",
+        "attachments": [
+          {
+            "id": "95b1bf1ab50fc6436dc730ff",
+            "url": "images/Q30/question.png",
+            "type": "question"
+          },
+          {
+            "id": "228f82e495a9b81ef23786fc",
+            "url": "images/Q30/A.png",
+            "type": "question"
+          },
+          {
+            "id": "6eb6c50bddb63189a21f4fef",
+            "url": "images/Q30/B.png",
+            "type": "question"
+          },
+          {
+            "id": "52743db91c521737849ace83",
+            "url": "images/Q30/C.png",
+            "type": "question"
+          },
+          {
+            "id": "caf37135de7995cce23e03f2",
+            "url": "images/Q30/D.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "54111fb97738fb5317429310",
+        "question": "Qu\u2019est-ce qui ne va pas avec ce script ?\n```bash\n#!/bin/bash\nread -p \"Enter your pet type.\" PET\nif [ $PET = dog ] ;then\n    echo \"You have a dog\"\nfi\n```",
+        "answer": "Il \u00e9chouera si l\u2019utilisateur appuie sur la touche Entr\u00e9e (Retour) sans entrer de nom d\u2019animal de compagnie lorsqu\u2019il y est invit\u00e9.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Il \u00e9chouera si l\u2019utilisateur appuie sur la touche Entr\u00e9e (Retour) sans entrer de nom d\u2019animal de compagnie lorsqu\u2019il y est invit\u00e9."
+        ],
+        "options": [
+          "Si la valeur de PET ne correspond pas \u00e0 dog, le script renvoie un code d\u2019\u00e9tat diff\u00e9rent de z\u00e9ro.",
+          "Il n\u2019y a rien de mal \u00e0 cela. L\u2019\u00e9tat v\u00e9rifie parfaitement la valeur du PET.",
+          "Il \u00e9chouera si l\u2019utilisateur appuie sur la touche Entr\u00e9e (Retour) sans entrer de nom d\u2019animal de compagnie lorsqu\u2019il y est invit\u00e9.",
+          "L\u2019instruction then doit se trouver sur une ligne distincte."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4a70bc244343b7e676a981a1",
+        "question": "Comment pouvez-vous rassembler l\u2019histoire pour plusieurs terminaux?",
+        "answer": "`shopt -s histappend`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`shopt -s histappend`"],
+        "options": [
+          "Cela fonctionne simplement par d\u00e9faut.",
+          "`history --shared`",
+          "`history --combined`",
+          "`shopt -s histappend`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bbaffda24701946c87b02560",
+        "question": "Quelle est la diff\u00e9rence entre les variables $@ et $\\* ?",
+        "answer": "`$@` traite chaque argument cit\u00e9 comme une entit\u00e9 distincte. `$*` traite la cha\u00eene d\u2019arguments enti\u00e8re comme une seule entit\u00e9.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`$@` traite chaque argument cit\u00e9 comme une entit\u00e9 distincte. `$*` traite la cha\u00eene d\u2019arguments enti\u00e8re comme une seule entit\u00e9."
+        ],
+        "options": [
+          "`$@` traite chaque argument cit\u00e9 comme une entit\u00e9 distincte. `$*` traite la cha\u00eene d\u2019arguments enti\u00e8re comme une seule entit\u00e9.",
+          "`$*` traite chaque argument cit\u00e9 comme une entit\u00e9 distincte. `$@` traite la cha\u00eene d\u2019arguments enti\u00e8re comme une seule entit\u00e9.",
+          "`$*` est utilis\u00e9 pour compter les arguments transmis \u00e0 un script, `$@` fournit tous les arguments dans une cha\u00eene.",
+          "`$*` est le caract\u00e8re g\u00e9n\u00e9rique qui inclut tous les arguments avec fractionnement de mots, `$@` contient les m\u00eames donn\u00e9es mais dans un tableau."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2d5822d3aef4bdd2e5f8e2b5",
+        "question": "Quelle commande est ex\u00e9cut\u00e9e dans ce script pour v\u00e9rifier si le fichier .txt existe ?\n```bash\nif [ -f file.txt ]; then\n    echo \"file.txt exists\"\nfi\n```",
+        "answer": "`the built-in [ command`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`the built-in [ command`"],
+        "options": ["`/usr/bin/test`", "`/usr/bin/[`", "`the built-in [ command`", "`/usr/bin/[[`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bc772c353ca8aff17a3cbd46",
+        "question": "Quelle sera la sortie de ce script ?\n```bash\n#!/bin/bash\nLinux=('Debian' 'Redhat' 'Ubuntu' 'Android' 'Fedora' 'Suse')\nx=3\nLinux=(${Linux[@]:0:$x} ${Linux[@]:$(($x + 1))})\necho \"${Linux[@]}\"\n```",
+        "answer": "Debian Redhat Ubuntu Fedora Suse",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Debian Redhat Ubuntu Fedora Suse"],
+        "options": [
+          "Debian Redhat Ubuntu Android Fedora Suse",
+          "Android",
+          "Fedora Suse",
+          "Debian Redhat Ubuntu Fedora Suse"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8d59e81cdb5b6d34b67c9c43",
+        "question": "Quel fichier vous permet d\u2019enregistrer les modifications apport\u00e9es \u00e0 l\u2019environnement shell entre les sessions ?",
+        "answer": "`~/.profile`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`~/.profile`"],
+        "options": ["`/etc/bash.conf`", "`~/.profile`", "`/etc/bashprofile`", "`~/profile`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1476f137ed10c7a111f04251",
+        "question": "Compte tenu des autorisations r\u00e9pertori\u00e9es sur les donn\u00e9es.txt est-il possible que l\u2019utilisateur2 puisse avoir des autorisations de lecture, d\u2019\u00e9criture et d\u2019ex\u00e9cution sur les donn\u00e9es.txt ?\n```bash\n$ ls -l\ntotal 0\n-rwx------+ 1 user1 user1 0 Oct 27 10:54 data.txt\n```",
+        "answer": "Oui, le `+` \u00e0 la fin de la cha\u00eene d\u2019autorisation \u00e0 10 chiffres, cela signifie qu\u2019il y a une liste de contr\u00f4le d\u2019acc\u00e8s. Cela pourrait \u00e9ventuellement donner \u00e0 l\u2019utilisateur2 des autorisations non visibles par `ls -l`.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Oui, le `+` \u00e0 la fin de la cha\u00eene d\u2019autorisation \u00e0 10 chiffres, cela signifie qu\u2019il y a une liste de contr\u00f4le d\u2019acc\u00e8s. Cela pourrait \u00e9ventuellement donner \u00e0 l\u2019utilisateur2 des autorisations non visibles par `ls -l`."
+        ],
+        "options": [
+          "Non, il est clair que user2 n\u2019a pas d\u2019autorisations de lecture, d\u2019\u00e9criture et d\u2019ex\u00e9cution.",
+          "Oui, le `+` \u00e0 la fin de la cha\u00eene d\u2019autorisation \u00e0 10 chiffres, cela signifie qu\u2019il y a une liste de contr\u00f4le d\u2019acc\u00e8s. Cela pourrait \u00e9ventuellement donner \u00e0 l\u2019utilisateur2 des autorisations non visibles par `ls -l`.",
+          "Il est possible que SELinux fournisse des autorisations de lecture, d\u2019\u00e9criture et d\u2019ex\u00e9cution pour user2 qui ne sont pas visibles avec `ls -l`.",
+          "Oui, le `+` \u00e0 la fin de la cha\u00eene d\u2019autorisation \u00e0 10 chiffres, cela signifie qu\u2019il existe un jeu d\u2019attributs \u00e9tendu. Cela pourrait donner \u00e0 l\u2019utilisateur2 des autorisations pour lire, \u00e9crire et ex\u00e9cuter des donn\u00e9es.txt."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "81c09404d14ec5ca1433f99c",
+        "question": "Qu\u2019est-ce que ce script accomplit ?\n```bash\n#!/bin/bash\ndeclare -A ARRAY=([user1]=bob [user2]=ted [user3]=sally)\nKEYS=(${!ARRAY[@]})\nfor (( i=0; $i < ${#ARRAY[@]}; i+=1 ));do\n        echo ${KEYS[$i]} - ${ARRAY[${KEYS[$i]}]}\ndone\n```",
+        "answer": "\u00c0 l\u2019aide d\u2019une boucle de style C, il effectue une boucle \u00e0 travers le tableau associatif nomm\u00e9 ARRAY \u00e0 l\u2019aide des cl\u00e9s du tableau associatif et g\u00e9n\u00e8re \u00e0 la fois la cl\u00e9 et les valeurs de chaque \u00e9l\u00e9ment.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "\u00c0 l\u2019aide d\u2019une boucle de style C, il effectue une boucle \u00e0 travers le tableau associatif nomm\u00e9 ARRAY \u00e0 l\u2019aide des cl\u00e9s du tableau associatif et g\u00e9n\u00e8re \u00e0 la fois la cl\u00e9 et les valeurs de chaque \u00e9l\u00e9ment."
+        ],
+        "options": [
+          "Il trie le tableau associatif nomm\u00e9 ARRAY et stocke les r\u00e9sultats dans un tableau index\u00e9 nomm\u00e9 KEYS. Il utilise ensuite ce tableau tri\u00e9 pour parcourir en boucle le tableau associatif ARRAY.",
+          "\u00c0 l\u2019aide d\u2019une boucle de style C, il effectue une boucle \u00e0 travers le tableau associatif nomm\u00e9 ARRAY \u00e0 l\u2019aide des cl\u00e9s du tableau associatif et g\u00e9n\u00e8re \u00e0 la fois la cl\u00e9 et les valeurs de chaque \u00e9l\u00e9ment.",
+          "Il cr\u00e9e un tableau index\u00e9 du tableau associatif nomm\u00e9 ARRAY. Il utilise ensuite un style C pour boucle et le tableau index\u00e9 pour parcourir en boucle tous les \u00e9l\u00e9ments du tableau associatif, en sortant la cl\u00e9 et la valeur de chaque \u00e9l\u00e9ment de tableau \u00e0 l\u2019aide du num\u00e9ro d\u2019index.",
+          "Il cr\u00e9e un tableau associatif nomm\u00e9 ARRAY, qu\u2019il effectue en boucle \u00e0 l\u2019aide d\u2019un style C pour boucle et des num\u00e9ros d\u2019index de chaque \u00e9l\u00e9ment dans les cl\u00e9s du tableau associatif, en sortant la valeur de chaque \u00e9l\u00e9ment."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e8b3ee87e06c264d6b37fddd",
+        "question": "Quel fichier correspondrait au code ci-dessous?\n```bash\nls Hello[[.vertical-line.]]World\n```",
+        "answer": "`Hello|World`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`Hello|World`"],
+        "options": [
+          "Rien, il s\u2019agit d\u2019un fichier glob non valide.",
+          "`Hello.vertical-line.World`",
+          "`Hello[[.vertical-line.]]World`",
+          "`Hello|World`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9a725832d4140235111ddab7",
+        "question": "Qu\u2019y aura-t-il dedans.txt?\n```bash\nls nonexistentfile | grep \"No such file\" > out.txt\n```",
+        "answer": "Rien, dehors.txt ne sera vide.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Rien, dehors.txt ne sera vide."],
+        "options": [
+          "Aucun fichier de ce type",
+          "ls: impossible d\u2019acc\u00e9der au fichier inexistant: Aucun fichier ou r\u00e9pertoire de ce type",
+          "Rien, dehors.txt ne sera vide.",
+          "Ce sera le contenu du fichier inexistant."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "76e13d46b5c673187edfe5f3",
+        "question": "Pour que le script imprime \u00ab Est num\u00e9rique \u00bb \u00e0 l\u2019\u00e9cran, que devrait entrer l\u2019utilisateur lorsqu\u2019il y est invit\u00e9 ?\n```bash\n#!/bin/bash\nread -p \"Enter text \" var\nif [[ \"$var\" =~ \"^[0-9]+$\" ]];then\n    echo \"Is numeric\"\nelse\n    echo \"Is not numeric\"\nfi\n```",
+        "answer": "En raison d\u2019une erreur de syntaxe, il est impossible d\u2019obtenir le script pour imprimer \u00ab\u00a0Est num\u00e9rique\u00a0\u00bb",
+        "explanation": "Le regex ne doit pas \u00eatre cit\u00e9 pour fonctionner correctement.",
+        "hint": null,
+        "correctAnswer": [
+          "En raison d\u2019une erreur de syntaxe, il est impossible d\u2019obtenir le script pour imprimer \u00ab\u00a0Est num\u00e9rique\u00a0\u00bb"
+        ],
+        "options": [
+          "Toute s\u00e9quence de caract\u00e8res qui inclut un entier",
+          "L\u2019utilisateur devrait entrer la s\u00e9quence de caract\u00e8res de `^[0-9]]+$` Seulement cela s\u2019av\u00e9rera vrai et \u00ab\u00a0Est num\u00e9rique\u00a0\u00bb serait imprim\u00e9 \u00e0 l\u2019\u00e9cran en raison d\u2019une syntaxe incorrecte. En encapsulant l\u2019expression r\u00e9guli\u00e8re entre guillemets doubles, toutes les correspondances \u00e9chouent, \u00e0 l\u2019exception de la cha\u00eene de texte `^[0-9]+$`",
+          "Un ou plusieurs caract\u00e8res qui n\u2019incluent que des entiers",
+          "En raison d\u2019une erreur de syntaxe, il est impossible d\u2019obtenir le script pour imprimer \u00ab\u00a0Est num\u00e9rique\u00a0\u00bb"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f8aa98e939df95be1c5574f2",
+        "question": "Comment trouveriez-vous la derni\u00e8re commande de copie ex\u00e9cut\u00e9e dans votre historique ?",
+        "answer": "| historique grep cp",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["| historique grep cp"],
+        "options": [
+          "| d\u2019histoire trouver cp",
+          "| historique grep cp",
+          "historique grep cp",
+          "cp historique"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1b3d0422532fe863857b4e7d",
+        "question": "Pour \u00e9crire un script qui parcourt les fichiers d\u2019un r\u00e9pertoire, lequel des \u00e9l\u00e9ments suivants pourriez-vous utiliser ?",
+        "answer": "`bash for i in $(ls); do ... done`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`bash for i in $(ls); do ... done`"],
+        "options": [
+          "`bash for i in $(ls); do ... done`",
+          "`bash for $(ls); do ... done`",
+          "`bash for i in $ls; do ... done`",
+          "`bash for $ls; do ... done`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8f0b5a6ad3dd263918ba4582",
+        "question": "Lors de l\u2019ex\u00e9cution d\u2019une commande et de la transmission de la sortie de cette commande \u00e0 une autre commande, quel caract\u00e8re vous permet d\u2019encha\u00eener ces commandes ?",
+        "answer": "|",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["|"],
+        "options": ["|", "->", "#", "@"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "95aaade8cf43b5eb2c067635",
+        "question": "Dans le script ci-dessous, qu\u2019est-ce qui est **salutation**?\n```bash\n#!/usr/bin/env bash\ngreeting=\"Hello\"\necho $greeting, everybody!\n```",
+        "answer": "une variable",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["une variable"],
+        "options": ["une commande", "une boucle", "un param\u00e8tre", "une variable"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6fcfb790bf2ad473eb91cf87",
+        "question": "Quelle instruction v\u00e9rifie si la variable num est sup\u00e9rieure \u00e0 cinq ?",
+        "answer": "`(( num > 5 ))`",
+        "explanation": "[r\u00e9f\u00e9rence](https://tldp.org/LDP/abs/html/dblparens.html)",
+        "hint": null,
+        "correctAnswer": ["`(( num > 5 ))`"],
+        "options": ["`(( num -gt 5 ))`", "`[[$num -lt 5]]`", "`(( num > 5 ))`", "`num > 5`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fdf4cd61d52ffa9c31f9cefc",
+        "question": "En utilisant Bash extended globbing, quelle sera la sortie de cette commande?\n```bash\n$ ls -l\napple\nbanana\nbananapple\nbanapple\npineapple\nstrawberry\n$ shopt -s extglob\n$ ls -l @(ba*(na)|a+(p)le)\n```",
+        "answer": "a",
+        "explanation": "```bash\napple\nbanana\n```\n```bash\napple\nbanana\nbananapple\nbanapple\npineapple\nstrawberry\n```\n```bash\napple\nbanana\nbananappple\nbanapple\npineapple\n```\n```bash\napple\nbanana\nbananapple\nbanapple\npineapple\n```\n[r\u00e9f\u00e9rence](https://www.linuxjournal.com/content/bash-extended-globbing)",
+        "hint": null,
+        "correctAnswer": ["a"],
+        "options": ["a", "b", "c", "d"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "431abf185eb10413d1109c5b",
+        "question": "Lorsqu\u2019elle est utilis\u00e9e \u00e0 partir d\u2019un script, quelle variable contient le nom du script ?",
+        "answer": "0 $",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["0 $"],
+        "options": [
+          "0 $",
+          "$# // nombre de param\u00e8tres positionnels",
+          "$$ // pid du shell actuel",
+          "$@ // construction de type tableau de tous les param\u00e8tres positionnels"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d8281523c85e69dfbc8527cf",
+        "question": "Que signifie le + \u00e0 la fin des autorisations de fichier \u00e0 10 chiffres sur les donn\u00e9es.txt ?\n```bash\nls -l\n-rwx------+ 1 user1 u1 0 Oct 1 10:00 data.txt\n```",
+        "answer": "Il existe une liste de contr\u00f4le d\u2019acc\u00e8s",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Il existe une liste de contr\u00f4le d\u2019acc\u00e8s"],
+        "options": [
+          "Il existe un contexte de s\u00e9curit\u00e9 SELinux",
+          "Le bit collant est d\u00e9fini et le fichier restera dans la RAM pour la vitesse",
+          "Il existe une liste de contr\u00f4le d\u2019acc\u00e8s",
+          "Il existe un attribut \u00e9tendu tel qu\u2019un ensemble immuable"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "986d69f71879c334cfc7c819",
+        "question": "Dans Bash, que fait le commentaire ci-dessous ?\n```bash\ncd -\n```",
+        "answer": "Il vous d\u00e9place vers le r\u00e9pertoire dans lequel vous \u00e9tiez pr\u00e9c\u00e9demment.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Il vous d\u00e9place vers le r\u00e9pertoire dans lequel vous \u00e9tiez pr\u00e9c\u00e9demment."
+        ],
+        "options": [
+          "Il vous d\u00e9place vers le r\u00e9pertoire dans lequel vous \u00e9tiez pr\u00e9c\u00e9demment.",
+          "Il vous d\u00e9place vers votre dossier d\u2019accueil (quel que soit votre r\u00e9pertoire de travail actuel).",
+          "Il supprime le r\u00e9pertoire actuel",
+          "Il vous d\u00e9place un r\u00e9pertoire au-dessus de votre r\u00e9pertoire de travail actuel."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "efb25f0256b2002158d9bd17",
+        "question": "Que fait cette commande ?\n```bash\ncat > notes -\n```",
+        "answer": "Accepte le texte de l\u2019entr\u00e9e standard et le place dans des \u00ab\u00a0notes\u00a0\u00bb",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Accepte le texte de l\u2019entr\u00e9e standard et le place dans des \u00ab\u00a0notes\u00a0\u00bb"
+        ],
+        "options": [
+          "Accepte le texte de l\u2019entr\u00e9e standard et le place dans des \u00ab\u00a0notes\u00a0\u00bb",
+          "Cr\u00e9e des \u00ab\u00a0notes\u00a0\u00bb et quitte",
+          "G\u00e9n\u00e8re le contenu des notes et le supprime",
+          "Ajoute du texte aux \u00ab\u00a0notes\u00a0\u00bb existantes"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b1ad7ddd352f1f219a317d40",
+        "question": "Quel est le r\u00e9sultat de:\n```bash\nVAR=\"This old man came rolling\"\necho \"\\${VAR//man/rolling}\"\n```",
+        "answer": "Ce vieux rouleau est venu rouler",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Ce vieux rouleau est venu rouler"],
+        "options": [
+          "Ce vieux rouleau est venu rouler",
+          "Ce vieil homme est venu homme",
+          "Ce vieil homme est venu rouler",
+          "Ce vieux est venu"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3ad849acd570b1ba92964120",
+        "question": "Le shell examine le contenu d\u2019une variable particuli\u00e8re pour identifier les programmes qu\u2019il peut ex\u00e9cuter. Quel est le nom de cette variable ?",
+        "answer": "$PATH",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["$PATH"],
+        "options": ["$INCLUDE", "$PATH", "$PROGRAM", "$PATHS"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "98490fa803bdf52949c7e055",
+        "question": "Quelle instruction utiliseriez-vous pour l\u2019imprimer dans la console ?\n`Shall we play a game? yes\\no`",
+        "answer": "`echo \"Shall we play a game? yes\\\\no\"`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`echo \"Shall we play a game? yes\\\\no\"`"],
+        "options": [
+          "`echo \"Shall we play a game? yes/\\no\"`",
+          "`echo \"Shall we play a game\\? yes\\\\no\"`",
+          "`echo \"Shall we play a game? yes\\\\no\"`",
+          "`echo \"Shall we play a game? yes\\no\"`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "68b73650875fbb816c91d9bf",
+        "question": "\u00c9tant donn\u00e9 un r\u00e9pertoire avec ces sept fichiers, que resterait-il apr\u00e8s l\u2019ex\u00e9cution de ces commandes?\n```bash\narchive.tar\nimage1.gif\nimage1.jpg\nimage2.gif\nimage2.jpg\ntextfile1.txt\ntextfile2.txt\n----------\n`shopt -s extglob\nrm !(*gif|*jpg)`\n```",
+        "answer": "d:",
+        "explanation": "```bash\narchive.tar\nimage1.gif\nimage1.jpg\nimage2.gif\nimage2.jpg\ntextfile1.txt\ntextfile2.txt\n```\n```bash\narchive.tar\ntextfile1.txt\ntextfile2.txt\n```\nTous ces fichiers seront supprim\u00e9s\n```bash\nimage1.gif\nimage1.jpg\nimage2.gif\nimage2.jpg\n```",
+        "hint": null,
+        "correctAnswer": ["d:"],
+        "options": ["a", "b", "c", "d:"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d52029d685826197548d23ad",
+        "question": "Le code ci-dessous semble fonctionner et les sorties \u00ab\u00a08 est sup\u00e9rieur \u00e0 5\u00a0\u00bb. Cependant, quel r\u00e9sultat inattendu vous dira qu\u2019il ne fonctionne pas correctement?\n```bash\n#!/bin/bash\nvar=\"8\"\nif [ $var > 5 ]; then\n    echo \"$var is greater than 5\"\nfi\n```",
+        "answer": "Il y aura un fichier dans le r\u00e9pertoire actuel nomm\u00e9 5.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Il y aura un fichier dans le r\u00e9pertoire actuel nomm\u00e9 5."],
+        "options": [
+          "Il n\u2019y aura pas de r\u00e9sultats inattendus. Ce script fonctionne tel quel et la sortie sera \u00ab\u00a08 est sup\u00e9rieur \u00e0 5\u00a0\u00bb.",
+          "La comparaison ne pourra pas g\u00e9rer les nombres \u00e0 virgule flottante, car Bash ne g\u00e8re que les entiers. Cet exemple g\u00e9n\u00e8re donc un message d\u2019erreur si la valeur de $var est remplac\u00e9e par \u00ab 8.8 \u00bb.",
+          "Il y aura un fichier dans le r\u00e9pertoire actuel nomm\u00e9 5.",
+          "La variable $var n\u2019est pas cit\u00e9e, ce qui entra\u00eenera un fractionnement des mots. Ce script \u00e9chouera avec un message \u00ab op\u00e9rateur unaire attendu \u00bb si vous modifiez la valeur de"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f08ec5ba14185fece2eab637",
+        "question": "Quel est le r\u00e9sultat de ce script ?\n![question](images/Q60/question.png)",
+        "answer": "Il supprime tous les fichiers du r\u00e9pertoire actif.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Il supprime tous les fichiers du r\u00e9pertoire actif."],
+        "options": [
+          "Il supprime le r\u00e9pertoire 'foo' et les fichiers qu\u2019il contient.",
+          "Il supprime tous les fichiers \u00e0 l\u2019exception de ceux du r\u00e9pertoire actuel.",
+          "Il supprime tous les fichiers du r\u00e9pertoire actif.",
+          "Il supprime tous les fichiers sauf ceux du r\u00e9pertoire 'foo'."
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "69bfd72bc40e7883f12e07bc",
+            "url": "images/Q60/question.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "0ceac7addcad5385c9ec3a4a",
+        "question": "Lequel est vrai?",
+        "answer": "Les r\u00e8gles de strat\u00e9gie SELinux sont v\u00e9rifi\u00e9es apr\u00e8s les r\u00e8gles DAC.",
+        "explanation": "[r\u00e9f\u00e9rence](https://unix.stackexchange.com/questions/16828/what-roles-do-dac-file-permissions-acl-and-mac-selinux-play-in-linux-file-s)",
+        "hint": null,
+        "correctAnswer": [
+          "Les r\u00e8gles de strat\u00e9gie SELinux sont v\u00e9rifi\u00e9es apr\u00e8s les r\u00e8gles DAC."
+        ],
+        "options": [
+          "Les r\u00e8gles de strat\u00e9gie SELinux sont v\u00e9rifi\u00e9es apr\u00e8s les r\u00e8gles DAC.",
+          "Les r\u00e8gles de strat\u00e9gie SELinux sont v\u00e9rifi\u00e9es avant les r\u00e8gles DAC",
+          "Les r\u00e8gles de strat\u00e9gie SELinux ne sont jamais v\u00e9rifi\u00e9es apr\u00e8s les r\u00e8gles DAC.",
+          "Aucun de ces \u00e9l\u00e9ments"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bfaf4aa603caabc3cd11092e",
+        "question": "Que fait la commande ci-dessous ?\n```bash\nw\n```",
+        "answer": "Il affiche des informations sur les utilisateurs actuellement sur la machine.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Il affiche des informations sur les utilisateurs actuellement sur la machine."
+        ],
+        "options": [
+          "Il n\u2019affiche pas d\u2019informations sur les utilisateurs actuellement sur la machine.",
+          "Il affiche des informations sur les utilisateurs actuellement sur la machine.",
+          "Il affiche des informations sur les utilisateurs actuellement sur l\u2019autre machine.",
+          "Aucun de ces \u00e9l\u00e9ments"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e4d60ba53c2e158c1160f081",
+        "question": "Quelles options sed devriez-vous utiliser pour changer l\u2019avant-derni\u00e8re instance de variable en rock afin qu\u2019elle se lise comme suit:\nUne constante est une variable qui est une roche qui n\u2019est pas variable\n```bash\nvar=\"A constant is a variable that is a variable that isn't variable\"\necho \"$var\" | sed _____\n```",
+        "answer": "s/(.\\*)variable(.\\*variable)/\\1rock\\2/'",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["s/(.\\*)variable(.\\*variable)/\\1rock\\2/'"],
+        "options": [
+          "s/(.\\*)variable(.\\*variable)/\\1rock\\2/'",
+          "s/variable/roche/'",
+          "s/variable/roche/g'",
+          "s/(.\\*)variable(.\\*variable)/\\1rock\\2/'"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2a7408d7ae28d2cec9d0b137",
+        "question": "Pour cr\u00e9er un script Bash nomm\u00e9 script.sh ex\u00e9cutable, que devez-vous ex\u00e9cuter ?",
+        "answer": "chmod +x script.sh",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["chmod +x script.sh"],
+        "options": [
+          "script.sh ex\u00e9cutif",
+          "chmod +x script.sh",
+          "bash script.sh",
+          "script.sh source"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3f79054f43442aa7f0793c47",
+        "question": "Comment cr\u00e9er un terminal partag\u00e9 dans un shell Bash ?",
+        "answer": "\u00e9cran",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["\u00e9cran"],
+        "options": [
+          "\u00e9cran",
+          "\u00e9cran -X",
+          "\u00e9cran --partag\u00e9",
+          "terminal -partag\u00e9"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5e5ad9ab6b765399dff8aad3",
+        "question": "Quel op\u00e9rateur envoie la sortie de ls dans un fichier pour une utilisation ult\u00e9rieure ?",
+        "answer": "ls > liste de fichiers.txt",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["ls > liste de fichiers.txt"],
+        "options": [
+          "ls < liste de fichiers.txt",
+          "ls \u00a6 liste de fichiers.txt",
+          "ls > liste de fichiers.txt",
+          "ls - liste de fichiers.txt"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "54ca143b6549e673b876fe4c",
+        "question": "Lorsque l\u2019on compare les \u00e9l\u00e9ments avec la casse, quel \u00e9nonc\u00e9 indique la fin du bloc d\u2019\u00e9valuation?",
+        "answer": "esac",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["esac"],
+        "options": ["arr\u00eat", "esac", "fait", "sortie"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "029b08af1b7e06cbc790d318",
+        "question": "Pour ex\u00e9cuter un groupe de commandes sans g\u00e9n\u00e9rer de sous-shell, quelle syntaxe utiliseriez-vous ?",
+        "answer": "commande1 ; commande2",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["commande1 ; commande2"],
+        "options": [
+          "sh, commande1; commande2",
+          "{ command1; command2; }",
+          "(( command1; command2 ))",
+          "commande1 ; commande2"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e3237c4e283cd69716604383",
+        "question": "Quels sont les r\u00e9sultats de la commande avec un utilisateur nomm\u00e9 jon ?\n```bash\necho 'Hello, $(whoami)!'\n```",
+        "answer": "Bonjour, $(whoami)!",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Bonjour, $(whoami)!"],
+        "options": ["Bonjour, $(jon)!", "Bonjour, jon!", "Bonjour, $(whoami)!", "Bonjour, whoami!"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "253b180b93806c2339e8c9b9",
+        "question": "Comment copier un r\u00e9pertoire sur un autre syst\u00e8me avec compression ?",
+        "answer": "tar cvzf - /wwwdata | ssh root@192.168.1.201 \u00ab\u00a0dd of=/backup/wwwdata.tar.gz\u00a0\u00bb",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "tar cvzf - /wwwdata | ssh root@192.168.1.201 \u00ab\u00a0dd of=/backup/wwwdata.tar.gz\u00a0\u00bb"
+        ],
+        "options": [
+          "tar -ssh user@192.158.1.1 /bin/newfile",
+          "tar cvzf - /wwwdata | ssh root@192.168.1.201 \u00ab\u00a0dd of=/backup/wwwdata.tar.gz\u00a0\u00bb",
+          "Vous ne pouvez pas compresser le flux",
+          "r\u00e9pertoire scp -r user@192.168.1.1:/tmp"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b90c2fd70a93f63681bd47a8",
+        "question": "Pour affecter la commande `ls -lah` \u00e0 la commande de raccourci `lh`, quelle commande devez-vous utiliser ?",
+        "answer": "alias lh='ls -lah'",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["alias lh='ls -lah'"],
+        "options": [
+          "alias lh='ls -lah'",
+          "lien lh='ls -lah'",
+          "alias 'ls -lah'=lh",
+          "lh | ls -lah"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "36c1a068edecff7dac4930c8",
+        "question": "Quelle instruction imprimera tous les fichiers .cvs complets dans le r\u00e9pertoire de base ou les sous-r\u00e9pertoires sans afficher d\u2019erreurs ?",
+        "answer": "trouver $HOME -name \u00ab\u00a0\\*.csv\u00a0\u00bb 2>/dev/null",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["trouver $HOME -name \u00ab\u00a0\\*.csv\u00a0\u00bb 2>/dev/null"],
+        "options": [
+          "trouver $USER_DIR -name \u00ab\u00a0\\*.csv\u00a0\u00bb 2>/dev/null",
+          "trouver $HOME -name \u00ab\u00a0\\*.csv\u00a0\u00bb 1>/dev/null",
+          "trouver $HOME -name \u00ab\u00a0\\*.csv\u00a0\u00bb 2>/dev/null",
+          "trouver HOME -name \u00ab\u00a0\\*.csv\u00a0\u00bb 1>/dev/null"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7a901ed90592d74ada62a1a0",
+        "question": "Dans Bash, qu\u2019est-ce qu\u2019un # \u00e0 la fin de la cha\u00eene d\u2019invite par d\u00e9faut indique ?",
+        "answer": "que l\u2019utilisateur agit en tant que root",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["que l\u2019utilisateur agit en tant que root"],
+        "options": [
+          "que l\u2019utilisateur agit en tant que root",
+          "que le r\u00e9pertoire de travail actuel est la racine du syst\u00e8me de fichiers",
+          "qu\u2019il existe des mises \u00e0 jour pour le syst\u00e8me disponibles",
+          "que l\u2019utilisateur n\u2019est pas privil\u00e9gi\u00e9"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5c5b9ae48f152aee53ab9b60",
+        "question": "Quelle sera la sortie de cette commande ?\n```bash\n$ ls -l\nfile10.txt\nfile1.txt\nfileabc.txt\nfilea.txt\nfileb.txt\nfilec.txt\n$ ls -l file[^abc]*.txt\n```",
+        "answer": "A",
+        "explanation": "```bash\nfile1.txt\nfile10.txt\n```\n```bash\nfile10.txt\nfile1.txt\nfileabc.txt\nfilea.txt\nfileb.txt\nfilec.txt\n```\n```bash\nfileabc.txt filea.txt fileb.txt filec.txt\n```\n```bash\nfilea.txt\nfileb.txt\nfilec.txt\n```\nLe caret (`^`) annule ici les correspondances \u00e0 l\u2019int\u00e9rieur du crochet. [R\u00e9f\u00e9rence](https://tldp.org/LDP/abs/html/globbingref.html)",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "482a9fc1054bd1ef3235cd52",
+        "question": "Quelle est la sortie de cette s\u00e9quence de commandes ?\n```bash\ncat <<EOF\n------------------------\n   This is line 1.\n   This is line 2.\n   This is line 3.\n------------------------\nEOF\n```",
+        "answer": "C",
+        "explanation": "```bash\nThis is line 1.\nThis is line 2.\nThis is line 3.\n```\n```bash\n------------------------This is line 1.This is line 2.This is line 3.------------------------\n```\n```bash\n------------------------\nThis is line 1.\nThis is line 2.\nThis is line 3.\n------------------------\n```\n```bash\n------------------------\nThis is line 1.\nThis is line 2.\nThis is line 3.\n------------------------\n```",
+        "hint": null,
+        "correctAnswer": ["C"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b7add9edd97dab99df91330c",
+        "question": "Qu\u2019y aurait-il dans l\u2019out.txt?\n```bash\n#!/bin/bash\necho 123446789 > out.txt\nexec 3<> out.txt\nread -n 4 <&3\necho -n 5 >&3\nexec 3>&-\n```",
+        "answer": "123456789",
+        "explanation": "Voir [Redirection d\u2019E/S](https://tldp.org/LDP/abs/html/io-redirection.html)\nVoir aussi : [Quelle est la diff\u00e9rence entre \u00ab echo \u00bb et \u00ab echo -n \u00bb ?](https://stackoverflow.com/questions/30761986/what-is-the-difference-between-echo-and-echo-n)",
+        "hint": null,
+        "correctAnswer": ["123456789"],
+        "options": [
+          "123446789",
+          "le symbole du trait d\u2019union (-)",
+          "123456789",
+          "le chiffre 5, qui est \u00e9crit dans le fichier \u00e0 l\u2019aide de l\u2019\u00e9cho"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e8ad7446ab21dfc6b7320d69",
+        "question": "Quelle variable contient l\u2019ID de processus (PID) du script pendant son ex\u00e9cution ?",
+        "answer": "$$",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["$$"],
+        "options": ["$ID", "$ #", "$ @", "$$"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1487bfaeb536fc379fe13397",
+        "question": "En combinant le globbing \u00e9tendu et l\u2019expansion des param\u00e8tres, quelle serait la valeur de la VAR ?\n#!/bin/bash\n    shopt -s extglob\n    VAR='     This is...     a string of characters     '\n    VAR=${VAR##+([[:space:]])}; VAR=${VAR%%+([[:space:]])};\n    echo \"$VAR\"",
+        "answer": null,
+        "explanation": "R\u00e9f\u00e9rences:\n1.  [Quelle est la signification de la syntaxe ${0##...} avec variable, accolades et caract\u00e8re de hachage en bash ?](https://stackoverflow.com/questions/2059794/what-is-the-meaning-of-the-0-syntax-with-variable-braces-and-hash-chara)\n2.  [Que signifie d\u00e9velopper une variable comme \u00ab\u00a0${var%%r\\*}\u00a0\u00bb en bash ?](https://stackoverflow.com/questions/41859601/what-does-expanding-a-variable-as-varr-mean-in-bash)",
+        "hint": null,
+        "correctAnswer": [],
+        "options": [
+          "`<pre> This is... a string of characters</pre>`",
+          "`<pre> This is...a string of characters</pre>`",
+          "`<pre>This is... a string of characters</pre>`",
+          "`<pre>This is...a string of characters</pre>`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5579c76c783cbabd11607005",
+        "question": "Quel op\u00e9rateur indique au shell d\u2019ex\u00e9cuter une commande donn\u00e9e en arri\u00e8re-plan ?",
+        "answer": "&",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["&"],
+        "options": ["!", "&&", "&", "$"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b88d30b28d83b60453e01053",
+        "question": "VAR=\"united states\"\necho \"${VAR^}\"",
+        "answer": "United States",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["United States"],
+        "options": ["unitedstates", "United States", "United states", "UNITED STATES"],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "bash/bash-quiz-fr.md",
+    "language": "fr",
+    "generatedAt": "2025-12-09T14:56:14.075720+00:00",
+    "warnings": ["Question 76 has no marked correct answers"]
+  }
+}

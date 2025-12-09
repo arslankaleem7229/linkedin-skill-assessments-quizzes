@@ -1,0 +1,1330 @@
+{
+  "quizz": {
+    "id": "c0ebe4f397d504e1186dd685",
+    "title": "Swift",
+    "description": "Seeded from swift/swift-quiz.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "aa7a2fddf97d13d19a8dfe6c",
+        "question": "What is this code an example of?\n```swift\nlet val = (Double)6\n```",
+        "answer": "A syntax issue",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: The Basics: Constants and Variables_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID310)",
+        "hint": null,
+        "correctAnswer": [
+          "A syntax issue"
+        ],
+        "options": [
+          "A syntax issue",
+          "Typecasting",
+          "Assignment",
+          "Initialization"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b2011b730c7358eb95bd26d6",
+        "question": "What is the error in this code?\n```swift\nlet x = 5\nguard x == 5 { return }\n```",
+        "answer": "The `guard` is missing the `else`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Control Flow: Early Exit_](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID525)",
+        "hint": null,
+        "correctAnswer": [
+          "The `guard` is missing the `else`"
+        ],
+        "options": [
+          "The `guard` is missing the `else`",
+          "Nothing is wrong",
+          "The `guard` is missing a `then`",
+          "The comparison is wrong"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "77166aaa48f9526feef704c8",
+        "question": "What is the raw/underlying type of this enum?\n```swift\nenum Direction {\n  case north, south, east, west\n}\n```",
+        "answer": "There is none",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Enumerations: Raw Values_](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html#ID149)",
+        "hint": null,
+        "correctAnswer": [
+          "There is none"
+        ],
+        "options": [
+          "There is none",
+          "`String`",
+          "`Any`",
+          "`Int`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4ee9d13c1a85ce58ead27c32",
+        "question": "Why is dispatchGroup used in certain situations?",
+        "answer": "All of these answers.",
+        "explanation": "Reference: [Apple Developer: Documentation: Dispatch: Dispatch Group](https://developer.apple.com/documentation/dispatch/dispatchgroup)",
+        "hint": null,
+        "correctAnswer": [
+          "All of these answers."
+        ],
+        "options": [
+          "It allows multiple synchronous or asynchronous operations to run on different queues.",
+          "It allows track and control execution of multiple operations together.",
+          "It allows operations to wait for each other as desired.",
+          "All of these answers."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba54b3c1af93621e483a3523",
+        "question": "What is this code an example of?\n```swift\nlet val = 5\nprint(\"value is: \\(val)\")\n```",
+        "answer": "String interpolation",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Strings and Characters: String Interpolation_](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID292)",
+        "hint": null,
+        "correctAnswer": [
+          "String interpolation"
+        ],
+        "options": [
+          "String interpolation",
+          "String compilation",
+          "Method chaining",
+          "String concatenation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bd5cd51e920d6ccf1f172e93",
+        "question": "What are the contents of `vals` after this code is executed?\n```swift\nvar vals = [10, 2]\nvals.sort { (s1, s2) -> Bool in\n  s1 > s2\n}\n```",
+        "answer": "`[10, 2]`",
+        "explanation": "Reference: [Apple Developer: Documentations: Swift: Array: sort()](<https://developer.apple.com/documentation/swift/array/sort()>)",
+        "hint": null,
+        "correctAnswer": [
+          "`[10, 2]`"
+        ],
+        "options": [
+          "`[10, 2]`",
+          "`[2, 10]`",
+          "`nil`",
+          "This code contains an error"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0fb0ac4fd47137cd2400d7ac",
+        "question": "What does this code print?\n```swift\ntypealias Thing = [String: Any]\nvar stuff: Thing\nprint(type(of: stuff))\n```",
+        "answer": "`Dictionary<String, Any>`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Reference: Types: Type Identifier_](https://docs.swift.org/swift-book/ReferenceManual/Types.html#ID447)",
+        "hint": null,
+        "correctAnswer": [
+          "`Dictionary<String, Any>`"
+        ],
+        "options": [
+          "`Dictionary<String, Any>`",
+          "`Dictionary`",
+          "`Error`",
+          "`Thing`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9ed0c8f60a9d0f2b1e8aaed0",
+        "question": "What is the value of y?\n```swift\nlet x = [\"1\", \"2\"].dropFirst()\nlet y = x[0]\n```",
+        "answer": "This code contains an error",
+        "explanation": "**explanation**\n`dropFirst()` from `Swift.Collection.Array` returns a type of `ArraySlice<Element>`\nas in the documentation pages:\n`@inlinable public func dropFirst(_ k: Int = 1) -> ArraySlice<Element>`\nThe ArraySlice type makes it fast and efficient for you to perform operations on sections of a larger array. Instead of copying over the elements of a slice to new storage, an ArraySlice instance presents a view onto the storage of a larger array. And because ArraySlice presents the same interface as Array, you can generally perform the same operations on a slice as you could on the original array.\n**Slices Maintain Indices**\nUnlike Array and ContiguousArray, the starting index for an ArraySlice instance isn\u2019t always zero. Slices maintain the same indices of the larger array for the same elements, so the starting index of a slice depends on how it was created, letting you perform index-based operations on either a full array or a slice.\nThe above code returns a slice of value `[\"2\"]` but the index did not change. `let y = x[1]` would give the expected result.\nTo safely reference the starting and ending indices of a slice, always use the startIndex and endIndex properties instead of specific values.\n[Reference](https://developer.apple.com/documentation/swift/arrayslice)",
+        "hint": null,
+        "correctAnswer": [
+          "This code contains an error"
+        ],
+        "options": [
+          "This code contains an error",
+          "`1`",
+          "`2`",
+          "`nil`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b9d414fda80ada0009cd76d3",
+        "question": "What is the value of test in this code?\n```swift\nvar test = 1 == 1\n```",
+        "answer": "`true`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Basic Operators: Comparison Operators_](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID70)",
+        "hint": null,
+        "correctAnswer": [
+          "`true`"
+        ],
+        "options": [
+          "`true`",
+          "`YES`",
+          "`1`",
+          "This code contains an error"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "621a6af3f16eed20cbcf8e86",
+        "question": "What is the value of y?\n```swift\nvar x: Int?\nlet y = x ?? 5\n```",
+        "answer": "`5`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Basic Operators: Nil-Coalescing Operators_](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID72)",
+        "hint": null,
+        "correctAnswer": [
+          "`5`"
+        ],
+        "options": [
+          "`5`",
+          "`0`",
+          "`nil`",
+          "This code contains an error"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6f94af441ad190e7109b7638",
+        "question": "What is the type of this function?\n```swift\nfunc add(a: Int, b: Int) -> Int { return a+b }\n```",
+        "answer": "`(Int, Int) -> Int`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Functions: Function Types_](https://docs.swift.org/swift-book/LanguageGuide/Functions.html#ID174)",
+        "hint": null,
+        "correctAnswer": [
+          "`(Int, Int) -> Int`"
+        ],
+        "options": [
+          "`Int`",
+          "`(Int, Int) -> Int`",
+          "`Int<Optional>`",
+          "Functions don't have types."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0d28a2a23b609e1e39719e05",
+        "question": "What is the correct way to call this function?\n```swift\nfunc myFunc(_ a: Int, b: Int) -> Int {\n  return a + b\n}\n```",
+        "answer": "`myFunc(5, b: 6)`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Functions: Function Argument Labels and Parameter Names_](https://docs.swift.org/swift-book/LanguageGuide/Functions.html#ID166)",
+        "hint": null,
+        "correctAnswer": [
+          "`myFunc(5, b: 6)`"
+        ],
+        "options": [
+          "`myFunc(5, b: 6)`",
+          "`myFunc(5, 6)`",
+          "`myFunc(a: 5, b: 6)`",
+          "`myFunc(a, b)`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1d6cb4f0471452cb8e387308",
+        "question": "The Codable protocol is **\\_**?",
+        "answer": "A combination of `Encodable` and `Decodable`",
+        "explanation": "References:\n- [Apple Developer: Documentation: Swift: Swift Standard Library: Encoding, Decoding, and Serialization: Codable](https://developer.apple.com/documentation/swift/codable/)\n- [_The Swift Programming Language: Language Guide: Protocols: Protocol Composition_](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID282)",
+        "hint": null,
+        "correctAnswer": [
+          "A combination of `Encodable` and `Decodable`"
+        ],
+        "options": [
+          "A combination of `Encodable` and `Decodable`",
+          "Not a true protocol",
+          "Required of all classes",
+          "Automatically included in all classes"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "78e0a44544474c33a3331615",
+        "question": "What is the type of value1 in this code?\n```swift\nlet value1 = \"\\(\"test\".count)\"\n```",
+        "answer": "`String`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Strings and Characters: String Interpolation_](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID292)",
+        "hint": null,
+        "correctAnswer": [
+          "`String`"
+        ],
+        "options": [
+          "`String`",
+          "`Int`",
+          "`null`",
+          "`test.count`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ad2c9ba4199287b3cd913984",
+        "question": "When a function takes a closure as a parameter, when do you want to mark is as escaping?",
+        "answer": "When it's executed after the function returns",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Closures: Escaping Closures_](https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID546)",
+        "hint": null,
+        "correctAnswer": [
+          "When it's executed after the function returns"
+        ],
+        "options": [
+          "When it's executed after the function returns",
+          "When it's scope is undefined",
+          "When it's lazy loaded",
+          "All of these answers"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2904fe28b15d5eebf87cd8c9",
+        "question": "What's wrong with this code?\n```swift\nclass Person {\n  var name: String\n  var address: String\n}\n```",
+        "answer": "Person has no initializers.",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Initialization: Class Inheritance and Initialization_](https://docs.swift.org/swift-book/LanguageGuide/Initialization.html#ID216)",
+        "hint": null,
+        "correctAnswer": [
+          "Person has no initializers."
+        ],
+        "options": [
+          "Person has no initializers.",
+          "Person has no base class.",
+          "`var name` is not formatted correctly.",
+          "`address` is a keyword."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b25ffcfd704af583b4df320a",
+        "question": "What is the value of names after this code is executed?\n```swift\nlet names = [\"Bear\", \"Joe\", \"Clark\"]\nnames.map { (s) -> String in\n  return s.uppercased()\n}\n```",
+        "answer": "`[\"Bear\", \"Joe\", \"Clark\"]`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`[\"Bear\", \"Joe\", \"Clark\"]`"
+        ],
+        "options": [
+          "`[\"BEAR\", \"JOE\", \"CLARK\"]`",
+          "`[\"B\", \"J\", \"C\"]`",
+          "`[\"Bear\", \"Joe\", \"Clark\"]`",
+          "This code contains an error."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6aec5d6a33fa02ad3dbf2afa",
+        "question": "What describes this line of code?\n```swift\nlet val = 5\n```",
+        "answer": "A constant named val of type `Int`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: The Basics: Type Safety and Type Inference_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID322)",
+        "hint": null,
+        "correctAnswer": [
+          "A constant named val of type `Int`"
+        ],
+        "options": [
+          "A constant named val of type `Int`",
+          "A variable named val of type `item`",
+          "A constant named val of type `Number`",
+          "A variable named val of type `Int`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dd61778c1739a43ad5b8ed52",
+        "question": "What is the error in this code?\n```swift\nextension String {\n  var firstLetter: Character = \"c\" {\n    didSet {\n      print(\"new value\")\n    }\n  }\n}\n```",
+        "answer": "Extensions can't add properties.",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Extensions: Computed Properties_](https://docs.swift.org/swift-book/LanguageGuide/Extensions.html#ID152)",
+        "hint": null,
+        "correctAnswer": [
+          "Extensions can't add properties."
+        ],
+        "options": [
+          "Extensions can't add properties.",
+          "Nothing is wrong with it.",
+          "`didSet` takes a parameter.",
+          "`c` is not a character."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9af7a2d73bde3c6fe38c8c38",
+        "question": "didSet and willSet are examples of **\\_**?",
+        "answer": "Property observers",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Properties_](https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID262)",
+        "hint": null,
+        "correctAnswer": [
+          "Property observers"
+        ],
+        "options": [
+          "Property observers",
+          "Key properties",
+          "All of these answers",
+          "`newOld` value calls"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e645960eb4a825044b26a8e4",
+        "question": "What is wrong with this code?\n```swift\nself.callback = {\n  self.attempts += 1\n  self.downloadFailed()\n}\n```",
+        "answer": "Use of `self` inside the closure causes retain cycle.",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Automatic Reference Counting: Strong Reference Cycles for Closures_](https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID56)",
+        "hint": null,
+        "correctAnswer": [
+          "Use of `self` inside the closure causes retain cycle."
+        ],
+        "options": [
+          "Use of `self` inside the closure causes retain cycle.",
+          "You cannot assign a value to a closure in this manner.",
+          "You need to define the type of closure explicitly.",
+          "There is nothing wrong with this code."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a91cd13de3e0663803d354bd",
+        "question": "How many values does vals have after this code is executed?\n```swift\nvar vals = Set<String> = [\"4\", \"5\", \"6\"]\nvals.insert(\"5\")\n```",
+        "answer": "This code contains an error.",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Collection Types: Sets_](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID484)",
+        "hint": null,
+        "correctAnswer": [
+          "This code contains an error."
+        ],
+        "options": [
+          "Three",
+          "Four",
+          "Eight",
+          "This code contains an error."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9a385b7c9a07094a3cdb996a",
+        "question": "How can you avoid a strong reference cycle in a closure?",
+        "answer": "Use a capture list to set class instances of `weak` or `unowned`.",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Automatic Reference Counting_](https://docs.swift.org/swift-book/LanguageGuide/AutomaticReferenceCounting.html#ID56)",
+        "hint": null,
+        "correctAnswer": [
+          "Use a capture list to set class instances of `weak` or `unowned`."
+        ],
+        "options": [
+          "Use a capture list to set class instances of `weak` or `unowned`.",
+          "You can't, there will always be a danger of strong reference cycles inside a closure.",
+          "Initialize the closure as read-only.",
+          "Declare the closure variable as `lazy`."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f39385df330ef7cb62779ac5",
+        "question": "What is wrong with this code?\n```swift\nif let s = String.init(\"some string\") {\n  print(s)\n}\n```",
+        "answer": "This `String` initializer does not return an optional.",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: The Basics: Optionals_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID330)",
+        "hint": null,
+        "correctAnswer": [
+          "This `String` initializer does not return an optional."
+        ],
+        "options": [
+          "This `String` initializer does not return an optional.",
+          "String does not have an initializer that can take a `String`.",
+          "`=` is not a comparison.",
+          "Nothing is wrong with this code."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bb2889a1364c10cfd7a2cada",
+        "question": "Which code snippet correctly creates a typealias closure?",
+        "answer": "`typealias CustomClosure = () -> ()`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Reference: Declarations: Type Alias Declaration_](https://docs.swift.org/swift-book/ReferenceManual/Declarations.html#grammar_typealias-declaration)",
+        "hint": null,
+        "correctAnswer": [
+          "`typealias CustomClosure = () -> ()`"
+        ],
+        "options": [
+          "`typealias CustomClosure = () -> ()`",
+          "`typealias CustomClosure { () -> () }`",
+          "`typealias CustomClosure -> () -> ()`",
+          "`typealias CustomClosure -> () {}`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2fac12e3723c31f203a8c7cb",
+        "question": "How do you reference class members from within a class?",
+        "answer": "`self`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Methods: Instance Methods_](https://docs.swift.org/swift-book/LanguageGuide/Methods.html#ID235)",
+        "hint": null,
+        "correctAnswer": [
+          "`self`"
+        ],
+        "options": [
+          "`self`",
+          "`instance`",
+          "`class`",
+          "`this`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "20fce2547b00186c72065eda",
+        "question": "All value types in Swift are **\\_** under the hood?",
+        "answer": "Structs",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Structures and Classes_](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html#ID88)",
+        "hint": null,
+        "correctAnswer": [
+          "Structs"
+        ],
+        "options": [
+          "Structs",
+          "Classes",
+          "Optionals",
+          "Generics"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "35e6b0ec7330d94f584ffd14",
+        "question": "What is the correct way to add a value to this array?\n```swift\nvar strings = [1, 2, 3]\n```",
+        "answer": "All of these answers",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Collection Types: Arrays_](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID107)",
+        "hint": null,
+        "correctAnswer": [
+          "All of these answers"
+        ],
+        "options": [
+          "All of these answers",
+          "`strings.append(4)`",
+          "`strings.insert(5, at: 1)`",
+          "`strings += [5]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "67d0b6c6fbf98b1f9414bcfe",
+        "question": "How many times will this loop be executed?\n```swift\nfor i in 0...100 {\n  print(i)\n}\n```",
+        "answer": "101",
+        "explanation": "References:\n- [_The Swift Programming Language: Language Guide: Control Flow: For-in Loops_](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID121)\n- [_The Swift Programming Language: Language Guide: Basic Operators: Range Operators_](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID73)",
+        "hint": null,
+        "correctAnswer": [
+          "101"
+        ],
+        "options": [
+          "0",
+          "101",
+          "99",
+          "100"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "327e9bff8b437c40f26d4203",
+        "question": "What can AnyObject represent?",
+        "answer": "An instance of any class",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Type Casting: Type Casting for Any and AnyObject_](https://docs.swift.org/swift-book/LanguageGuide/TypeCasting.html#ID342)",
+        "hint": null,
+        "correctAnswer": [
+          "An instance of any class"
+        ],
+        "options": [
+          "An instance of any class",
+          "An instance of function type",
+          "All of these answers",
+          "An instance of an optional type"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5ec845814c021dcf2cc36ce4",
+        "question": "What is the value of t after this code is executed?\n```swift\nlet names = [\"Larry\", \"Sven\", \"Bear\"]\nlet t = names.enumerated().first().offset\n```",
+        "answer": "This code does not compile. / This code is invalid.",
+        "explanation": "References:\n- [Apple Developer: Documentation: Swift: Array: enumerated()](<https://developer.apple.com/documentation/swift/array/enumerated()>)\n- [Apple Developer: Documentation: Swift: Array](https://developer.apple.com/documentation/swift/array/first)",
+        "hint": null,
+        "correctAnswer": [
+          "This code does not compile. / This code is invalid."
+        ],
+        "options": [
+          "This code does not compile. / This code is invalid.",
+          "0",
+          "1",
+          "Larry"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba31a67d2bfb1718af2e0a59",
+        "question": "What is the value of test after this code executes?\n```swift\nlet vt = (name: \"ABC\", val: 5)\nlet test = vt.0\n```",
+        "answer": "`ABC`",
+        "explanation": "References:\n- [_The Swift Programming Language: Language Guide: The Basics: Tuples_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID329)\n- [_The Swift Programming Language: Language Reference: Expressions: Primary Expressions: Tuple Expression_](https://docs.swift.org/swift-book/ReferenceManual/Expressions.html#grammar_tuple-expression)",
+        "hint": null,
+        "correctAnswer": [
+          "`ABC`"
+        ],
+        "options": [
+          "`ABC`",
+          "`0`",
+          "`5`",
+          "`name`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "371b54609787192392220877",
+        "question": "What is the base class in this code?\n```swift\nclass LSN: MMM {\n}\n```",
+        "answer": "MMM",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Inheritance: Subclassing_](https://docs.swift.org/swift-book/LanguageGuide/Inheritance.html#ID195)",
+        "hint": null,
+        "correctAnswer": [
+          "MMM"
+        ],
+        "options": [
+          "MMM",
+          "LSN",
+          "There is no base class.",
+          "This code is invalid."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cff8e2d40527b9bc87f46fa4",
+        "question": "What does this code print to the console?\n```swift\nvar userLocation: String = \"Home\" {\n  willSet(newValue) {\n    print(\"About to set userLocation to \\(newValue)...\")\n  }\n  didSet {\n    if userLocation != oldValue {\n      print(\"userLocation updated with new value!\")\n    } else {\n      print(\"userLocation already set to that value...\")\n    }\n  }\n}\nuserLocation = \"Work\"\n```",
+        "answer": "`About to set userLocation to Work... userLocation updated with new value!`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Properties: Property Observers_](https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID262)",
+        "hint": null,
+        "correctAnswer": [
+          "`About to set userLocation to Work... userLocation updated with new value!`"
+        ],
+        "options": [
+          "`About to set userLocation to Work... userLocation updated with new value!`",
+          "`About to set userLocation to Work... userLocation already set to that value...`",
+          "`About to set userLocation to Home... userLocation updated to new value!`",
+          "`Error`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "56a2c1bf46b44c448c7f633e",
+        "question": "What must a convenience initializer call?",
+        "answer": "A designated initializer",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Initialization: Class Inheritance and Initialization_](https://docs.swift.org/swift-book/LanguageGuide/Initialization.html#ID216)",
+        "hint": null,
+        "correctAnswer": [
+          "A designated initializer"
+        ],
+        "options": [
+          "A base class convenience initializer",
+          "Either a designated or another convenience initializer",
+          "A designated initializer",
+          "None of these answers"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c075be1f49baa2c4077dea13",
+        "question": "Which object allows you access to specify that a block of code runs in a background thread?",
+        "answer": "DispatchQueue.global",
+        "explanation": "Reference: [Apple Developer: Documentation: Dispatch: DispatchQueue](https://developer.apple.com/documentation/dispatch/dispatchqueue/2300077-global)",
+        "hint": null,
+        "correctAnswer": [
+          "DispatchQueue.global"
+        ],
+        "options": [
+          "DispatchQueue.visible",
+          "DispatchQueue.global",
+          "errorExample need to be labeled as `throws`.",
+          "DispatchQueue.background"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ddf70652ecb3227890b0521b",
+        "question": "What is the inferred type of x?\n```swift\nlet x = [\"a\", \"b\", \"c\"]\n```",
+        "answer": "`Array<String>`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Collection Types: Arrays_](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID107)",
+        "hint": null,
+        "correctAnswer": [
+          "`Array<String>`"
+        ],
+        "options": [
+          "`String[]`",
+          "`Array<String>`",
+          "`Set<String>`",
+          "`Array<Character>`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c117855c96a142bbb4cae4a1",
+        "question": "What is the value of `oThings` after this code is executed?\n```swift\nlet nThings: [Any] = [1, \"2\", \"three\"]\nlet oThings = nThings.reduce(\"\") { \"\\($0)\\($1)\" }\n```",
+        "answer": "12three",
+        "explanation": "Reference: [Apple Developer: Documentation: Swift: Array: reduce(\\_:\\_:)](<https://developer.apple.com/documentation/swift/array/reduce(_:_:)>)",
+        "hint": null,
+        "correctAnswer": [
+          "12three"
+        ],
+        "options": [
+          "11212three",
+          "115",
+          "12three",
+          "Nothing, this code is invalid."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a8c7e25de2fd46b27a063df3",
+        "question": "How would you call a function that throws errors and also returns a value?",
+        "answer": "`try?`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Error Handling: Handling Errors_](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html#ID512)",
+        "hint": null,
+        "correctAnswer": [
+          "`try?`"
+        ],
+        "options": [
+          "`!try`",
+          "`try?`",
+          "`try!`",
+          "`?try`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "452584a62592473c6bc877ee",
+        "question": "What is wrong with this code?\n```swift\nprotocol TUI {\n  func add(x1: Int, x2: Int) -> Int {\n    return x1 + x2\n  }\n}\n```",
+        "answer": "Protocol functions cannot have implementations.",
+        "explanation": "Reference:\n- [_The Swift Programming Language: Language Guide: Protocols: Method Requirements_](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID270)\n- [_The Swift Programming Language: Language Guide: Protocols: Protocol Extensions_](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID521)",
+        "hint": null,
+        "correctAnswer": [
+          "Protocol functions cannot have implementations."
+        ],
+        "options": [
+          "Protocol functions cannot have return types.",
+          "Protocol functions cannot have implementations.",
+          "Nothing is wrong with it.",
+          "`add` is a reserved keyword."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2ebc34b3225b94363012c65b",
+        "question": "In this code, what are `wheels` and `doors` examples of?\n```swift\nclass Car {\n  var wheels: Int = 4\n  let doors = 4\n}\n```",
+        "answer": "Class properties",
+        "explanation": "Reference:\n- [_The Swift Programming Language: Language Guide: Structures and Classes_](https://docs.swift.org/swift-book/LanguageGuide/ClassesAndStructures.html)\n- [_The Swift Programming Language: Language Guide_](https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID255)",
+        "hint": null,
+        "correctAnswer": [
+          "Class properties"
+        ],
+        "options": [
+          "Class members",
+          "This code is invalid",
+          "Class fields",
+          "Class properties"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "94b4ee47348c4c6f02e73473",
+        "question": "How do you designated a failable initializer?",
+        "answer": "`init?`",
+        "explanation": "Reference:\n- [_The Swift Programming Language: Language Guide: Initialization_](https://docs.swift.org/swift-book/LanguageGuide/Initialization.html#ID224)\n- [_The Swift Programming Language: Language Guide: Deinitialization_](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html)",
+        "hint": null,
+        "correctAnswer": [
+          "`init?`"
+        ],
+        "options": [
+          "You cannot",
+          "`deinit`",
+          "`init?`",
+          "`init`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0bad1e436ccb440ea1363d94",
+        "question": "What is printed when this code is executed?\n```swift\nlet dbl = Double.init(\"5a\")\nprint(dbl ?? \".asString()\")\n```",
+        "answer": "`.asString()`",
+        "explanation": "Reference:\n- [_The Swift Programming Language: Language Guide: Basic Operators: Nil-Coalescing Operator_](https://docs.swift.org/swift-book/LanguageGuide/BasicOperators.html#ID72)\n- [_The Swift Programming Language: Language Guide: Initialization: Failable Initializers_](https://docs.swift.org/swift-book/LanguageGuide/Initialization.html#ID224)",
+        "hint": null,
+        "correctAnswer": [
+          "`.asString()`"
+        ],
+        "options": [
+          "`five`",
+          "`5a`",
+          "`.asString()`",
+          "`5`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9959d62e4c11aa73d64c81e7",
+        "question": "In the function below, what are `this` and `toThat` examples of?\n```swift\nfunc add(this x: Int, toThat y: Int) { }\n```",
+        "answer": "Argument labels",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Functions_](https://docs.swift.org/swift-book/LanguageGuide/Functions.html#ID166)",
+        "hint": null,
+        "correctAnswer": [
+          "Argument labels"
+        ],
+        "options": [
+          "None of these answers",
+          "Local terms",
+          "Argument labels",
+          "Parameters names"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6587f923f238f4a3878cec7f",
+        "question": "What is wrong with this code?\n```swift\nfor (key, value) in [1: \"one\", 2: \"two\"] {\n  print(key, value)\n}\n```",
+        "answer": "There is nothing wrong with this code",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Control Flow: For-In Loops_](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID121)",
+        "hint": null,
+        "correctAnswer": [
+          "There is nothing wrong with this code"
+        ],
+        "options": [
+          "The interaction source is invalid",
+          "The interaction variable is invalid",
+          "There is nothing wrong with this code",
+          "The comma in the print is misplaced"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b843ac2dec98d83513351206",
+        "question": "Which of these choices is associated with unit testing?",
+        "answer": "All of these answers",
+        "explanation": "Reference:\n- [Apple Developer: Documentation: XCTest: XCTest](https://developer.apple.com/documentation/xctest/xctest)\n- [Apple Developer: Documentation: XCTest: Boolean Assertions: XCTAssert(\\_:\\_:file:line:)](https://developer.apple.com/documentation/xctest/1500669-xctassert)\n- [_The Swift Programming Language: Language Guide: Access Control: Access Levels_](https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html#ID5)",
+        "hint": null,
+        "correctAnswer": [
+          "All of these answers"
+        ],
+        "options": [
+          "`XCTest`",
+          "All of these answers",
+          "`@testable`",
+          "`XCTAssert`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "adbb3dd5fa762142ab2bb265",
+        "question": "In the code below, what is width an example of?\n```swift\nclass Square {\n  var height: Int = 0\n  var width: Int {\n    return height\n  }\n}\n```",
+        "answer": "A computed property",
+        "explanation": "Reference:\n- [_The Swift Programming Language: Language Guide: Properties: Stored Properties_](https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID255)\n- [_The Swift Programming Language: Language Guide: Properties: Computed Properties_](https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID259)\n- [_The Swift Programming Language: Language Guide: Closures: Trailing Closures_](https://docs.swift.org/swift-book/LanguageGuide/Closures.html#ID102)",
+        "hint": null,
+        "correctAnswer": [
+          "A computed property"
+        ],
+        "options": [
+          "This code contains error",
+          "A closure",
+          "A computed property",
+          "Lazy loading"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "04b7bc9369ce608639dc6a0e",
+        "question": "What data type is this an example of?\n```swift\nlet vals = (\"val\", 1)\n```",
+        "answer": "A tuple",
+        "explanation": "Reference:\n- [_The Swift Programming Language: Language Guide: The Basics_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID329)\n- [_The Swift Programming Language: Language Reference: Types_](https://docs.swift.org/swift-book/ReferenceManual/Types.html#grammar_tuple-type)",
+        "hint": null,
+        "correctAnswer": [
+          "A tuple"
+        ],
+        "options": [
+          "A dictionary",
+          "A tuple",
+          "An optional",
+          "This code contains error"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5ed6d7f688ad6ee79b2a63ae",
+        "question": "What is wrong with this code?\n```swift\nvar x = 5\nx = 10.0\n```",
+        "answer": "You cannot assign a Double to a variable of type Int",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: The Basics_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID322)",
+        "hint": null,
+        "correctAnswer": [
+          "You cannot assign a Double to a variable of type Int"
+        ],
+        "options": [
+          "You cannot assign a Double to a variable of type Int",
+          "`x` is undefined",
+          "`x` is a constant",
+          "`x` has no type"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "895d8c64031c04819e618e0d",
+        "question": "What will this code print to the console?\n```swift\nvar items = [\"a\": 1, \"b\": 2, \"c\": \"test\"] as [String: Any]\nitems[\"c\"] = nil\nprint(items[\"c\"] as Any)\n```",
+        "answer": "nil",
+        "explanation": "References:\n- [_The Swift Programming Language: Language Guide: Type Casting: Type Casting for Any and AnyObject_](https://docs.swift.org/swift-book/LanguageGuide/TypeCasting.html#ID342)\n- [_The Swift Programming Language: Language Guide: Collection Types: Dictionaries_](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID113)",
+        "hint": null,
+        "correctAnswer": [
+          "nil"
+        ],
+        "options": [
+          "Any",
+          "test",
+          "1,2,3",
+          "nil"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eb72ac300f8a632d539ac716",
+        "question": "What is wrong with this code?\n```swift\nlet val = 5.0 + 10\n```",
+        "answer": "There is nothing wrong with this code",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: The Basics: Type Safety and Type Inference_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID322)",
+        "hint": null,
+        "correctAnswer": [
+          "There is nothing wrong with this code"
+        ],
+        "options": [
+          "There is nothing wrong with this code",
+          "`val` is a constant and cannot be changed",
+          "`5.0` and `10` are different types",
+          "There is no semicolon"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0a5ed1806e660c7263353ca6",
+        "question": "How many parameters does the initializer for Test have?\n```swift\nstruct Test {\n  var score: Int\n  var date: Date\n}\n```",
+        "answer": "Two",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Initialization_](https://docs.swift.org/swift-book/LanguageGuide/Initialization.html#ID213)",
+        "hint": null,
+        "correctAnswer": [
+          "Two"
+        ],
+        "options": [
+          "Zero",
+          "This code contains an error",
+          "Two",
+          "Structs do not have initializers"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5ee11baed8915fbe332fd9b1",
+        "question": "What prints to the console when executing this code?\n```swift\nlet x = try? String.init(\"test\")\nprint(x)\n```",
+        "answer": "Optional(\"test\")",
+        "explanation": "References:\n- [_The Swift Programming Language: Language Guide: Error Handling: Handling Errors_](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html#ID512)\n- [_The Swift Programming Language: Language Guide: The Basics: Optionals_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID330)",
+        "hint": null,
+        "correctAnswer": [
+          "Optional(\"test\")"
+        ],
+        "options": [
+          "nil",
+          "Nothing - this code contains an error",
+          "Optional(\"test\")",
+          "test"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1b3b51127323d699757ed28d",
+        "question": "How can you sort this array?\n```swift\nvar vals = [1, 2, 3]\n```",
+        "answer": "All of these answers",
+        "explanation": "Reference: [Apple Developer: Documentation: Swift: Array: sort()](<https://developer.apple.com/documentation/swift/array/sort()>)",
+        "hint": null,
+        "correctAnswer": [
+          "All of these answers"
+        ],
+        "options": [
+          "`vals.sort { $0 < $1 }`",
+          "`vals.sort { (s1, s2) in s1 < s2 }`",
+          "`vals.sort(by: <)`",
+          "All of these answers"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8ad2cef88c1a936836e8de88",
+        "question": "DispatchQueue.main.async takes a block that will be",
+        "answer": "Executed in the main queue",
+        "explanation": "Reference: [Apple Developer: Documentation: Dispatch: DispatchQueue: async(group:qos:flags:execute:)](https://developer.apple.com/documentation/dispatch/dispatchqueue/2016098-async)",
+        "hint": null,
+        "correctAnswer": [
+          "Executed in the main queue"
+        ],
+        "options": [
+          "Not executed",
+          "Executed in the main queue",
+          "None of these answers",
+          "Executed on the background thread"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9851f374ace5c2c8e90402e2",
+        "question": "When is deinit called?",
+        "answer": "When a class instance is being removed from memory",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Deinitialization_](https://docs.swift.org/swift-book/LanguageGuide/Deinitialization.html)",
+        "hint": null,
+        "correctAnswer": [
+          "When a class instance is being removed from memory"
+        ],
+        "options": [
+          "When a class instance needs memory",
+          "All of these answers",
+          "When the executable code is finished",
+          "When a class instance is being removed from memory"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "944b940903b89b45b9e3ca80",
+        "question": "How do you declare an optional String?",
+        "answer": "`String?`",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: The Basics: Optionals_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID330)",
+        "hint": null,
+        "correctAnswer": [
+          "`String?`"
+        ],
+        "options": [
+          "`String?`",
+          "`Optional[String]`",
+          "`[String]?`",
+          "`?String`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "22be1d7dfaa1c9fc32915adb",
+        "question": "How many times this code will be executed? / How many times will this loop be performed?\n```swift\nfor i in [\"0\", \"1\"] {\n  print(i)\n}\n```",
+        "answer": "Two",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Control Flow: For-In Loops_](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID121)",
+        "hint": null,
+        "correctAnswer": [
+          "Two"
+        ],
+        "options": [
+          "One",
+          "Two",
+          "Three",
+          "This code does not compile"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "af2e5fb5b728bc58fecaf63c",
+        "question": "What does this code print?\n```swift\nlet names = [\"Bear\", \"Tony\", \"Svante\"]\nprint(names[1] + \"Bear\")\n```",
+        "answer": "TonyBear",
+        "explanation": "References:\n- [_The Swift Programming Language: Language Guide: Collection Types: Arrays_](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID107)\n- [_The Swift Programming Language: Language Guide: Strings and Characters: Concatenating Strings and Characters_](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID291)",
+        "hint": null,
+        "correctAnswer": [
+          "TonyBear"
+        ],
+        "options": [
+          "1Bear",
+          "BearBear",
+          "TonyBear",
+          "Nothing, this code is invalid"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d3f5d44f6f81050be972e108",
+        "question": "What is true of this code?\n```swift\nlet name: String?\n```",
+        "answer": "`name` can hold either a string or nil value.",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: The Basics: Optionals_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID330)",
+        "hint": null,
+        "correctAnswer": [
+          "`name` can hold either a string or nil value."
+        ],
+        "options": [
+          "`name` can hold only a string value.",
+          "`name` can hold either a string or nil value.",
+          "Optional values cannot be `let` constants.",
+          "Only non-empty string variables can be stored in `name`."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "74e0af025765858226a2f37a",
+        "question": "What is the value of `val` after this code is executed?\n```swift\nlet i = 5\nlet val = i * 6.0\n```",
+        "answer": "This code is invalid.",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: The Basics: Type Safety and Type Inference_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID322)",
+        "hint": null,
+        "correctAnswer": [
+          "This code is invalid."
+        ],
+        "options": [
+          "This code is invalid.",
+          "6",
+          "30",
+          "0"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f226ea56c06a61f16a80b5ed",
+        "question": "What does this code print?\n```swift\nenum Positions: Int {\n  case first, second, third, other\n}\nprint (Positions.other.rawValue)\n```",
+        "answer": "3",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: The Basics: Raw Values_](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html#ID149)",
+        "hint": null,
+        "correctAnswer": [
+          "3"
+        ],
+        "options": [
+          "3",
+          "0",
+          "other",
+          "nil"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f51a438570b446d9eb10c36c",
+        "question": "What is printed to the console when this code is executed?\n```swift\n\"t\".forEach { (char) in\n  print(char)\n}\n```",
+        "answer": "t",
+        "explanation": "References:\n- [_The Swift Programming Language: Language Guide: Strings and Characters: Working with Characters_](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html#ID290)\n- [Apple Developer: Documentation: Swift: String: forEach(\\_:)](<https://developer.apple.com/documentation/swift/string/foreach(_:)>)",
+        "hint": null,
+        "correctAnswer": [
+          "t"
+        ],
+        "options": [
+          "nil",
+          "Nothing, since the code contains an error",
+          "t",
+          "zero"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "970fa282c1413d9ade19e596",
+        "question": "What prints when this code is executed?\n```swift\nlet s1 = [\"1\", \"2\", \"3\"]\n  .filter { $0 > \"0\" }\n  .sorted { $0 > $1 }\nprint(s1)\n```",
+        "answer": "[\"3\", \"2\", \"1\"]",
+        "explanation": "References:\n- [Apple Developer: Documentation: Swift: Swift Standard Library: Collections: Sequence and Collection Protocols: Sequence: filter()](<https://developer.apple.com/documentation/swift/sequence/filter(_:)>)\n- [Apple Developer: Documentation: Swift: Array: sorted()](<https://developer.apple.com/documentation/swift/array/sorted()>)",
+        "hint": null,
+        "correctAnswer": [
+          "[\"3\", \"2\", \"1\"]"
+        ],
+        "options": [
+          "[]",
+          "[\"3\", \"2\", \"1\"]",
+          "[321]",
+          "[\"1\", \"2\", \"3\"]"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eef35f6b28f55d0304d4c0d7",
+        "question": "What enumeration feature allows them to store case-specific data?",
+        "answer": "Associated values",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Enumerations: Associated Values_](https://docs.swift.org/swift-book/LanguageGuide/Enumerations.html#ID148)",
+        "hint": null,
+        "correctAnswer": [
+          "Associated values"
+        ],
+        "options": [
+          "Associated values",
+          "Integral values",
+          "Raw values",
+          "Custom values"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2446ede9b8adbdf5f5f4fa86",
+        "question": "In the code below, AOM must be a(n)?\n```swift\nclass AmP: MMM, AOM { }\n```",
+        "answer": "Protocol",
+        "explanation": "References:\n- [_The Swift Programming Language: Language Guide: Inheritance: Subclassing_](https://docs.swift.org/swift-book/LanguageGuide/Inheritance.html#ID195)\n- [_The Swift Programming Language: Language Guide: Protocols: Protocol Syntax_](https://docs.swift.org/swift-book/LanguageGuide/Protocols.html#ID268)",
+        "hint": null,
+        "correctAnswer": [
+          "Protocol"
+        ],
+        "options": [
+          "Class",
+          "Protocol",
+          "Enumeration",
+          "Struct"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7a8b6c6c5004c6928f31d740",
+        "question": "What is the value of numbers in the code below?\n```swift\nlet numbers = [1, 2, 3, 4, 5, 6].filter { $0 % 2 == 0 }\n```",
+        "answer": "[2, 4, 6]",
+        "explanation": "Reference: [Apple Developer: Documentation: Swift: Swift Standard Library: Collections: Sequence and Collection Protocols: Sequence: filter()](<https://developer.apple.com/documentation/swift/sequence/filter(_:)>)",
+        "hint": null,
+        "correctAnswer": [
+          "[2, 4, 6]"
+        ],
+        "options": [
+          "[1, 3, 5]",
+          "[]",
+          "[2, 4, 6]",
+          "nil"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f8614cd016d5f02de19435ab",
+        "question": "What is the type of `vals` in this code?\n```swift\nlet vals = [\"a\", 1, \"Hi\"]\n```",
+        "answer": "[Any]",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Type Casting_](https://docs.swift.org/swift-book/LanguageGuide/TypeCasting.html#ID342)",
+        "hint": null,
+        "correctAnswer": [
+          "[Any]"
+        ],
+        "options": [
+          "Array(char)",
+          "[Any]",
+          "Array<char>",
+          "[Generic]"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d41549d60ecd2e12e8f54b2a",
+        "question": "How can you extract val to `x` in tuple `vt`\n```swift\nlet vt = (name: \"ABC\", val: 5)\n```",
+        "answer": "All of these answers",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: The Basics: Tuples_](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html#ID329)",
+        "hint": null,
+        "correctAnswer": [
+          "All of these answers"
+        ],
+        "options": [
+          "let x = vt.1",
+          "All of these answers",
+          "let x = vt.val",
+          "let (`_`, x) = vt"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2addb3de28529e18dd5859aa",
+        "question": "What is the type of x?\n```swift\nlet x = try? String.init(from: decoder)\n```",
+        "answer": "String?",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Error Handling: Handling Errors_](https://docs.swift.org/swift-book/LanguageGuide/ErrorHandling.html#ID512)",
+        "hint": null,
+        "correctAnswer": [
+          "String?"
+        ],
+        "options": [
+          "String",
+          "String?",
+          "String!",
+          "try?"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "23bd461838cef4711f19a784",
+        "question": "How many times is this loop executed?\n```swift\nlet loopx = 5\nrepeat {\n  print (loopx)\n} while loopx < 6\n```",
+        "answer": "Infinite",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Control Flow: While Loops_](https://docs.swift.org/swift-book/LanguageGuide/ControlFlow.html#ID124)",
+        "hint": null,
+        "correctAnswer": [
+          "Infinite"
+        ],
+        "options": [
+          "Six",
+          "Zero",
+          "Five",
+          "Infinite"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b1baaac7cfab51f6fec2737d",
+        "question": "How many values does vals have after this code is executed?\n```swift\nvar vals: Set<String> = [\"4\", \"5\", \"6\"]\nvals.insert(\"5\")\n```",
+        "answer": "Three",
+        "explanation": "Reference: [_The Swift Programming Language: Language Guide: Collection Types: Sets_](https://docs.swift.org/swift-book/LanguageGuide/CollectionTypes.html#ID484)",
+        "hint": null,
+        "correctAnswer": [
+          "Three"
+        ],
+        "options": [
+          "This code contains an error.",
+          "Eight",
+          "Three",
+          "Four"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e8a7e0bae0f2afd733ceb0bb",
+        "question": "What is the base class in this code ?\nclass LSN: MMM{\n}",
+        "answer": "MMM",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "MMM"
+        ],
+        "options": [
+          "MMM",
+          "LSN",
+          "There is no base class.",
+          "This code is invalid."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "swift/swift-quiz.md",
+    "language": "md",
+    "generatedAt": "2025-12-09T14:56:14.470357+00:00",
+    "warnings": []
+  }
+}

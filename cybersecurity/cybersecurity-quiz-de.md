@@ -89,7 +89,7 @@
 
 #### Q12. Welcher Bereich ist die DMZ?
 
-![image](https://user-images.githubusercontent.com/50566479/136518616-8712a45f-8ba5-48bd-ac60-5a96ddf754ae.png?raw=png)
+![image](https://user-images.githubusercontent.com/50566479/136518616-8712a45f-8ba5-48bd-ac60-5a96ddf754ae.png)
 
 - [ ] 4
 - [ ] 1

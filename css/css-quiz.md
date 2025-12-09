@@ -511,7 +511,7 @@ p {
 
 #### Q37. The flex-direction property is used to specify the direction in which flex items are displayed. What are the values used to specify the direction of the items in the following examples?
 
-![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png?raw=png)
+![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png)
 
 - [x] &shy;
   - Example 1: `flex-direction: row;`
@@ -586,7 +586,7 @@ h2 ~ p {
 
 #### Q40. When using Flexbox, the "justify-content" property can be used to distribute the space between the flex items along the main axis. Which value should be used to evenly distribute the flex items within the container shown below?
 
-![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png?raw=png)
+![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png)
 
 - [ ] justify-content: space-around;
 - [ ] justify-content: center;
@@ -1618,7 +1618,7 @@ D. font-size: 20px
 
 #### Q111. In this image, the blue box and sample text are both contained within the same parent element. The blue box is floated on the left margin of the container. Why is it not contained in the container?
 
-![Sample text](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-3.png?raw=png)
+![Sample text](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-3.png)
 
 - [ ] Floating the blue box increased its height.
 - [ ] Floating the blue box on the left also moves it down.
@@ -2315,7 +2315,7 @@ input.invalid {
 
 #### Q141. Which style rule will place an X within the grid to win the game?
 
-![A](img/Q-141.png?raw=png)
+![A](img/Q-141.png)
 
 - [ ] row: 3;
       column: 3;

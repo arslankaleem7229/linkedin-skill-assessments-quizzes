@@ -1250,7 +1250,7 @@ int main(){
 
 #### P74. Dados estos registros en un mapa, ¿cómo actualizará el valor de la clave "Sinead" a 22?
 
-![image](images/Q79.png?raw=png)
+![image](images/Q79.png)
 
 - [x] `marks["Sinead"] = 22`
 - [ ] `marks["Sinead"].22`

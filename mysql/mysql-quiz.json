@@ -1,0 +1,2231 @@
+{
+  "quizz": {
+    "id": "24e6d02c0f8008aaa2143dd7",
+    "title": "MySQL",
+    "description": "Seeded from mysql/mysql-quiz.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "22488c1b643e68b53152f0cc",
+        "question": "When you have a subquery inside of the main query, which query is executed first?",
+        "answer": "the subquery",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["the subquery"],
+        "options": [
+          "The subquery is never executed. Only the main query is executed.",
+          "They are executed at the same time",
+          "the main query",
+          "the subquery"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a8aeefdbfd2b0f5df70f58a1",
+        "question": "You need to export the entire database, including the database objects, in addition to the data. Which command-line tool do you use?",
+        "answer": "mysqldump",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["mysqldump"],
+        "options": ["mysqlexport", "mysqladmin", "mysqldump", "mysqld"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "15ea604083e73a0adb6ce8b3",
+        "question": "You must ensure the accuracy and reliability of the data in your database. You assign some constraints to limit the type of data that can go into a table. What type of constraints are you assigning?",
+        "answer": "column level",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["column level"],
+        "options": ["row level", "database level", "column level", "function level"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "38cafd5100d14a99583e7774",
+        "question": "Which option of most MySQL command-line programs can be used to get a description of the program's different options?",
+        "answer": "--help",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["--help"],
+        "options": ["--options", "?", "--help", "-h"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba2bc1a7a5693d3971bb85cd",
+        "question": "MySQL uses environment variables in some of the programs and command-line operations. Which variable is used by the shell to find MySQL programs?",
+        "answer": "PATH",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["PATH"],
+        "options": ["DIR", "HOME", "PATH", "MYSQL_HOME"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "56807e24ccddd8522416d9a2",
+        "question": "How can you create a stored procedure in MySQL?",
+        "answer": "B",
+        "explanation": "```\n1 CREATE PROCEDURE P () AS\n2 BEGIN\n3 END;\n```\n```\n1 CREATE PROCEDURE P ()\n2 BEGIN\n3 END\n```\n```\n1 CREATE PROCP\n2 BEGIN\n3 END;\n```\n```\n1 CREATE PROC P AS O\n2 BEGIN\n3 END;\n```",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e599b4030897ae87bfd30ce3",
+        "question": "If you were building a table schema to store student grades as a letter (A, B, C, D, or F) which column type would be the best choice?",
+        "answer": "ENUM",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["ENUM"],
+        "options": ["ENUM", "OTEXT", "VARCHAR", "LONGTEXT"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "037b6af2e286fb64323d0dfd",
+        "question": "Management has requested that you build an employee database. You start with the employee table. What is the correct syntax?",
+        "answer": "D",
+        "explanation": "```sql\nCREATE TABLE employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY ON employeeID\n);\n```\n```sql\nCREATE TABLE employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY employeeID\n);\n```\n```sql\nCREATE TABLE IF EXISTS employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY (employeeID)\n);\n```\n```sql\nCREATE TABLE IF NOT EXISTS employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY (employeeID)\n);\n```",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1bd8b6d3ef7a3915a6f4ecf3",
+        "question": "You are working with the tables as shown in this diagram. You need to generate the list of customers who purchased certain car models. Which SQL clause do you use?\n![mysql Q09](images/mysql_q09.jpg)",
+        "answer": "IN",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["IN"],
+        "options": ["LIKE", "IN", "BETWEEN", "HAVING"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "a6b5dc32e630cfac19ee223b",
+            "url": "images/mysql_q09.jpg",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "c024ebdd982e983fcd06ee14",
+        "question": "Which query would NOT be used to administer a MySQL server?",
+        "answer": "SELECT column FROM tbl",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["SELECT column FROM tbl"],
+        "options": ["USE db", "SELECT column FROM tbl", "SHOW COLUMNS FROM tbl", "SHOW TABLES"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b3ea4c1af8a149c6c696f4fb",
+        "question": "MySQL server can operate in different SQL modes, depending on the value of the sql_mode system variable. Which mode changes syntax and behavior to conform more closely to standard SQL?",
+        "answer": "ANSI",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["ANSI"],
+        "options": ["TRADITIONAL", "ANSI", "MSSQL", "STRICT"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2c555f1ac1e4925292ac537c",
+        "question": "MySQL programs are a set of command-line utilities that are provided with typical MySQL distributions. MySQL is designed to be a database.",
+        "answer": "client and server",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["client and server"],
+        "options": [
+          "database and programming",
+          "user and administrator",
+          "client and server",
+          "syntax and objects"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fe2c7a2a4e551258c7cdadbd",
+        "question": "Which MySQL command shows the structure of a table?",
+        "answer": "DESCRIBE table;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["DESCRIBE table;"],
+        "options": ["INFO table;", "SHOW table;", "STRUCTURE table;", "DESCRIBE table;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "aa78e611b17c28ffe5068ce8",
+        "question": "MySQL uses security based on \\_ for all connections, queries, and other operations that users can attempt to perform. or How are permissions implemented in MySQL?",
+        "answer": "access control lists",
+        "explanation": "[Reference](https://dev.mysql.com/doc/refman/8.0/en/security-guidelines.html)",
+        "hint": null,
+        "correctAnswer": ["access control lists"],
+        "options": [
+          "administrator schema",
+          "encrypted algorithms",
+          "user settings",
+          "access control lists"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "39ef1badba334555e0bf9a5a",
+        "question": "Which MySQL command modifies data records in a table?",
+        "answer": "UPDATE",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["UPDATE"],
+        "options": ["UPDATE", "MODIFY", "CHANGE", "ALTER"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "47d3c956cdbd6336f017c100",
+        "question": "What is the best type of query for validating the format of an email address in a MySQL table?",
+        "answer": "a SQL query using a regular expression",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["a SQL query using a regular expression"],
+        "options": [
+          "a SQL query using partitions",
+          "a SQL query using IS NULL",
+          "a SQL query using a regular expression",
+          "a SQL query using LTRIM Or RTRIM"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "181a26405b8166defb3a4ce6",
+        "question": "In MySQL, queries are always followed by what character?",
+        "answer": "semicolon",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["semicolon"],
+        "options": ["line break", "colon", "semicolon", "period"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d693db34716ce08ed998e833",
+        "question": "How can you remove a record using MySQL?",
+        "answer": "DELETE FROM",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["DELETE FROM"],
+        "options": ["DELETE", "DELETE FROM", "REMOVE", "REMOVE FROM"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8e71f2baa73e4ca120cccc71",
+        "question": "Which choice is NOT a statement you would use to filter data?",
+        "answer": "GROUP BY",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["GROUP BY"],
+        "options": ["GROUP BY", "WHERE", "LIMIT", "LIKE"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "672b7120b44370378538da8c",
+        "question": "What does the following SQL statement return?\n`SELECT * FROM Employees WHERE EmployeeName LIKE 'a%'`",
+        "answer": "It records in the Employees table where the value in the EmployeeName column starts with \"a\".",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "It records in the Employees table where the value in the EmployeeName column starts with \"a\"."
+        ],
+        "options": [
+          "It records in the Employees table where the value in the EmployeeName column doesn't have an \"a\".",
+          "It records in the Employees table where the value in the EmployeeName column starts with \"a\".",
+          "It records in the Employees table where the value in the EmployeeName column has an \"a\".",
+          "It records in the Employees table where the value in the EmployeeName column ends with \"a\"."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9b3690889bec52fd5a7f89bb",
+        "question": "In `SELECT * FROM clients;` what does clients represent?",
+        "answer": "a table",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["a table"],
+        "options": ["a SQL query", "a SQL statement", "a database", "a table"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "61a1a99264ed2a722d8728ef",
+        "question": "How does MySQL differ from SQL?",
+        "answer": "SQL is a standard language for retrieving and manipulating data from structured databases. MySQL is a relational database management system that is used to manage SQL databases.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "SQL is a standard language for retrieving and manipulating data from structured databases. MySQL is a relational database management system that is used to manage SQL databases."
+        ],
+        "options": [
+          "SQL is a standard language for retrieving and manipulating data from structured databases. MySQL is a nonrelational database management system that is used to manage SQL databases.",
+          "SQL is a standard language for retrieving and manipulating data from structured databases. MySQL is a relational database management system that is used to manage SQL databases.",
+          "They are not different. MySQL and SQL refer to the same thing.",
+          "My SQL is a language, and SQL is a software application."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3a82565963cfdae2afba37f3",
+        "question": "If you need to order a table of movies by name, which query will work?",
+        "answer": "SELECT \\* FROM movies ORDER BY name",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["SELECT \\* FROM movies ORDER BY name"],
+        "options": [
+          "SELECT \\* FROM movies GROUP BY name",
+          "SELECT \\* FROM movies ORDER BY name",
+          "SELECT \\* FROM movies ORDER TABLE by name",
+          "SELECT \\* FROM movies FILTER BY name"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c4231f3721375de218066e28",
+        "question": "A trigger is a database object that is associated with a table, and that activates when a particular event occurs for the table. Which three events are these?",
+        "answer": "INSERT, UPDATE, DELETE",
+        "explanation": "[Reference](https://dev.mysql.com/doc/refman/5.7/en/triggers.html)",
+        "hint": null,
+        "correctAnswer": ["INSERT, UPDATE, DELETE"],
+        "options": [
+          "INSERT, UPDATE, DELETE",
+          "CREATE, ALTER, DROP",
+          "OPEN, FETCH, CLOSE",
+          "DECLARE, SET, SELECT"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b400d7e7f8a18d07e7147088",
+        "question": "You are working with very large tables in your database. Which SQL clause do you use to prevent exceedingly large query results?",
+        "answer": "LIMIT",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["LIMIT"],
+        "options": ["UNIQUE", "LIMIT", "DISTINCT", "CONSTRAINT"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "59cf1c1fa6d5eec844d49939",
+        "question": "What is the default port for MySQL Server?",
+        "answer": "3306",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["3306"],
+        "options": ["25", "990", "0", "3306"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "61284532934a8ddb52cc87ba",
+        "question": "How can you filter duplicate data while retrieving records from a table?",
+        "answer": "DISTINCT",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["DISTINCT"],
+        "options": ["DISTINCT", "WHERE", "LIMIT", "AS"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9471322eb00a61310dff6709",
+        "question": "What is the difference between DROP and TRUNCATE?",
+        "answer": "DROP deletes table completely, removing its definition as well. TRUNCATE clears the table but does not delete the definition.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "DROP deletes table completely, removing its definition as well. TRUNCATE clears the table but does not delete the definition."
+        ],
+        "options": [
+          "They both refer to the same operation of deleting the table completely.",
+          "They both refer to the same operation of clearing the table, but keeping its definition intact.",
+          "TRUNCATE deletes table completely, removing its definition as well. DROP clears the table but does not delete the definition.",
+          "DROP deletes table completely, removing its definition as well. TRUNCATE clears the table but does not delete the definition."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dd6c0e2ebc08a9599cb91e6d",
+        "question": "How do you select every row in a given table named \"inventory\"?",
+        "answer": "SELECT \\* FROM inventory;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["SELECT \\* FROM inventory;"],
+        "options": [
+          "SELECT all FROM inventory;",
+          "FROM inventory SELECT all;",
+          "FROM inventory SELECT \\*;",
+          "SELECT \\* FROM inventory;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1964e13e43eff8cdadcabdaf",
+        "question": "In an efficiently designed relational database, what does every table have?",
+        "answer": "primary key",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["primary key"],
+        "options": [
+          "set of triggers",
+          "sequential id field",
+          "minimum of three columns",
+          "primary key"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b9f764926599ffb42eb846e3",
+        "question": "MySQL option files provide a way to specify commonly used options so that they need not be entered on the command line each time you run a program. What is another name for the option files?",
+        "answer": "configuration files",
+        "explanation": "[Reference](https://dev.mysql.com/doc/refman/8.0/en/option-files.html)",
+        "hint": null,
+        "correctAnswer": ["configuration files"],
+        "options": ["variable settings", "configuration files", "help files", "default settings"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b5d320d7e8f601d7d6879b4a",
+        "question": "After installing MySQL, it may be necessary to initialize the \\_ which may be done automatically with some MySQL installation methods.",
+        "answer": "data directory",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["data directory"],
+        "options": ["storage engine", "user accounts", "grant tables", "data directory"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ad0b2e9a89796cf49f5e638b",
+        "question": "You need to export the data in the customers table into a CSV file, with columns headers in the first row. Which clause do you add to your MySQL command?",
+        "answer": "UNION",
+        "explanation": "[Sample](https://stackoverflow.com/questions/5941809/include-headers-when-using-select-into-outfile)",
+        "hint": null,
+        "correctAnswer": ["UNION"],
+        "options": ["JOIN", "WITH HEADERS", "UNION", "WITH COLUMNS"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a63c08051781571b484f7fd9",
+        "question": "One form of backup, replication, enables you to maintain identical data on multiple servers, as a \\_ configuration.",
+        "answer": "master-slave",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["master-slave"],
+        "options": ["remote-local", "parent-child", "master-slave", "logical-physical"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e3833b9c91269ce3d7e0b987",
+        "question": "What is the requirement for using a subquery in the SELECT clause?",
+        "answer": "the subquery must return a single value.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["the subquery must return a single value."],
+        "options": [
+          "the subquery must use an aggregate function.",
+          "the subquery must refer to the same table as the main query.",
+          "the subquery must return a single value.",
+          "the subquery must return at least one value."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "146bd60cb1fed98943ffe9ff",
+        "question": "Each time MySQL is upgraded, it is best to execute mysql_upgrade, which looks for incompatibilities with the upgraded MySQL server. What does this command do, upon finding a table with a possible incompatibility?",
+        "answer": "it performs a table check and, if problems are found, attempts a table repair.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "it performs a table check and, if problems are found, attempts a table repair."
+        ],
+        "options": [
+          "it performs a table check and, if problems are found, attempts a table repair.",
+          "it stops and notifies the server administrator that the upgrade cannot complete until the incompatibility issue are resolved.",
+          "it provides a full report of the table specifications and the incompatibilities to the server administrator.",
+          "it performs a table check and, if problems are found, displays the information for the server administrator to take action."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3bc7983495d905bd6771a432",
+        "question": "What mysql statement is used to check which accounts have specific privileges?",
+        "answer": "show grants (displays the privileges and roles that are assigned to a MySQL user account or role)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "show grants (displays the privileges and roles that are assigned to a MySQL user account or role)"
+        ],
+        "options": [
+          "show grants (displays the privileges and roles that are assigned to a MySQL user account or role)",
+          "show privileges (shows the list of system privileges that the MySQL server supports)",
+          "show access",
+          "show user permissions"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "38a651a0b5944c35d6f7ca49",
+        "question": "What cannot have a trigger associated with it?",
+        "answer": "temporary table",
+        "explanation": "[Reference](https://dev.mysql.com/doc/refman/5.7/en/create-trigger.html)",
+        "hint": null,
+        "correctAnswer": ["temporary table"],
+        "options": ["temporary table", "system table", "large table", "new table"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5d88aadb16158ce0a9afece4",
+        "question": "later versions of mysql support the native json data type for storing json documents. What is a drawback of json columns?",
+        "answer": "cannot be indexed directly",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["cannot be indexed directly"],
+        "options": [
+          "inefficient for storing json documents",
+          "cannot be indexed directly",
+          "documents cannot be validated when stored in json columns",
+          "cannot be normalized"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5101c4012b5a439e030ae316",
+        "question": "Which statement is true for the diagram below\n![mysql Q41](images/mysql_q41.jpg)",
+        "answer": "customerid is the foreign key for customers.id",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["customerid is the foreign key for customers.id"],
+        "options": [
+          "carid is the primary key for purchases",
+          "carid is the foreign key for cars.carid",
+          "customerid is the foreign key for customers.id",
+          "customerid is the primary key for purchases"
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "124c87604264968391c8d48f",
+            "url": "images/mysql_q41.jpg",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "532b740508614d35e38ab5d2",
+        "question": "Which statement can you use to load data from a file into the table?",
+        "answer": "`LOAD DATA INFILE`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`LOAD DATA INFILE`"],
+        "options": [
+          "`cat file | mysql`",
+          "`LOAD DATA INFILE`",
+          "`LOAD DATA LOCAL INFILE`",
+          "`extended INSERT statement`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ee257c6bb5aab8495785a874",
+        "question": "Which is the correct syntax of an extended insert statement?",
+        "answer": "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002),",
+        "explanation": "('Mercedes', 'C', 2003)\nvalues ('Mercedes', 'C', 2003)\n('Mercedes', 'C', 2003)\n('Mercedes', 'C', 2003)",
+        "hint": null,
+        "correctAnswer": ["insert into cars (make, model, year) values ('Ford', 'Mustang', 2002),"],
+        "options": [
+          "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002)",
+          "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002)",
+          "insert into cars (make, model, year) extended ('Ford', 'Mustang', 2002),",
+          "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002),"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1320f85bd023a33f66d7237e",
+        "question": "You need to make an exact copy of a table, with all columns and indexes. How can you get all of the information needed to accomplish this?",
+        "answer": "show create table",
+        "explanation": "Note that the question is about _getting_ the data and not about the _duplicating_ operation itself. And actually there is no need to run `SHOW CREATE TABLE` at all. [To duplicate the table](https://popsql.com/learn-sql/mysql/how-to-duplicate-a-table-in-mysql) structure you can `CREATE TABLE new_table LIKE original_table;`.",
+        "hint": null,
+        "correctAnswer": ["show create table"],
+        "options": ["create table", "clone table", "insert into", "show create table"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "780915db7ef24e6a46aeafda",
+        "question": "you need to make your mysql system secure against attackers. What are you _not_ supposed to do?",
+        "answer": "Run MySQL server as the unix root user.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Run MySQL server as the unix root user."],
+        "options": [
+          "Run MySQL server as a normal user.",
+          "Grant PROCESS or SUPER privilege to other users.",
+          "Run MySQL server as the unix root user.",
+          "Use the compressed protocol."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "86ec29075b0056a8de0031b3",
+        "question": "You are managing a database with a table called customers. You created a temporary table also called customers with which you are working for the duration of your session. You need to re-create the temporary table with different specifications. Which command do you need to run first?",
+        "answer": "`DROP TEMPORARY TABLE customers;`",
+        "explanation": "1. [reference](https://dev.mysql.com/doc/refman/8.0/en/drop-table.html)\n2. [reference](https://www.mysqltutorial.org/mysql-temporary-table)",
+        "hint": null,
+        "correctAnswer": ["`DROP TEMPORARY TABLE customers;`"],
+        "options": [
+          "`CREATE TEMPORARY TABLE customers;`",
+          "`DROP TEMP TABLE customers;`",
+          "`DROP TABLE customers;`",
+          "`DROP TEMPORARY TABLE customers;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c31d3c7a1fe067de5a8ef1c6",
+        "question": "You need to run a complex query with recursive subqueries, but without creating a stored procedure or a function. Which command or clause do you use?",
+        "answer": "WITH",
+        "explanation": "This is exactly what [WITH clause](https://dev.mysql.com/doc/refman/8.0/en/with.html) is designed for",
+        "hint": null,
+        "correctAnswer": ["WITH"],
+        "options": ["COLLATE", "UNION", "FULL JOIN", "WITH"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2042a34f09260ba18052483b",
+        "question": "Which choice is not a processing algorithm for database views?",
+        "answer": "updatable",
+        "explanation": "[Reference](https://dev.mysql.com/doc/refman/8.0/en/view-algorithms.html)",
+        "hint": null,
+        "correctAnswer": ["updatable"],
+        "options": ["merge", "updatable", "temptable", "undefined"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1e794a8ef08429e48ee5e12e",
+        "question": "What is the MySQL `perror` command-line utility used for?",
+        "answer": "to display storage error codes",
+        "explanation": "Note: perror prints a description for a system error code or for a storage engine (table handler) error code -\n[link](<https://dev.mysql.com/doc/refman/5.7/en/perror.html#:~:text=2%20perror%20%E2%80%94%20Display%20MySQL%20Error%20Message%20Information,-For%20most%20system&text=You%20can%20find%20out%20what,(table%20handler)%20error%20code>)",
+        "hint": null,
+        "correctAnswer": ["to display storage error codes"],
+        "options": [
+          "to display your version of MySQL",
+          "to display operating system error codes",
+          "to display default settings that are in error",
+          "to display storage error codes"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6259e5d48ab54830ac13a1b7",
+        "question": "How can you list all columns for a given table?",
+        "answer": "SHOW COLUMNS FROM table;",
+        "explanation": "Note: `DESCRIBE tablename` is a shortcut for this command",
+        "hint": null,
+        "correctAnswer": ["SHOW COLUMNS FROM table;"],
+        "options": [
+          "SHOW table COLUMNS;",
+          "SHOW COLUMNS FROM table;",
+          "LIST table COLUMNS;",
+          "SELECT COLUMNS FROM table;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5cc25812edc0f03357e24724",
+        "question": "How would you list the full set of tables in the currently selected database?",
+        "answer": "SHOW TABLES;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["SHOW TABLES;"],
+        "options": [
+          "SELECT \\* FROM DATABASE;",
+          "SHOW TABLES;",
+          "LIST TABLES;",
+          "SELECT ALL TABLES;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dd30963eab0853769bdc0bdb",
+        "question": "Which choice is not one of the table maintenance statements?",
+        "answer": "CREATE TABLE;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["CREATE TABLE;"],
+        "options": ["CHECK TABLE;", "CREATE TABLE;", "ANALYZE TABLE;", "OPTIMIZE TABLE;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f186ce2c1fdf04f0165616b9",
+        "question": "In which table does MySQL store passwords for user accounts?",
+        "answer": "mysql.user;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["mysql.user;"],
+        "options": ["mysql.accounts;", "mysql.passwords;", "mysql.admin;", "mysql.user;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "736eda6dcf53b53574130dae",
+        "question": "Management has requested that you build an employee database. You need to include each employee's current position and salary, as well as all prior positions and salaries with the company. You decide to use a one-to-many structure: an employee table with the main information such as name and address, and an employment table with position and salary history. You can use the employeeID field to connect them. What is employment.employeeID an example of?",
+        "answer": "foreign key;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["foreign key;"],
+        "options": ["primary key;", "secondary key;", "foreign key;", "alternate key;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2b933ed08a731958486d355d",
+        "question": "In recent versions of MySQL (8.0+), what's the correct syntax to declare a CTE (Common Table Expression)?",
+        "answer": "WITH cte as (SELECT id FROM users) SELECT ...",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["WITH cte as (SELECT id FROM users) SELECT ..."],
+        "options": [
+          "WITH (SELECT id FROM users) as cte, SELECT ...",
+          "WITH (SELECT id FROM users) as cte SELECT ...",
+          "WITH cte as (SELECT id FROM users), SELECT ...",
+          "WITH cte as (SELECT id FROM users) SELECT ..."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ab5b84fd929d21c5de2c7cb7",
+        "question": "What is one reason to introduce data redundancy into a normalized database design?",
+        "answer": "to reduce corruption in data; to make the system faster",
+        "explanation": "Note: \"to make the system faster\" can also be correct. For example we can calculate some heavy query in advance and store its result in some column (use it as a cache). So if \"system\" means \"application which uses mysql\" then it's correct too.",
+        "hint": null,
+        "correctAnswer": ["to reduce corruption in data", "to make the system faster"],
+        "options": [
+          "to reduce corruption in data",
+          "to reduce storage space",
+          "to make the system faster",
+          "to prevent data anomalies"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "53fb2593c3ea5b40f4c4ddc8",
+        "question": "The code snippet below is used to read data from an XML file into a table. Which XML structure is \\_not\\_ supported by the statement?\n```mysql\nLOAD XML LOCAL INFILE 'cars.xml'\nINTO TABLE cars\nROWS IDENTIFIED BY `<car>`;\n```",
+        "answer": "B",
+        "explanation": "```xml\n<car>\n<field name=\"make\"> Lexus </field>\n<field name=\"model\"> IS300 </field>\n<field name=\"make\"> 2016 </field>\n</car>\n```\n```xml\n<car name=\"make\"> Dodge </car>\n<car name=\"model\"> Ram </car>\n<car name=\"year\"> 2000 </car>\n```\n```xml\n<car make=\"Ford\" model=\"Mustang\" year=\"2002\"/>\n```\n```xml\n<car year=\"2010\">\n<make>Mercedes</make> <model> C-Class</model>\n</car>\n```",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9b990bb891044019facba2a5",
+        "question": "You are loading data into a table. Which command can you use to make sure that all data is inserted and duplicates rows are discarded?",
+        "answer": "`INSERT IGNORE`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`INSERT IGNORE`"],
+        "options": ["`INSERT IGNORE`", "`INSERT UNIQUE`", "`INSERT INTO`", "`INSERT DISTINCT`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cc5e8f9da21923fbfb92f31f",
+        "question": "Which statement about the `TRUNCATE TABLE` statement is true?",
+        "answer": "It always first drops, then re-creates a new table.; It does not invoke the `DELETE` triggers associated with the table.",
+        "explanation": "Note: both answers are correct - see [TRUNCATE TABLE Statement](https://dev.mysql.com/doc/refman/8.0/en/truncate-table.html) in MySQL manual",
+        "hint": null,
+        "correctAnswer": [
+          "It always first drops, then re-creates a new table.",
+          "It does not invoke the `DELETE` triggers associated with the table."
+        ],
+        "options": [
+          "It will stop and issue an error when it encounters a row that is referenced by a row in a child table.",
+          "It always first drops, then re-creates a new table.",
+          "It deletes rows one by one on tables with foreign key constraints.",
+          "It does not invoke the `DELETE` triggers associated with the table."
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "0b2e4efe6ca873f0b3064f67",
+        "question": "You are working with the tables as shown in this diagram. You need to get the number of cars sold per the home state of each customer's residence. How can you accomplish this?\n![mysql Q61](images/mysql_q61.png)",
+        "answer": "`SELECT state, COUNT(*) FROM customers c, purchases p WHERE c.ID = p.customerID GROUP BY state;`",
+        "explanation": "Explanation: THe difference between 2 and 3 is that LEFT JOIN will return 1 row per customer before grouping. If replaced with RIGHT JOIN it would return the correct info.",
+        "hint": null,
+        "correctAnswer": [
+          "`SELECT state, COUNT(*) FROM customers c, purchases p WHERE c.ID = p.customerID GROUP BY state;`"
+        ],
+        "options": [
+          "`SELECT state, COUNT(*) FROM customers WHERE ID IN (SELECT customerID FROM purchases) GROUP BY state;`",
+          "`SELECT state, COUNT(*) FROM customers c LEFT JOIN purchases p ON c.ID = p.customerID GROUP BY state;`",
+          "`SELECT state, COUNT(*) FROM customers c, purchases p WHERE c.ID = p.customerID GROUP BY state;`",
+          "`SELECT state, COUNT(*) FROM customers GROUP BY state;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "a8725b12215b78b5e87f18cb",
+            "url": "images/mysql_q61.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "ff7eb2c421dbce2dacc04ca0",
+        "question": "In data migration, there is often a need to delete duplicate rows as part of data cleanup. Which statement works best?",
+        "answer": "`DELETE JOIN`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`DELETE JOIN`"],
+        "options": ["`DELETE DUPS`", "`DELETE DISTINCT`", "`DELETE JOIN`", "`DELETE WITH`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f2b19ec5d435090e609d2ba1",
+        "question": "When working with MySQL cursor, what must you also declare?",
+        "answer": "`NOT FOUND` handler",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`NOT FOUND` handler"],
+        "options": [
+          "`DEFAULT` value",
+          "`RETURN` variable",
+          "`SQLEXCEPTION` routine",
+          "`NOT FOUND` handler"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b49bd7c341af73a93036d178",
+        "question": "Which type of backup includes all the changes made to the data since the last full backup was performed?",
+        "answer": "differential",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["differential"],
+        "options": ["snapshot", "logical", "differential", "incremental"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "659a2b935743f1e955747813",
+        "question": "You need to restore a MySQL database from a backup file. Which command-line tool do you use for the actual data import, after re-creating the database?",
+        "answer": "`mysql`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`mysql`"],
+        "options": ["`mysqld`", "`mysql`", "`mysqladmin`", "`mysqldump`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b00d089cd9ac01e09cc052e4",
+        "question": "You are importing data as JSON into a new table. You run CREATE TABLE json_data ( city JSON ); and insert rows into this table. What is the correct syntax to see the list of cities?",
+        "answer": "`SELECT city->>'$.name' city FROM json_data;`",
+        "explanation": "Note: the last option is valid too but the results will be enclosed with quotation marks",
+        "hint": null,
+        "correctAnswer": ["`SELECT city->>'$.name' city FROM json_data;`"],
+        "options": [
+          "`SELECT city FROM json_data;`",
+          "`SELECT city->>'$.name' city FROM json_data;`",
+          "`SELECT city.name city FROM json_data;`",
+          "`SELECT city->'$.name' city FROM json_data;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "54929aace64b1d3baa94034b",
+        "question": "If you want to use MyISAM instead of InnoDB, which option do you need to specify in the CREATE TABLE statement?",
+        "answer": "ENGINE",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["ENGINE"],
+        "options": ["ENGINE", "PARTITION", "STORAGE", "TABLESPACE"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b8ed5785278a55e56895bc05",
+        "question": "You are working with the table in this diagram. You want to use full-text search to find the customers who live on a street or a drive. What is the command to do that?\nTable name: **customers**\n| ID   | lastname | firstname | phone        | address             | city        | state | zip   |\n| ---- | -------- | --------- | ------------ | ------------------- | ----------- | ----- | ----- |\n| A001 | Smith    | Bob       | 212-555-1212 | 1001 1st Street     | New York    | NY    | 10001 |\n| A002 | Chang    | John      | 213-555-5678 | 888 Rodeo Drive     | Los Angeles | CA    | 90210 |\n| A003 | Smith    | Mary      | 999-999-9999 | 123 Main Street     | Anytown     | VA    | 12345 |\n| A004 | Johnson  | Jack      | 312-312-3120 | 1111 Chicago Avenue | Chicago     | IL    | 60606 |\n| A005 | Lopez    | Linda     | 737-777-3333 | 123 Main Street     | Austin      | TX    | 73344 |",
+        "answer": "D",
+        "explanation": "```sql\nSELECT *\nFROM customers\nWHERE address MATCH 'Street' OR 'Drive';\n```\n```sql\nSELECT *\nFROM customers\nWHERE MATCH(address) IN ('street, drive');\n```\n```sql\nSELECT *\nFROM customers\nWHERE address MATCH 'Street' OR address MATCH 'Drive';\n```\n```sql\nSELECT *\nFROM customers\nWHERE MATCH(address) AGAINST ('street, drive');\n```",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1555ec7a684ec78f8319dc9b",
+        "question": "Which query lists the databases on the current server?",
+        "answer": "SHOW DATABASES;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["SHOW DATABASES;"],
+        "options": ["SHOW DATABASES;", "LIST ALL DATABASES;", "LIST DATABASES;", "SHOW DB;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "338483df8e0bbab668a08989",
+        "question": "What is the product of the database designing phase?",
+        "answer": "a list of entities, their relationship, constraints, data types, and cardinalities",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "a list of entities, their relationship, constraints, data types, and cardinalities"
+        ],
+        "options": [
+          "all tables, columns, data types, indexes and their relationships",
+          "a list of entities, their relationship, and constraints",
+          "all tables and their names, which are needed to implement the logical model",
+          "a list of entities, their relationship, constraints, data types, and cardinalities"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1c9342f09d7e0b68e62764d1",
+        "question": "Which choice is _not_ a valid model for a stored procedure parameter?",
+        "answer": "IN OUT",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["IN OUT"],
+        "options": ["INOUT", "IN", "OUT", "IN OUT"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "072259f4b81bee76c86b082c",
+        "question": "What is the advantage of using a temporary table instead of a heap table?",
+        "answer": "The temporary table will be dropped as soon as your session disconnects.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The temporary table will be dropped as soon as your session disconnects."
+        ],
+        "options": [
+          "The temporary table will be dropped when the database is restarted.",
+          "Temporary tables can be shared among clients, which makes them more usable in group development environments.",
+          "The temporary table will be dropped as soon as your session disconnects.",
+          "Creating a temporary table does not require any special privileges."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ef1720f37135589fc9f62950",
+        "question": "What is the maximum number of columns that can be used by a single table index?",
+        "answer": "16",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["16"],
+        "options": ["2", "4", "8", "16"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "af9a03dd5af5184194ebe277",
+        "question": "Which command will return a list of triggers in the current database?",
+        "answer": "`SHOW TRIGGERS;`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`SHOW TRIGGERS;`"],
+        "options": [
+          "`DISPLAY TRIGGERS;`",
+          "`SHOW TRIGGERS;`",
+          "`SELECT ALL TRIGGERS;`",
+          "`SELECT * FROM information_schema.triggers;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "86be8eabb5f5caaa96a2f08b",
+        "question": "Which statement is true about TIMESTAMP and DATETIME data types?",
+        "answer": "TIMESTAMP and DATETIME are both stored without time zone.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["TIMESTAMP and DATETIME are both stored without time zone."],
+        "options": [
+          "TIMESTAMP values require more bytes for storage than DATETIME values.",
+          "TIMESTAMP is stored without timezone, and DATETIME is stored in UTC values.",
+          "TIMESTAMP and DATETIME are both stored without time zone.",
+          "TIMESTAMP is stored in UTC values, and DATETIME is stored in without time zone."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d1b7b0eb3791458c4f8bc75e",
+        "question": "What is the equivalent of the mysqladmin reload command?",
+        "answer": "`mysqladmin flush-privileges`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`mysqladmin flush-privileges`"],
+        "options": [
+          "`mysqladmin flush-threads`",
+          "`mysqladmin flush-tables`",
+          "`mysqladmin flush-privileges`",
+          "`mysqladmin flush-all`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5756c8ae39b081ddce60e2d7",
+        "question": "Explain the security aspect of stored procedures",
+        "answer": "Stored procedures are secure, because applications can be given access to stored procedures and not any underlying tables",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Stored procedures are secure, because applications can be given access to stored procedures and not any underlying tables"
+        ],
+        "options": [
+          "Stored procedures are not secure, because they can be executed from the command line as the root user",
+          "Stored procedures are secure, because the owner of the stored procedure can decide to whom access is granted",
+          "Stored procedures are secure, because applications can be given access to stored procedures and not any underlying tables",
+          "Stored procedures are not secure, because they can execute statements to drop tables or bulk delete data"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "58ad5403e587e750e867a177",
+        "question": "How would you retrieve data on all the customers where no phone number is stored?",
+        "answer": "`SELECT * FROM customers WHERE PhoneNumber IS NULL;`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`SELECT * FROM customers WHERE PhoneNumber IS NULL;`"],
+        "options": [
+          "`SELECT * FROM customers WHERE PhoneNumber = NULL;`",
+          "`SELECT * FROM customers WHERE PhoneNumber IS NOT VALID;`",
+          "`SELECT * FROM customers WHERE PhoneNumber IS NULL;`",
+          "`SELECT * FROM customers WHERE PhoneNumber IS UNKNOWN;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "55f2acd6c051de17e14b95c7",
+        "question": "In the diagram below, the price field is declared as type DECIMAL. What would be a more efficient declaration for this field?\n![mysql picture](images/mysql_q80.png)",
+        "answer": "DECIMAL(10,2)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["DECIMAL(10,2)"],
+        "options": ["FLOAT", "DECIMAL(10,2)", "NUMERIC", "DOUBLE"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "34595792d185b3d06b1cd188",
+            "url": "images/mysql_q80.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "49d6ae06f53fa0884e588c4b",
+        "question": "Which choice is `not` an available string type for a column?",
+        "answer": "`BIT`",
+        "explanation": "Explnation: BIT is not a string type",
+        "hint": null,
+        "correctAnswer": ["`BIT`"],
+        "options": ["`ENUM`", "`SET`", "`BIT`", "`CHAR`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fca3524354a2e7d547442b24",
+        "question": "This diagram shows what type of relationship between customers and cars?\n![mysql picture](images/mysql_q80.png)",
+        "answer": "many-to-many",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["many-to-many"],
+        "options": ["one-to-many", "parent-child", "many-to-many", "many-to-one"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "a04dee24d5e05f9b0a670a50",
+            "url": "images/mysql_q80.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "ef86c93cda300729b7e4104b",
+        "question": "A stored routine is a set of SQL statements stored on the server and takes form as either a procedure or a function. Which statement cannot be used inside stored routines?",
+        "answer": "`USE`",
+        "explanation": "Explanation: Both `SET` and `DECLARE` are used to create variables. Reference: [MySQL STORED PROCEDURE Tutorial With Examples](https://www.softwaretestinghelp.com/mysql-stored-procedure/)",
+        "hint": null,
+        "correctAnswer": ["`USE`"],
+        "options": ["`SELECT`", "`USE`", "`SET`", "`DECLARE`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8d591604545a66c0f15fdc63",
+        "question": "When a new student is added to a new database, you want new records to be created in the related tables such as Exam, Score and Attendance. How would you accomplish this?",
+        "answer": "trigger",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["trigger"],
+        "options": ["trigger", "regular expression", "view", "index"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "05927b432f5d8d68ca2592f9",
+        "question": "In the diagram below, the ID fields are declared as type CHAR instead of INT . Which is NOT one of the possible reasons behind that decision?\n![mysql picture](images/mysql_q85.png)",
+        "answer": "The `CHAR(10)` data type is more efficient and space-saving.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["The `CHAR(10)` data type is more efficient and space-saving."],
+        "options": [
+          "The ID field needs to include letters and not just numbers.",
+          "You can have a consistent format across all of the tables that require ID fields.",
+          "The ID field needs to have leading 0s, which the INT data type would truncate.",
+          "The `CHAR(10)` data type is more efficient and space-saving."
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "fae8b2557262f49998476633",
+            "url": "images/mysql_q85.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "eb5616c8d5ea28cc9cff9b75",
+        "question": "Why would you use a common table expression (CTE)?",
+        "answer": "To break down complex queries and allow reuse within a query.",
+        "explanation": "Explanation: CTEs do not create temporary tables, they only work within a signle query. Reference: [13.2.15 WITH (Common Table Expressions)](https://dev.mysql.com/doc/refman/8.0/en/with.html).",
+        "hint": null,
+        "correctAnswer": ["To break down complex queries and allow reuse within a query."],
+        "options": [
+          "To define queries for later reuse for the duration of the current session",
+          "To create temporary tables that can be used to pre-select often-used result sets.",
+          "To calculate a new single value from a result set and return it to the query parser.",
+          "To break down complex queries and allow reuse within a query."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6afb68d81a0cd4003cb2aae3",
+        "question": "Which option modifier tells a program not to exit with an error if it does not recognize the option, but instead to issue a warning?",
+        "answer": "--loose",
+        "explanation": "Reference: [4.2.2.4 Program Option Modifiers](https://dev.mysql.com/doc/refman/8.0/en/option-modifiers.html)",
+        "hint": null,
+        "correctAnswer": ["--loose"],
+        "options": ["--verbose", "--skip", "--skip-error", "--loose"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bebe73702cff0b18bbb1318b",
+        "question": "What does this SQL statement return?\n```\nSELECT name FROM students WHERE name REGEXP '^to';\n```",
+        "answer": "all names starting with \"to,\" such as Tommy or Tony",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["all names starting with \"to,\" such as Tommy or Tony"],
+        "options": [
+          "all names starting with \"to,\" such as Tommy or Tony",
+          "all names with \"to,\" such as Roberto and Tommy",
+          "all names without \"to,\" such as Samantha or Kathryn",
+          "all names ending with \"to,\" such as Roberto"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dcf3db6cc9724ef415db7f34",
+        "question": "You are working with the tables as shown in the diagram. You need to generate the list of price totals for each make and model of car, with subtotals for each make, and the grand total of all prices. Which SQL clause do you use?\n![mysql picture](images/mysql_q92.png)",
+        "answer": "WITH ROLLUP",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["WITH ROLLUP"],
+        "options": ["UNION", "SHOW TOTALS", "UNION ALL", "WITH ROLLUP"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "1071df106cc3663238cdb869",
+            "url": "images/mysql_q92.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "ac7239813d4af8ffa72e3aab",
+        "question": "The left and right joins are also known as \\_.",
+        "answer": "Outer Join",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Outer Join"],
+        "options": ["Inner Join", "Natural Join", "Outer Join", "Cartesian Join"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "99a4adde46b88afc9fe06fc0",
+        "question": "What is the valid way to create a database view in MySQL?",
+        "answer": "`CREATE VIEW v1 AS SELECT * FROM t1;`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`CREATE VIEW v1 AS SELECT * FROM t1;`"],
+        "options": [
+          "`CREATE VIEW v1 SELECT * FROM t1 WHERE col1 > 10;`",
+          "`CREATE VIEW v1 AS BEGIN SELECT * FROM t1 END;`",
+          "`CREATE VIEW v1 BEGIN SELECT * FROM t1 END;`",
+          "`CREATE VIEW v1 AS SELECT * FROM t1;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ff7e1a7b6a92d0d2fd7f8703",
+        "question": "Inside a transaction, several operations need to be performed. What would you do if an exception happens during that transaction?",
+        "answer": "`ROLLBACK`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`ROLLBACK`"],
+        "options": ["`UNDO`", "`UNCOMMIT`", "`ROLLBACK`", "`REVERSE`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d1e6d85997db0e7650092079",
+        "question": "What function finds the current time or date in MySQL?",
+        "answer": "CURDATE()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["CURDATE()"],
+        "options": ["DATE()", "GETDATE()", "CURDATE()", "CURRENT()"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6e1526f53b3db81862db135e",
+        "question": "What is the correct usage of ENUM in MySQL?",
+        "answer": "`Create table size (name ENUM('Small','Medium','Large'));`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`Create table size (name ENUM('Small','Medium','Large'));`"],
+        "options": [
+          "`Create table size (ENUM ('Small','Medium','Large'));`",
+          "`Create table ENUM (name ('Small','Medium','Large'));`",
+          "`Create table size (name: ENUM['Small','Medium','Large']);`",
+          "`Create table size (name ENUM('Small','Medium','Large'));`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c54226b2294c28b7a89ef931",
+        "question": "The mysqldump command cannot generate output in **\\_**.",
+        "answer": "JSON",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["JSON"],
+        "options": ["JSON", "CSV", "XML", "TXT"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eb867660583f16abfde1b7b8",
+        "question": "You are working with the tables shown below. You need to generate the list of all cars, whether or not they had been sold. Which statement accomplishes that?\n![mysql picture](images/mysql_q98.png)",
+        "answer": "D",
+        "explanation": "```\nSELECT cars.*, purchases.date\nFROM cars RIGHT JOIN purchases\nON cars.ID = purchases.carID;\n```\n```\nSELECT cars.*, purchases.date\nFROM cars INNER JOIN purchases\nON cars.ID = purchases.carID;\n```\n```\nSELECT cars.*, purchases.date\nFROM cars JOIN purchases\nON cars.ID = purchases.carID;\n```\n```\nSELECT cars.*, purchases.date FROM cars LEFT JOIN purchases ON cars.ID = purchases.carID;\n```",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "42f1a0cc58254a027c5cfa34",
+            "url": "images/mysql_q98.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "a4bcb150e8e9edbbb417b763",
+        "question": "Which code snippet from a stored procedure should be rewritten as a CASE statement?",
+        "answer": "D",
+        "explanation": "```\nIF var1 THEN SET varA = var1;\nELSEIF var2 THEN SET varA = var2;\nELSEIF var3 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```\n```\nIF var1 = var2 THEN SET varA = var1;\nELSEIF var2 = var3 THEN SET varA = var2;\nELSEIF var3 = var4 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```\n```\nIF var1 = 1 THEN SET varA = var1;\nELSEIF var2 = 2 THEN SET varA = var2;\nELSEIF var3 = 3 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```\n```\nIF var1 = 1 THEN SET varA = var1;\nELSEIF var1 = 2 THEN SET varA = var2;\nELSEIF var1 = 3 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "09b432dbd7d2369bb9cc5c8b",
+        "question": "Why would you use stored functions?",
+        "answer": "for formulas and business rules that you want to apply to columns in an SQL query; for reusing recurring queries",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "for formulas and business rules that you want to apply to columns in an SQL query",
+          "for reusing recurring queries"
+        ],
+        "options": [
+          "for formulas and business rules that you want to apply to columns in an SQL query",
+          "for formulas and business rules that should be applied on a specific trigger event like on inserts",
+          "to automatically modify the data of a table based on a query",
+          "for reusing recurring queries"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "fda01afff3e41b0513bdb774",
+        "question": "What steps do you need to take to normalize the table from this diagram?\nTable name: superheroes\n| name | alias | power1 | power2 | power3 |\n| ---- | ----- | ------ | ------ | ------ |\n| Superman | Clark Kent | Flight | X-Ray Vision | Super Strength |\n| Wonder Woman | Diana Prince | Force Fields | Reflexes | Telepathy |\n| Spider-man | Peter Parker | Walcrawling | Web-making | Enhanced Senses |\n| Aquaman | Arthur Curry | Underwater Breathing | Enhanced Sight | Stamina |\n| Hulk | Bruce Banner | Super Strength | Radiation Immunity | Invulnerability |",
+        "answer": "Create another table to serve as a lookup for powers with fields for code and description, as well as a junction table with superhero names and power codes.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Create another table to serve as a lookup for powers with fields for code and description, as well as a junction table with superhero names and power codes."
+        ],
+        "options": [
+          "Create another table to serve as a lookup for powers with fields for code and description, as well as a junction table with superhero names and power codes.",
+          "Add a column to this table to serve as a record identifier, and make it the primary key.",
+          "Extend this table to have additional columns \"power4,\" \"power5,\" and so on, to allow additional powers for each superhero.",
+          "Convert this table to have column called \"power,\" and add one record for each superhero-power combination, for a total of 15 records in this example."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4930a83d2427fefd7bb2d41e",
+        "question": "A table Item has a Boolean field endOfLife and a field makeYear of type YEAR(4). How can you set the Boolean to true for all Items that have been made before 2019?",
+        "answer": "UPDATE Item SET endOfLife = true WHERE makeYear < 2019",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["UPDATE Item SET endOfLife = true WHERE makeYear < 2019"],
+        "options": [
+          "UPSERT Item SET endOfLife = true WHERE makeYear < 2019",
+          "CHANGE Item SET endOfLife = true WHERE makeYear < 2019",
+          "ALTER Item SET endOfLife = true WHERE makeYear < 2019",
+          "UPDATE Item SET endOfLife = true WHERE makeYear < 2019"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "53fe2a642b92b6c4b7f36887",
+        "question": "Which choice is an example of an aggregate function?",
+        "answer": "COUNT()",
+        "explanation": "[Reference](https://www.sqltutorial.org/sql-aggregate-functions/)",
+        "hint": null,
+        "correctAnswer": ["COUNT()"],
+        "options": ["NOW()", "MID()", "FORMAT()", "COUNT()"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "767692d2ffb0f1bb98e8d0ef",
+        "question": "You are working on UPDATE trigger on the employee tablein this diagram. How can you access the new value for the address inside the trigger?\n![mysql picture](images/mysql_q116.png)",
+        "answer": "Use NEW.address",
+        "explanation": "[Reference](https://dev.mysql.com/doc/refman/8.0/en/trigger-syntax.html)",
+        "hint": null,
+        "correctAnswer": ["Use NEW.address"],
+        "options": [
+          "Use NEW.address",
+          "Use INSERTED.address",
+          "Use DELETED.address",
+          "USE OLD.address"
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "f2a89dc2d8f7557f68a459c4",
+            "url": "images/mysql_q116.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "ae33377943d7e36b7a85f617",
+        "question": "You are working with the tables as shown in this diagram. You need to generate the list of customers who purchased certain car models. Which SQL clause do you use?\n![Q104](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/assets/22109189/5c73a5c5-3e8b-4110-8068-dca25b323e57)",
+        "answer": "UNION",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["UNION"],
+        "options": ["UNION ALL", "UNION", "SHOW TOTALS", "WITH ROLLUP"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "559c89e35120d81de0793af0",
+            "url": "https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/assets/22109189/5c73a5c5-3e8b-4110-8068-dca25b323e57",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "2022f4963bb9568af875eb82",
+        "question": "How would you make a case-insensitive query in MySQL?",
+        "answer": "`SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`"],
+        "options": [
+          "`SELECT * FROM customers WHERE UPPEERCASE(LastName) = 'POTTER';`",
+          "`SELECT * FROM customers WHERE LOWERCASE(LastName) = 'potter';`",
+          "`SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`",
+          "`SELECT * FROM customers WHERE UPPER(LastName) = 'Potter';`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0baa92ee777d0479b92475d3",
+        "question": "\"COUNT\" keyword belongs to which categories in Mysql?",
+        "answer": "Aggregate functions",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Aggregate functions"],
+        "options": ["Aggregate functions", "Operators", "Clauses", "All of the mentioned`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9c25c08fa69c32ba975efe36",
+        "question": "What is the meaning of \"HAVING\" clause in Mysql?",
+        "answer": "To filter out the column values",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["To filter out the column values"],
+        "options": [
+          "To filter out the column values",
+          "To filter out the row values",
+          "To filter out the row and column values",
+          "None of the mentioned"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "234f9ea733abca2e5382c682",
+        "question": "Which clause is similar to \"HAVING\" clause in Mysql?",
+        "answer": "WHERE",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["WHERE"],
+        "options": ["SELECT", "FROM", "WHERE", "None of the mentioned"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cee6db4d6b5e3539316e8965",
+        "question": "What will be the output of the following MySQL command?\nSELECT emp_id, fname, lname\n      FROM employee\n      WHERE title=\u2019HEAD TELLER\u2019 AND start_date&gt;2008-11-23;",
+        "answer": "Columns mention with \"SELECT\" clause and only those rows which contain 'HEAD TELLER' as a \"title\"",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Columns mention with \"SELECT\" clause and only those rows which contain 'HEAD TELLER' as a \"title\""
+        ],
+        "options": [
+          "All columns",
+          "Only those columns which are mention with \"SELECT\" clause",
+          "Columns mention with \"SELECT\" clause and only those rows which contain 'HEAD TELLER' as a \"title\"",
+          "None of the mentioned"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3a480ebee7c164edb465179e",
+        "question": "Is there any error in the following MySQL statement?\nSELECT e.emp_id, e.fname,e.lname,d.name\n      FROM employee e INNER JOIN department d\n      ON e.dept_id=e.dept_id;",
+        "answer": "YES",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["YES"],
+        "options": ["NO", "YES", "DEPEND", "None of the mentioned"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e3898d90bd77c701c7d28eb4",
+        "question": "With MySQL, how do you select all the records from a table named \"Persons\" where the \"LastName\" is alphabetically between (and including) \"Hansen\" and \"Pettersen\"?",
+        "answer": "`SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'`",
+        "explanation": "[Reference](https://www.w3schools.com/mysql/mysql_between.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'`"
+        ],
+        "options": [
+          "`SELECT LastName>'Hansen' AND LastName<'Pettersen' FROM Persons`",
+          "`SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'`",
+          "`SELECT * FROM Persons WHERE LastName>'Hansen' AND LastName<'Pettersen'`",
+          "`None of the above.`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7bd474768e459dccfc3f9117",
+        "question": "Consider the set of relations given below and the SQL query that follows\nStudents : (Roll number, Name, Date of birth)\n        Courses: (Course number, Course name, instructor)\n        Grades: (Roll number, Course number, Grade)\n        SELECT DISTINCT Name\n        FROM Students, Courses, Grades\n        WHERE Students.Roll_number = Grades.Roll_number\n        AND Courses.Instructor =Sriram\n        AND Courses.Course_number = Grades.Course_number\n        AND Grades.Grade = A\n(Which of the following sets is computed by the above query?)",
+        "answer": "Names of Students who have got an A grade in at least one of the courses taught by Sriram",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Names of Students who have got an A grade in at least one of the courses taught by Sriram"
+        ],
+        "options": [
+          "Names of Students who have got an A grade in all courses taught by Sriram",
+          "Names of Students who have got an A grade in all courses",
+          "Names of Students who have got an A grade in at least one of the courses taught by Sriram",
+          "None of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "661ef4cf480664f89e11b04c",
+        "question": "You are working with the tables shown below. You need to make sure that any record added to the purchases table consists of a customerlD, which already exists in the customers table, and a carlD, which already exists in the cars table. You decide to use a trigger to do the validation. Which one do you use?\n![mysql picture](images/mysql_q85.png)",
+        "answer": "BEFORE INSERT",
+        "explanation": "`IF EXISTS` and `CROSS JOIN` are not valid for a trigger.",
+        "hint": null,
+        "correctAnswer": ["BEFORE INSERT"],
+        "options": ["IF EXISTS", "CROSS JOIN", "BEFORE INSERT", "AFTER INSERT]"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "535cbc6c7ca827b5a486d960",
+            "url": "images/mysql_q85.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "b523286d670234120d07e4c1",
+        "question": "Current versions of MySQL support the full-text search feature on some storage engines, as an alternative to using the LIKE operator and regular expressions. Which statement would you run to enable a full-text index for the column description in the table Car?",
+        "answer": "ALTER TABLE car ADD FULL TEXT(description);",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["ALTER TABLE car ADD FULL TEXT(description);"],
+        "options": [
+          "ALTER TABLE car ADD FULL TEXT(description);",
+          "MERGE TABLE car ADD FULL TEXT(description)",
+          "ENABLE FULL TEXT(description) car",
+          "SEARCH FULL TEXT(description) car"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "438beee7ff788559a13a98d2",
+        "question": "Which statement would you _not_ use to filter data?\n![image](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/assets/22109189/9cb0ae9d-1f6b-4f85-9d2f-44b6a7afd00c)",
+        "answer": "GROUP_BY",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["GROUP_BY"],
+        "options": ["GROUP_BY", "MATCH", "WHERE", "LIKE"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "211182d674291132708f2382",
+            "url": "https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/assets/22109189/9cb0ae9d-1f6b-4f85-9d2f-44b6a7afd00c",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "0659d44dc767f5c1f3082ff2",
+        "question": "In MySQL, which JOIN type returns all rows from the left table and the matching rows from the right table, and fills in with NULL values if there is no match on the right side?",
+        "answer": "LEFT JOIN (or LEFT OUTER JOIN)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["LEFT JOIN (or LEFT OUTER JOIN)"],
+        "options": [
+          "INNER JOIN",
+          "LEFT JOIN (or LEFT OUTER JOIN)",
+          "RIGHT JOIN (or RIGHT OUTER JOIN)",
+          "FULL JOIN (or FULL OUTER JOIN)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "54ffc24396bbe7912346004c",
+        "question": "What does SQL stand for in MySQL?",
+        "answer": "Structured Query Language",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Structured Query Language"],
+        "options": [
+          "Structured Query Language",
+          "Simple Query Language",
+          "System Query Language",
+          "Structured Question Language"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "94bf9d7bee5ef9cf109cc213",
+        "question": "Which MySQL statement is used to select data from a database?",
+        "answer": "select",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["select"],
+        "options": ["Extract", "select", "get", "Open"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2d47ea3822b73d3acf4b902d",
+        "question": "What is the purpose of the `PRIMARY KEY` in a MySQL table?",
+        "answer": "To create a unique index on a table",
+        "explanation": "[Reference](<https://www.w3schools.com/mysql/mysql_primarykey.asp#:~:text=The%20PRIMARY%20KEY%20constraint%20uniquely,or%20multiple%20columns%20(fields).>)",
+        "hint": null,
+        "correctAnswer": ["To create a unique index on a table"],
+        "options": [
+          "To create a unique index on a table",
+          "To define a column as an integer",
+          "To define the data type of a column",
+          "To specify a foreign key reference"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "995725d3ec968f4e9b96763f",
+        "question": "Which of the following is a valid SQL query to insert a new row into the users table?",
+        "answer": "`INSERT INTO users (name, email) VALUES ('John Doe', 'john.doe@example.com')`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`INSERT INTO users (name, email) VALUES ('John Doe', 'john.doe@example.com')`"
+        ],
+        "options": [
+          "`INSERT INTO users (name, email) VALUES ('John Doe', 'john.doe@example.com')`",
+          "`ADD users (name, email) VALUES ('John Doe', 'john.doe@example.com')`",
+          "`CREATE users (name, email) VALUES ('John Doe', 'john.doe@example.com')`",
+          "`UPDATE users (name, email) VALUES ('John Doe', 'john.doe@example.com')`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6b95e94cf9b951c0674376df",
+        "question": "Which of the following is a valid SQL query to delete the row with the id of 2 from the users table?",
+        "answer": "`DELETE FROM users WHERE id = 2`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`DELETE FROM users WHERE id = 2`"],
+        "options": [
+          "`DELETE FROM users WHERE id = 2`",
+          "`REMOVE FROM users WHERE id = 2`",
+          "`DROP users WHERE id = 2`",
+          "`TRUNCATE users WHERE id = 2`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b138825afa4cae40039c5eb3",
+        "question": "MySQL programs are a set of command-line utilities that are provided with typical MySQL distributions. MySQL is designed to be a database.",
+        "answer": "client and server",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["client and server"],
+        "options": [
+          "database and programming",
+          "user and administrator",
+          "client and server",
+          "syntax and objects"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "84234dc169cc9c1236e86893",
+        "question": "Which MySQL command shows the structure of a table?",
+        "answer": "DESCRIBE table;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["DESCRIBE table;"],
+        "options": ["INFO table;", "SHOW table;", "STRUCTURE table;", "DESCRIBE table;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "80655ae302e3ce8ddb76bda6",
+        "question": "The left and right joins are also known as \\_.",
+        "answer": "Outer Join",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Outer Join"],
+        "options": ["Inner Join", "Natural Join", "Outer Join", "Cartesian Join"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6b8fa79d628b58b26e2ae76c",
+        "question": "What is the valid way to create a database view in MySQL?",
+        "answer": "`CREATE VIEW v1 AS SELECT * FROM t1;`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`CREATE VIEW v1 AS SELECT * FROM t1;`"],
+        "options": [
+          "`CREATE VIEW v1 SELECT * FROM t1 WHERE col1 > 10;`",
+          "`CREATE VIEW v1 AS BEGIN SELECT * FROM t1 END;`",
+          "`CREATE VIEW v1 BEGIN SELECT * FROM t1 END;`",
+          "`CREATE VIEW v1 AS SELECT * FROM t1;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ebafa967987d9875dce04fb7",
+        "question": "In a database with a \"Students\" table containing information about students, which SQL statement is used to retrieve the names of all students who scored higher than 90 in their exams?",
+        "answer": "B",
+        "explanation": "```\nSELECT student_name FROM Students WHERE score > 90;\n```\n```\nSELECT name FROM Students WHERE score > 90;\n```\n```\nSELECT student_name FROM Students WHERE exam_score > 90;\n```\n```\nSELECT name FROM Students WHERE exam_score > 90;\n```",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "82fc85fa808bbd78001b4e28",
+        "question": "Which SQL command is used to retrieve data from a database?",
+        "answer": "SELECT",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["SELECT"],
+        "options": ["FETCH", "SEARCH", "SELECT", "EXTRACT"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "383e2fd655be30d71621906c",
+        "question": "Which MySQL function would you use to get the current date and time?",
+        "answer": "NOW()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["NOW()"],
+        "options": ["GETDATE()", "CURRENTTIME()", "NOW()", "DATETIME()"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "20c9b7661d794e8029383ee6",
+        "question": "In MySQL, which statement is used to add a new column to an existing table?",
+        "answer": "ALTER TABLE",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["ALTER TABLE"],
+        "options": ["MODIFY TABLE", "UPDATE TABLE", "ALTER TABLE", "CHANGE TABLE"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0ca07fc06ac0dced330e62fe",
+        "question": "What is the purpose of the LIMIT clause in a MySQL SELECT statement?",
+        "answer": "To restrict the number of rows returned by the query",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["To restrict the number of rows returned by the query"],
+        "options": [
+          "To limit the number of tables that can be joined",
+          "To restrict the number of rows returned by the query",
+          "To limit the number of columns that can be selected",
+          "To restrict the query execution time"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eee243b50fe48759c7107bcc",
+        "question": "Which MySQL command is used to show all databases on the server?",
+        "answer": "SHOW DATABASES;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["SHOW DATABASES;"],
+        "options": [
+          "LIST DATABASES;",
+          "DISPLAY DATABASES;",
+          "SHOW DATABASES;",
+          "SELECT DATABASES;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f68c50e1f45b1ed065503b7f",
+        "question": "What does the UNSIGNED keyword do when used in a column definition?",
+        "answer": "It doubles the maximum value that can be stored in the column",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It doubles the maximum value that can be stored in the column"],
+        "options": [
+          "It makes the column accept only positive numbers",
+          "It makes the column accept only whole numbers",
+          "It doubles the maximum value that can be stored in the column",
+          "It makes the column accept only text data"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0e09956812fa18f8637877aa",
+        "question": "Which MySQL function would you use to find the length of a string?",
+        "answer": "LENGTH()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["LENGTH()"],
+        "options": ["SIZE()", "LENGTH()", "LEN()", "STRLEN()"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dafe0652973c2a677e787cd2",
+        "question": "What is the purpose of the AUTO_INCREMENT attribute in MySQL?",
+        "answer": "To automatically generate a unique identity for new rows",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["To automatically generate a unique identity for new rows"],
+        "options": [
+          "To automatically update the column value when the row is modified",
+          "To automatically decrease the column value by 1 for each new row",
+          "To automatically generate a unique identity for new rows",
+          "To automatically set the column to the current timestamp"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4ec0ada5a2c94b1af057e955",
+        "question": "Which MySQL statement is used to remove a table from a database?",
+        "answer": "DROP TABLE",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["DROP TABLE"],
+        "options": ["REMOVE TABLE", "DELETE TABLE", "DROP TABLE", "ERASE TABLE"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cc16fbb44703557008205baf",
+        "question": "What does the LIKE operator do in a WHERE clause?",
+        "answer": "It searches for a specified pattern in a column",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It searches for a specified pattern in a column"],
+        "options": [
+          "It compares two values for exact equality",
+          "It searches for a specified pattern in a column",
+          "It checks if a value is NULL",
+          "It performs mathematical comparisons"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1b40591c8f383cbccde4ec6f",
+        "question": "Which MySQL function returns the number of rows affected by an INSERT, UPDATE, or DELETE statement?",
+        "answer": "ROW_COUNT()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["ROW_COUNT()"],
+        "options": ["AFFECTED_ROWS()", "COUNT_CHANGES()", "ROW_COUNT()", "FOUND_ROWS()"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b1789e017891496bdd00b8b8",
+        "question": "What is the purpose of the HAVING clause in MySQL?",
+        "answer": "To specify a search condition for a group or an aggregate",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["To specify a search condition for a group or an aggregate"],
+        "options": [
+          "To join multiple tables",
+          "To sort the result set",
+          "To specify a search condition for a group or an aggregate",
+          "To limit the number of rows returned"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "98bcd51eaa7c970e804e3c7e",
+        "question": "Which MySQL statement is used to grant privileges to a user?",
+        "answer": "GRANT",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["GRANT"],
+        "options": ["ADD PRIVILEGES", "SET PRIVILEGES", "GRANT", "ALLOW"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2c5c8f502125a6d109732313",
+        "question": "What does the IFNULL() function do in MySQL?",
+        "answer": "It returns a specified value if the expression is NULL",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It returns a specified value if the expression is NULL"],
+        "options": [
+          "It checks if a value is not NULL",
+          "It returns a specified value if the expression is NULL",
+          "It sets a column value to NULL",
+          "It removes NULL values from a result set"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "48c288eddbd3708e1808dd3f",
+        "question": "Which MySQL command is used to show the current user and host?",
+        "answer": "SELECT USER();",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["SELECT USER();"],
+        "options": ["SHOW USER;", "CURRENT_USER();", "WHO AM I;", "SELECT USER();"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "27e03bb555f3c9b4a015ccff",
+        "question": "What is the purpose of the EXPLAIN statement in MySQL?",
+        "answer": "To show the execution plan of a SELECT statement",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["To show the execution plan of a SELECT statement"],
+        "options": [
+          "To provide documentation for a stored procedure",
+          "To show the structure of a table",
+          "To show the execution plan of a SELECT statement",
+          "To explain the meaning of an error message"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "346815ebbcd3e2ee04ba7985",
+        "question": "Which MySQL function would you use to round a number to the nearest integer?",
+        "answer": "ROUND()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["ROUND()"],
+        "options": ["CEIL()", "FLOOR()", "ROUND()", "INT()"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3dc37b1e87438cb3ccf7e1ff",
+        "question": "What does the UNIQUE constraint do in MySQL?",
+        "answer": "It ensures that all values in the column are different",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It ensures that all values in the column are different"],
+        "options": [
+          "It ensures that the column cannot contain NULL values",
+          "It ensures that all values in the column are different",
+          "It automatically increments the value for each new row",
+          "It sets a default value for the column"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9f5056c5d0d14faec1a1ae33",
+        "question": "Which MySQL statement is used to create an index on a table?",
+        "answer": "CREATE INDEX",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["CREATE INDEX"],
+        "options": ["ADD INDEX", "CREATE INDEX", "MAKE INDEX", "INDEX TABLE"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b43f6691e0a7266041fcda84",
+        "question": "What is the purpose of the COALESCE() function in MySQL?",
+        "answer": "To return the first non-NULL value in a list",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["To return the first non-NULL value in a list"],
+        "options": [
+          "To combine multiple columns into one",
+          "To check if all values in a list are equal",
+          "To return the first non-NULL value in a list",
+          "To count the number of non-NULL values in a list"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a36cf411abdad9e74855e37d",
+        "question": "Which MySQL command is used to start a transaction?",
+        "answer": "START TRANSACTION",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["START TRANSACTION"],
+        "options": ["BEGIN TRANSACTION", "START TRANSACTION", "INIT TRANSACTION", "BEGIN"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "af6bab5f44aae86475b1e784",
+        "question": "What does the CONCAT() function do in MySQL?",
+        "answer": "It joins two or more strings together",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It joins two or more strings together"],
+        "options": [
+          "It adds numbers together",
+          "It joins two or more strings together",
+          "It combines multiple rows into one",
+          "It merges two tables"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "201069b9659227c419e8c10e",
+        "question": "Which MySQL statement is used to create a stored procedure?",
+        "answer": "CREATE PROCEDURE",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["CREATE PROCEDURE"],
+        "options": ["MAKE PROCEDURE", "ADD PROCEDURE", "CREATE PROCEDURE", "DEFINE PROCEDURE"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e1c86446a6ce223c29a2c8fd",
+        "question": "What is the purpose of the REGEXP operator in MySQL?",
+        "answer": "To perform pattern matching using regular expressions",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["To perform pattern matching using regular expressions"],
+        "options": [
+          "To perform mathematical operations",
+          "To join multiple tables",
+          "To perform pattern matching using regular expressions",
+          "To check if a value exists in a subquery"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "965687ccd802477135bad0f7",
+        "question": "Which MySQL function would you use to get the current user's username?",
+        "answer": "USER()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["USER()"],
+        "options": ["CURRENT_USER()", "USERNAME()", "USER()", "SYSTEM_USER()"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b0c586be447d7d321b6612a8",
+        "question": "What does the DISTINCT keyword do in a SELECT statement?",
+        "answer": "It removes duplicate rows from the result set",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It removes duplicate rows from the result set"],
+        "options": [
+          "It sorts the result set in ascending order",
+          "It limits the number of rows returned",
+          "It removes duplicate rows from the result set",
+          "It selects only specific columns from the table"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2aca850e38269f02d643041b",
+        "question": "Which MySQL statement is used to delete all rows from a table without deleting the table itself?",
+        "answer": "TRUNCATE TABLE",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["TRUNCATE TABLE"],
+        "options": ["DELETE TABLE", "REMOVE ALL FROM", "DROP TABLE", "TRUNCATE TABLE"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "26fd9361ebdcd704ed271bc7",
+        "question": "What is the purpose of the `UNION` operator in MySQL?",
+        "answer": "To combine the results of multiple `SELECT` statements into a single result set, removing duplicate rows.",
+        "explanation": "**Explanation:**\nThe `UNION` operator in MySQL is used to combine the results of multiple `SELECT` statements into a single result set. The key difference between `UNION` and `UNION ALL` is that `UNION` removes duplicate rows, while `UNION ALL` includes all rows, including duplicates.",
+        "hint": null,
+        "correctAnswer": [
+          "To combine the results of multiple `SELECT` statements into a single result set, removing duplicate rows."
+        ],
+        "options": [
+          "To combine the results of multiple `SELECT` statements into a single result set, removing duplicate rows.",
+          "To perform a logical OR operation on the results of multiple `SELECT` statements.",
+          "To combine the results of multiple `SELECT` statements into a single result set, including duplicate rows.",
+          "To perform a logical AND operation on the results of multiple `SELECT` statements."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "babdcbe9c6bc8fc146a25040",
+        "question": "What is the purpose of the `HAVING` clause in a MySQL query?",
+        "answer": "To filter the groups in the result set based on the values of aggregate functions.",
+        "explanation": "**Explanation:**\nThe `HAVING` clause in a MySQL query is used to filter the groups in the result set based on the values of aggregate functions, such as `SUM`, `AVG`, `COUNT`, etc. This is different from the `WHERE` clause, which is used to filter the rows in the result set based on the values in the columns.\nThe `HAVING` clause is typically used in conjunction with the `GROUP BY` clause, which groups the rows in the result set based on the values in one or more columns.",
+        "hint": null,
+        "correctAnswer": [
+          "To filter the groups in the result set based on the values of aggregate functions."
+        ],
+        "options": [
+          "To filter the rows in the result set based on the values in the columns.",
+          "To sort the rows in the result set in ascending or descending order.",
+          "To filter the groups in the result set based on the values of aggregate functions.",
+          "To limit the number of rows returned in the result set."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9271925d35259687f2ef38f9",
+        "question": "In MySQL, what is the purpose of the `WITH ROLLUP` modifier in a `GROUP BY` clause?",
+        "answer": "It adds summary rows that represent subtotals and grand totals",
+        "explanation": "**Explanation:**\n`WITH ROLLUP` is an extension of `GROUP BY` that generates aggregate rows representing subtotals for each group and an overall total at the end of the result set.",
+        "hint": null,
+        "correctAnswer": ["It adds summary rows that represent subtotals and grand totals"],
+        "options": [
+          "It removes duplicate rows before grouping",
+          "It adds summary rows that represent subtotals and grand totals",
+          "It allows grouping by computed columns only",
+          "It enforces sorting order before aggregation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a87a8bd9d2b287b41ba09a38",
+        "question": "In MySQL 8.0, what is the function of the `WINDOW` clause?",
+        "answer": "It allows naming and reusing window specifications for analytic functions",
+        "explanation": "**Explanation:**\nThe `WINDOW` clause lets you define a named window (like frame and partitioning rules) for reuse across multiple window functions in the same query\u2014great for readability and performance in analytic queries.",
+        "hint": null,
+        "correctAnswer": [
+          "It allows naming and reusing window specifications for analytic functions"
+        ],
+        "options": [
+          "It defines table partitions for join operations",
+          "It allows naming and reusing window specifications for analytic functions",
+          "It creates a temporary view for query optimization",
+          "It defines a physical table alias for subqueries"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f371d79b68a3e780418da5d4",
+        "question": "Which MySQL feature allows you to execute multiple SQL statements as a single unit that can be rolled back entirely in case of an error?",
+        "answer": "Transaction",
+        "explanation": "**Explanation:**\nTransactions ensure atomicity \u2014 either all operations succeed or none are applied. They\u2019re controlled via `START TRANSACTION`, `COMMIT`, and `ROLLBACK`.",
+        "hint": null,
+        "correctAnswer": ["Transaction"],
+        "options": ["Temporary table", "Transaction", "Event scheduler", "Trigger"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a8dee3f55e74988050499f4a",
+        "question": "What is the primary use of the `EXPLAIN ANALYZE` statement in MySQL 8.0.18 and later?",
+        "answer": "To execute the query and display real execution time with the query plan",
+        "explanation": "**Explanation:**\n`EXPLAIN ANALYZE` actually runs the query and provides both estimated and **actual** execution metrics \u2014 useful for deep query performance tuning.",
+        "hint": null,
+        "correctAnswer": [
+          "To execute the query and display real execution time with the query plan"
+        ],
+        "options": [
+          "To display user privileges on the database",
+          "To validate SQL syntax before execution",
+          "To execute the query and display real execution time with the query plan",
+          "To show estimated cost without executing the query"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "56138e9c982992f7808f534f",
+        "question": "In MySQL, what does the `JSON_TABLE()` function do?",
+        "answer": "It maps JSON data into a relational table format for SQL querying",
+        "explanation": "**Explanation:**\n`JSON_TABLE()` converts JSON documents into relational rows and columns, enabling powerful SQL queries over semi-structured JSON data using standard SQL syntax.",
+        "hint": null,
+        "correctAnswer": ["It maps JSON data into a relational table format for SQL querying"],
+        "options": [
+          "It maps JSON data into a relational table format for SQL querying",
+          "It stores JSON documents in a separate schema",
+          "It converts relational data back into JSON text",
+          "It indexes JSON data automatically for search"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "mysql/mysql-quiz.md",
+    "language": "md",
+    "generatedAt": "2025-12-09T14:56:14.382081+00:00",
+    "warnings": []
+  }
+}

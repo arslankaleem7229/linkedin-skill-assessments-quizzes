@@ -1250,7 +1250,7 @@ int main(){
 
 #### Q74. 给定映射中的这些记录，您将如何将键"Sinead"的值更新为22？
 
-![image](images/Q79.png?raw=png)
+![image](images/Q79.png)
 
 - [x] `marks["Sinead"] = 22`
 - [ ] `marks["Sinead"].22`

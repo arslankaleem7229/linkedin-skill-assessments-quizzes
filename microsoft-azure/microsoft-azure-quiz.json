@@ -1,0 +1,1867 @@
+{
+  "quizz": {
+    "id": "e56bd701cbb4cdb63d7740b0",
+    "title": "Microsoft Azure",
+    "description": "Seeded from microsoft-azure/microsoft-azure-quiz.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "0f95c5933c5c659ad2e87b70",
+        "question": "You need to create an application in Azure AD representing the Kineteco Web App so you can assign directory permissions to the app. To create the application identity, which command will you run?",
+        "answer": "`bash az ad app create -display-name $appName \\ ...`",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/cli/azure/ad/app?view=azure-cli-latest)",
+        "hint": null,
+        "correctAnswer": [
+          "`bash az ad app create -display-name $appName \\ ...`"
+        ],
+        "options": [
+          "`bash az ad app permission grant -display-name $appName \\ ...`",
+          "`bash az ad app credential create -display-name $appName \\ ...`",
+          "`bash az ad app create -display-name $appName \\ ...`",
+          "`bash az ad app permission ass -display-name $appName \\ ...`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bd4a32b3552ca239344ee61b",
+        "question": "You need to deliver a mobile push notification feature for the Kineteco Retail app, hosted in Azure App Service. The solution should minimize cost, complexity, and development effort. Which option should you choose?",
+        "answer": "Notification Hub",
+        "explanation": "**Explanation:** Twilio is an SMS notification app, also not from Microsoft. Event Grid can be techincally used for this purpose but it's a more generic event-broadcasting service. Service Bus is another generic publish-subscribe solution. Finally [Notification Hubs](https://docs.microsoft.com/en-us/azure/notification-hubs/notification-hubs-push-notification-overview) are specifically designed for push-notifications.",
+        "hint": null,
+        "correctAnswer": [
+          "Notification Hub"
+        ],
+        "options": [
+          "Notification Hub",
+          "Event Grid",
+          "Twilio",
+          "Service Bus"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c243fda27c87e8fc1dc9b3c0",
+        "question": "Your application hosted in Azure App Service needs to retrieve secrets from Azure Key Vault. Which choice is NOT a way to authenticate to Key Vault?",
+        "answer": "shared access key",
+        "explanation": "[Azure Key Vault Developer's Guide](https://docs.microsoft.com/en-us/azure/key-vault/general/developers-guide#authenticate-to-key-vault-in-code) lists 3 available methods. The _shared access key_ does not exist in Azure at all, the closest term is _shared access signature (SAS)_ but it's used to access Azure Storage only.",
+        "hint": null,
+        "correctAnswer": [
+          "shared access key"
+        ],
+        "options": [
+          "service principal and a certificate",
+          "managed identity",
+          "service principal and a secret",
+          "shared access key"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a45e2fd18e6d873cdcd2d745",
+        "question": "You added a persistent volume claim to your apps YAML manifest. When you attempt to deploy to an existing AKS cluster there is no persistent volume available. What should you do?",
+        "answer": "Add a data disk definition for the AKS cluster to your apps YAML manifest",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Add a data disk definition for the AKS cluster to your apps YAML manifest"
+        ],
+        "options": [
+          "Do nothing. The API server will provision additional storage automatically",
+          "Add a data disk definition for the AKS cluster to your apps YAML manifest",
+          "Add a data disk to each Kubernetes cluster node and reattempt app deployment",
+          "Provision an Azure Files instance and reattempt app deployment"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "97860a295bd242bca3bcb282",
+        "question": "Your corporate web application is hosted in Azure regional data centres around the world. You need to route user requests to the closest service endpoint based on response latency. Which routing method should you use?",
+        "answer": "Traffic manager",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Traffic manager"
+        ],
+        "options": [
+          "Application gateway",
+          "Front Door",
+          "API Management",
+          "Traffic manager"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f1601c7f41527e94bfd9bfc3",
+        "question": "You are developing a release strategy for several related software components. You need to reference variable groups and secure files across multiple build and release pipelines. What is the most efficient way to store and reference these assets from the pipeline?",
+        "answer": "Add the assets to a library",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/?view=azure-devops)",
+        "hint": null,
+        "correctAnswer": [
+          "Add the assets to a library"
+        ],
+        "options": [
+          "Add the assets to a git repository",
+          "Add the assets in Key Vault",
+          "Add the assets to an encrypted volume",
+          "Add the assets to a library"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "12f09a6eb877c726a6085ae2",
+        "question": "You need to grant full access for an app to a temporary Azure storage account. Configuring access should require minimum effort. Which option should you use?",
+        "answer": "Shared access signature",
+        "explanation": "[Shared access signature](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview) exists exactly for the purpose of giving a temporary access. Azure AD user account is not temporary so it needs to be managed. Creating/revoking Certificates for temporary access is just too much hassle.",
+        "hint": null,
+        "correctAnswer": [
+          "Shared access signature"
+        ],
+        "options": [
+          "Azure AD user account",
+          "Shared access signature",
+          "Shared key",
+          "Certificate"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5cc4f8310f2015c7abcf2198",
+        "question": "Which choice is not a valid trigger for an Azure functions?",
+        "answer": "threshold alert in Azure App insights",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp)",
+        "hint": null,
+        "correctAnswer": [
+          "threshold alert in Azure App insights"
+        ],
+        "options": [
+          "based on a time (schedule)",
+          "another Azure service (cosmos, service bus)",
+          "threshold alert in Azure App insights",
+          "third party services (GitHub)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "762916be3b7cd2d80e43f5c6",
+        "question": "Which messaging service enables an event-driven programming model?",
+        "answer": "Event Grid",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services)",
+        "hint": null,
+        "correctAnswer": [
+          "Event Grid"
+        ],
+        "options": [
+          "Service Bus",
+          "Event Hub",
+          "Notification Hub",
+          "Event Grid"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e92d6321d55abb27b3e87102",
+        "question": "You need to populate a newly created SQL database from your release pipeline in Azure DevOps. The solution should minimize deployment time and efforts. Which approach should you use?",
+        "answer": "Populate from a BACPAC file.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Populate from a BACPAC file."
+        ],
+        "options": [
+          "Populate from a BACPAC file.",
+          "Restore from a backup file.",
+          "Populate from a CSV file.",
+          "Populate from a SQL file."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b200544f48d9e26f2cf29351",
+        "question": "You need to host a community website for your neighborhood association. The site contains static content, including HTML, CSS, and a few pages with client-side JavaScript. The site contains no sensitive information, and CORS support is unnecessary. The association has limited funds to pay for hosting, so the solution should be as inexpensive as possible. Which option should you use?",
+        "answer": "Azure Storage static website",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Azure Storage static website"
+        ],
+        "options": [
+          "Azure Storage static website",
+          "static website with Azure CDN",
+          "App Service on Consumption plan",
+          "App Service on Standard plan"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6b655f848da6db7cc144d059",
+        "question": "Your organization delivers a number of RESTful web services to customers around the world. You need to deploy cloud infrastructure to deliver these services to paying customers, including authentication, request throttling and routing of requests to the closest service endpoint. Which solution should you choose?",
+        "answer": "API Management",
+        "explanation": "**Hint:** If you see the words REST and throttling - the answer is almost always API Management. It's the most expensive solution but is specifically designed to proxy the REST API.",
+        "hint": null,
+        "correctAnswer": [
+          "API Management"
+        ],
+        "options": [
+          "Front door",
+          "API Management",
+          "Traffic manager",
+          "Application Gateway"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "561f9f800643fe42e96cdfdf",
+        "question": "You have a .NET app running on a VM Scale set. You need to monitor application performance without modifying the code. The solution should minimize the cost. What should you do?",
+        "answer": "Install the Application Insights Agent.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Install the Application Insights Agent."
+        ],
+        "options": [
+          "Enable Network Performance Monitor on the VMs.",
+          "Install the Log Analytics Agent and enable Azure Monitor for VMs.",
+          "Install the Application Insights Agent.",
+          "Enable SolarWinds Performance Monitor from the Azure Marketplace."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "456034a764abd28f28e44e55",
+        "question": "When setting your CI/CD pipeline an approval from your product owner is required before a final release to production. What solution do you use to achieve this?",
+        "answer": "a pre-deployment condition",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "a pre-deployment condition"
+        ],
+        "options": [
+          "a Manual Intervention task",
+          "a pre-deployment condition",
+          "a branch filter",
+          "a pre-deployment gate"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c030f27bd8f056d82fbe2b3b",
+        "question": "You want to configure the AKS instance running the Kineteco Inventory App to use Azure Active Directory (AD) for user authentication. To integrate with AKS with Azure AD which steps should you perform first?",
+        "answer": "Create a service principal in Azure AD. Then add user to the AKS security group.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Create a service principal in Azure AD. Then add user to the AKS security group."
+        ],
+        "options": [
+          "Create a service principal in Azure then assign the service principal AKS.",
+          "Add users an Azure AD security group. Then assign the group permissions to AKS.",
+          "Create a service principal in Azure AD. Then add user to the AKS security group.",
+          "Create an App ID in Azure AD. Then create a service principal for the server app."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e5c4c0abfa562f75b1e73a91",
+        "question": "Which access protocol does Azure Files not support?",
+        "answer": "HTTPS",
+        "explanation": "[What is Azure Files?](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction) page mentions the supported protocols.",
+        "hint": null,
+        "correctAnswer": [
+          "HTTPS"
+        ],
+        "options": [
+          "Network File System (NFS)",
+          "HTTPS",
+          "REST API",
+          "Server Message Block(SMB)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "398f8c2c2920da0b8bee853f",
+        "question": "You are writing an app for a sales team. You need to implement security in SQL Server to ensure that sales representatives see customer financial information only for customers whom they manage. Your app must make this transparent to the user. Which SQL data security option should you choose?",
+        "answer": "Dynamic Data Masking",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Dynamic Data Masking"
+        ],
+        "options": [
+          "Dynamic Data Masking",
+          "Transparent Data Encryption",
+          "Row-Level Security",
+          "Always Encrypted"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e764ed94d4b152c82e62ad4f",
+        "question": "You configure access to secrets in Azure Key Vault with `__`.",
+        "answer": "RBAC roles",
+        "explanation": "[Controlling access to Key Vault data](https://learn.microsoft.com/en-us/azure/key-vault/general/security-features#controlling-access-to-key-vault-data)",
+        "hint": null,
+        "correctAnswer": [
+          "RBAC roles"
+        ],
+        "options": [
+          "service principals",
+          "certificates",
+          "access policies",
+          "RBAC roles"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6f6552f228e110a00524eb7e",
+        "question": "Your Kineteco Web App experiences occasional spikes in usage that cause resource shortages that generate an alert. When this occurs, you want to configure scale out of the App Service plan resources. The solution should minimize cost and administrative effort. What should you do?",
+        "answer": "Configure an autoscale rule based on a metric.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Configure an autoscale rule based on a metric."
+        ],
+        "options": [
+          "Create a Logic App. Then configure an action group with the Logic App action type.",
+          "Create an Azure Automation Runbook. Then configure an action group with the Automation Runbook action type.",
+          "Configure an autoscale rule based on a metric.",
+          "Create an Azure function. Then configure an action group with the Secure Webhook action type."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c272ec6c2a5df4944200d3ad",
+        "question": "You have CI/CD pipeline for a modern web application in Azure DevOps. The CI/CD process includes both a build and a release pipeline. You need to ensure that user testing (UAT) is successful before triggering the release pipeline. The process should be automated as possible. What should you add to your build pipeline?",
+        "answer": "Approval gate",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Approval gate"
+        ],
+        "options": [
+          "Query Work Items gate",
+          "Manual Intervention task",
+          "Approval gate",
+          "Invoke REST API gate"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "78e07116e66ef9abe0eac47a",
+        "question": "The Kineteco Web App is running on AKS. To meet a spike in demand, the horizontal pod autoscaler recently provisioned additional pods, which are no longer needed. What should you do to scale down unnecessary pods?",
+        "answer": "Do nothing. HPA will initiate scale down automatically.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Do nothing. HPA will initiate scale down automatically."
+        ],
+        "options": [
+          "Trigger scale down in Azure Container Instances.",
+          "Trigger scale down in the HPA from the Azure CLI.",
+          "Manually deprovision unneeded pods.",
+          "Do nothing. HPA will initiate scale down automatically."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b110b844da2dcf86fc715d1d",
+        "question": "Your ARM template, created in VS Code, is failing validation in the build pipeline in Azure DevOps. You need to correct syntax issues at authoring time with a minimum of cost and effort. What should you do?",
+        "answer": "Install Azure Resource Manager Tools extension in VS Code.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Install Azure Resource Manager Tools extension in VS Code."
+        ],
+        "options": [
+          "Install Azure Resource Manager Tools extension in VS Code.",
+          "Install Visual Studio 2019 Enterprise edition.",
+          "Install Visual Studio 2019 Community edition.",
+          "Install Visual Studio Code IntelliCode extension in VS Code."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "aadfcfcf79ac8cc910358ed1",
+        "question": "You need to migrate the backlog of a development project for a newly acquired subsidiary. The development team currently uses a Kanban board to track stories, tasks, and bugs. Which process framework should you select in Azure Boards?",
+        "answer": "Agile",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Agile"
+        ],
+        "options": [
+          "Agile",
+          "Waterfall",
+          "Basic",
+          "CMMI"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0a28c5e87d9ab14d715e3e1e",
+        "question": "You have set of SQL databases used with various PaaS applications with predictable usage patterns. You are planning to move these databases to Azure SQL and need to choose the right deployment option. Your priorities are minimizing costs, and having the ability to assign CPU and resources to individual databases. Which option should you choose?",
+        "answer": "Azure SQL elastic pool",
+        "explanation": "**Explanation:** For many businesses and applications, creating individual databases and scaling performance up or down as needed is sufficient, especially when usage patterns are relatively predictable. Unpredictable usage patterns can make it difficult to manage costs and your business model. Elastic pools aim to solve this problem. Performance resources are allocated to a pool, not to a single database. You pay for the collective performance resources of the pool, not for the performance of a single database.\n1. [Reference](https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp)\n2. [Reference](https://learn.microsoft.com/en-us/azure/azure-sql/database/elastic-pool-overview?view=azuresql)",
+        "hint": null,
+        "correctAnswer": [
+          "Azure SQL elastic pool"
+        ],
+        "options": [
+          "Azure SQL elastic pool",
+          "SQL on Azure VMs",
+          "Azure SQL Database",
+          "SQL Managed Instance"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8947a18a236b20e2a41a3cab",
+        "question": "Your photo app hosted in Azure records user operations in a log for historical reference. Records must not be overwritten. Which storage type should you select to host log data?",
+        "answer": "append blob",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "append blob"
+        ],
+        "options": [
+          "append blob",
+          "table storage",
+          "page blob",
+          "block blob"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3307d6a895e9427672f302d3",
+        "question": "The Kineteco Retail App uses keys for signing and encryption of some data transfers. How should you write your app to invoke keys?",
+        "answer": "Azure Portal",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Azure Portal"
+        ],
+        "options": [
+          "Azure CLI",
+          "Azure Portal",
+          "Azure PowerShell",
+          "REST API"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5a8837d283d641e624f1b0e7",
+        "question": "You need to create a tech support chatbot for Microsoft Teams that interacts with users based on natural language processing (NLP). The bot should be capable of processing differing sentence structures. Which Microsoft Bot Framework component will deliver this functionality?",
+        "answer": "LUIS",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "LUIS"
+        ],
+        "options": [
+          "LUIS",
+          "Text to Speech",
+          "QnA Maker",
+          "Form Recognizer"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "00ea4f731059abaa402e950e",
+        "question": "You are implementing an application to manage automated warehouse operations for a global retailer. You need to design an enrollment process for IoT devices for production use. Solution requirements are as follows: Register IoT devices in bulk; encrypt all communication between devices and the Azure IoT cloud service; and implement Microsoft recommendations for device security. Which option should you choose?",
+        "answer": "X.509 certificate",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "X.509 certificate"
+        ],
+        "options": [
+          "managed identity (shared)",
+          "X.509 certificate",
+          "managed service identity (per device)",
+          "SAS key"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5575f62ac51913b8ab9ee696",
+        "question": "You are deploying three Azure VMS with an Azure Resource Manager (ARM) template. Which ARM function implements the iteration loop to provision the right number of VMs?\n```json\n{\n    \"type\": \"Microsoft.Compute/virtualMachines\",\n    \"name\": \"[concat('myvm', `______`)]\",\n    \"apiVersion\": \"2016-04-30-preview\",\n    \"location\": \"[parameters('location')]\",\n    \"copy\": \" \",\n    \"name\": \"virtualMachineLoop\",\n    \"count\": \"[parameters('numberOfInstances')]\"\n},\n```",
+        "answer": "copyIndex()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "copyIndex()"
+        ],
+        "options": [
+          "max()",
+          "copyIndex()",
+          "createArray()",
+          "indexOf()"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e1b2bad22f8e3308d240b7bd",
+        "question": "The Kineteco web app runs in an Azure Kubernetes Service. You need to monitor feature use and user navigation paths to identify where improvements are needed. What should you do?",
+        "answer": "Configure Application Insights cohorts.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Configure Application Insights cohorts."
+        ],
+        "options": [
+          "Install the Analytics agent and configure Azure Monitor for Containers.",
+          "Install the App Insights Agent on AKS nodes.",
+          "Configure Application Insights cohorts.",
+          "Add instrumentation to your app to send usage analysis with Application Insights."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fc86331d73dddcf0e6c910e9",
+        "question": "Your web app hosted on Azure VMS generates a large number of random (non-sequential) writes. Which storage type should you select for your application?",
+        "answer": "page blob",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "page blob"
+        ],
+        "options": [
+          "page blob",
+          "block blob",
+          "table storage",
+          "queue storage"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "db969bf38658b63bc697089e",
+        "question": "You are configuring a release pipeline in Azure DevOps. You need to reference several application variables across multiple pipelines at deployment time. How should you store application variables?",
+        "answer": "Configure a variable group.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Configure a variable group."
+        ],
+        "options": [
+          "Store secrets in Azure Key Vault.",
+          "Store secrets in a configuration file.",
+          "Configure release variables.",
+          "Configure a variable group."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b665ef5de7e8117bf6667c05",
+        "question": "You have configured the Kineteco Web App to run on Azure Kubernetes Service (AKS). Application resources need to scale to meet spikes in traffic. What should you do? The solution should minimize manual effort and cost.",
+        "answer": "Do nothing. Pods running on AKS scale up automatically.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Do nothing. Pods running on AKS scale up automatically."
+        ],
+        "options": [
+          "Configure the horizontal pod autoscaler (HPA).",
+          "Manually scale pod when necessary.",
+          "Configure burst to Azure Container Instances.",
+          "Do nothing. Pods running on AKS scale up automatically."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "24f248cb38169a83f6d20652",
+        "question": "You are configuring a release pipeline in Azure DevOps. You need to read secrets from Azure Key Vault during pipeline execution. How should you retrieve application variables?",
+        "answer": "all of these answers",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "all of these answers"
+        ],
+        "options": [
+          "with a community-developed Key Vault task",
+          "with an ARM template",
+          "all of these answers",
+          "with an Azure CLI script in a Bash task"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "28ea65fbd66cae5113f281e7",
+        "question": "You need to update the data within an existing database in Azure SQL with your changes. You want to test this process from your development workstation before incorporating the update into your CI/CD process. Which command will you run to update the schema on the target database?",
+        "answer": "SqlPackage.exe /TargetFile:\" myapp.bacpac \" /Action:**Export**",
+        "explanation": "/SourceServerName:\"kinetecosql.database.windows.net\"\n/SourceDatabaseName:\"kinetecoweb\" /SourceUser:\"admin\" /SourcePassword:\"MyPassword\"\n/SourceServerName:\"kinetecosql.database.windows.net\"\n/SourceDatabaseName:\"kinetecoweb\" /SourceUser:\"admin\" /SourcePassword:\"MyPassword\"\n/SourceServerName:\"kinetecosql.database.windows.net\"\n/SourceDatabaseName:\"kinetecoweb\" /SourceUser:\"admin\" /SourcePassword:\"MyPassword\"\n/SourceServerName:\"kinetecosql.database.windows.net\"\n/SourceDatabaseName:\"kinetecoweb\" /SourceUser:\"admin\" /SourcePassword:\"MyPassword\"",
+        "hint": null,
+        "correctAnswer": [
+          "SqlPackage.exe /TargetFile:\" myapp.bacpac \" /Action:**Export**"
+        ],
+        "options": [
+          "SqlPackage.exe /TargetFile:\" myapp.bacpac \" /Action:**Export**",
+          "SqlPackage.exe /TargetFile:\" myapp.bacpac \" /Action:**Import**",
+          "SqlPackage.exe /TargetFile:\"./myapp.bacpac\" /Action:**Publish**",
+          "SqlPackage.exe /TargetFile:\"./myapp.bacpac\" /Action:**Extract**"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "54fc209537b3d3a9704c69b0",
+        "question": "You have a web app hosted in Azure App Service that reads from and writes data to an Azure SQL Database back-end. You need to send email alert when your web app returns any failure HTTP status code (anything except HTTP 200) for a user request. Which solution should you use?",
+        "answer": "service map in Azure Monitor",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "service map in Azure Monitor"
+        ],
+        "options": [
+          "service map in Azure Monitor",
+          "application maps in Azure Application Insights",
+          "availability tests in Azure Application Insights",
+          "Profiler in Azure Application Insights"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "932fe3ad0cfaa7af0afaddc0",
+        "question": "Your new release pipeline in Azure DevOps includes a Bash task that runs an Azure CLI script. The Bash task running script fails. The agent setting of the agent job in the release pipeline is pictured below. The solution must minimize cost. What should you change in agent pool settings?",
+        "answer": "Change to a hosted agent pool running Ubuntu 16.04 LTS or later.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Change to a hosted agent pool running Ubuntu 16.04 LTS or later."
+        ],
+        "options": [
+          "Change to a self-hosted agent pool running Ubuntu 16.04 LTS or later.",
+          "Changed to a hosted pool running Windows 2019.",
+          "Change to a hosted agent pool running Ubuntu 16.04 LTS or later.",
+          "Change to a self-hosted agent pool running Windows 2019."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0e1fae53ce0dba76b40cfb0b",
+        "question": "You are selecting a cloud messaging solution for your retail mobile app. Requirements for the solution are: Process messages in the order they are received: preserve messages in case of a processing delay; end guarantee message delivery. Which solution should you use?",
+        "answer": "Service Bus",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Service Bus"
+        ],
+        "options": [
+          "Event Grid",
+          "Service Bus",
+          "Event Hub",
+          "Queue Storage"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "015f37528069ebdc7ee8a55b",
+        "question": "You need to provision a port mapping on the underlying node that allows the application to be accessed directly with the IP address and on the cluster node. Which service type should you provision?",
+        "answer": "NodePort",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "NodePort"
+        ],
+        "options": [
+          "LoadBalancer",
+          "NodePort",
+          "Cluster IP",
+          "ExternalName"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "41d4941c70e13569ba59df0c",
+        "question": "What is the difference between a user-assigned managed identity and a system-assigned managed identity?",
+        "answer": "The lifecycle of a user-managed identity is managed separately from the resource.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The lifecycle of a user-managed identity is managed separately from the resource."
+        ],
+        "options": [
+          "The lifecycle of a user-managed identity is managed separately from the resource.",
+          "with a user-assigned managed identity, Azure manages the password for you.",
+          "The lifecycle of a system-managed identity is managed separately from the resource.",
+          "with a system-assigned managed identity, Azure manages the password for you."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f3b1a0af2dd496b3337e61ed",
+        "question": "You need to configure user access to Azure DevOps agent pools to meet the following requirements: Use an agent pool when authoring build or release pipelines for the project; view the agent pool and agents of the organization; and use the principle of least privilege. Which role memberships are required for the Azure DevOps organization and the project?",
+        "answer": "Organization: Reader; Project: Service Account",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Organization: Reader; Project: Service Account"
+        ],
+        "options": [
+          "Organization: Administrator; Project: Service Account",
+          "Organization: Reader; Project: Service Account",
+          "Organization: Reader; Project: Administrator",
+          "Organization: Service Account; Project: Reader"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f1ef7d63572cd3cd4ffa4b26",
+        "question": "You have created an Azure CLI script for a release pipeline in Azure DevOps. You need to reference the working directory for the running job. Which variable should you reference?",
+        "answer": "Agent.WorkFolder",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Agent.WorkFolder"
+        ],
+        "options": [
+          "Agent.WorkFolder",
+          "Agent.HomeDirectory",
+          "Agent.BuildDirectory",
+          "Agent.ToolsDirectory"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a4f9fcf5af6120225c1f79f2",
+        "question": "You are selecting Azure technologies for a new app that will process print jobs in a facility with thousands of printers. A pool of worker processes will send jobs to printer and report results when jobs are complete. Requirements for the solution are: Worker processes will retrieve and process messages as capacity permits; if a worker process or printer fails, a worker process should be able to retrieve message and resume processing; and the solution should maintain a central (server-side) log of messages processed. Which solution should you use?",
+        "answer": "Queue Storage",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Queue Storage"
+        ],
+        "options": [
+          "Event Hub",
+          "Event Grid",
+          "Service Bus",
+          "Queue Storage"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7df0a1949d95bbe11a4cb166",
+        "question": "In Azure Key Vault, you can manage access to your application secrets by setting permissions at any level except **\\_**.",
+        "answer": "at the Azure Subscription level",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "at the Azure Subscription level"
+        ],
+        "options": [
+          "on the secret itself",
+          "by secret type",
+          "on the Key Vault instance",
+          "at the Azure Subscription level"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5718f34f775c0ca24f76c599",
+        "question": "Your company hosts a web application that uses Azure SQL Database to store data. You need to implement measures that allow only members of the managers group to see sensitive information. Which two actions should you perform?",
+        "answer": "Implement dynamic data masking and exclude the managers group.",
+        "explanation": "`Dynamic data masking helps prevent unauthorized access to sensitive data by enabling customers to designate how much of the sensitive data to reveal with minimal impact on the application layer.`\n[Reference](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/new-azurermsqldatabasedatamaskingrule?view=azurermps-6.13.0)",
+        "hint": null,
+        "correctAnswer": [
+          "Implement dynamic data masking and exclude the managers group."
+        ],
+        "options": [
+          "Implement dynamic data masking and include the managers group.",
+          "Implement transparent data encryption and include the managers group.",
+          "Implement dynamic data masking and exclude the managers group.",
+          "Implement transparent data encryption and exclude the managers group."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "45a79023fcab6da07a23fcec",
+        "question": "The Kineteco Inventory App uses an Azure SQL Database instance to store application and store inventory data. Store employees report occasional periods where queries in the web interface never return data. You suspect a database issue and need to identify the performance issue as soon as possible. The resource health dashboard reports \"No health related issues found.\" What should you do?",
+        "answer": "Enable Intelligent Insights.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Enable Intelligent Insights."
+        ],
+        "options": [
+          "Run the troubleshooting wizards under Resource and solve problems.",
+          "Enable Intelligent Insights.",
+          "Configure App Insights to alert admins when web interface experiences latency.",
+          "Configure an alert rule to email DBAs when DTU usage hits 100%."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "927cb9e78cf72fd05fb78764",
+        "question": "Your web application needs to access files on an Azure Files share. Which option will deliver the highest throughput?",
+        "answer": "SMB",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "SMB"
+        ],
+        "options": [
+          "SMB",
+          "REST API",
+          "Storage Explorer",
+          "NFS"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6870d8cd6b0a07bc8678d679",
+        "question": "You have source code for a project in a repository on GitHub. You need to migrate source code to a repository in Azure Repos. The solution should minimize effort. Which solution should you recommend?",
+        "answer": "From the **Import a Git repository** menu, select **Import**.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "From the **Import a Git repository** menu, select **Import**."
+        ],
+        "options": [
+          "Download the GitHub repository to a Zip file, and then unzip the repository in Azure DevOps.",
+          "From the **Import a Git repository** menu, select **Import**.",
+          "Create a service connection to the GitHub repository.",
+          "Create a webhook in GitHub and then trigger it from Azure DevOps."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "04bd22269ab4164a5661a9c5",
+        "question": "You need to facilitate user acceptance testing (UAT) on your web application hosted in App Service. Testers must approve changes before they are deployed to production. You should implement support for these requirements with a minimum of cost and complexity. What should you do?",
+        "answer": "Configure an additional deployment slot in the existing App Service instance.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Configure an additional deployment slot in the existing App Service instance."
+        ],
+        "options": [
+          "Configure an additional App Service instance. In Azure DevOps, enable an approval gate for deployment.",
+          "Configure an Azure load balancer to redirect traffic to the approved App Service instance.",
+          "Configure an additional deployment slot in the existing App Service instance.",
+          "Configure an App Service Environment (ASE)."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "398c1b77517af3a75a4a2d05",
+        "question": "Your microservices application includes a logging component that performs a large number of sequentinal writes. Which type of Azure Storage should you use?",
+        "answer": "append blob",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "append blob"
+        ],
+        "options": [
+          "Table storage",
+          "append blob",
+          "page blob",
+          "block blob"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "323eb5d4dcad78cdd8ed534a",
+        "question": "Group policy objects are not being applied to domain controllers because the Default Domain Controllers and Default Domain group policies are corrupt. What can you run in a command prompt to recover them?",
+        "answer": "`dcgpofix.exe`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`dcgpofix.exe`"
+        ],
+        "options": [
+          "`dcpromo.exe`",
+          "`dcgpofix.exe`",
+          "`dcdiagfix.exe`",
+          "`ntdsutil.exe`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "651e86d3cbd9c7c5bfd0fd71",
+        "question": "Your JavaScript app hosted in Azure App Service needs to be able to make calls to a remote domain in another Azure region. Which App Service feature do you need to configure?",
+        "answer": "`CORS`",
+        "explanation": "As described in [Microsoft Docs: Hosting a Restful-API with CORS in AAS](https://docs.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-rest-api): The Answer should be CORS (Cross Origin Ressource Sharing)",
+        "hint": null,
+        "correctAnswer": [
+          "`CORS`"
+        ],
+        "options": [
+          "`CORS`",
+          "`deployment slots`",
+          "`WebJobs`",
+          "`custom domains`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bee1dd5ed17e9d081e0cc9ba",
+        "question": "Bindings in Azure Function triggers have a direction property that is always \\_.",
+        "answer": "in",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "in"
+        ],
+        "options": [
+          "parallel",
+          "out",
+          "asynchronous",
+          "in"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "19d403e175d1317fed17b352",
+        "question": "You are selecting a cloud messaging solution for your multimedia news app. The app routes news items to the appropriate services for processing and delivery to subscribers. Requirements for the solution are as follows: Events should be routed to the appropriate service to process event; events must be routed to multiple services when necessary; and only relevant events should be routed to a service for processing. Which solution should you use?",
+        "answer": "Event Grid",
+        "explanation": "**Explanation:** Event Grid is a highly scalable serverless event broker that lets you integrate applications using events. Events are delivered from Event Grid to subscriber destinations such as applications, Azure services, or any endpoint that Event Grid has network access to. The source of these events can be other applications, SaaS services, and Azure services.\n[Ref](https://learn.microsoft.com/en-us/azure/event-grid/overview)",
+        "hint": null,
+        "correctAnswer": [
+          "Event Grid"
+        ],
+        "options": [
+          "Event Grid",
+          "Service Bus",
+          "Event Hub",
+          "Queue Storage"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2f28221ded998bccc4a2ebbe",
+        "question": "You need to create an application in Azure Active Direcotry representing the Kineteco Web App so you can assign directory permission to the app. To create the application identity, which command will you run?",
+        "answer": "`bash az ad app create ...",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/cli/azure/ad/app?view=azure-cli-latest)",
+        "hint": null,
+        "correctAnswer": [
+          "`bash az ad app create ..."
+        ],
+        "options": [
+          "`bash az ad app permission grant ...",
+          "`bash az ad app credential create ...",
+          "`bash az ad app create ...",
+          "`bash az ad app permission ass ..."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6af78d3c5f6de6c2d39d5219",
+        "question": "Which type of Azure snapshot works by snapshotting the differences between the virtual machine and the current state?",
+        "answer": "incremental",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "incremental"
+        ],
+        "options": [
+          "full",
+          "delta",
+          "non-redundant",
+          "incremental"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e8983879e46c226ab3d846b9",
+        "question": "Which PowerShell commandlet connects and authenticates to the Azure portal?",
+        "answer": "Connect-AzAccount",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Connect-AzAccount"
+        ],
+        "options": [
+          "Login-AzTenant",
+          "Login-AzPortal",
+          "Auth-Az",
+          "Connect-AzAccount"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "562079f39a690ed19d946acd",
+        "question": "Which hybrid connection option to Azure Virtual Desktop offers the highest bandwidth and best performance?",
+        "answer": "Azure ExpressRoute",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Azure ExpressRoute"
+        ],
+        "options": [
+          "Azure ExpressRoute",
+          "RDP Shortpath",
+          "Site-to-Site VPN",
+          "Point-to-Site VPN"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "25d286e8449ed78754bb3875",
+        "question": "In Azure Virtual Desktop, you can **\\_** the storage accounts associated with FSLogix to enable you to control access using Active Directory Domain Services.",
+        "answer": "domain join",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "domain join"
+        ],
+        "options": [
+          "domain join",
+          "profile",
+          "VPN connect",
+          "join integrate"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "89f2ec603bc4e5abea0d43d8",
+        "question": "Which storage solution for FSLogix in Azure Virtual Desktop is the highest-performing storage solution in the cloud today?",
+        "answer": "Azure NetApp Files",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Azure NetApp Files"
+        ],
+        "options": [
+          "Windows Storage Spaces Direct File Server Cluster",
+          "Azure Files",
+          "Azure NetApp Files",
+          "Avere vFXT for Azure"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "56648539d589106dd02ac34c",
+        "question": "In an Azure Pipeline, what type of wildcard is used to stand in for a single character?",
+        "answer": "`?`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`?`"
+        ],
+        "options": [
+          "`*`",
+          "`#`",
+          "`?`",
+          "`&`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f068277e52ccd20b293cfc16",
+        "question": "To execute your pipeline in Azure DevOps, you will need to use **\\*\\***\\_**\\*\\***.",
+        "answer": "agents",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "agents"
+        ],
+        "options": [
+          "gates",
+          "agents",
+          "packages",
+          "variables"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "635d74009f40b58b84249d59",
+        "question": "Which of the following is true if parallelism is desired in Azure Pipelines?",
+        "answer": "More than one build agent is required.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "More than one build agent is required."
+        ],
+        "options": [
+          "No more than one build agent can be used.",
+          "More than one build agent is required.",
+          "Complexity is reduced with parallelism.",
+          "A maximum number of build agents constrains it."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1740d45f2fe313e92148ef28",
+        "question": "In an Azure Pipeline, a build agent is a piece of software that runs a series of tasks, called a \\***\\*\\_\\_\\_\\*\\***, on a machine.",
+        "answer": "Job",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Job"
+        ],
+        "options": [
+          "String",
+          "Circuit",
+          "Job",
+          "Commit"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f0f15aa01fd9b87ca26bc719",
+        "question": "In Azure Pipelines, if a build has four jobs that can be run concurrently, but only three agents are available, what will happen?",
+        "answer": "Only three jobs will run in parallel at one given time.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Only three jobs will run in parallel at one given time."
+        ],
+        "options": [
+          "Only three jobs will run in parallel at one given time.",
+          "The build will override one of the jobs so that it can run.",
+          "The build will forfeit and not run at all.",
+          "The build will wait until another agent becomes available."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0e2a0dc792567140c8685259",
+        "question": "Which type of Azure Web Application Firewall log tracks requests coming through the firewall policy while in detection or prevention mode?",
+        "answer": "Firewall Resource Log",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Firewall Resource Log"
+        ],
+        "options": [
+          "Activity Log",
+          "Performance Resource Log",
+          "Access Resource Log",
+          "Firewall Resource Log"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bebed1a575757c400fe138d0",
+        "question": "Which of the following options is not a possible rule action for Azure Web Application Firewall policies for Application Gateway?",
+        "answer": "deny",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "deny"
+        ],
+        "options": [
+          "deny",
+          "log",
+          "allow",
+          "block"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4eae8d58c6089e6e7e4ae593",
+        "question": "Which of the following statements about Azure Web Application Firewall policies for Application Gateway is true?",
+        "answer": "Policies can be applied globally to the Application Gateway at the site hosted by the gateway.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Policies can be applied globally to the Application Gateway at the site hosted by the gateway."
+        ],
+        "options": [
+          "Each policy can be applied to only one target.",
+          "Policies can be applied globally to the Application Gateway at the site hosted by the gateway.",
+          "Managed rules have a priority over custom rules.",
+          "You can create a maximum of 100 policies."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "62db0a98247200c002f08339",
+        "question": "Which of the following services is not a service supported by Azure Web Application Firewall?",
+        "answer": "Azure API Management",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Azure API Management"
+        ],
+        "options": [
+          "Azure Application Gateway",
+          "Azure Content Delivery Network",
+          "Azure Front Door",
+          "Azure API Management"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "da93dfe45ba6322bb293b226",
+        "question": "Azure **\\_** is a globally scalable entry point for web applications hosted in Azure.",
+        "answer": "Front Door",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Front Door"
+        ],
+        "options": [
+          "Content Delivery Network",
+          "Front Door",
+          "Application Gateway",
+          "API Management"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bc60a9dc51d3ba199eb5bbaf",
+        "question": "You need to create an application in Azure Active Directory representing the Kineteco Web App so you can assign directory permissions to the app. To create the application identity, which command will you run?",
+        "answer": "appName=\"KinetecoWebApp\"",
+        "explanation": "az ad app permission grant -display-name $appName \\\n--homepage \"http://localhost/$appName\" \\\n--identifier-uris [http://localhost/$appName](http://localhost/$appName)\naz ad app create -display-name $appName \\\n--homepage \"http://localhost/$appName\" \\\n--identifier-uris [http://localhost/$appName](http://localhost/$appName)\naz ad app credential create -display-name $appName \\\n--homepage \"http://localhost/$appName\" \\\n--identifier-uris [http://localhost/$appName](http://localhost/$appName)\naz ad app permission add -display-name $appName \\\n--homepage \"http://localhost/$appName\" \\\n--identifier-uris [http://localhost/$appName](http://localhost/$appName)",
+        "hint": null,
+        "correctAnswer": [
+          "appName=\"KinetecoWebApp\""
+        ],
+        "options": [
+          "appName=\"KinetecoWebApp\"",
+          "appName=\"KinetecoWebApp\"",
+          "appName=\"KinetecoWebApp\"",
+          "appName=\"KinetecoWebApp\""
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9ef554a00c040b9083d9c35f",
+        "question": "In the Azure Service Bus, what is the purpose of the dead letter queue?",
+        "answer": "It is used to store messages which could not be delivered.",
+        "explanation": "[Ref](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues)",
+        "hint": null,
+        "correctAnswer": [
+          "It is used to store messages which could not be delivered."
+        ],
+        "options": [
+          "It is used to ensure that the Azure Bus Service queue can deliver messages in a First-In-First-Out manner.",
+          "It can be used for load balancing queues.",
+          "It is a duplicate queue used as a backup queue.",
+          "It is used to store messages which could not be delivered."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3c154166573db4be8fe9d7df",
+        "question": "You have a WCF application on-premises behind a firewall, and you need to expose it to an Azure web role. Which of the following services would be the best solution?",
+        "answer": "WCF Relay",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/azure/service-bus-relay/relay-hybrid-connections-dotnet-get-started)",
+        "hint": null,
+        "correctAnswer": [
+          "WCF Relay"
+        ],
+        "options": [
+          "Azure Data Management Gateway",
+          "Service Bus Topics",
+          "Azure On-Premises Data Gateway",
+          "WCF Relay"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ee993dec3e7b927b887f7d7b",
+        "question": "When using Azure Service Bus, a single message sent to a topic can be received by multiple subscriptions. Is this true?",
+        "answer": "Yes",
+        "explanation": "[Ref](https://azure.microsoft.com/en-us/documentation/articles/service-bus-fundamentals-hybrid-solutions/#topics)",
+        "hint": null,
+        "correctAnswer": [
+          "Yes"
+        ],
+        "options": [
+          "Yes",
+          "Yes, if the message metadata allows it",
+          "No",
+          "No, the first subscription to process it gets it"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "18c79907b1637b3c8bcf6a12",
+        "question": "You're designing a solution that needs to be low cost and to expose a WCF application that lives on-premises to a Web API that lives in Azure. Which of the following will be added to your design?",
+        "answer": "WCF Relay",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/azure/azure-relay/service-bus-dotnet-hybrid-app-using-service-bus-relay)",
+        "hint": null,
+        "correctAnswer": [
+          "WCF Relay"
+        ],
+        "options": [
+          "A point-to-site VPN",
+          "A site-to-site VPN",
+          "WCF Relay",
+          "Self-Hosted Integration Runtime"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b357ee510fde743c7fd0d8bd",
+        "question": "What are the core messaging entities in Azure Service Bus?",
+        "answer": "Queues, topics, and subscriptions",
+        "explanation": "[Ref](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)",
+        "hint": null,
+        "correctAnswer": [
+          "Queues, topics, and subscriptions"
+        ],
+        "options": [
+          "Queues, transactions, and messages",
+          "Queues, topics, and subscriptions",
+          "Topics, subscriptions, and message sessions",
+          "Queues, message locks, and transactions"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3664f6756a7447f51fc7187c",
+        "question": "This question requires that you evaluate the underlined text to determine if it is correct.\nAn organization that hosts its infrastructure in a private cloud can close its data center.\nInstructions: Review the underlined text. If it makes the statement correct, select \u201cNo change is needed\u201d. If\nthe statement is incorrect, select the answer choice that makes the statement correct.",
+        "answer": "in the public cloud",
+        "explanation": "Explanation/Reference:\nExplanation:\nA private cloud is hosted in your datacenter. Therefore, you cannot close your datacenter if you are using a\nprivate cloud.\nA public cloud is hosted externally, for example, in Microsoft Azure. An organization that hosts its\ninfrastructure in a public cloud can close its data center.\nPublic cloud is the most common deployment model. In this case, you have no local hardware to manage or\nkeep up-to-date \u2013 everything runs on your cloud provider's hardware.\nMicrosoft Azure is an example of a public cloud provider.\nIn a private cloud, you create a cloud environment in your own datacenter and provide self-service access to\ncompute resources to users in your organization. This offers a simulation of a public cloud to your users, but\nyou remain completely responsible for the purchase and maintenance of the hardware and software services\nyou provide.\n[Ref](https://docs.microsoft.com/en-us/cli/azure/ad/app?view=azure-cli-latest)",
+        "hint": null,
+        "correctAnswer": [
+          "in the public cloud"
+        ],
+        "options": [
+          "No change is needed.",
+          "in a hybrid cloud",
+          "in the public cloud",
+          "on a Hyper-V host"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9ae6400e54dbff4218019703",
+        "question": "What are two characteristics of the public cloud? Each correct answer presents a complete solution.\nNOTE: Each correct selection is worth one point.",
+        "answer": "metered pricing; self-service management",
+        "explanation": "Explanation/Reference:\nExplanation:\nWith the public cloud, you get pay-as-you-go pricing \u2013 you pay only for what you use, no CapEx costs.\nWith the public cloud, you have self-service management. You are responsible for the deployment and\nconfiguration of the cloud resources such as virtual machines or web sites. The underlying hardware that\nhosts the cloud resources is managed by the cloud provider.\nIncorrect Answers:\nA: You don\u2019t have dedicated hardware. The underlying hardware is shared so you could have multiple\ncustomers using cloud resources hosted on the same physical hardware.\nB: Connections to the public cloud are secure.\nC: Storage is not limited. You can have as much storage as you like.\n[Ref](https://docs.microsoft.com/en-gb/learn/modules/principles-cloud-computing/4-cloud-deployment-models)",
+        "hint": null,
+        "correctAnswer": [
+          "metered pricing",
+          "self-service management"
+        ],
+        "options": [
+          "dedicated hardware",
+          "limited storage",
+          "metered pricing",
+          "self-service management",
+          "unsecured connections"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "6642c41220d570f1c1830053",
+        "question": "Your company hosts an accounting application named App1 that is used by all the customers of the\ncompany.\nApp1 has low usage during the first three weeks of each month and very high usage during the last week of\neach month.\nWhich benefit of Azure Cloud Services supports cost management for this type of usage pattern?",
+        "answer": "elasticity",
+        "explanation": "Explanation/Reference:\nExplanation:\nElasticity in this case is the ability to provide additional compute resource when needed and reduce the\ncompute resource when not needed to reduce costs. Autoscaling is an example of elasticity.\nElastic computing is the ability to quickly expand or decrease computer processing, memory and storage\nresources to meet changing demands without worrying about capacity planning and engineering for peak\nusage. Typically controlled by system monitoring tools, elastic computing matches the amount of resources\nallocated to the amount of resources actually needed without disrupting operations. With cloud elasticity, a\ncompany avoids paying for unused capacity or idle resources and doesn\u2019t have to worry about investing in\nthe purchase or maintenance of additional resources and equipment.\n[Ref](https://azure.microsoft.com/en-gb/overview/what-is-elastic-computing/)",
+        "hint": null,
+        "correctAnswer": [
+          "elasticity"
+        ],
+        "options": [
+          "high availabilit",
+          "high latency",
+          "elasticity",
+          "load balancing"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "969c40aecc1949f3872498d8",
+        "question": "You plan to migrate a web application to Azure. The web application is accessed by external users.\nYou need to recommend a cloud deployment solution to minimize the amount of administrative effort used to\nmanage the web application.\nWhat should you include in the recommendation?",
+        "answer": "Platform as a Service (PaaS)",
+        "explanation": "Explanation/Reference:\nExplanation:\nAzure App Service is a platform-as-a-service (PaaS) offering that lets you create web and mobile apps for\nany platform or device and connect to data anywhere, in the cloud or on-premises. App Service includes the\nweb and mobile capabilities that were previously delivered separately as Azure Websites and Azure Mobile\nServices.\n[Ref](https://docs.microsoft.com/en-us/azure/security/fundamentals/paas-applications-using-app-services)",
+        "hint": null,
+        "correctAnswer": [
+          "Platform as a Service (PaaS)"
+        ],
+        "options": [
+          "Software as a Service (SaaS)",
+          "Platform as a Service (PaaS)",
+          "Infrastructure as a Service (IaaS)",
+          "Database as a Service (DaaS)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "868e905ae98c9c559d7ebf00",
+        "question": "You have an on-premises network that contains 100 servers.\nYou need to recommend a solution that provides additional resources to your users. The solution must\nminimize capital and operational expenditure costs.\nWhat should you include in the recommendation?",
+        "answer": "a hybrid cloud",
+        "explanation": "Explanation/Reference:\nExplanation:\nA hybrid cloud is a combination of a private cloud and a public cloud.\nCapital expenditure is the spending of money up-front for infrastructure such as new servers.\nWith a hybrid cloud, you can continue to use the on-premises servers while adding new servers in the public\ncloud (Azure for example). Adding new servers in Azure minimizes the capital expenditure costs as you are\nnot paying for new servers as you would if you deployed new server on-premises.\nIncorrect Answers:\nA: A complete migration of 100 servers to the public cloud would involve a lot of operational expenditure (the\ncost of migrating all the servers).\nB: An additional data center would involve a lot of capital expenditure (the cost of the new infrastructure).\nC: A private cloud is hosted on on-premises servers to this would involve a lot of capital expenditure (the cost\nof the new infrastructure to host the private cloud\n[Ref](https://docs.microsoft.com/en-gb/learn/modules/principles-cloud-computing/4-cloud-deployment-models)",
+        "hint": null,
+        "correctAnswer": [
+          "a hybrid cloud"
+        ],
+        "options": [
+          "a complete migration to the public cloud",
+          "an additional data center",
+          "a private cloud",
+          "a hybrid cloud"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "763aa9930d2fc1a5d5ef5efa",
+        "question": "You plan to migrate several servers from an on-premises network to Azure.\nWhat is an advantage of using a public cloud service for the servers over an on-premises network",
+        "answer": "The public cloud is a shared entity whereby multiple corporations each use a portion of the resources in the cloud",
+        "explanation": "Explanation/Reference:\nExplanation:\nThe public cloud is a shared entity whereby multiple corporations each use a portion of the resources in the\ncloud. The hardware resources (servers, infrastructure etc.) are managed by the cloud provider. Multiple\ncompanies create resources such as virtual machines and virtual networks on the hardware resources.\nIncorrect Answers:\nA: The public cloud is not owned by the public. In the case of Microsoft Azure, the cloud is owned by\nMicrosoft.\nB: The public cloud is a not crowd-sourcing solution. In the case of Microsoft Azure, the cloud is owned by Microsoft.\nC: It is not true that public cloud resources can be freely accessed by every member of the public. You pay for a cloud subscription and create accounts for your users to access your cloud resources. No one can\naccess your cloud resources until you create user accounts and provide the appropriate access permissions.",
+        "hint": null,
+        "correctAnswer": [
+          "The public cloud is a shared entity whereby multiple corporations each use a portion of the resources in the cloud"
+        ],
+        "options": [
+          "The public cloud is owned by the public, NOT a private corporation",
+          "The public cloud is a crowd-sourcing solution that provides corporations with the ability to enhance the cloud",
+          "The public cloud is a shared entity whereby multiple corporations each use a portion of the resources in the cloud",
+          "All public cloud resources can be freely accessed by every member of the public"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f78346ea6f69761f4c436faa",
+        "question": "You have 1,000 virtual machines hosted on the Hyper-V hosts in a data center.\nYou plan to migrate all the virtual machines to an Azure pay-as-you-go subscription.\nYou need to identify which expenditure model to use for the planned Azure solution.\nWhich expenditure model should you identify?",
+        "answer": "operational",
+        "explanation": "Explanation/Reference:\nExplanation:\nOne of the major changes that you will face when you move from on-premises cloud to the public cloud is the\nswitch from capital expenditure (buying hardware) to operating expenditure (paying for service as you use it).\nThis switch also requires more careful management of your costs. The benefit of the cloud is that you can\nfundamentally and positively affect the cost of a service you use by merely shutting down or resizing it when it's not needed.\n[Ref](https://docs.microsoft.com/en-us/azure/architecture/cloud-adoption/appendix/azure-scaffold)",
+        "hint": null,
+        "correctAnswer": [
+          "operational"
+        ],
+        "options": [
+          "operational",
+          "elastic",
+          "capital",
+          "scalable"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5ae15275ea95bf9e6ebd4f81",
+        "question": "Your company has an on-premises network that contains multiple servers.\nThe company plans to reduce the following administrative responsibilities of network administrators:\nBacking up application data\nReplacing failed server hardware\nManaging physical server security\nUpdating server operating systems\nManaging permissions to shared documents\nThe company plans to migrate several servers to Azure virtual machines.\nYou need to identify which administrative responsibilities will be eliminated after the planned migration.\nWhich two responsibilities should you identify? Each correct answer presents a complete solution.\nNOTE: Each correct selection is worth one point.",
+        "answer": "Replacing failed server hardware; Updating server operating systems",
+        "explanation": "Explanation/Reference:\nExplanation:\nAzure virtual machines run on Hyper-V physical servers. The physical servers are owned and managed by\nMicrosoft. As an Azure customer, you have no access to the physical servers. Microsoft manage the\nreplacement of failed server hardware and the security of the physical servers so you don\u2019t need to.\nIncorrect Answers:\nB: Microsoft have no control over the applications you run on the virtual machines. Therefore, it is your\nresponsibility to ensure that application data is backed up.\nD: Microsoft do not manage the operating systems you run on the virtual machines. Therefore, it is your\nresponsibility to ensure that the operating systems are updated.\nE: Microsoft have no control over the shared folders you host on the virtual machines. Therefore, it is your responsibility to ensure that folder permissions are configured appropriately.",
+        "hint": null,
+        "correctAnswer": [
+          "Replacing failed server hardware",
+          "Updating server operating systems"
+        ],
+        "options": [
+          "Replacing failed server hardware",
+          "Backing up application data",
+          "Updating server operating systems",
+          "Managing permissions to shared documents"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "67bc4fbc1e263654df7652ef",
+        "question": "A team of developers at your company plans to deploy, and then remove, 50 virtual machines each week. All the virtual machines are configured by using Azure Resource Manager templates.\nYou need to recommend which Azure service will minimize the administrative effort required to deploy and\nremove the virtual machines.\nWhat should you recommend?",
+        "answer": "Azure DevTest Labs",
+        "explanation": "Explanation/Reference:\nExplanation:\nDevTest Labs creates labs consisting of pre-configured bases or Azure Resource Manager templates.\nBy using DevTest Labs, you can test the latest versions of your applications by doing the following tasks:\nQuickly provision Windows and Linux environments by using reusable templates and artifacts.\nEasily integrate your deployment pipeline with DevTest Labs to provision on-demand environments.\nScale up your load testing by provisioning multiple test agents and create pre-provisioned environments for training and demos.\n[Ref](https://docs.microsoft.com/en-us/azure/lab-services/devtest-lab-overview)",
+        "hint": null,
+        "correctAnswer": [
+          "Azure DevTest Labs"
+        ],
+        "options": [
+          "Azure Reserved Virtual Machine (VM) Instances",
+          "Azure DevTest Labs",
+          "Azure virtual machine scale sets",
+          "Microsoft Managed Desktop"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ee2fcea4bcb99f4b6f15d32d",
+        "question": "You use Azure Table storage to store customer information for an application. The data contains customer details and is partitioned by last name. You need to\ncreate a query that returns all customers with the last name Smith. Which code segment should you use?",
+        "answer": "TableQuery.GenerateFilterCondition(\"PartitionKey\", QueryComparisons.Equal, \"Smith\")",
+        "explanation": "Explanation:\nRetrieve all entities in a partition. The following code example specifies a filter for entities where 'Smith' is the partition key. This example prints the fields of each\nentity in the query results to the console.\nConstruct the query operation for all customer entities where PartitionKey=\"Smith\". TableQuery<CustomerEntity> query = new\nTableQuery<CustomerEntity>().Where(TableQuery.GenerateFilterCondition(\"PartitionKey\",\nQueryComparisons.Equal, \"Smith\"));\n[Ref](https://docs.microsoft.com/en-us/azure/cosmos-db/table-storage-how-to-use-dotnet)",
+        "hint": null,
+        "correctAnswer": [
+          "TableQuery.GenerateFilterCondition(\"PartitionKey\", QueryComparisons.Equal, \"Smith\")"
+        ],
+        "options": [
+          "TableQuery.GenerateFilterCondition(\"PartitionKey\", Equals, \"Smith\")",
+          "TableQuery.GenerateFilterCondition(\"LastName\", Equals, \"Smith\")",
+          "TableQuery.GenerateFilterCondition(\"PartitionKey\", QueryComparisons.Equal, \"Smith\")",
+          "TableQuery.GenerateFilterCondition(\"LastName\", QueryComparisons.Equal, \"Smith\")"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0ebcd25577fb454279da8e68",
+        "question": "You develop an app that allows users to upload photos and videos to Azure storage. The app uses a storage REST API call to upload the media to a blob storage\naccount named Account1. You have blob storage containers named Container1 and Container2. Uploading of videos occurs on an irregular basis.\nYou need to copy specific blobs from Container1 to Container2 in real time when specific requirements are met, excluding backup blob copies.\nWhat should you do?",
+        "answer": "Run the Azure PowerShell command Start-AzureStorageBlobCopy",
+        "explanation": "Explanation:\nThe Start-AzureStorageBlobCopy cmdlet starts to copy a blob. Example 1: Copy a named blob\nC:\\PS>Start-AzureStorageBlobCopy -SrcBlob \"ContosoPlanning2015\" -DestContainer \"ContosoArchives\"\n-SrcContainer \"ContosoUploads\"\nThis command starts the copy operation of the blob named ContosoPlanning2015 from the container named ContosoUploads to the container named\nContosoArchives.\n[Ref](https://docs.microsoft.com/en-us/powershell/module/azure.storage/start-azurestorageblobcopy?view=azurermps)",
+        "hint": null,
+        "correctAnswer": [
+          "Run the Azure PowerShell command Start-AzureStorageBlobCopy"
+        ],
+        "options": [
+          "Download the blob to a virtual machine and then upload the blob to Container2.",
+          "Run the Azure PowerShell command Start-AzureStorageBlobCopy",
+          "Copy blobs to Container2 by using the Put Blob operation of the Blob Service REST API.",
+          "Use AzCopy with the Snapshot switch blobs to Container2."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e7d5ae5f17864df87fad02e4",
+        "question": "You are a developer for a SaaS company that offers many web services. All web services for the company must meet the following requirements:\nUse API Management to access the services Use OpenID Connect for authentication Prevent anonymous usage A recent security audit found that several web services can be called without any authentication.\nWhich API Management policy should you implement?",
+        "answer": "validate-jwt",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-protect-backend-with-aad)",
+        "hint": null,
+        "correctAnswer": [
+          "validate-jwt"
+        ],
+        "options": [
+          "jsonp",
+          "authentication-certificate",
+          "check-header",
+          "validate-jwt"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "87f4321314d20bace38c1451",
+        "question": "You are developing an Azure Cosmos DB solution by using the Azure Cosmos DB SQL API. The data includes millions of documents. Each document may\ncontain hundreds of properties. The properties of the documents do not contain distinct values for partitioning. Azure Cosmos DB must scale individual containers in the database to meet the\nperformance needs of the application by spreading the workload evenly across all partitions over time.\nYou need to select a partition key.\nWhich two partition keys can you use? Each correct answer presents a complete solution.\nNOTE: Each correct selection is worth one point.",
+        "answer": "a concatenation of multiple property values with a random suffix appended; a hash suffix appended to a property value",
+        "explanation": "Explanation:\nYou can form a partition key by concatenating multiple property values into a single artificial partitionKey property. These keys are referred to as synthetic keys.\nAnother possible strategy to distribute the workload more evenly is to append a random number at the end of the partition key value. When you distribute items in\nthis way, you can perform parallel write operations across partitions.\nNote: It's the best practice to have a partition key with many distinct values, such as hundreds or thousands. The goal is to distribute your data and workload\nevenly across the items associated with these partition key values. If such a property doesn\u2019t exist in your data, you can construct a synthetic partition key.\n[Ref](https://docs.microsoft.com/en-us/azure/cosmos-db/synthetic-partition-keys)",
+        "hint": null,
+        "correctAnswer": [
+          "a concatenation of multiple property values with a random suffix appended",
+          "a hash suffix appended to a property value"
+        ],
+        "options": [
+          "a concatenation of multiple property values with a random suffix appended",
+          "a single property value that does not appear frequently in the documents",
+          "a hash suffix appended to a property value",
+          "a value containing the collection name",
+          "a single property value that appears frequently in the documents"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "19ab13538f9c7b958d33b1f5",
+        "question": "You are developing an ASP.NET Core Web API web service. The web service uses Azure Application Insights for all telemetry and dependency tracking. The web\nservice reads and writes data to a database other than Microsoft SQL Server.\nYou need to ensure that dependency tracking works for calls to the third-party database.\nWhich two Dependency Telemetry properties should you store in the database? Each correct answer presents part of the solution.\nNOTE: Each correct selection is worth one point.",
+        "answer": "Telemetry.Context.Operation.Id; Telemetry.Id",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/azure/azure-monitor/app/custom-operations-tracking)",
+        "hint": null,
+        "correctAnswer": [
+          "Telemetry.Context.Operation.Id",
+          "Telemetry.Id"
+        ],
+        "options": [
+          "Telemetry.Context.Operation.Id",
+          "Tetemetry.Context.Cloud.Rolelnstance",
+          "Telemetry.Id",
+          "Telemetry.ContextSession.Id"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "02d04aba00ffc6fbdb9c2a7d",
+        "question": "You are preparing to deploy an ASP.NET Core website to an Azure Web App from a GitHub repository. The website includes static content generated by a script.\nYou plan to use the Azure Web App continuous deployment feature.\nYou need to run the static generation script before the website starts serving traffic.\nWhat are two possible ways to achieve this goal? Each correct answer presents a complete solution. NOTE: Each correct selection is worth one point",
+        "answer": "Create a file named .deployment in the root of the repository that calls a script which generates the static content and deploys the website",
+        "explanation": "Explanation:\nA: To customize your deployment, include a .deployment file in the repository root.\nYou just need to add a file to the root of your repository with the name .deployment and the content: [config]\ncommand = YOUR COMMAND TO RUN FOR DEPLOYMENT\nthis command can be just running a script (batch file) that has all that is required for your deployment, like copying files from the repository to the web root directory\nfor example.\nD: In Azure, you can run your functions directly from a deployment package file in your function app. The other option is to deploy your files in the\nd:\\home\\site\\wwwroot directory of your function app (see A above).\nTo enable your function app to run from a package, you just add a WEBSITE_RUN_FROM_PACKAGE setting to your function app settings.\nNote: The host.json metadata file contains global configuration options that affect all functions for a function app.\n[Ref](https://github.com/projectkudu/kudu/wiki/Custom-Deployment-Script)\n[Ref](https://docs.microsoft.com/bs-latn-ba/azure/azure-functions/run-functions-from-deployment-package)",
+        "hint": null,
+        "correctAnswer": [
+          "Create a file named .deployment in the root of the repository that calls a script which generates the static content and deploys the website"
+        ],
+        "options": [
+          "Create a file named .deployment in the root of the repository that calls a script which generates the static content and deploys the website",
+          "Add a PreBuild target in the websites csproj project file that runs the static content generation script",
+          "Create a file named run.cmd in the folder /run that calls a script which generates the static content and deploys the website.",
+          "Add the path to the static content generation tool to WEBSITE_RUN_FROM_PACKAGE setting in the host.json file."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "55a7ca685c492629666e6589",
+        "question": "You provide an Azure API Management managed web service lo clients. The back end web service implements HTTP Strict Transport Security (HSTS).\nEvery request to the backend service must include a valid HTTP authorization header. You need to configure the Azure API Management instance with an\nauthentication policy. Which two policies can you uses? Each correct answer presents a complete solution NOTE: Each correct selection is worth one point.",
+        "answer": "Certificate Authentication; OAuth Client Credential Grant",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Certificate Authentication",
+          "OAuth Client Credential Grant"
+        ],
+        "options": [
+          "Certificate Authentication",
+          "Basic Authentication",
+          "OAuth Client Credential Grant",
+          "Digest Authentication"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "f93d9c22ce4dc85d5b3db780",
+        "question": "A company is implementing a publish-subscribe (Pub/Sub) messaging component by using Azure Service Bus. You are developing the first subscription\napplication.\nIn the Azure portal you see that messages are being sent to the subscription for each topic. You create and initialize a subscription client object by supplying the\ncorrect details, but the subscription application is still not consuming the messages.\nYou need to complete the source code of the subscription client What should you do",
+        "answer": "subscriptionClient.RegisterMessageHandler(ProcessMessagesAsync, messageHandlerOptions);",
+        "explanation": "Explanation:\nUsing topic client, call RegisterMessageHandler which is used to receive messages continuously from the entity. It registers a message handler and begins a new\nthread to receive messages. This handler is waited on every time a new message is received by the receiver.\nsubscriptionClient.RegisterMessageHandler(ReceiveMessagesAsync, messageHandlerOptions);\n[Ref](https://www.c-sharpcorner.com/article/azure-service-bus-topic-and-subscription-pub-sub/)",
+        "hint": null,
+        "correctAnswer": [
+          "subscriptionClient.RegisterMessageHandler(ProcessMessagesAsync, messageHandlerOptions);"
+        ],
+        "options": [
+          "await subscriptionClient.CloseAsync();",
+          "await subscriptionClient.AddRuleAsync(new RuleDescription(RuleDescription.DefaultRuleName, new TrueFilter()));",
+          "subscriptionClient.RegisterMessageHandler(ProcessMessagesAsync, messageHandlerOptions);",
+          "subscriptionClient = new SubscriptionClient(ServiceBusConnectionString, TopicName, SubscriptionName);"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c4627c3ab14b78a691200b22",
+        "question": "You develop a gateway solution for a public facing news API. The news API back end is implemented as a RESTful service and uses an OpenAPI specification.\nYou need to ensure that you can access the news API by using an Azure API Management service instance. Which Azure PowerShell command should you run?",
+        "answer": "New-AzureRmApiManagementBackendProxy \u2013Url $ApiUrl",
+        "explanation": "Explanation:\nNew-AzureRmApiManagementBackendProxy creates a new Backend Proxy Object which can be piped when creating a new Backend entity.\nExample: Create a Backend Proxy In-Memory Object\nPS C:\\>$secpassword = ConvertTo-SecureString \"PlainTextPassword\" -AsPlainText -Force\nPS C:\\>$proxyCreds = New-Object System.Management.Automation.PSCredential (\"foo\", $secpassword) PS C:\\>$credential = New\u0002AzureRmApiManagementBackendProxy\n-ProxyCredential $proxyCred\nPS C:\\>$apimContext = New-AzureRmApiManagementContext -ResourceGroupName \"Api-Default-WestUS\" -ServiceName \"contoso\"\nPS C:\\>$backend = New-AzureRmApiManagementBackend -Context $apimContext -BackendId 123 Protocol http -Title\n\"first backend\" -SkipCertificateChainValidation $true\n-Proxy $credential -Description \"backend with proxy server\"\nCreates a Backend Proxy Object and sets up Backend",
+        "hint": null,
+        "correctAnswer": [
+          "New-AzureRmApiManagementBackendProxy \u2013Url $ApiUrl"
+        ],
+        "options": [
+          "Import-AzureRmApiManagementApi \u2013Context $ApiMgmtContext \u2013SpecificationFormat \"Swagger\" -SpecificationPath $SwaggerPath \u2013Path $Path",
+          "New-AzureRmApiManagementBackend -Context $ApiMgmtContext -Url $Url -Protocol http",
+          "New-AzureRmApiManagement \u2013ResourceGroupName $ResourceGroup \u2013Name $Name \u2013 Location $Location \u2013Organization $Org \u2013AdminEmail $AdminEmail",
+          "New-AzureRmApiManagementBackendProxy \u2013Url $ApiUrl"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3e8a1e87da73d4a8e3e39039",
+        "question": "You are developing a mobile instant messaging app for a company. The mobile app must meet the following requirements:\n\u2022 Support offline data sync.\n\u2022 Update the latest messages during normal sync cycles. You need to implement Offline Data Sync.\nWhich two actions should you perform? Each conn I answer presents part of the solution. NOTE: Each correct selection is worth one point.",
+        "answer": "Retrieve records from Offline Data Sync using an Incremental Sync.; Return the updatedAt column from the Mobile Service Backend and implement sorting by the message id.",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-offline-data-sync)",
+        "hint": null,
+        "correctAnswer": [
+          "Retrieve records from Offline Data Sync using an Incremental Sync.",
+          "Return the updatedAt column from the Mobile Service Backend and implement sorting by the message id."
+        ],
+        "options": [
+          "Retrieve records from Offline Data Sync on every call to the PullAsync method.",
+          "Retrieve records from Offline Data Sync using an Incremental Sync.",
+          "Push records to Offline Data Sync using an Incremental Sync.",
+          ". Return the updatedAt column from the Mobile Service Backend and implement sorting by using the column.",
+          "Return the updatedAt column from the Mobile Service Backend and implement sorting by the message id."
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "3275e98126132b08f08bcea1",
+        "question": "You develop a website. You plan to host the website in Azure. You expect the website to experience high traffic volumes after it is published. You must ensure tha the website remains available and responsive while minimizing cost. You need to deploy the website. What should you do?",
+        "answer": "Deploy the website to a virtual machin",
+        "explanation": "Explanation:\nWindows Azure Web Sites (WAWS) offers 3 modes: Standard, Free, and Shared.\nStandard mode carries an enterprise-grade SLA (Service Level Agreement) of 99.9% monthly, even for sites with just one instance.\nStandard mode runs on dedicated instances, making it different from the other ways to buy Windows Azure Web Sites.",
+        "hint": null,
+        "correctAnswer": [
+          "Deploy the website to a virtual machin"
+        ],
+        "options": [
+          "Deploy the website to an App Service that uses the Shared service tie",
+          "Configure the App Service plan to automatically scale when the CPU load is high.",
+          "Deploy the website to a virtual machin",
+          ". Configure the virtual machine to automatically scale when the CPU load is high."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9aabe606ea616a7082f43f3b",
+        "question": "You develop a serverless application using several Azure Functions. These functions connect to data from within the code.\nYou want to configure tracing for an Azure Function App project. You need to change configuration settings in the hostjson file. Which tool should you use?",
+        "answer": "Azure porta",
+        "explanation": "Explanation:\nThe function editor built into the Azure portal lets you update the function.json file and the code file for a function. The host.json file, which contains some runtime\u0002specific configurations, is in the root folder of the function app\n[Ref](https://docs.microsoft.com/en-us/azure/azure-functions/functions-reference#fileupdate)",
+        "hint": null,
+        "correctAnswer": [
+          "Azure porta"
+        ],
+        "options": [
+          "Azure porta",
+          "Azure PowerShell",
+          "Azure Functions Core Tools (Azure CLI)",
+          "Visual Studio"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fb1ac047742b3d94b1a758a9",
+        "question": "You are developing an internal website for employees to view sensitive data. The website uses Azure Active Directory (AAD) for authentication. You need to\nimplement multifactor authentication for the website.\nWhat should you do? Each correct answer presents part of the solution. NOTE; Each correct selection is worth one point",
+        "answer": "In Azure AD, create a new conditional access policy.; Upgrade to Azure AD Premium.",
+        "explanation": "[Ref](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-getstarted)",
+        "hint": null,
+        "correctAnswer": [
+          "In Azure AD, create a new conditional access policy.",
+          "Upgrade to Azure AD Premium."
+        ],
+        "options": [
+          "In Azure AD, create a new conditional access policy.",
+          "In Azure AD, enable application proxy.",
+          "Configure the website to use Azure AD B2C.",
+          "In Azure AD conditional access, enable the baseline policy.",
+          "Upgrade to Azure AD Premium."
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "fcf306ab350b18fd67664b2e",
+        "question": "You must implement Application Insights instrumentation capabilities utilizing the Azure Mobile Apps SDK to provide meaningful analysis of user interactions with a\nmobile app. You need to capture the data required to implement the Usage Analytics feature of Application Insights. Which three data values should you capture? Each correct\nanswer presents part of the solution\nNOTE: Each correct selection is worth one point.",
+        "answer": "Trace; User Id; Events",
+        "explanation": "Explanation:\nApplication Insights is a service for monitoring the performance and usage of your apps. This module allows you to send telemetry of various kinds (events, traces,\netc.) to the Application Insights service where your data can be visualized in the Azure Portal. Application Insights manages the ID of a session for you.\n[Ref](https://github.com/microsoft/ApplicationInsights-Android)",
+        "hint": null,
+        "correctAnswer": [
+          "Trace",
+          "User Id",
+          "Events"
+        ],
+        "options": [
+          "Trace",
+          "Session Id",
+          "Exception",
+          "User Id",
+          "Events"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "a4cd50a9e1f3f7d1983e07a1",
+        "question": "You develop Azure solutions.\nYou must connect to a No-SQL globally-distributed database by using the .NET API. You need to create an object to configure and execute requests in the\ndatabase. Which code segment should you use?",
+        "answer": "new CosmosClient(EndpointUri, PrimaryKey);",
+        "explanation": "Explanation:\nExample:\n// Create a new instance of the Cosmos Client\nthis.cosmosClient = new CosmosClient(EndpointUri, PrimaryKey)\n//ADD THIS PART TO YOUR CODE\nawait this.CreateDatabaseAsync();\n[Ref](https://docs.microsoft.com/en-us/azure/cosmos-db/sql-api-get-started)",
+        "hint": null,
+        "correctAnswer": [
+          "new CosmosClient(EndpointUri, PrimaryKey);"
+        ],
+        "options": [
+          "new Container(EndpointUri, PrimaryKey)",
+          "new Database(Endpoint, PrimaryKey);",
+          "new CosmosClient(EndpointUri, PrimaryKey);"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a12097ff578ac38c8a72d163",
+        "question": "Your company plans to migrate all its data and resources to Azure. The company's migration plan states that only Platform as a Service (PaaS) solutions must be used in Azure. You need to deploy an Azure environment that meets the company's migration plan. What should you create?",
+        "answer": "an Azure App Service and Azure SQL databases.; Define your strategy.; an Azure data center failure; ExpressRoute; Premium plan",
+        "explanation": "[Ref](https://azurecharts.com/overview/?f=paas)\n### Q102. What is the first stage in the Microsoft Cloud Adoption Framework for Azure?\n[Ref](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/overview)\n### Q103. You need to identify the type of failure for which an Azure Availability Zone can be used to protect access to Azure services. What should you identify?\n[Ref](https://docs.microsoft.com/en-us/azure/virtual-machines/availability)\n### Q104. You need to configure an Azure Virtual Network (VNet) to allow communication between on-premises resources and Azure resources. Which VNet configuration should you use?\n**Explanation:**\nExpressRoute is the correct choice for configuring an Azure VNet to allow communication between on-premises resources and Azure resources. ExpressRoute is a dedicated, private connection between your on-premises network and the Microsoft cloud, which provides higher bandwidth, more reliability, and lower latencies compared to a VPN connection.\nPoint-to-Site VPN and Site-to-Site VPN are used to connect individual client devices or on-premises networks to an Azure VNet, respectively, but they do not provide the same level of performance and reliability as ExpressRoute.\nVirtual Network Peering is used to connect two Azure VNets, not to connect an on-premises network to Azure.\n[Ref: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/]\n### Q105. You are designing a serverless application that uses Azure Functions to process data from an Azure Event Hub. The application must be able to scale automatically to handle varying event volumes. Which scaling option should you choose?\nExplanation:\nThe Premium plan is the correct choice for scaling an Azure Functions application that processes data from an Azure Event Hub. The Premium plan provides automatic scaling based on the number of events being processed, which is ideal for handling varying event volumes.\nThe Consumption plan is a good option for simple, event-driven functions, but it may not scale as effectively for high-volume event processing.\nThe Dedicated plan and Elastic Premium plan are not valid options for Azure Functions. The Dedicated plan is used for App Service plans, and the Elastic Premium plan is a feature of Azure SQL Database, not Azure Functions.\n[Ref: https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale]",
+        "hint": null,
+        "correctAnswer": [
+          "an Azure App Service and Azure SQL databases.",
+          "Define your strategy.",
+          "an Azure data center failure",
+          "ExpressRoute",
+          "Premium plan"
+        ],
+        "options": [
+          "Azure virtual machines, Azure SQL databases, and Azure Storage accounts.",
+          "Azure storage accounts and web server in Azure virtual machines.",
+          "an Azure App Service and Azure virtual machines that have Microsoft SQL Server installed.",
+          "an Azure App Service and Azure SQL databases.",
+          "Adopt the cloud.",
+          "Make a plan.",
+          "Define your strategy.",
+          "Ready your organization.",
+          "a physical server failure",
+          "an Azure data center failure",
+          "an Azure region failure",
+          "a storage failure",
+          "Point-to-Site VPN",
+          "Site-to-Site VPN",
+          "ExpressRoute",
+          "Virtual Network Peering",
+          "Consumption plan",
+          "Premium plan",
+          "Dedicated plan",
+          "Elastic Premium plan"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "microsoft-azure/microsoft-azure-quiz.md",
+    "language": "md",
+    "generatedAt": "2025-12-09T14:56:14.346741+00:00",
+    "warnings": []
+  }
+}

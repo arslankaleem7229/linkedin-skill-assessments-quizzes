@@ -1,0 +1,2905 @@
+{
+  "quizz": {
+    "id": "554217b586ca57e9b173ab67",
+    "title": "CSS",
+    "description": "Seeded from css/css-quiz.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "aff46f643a2604471a505f56",
+        "question": "Among these selectors which selector has the highest specificity ranking for selecting the anchor link element?\n```css\nul li a\na\n.example a\ndiv a\n```",
+        "answer": "`.example a`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`.example a`"],
+        "options": ["`.example a`", "`div a`", "`a`", "`ul li a`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f720c1a8cfab519ddd815d2f",
+        "question": "Using an attribute selector, how would you select an `<a>` element with a \"title\" attribute?",
+        "answer": "`a[title]{...}`",
+        "explanation": "**Note:** an alternative to the question below.",
+        "hint": null,
+        "correctAnswer": ["`a[title]{...}`"],
+        "options": ["`a[title]{...}`", "`a > title {...}`", "`a.title {...}`", "`a=title {...}`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7e9681c402571af501bc2df9",
+        "question": "What is the CSS selector for an `<a>` tag containing the title attribute?",
+        "answer": "`a[title]`",
+        "explanation": "**Note:** an alternative to the question above.",
+        "hint": null,
+        "correctAnswer": ["`a[title]`"],
+        "options": ["`a[title]`", "`a > title`", "`a=title`", "`a.title`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "30ae8a380760e863f8a2e074",
+        "question": "CSS grid and flexbox are now becoming a more popular way to create page layouts. However, floats are still commonly used, especially when working with an older code base, or if you need to support an older browser version. What are two valid techniques used to clear floats?",
+        "answer": "Use the \"clearfix hack\" on the parent element or use the overflow property with a value other than \"visible.\"",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Use the \"clearfix hack\" on the parent element or use the overflow property with a value other than \"visible.\""
+        ],
+        "options": [
+          "Use the \"clearfix hack\" on the floated element and add a float to the parent element.",
+          "Use the overflow property on the floated element or the \"clearfix hack\" on either the floated or parent element.",
+          "Use the \"clearfix hack\" on the floated element or the overflow property on the parent element.",
+          "Use the \"clearfix hack\" on the parent element or use the overflow property with a value other than \"visible.\""
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "688587141e112d693fcb52fa",
+        "question": "What element(s) do the following selectors match?\n```css\n1) .nav {\n  ...;\n}\n2) nav {\n  ...;\n}\n3) #nav {\n  ...;\n}\n```",
+        "answer": "C",
+        "explanation": "```\n1. An element with an ID of \"nav\"\n2. A nav element\n3. An element with a class of \"nav\"\n```\n```\n1. An element with a class of \"nav\"\n2. A nav element\n3. An element with an id of \"nav\"\n```\n```\n1. An element with a class of \"nav\"\n2. A nav element\n3. A div with an id of \"nav\"\n```",
+        "hint": null,
+        "correctAnswer": ["C"],
+        "options": ["A", "B `They all target the same nav element.`", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8bce3bc9c21529a57cbf86bc",
+        "question": "When adding transparency styles, what is the difference between using the opacity property versus the background property with a `rgba()` value?",
+        "answer": "Opacity specifies the level of transparency of an element, including its content. Background with a `rgba()` value applies transparency to the background color only.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Opacity specifies the level of transparency of an element, including its content. Background with a `rgba()` value applies transparency to the background color only."
+        ],
+        "options": [
+          "Opacity specifies the level of transparency of the child elements. Background with a `rgba()` value applies transparency to the background color only.",
+          "Opacity applies transparency to the background color only. Background with an `rgba()` value specifies the level of transparency of an element, as a whole, including its content.",
+          "Opacity specifies the level of transparency of an element, including its content. Background with a `rgba()` value applies transparency to the background color only.",
+          "Opacity applies transparency to the parent and child elements. Background with a `rgba()` value specifies the level of transparency of the parent element only."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "00605c1274f0c925977c05be",
+        "question": "What is true of block and inline elements? (_Alternative_: Which statement about block and inline elements is true?)",
+        "answer": "By default, block elements span the entire width of their container; inline elements are the same height and width as the content contained between their tags.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "By default, block elements span the entire width of their container; inline elements are the same height and width as the content contained between their tags."
+        ],
+        "options": [
+          "By default, block elements are the same height and width as the content container between their tags; inline elements span the entire width of its container.",
+          "By default, block elements span the entire width of their container; inline elements are the same height and width as the content contained between their tags.",
+          "A `<nav>` element is an example of an inline element. `<header>` is an example of a block element.",
+          "A `<span>` is an example of a block element. `<div>` is an example of an inline element."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5e40c0020a48dce6fc50a0d0",
+        "question": "CSS grid introduced a new length unit, fr, to create flexible grid tracks. Referring to the code sample below, what will the widths of the three columns be?\n```css\n.grid {\n  display: grid;\n  width: 500px;\n  grid-template-columns: 50px 1fr 2fr;\n}\n```",
+        "answer": "The first column will have a width of 50px. The second column will be 150px wide and the third column will be 300px wide.",
+        "explanation": "**Note:**an alternative to the question below.`",
+        "hint": null,
+        "correctAnswer": [
+          "The first column will have a width of 50px. The second column will be 150px wide and the third column will be 300px wide."
+        ],
+        "options": [
+          "The first column will have a width of 50px. The second column will be 50px wide and the third column will be 100px wide.",
+          "The first column will have a width of 50px. The second column will be 150px wide and the third column will be 300px wide.",
+          "The first column will have a width of 50px. The second column will be 300px wide and the third column will be 150px wide.",
+          "The first column will have a width of 50px. The second column will be 500px wide and the third column will be 1000px wide."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7133096a29eb398e507fc3ed",
+        "question": "If the width of the container is 500 pixels, what would the width of the three columns be in this layout?\n`.grid { display: grid; grid-template-columns: 50px 1fr 2fr; }`",
+        "answer": "50px, 150px, 300px",
+        "explanation": "**Note:**an alternative to the question above.`",
+        "hint": null,
+        "correctAnswer": ["50px, 150px, 300px"],
+        "options": [
+          "50px, 150px, 300px",
+          "50px, 200px, 300px",
+          "50px, 100px, 200px",
+          "50px, 50px, 100px"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1cf74ea852a30432e2c500e4",
+        "question": "What is the use of line-height property?",
+        "answer": "to control the height of the space between two lines of content",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["to control the height of the space between two lines of content"],
+        "options": [
+          "to control the height of the space between two lines of content",
+          "to control the height of the space between heading elements",
+          "to control the height of the character size",
+          "to control the width of the space between characters"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1c533ba86335de86a48a2de7",
+        "question": "Three of these choices are true about class selectors. Which is NOT true?",
+        "answer": "Classes can be used multiple times per page but not within the same element.",
+        "explanation": "**Note:**an alternative to the question below.`",
+        "hint": null,
+        "correctAnswer": [
+          "Classes can be used multiple times per page but not within the same element."
+        ],
+        "options": [
+          "Multiple classes can be used within the same element.",
+          "The same class can be used multiple times per page.",
+          "Class selectors begin with a leading period",
+          "Classes can be used multiple times per page but not within the same element."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a7482f9afdd92327a5b5356a",
+        "question": "What is not true about class selectors?",
+        "answer": "Only one class value can be assigned to an element.",
+        "explanation": "**Note:**an alternative to the question above.`",
+        "hint": null,
+        "correctAnswer": ["Only one class value can be assigned to an element."],
+        "options": [
+          "Only one class value can be assigned to an element.",
+          "An element can have multiple class values.",
+          "Class selectors are marked with a leading period.",
+          "More than one element can have the same class value."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9ed1b3dd1a5f61ce634c466c",
+        "question": "There are many properties that can be used to align elements and create page layouts such as float, position, flexbox, and grid. Of these four properties, which one should be used to align a global navigation bar that stays fixed at the top of the page?",
+        "answer": "position",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["position"],
+        "options": ["position", "flexbox", "grid", "float"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fb84480e30390bd7f946aa1a",
+        "question": "In the shorthand example below, which individual background properties are represented?\n```css\nbackground: blue url(image.jpg) no-repeat scroll 0px 0px;\n```",
+        "answer": "A",
+        "explanation": "```css\nbackground-color: blue;\nbackground-image: url(image.jpg);\nbackground-repeat: no-repeat;\nbackground-attachment: scroll;\nbackground-position: 0px 0px;\n```\n```css\nbackground-color: blue;\nbackground-img: URL(image.jpg);\nbackground-position: no-repeat;\nbackground-scroll: scroll;\nbackground-size: 0px 0px;\n```\n```css\nbackground-color: blue;\nbackground-src: URL(image.jpg);\nbackground-repeat: no-repeat;\nbackground-wrap: scroll;\nbackground-position: 0px 0px;\n```\n```css\nbackground-color: blue;\nbackground-src: URL(image.jpg);\nbackground-repeat: no-repeat;\nbackground-scroll: scroll;\nbackground-position: 0px 0px;\n```",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "10a1fc3e3784ef8f90b93b05",
+        "question": "In this example, according to cascading and specificity rules, what color will the link be?\n```css\n.example {\n  color: yellow;\n}\nul li a {\n  color: blue;\n}\nul a {\n  color: green;\n}\na {\n  color: red;\n}\n```\n```HTML\n<ul>\n  <li><a href=\"#\" class=\"example\">link</a></li>\n  <li>list item</li>\n  <li>list item</li>\n</ul>\n```",
+        "answer": "yellow",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["yellow"],
+        "options": ["green", "yellow", "blue", "red"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "84d1c0498928ec6a162a328b",
+        "question": "When elements overlap, they are ordered on the z-axis (i.e., which element covers another). The z-index property can be used to specify the z-order of overlapping elements. Which set of statements about the z-index property are true?",
+        "answer": "Larger z-index values appear on top of elements with a lower z-index value. Negative and positive numbers can be used. z-index can only be used on positioned elements.",
+        "explanation": "**Note:**an alternative to the question below.`",
+        "hint": null,
+        "correctAnswer": [
+          "Larger z-index values appear on top of elements with a lower z-index value. Negative and positive numbers can be used. z-index can only be used on positioned elements."
+        ],
+        "options": [
+          "Larger z-index values appear on top of elements with a lower z-index value. Negative and positive numbers can be used. z-index can only be used on positioned elements.",
+          "Smaller z-index values appear on top of elements with a larger z-index value. Negative and positive numbers can be used. z-index must also be used with positioned elements.",
+          "Larger z-index values appear on top of elements with a lower z-index value. Only positive numbers can be used. z-index must also be used with positioned elements.",
+          "Smaller z-index values appear on top of elements with a larger z-index value. Negative and positive numbers can be used. z-index can be used with or without positioned elements."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "933811adf5f513a9182a561e",
+        "question": "When elements within a container overlap, the z-index property can be used to indicate how those items are stacked on top of each other. Which set of statements is true?",
+        "answer": "A",
+        "explanation": "```\n1. Larger z-index values appear on top elements with a lower z-index value.\n2. Negative and positive numbers can be used.\n3. The z-index can be used only on positioned elements.\n```\n```\n1. Smaller z-index values appear on top of elements with a larger z-index value.\n2. Negative and positive numbers can be used.\n3. The z-index can be used with or without positioned elements.\n```\n```\n1. Smaller z-index values appear on top of elements with a larger z-index value.\n2. Negative and positive numbers can be used.\n3. The z-index must also be used with positioned elements.\n```\n```\n1. Larger z-index values appear on top of elements with a lower z-index value.\n2. Only a positive number can be used.\n3. The z-index must also be used with positioned elements.\n```\n**Note:**an alternative to the question above.`",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4b3a7d02aea7cd084192a0d9",
+        "question": "What is the difference between the following line-height settings?\n```css\nline-height: 20px;\nline-height: 2;\n```",
+        "answer": "The value of 20px will set the line-height to 20px. The value of 2 will set the line height to twice the size of the corresponding font-size value.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The value of 20px will set the line-height to 20px. The value of 2 will set the line height to twice the size of the corresponding font-size value."
+        ],
+        "options": [
+          "The value of 20px will set the line-height to 20px. The value of 2 will set the line height to twice the size of the corresponding font-size value.",
+          "The value of 20px will set the line-height to 20px. The value of 2 is not valid.",
+          "The value of 20px will set the line-height to 20px. The value of 2 will default to a value of 2px.",
+          "The value of 20px will set the line-height to 20px. The value of 2 will set the line height to 20% of the corresponding font-size value."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a16792eb369119712fff0e8a",
+        "question": "In the following example, what color will paragraph one and paragraph two be? (_Alternative_: In this example, what color will paragraphs one and two be?)\n```HTML\n<section>\n  <p>paragraph one</p>\n</section>\n<p>paragraph two</p>\n```\n```css\nsection p {\n  color: red;\n}\nsection + p {\n  color: blue;\n}\n```",
+        "answer": "Paragraph one will be red, and paragraph two will be blue.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Paragraph one will be red, and paragraph two will be blue."],
+        "options": [
+          "Paragraph one will be blue, and paragraph two will be red.",
+          "Both paragraphs will be blue.",
+          "Paragraph one will be red, and paragraph two will be blue.",
+          "Both paragraphs will be red."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3bbc2ebf1896a4d34c160ec3",
+        "question": "What are three valid ways of adding CSS to an HTML page?",
+        "answer": "D",
+        "explanation": "```\n1. External; CSS is written in a separate file.\n2. Inline; CSS is added to the <head> of the HTML page.\n3. Internal; CSS is included within the HTML tags.\n```\n```\n1. External; CSS is written in a separate file and is linked within the <header> element of the HTML file.\n2. Inline; CSS is added to the HTML tag.\n3. Internal; CSS is included within the <header> element of the HTML file.\n```\n```\n1. External; CSS is written in a separate file and is linked within the <head> element of the HTML file.\n2. Internal; CSS is included within the <header> element of the HTML file.\n3. Inline; CSS is added to the HTML tag.\n```\n```\n1. External; CSS is written in a separate file and is linked within the <head> element of the HTML file.\n2. Inline; CSS is added to the HTML tag.\n3. Internal; CSS is included within the <head> element of the HTML file.\n```",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "211ee7c907518789760c6b21",
+        "question": "Which statement is true for the SVG image format?",
+        "answer": "SVGs can be created as a vector graphic or coded using SVG-specific elements such as &#x3C;svg&#x3E;, &#x3C; line&#x3E;, and &#x3C; ellipse&#x3E;.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "SVGs can be created as a vector graphic or coded using SVG-specific elements such as &#x3C;svg&#x3E;, &#x3C; line&#x3E;, and &#x3C; ellipse&#x3E;."
+        ],
+        "options": [
+          "CSS can be applied to SVG but JavaScript cannot be.",
+          "SVGs work best for creating 3D graphics.",
+          "SVGs can be created as a vector graphic or coded using SVG-specific elements such as &#x3C;svg&#x3E;, &#x3C; line&#x3E;, and &#x3C; ellipse&#x3E;.",
+          "SVGs are a HAML-based markup language for creating vector graphics."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "af2d48a790e9dac6656777ab",
+        "question": "In the example below, when will the color pink be applied to the anchor element?\n```css\na:active {\n  color: pink;\n}\n```",
+        "answer": "The color of the link will display as pink while the link is being clicked but before the mouse click is released.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The color of the link will display as pink while the link is being clicked but before the mouse click is released."
+        ],
+        "options": [
+          "The color of the link will display as pink after it has been clicked or if the mouse is hovering over the link.",
+          "The color of the link will display as pink on mouse hover.",
+          "The color of the link will display as pink while the link is being clicked but before the mouse click is released.",
+          "The color of the link will display as pink before it has been clicked."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f3b2875d27c5477f577b5e15",
+        "question": "To change the color of an SVG using CSS, which property is used?",
+        "answer": "Use fill to set the color inside the object and stroke to set the color of the border.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Use fill to set the color inside the object and stroke to set the color of the border."
+        ],
+        "options": [
+          "Use background-fill to set the color inside the object and stroke or border to set the color of the border.",
+          "The color cannot be changed with CSS.",
+          "Use fill or background to set the color inside the object and stroke to set the color of the border.",
+          "Use fill to set the color inside the object and stroke to set the color of the border."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "60c70dfa9d884d387313cb30",
+        "question": "When using position: fixed, what will the element always be positioned relative to?",
+        "answer": "the viewport",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["the viewport"],
+        "options": [
+          "the closest element with position: relative",
+          "the viewport",
+          "the parent element",
+          "the wrapper element"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "62f0492b6c7bbcb6b339e2fa",
+        "question": "By default, a background image will repeat \\_",
+        "answer": "indefinitely, vertically, and horizontally",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["indefinitely, vertically, and horizontally"],
+        "options": [
+          "only if the background-repeat property is set to repeat",
+          "indefinitely, vertically, and horizontally",
+          "indefinitely on the horizontal axis only",
+          "once, on the x and y axis"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ee217b522a9b5925bfe2a3c0",
+        "question": "When using media queries, media types are used to target a device category. Which choice lists current valid media types?",
+        "answer": "print, screen, speech",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["print, screen, speech"],
+        "options": [
+          "print, screen, aural",
+          "print, screen, television",
+          "print, screen, speech",
+          "print, speech, device"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "be60f5ac12280653153839ae",
+        "question": "How would you make the first letter of every paragraph on the page red?",
+        "answer": "p::first-letter { color: red; }",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["p::first-letter { color: red; }"],
+        "options": [
+          "p::first-letter { color: red; }",
+          "p:first-letter { color: red; }",
+          "first-letter::p { color: red; }",
+          "first-letter:p { color: red; }"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "153cd72641b9aed84ea00708",
+        "question": "In this example, what is the selector, property, and value?\n```css\np {\n  color: #000000;\n}\n```",
+        "answer": "B",
+        "explanation": "```\n\"p\" is the selector\n\"#000000\" is the property\n\"color\" is the value\n```\n```\n\"p\" is the selector\n\"color\" is the property\n\"#000000\" is the value\n```\n```\n\"color\" is the selector\n\"#000000\" is the property\n\"#p\" is the value\n```\n```\n\"color\" is the selector\n\"p\" is the property\n\"#000000\" is the value\n```",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "adf624425b5c960b9852dfec",
+        "question": "What is the rem unit based on?",
+        "answer": "The rem unit is relative to the font-size of the root element of the page.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The rem unit is relative to the font-size of the root element of the page."
+        ],
+        "options": [
+          "The rem unit is relative to the font-size of the p element.",
+          "You have to set the value for the rem unit by writing a declaration such as rem { font-size: 1 Spx; }",
+          "The rem unit is relative to the font-size of the containing (parent) element.",
+          "The rem unit is relative to the font-size of the root element of the page."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "992cf77e4d6a778fea846eaa",
+        "question": "Which choice would give a block element rounded corners?",
+        "answer": "`border-radius: 10px;`",
+        "explanation": "[Official doc:](https://www.w3schools.com/css/css3_borders.asp)",
+        "hint": null,
+        "correctAnswer": ["`border-radius: 10px;`"],
+        "options": [
+          "`corner-radius: 10px;`",
+          "`border-corner: 10px;`",
+          "`corner-curve: 10px;`",
+          "`border-radius: 10px;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "11f69834e32d2db5fae88c8e",
+        "question": "In the following media query example, what conditions are being targeted?\n```css\n@media (min-width: 1024px), screen and (orientation: landscape) { \u2026 }\n```",
+        "answer": "The rule will apply to a device that has either a width of 1024px or wider or is a screen device in landscape mode.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The rule will apply to a device that has either a width of 1024px or wider or is a screen device in landscape mode."
+        ],
+        "options": [
+          "The rule will apply to a device that has either a width of 1024px or wider or is a screen device in landscape mode.",
+          "The rule will apply to a device that has a width of 1024px or narrower and is a screen device in landscape mode.",
+          "The rule will apply to a device that has a width of 1024px or wider and is a screen device in landscape mode.",
+          "The rule will apply to a device that has a width of 1024px or narrower or is a screen device in landscape mode."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4f0a59e49d71fc981027700c",
+        "question": "CSS transform properties are used to change the shape and position of the selected objects. The transform-origin property specifies the location of the element's transformation origin. By default, what is the location of the origin?",
+        "answer": "the center of the element",
+        "explanation": "[Reference](https://www.w3schools.com/cssref/css3_pr_transform-origin.php)",
+        "hint": null,
+        "correctAnswer": ["the center of the element"],
+        "options": [
+          "the top left corner of the element",
+          "the center of the element",
+          "the top right corner of the element",
+          "the bottom left of the element"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "92b3e49fd774b32ef9c7e469",
+        "question": "Which of the following is not a valid color value? (_Alternative:_ Which choice is not a valid color value?)",
+        "answer": "`color: 000000`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`color: 000000`"],
+        "options": ["`color: #000`", "`color: rgb(0,0,0)`", "`color: #000000`", "`color: 000000`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9861ccd46ef7ad5a483593c4",
+        "question": "What is the vertical gap between the two elements below?\n```HTML\n<div style=\"margin-bottom: 2rem;\">Div 1</div>\n<div style=\"margin-top: 2rem;\">Div 2</div>\n```",
+        "answer": "2rem",
+        "explanation": "[Reference MDN Webdocs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)",
+        "hint": null,
+        "correctAnswer": ["2rem"],
+        "options": ["2rem", "32px", "64px", "4rem"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bcd91dff6c30813e8f35a0e9",
+        "question": "When using the Flexbox method, what property and value is used to display flex items in a column?",
+        "answer": "flex-flow: column; or flex-direction: column;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["flex-flow: column; or flex-direction: column;"],
+        "options": [
+          "flex-flow: column; or flex-direction: column;",
+          "flex-flow: column;",
+          "flex-column: auto;",
+          "flex-direction: column;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "081b704df11b8dbabf23ed0e",
+        "question": "Which type of declaration will take precedence?",
+        "answer": "important declarations in author stylesheets",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["important declarations in author stylesheets"],
+        "options": [
+          "any declarations in user-agent stylesheets",
+          "important declarations in user stylesheets",
+          "normal declarations in author stylesheets",
+          "important declarations in author stylesheets"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7a8f4fe2ce83d4768a901794",
+        "question": "The flex-direction property is used to specify the direction in which flex items are displayed. What are the values used to specify the direction of the items in the following examples?\n![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png)",
+        "answer": "&shy;",
+        "explanation": "- Example 1: `flex-direction: row;`\n- Example 2: `flex-direction: row-reverse;`\n- Example 3: `flex-direction: column;`\n- Example 4: `flex-direction: column-reverse;`\n- Example 1: `flex-direction: row-reverse;`\n- Example 2: `flex-direction: row;`\n- Example 3: `flex-direction: column-reverse;`\n- Example 4: `flex-direction: column;`\n- Example 1: `flex-direction: row;`\n- Example 2: `flex-direction: row-reverse;`\n- Example 3: `flex-direction: column;`\n- Example 4: `flex-direction: reverse-column;`\n- Example 1: `flex-direction: column;`\n- Example 2: `flex-direction: column-reverse;`\n- Example 3: `flex-direction: row;`\n- Example 4: `flex-direction: row-reverse;`",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "c97769f6d7b1be9b06a57a1b",
+            "url": "https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "cb4152b3cdaf2746b58b6201",
+        "question": "There are two sibling combinators that can be used to select elements contained within the same parent element; the general sibling combinator (~) and the adjacent sibling combinator (+). Referring to the example below, which elements will the styles be applied to?\n```css\nh2 ~ p {\n  color: blue;\n}\nh2 + p {\n  background: beige;\n}\n```\n```HTML\n<section>\n  <p>paragraph 1</p>\n  <h2>Heading</h2>\n  <p>paragraph 2</p>\n  <p>paragraph 3</p>\n</section>\n```",
+        "answer": "Paragraphs 2, and 3 will be blue, and paragraph 2 will have a beige background.",
+        "explanation": "Note: a variant of the question below.",
+        "hint": null,
+        "correctAnswer": [
+          "Paragraphs 2, and 3 will be blue, and paragraph 2 will have a beige background."
+        ],
+        "options": [
+          "Paragraphs 2 and 3 will be blue. The h2 and paragraph 2 will have a beige background.",
+          "Paragraphs 2, and 3 will be blue, and paragraph 2 will have a beige background.",
+          "Paragraph 2 will be blue. Paragraphs 2 and 3 will have a beige background."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d03880e0adf6e25978ace5b1",
+        "question": "Which element(s) will be blue?\n```css\nh2 ~ p {\n  color: blue;\n}\n```\n```HTML\n<section>\n  <p>P1</p>\n  <h2>H2</h2>\n  <p>P3</p>\n  <p>P4</p>\n</section>\n```",
+        "answer": "P3 and P4",
+        "explanation": "[Reference](https://www.w3docs.com/snippets/css/what-does-the-css-tilde-selector-mean.html)",
+        "hint": null,
+        "correctAnswer": ["P3 and P4"],
+        "options": ["P3", "P1, P3 and P4", "P3 and P4", "P1"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "00c9cbd10109a47fa65bd3f2",
+        "question": "When using Flexbox, the \"justify-content\" property can be used to distribute the space between the flex items along the main axis. Which value should be used to evenly distribute the flex items within the container shown below?\n![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png)",
+        "answer": "justify-content: space-between;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["justify-content: space-between;"],
+        "options": [
+          "justify-content: space-around;",
+          "justify-content: center;",
+          "justify-content: auto;",
+          "justify-content: space-between;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "7a4310db559d2d5496b0999c",
+            "url": "https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "a97f4b49ed57cb3d1fb7f693",
+        "question": "There are many advantages to using icon fonts. What is one of those advantages?",
+        "answer": "Icon fonts can be styled with typography-related properties such as font-size and color.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Icon fonts can be styled with typography-related properties such as font-size and color."
+        ],
+        "options": [
+          "Icon fonts increase accessibility.",
+          "Icon fonts can be used to replace custom fonts.",
+          "Icon fonts can be styled with typography-related properties such as font-size and color.",
+          "Icon fonts are also web-safe fonts."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7c2b3611da01da14159999dd",
+        "question": "What is the difference between `display:none` and `visibility:hidden`?",
+        "answer": "display:none hides the element from view and removes it from the normal flow of the document. visibility:hidden will hide the element but maintain the space it previously occupied.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "display:none hides the element from view and removes it from the normal flow of the document. visibility:hidden will hide the element but maintain the space it previously occupied."
+        ],
+        "options": [
+          "Both will hide the element on the page, but display:none has greater browser support. visibility:hidden is a new property and does not have the best browser support",
+          "display:none hides the elements but maintains the space it previously occupied. visibility:hidden will hide the element from view and remove it from the normal flow of the document",
+          "display:none hides the element from view and removes it from the normal flow of the document. visibility:hidden will hide the element but maintain the space it previously occupied.",
+          "There is no difference; both will hide the element on the page"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "700d297fba205ace82fcb6f7",
+        "question": "What selector and property would you use to scale an element to be 50% smaller on hover?",
+        "answer": "element:hover {transform: scale(0.5);}",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["element:hover {transform: scale(0.5);}"],
+        "options": [
+          "element:hover {scale: 0.5;}",
+          "element:hover {transform: scale(0.5);}",
+          "element:hover {scale: 50%;}",
+          "element:hover {transform: scale(50%);}"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d0738b6f9dc98092f99cdff7",
+        "question": "Which statement regarding icon fonts is true?",
+        "answer": "Icon fonts can be styled with typography-related properties such as font-size and color.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Icon fonts can be styled with typography-related properties such as font-size and color."
+        ],
+        "options": [
+          "Icon fonts can be inserted only using JavaScript.",
+          "Icon fonts are inserted as inline images.",
+          "Icon fonts require browser extensions.",
+          "Icon fonts can be styled with typography-related properties such as font-size and color."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bb939c33d828b58c8f83048a",
+        "question": "The values for the font-weight property can be keywords or numbers. For each numbered value below, what is the associated keyword?\n```css\nfont-weight: 400;\nfont-weight: 700;\n```",
+        "answer": "normal; bold",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["normal; bold"],
+        "options": ["bold; normal", "normal; bold", "light; normal", "normal; bolder"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b833c1c7444db69b5a101848",
+        "question": "Using the :nth-child pseudo-class, what would be the most efficient way to style every third item in a list, no matter how many items are present, starting with item 2?",
+        "answer": "B",
+        "explanation": "```css\nli:nth-child(3 + 2n) {\nmargin: 0 5px;\n}\n```\n```css\nli:nth-child(3n + 2) {\nmargin: 0 5px;\n}\n```\n```css\nli:nth-child(2),\nli:nth-child(5),\nli:nth-child(8) {\nmargin: 0 5px;\n}\n```\n```css\nli:nth-child(2n + 3) {\nmargin: 0 5px;\n}\n```",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3c2984b109acb2f94e05acf8",
+        "question": "Which selector would select only internal links within the current page?",
+        "answer": "`a[href^=\"#\"]`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`a[href^=\"#\"]`"],
+        "options": [
+          "`a[href=\"#\"] {...}`",
+          "`a[href~=\"#\"]`",
+          "`a[href^=\"#\"]`",
+          "`a[href=\"#\"]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "97fa48f00a92e774574ab685",
+        "question": "What is the difference between the margin and padding properties?",
+        "answer": "Margin adds space around an element; padding adds space inside of an element.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Margin adds space around an element; padding adds space inside of an element."
+        ],
+        "options": [
+          "Margin adds space around and inside of an element; padding adds space only inside of an element.",
+          "Margin adds space around an element; padding adds space inside of an element.",
+          "Margin adds a line around an element, and padding adds space inside of an element.",
+          "Margin adds space inside of an element, and padding adds space around an element."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7290a5d6101a08aae3d3622b",
+        "question": "What is not a valid way of declaring a padding value of 10 pixels on the top and bottom, and 0 pixels on the left and right?",
+        "answer": "padding: 10px 10px 0px 0px;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["padding: 10px 10px 0px 0px;"],
+        "options": [
+          "padding: 10px 10px 0px 0px;",
+          "padding: 10px 0px;",
+          "padding: 10px 0;",
+          "padding: 10px 0px 10px 0px;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9d07f9ef8f09039891f6e28b",
+        "question": "Is there an error in this code? If so, find the best description of the problem\n```css\n@font-face {\n  font-family: 'Avenir', sans-serif;\n  src:\n    url('avenir.woff2') format('woff2'),\n    url('avenir.woff') format('woff');\n}\n```",
+        "answer": "The sans-serif inclusion is problematic.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["The sans-serif inclusion is problematic."],
+        "options": [
+          "The font file formats are not supported in modern browsers.",
+          "The src attribute requires a comma between the URL and format values.",
+          "There are no errors in the example.",
+          "The sans-serif inclusion is problematic."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cfc28205860bb900f53134b3",
+        "question": "Which style places an element at a fixed location within its container?",
+        "answer": "position: absolute;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["position: absolute;"],
+        "options": ["position: absolute;", "display: flex;", "display: block;", "float: left;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "480f48e07844b4771b1472aa",
+        "question": "The calc() CSS function is often used for calculating relative values. In the example below, what is the specified margin-left value?\n```css\n.example {\n  margin-left: calc(5% + 5px);\n}\n```",
+        "answer": "The left margin value is equal to 5% of its parent element's width plus 5px",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The left margin value is equal to 5% of its parent element's width plus 5px"
+        ],
+        "options": [
+          "The left margin value is equal to 5% of its parent element's width plus 5px",
+          "The left margin value is equal to 5% of the viewport width plus 5px",
+          "The left margin value is equal to 5% of the closest positioned element's width plus 5px",
+          "The left margin value is equal to 5% of the selected element's width (.example) plus 5px"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7c8700179180ef6a03c5429d",
+        "question": "Which code would you use to absolutely position an element of the logo class?",
+        "answer": "`.logo { position: absolute; left: 100px; top: 150px; }`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`.logo { position: absolute; left: 100px; top: 150px; }`"],
+        "options": [
+          "`.logo { position: absolute; left: 100px; top: 150px; }`",
+          "`.logo { position: absolute; margin-left: 100px; margin-top: 150px; }`",
+          "`.logo { position: absolute; padding-left: 100px; padding-top: 150px; }`",
+          "`.logo { position: absolute; left-padding: 100px; top-padding: 150px; }`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "96465829a4b5653465bcdc8c",
+        "question": "In this example, what color will Paragraph 1 be?\n```css\np:first-of-type {\n  color: red;\n}\np {\n  color: blue;\n}\n.container {\n  color: yellow;\n}\np:first-child {\n  color: green;\n}\n```\n```HTML\n<div class=\"container\">\n  <h1>Heading</h1>\n  <p>Paragraph1</p>\n  <p>Paragraph2</p>\n</div>\n```",
+        "answer": "red",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["red"],
+        "options": ["blue", "green", "red", "yellow"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f6b6b57d816861fb18466ffd",
+        "question": "What is the `::placeholder pseudo-element` used for?",
+        "answer": "It is used to format the appearance of placeholder text within a form control.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "It is used to format the appearance of placeholder text within a form control."
+        ],
+        "options": [
+          "It is used to format the appearance of placeholder text within a form control.",
+          "It specifies the default input text for a form control.",
+          "It writes text content into a hyperlink tooltip.",
+          "It writes text content into any page element."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "21c2468ce4f90f5a8da53196",
+        "question": "Which statement is true of the single colon (`:`) or double colon (`::`) notations for pseudo-elements-for example, `::before` and `:before`?",
+        "answer": "In CSS3, the double colon notation (`::`) was introduced to differentiate pseudo-elements from pseudo-classes. However, modern browsers support both formats. Older browsers such as IE8 and below do not.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "In CSS3, the double colon notation (`::`) was introduced to differentiate pseudo-elements from pseudo-classes. However, modern browsers support both formats. Older browsers such as IE8 and below do not."
+        ],
+        "options": [
+          "All browsers support single and double colons for new and older pseudo-elements. So you can use either but it is convention to use single colons for consistency.",
+          "In CSS3, the double colon notation (`::`) was introduced to create a consistency between pseudo-elements from pseudo-classes. For newer browsers, use the double colon notation. For IE8 and below, use single colon notation (`:`).",
+          "Only the new CSS3 pseudo-elements require the double colon notation while the CSS2 pseudo-elements do not.",
+          "In CSS3, the double colon notation (`::`) was introduced to differentiate pseudo-elements from pseudo-classes. However, modern browsers support both formats. Older browsers such as IE8 and below do not."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bb273738a5832860b054c36a",
+        "question": "Which choice is not a valid value for the font-style property?",
+        "answer": "none",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["none"],
+        "options": ["normal", "italic", "none", "oblique"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "783e0c808e93f632242234a2",
+        "question": "When would you use the @font-face method?",
+        "answer": "to load custom fonts into stylesheet",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["to load custom fonts into stylesheet"],
+        "options": [
+          "to set the font size of the text",
+          "to load custom fonts into stylesheet",
+          "to change the name of the font declared in the font-family",
+          "to set the color of the text"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "de6c53eb5cfe0e1e94b392a1",
+        "question": "You have a large image that needs to fit into a 400 x 200 pixel area. What should you resize the image to if your users are using Retina displays?",
+        "answer": "800 x 400 pixels",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["800 x 400 pixels"],
+        "options": [
+          "2000 x 1400 pixels",
+          "200 x 100 pixels",
+          "800 x 400 pixels",
+          "400 x 200 pixels"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "13faab2729ebc6c8cf6b1c6f",
+        "question": "In Chrome's Developer Tools view, where are the default styles listed?",
+        "answer": "under the User Agent Stylesheet section on the right",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["under the User Agent Stylesheet section on the right"],
+        "options": [
+          "under the User Agent Stylesheet section on the right",
+          "in the third panel under the Layout tab",
+          "under the HTML view on the left",
+          "in the middle panel"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3221e6a30e5f88969acce88b",
+        "question": "While HTML controls document structure, CSS controls `___`.",
+        "answer": "content appearance",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["content appearance"],
+        "options": [
+          "semantic meaning",
+          "content meaning",
+          "document structure",
+          "content appearance"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5402a305f4854d06c38cf7e3",
+        "question": "What is the recommended name you should give the folder that holds your project's images?",
+        "answer": "images",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["images"],
+        "options": ["images", "#images", "Images", "my images"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "81a437344361818e34ff5f08",
+        "question": "What is the advantage of using inline CSS?",
+        "answer": "It is easier to add multiple styles through it.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It is easier to add multiple styles through it."],
+        "options": [
+          "It is easier to manage.",
+          "It is easier to add multiple styles through it.",
+          "It can be used to quickly test local CSS overrides.",
+          "It reduces conflict with other CSS definition methods."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1b5f0f305ee52923d533ca12",
+        "question": "Which W3C status code represents a CSS specification that is fully implemented by modern browsers?",
+        "answer": "Recommendation",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Recommendation"],
+        "options": [
+          "Proposed Recommendation",
+          "Working Draft",
+          "Recommendation",
+          "Candidate Recommendation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "060f3456cb236060639a60cd",
+        "question": "Are any of the following declarations invalid?\n```css\ncolor: red; /* declaration A */\nfont-size: 1em; /* declaration B */\npadding: 10px 0; /* declaration C */\n```",
+        "answer": "All declarations are valid.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["All declarations are valid."],
+        "options": [
+          "Declaration A is invalid.",
+          "Declaration B is invalid.",
+          "Declaration C is invalid.",
+          "All declarations are valid."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5976dbdf5ad570b06b73446e",
+        "question": "Which CSS will cause your links to have a solid blue background that changes to semitransparent on hover?",
+        "answer": "A",
+        "explanation": "```css\na:link {\nbackground: #0000ff;\n}\na:hover {\nbackground: rgba(0, 0, 255, 0.5);\n}\n```\n```css\na {\ncolor: blue;\n}\na:hover {\nbackground: white;\n}\n```\n```css\na:link {\nbackground: blue;\n}\na:hover {\ncolor: rgba(0, 0, 255, 0.5);\n}\n```\n```css\na:hover {\nbackground: rgba(blue, 50%);\n}\na:link {\nbackground: rgba(blue);\n}\n```",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6c1b36a14d1cf9071df47dc8",
+        "question": "Which CSS rule takes precedence over the others listed?",
+        "answer": "`div#sidebar2 p {}`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`div#sidebar2 p {}`"],
+        "options": ["`div.sidebar {}`", "`* {}`", "`div#sidebar2 p {}`", "`.sidebar p {}`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cc0eb5ce0f4a5274d5d4abaf",
+        "question": "The body of your page includes some HTML sections. How will it look with the following CSS applied?\n```css\nbody {\n  background: #ffffff; /* white */\n}\nsection {\n  background: #0000ff; /* blue */\n  height: 200px;\n}\n```",
+        "answer": "blue sections on a white background",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["blue sections on a white background"],
+        "options": [
+          "blue sections on a white background",
+          "Yellow sections on a blue background",
+          "Green sections on a white background",
+          "blue sections on a red background"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "424d01cc9a832e5cf2a6f315",
+        "question": "Which CSS keyword can you use to override standard source order and specificity rules?",
+        "answer": "`!important`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`!important`"],
+        "options": ["`!elevate!`", "`*prime`", "`override`", "`!important`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e6318ec8935bc230df2c107b",
+        "question": "You can use the `___` pseudo-class to set a different color on a link if it was clicked on.",
+        "answer": "`a:visited`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`a:visited`"],
+        "options": ["`a:visited`", "`a:hover`", "`a:link`", "`a:focus`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1be6bc3c68f19e29c44c377d",
+        "question": "Which color will look the brightest on your screen, assuming the background is white?",
+        "answer": "`background-color: rgba(170,170,170,0.2);`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`background-color: rgba(170,170,170,0.2);`"],
+        "options": [
+          "`background-color: #aaa;`",
+          "`background-color: #999999;`",
+          "`background-color: rgba(170,170,170,0.5);`",
+          "`background-color: rgba(170,170,170,0.2);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ee4758b3763e267aa1633111",
+        "question": "Which CSS selector can you use to select all elements on your page associated with the two classes header and clear?",
+        "answer": "`.header.clear {}`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`.header.clear {}`"],
+        "options": [
+          "`.\"header clear\" {}`",
+          "`header#clear {}`",
+          "`.header.clear {}`",
+          "`.header clear {}`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "796dc64ce0add529dade5b31",
+        "question": "A universal selector is specified using a(n) `___`.",
+        "answer": "\"\\*\" character",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["\"\\*\" character"],
+        "options": ["\"h1\" string", "\"a\" character", "\"p\" character", "\"\\*\" character"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "27e7b257989ab1d229200d95",
+        "question": "In the following CSS code, `'h1'` is the `___`, while `'color'` is the `___`.\n```css\nh1 {\n  color: red;\n}\n```",
+        "answer": "selector; property",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["selector; property"],
+        "options": [
+          "property; declaration",
+          "declaration; rule",
+          "\"p\" character",
+          "selector; property"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "805087c2994dd6074579d615",
+        "question": "What is an alternate way to define the following CSS rule?\n```css\nfont-weight: bold;\n```",
+        "answer": "font-weight: 700;",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["font-weight: 700;"],
+        "options": [
+          "font-weight: 400;",
+          "font-weight: medium;",
+          "font-weight: 700;",
+          "font-weight: Black;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "74b6a726bb290dd1dac081ba",
+        "question": "You want your styling to be based on a font stack consisting of three fonts. Where should the generic font for your font family be specified?",
+        "answer": "It should be the last one on the list.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It should be the last one on the list."],
+        "options": [
+          "It should be the first one on the list.",
+          "Generic fonts are discouraged from this list.",
+          "It should be the last one on the list.",
+          "It should be the second one on the list."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e58cab5cb4a2bb41ca6d0f6a",
+        "question": "When using a font stack to declare the font family, in what order should the values appear?",
+        "answer": "The first value is the first choice, followed by alternative options, ordered by preference. The last option should be a generic font.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The first value is the first choice, followed by alternative options, ordered by preference. The last option should be a generic font."
+        ],
+        "options": [
+          "The first value is the first choice, followed by alternative options, ordered by preference. The last option should be a generic font.",
+          "The first value is the first choice. The order of the alternative options does not matter. It depends on what is available on the user's computer.",
+          "The first value is the first choice, and must be followed by at least one alternative option before adding the generic font.",
+          "The first value is the first choice, followed by a maximum of three alternatives."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "397323220594664962406fed",
+        "question": "What is one disadvantage of using a web font service?",
+        "answer": "It is not always a free service.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["It is not always a free service."],
+        "options": [
+          "It requires you to host font files on your own server.",
+          "It uses more of your site's bandwidth.",
+          "It offers a narrow selection of custom fonts.",
+          "It is not always a free service."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bb3c2421e2e687c1af7fe951",
+        "question": "How do you add Google fonts to your project?",
+        "answer": "by using an HTML link element referring to a Google-provided CSS",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["by using an HTML link element referring to a Google-provided CSS"],
+        "options": [
+          "by using an HTML link element referring to a Google-provided CSS",
+          "by embedding the font file directly into the project's master JavaScript",
+          "by using a Google-specific CSS syntax that directly links to the desired font file",
+          "by using a standard font-face CSS definition sourcing a font file on Google's servers"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "be944db05c262cc8edc86925",
+        "question": "Using the following HTML and CSS example, what will the equivalent pixel value be for .em and .rem elements?\n```css\nHTML {\n  font-size: 10px;\n}\nbody {\n  font-size: 2rem;\n}\n.rem {\n  font-size: 1.5rem;\n}\n.em {\n  font-size: 2em;\n}\n```\n```HTML\n<body>\n  <p class=\"rem\"></p>\n  <p class=\"em\"></p>\n</body>\n```",
+        "answer": "The .rem will be equivalent to 15px; the .em value will be 40px.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["The .rem will be equivalent to 15px; the .em value will be 40px."],
+        "options": [
+          "The .rem will be equivalent to 25px; the .em value will be 20px.",
+          "The .rem will be equivalent to 15px; the .em value will be 20px.",
+          "The .rem will be equivalent to 15px; the .em value will be 40px.",
+          "The .rem will be equivalent to 20px; the .em value will be 40px."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "13b0fc088d18296792a44a9e",
+        "question": "What property is used to adjust the space between text characters?",
+        "answer": "`letter-spacing`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`letter-spacing`"],
+        "options": ["`font-style`", "`text-transform`", "`font-variant`", "`letter-spacing`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f1f8c2252e56e84d15a719a1",
+        "question": "What is the correct syntax for changing the cursor from an arrow to a pointing hand when it interacts with a named element?",
+        "answer": "`.element {cursor: pointer;}`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`.element {cursor: pointer;}`"],
+        "options": [
+          "`.element {cursor: pointer;}`",
+          "`.element {cursor: hand;}`",
+          "`.element {cursor: move-hand;}`",
+          "`.element {cursor: pointer-hand;}`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a38dde4bb651a1a55a0966fb",
+        "question": "What is the effect of this style?\n```css\nbackground-position: 10% 50%;\n```",
+        "answer": "The background image is placed 10% from the left and 50% from the top of its container",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The background image is placed 10% from the left and 50% from the top of its container"
+        ],
+        "options": [
+          "The background image is placed 10% from the left and 50% from the top of its container",
+          "The background image is placed 10% from the bottom and 50% from the left of its container",
+          "The background image is placed 10% from the right and 50% from the bottom of its container",
+          "The background image is placed 10% from the top and 50% from the left of its container"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e9213120d361e76ffb1ab90d",
+        "question": "How will the grid items display?\n```css\ngrid-template-columns: 2fr 1fr;\n```",
+        "answer": "The first column will be twice as wide as the second column and will fit proportionally within the grid container.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The first column will be twice as wide as the second column and will fit proportionally within the grid container."
+        ],
+        "options": [
+          "The first column will be twice the height of the second column and will be as wide as the content.",
+          "The first column will be half the size of the container, and the second column will absorb the remaining space.",
+          "The first column will be twice as wide as the second column and will fit proportionally within the grid container.",
+          "The first column will be twice the width and height of the second column and will fit proportionally within the grid container."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f94e9fc8de7fbb9973e73c70",
+        "question": "Which style rule would make the image 50% smaller during a hover?\n```HTML\n<img id=\"photo\" alt=\"\" src=\"...\" />\n```",
+        "answer": "img#photo:hover {transform: scale(0.5);}",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["img#photo:hover {transform: scale(0.5);}"],
+        "options": [
+          "img#photo:hover {scale: 0.5;}",
+          "img#photo:hover {transform: scale(0.5);}",
+          "img#photo {hover-scale: 0.5;}",
+          "img#photo:hover {size: smaller;}"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1cf85f1bc28e130b233504bf",
+        "question": "Which CSS properties can you use to create a rounded corner on just the top-left and top-right corners of an element?\n```css\nA. border-radius: 10px 10px 0 0;\nB. border-top-left-radius: 10px; and border-top-right-radius: 10px;\nC. border-radius: 10px 0;\nD. border-top-radius: 10px;\n```",
+        "answer": "A and B",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["A and B"],
+        "options": ["A and C", "C and D", "B and C", "A and B"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "34e53150a1bdc628b08bd203",
+        "question": "Review the HTML example below. Then choose the list of selectors that select the \\<p>, from lowest to highest specificity.\n```HTML\n<section>\n  <p class=\"example\">...</p>\n</section>\n```",
+        "answer": "D",
+        "explanation": "```css\n1. section \\* {\n...;\n}\n2. [class*='example'] {\n...;\n}\n3. p.example {\n...;\n}\n4. section p {\n...;\n}\n```\n```css\n1. p {\n...;\n}\n2. p.example {\n...;\n}\n3. section p {\n...;\n}\n4. [class*='example'] {\n...;\n}\n```\n```css\n1. p.example {\n...;\n}\n2. section p {\n...;\n}\n3. [class*='example'] {\n...;\n}\n4. section \\* {\n...;\n}\n```\n```css\n1. p {\n...;\n}\n2. section p {\n...;\n}\n3. [class*='example'] {\n...;\n}\n4. p.example {\n...;\n}\n```",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9599b4bc8395fea14f3c9eaa",
+        "question": "Which property is used to create a drop shadow effect on an HTML element?",
+        "answer": "box-shadow",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["box-shadow"],
+        "options": ["element-shadow", "outer-shadow", "dropbox-shadow", "box-shadow"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a460f22a7812f55fcb693dbe",
+        "question": "What is the correct selector for targeting all text inputs that are not disabled?",
+        "answer": "`input[type=\"text\"]:not([disabled]) {...}`",
+        "explanation": "`input[type=\"text\"]` selects all the input with type text, and `:not([disabled])` select all the elements not having the attribute \"disabled\". Combining both only selects all the input elements with type attribute as \"text\" and not having \"disabled\" attribute.`\n1. [Reference link attribute-selector](https://www.w3schools.com/css/css_attribute_selectors.asp)\n2. [Reference link-:not()](https://developer.mozilla.org/en-US/docs/Web/CSS/:not)",
+        "hint": null,
+        "correctAnswer": ["`input[type=\"text\"]:not([disabled]) {...}`"],
+        "options": [
+          "`input[type=\"text\"]:not([disabled]) {...}`",
+          "`input[type=\"text\"]:not(\"disabled\") {...}`",
+          "`input[type*=\"text\"]:not([disabled=\"disabled\"]) {...}`",
+          "`input[type=\"text\"]:not([type=\"disabled\"]) {...}`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d0ae61e2d1531b4c2377d265",
+        "question": "How can you create a semi-transparent background color?",
+        "answer": "`background-color: rgba(0, 0, 0, 0.5);`",
+        "explanation": "`rgba` is a funtion in css. rgba stands for red, green, blue, and alpha. The value of alpha can be between 0 and 1 both inclusive with 0 being fully transparent and 1 being fully opaque.\n[Reference link-rgba](https://www.w3schools.com/cssref/func_rgba.asp)",
+        "hint": null,
+        "correctAnswer": ["`background-color: rgba(0, 0, 0, 0.5);`"],
+        "options": [
+          "`background-color: hsl(0, 0, 0, 0.5);`",
+          "`background-color: rgbx(0, 0, 0, 0.5);`",
+          "`background-color: rgba(0, 0, 0, 0.5);`",
+          "`background-color: rgba(0, 0, 0, 1);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "07540d4f446980b08de5fcd3",
+        "question": "Using this HTML markup, how would you select only the headings contained within the `<header>` element?\n```HTML\n<header>\n  <h1>Heading 1</h1>\n  <h2>Heading 2</h2>\n</header>\n<h2>Heading 2</h2>\n```",
+        "answer": "`header h1, header h2 {...}`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`header h1, header h2 {...}`"],
+        "options": [
+          "`header h1, header h2 {...}`",
+          "`header h1 + header h2 {...}`",
+          "`header h1, h2 {...}`",
+          "`h1, h2 {...}`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3b01313cc8e4ffe739028f72",
+        "question": "Suppose you want to have a list of items (.item) displayed in a row and in reverse order using flexbox. What is the error in the CSS below?\n```css\n.container {\n  display: flex;\n}\n.item {\n  border: 1px solid red;\n  flex-direction: row-reverse;\n}\n```",
+        "answer": "The flex-direction property should be declared in the container.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["The flex-direction property should be declared in the container."],
+        "options": [
+          "The value for flex-direction should be reverse-row.",
+          "The .container element should have a property of flex: display.",
+          "The flex-direction property should be declared in the container.",
+          "The display value should be flex-inline to display the items in a row."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d950ab7a25a12437366f6ba9",
+        "question": "Which choice is not a valid transition?",
+        "answer": "`transition: position 400ms linear;`",
+        "explanation": "1. [MDN:](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)\n2. [MDM:](https://developer.mozilla.org/en-US/docs/Web/CSS/position#formal_definition)\n3. [W3s](https://www.w3schools.com/cssref/pr_class_position.asp)\n4. [W3s](https://www.w3schools.com/cssref/css_animatable.asp)",
+        "hint": null,
+        "correctAnswer": ["`transition: position 400ms linear;`"],
+        "options": [
+          "`transition: margin 1000ms ease-in-out;`",
+          "`transition: color 1.3s ease-in;`",
+          "`transition: position 400ms linear;`",
+          "`transition: opacity 1s ease-in;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b13addfa2d30dddeeb6ab696",
+        "question": "In this example, what color will the paragraphs be and why?\n```css\narticle p {\n  color: blue;\n}\narticle > p {\n  color: green;\n}\n```\n```HTML\n<article>\n  <p>Paragraph 1</p>\n  <aside>\n    <p>Paragraph 2</p>\n  </aside>\n</article>\n```",
+        "answer": "Paragraph 1 will be green. Paragraph 2 will be blue.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Paragraph 1 will be green. Paragraph 2 will be blue."],
+        "options": [
+          "Paragraph 1 will be blue. Paragraph 2 will be green.",
+          "Both paragraphs will be green.",
+          "Paragraph 1 will be green. Paragraph 2 will be blue.",
+          "Both paragraphs will be blue."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a1b282d4b40681d63e96ded1",
+        "question": "Review the declaration of border style shown below. What is the corresponding longhand syntax?\n```css\nborder: 1px solid red;\n```",
+        "answer": "C",
+        "explanation": "```css\nborder-size: 1px;\nborder-style: solid;\nborder-color: red;\n```\n```css\nborder-size: 1px;\nborder-type: solid;\nborder-color: red;\n```\n```css\nborder-width: 1px;\nborder-style: solid;\nborder-color: red;\n```\n```css\nborder-width: 1px;\nborder-line: solid;\nborder-color: red;\n```",
+        "hint": null,
+        "correctAnswer": ["C"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "751948693f20a73edbc2e52b",
+        "question": "Pseudo-classes are used to `_`.",
+        "answer": "style the state of the selected element",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["style the state of the selected element"],
+        "options": [
+          "style the state of the selected element",
+          "insert presentational content",
+          "style a specific part of the selected element",
+          "style the elements using class selectors"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dcfa0317ebd740e3a35e1fed",
+        "question": "In this example, what styles will be applied to which elements?\n```css\nsection {\n  color: gray;\n}\n```\n```HTML\n<section>\n  <p>paragraph</p>\n  <a href=\"#\">link</a>\n</section>\n```",
+        "answer": "Only the paragraph will be gray.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Only the paragraph will be gray."],
+        "options": [
+          "The paragraph and link will be gray.",
+          "The background color of the section element will be gray.",
+          "The paragraph will be gray. The link will be the browser default, black.",
+          "Only the paragraph will be gray."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5687b0a2e0669d40bdc8e1bb",
+        "question": "Which answer is an example of a type selector (also sometimes referred to as an element selector)?",
+        "answer": "`header {...}`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`header {...}`"],
+        "options": ["`.header {...}`", "`header {...}`", "`#header {...}`", "`header > h1 {...}`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "296d8adbf9b188330330f40e",
+        "question": "What is the correct order for listing different link states on a website so those states display correctly on the page?",
+        "answer": "D",
+        "explanation": "```css\na\na:hover\n```\n```css\n:link\n:visited\n:hover\n:active\n:focus\n```\n```css\n:active\n:focus\n:hover\n:link\n:visited\n```\n```css\n:link\n:visited\n:focus\n:hover\n:active\n```",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0d0b060e2eab319403c1fd02",
+        "question": "Which selector is used to select the paragraph element that is a direct descendent of the section?",
+        "answer": "`section > p`",
+        "explanation": "[Child combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator)",
+        "hint": null,
+        "correctAnswer": ["`section > p`"],
+        "options": ["`section * p`", "`section + p`", "`section ~ p`", "`section > p`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6c75fb25d3f25c9c2fe08a89",
+        "question": "For this code, what is the font color of the hypertext link?\n```css\nul {\n  --color: red;\n}\np {\n  color: var(--color);\n}\na {\n  color: var(--color, orange);\n}\n```\n```HTML\n<p>Paragraph</p>\n<ul>\n  <li>\n    <a href=\"#\">list item a link </a>\n  </li>\n  <li>list item</li>\n</ul>\n```",
+        "answer": "red",
+        "explanation": "[Reference](https://www.sitepoint.com/how-to-use-variables-in-css/)",
+        "hint": null,
+        "correctAnswer": ["red"],
+        "options": ["red", "orange", "blue", "black"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0e2f9e6de581e1ad98c83853",
+        "question": "Which statement is not true?",
+        "answer": "When two selectors apply to the same element, the one with lower specificity wins.",
+        "explanation": "[Reference](https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/)",
+        "hint": null,
+        "correctAnswer": [
+          "When two selectors apply to the same element, the one with lower specificity wins."
+        ],
+        "options": [
+          "Specificity determines which CSS rule is applied by the browsers.",
+          "When two selectors apply to the same element, the one with lower specificity wins.",
+          "The last rule defined overrides all previous rules and even conflicting rules.",
+          "Rules with more specific selectors have greater specificity."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1164ab059cced308338f2796",
+        "question": "What is the output of the margin value when used within this context, assuming that its containing element is larger than 800px?\n```css\n.example {\n  width: 800px;\n  margin: 0 auto;\n}\n```",
+        "answer": "The example element will have 0 margin spaces on the top and bottom. The margin will be sized automatically on the left and right, which may center-align the element within its container.",
+        "explanation": "[Source: SOW](https://stackoverflow.com/questions/3170772/what-does-auto-do-in-margin-0-auto)",
+        "hint": null,
+        "correctAnswer": [
+          "The example element will have 0 margin spaces on the top and bottom. The margin will be sized automatically on the left and right, which may center-align the element within its container."
+        ],
+        "options": [
+          "The example element will have 0 margin space around the whole element. The auto value will center align the element horizontally and vertically within its container.",
+          "The example element will have 0 margin spaces on the left and right. It will be sized automatically on the top and bottom, which will center align the element within its container.",
+          "The example element will have 0 margin spaces on the top and bottom. The margin will be sized automatically on the left and right, which may center-align the element within its container.",
+          "The margin value is invalid because it's missing a unit measurement after the 0."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "60355d35487026742baa9fe5",
+        "question": "There are currently four viewport-percentage lengths that can be used to define the value relative to the viewport size: vw, vh, vmin, and vmax. If the current viewport size has a width of 800px and a height of 600px, what will these values be equivalent to in pixels?\n```css\n10vw = ?px\n10vh = ?px\n10vmin = ?px\n10vmax = ?px\n```",
+        "answer": "10vw = 80px",
+        "explanation": "10vh = 60px\n10vmin = 60px\n10vmax = 80px\n10vh = 80px\n10vmin = 80px\n10vmax = 60px\n10vh = 6px\n10vmin = 6px\n10vmax = 8px\n10vh = 8px\n10vmin = 8px\n10vmax = 6px",
+        "hint": null,
+        "correctAnswer": ["10vw = 80px"],
+        "options": ["10vw = 80px", "10vw = 60px", "10vw = 8px", "10vw = 6px"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b9f4f9d4c45a23e6397310b6",
+        "question": "Referring to the HTML markup and CSS example below, which element(s) will be targeted?\n```css\np:first-of-type:first-letter {\n  color: red;\n}\n```\n```HTML\n<body>\n  <p>Paragraph 1.</p>\n  <p>Paragraph 2.</p>\n  <article>\n    <h1>Heading</h1>\n    <p>Paragraph 3.</p>\n    <p>paragraph 4.</p>\n  </article>\n  <section>\n    <p>Paragraph 5.</p>\n    <p>Paragraph 6.</p>\n  </section>\n</body>\n```",
+        "answer": "The first letter in paragraphs 1, 3, and 5 will be red.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["The first letter in paragraphs 1, 3, and 5 will be red."],
+        "options": [
+          "The first letter in all paragraphs will be red.",
+          "Only the first letter in paragraphs 1 and 5 will be red.",
+          "The first letter in paragraphs 1, 3, and 5 will be red.",
+          "Only the first letter in paragraph 1 will be red."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "838cf96b71ef764a9a534914",
+        "question": "Which five style features are associated with the box model?",
+        "answer": "margin, padding, border, width, height",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["margin, padding, border, width, height"],
+        "options": [
+          "margin, padding, border, width, height",
+          "width, height, z-index, overflow, font size",
+          "margin, padding, font size, line height, border",
+          "font size, line height, letter spacing, width, height"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "068ac947151c8225462e2275",
+        "question": "Which choice will not set all links that include domain.com to pink?",
+        "answer": "B",
+        "explanation": "```css\na[href$='domain.com'] {\ncolor: pink;\n}\n```\n```css\na[href='*domain.com'] {\ncolor: pink;\n}\n```\n```css\na[href*='domain.com'] {\ncolor: rgba(255, 155, 155);\n}\n```\n```css\na[href*='domain.com'] {\ncolor: pink;\n}\n```\n[Reference](https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/)",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "964d88941080d357e3acbd1b",
+        "question": "Which property and value pair could be used to apply a linear gradient effect?",
+        "answer": "`css background: linear-gradient(#648880, #293f50);`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`css background: linear-gradient(#648880, #293f50);`"],
+        "options": [
+          "`css background: linear-gradient(#648880, #293f50);`",
+          "`css background-image: linear(#648880, #293f50);`",
+          "`css background: gradient(linear, #648880, #293f50);`",
+          "`css background-color: linear-gradient(#648880, #293f50);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9d5fdbaaad07852b13bf6a39",
+        "question": "You want to add a background circle behind an icon. Which style declaration is correct?",
+        "answer": "C",
+        "explanation": "```css\n.glyphicon-bgcircle {\ncircle-radius: 50%;\nmargin: 50px;\nbackground-color: #fdadc6;\ncolor: rgba(255, 255, 255, 1);\nfont-size: 24px;\n}\n```\n```css\nglyphicon-bgcircle {\nborder-circle: 50%;\npadding: 50px;\nbackground-color: #fdadc6;\ncolor: rgba(255, 255, 255, 1);\nfont-size: 24px;\n}\n```\n```css\n.glyphicon-bgcircle {\nborder-radius: 50%;\npadding: 50px;\nbackground-color: #fdadc6;\ncolor: rgba(255, 255, 255, 1);\nfont-size: 24px;\n}\n```\n```css\n.glyphicon-bgcircle {\nradius-rounded: 50%;\nmargin: auto;\nbackground-color: #fdadc6;\ncolor: rgba(255, 255, 255, 1);\nfont-size: 24px;\n}\n```",
+        "hint": null,
+        "correctAnswer": ["C"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f84d7451cafbedda2086bfb6",
+        "question": "Which items are valid values for the font-size property?\n```css\nA. font-size: xsmall\nB. font-size: 50%\nC. font-size: 1em\nD. font-size: 20px\n```",
+        "answer": "B, C, D",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["B, C, D"],
+        "options": ["C, D", "B, C, D", "A, C", "A, B, C, D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2b1bd1e8fc8f51235f9fa11d",
+        "question": "In this image, the blue box and sample text are both contained within the same parent element. The blue box is floated on the left margin of the container. Why is it not contained in the container?\n![Sample text](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-3.png)",
+        "answer": "Floating the blue box took it out of document flow and the container is sized only to the sample text.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Floating the blue box took it out of document flow and the container is sized only to the sample text."
+        ],
+        "options": [
+          "Floating the blue box increased its height.",
+          "Floating the blue box on the left also moves it down.",
+          "Floating the blue box actually shifts it to the right and down.",
+          "Floating the blue box took it out of document flow and the container is sized only to the sample text."
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "e897960c529ce3ddb63d9164",
+            "url": "https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-3.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "d46195d5040287fadedf1c57",
+        "question": "Given this code, which CSS declaration of .overlay will span the entire width and height of its container?\n```css\n<style>\n.container {\n  position: relative;\n  height: 200px;\n  width: 200px;\n  border: 1px solid black;\n}\n</style>\n<div class=\"container\"><div class=\"overlay\"></div></div>\n```",
+        "answer": "D",
+        "explanation": "```css\n.overlay {\nposition: static;\ntop: 200px;\nbottom: 200px;\nright: 200px;\nleft: 200px;\nbackground-color: rgba(0, 0, 0, 0.5);\n}\n```\n```css\n.overlay {\nposition: absolute;\ntop: 200px;\nbottom: 200px;\nright: 200px;\nleft: 200px;\nbackground-color: rgba(0, 0, 0, 0.5);\n}\n```\n```css\n.overlay {\nposition: static;\ntop: 0;\nbottom: 0;\nright: 0;\nleft: 0;\nbackground-color: rgba(0, 0, 0, 0.5);\n}\n```\n```css\n.overlay {\nposition: absolute;\ntop: 0;\nbottom: 0;\nright: 0;\nleft: 0;\nbackground-color: rgba(0, 0, 0, 0.5);\n}\n```",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8f345a508a27d3459822fe8b",
+        "question": "Which missing line of code would place the text on top of the image?\n```js\n<div class=\"container\">\n  <img src=\"grumpy-cat.gif\" />\n  <p>The z-index property is cool!</p>\n</div>\n```\n```css\nimg {\n  position: absolute;\n  left: 0px;\n  top: 0px;\n  // Missing line\n}\n```",
+        "answer": "`z-index: -1;`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`z-index: -1;`"],
+        "options": ["`z-index: 1;`", "`z-index: -1;`", "`z-index: 0;`", "`z-index: true;`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9b4f668086b463642ece13d3",
+        "question": "To make the font size of an element one size smaller than the font size of the element's container, which style property would you apply?",
+        "answer": "`font-size: smaller;`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`font-size: smaller;`"],
+        "options": [
+          "`font-size: reduce;`",
+          "`font-size: 8px;`",
+          "`font-size: -1em;`",
+          "`font-size: smaller;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6e30655c71728306390d1299",
+        "question": "Given this markup, which selector would result in the text being highlighted in yellow?\n```js\n<span class=\"highlight\">#BLM</span>\n```",
+        "answer": "A",
+        "explanation": "```css\n.highlight {\nbackground-color: yellow;\n}\n```\n```css\n#highlight {\nbackground-color: yellow;\n}\n```\n```css\n.highlight {\ncolor: yellow;\n}\n```\n```css\n#highlight {\ncolor: yellow;\n}\n```\n[Highlight Background](<https://alvarotrigo.com/blog/css-highlight-text/#:~:text=Highlight%20text%20(CSS)%20is%20used,text%20is%20the%20most%20popular>)",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a971badf8d1282fa7e783318",
+        "question": "To prevent a background image from tiling in any direction, which style property would you apply?",
+        "answer": "A",
+        "explanation": "```css\nbackground-repeat: no-repeat;\n```\n```css\nbackground-repeat: fixed;\n```\n```css\nbackground-repeat: none;\n```\n```css\nbackground-tile: none;\n```",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a685a670e377858fe58cf6e3",
+        "question": "To rotate an object 30 degrees counterclockwise, which style property would you apply?",
+        "answer": "`transform: rotate(-30deg);`",
+        "explanation": "[Reference](<https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate()>)",
+        "hint": null,
+        "correctAnswer": ["`transform: rotate(-30deg);`"],
+        "options": [
+          "`transform: rotate(-30deg);`",
+          "`transform: rotate(30deg);`",
+          "`rotate: 30deg;`",
+          "`spin: 30deg;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1a703b660188249676e92e3c",
+        "question": "Which style rule would you apply to set the background image to display the contents of the wood.png file?",
+        "answer": "`background-image: url('wood.png');`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`background-image: url('wood.png');`"],
+        "options": [
+          "`background-image: file('wood.png');`",
+          "`background-image: url('wood.png');`",
+          "`background-image: wood.png;`",
+          "`image: wood.png`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "368a5ff841d3b6bec3a6d1e2",
+        "question": "What style rule would set the font color of only paragraph two to blue?\n```js\n<section><p>paragraph one</p></section><p>paragraph two</p>\n```",
+        "answer": "C",
+        "explanation": "```css\nsection > p {\ncolor: blue;\n}\n```\n```css\np {\ncolor: blue;\n}\n```\n```css\nsection + p {\ncolor: blue;\n}\n```\n```css\np + section {\ncolor: blue;\n}\n```\n[Reference](https://www.w3schools.com/cssref/sel_element_pluss.asp)",
+        "hint": null,
+        "correctAnswer": ["C"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e0c8ee090bb4b1a0d0b4ac11",
+        "question": "You want to move an element up 100px. Which CSS property would you use?",
+        "answer": "`transform: translateY(-100px)`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`transform: translateY(-100px)`"],
+        "options": [
+          "`transform: translateX(-100px)`",
+          "`transform: translateY(-100px)`",
+          "`transform: translateY(100px)`",
+          "`transform: translateX(100px)`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8a6559da468538d1695cad0d",
+        "question": "Which style will horizontally center the inner &lt;div&gt; within the outer &lt;div&gt;?\n```js\n<div id=\"outer\">\n  <div id=\"inner\">Center Me!</div>\n</div>\n```",
+        "answer": "D",
+        "explanation": "```css\n#inner {\nwidth: 50%;\n}\n#outer {\nwidth: 100%;\n}\n```\n```css\n#inner {\nleft: 0;\nright: 0;\nposition: center;\n}\n```\n```css\n#inner {\ntext-align: center;\n}\n```\n```css\n#inner {\nwidth: 50%;\nmargin: 0 auto;\n}\n```",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e09878e8285d88780774b862",
+        "question": "Which corner will the puppy be in when these CSS rules are applied?\n```css\n.pen {\n  height: 100px;\n  width: 100px;\n  border: 2px dashed brown;\n  position: relative;\n}\n#puppy {\n  position: absolute;\n  right: 80px;\n  bottom: 0px;\n}\n```\n```HTML\n<div class=\"pen\">\n  <span id=\"puppy\">:dog:</span>\n</div>\n```",
+        "answer": "bottom-left corner",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["bottom-left corner"],
+        "options": [
+          "top-right corner",
+          "bottom-right corner",
+          "top-left corner",
+          "bottom-left corner"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "aa70669531d35d60ca99090d",
+        "question": "Which choice uses the correct syntax for adding a hover pseudo-class to \\<a> element?",
+        "answer": "`a:hover {...}`",
+        "explanation": "[Reference](https://stackoverflow.com/questions/1935820/set-ahover-based-on-class)",
+        "hint": null,
+        "correctAnswer": ["`a:hover {...}`"],
+        "options": ["`a:hover {...}`", "`a :hover {...}`", "`a.hover {...}`", "`a hover {...}`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "68368e6d2b627b59a1fba14a",
+        "question": "Which missing code will give \"Cellar Door\" a shadow?\n```css\n  <style>\n    #cellar-door {\n      box-shadow: 3px 5px 10px #000;\n    }\n    .text-shadow {\n      text-shadow: 3px 5px 10px #000;\n    }\n  </style>\n  <h1 _____> Cellar Door</h1>\n```",
+        "answer": "`class=\"text-shadow\"`",
+        "explanation": "[Reference](https://www.w3schools.com/html/html_classes.asp)",
+        "hint": null,
+        "correctAnswer": ["`class=\"text-shadow\"`"],
+        "options": [
+          "`class=\"text-shadow\"`",
+          "`id=\"cellar-door\"`",
+          "`id=\"text-shadow\"`",
+          "`class=\"cellar-door\"`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d0a3c3821c656e7710443a8e",
+        "question": "Which choice is a valid example of a comment in CSS?",
+        "answer": "`/* This line has been cancelled. */`",
+        "explanation": "[Reference](https://www.w3schools.com/css/css_comments.asp)",
+        "hint": null,
+        "correctAnswer": ["`/* This line has been cancelled. */`"],
+        "options": [
+          "`-- This line has been cancelled.`",
+          "`/* This line has been cancelled. */`",
+          "`// This line has been cancelled.`",
+          "`# This line has been cancelled.`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3a888edc8aa0384c5dc734dd",
+        "question": "Which element(s) will be displayed in blue text?\n```css\n    h2 ~ p {\n      color: blue;\n    }\n  <section>\n    <p>P1</p>\n    <h2>H2</h2>\n    <p>P3</p>\n    <p>P4</p>\n  </section>\n```",
+        "answer": "P3 and P4",
+        "explanation": "[Reference](https://www.w3docs.com/snippets/css/what-does-the-css-tilde-selector-mean.html)",
+        "hint": null,
+        "correctAnswer": ["P3 and P4"],
+        "options": ["P3", "P1, P3 and P4", "P3 and P4", "P1"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a9d792ff977f9774a4d6a07f",
+        "question": "When these pseudo-class selectors are applied to a link, what states will the styles be applied to?\n```css\na:visited {\n  ...;\n}\na:active {\n  ...;\n}\na:hover {\n  ...;\n}\na:focus {\n  ...;\n}\n```",
+        "answer": "`:visited` styles are applied after the link has been opened.",
+        "explanation": "`:active` styles are applied on mouse click and hold.\n`:hover` styles are applied on mouse over or mouse click and hold.\n`:focus` styles are applied when a Tab key on a keyboard is used to navigate through links.\n`:active` styles are applied on mouse click.\n`:hover` styles are applied on mouseover.\n`:focus` styles are applied on mouse click and hold, or when a Tab key on a keyboard is used to navigate through links.\n`:active` styles are applied on mouse click only and before mouse release.\n`:hover` styles are applied on mouseover.\n`:focus` styles are applied when a Tab key on a keyboard is used to navigate through links.\n`:active` styles are applied when the link has been opened.\n`:hover` styles are applied on mouseover.\n`:focus` styles are applied when a Tab key on a keyboard is used to navigate through links.\n[Reference](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes)",
+        "hint": null,
+        "correctAnswer": ["`:visited` styles are applied after the link has been opened."],
+        "options": [
+          "`:visited` styles are applied after the link has been opened.",
+          "`:visited` styles are applied after the link has been opened.",
+          "`:visited` styles are applied after the link has been opened.",
+          "`:visited` styles are applied on mouse hold."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "883522ac0459a58c20a9ab9a",
+        "question": "What style rule should you use to display all input elements that have failed the validation test with a red font?",
+        "answer": "B",
+        "explanation": "```css\ninput.valid[false] {\ncolor: red;\n}\n```\n```css\ninput:invalid {\ncolor: red;\n}\n```\n```css\ninput.not(valid) {\ncolor: red;\n}\n```\n```css\ninput.invalid {\ncolor: red;\n}\n```\n[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid)",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ed2e74f01a1ae924e6e84711",
+        "question": "What style rule should you apply to the img element to display the element in grayscale with no color?",
+        "answer": "D",
+        "explanation": "```css\nimg {\ntransform: grayscale(1);\n}\n```\n```css\nimg {\nfilter: grayscale(0);\n}\n```\n```css\nimg {\ntransform: grayscale(0);\n}\n```\n```css\nimg {\nfilter: grayscale(1);\n}\n```\n[Reference](https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_filter_grayscale)",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9598174b71b2aec5978b6808",
+        "question": "Why might you create a reset style sheet?",
+        "answer": "to start designing a page style by overriding any built-in browser styles",
+        "explanation": "[Reference](http://web.simmons.edu/~grovesd/comm244/notes/week4/css-reset)",
+        "hint": null,
+        "correctAnswer": [
+          "to start designing a page style by overriding any built-in browser styles"
+        ],
+        "options": [
+          "to reduce page size by removing browser styles from the page rendering.",
+          "to start designing a page style by overriding any built-in browser styles",
+          "to make it easier to minify the content of your web page design",
+          "to increase execution time by not relying on built-in browser styles"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ee82552289b21afcfc730f64",
+        "question": "How would you absolutely position an element of the logo class inside of a relatively positioned container?",
+        "answer": "D",
+        "explanation": "```css\n.logo {\nposition: absolute;\npadding-left: 100px;\npadding-top: 150px;\n}\n```\n```css\n.logo {\nposition: absolute;\nleft: 100px;\ntop: 150px;\n}\n```\n```css\n.logo {\nposition: absolute;\nleft-padding: 100px;\ntop-padding: 150px;\n}\n```\n```css\n.logo {\nposition: absolute;\nmargin-left: 100px;\nmargin-top: 150px;\n}\n```",
+        "hint": null,
+        "correctAnswer": ["D"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "11bb817fea2caa34aa4e60b9",
+        "question": "How would the `<div>` with the class .child be positioned within its container?\n```HTML\n<style>\n  .container {\n    height: 200px;\n    width: 200px;\n  }\n  .child {\n    margin: auto 0;\n    height: 100px;\n  }\n</style>\n<div class=\"container\">\n  <div class=\"child\">...</div>\n</div>\n```",
+        "answer": "at the top of the container, spanning the container's width",
+        "explanation": "[Reference](https://codepen.io/harsh1x4/pen/poVaQVz)",
+        "hint": null,
+        "correctAnswer": ["at the top of the container, spanning the container's width"],
+        "options": [
+          "horizontally centered",
+          "vertically centered, spanning the container's width",
+          "at the bottom of the container, spanning the container's width",
+          "at the top of the container, spanning the container's width"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "86d8849505612af4c6819ec8",
+        "question": "By default, a CSS transition is \\_\\_",
+        "answer": "symmetric, so that the transition going from the initial state to the end state is the reverse of the transition going from the end state back to the initial state.",
+        "explanation": "[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)",
+        "hint": null,
+        "correctAnswer": [
+          "symmetric, so that the transition going from the initial state to the end state is the reverse of the transition going from the end state back to the initial state."
+        ],
+        "options": [
+          "asymmetric, so that the transition going from the initial state to the end state is different from the transition going from the end state back to the initial state.",
+          "one-sided, so that there is only one transition and it goes from the initial state to the end state.",
+          "symmetric, so that the transition going from the initial state to the end state is the reverse of the transition going from the end state back to the initial state.",
+          "one-sided, so that there is only one transition and it goes from the end state to the initial state."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "158c6402220432f3578f98bb",
+        "question": "Which style rule will extend the header element across an entire grid row from the first column through the last column?",
+        "answer": "B",
+        "explanation": "```css\nheader {\ngrid-column: 1 / auto;\n}\n```\n```css\nheader {\ngrid-column: 1/-1;\n}\n```\n```css\nheader {\ngrid-column: -1/1;\n}\n```\n```css\nheader {\ngrid-column: 1/100%;\n}\n```\n[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column)",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1e251d111fc0e0a353eec67b",
+        "question": "To center the content of a grid cell horizontally and vertically within the cell, which style rule should you apply?",
+        "answer": "B",
+        "explanation": "```css\nalign-items: start;\njustify-items: end;\n```\n```css\nalign-items: center;\njustify-items: center;\n```\n```css\nalign-items: middle;\njustify-items: middle;\n```\n```css\nalign-items: stretch;\njustify-items: stretch;\n```\n[Reference for align-items](https://developer.mozilla.org/en-US/docs/Web/CSS/align-items) [Reference for justify-items](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items)",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "307e195ec1eb22e3b5d0127d",
+        "question": "What style rule should you use to display all input elements that have failed the validation test with a red font?",
+        "answer": "B",
+        "explanation": "```css\ninput.valid[false] {\ncolor: red;\n}\n```\n```css\ninput:invalid {\ncolor: red;\n}\n```\n```css\ninput.not(valid) {\ncolor: red;\n}\n```\n```css\ninput.invalid {\ncolor: red;\n}\n```\n[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/:invalid)",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9da91fef3cbd2e50bcdcef3e",
+        "question": "To insert an external style sheet file into another style sheet file, which rule should you use?",
+        "answer": "`@import`",
+        "explanation": "[Reference for import](https://developer.mozilla.org/en-US/docs/Web/CSS/@import)",
+        "hint": null,
+        "correctAnswer": ["`@import`"],
+        "options": ["`@import`", "`@link`", "`@insert`", "`@style`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0a554483cc4d5d8b81bc09f4",
+        "question": "Given this code, how tall will the following element be in pixels?\n```HTML\n<style>\n  #tall-text {\n    display: inline;\n    font-size: 20px;\n    height: 200px;\n  }\n</style>\n<p id=\"tall-text\">Did I grow?</p>\n```",
+        "answer": "20px",
+        "explanation": "[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/height#:~:text)",
+        "hint": null,
+        "correctAnswer": ["20px"],
+        "options": ["200px", "20px", "180px", "220px"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8e2f89dcc4fb6806f2ae1ea6",
+        "question": "Which style rule will place an X within the grid to win the game?\n![A](img/Q-141.png)",
+        "answer": "grid-row: 3;",
+        "explanation": "column: 3;\ngrid-column: 3;\ncolumn: 2;\ngrid-column: 2;\n[Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-column)",
+        "hint": null,
+        "correctAnswer": ["grid-row: 3;"],
+        "options": ["row: 3;", "grid-row: 3;", "row: 2;", "grid-row: 2;"],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "2f45dd19424709fd9e622eb2",
+            "url": "img/Q-141.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "9dbc82aa076c5a63dd7bde33",
+        "question": "Which CSS property is used to create an image reflection?",
+        "answer": "box-reflect",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["box-reflect"],
+        "options": ["box-reflect", "img-reflect", "None of the above", "reflect-img"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a8a0f343c5546af48f345a7f",
+        "question": "What is the general syntax of writing the var() function?",
+        "answer": "var(--name, value)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["var(--name, value)"],
+        "options": ["var(--name, value)", "var(--name)", "var(value)", "None of the Above"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "26f6ba267a5b3e18031732c8",
+        "question": "How many layout modes were there before the Flexbox Layout Module was introduced in CSS?",
+        "answer": "4",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["4"],
+        "options": ["2", "1", "4", "3"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cc4063284a9ca27bd93409fc",
+        "question": "Which of the following components of the CSS box model are transparent?",
+        "answer": "Both A and B",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Both A and B"],
+        "options": ["Padding", "Margin", "Both A and B", "None"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cb92e2da15c986641e004783",
+        "question": "How are custom fonts defined using CSS?",
+        "answer": "@Font-Face Rule",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["@Font-Face Rule"],
+        "options": [
+          "@Font-Face Rule",
+          "Custom font cannot be defined",
+          "src tags",
+          "None of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1839b7e90dc53812feb8510b",
+        "question": "Which of the following CSS properties sets what kind of line decorations are added to an element, such as underlines, overlines, etc?",
+        "answer": "text-decoration-line",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["text-decoration-line"],
+        "options": ["text-decoration", "text-style", "text-decoration-line", "text-line"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2660957cd274063984d44452",
+        "question": "Which of the following CSS Properties sets the stacking order of positioned elements?",
+        "answer": "z-index",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["z-index"],
+        "options": ["y-index", "z-index", "x-index", "all of the mentioned"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "98a48084a6845eaaedb809c2",
+        "question": "Which of the following properties allows a marquee to be used in the case of a text overflow?",
+        "answer": "overflow-style",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["overflow-style"],
+        "options": ["overflow-marquee", "overflow-style", "overflow-text", "none of the mentioned"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "65f3205196986fc1f2bca2cc",
+        "question": "Which of the following Cascading order has the highest precedence?",
+        "answer": "user agent declarations",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["user agent declarations"],
+        "options": [
+          "user agent declarations",
+          "user normal declarations",
+          "author normal declarations",
+          "author important declarations"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0cf424509f2c3383355f43db",
+        "question": "The CSS cascade assigns a weight to each style rule.",
+        "answer": "True",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["True"],
+        "options": ["True", "False"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "31f012f048d444c6a90e488e",
+        "question": "The \\***\\*\\_\\_\\_\\_\\*\\*** represents the result of the cascade: it is the declared value that wins the cascade.",
+        "answer": "cascaded value",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["cascaded value"],
+        "options": ["specified Value", "actual value", "computed value", "cascaded value"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fd6f6c862fbee746458ab3bf",
+        "question": "Using negative text-indent is also known as **\\_**?",
+        "answer": "The Phark method",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["The Phark method"],
+        "options": [
+          "The Scott Kellum method",
+          "The Phark method",
+          "Radu Darvas Technique",
+          "The Langridge method"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4d225e088ef41b69a21dff3c",
+        "question": "Using margin is also known as **\\_**?",
+        "answer": "Radu Darvas Technique",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Radu Darvas Technique"],
+        "options": [
+          "Fahrner image replacement",
+          "The Lindsay method",
+          "Radu Darvas Technique",
+          "The Langridge method"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "deb746c0e48e2e759e5529cb",
+        "question": "If a particular rule should never be overridden by another rule, the \\***\\*\\_\\_\\_\\_\\*\\*** indication should be used.",
+        "answer": "!important",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["!important"],
+        "options": ["@important", "!important!", "!important", "important!"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ce47691d1a5a98cbed885e89",
+        "question": "What does CSS stand for?",
+        "answer": "Cascading Style Sheets",
+        "explanation": "[Reference](https://www.w3schools.com/quiztest/quiztest.asp?qtest=CSS)",
+        "hint": null,
+        "correctAnswer": ["Cascading Style Sheets"],
+        "options": [
+          "Creative Style Sheets",
+          "Colourful Style Sheets",
+          "Cascading Style Sheets",
+          "Colourful Style Sheets"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "80a9b93e978c1764889517f6",
+        "question": "What color would rgb(255,0,0) give?",
+        "answer": "Red",
+        "explanation": "[Reference: CSS RGB and RGBA Colors](https://www.w3schools.com/css/css_colors_rgb.asp)",
+        "hint": null,
+        "correctAnswer": ["Red"],
+        "options": ["Blue", "Green", "Red", "Yellow"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "db6db6ee6e8ae09c1190ac49",
+        "question": "What is the correct HTML for referring to an external style sheet?",
+        "answer": "`<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">`",
+        "explanation": "[Reference: HTML link tag](https://www.w3schools.com/tags/tag_link.asp) \u200b | [HTML Link Tag Syntax for External CSS Files\u200b](https://www.digitalocean.com/community/tutorials/html-link-tag)",
+        "hint": null,
+        "correctAnswer": ["`<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">`"],
+        "options": [
+          "`<link rel=\"stylesheet\" type=\"text/css\" href=\"mystyle.css\">`",
+          "`<stylesheet>mystyle.css</stylesheet>`",
+          "`<style src= \"mystyle.css\">`",
+          "None of these."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "71bdd5699f66947b2d128110",
+        "question": "The \\<link> tag goes inside:",
+        "answer": "the head section",
+        "explanation": "[Reference: HTML link tag](https://www.w3schools.com/tags/tag_link.asp)",
+        "hint": null,
+        "correctAnswer": ["the head section"],
+        "options": [
+          "the title section",
+          "the body section",
+          "the head section",
+          "None of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1d52fddda98b023a5e039b6c",
+        "question": "What is CSS defined in HTML?",
+        "answer": "How to display HTML elements",
+        "explanation": "[Reference: CSS Introduction](https://www.w3schools.com/css/css_intro.asp)",
+        "hint": null,
+        "correctAnswer": ["How to display HTML elements"],
+        "options": [
+          "How to send HTML elements",
+          "How to display HTML elements",
+          "How to save HTML elements",
+          "How to make HTML elements"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ac4d6a9c6d38ecbff93a4c2a",
+        "question": "Which of the following statements is TRUE for CSS?",
+        "answer": "An external style sheet is ideal when the style is applied to many pages",
+        "explanation": "[Reference: CSS How To](https://www.w3schools.com/css/css_howto.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "An external style sheet is ideal when the style is applied to many pages"
+        ],
+        "options": [
+          "An inline style sheet should be used when a single document has a unique style",
+          "An external style sheet is ideal when the style is applied to many pages",
+          "Both and b above",
+          "An external style sheet can be written in HTML"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "db1d758737084b340ffd7739",
+        "question": "In CSS, margin collapsing only happens with?",
+        "answer": "The vertical margins of block elements in the normal flow.",
+        "explanation": "[Reference: CSS Margin Collapse](https://www.w3schools.com/css/css_margin_collapse.asp)",
+        "hint": null,
+        "correctAnswer": ["The vertical margins of block elements in the normal flow."],
+        "options": [
+          "The horizontal margins of inline elements in the normal flow.",
+          "The vertical margins of block elements in the normal flow.",
+          "The horizontal margins of block elements in the normal flow.",
+          "The vertical margins of inline elements in the normal flow."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c624e9a6073eb6f2b96e2967",
+        "question": "Which of the following CSS selectors selects all <p> elements that are the direct child of a <div> element?",
+        "answer": "div > p",
+        "explanation": "[Reference: CSS Child Selector](https://www.geeksforgeeks.org/css/css-child-vs-descendant-selectors/)",
+        "hint": null,
+        "correctAnswer": ["div > p"],
+        "options": ["div p", "div > p", "Tdiv + p", "div ~ p"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8599cf45dfe9d9c2d4e65707",
+        "question": "In CSS, the box-sizing property is used to control how an element's total width and height are calculated. Which value of box-sizing includes the element's padding and border within its total width and height?",
+        "answer": "border-box",
+        "explanation": "[Reference: CSS box-sizing Property](https://www.geeksforgeeks.org/css/css-box-sizing-property/)",
+        "hint": null,
+        "correctAnswer": ["border-box"],
+        "options": ["content-box", "padding-box", "margin-box", "border-box"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bb8f02509303dbed953dd628",
+        "question": "In CSS, which of the following is NOT an effect of an inert attribute?",
+        "answer": "Makes the element interactive.",
+        "explanation": "[Reference: HTML inert attribute - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/inert)",
+        "hint": null,
+        "correctAnswer": ["Makes the element interactive."],
+        "options": [
+          "Prevents the click event from being fired when the user clicks on an element.",
+          "Makes the element interactive.",
+          "Prevents the focus event from being fired when an element gains focus.",
+          "Hides the element and its content from assistive technologies by excluding them from the accessibility tree."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f3dfc9f9b19f25e9ea260431",
+        "question": "What elements does the accent-color property target?",
+        "answer": "Input tags; The height of the space between lines of text.; To control the visibility of an element.; cursor; To create a visible outline around an element, which is often used for accessibility or highlighting.",
+        "explanation": "[Reference: CSS Line Height Property](https://mimo.org/glossary/css/line-height)\n### Q166. In CSS, what does the line-height property control?\n### Q167. What is the purpose of the CSS visibility property?\n[Reference: CSS Visibility Property - W3Schools](https://www.w3schools.com/cssref/pr_class_visibility.asp)\n### Q168. Which CSS property is used to change the style of the cursor when it hovers over an element?\n### Q169. What is the purpose of the CSS outline property?\n[Reference: CSS outline Property - W3Schools](https://www.w3schools.com/cssref/pr_outline.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "Input tags",
+          "The height of the space between lines of text.",
+          "To control the visibility of an element.",
+          "cursor",
+          "To create a visible outline around an element, which is often used for accessibility or highlighting."
+        ],
+        "options": [
+          "Line break tags",
+          "Hyperlink tags",
+          "Input tags",
+          "Image tags",
+          "The width of the element.",
+          "The color of the text.",
+          "The spacing between characters.",
+          "The height of the space between lines of text.",
+          "To control the order of elements within a flex container.",
+          "To adjust the space between the inner content and the border of an element.",
+          "To control the stacking order of elements in the z-axis.",
+          "To control the visibility of an element.",
+          "cursor-style",
+          "mouse-pointer",
+          "pointer-type",
+          "cursor",
+          "To control the width of an element's border.",
+          "To change the background color of an element.",
+          "To create a visible outline around an element, which is often used for accessibility or highlighting.",
+          "To control the transparency of an element."
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "5ee682a36def176e98066969",
+        "question": "What are the valid values of the text-align property?",
+        "answer": "left, center, right, justify",
+        "explanation": "[Reference: CSS text-align Property - W3Schools](https://www.w3schools.com/cssref/pr_text_text-align.asp)",
+        "hint": null,
+        "correctAnswer": ["left, center, right, justify"],
+        "options": [
+          "left, bottom, top, right",
+          "left, right, up, bottom",
+          "left, center, right, justify",
+          "side, justify, up, down"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f5949ad3c48c40fa7061ff41",
+        "question": "What is the difference between visibility: hidden and display: none?",
+        "answer": "visibility: hidden hides the element, but it still takes up space in the layout.",
+        "explanation": "[Reference: CSS visibility:hidden vs display:none](https://www.w3schools.com/css/css_display_visibility.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "visibility: hidden hides the element, but it still takes up space in the layout."
+        ],
+        "options": [
+          "Both will hide the element on the page, but display: none has greater browser support.",
+          "`display:none hides the elements but maintains the space it previously occupied. visibility:hidden will hide the element from view and remove it from the normal flow of the document`",
+          "visibility: hidden hides the element, but it still takes up space in the layout.",
+          "display: none removes the element from the document. It does not take up any space.",
+          "` There is no difference; both will hide the element on the page`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d4a77582ffe1866667f4ed6e",
+        "question": "Which of the following is NOT a valid CSS selector?",
+        "answer": "`-`; IDs can only be applied to one HTML element, while classes can be used multiple times.",
+        "explanation": "[Reference: CSS Selectors \u2013 Cheat Sheet](https://www.freecodecamp.org/news/css-selectors-cheat-sheet-for-beginners/)\n#### Q173. What is the difference between a class and an id in CSS?\n[Reference: Difference Between Class and ID](https://www.w3schools.com/css/css_selectors.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`-`",
+          "IDs can only be applied to one HTML element, while classes can be used multiple times."
+        ],
+        "options": [
+          "`p`",
+          "`.class`",
+          "`#id`",
+          "`-`",
+          "IDs can only be applied to one HTML element, while classes can be used multiple times.",
+          "IDs are denoted by a period (.) followed by the ID name, while classes use a hash (#).",
+          "Classes have higher specificity in CSS than IDs.",
+          "There is no difference between a class and an id."
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "4873f8090b926671bb79713c",
+        "question": "Which CSS property is used to create a grid container?",
+        "answer": "`display: grid`",
+        "explanation": "[Reference CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)",
+        "hint": null,
+        "correctAnswer": ["`display: grid`"],
+        "options": ["`grid-template`", "`display: grid`", "`grid-container`", "`grid-layout`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "aa038f2f448932d64500a9f1",
+        "question": "What is the correct syntax for CSS custom properties (variables)?",
+        "answer": "`--primary-color: blue;`",
+        "explanation": "[Reference CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)",
+        "hint": null,
+        "correctAnswer": ["`--primary-color: blue;`"],
+        "options": [
+          "`$primary-color: blue;`",
+          "`--primary-color: blue;`",
+          "`@primary-color: blue;`",
+          "`var-primary-color: blue;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c6c41dc7fce49f236169b50a",
+        "question": "Which flexbox property is used to control the alignment of items along the main axis?",
+        "answer": "`justify-content`",
+        "explanation": "[Reference Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)",
+        "hint": null,
+        "correctAnswer": ["`justify-content`"],
+        "options": ["`align-items`", "`justify-content`", "`flex-direction`", "`align-content`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "787cf3871f0ff17fc104ef54",
+        "question": "What does the `fr` unit represent in CSS Grid?",
+        "answer": "Fractional unit",
+        "explanation": "```css\ngrid-template-columns: 1fr 2fr 1fr;\n```\n[Reference CSS Grid fr unit](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#the_fr_unit)",
+        "hint": null,
+        "correctAnswer": ["Fractional unit"],
+        "options": ["Fixed ratio", "Fractional unit", "Frame rate", "Font ratio"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "079bb1cc7a436b5ab063db78",
+        "question": "Which CSS property is used to create smooth transitions between property changes?",
+        "answer": "`transition`",
+        "explanation": "[Reference CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions)",
+        "hint": null,
+        "correctAnswer": ["`transition`"],
+        "options": ["`animation`", "`transition`", "`transform`", "`ease`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bcb09674ccbe1b6dbbec362a",
+        "question": "What is the purpose of the `clamp()` function in CSS?",
+        "answer": "To set a value between a minimum and maximum range",
+        "explanation": "```css\nfont-size: clamp(1rem, 2.5vw, 2rem);\n```\n[Reference CSS clamp()](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp)",
+        "hint": null,
+        "correctAnswer": ["To set a value between a minimum and maximum range"],
+        "options": [
+          "To hide content",
+          "To set a value between a minimum and maximum range",
+          "To create animations",
+          "To validate CSS"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a162ee4661dc584df15bb661",
+        "question": "Which CSS selector targets the first child element?",
+        "answer": "`:first-child`",
+        "explanation": "[Reference CSS :first-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:first-child)",
+        "hint": null,
+        "correctAnswer": ["`:first-child`"],
+        "options": ["`:first`", "`:first-child`", "`:child(1)`", "`:nth(1)`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c5e54d5370c64a1521d1bf32",
+        "question": "What does the `aspect-ratio` property do?",
+        "answer": "Sets the preferred aspect ratio for an element",
+        "explanation": "[Reference CSS aspect-ratio](https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio)",
+        "hint": null,
+        "correctAnswer": ["Sets the preferred aspect ratio for an element"],
+        "options": [
+          "Changes the image quality",
+          "Sets the preferred aspect ratio for an element",
+          "Adjusts the viewport ratio",
+          "Controls the screen ratio"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "237f7dde0e6182e91d275e96",
+        "question": "Which CSS property is used to create a sticky element?",
+        "answer": "`position: sticky`",
+        "explanation": "[Reference CSS position: sticky](https://developer.mozilla.org/en-US/docs/Web/CSS/position#sticky)",
+        "hint": null,
+        "correctAnswer": ["`position: sticky`"],
+        "options": [
+          "`position: fixed`",
+          "`position: sticky`",
+          "`position: absolute`",
+          "`position: relative`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "596530f5a78bb22f387bbf78",
+        "question": "What is the correct syntax for CSS Grid areas?\n```css\ngrid-template-areas:\n  'header header header'\n  'sidebar main main'\n  'footer footer footer';\n```",
+        "answer": "The above syntax is correct",
+        "explanation": "[Reference CSS Grid Template Areas](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas)",
+        "hint": null,
+        "correctAnswer": ["The above syntax is correct"],
+        "options": [
+          "The above syntax is correct",
+          "Use square brackets instead of quotes",
+          "Use commas between area names",
+          "Use semicolons between rows"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "54259373774b196aac0e99f1",
+        "question": "Which CSS function is used to calculate values?",
+        "answer": "`calc()`",
+        "explanation": "```css\nwidth: calc(100% - 20px);\n```\n[Reference CSS calc()](https://developer.mozilla.org/en-US/docs/Web/CSS/calc)",
+        "hint": null,
+        "correctAnswer": ["`calc()`"],
+        "options": ["`compute()`", "`calc()`", "`calculate()`", "`math()`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "559200e3a43bade875762e67",
+        "question": "What does the `gap` property do in CSS Grid and Flexbox?",
+        "answer": "Sets the space between grid items or flex items",
+        "explanation": "[Reference CSS gap](https://developer.mozilla.org/en-US/docs/Web/CSS/gap)",
+        "hint": null,
+        "correctAnswer": ["Sets the space between grid items or flex items"],
+        "options": [
+          "Creates gaps in text",
+          "Sets the space between grid items or flex items",
+          "Creates empty elements",
+          "Adjusts line height"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f1458a351c124c94408f3e4f",
+        "question": "Which CSS property is used to control the stacking order of elements?",
+        "answer": "`z-index`",
+        "explanation": "[Reference CSS z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)",
+        "hint": null,
+        "correctAnswer": ["`z-index`"],
+        "options": ["`stack-order`", "`z-index`", "`layer`", "`depth`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8563c3d5fec742c0f2d42c91",
+        "question": "What is the purpose of the `contain` property in CSS?",
+        "answer": "To optimize rendering performance by containing layout, style, paint, or size",
+        "explanation": "[Reference CSS contain](https://developer.mozilla.org/en-US/docs/Web/CSS/contain)",
+        "hint": null,
+        "correctAnswer": [
+          "To optimize rendering performance by containing layout, style, paint, or size"
+        ],
+        "options": [
+          "To hide overflow content",
+          "To optimize rendering performance by containing layout, style, paint, or size",
+          "To create containers",
+          "To validate content"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c5258ee4551f1e1e150cdbe4",
+        "question": "Which CSS selector targets elements based on their attribute values using wildcards?",
+        "answer": "`[attr*=\"value\"]`",
+        "explanation": "```css\n/* Selects elements where href contains \"example\" */\na[href*='example'] {\ncolor: red;\n}\n```\n[Reference CSS Attribute Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors)",
+        "hint": null,
+        "correctAnswer": ["`[attr*=\"value\"]`"],
+        "options": [
+          "`[attr=\"value\"]`",
+          "`[attr*=\"value\"]`",
+          "`[attr~=\"value\"]`",
+          "`[attr|=\"value\"]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "92a30ddd15335a7477ead790",
+        "question": "What does the `object-fit` property control?",
+        "answer": "How replaced content should be resized to fit its container",
+        "explanation": "[Reference CSS object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)",
+        "hint": null,
+        "correctAnswer": ["How replaced content should be resized to fit its container"],
+        "options": [
+          "Object positioning",
+          "How replaced content should be resized to fit its container",
+          "Object visibility",
+          "Object rotation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9c7ed978eeee65ca8d276031",
+        "question": "Which CSS property is used to create rounded corners?",
+        "answer": "`border-radius`",
+        "explanation": "[Reference CSS border-radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius)",
+        "hint": null,
+        "correctAnswer": ["`border-radius`"],
+        "options": ["`corner-radius`", "`border-radius`", "`round-corners`", "`radius`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "64f52e4b61867115c7142a8d",
+        "question": "What is the purpose of the `will-change` property?",
+        "answer": "To hint to the browser about upcoming changes for optimization",
+        "explanation": "[Reference CSS will-change](https://developer.mozilla.org/en-US/docs/Web/CSS/will-change)",
+        "hint": null,
+        "correctAnswer": ["To hint to the browser about upcoming changes for optimization"],
+        "options": [
+          "To change element content",
+          "To hint to the browser about upcoming changes for optimization",
+          "To force changes",
+          "To prevent changes"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a804eca8529bd0a523ee6601",
+        "question": "Which CSS function is used to create color gradients?",
+        "answer": "`linear-gradient()` or `radial-gradient()`",
+        "explanation": "[Reference CSS Gradients](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients)",
+        "hint": null,
+        "correctAnswer": ["`linear-gradient()` or `radial-gradient()`"],
+        "options": [
+          "`gradient()`",
+          "`linear-gradient()` or `radial-gradient()`",
+          "`color-gradient()`",
+          "`blend()`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2a5ee34dfd7aea089033960a",
+        "question": "What does the `scroll-behavior` property control?",
+        "answer": "The scrolling behavior for a scrolling box",
+        "explanation": "```css\nhtml {\nscroll-behavior: smooth;\n}\n```\n[Reference CSS scroll-behavior](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior)",
+        "hint": null,
+        "correctAnswer": ["The scrolling behavior for a scrolling box"],
+        "options": [
+          "Scrollbar appearance",
+          "The scrolling behavior for a scrolling box",
+          "Scroll speed",
+          "Scroll direction"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "94982744c6516cddcc8d6922",
+        "question": "Which CSS property is used to control text overflow?",
+        "answer": "`text-overflow`",
+        "explanation": "[Reference CSS text-overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)",
+        "hint": null,
+        "correctAnswer": ["`text-overflow`"],
+        "options": ["`text-wrap`", "`text-overflow`", "`overflow-text`", "`text-clip`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3eef0b0419e921a9d59335ec",
+        "question": "What is the purpose of the `backdrop-filter` property?",
+        "answer": "To apply graphical effects to the area behind an element",
+        "explanation": "[Reference CSS backdrop-filter](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter)",
+        "hint": null,
+        "correctAnswer": ["To apply graphical effects to the area behind an element"],
+        "options": [
+          "To filter background images",
+          "To apply graphical effects to the area behind an element",
+          "To create drop shadows",
+          "To filter text content"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "708508c187e2545e97e58adf",
+        "question": "Which CSS property is used to create CSS animations?",
+        "answer": "`animation`",
+        "explanation": "[Reference CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations)",
+        "hint": null,
+        "correctAnswer": ["`animation`"],
+        "options": ["`transition`", "`animation`", "`transform`", "`keyframes`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4bdb51120e58b92e7e234a2c",
+        "question": "What does the `place-items` property do in CSS Grid?",
+        "answer": "Shorthand for align-items and justify-items",
+        "explanation": "[Reference CSS place-items](https://developer.mozilla.org/en-US/docs/Web/CSS/place-items)",
+        "hint": null,
+        "correctAnswer": ["Shorthand for align-items and justify-items"],
+        "options": [
+          "Places items in specific grid areas",
+          "Shorthand for align-items and justify-items",
+          "Creates item placeholders",
+          "Positions items absolutely"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "39351581630ff5710578c8cb",
+        "question": "Which CSS selector targets the last child element?",
+        "answer": "`:last-child`",
+        "explanation": "[Reference CSS :last-child](https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child)",
+        "hint": null,
+        "correctAnswer": ["`:last-child`"],
+        "options": ["`:last`", "`:last-child`", "`:child(last)`", "`:final-child`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "38d3a6ddee8def06ba94ec62",
+        "question": "What is the purpose of the `isolation` property?",
+        "answer": "To create a new stacking context",
+        "explanation": "[Reference CSS isolation](https://developer.mozilla.org/en-US/docs/Web/CSS/isolation)",
+        "hint": null,
+        "correctAnswer": ["To create a new stacking context"],
+        "options": [
+          "To isolate elements from the DOM",
+          "To create a new stacking context",
+          "To prevent event propagation",
+          "To isolate CSS rules"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ee9656ebb206bffae2075cbd",
+        "question": "Which CSS property controls the space between characters?",
+        "answer": "`letter-spacing`",
+        "explanation": "[Reference CSS letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)",
+        "hint": null,
+        "correctAnswer": ["`letter-spacing`"],
+        "options": ["`character-spacing`", "`letter-spacing`", "`char-space`", "`text-spacing`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dbe175ee7e651374081982da",
+        "question": "What does the `overscroll-behavior` property control?",
+        "answer": "What happens when the user over-scrolls",
+        "explanation": "[Reference CSS overscroll-behavior](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior)",
+        "hint": null,
+        "correctAnswer": ["What happens when the user over-scrolls"],
+        "options": [
+          "Scrollbar behavior",
+          "What happens when the user over-scrolls",
+          "Scroll speed",
+          "Scroll direction"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d80a96f4f97749829ffa57c5",
+        "question": "Which CSS property is used to create drop shadows?",
+        "answer": "`box-shadow`",
+        "explanation": "[Reference CSS box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)",
+        "hint": null,
+        "correctAnswer": ["`box-shadow`"],
+        "options": ["`shadow`", "`box-shadow`", "`drop-shadow`", "`element-shadow`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7b74cd0f0b808c873fa35c95",
+        "question": "What is the purpose of the `resize` property?",
+        "answer": "To control whether an element is resizable by the user",
+        "explanation": "[Reference CSS resize](https://developer.mozilla.org/en-US/docs/Web/CSS/resize)",
+        "hint": null,
+        "correctAnswer": ["To control whether an element is resizable by the user"],
+        "options": [
+          "To resize images automatically",
+          "To control whether an element is resizable by the user",
+          "To resize fonts",
+          "To resize the viewport"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "edf750d2747a53b35fc10e69",
+        "question": "Which CSS function is used to create custom shapes?",
+        "answer": "`clip-path()`",
+        "explanation": "[Reference CSS clip-path](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)",
+        "hint": null,
+        "correctAnswer": ["`clip-path()`"],
+        "options": ["`shape()`", "`clip-path()`", "`path()`", "`polygon()`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6a3b7c3922f02252663e19a0",
+        "question": "What does the `mix-blend-mode` property do?",
+        "answer": "Defines how an element's content should blend with its background",
+        "explanation": "[Reference CSS mix-blend-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode)",
+        "hint": null,
+        "correctAnswer": ["Defines how an element's content should blend with its background"],
+        "options": [
+          "Mixes colors randomly",
+          "Defines how an element's content should blend with its background",
+          "Creates color transitions",
+          "Adjusts color saturation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "css/css-quiz.md",
+    "language": "md",
+    "generatedAt": "2025-12-09T14:56:14.168857+00:00",
+    "warnings": []
+  }
+}

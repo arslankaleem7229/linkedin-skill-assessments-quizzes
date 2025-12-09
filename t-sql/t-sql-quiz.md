@@ -719,7 +719,7 @@ SELECT * FROM MyNumbers;
 - [ ] A
 - [ ] B
 - [x] C
-      ![Image of footer](images/Q56c.png?raw=png)
+      ![Image of footer](images/Q56c.png)
 - [ ] D
 
 #### Q57. Given the table below , which query shows How many students are in each department ?

@@ -271,7 +271,7 @@ Remarque: AndroidJUnitRunner nous permet d’exécuter des tests de style JUnit3
 
 #### Q22. Quelle définition dessinable vous permet d’obtenir la forme ci-dessous?
 
-![img](image/shape.png?raw=png)
+![img](image/shape.png)
 
 - [ ] &shy;
 
@@ -934,16 +934,16 @@ Remarque: AndroidJUnitRunner nous permet d’exécuter des tests de style JUnit3
 #### Q62. Quelle hiérarchie de mise en page est susceptible d’être dessinée le plus rapidement ?
 
 - [x] A
-      ![img](https://i.imgur.com/mT08jag.png?raw=png)
+      ![img](https://i.imgur.com/mT08jag.png)
 
 - [ ] B
-      ![img](https://i.imgur.com/rz9eKYc.png?raw=png)
+      ![img](https://i.imgur.com/rz9eKYc.png)
 
 - [ ] C
-      ![img](https://i.imgur.com/ETaHhaS.png?raw=png)
+      ![img](https://i.imgur.com/ETaHhaS.png)
 
 - [ ] D
-      ![img](https://i.imgur.com/1QBrTwR.png?raw=png)
+      ![img](https://i.imgur.com/1QBrTwR.png)
 
 #### Q63. Quelle est la méthode actuellement recommandée pour gérer les tâches en arrière-plan de longue durée ?
 

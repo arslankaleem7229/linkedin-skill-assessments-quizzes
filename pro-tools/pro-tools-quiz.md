@@ -23,7 +23,7 @@
 
 #### Q4. What kind of track does this image show?
 
-![What kind of track does this image show?](images/image01.jpeg?raw=true)
+![What kind of track does this image show?](images/image01.jpeg)
 
 - [ ] an audio track
 - [ ] a video track
@@ -46,7 +46,7 @@
 
 #### Q7. What color-coding preference do you select to make the playlist regions shown below have different colors?
 
-![What color-coding preference do you select to make the playlist regions shown below have different colors?](images/image02.jpeg?raw=true)
+![What color-coding preference do you select to make the playlist regions shown below have different colors?](images/image02.jpeg)
 
 - [ ] Select Track Type under Default Track Color Coding, and select Track Color under Default Clip Color Coding.
 - [ ] Keep Always Display Marker Colors selected.
@@ -76,7 +76,7 @@
 
 #### Q11. In the image shown, why did the Batch Fades window appear?
 
-![In the image shown, why did the Batch Fades window appear?](images/image03.jpeg?raw=true)
+![In the image shown, why did the Batch Fades window appear?](images/image03.jpeg)
 
 - [ ] Batch Fades was selected from the Edit menu.
 - [ ] Batch Fade mode was selected in the preferences.
@@ -92,7 +92,7 @@
 
 #### Q13. In the image shown, what does 3.5 dB signify on the bass clip?
 
-![In the image shown, what does 3.5 dB signify on the bass clip?](images/image04.png?raw=true)
+![In the image shown, what does 3.5 dB signify on the bass clip?](images/image04.png)
 
 - [ ] The bass clip has a total dynamic range of 3.5 dB.
 - [x] The bass clip has 3.5 dB of clip gain applied.
@@ -115,7 +115,7 @@
 
 #### Q16. What is the difference between Bus 1-2 and Bus 3-4?
 
-![What is the difference between Bus 1-2 and Bus 3-4?](images/image05.png?raw=true)
+![What is the difference between Bus 1-2 and Bus 3-4?](images/image05.png)
 
 - [ ] Bus 3-4 is lower in volume.
 - [x] Bus 1-2 is in expanded sends view, while Bus 3-4 is not.

@@ -66,7 +66,7 @@ E. Blur
 
 #### Q9. What can you do to make the shape layer automatically adjust its size as the text layer changes?
 
-![image](images/001.png?raw=png)
+![image](images/001.png)
 
 - [x] Select the Mask with Shape option.
 - [ ] Select Responsive Design and Pin To the text layer.
@@ -110,7 +110,7 @@ E. Blur
 
 #### Q15. You want to save a short portion of a longer clip for easy access. How can you do this?
 
-![image](images/002.png?raw=png)
+![image](images/002.png)
 
 - [ ] In the Media Browser, mark in and out points on a clip, and then import.
 - [ ] Mark in and out points on the clip in the Program Monitor and select choose Clip > Make Subclip.
@@ -133,7 +133,7 @@ E. Blur
 
 #### Q18. You are working on a new project and have been editing for two hours. What is the number of backup projects you would expect to find?
 
-![image](images/003.png?raw=png)
+![image](images/003.png)
 
 - [ ] 2
 - [ ] 12
@@ -151,7 +151,7 @@ E. Blur
 
 #### Q20. A transition is set to center aligned. What would be the result of dragging with the tool selected, to the right?
 
-![image](images/004.png?raw=png)
+![image](images/004.png)
 
 - [x] The transition would slide to the right.
 - [ ] You would extend only the right side of the transition.
@@ -181,7 +181,7 @@ E. Blur
 
 #### Q24. How was this clip manipulated using a Curve adjustment?
 
-![image](images/005.png?raw=png)
+![image](images/005.png)
 
 - [x] Hue vs. Luma
 - [ ] Saturation vs. Saturation
@@ -211,7 +211,7 @@ E. Blur
 
 #### Q28. In the scenario shown below, you want to extend the end of the red clip in the Timeline and not change the duration of the adjacent clip. Which is the most appropriate trim choice to accomplish this?
 
-![image](images/006.png?raw=png)
+![image](images/006.png)
 
 - [ ] Trim In
 - [x] Trim Out
@@ -264,7 +264,7 @@ E. M4A
 
 #### Q33. What can you tell about this transition?
 
-![image](images/007.png?raw=png)
+![image](images/007.png)
 
 - [ ] Premiere will insert white to fill the needed handles.
 - [ ] Premiere will insert black to fill the needed handles.
@@ -287,7 +287,7 @@ E. M4A
 
 #### Q36. You want to pull down the saturation in just the clouds shown below. Which Curve adjustment makes this easiest?
 
-![image](images/008.png?raw=png)
+![image](images/008.png)
 
 - [x] Hue vs. Saturation
 - [ ] RGB Curves
@@ -311,7 +311,7 @@ E. Ellipse
 
 #### Q38. Which option can create a color field that automatically adjusts size as you add or subtract from a text layer?
 
-![image](images/009.png?raw=png)
+![image](images/009.png)
 
 - [ ] Choose Fill from the Appearance controls.
 - [ ] Choose Stroke from the Appearance controls.
@@ -327,7 +327,7 @@ E. Ellipse
 
 #### Q40. Looking at the histogram below, which single adjustment slider could create this change?
 
-![image](images/010.png?raw=png)
+![image](images/010.png)
 
 - [ ] Blacks
 - [x] Contrast
@@ -374,7 +374,7 @@ https://www.premiumbeat.com/blog/audio-automation-in-premiere-pro/#:~:text=Read,
 
 #### Q46. Which option is enabled to affect the view of the audio waveforms as shown below?
 
-![image](images/011.png?raw=png)
+![image](images/011.png)
 
 - [ ] Show Audio Time Units
 - [x] Rectified Audio Waveform
@@ -449,7 +449,7 @@ E. PDF
 
 #### Q55. Suppose you want to darken just the sky area in the image shown. Which Curve adjustment makes this easiest?
 
-![image](images/008.png?raw=png)
+![image](images/008.png)
 
 - [ ] Hue vs. Luma
 - [ ] Hue vs. Hue
@@ -542,7 +542,7 @@ E. It ensures that new After Effect composition settings are correct for a Premi
 
 #### Q67. What would happen if you dropped a transition onto this edit point?
 
-![image](images/012.png?raw=png)
+![image](images/012.png)
 
 - [ ] You would get an End at Cut alignment.
 - [ ] You would get a Start at Cut alignment.

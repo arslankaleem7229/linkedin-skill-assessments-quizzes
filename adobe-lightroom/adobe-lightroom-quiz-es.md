@@ -25,7 +25,7 @@ Nota: Solo uso la sincronización. Después de profundizar en la configuración,
 
 #### P4. Revise la imagen que se muestra. ¿Qué implica el signo de exclamación adyacente a la miniatura?
 
-![Review the image shown. What does the exclamation point adjacent to the thumbnail imply?](images/Q4.png?raw=true)
+![Review the image shown. What does the exclamation point adjacent to the thumbnail imply?](images/Q4.png)
 
 - [ ] La imagen ha sido editada en Photoshop.
 - [ ] La foto está marcada como elegida.
@@ -43,7 +43,7 @@ Nota: Solo uso la sincronización. Después de profundizar en la configuración,
 
 #### P6. Revisa la imagen a continuación. ¿Qué opción le permite enderezar manualmente una foto dibujando una línea vertical u horizontal?
 
-![Review the image below. Which option lets you manually straighten a photo by drawing a vertical or horizontal line?](images/Q6.png?raw=true)
+![Review the image below. Which option lets you manually straighten a photo by drawing a vertical or horizontal line?](images/Q6.png)
 
 - [ ] A
 - [x] B
@@ -82,7 +82,7 @@ Nota: Solo uso la sincronización. Después de profundizar en la configuración,
 
 #### P11. En la imagen que se muestra, ¿qué indican las áreas azules?
 
-![In the image shown, what do the blue areas indicate?](images/Q11.png?raw=true)
+![In the image shown, what do the blue areas indicate?](images/Q11.png)
 
 - [x] detalles aplastados en las sombras
 - [ ] un efecto especial aplicado a la imagen
@@ -121,7 +121,7 @@ Nota: Solo uso la sincronización. Después de profundizar en la configuración,
 
 #### P16. En la imagen que se muestra, ¿cuál es el icono rodeado de amarillo?
 
-![Image with a yellow circle](images/Q16.png?raw=true)
+![Image with a yellow circle](images/Q16.png)
 
 - [ ] Copia virtual
 - [ ] Sincronizado con Lightroom

@@ -629,16 +629,16 @@ public void onCreate(Bundle savedInstanceState){
 #### Q61. 哪种布局层次结构可能绘制得最快?
 
 - [x] A
-      ![img](https://i.imgur.com/mT08jag.png?raw=png)
+      ![img](https://i.imgur.com/mT08jag.png)
 
 - [ ] B
-      ![img](https://i.imgur.com/rz9eKYc.png?raw=png)
+      ![img](https://i.imgur.com/rz9eKYc.png)
 
 - [ ] C
-      ![img](https://i.imgur.com/ETaHhaS.png?raw=png)
+      ![img](https://i.imgur.com/ETaHhaS.png)
 
 - [ ] D
-      ![img](https://i.imgur.com/1QBrTwR.png?raw=png)
+      ![img](https://i.imgur.com/1QBrTwR.png)
 
 #### Q62. 当前推荐的处理长时间运行的后台任务的方法是什么?
 

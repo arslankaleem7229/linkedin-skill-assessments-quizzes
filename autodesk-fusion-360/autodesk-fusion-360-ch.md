@@ -23,7 +23,7 @@
 
 #### Q4。 製作這個物體時使用了多少個孔？
 
-![圖片](images/question_4.png?raw=true)
+![圖片](images/question_4.png)
 
 - [x] 1
 - [ ] 2
@@ -180,7 +180,7 @@
 
 #### Q26。 創建這個物件需要多少草圖？
 
-![圖片](images/question_28.png?raw=png)
+![圖片](images/question_28.png)
 
 - [x] 兩個
 - [ ] 三

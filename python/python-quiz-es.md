@@ -1797,7 +1797,7 @@ Hello, I am from France
 
 #### Q123. Usando Pandas, cargamos un conjunto de datos de Kaggle, estructurado como en la imagen abajo. ¿Qué comando devolverá el número total de sobrevivientes?
 
-![Q129](images/Q129.png?raw=png)
+![Q129](images/Q129.png)
 
 - [x] `sum(titanic['Survived'])`
 - [ ] `[x for x in titanic['Survived'] if x == 1]`
@@ -1842,7 +1842,7 @@ actors = ["Downey", "Holland", "Evans"]
 
 #### Q126. La Similaridad de Jaccard es una fórmula que te dice qué tan similares son dos conjuntos. Se define como la cardinalidad de la intersección dividida por la cardinalidad de la unión. ¿Qué opción es una implementación precisa en Python?
 
-![Q132](images/Q132.png?raw=png)
+![Q132](images/Q132.png)
 
 - [ ] `def jaccard(a, b): return len (a | b) / len (a & b)`
 - [x] `def jaccard(a, b): return len (a & b) / len (a | b)`
@@ -1947,7 +1947,7 @@ print(a[1])
 
 #### Q138. La imagen abajo fue creada usando Matplotlib. Es un gráfico de distribución de una lista de enteros llenos con números usando la función **\_** y graficado con **\_**.
 
-![Q132](images/Q138.png?raw=png)
+![Q132](images/Q138.png)
 
 - [ ] `random.uniform(0,50);plt.hist`
 - [x] `random.gauss(50,20);plt.hist`

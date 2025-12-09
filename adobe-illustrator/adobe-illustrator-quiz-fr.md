@@ -2,7 +2,7 @@
 
 #### Q1. Qu’adviendrait-il de la couleur de remplissage de l’objet illustré ci-dessous si vous le copiez et le collez dans un autre fichier Illustrator dans lequel le mode Couleur du document est défini sur CMJN ?
 
-![CMYK](images/002.png?raw=true)
+![CMYK](images/002.png)
 
 - [x] La couleur de remplissage serait convertie en valeurs CMJN
 - [ ] La couleur de remplissage serait inchangée.
@@ -11,7 +11,7 @@
 
 #### Q2. Vous souhaitez ajouter des étoiles à l’objet d’arrière-plan circulaire dans l’image ci-dessous, à l’aide d’un pinceau de dispersion. Comment pouvez-vous vous assurer que les étoiles n’apparaissent qu’à l’intérieur du cercle ?
 
-![Add stars](images/006.png?raw=true)
+![Add stars](images/006.png)
 
 - [ ] Sélectionnez le mode de fusion d’écran avant de brosser.
 - [x] Sélectionnez le cercle et cliquez sur le bouton Dessiner à l’intérieur de la barre d’outils avant de brosser.
@@ -68,7 +68,7 @@
 
 #### Q9. Que feriez-vous au point d’ancrage gauche pour rendre l’objet symétrique ?
 
-![Make symmetrical](images/005.png?raw=true)
+![Make symmetrical](images/005.png)
 
 - [ ] Retirez-le.
 - [ ] Coupez le tracé au point d’ancrage.
@@ -168,7 +168,7 @@
 
 #### Q23. Dans l’image ci-dessous, vous essayez d’utiliser l’outil Joindre pour supprimer les parties qui se chevauchent de deux tracés (surlignées en jaune), mais rien ne semble se passer. Pourquoi ?
 
-![Overlapping circles](images/009.png?raw=true)
+![Overlapping circles](images/009.png)
 
 - [ ] Les chemins d’accès n’ont pas d’attribut de remplissage.
 - [ ] Un seul des chemins est sélectionné, mais les deux doivent être sélectionnés.
@@ -191,7 +191,7 @@
 
 #### Q26. Quelle est la signification des trois points sur l’icône du nuage dans l’image ci-dessous?
 
-![Cloud icon](images/007.png?raw=true)
+![Cloud icon](images/007.png)
 
 - [ ] Les polices Alana sont désactivées.
 - [ ] Les polices Alana sont destinées à une utilisation uniquement sur le Web.
@@ -232,7 +232,7 @@
 
 #### Q31. Lorsque vous visualisez l’illustration ci-dessous en mode Contour, que pouvez-vous dire sur le mot « sac à dos »?
 
-![Outline mode](images/008.png?raw=true)
+![Outline mode](images/008.png)
 
 - [ ] Il a été converti en contours.
 - [x] C’est du texte en direct.
@@ -297,7 +297,7 @@
 
 #### Q40. Vous avez conçu l’étiquette du produit ci-dessous. Votre client veut que le cercle noir s’imprime aussi sombre que possible et exige qu’aucun des éléments de logo colorés ne transparaisse à travers le cercle lorsque l’étiquette est imprimée. Que devriez-vous faire?
 
-![Label](images/003.png?raw=true)
+![Label](images/003.png)
 
 - [x] Sélectionnez le cercle et activez Remplissage de surimpression dans le panneau Attributs.
 - [ ] Sélectionnez le cercle et appliquez le mode de fusion Multiplier.
@@ -320,7 +320,7 @@
 
 #### Q43. Dans la carte-cadeau ci-dessous, les pétales de fleurs magenta doivent être imprimés avec un vernis. Comment configureriez-vous le fichier pour que le vernis soit appliqué sur la couleur magenta des pétales?
 
-![Gift card](images/004.png?raw=true)
+![Gift card](images/004.png)
 
 - [ ] Utilisez Informations sur les fichiers pour laisser des instructions à votre fournisseur de services d’impression.
 - [ ] Dupliquez les pétales en une nouvelle couche appelée « Vernis ».
@@ -392,7 +392,7 @@
 
 #### Q53. L’outil illustrateur qui s’affiche sous la forme d’une flèche blanche est connu sous le nom de `___`
 
-![white arrow](images/001.png?raw=true)
+![white arrow](images/001.png)
 
 - [ ] Outil de sélection
 - [ ] Outil de peinture
@@ -485,7 +485,7 @@
 
 #### Q66. Pourquoi le point supérieur de cette étoile apparaît-il différent des autres points ?
 
-![yellow star](images/010.png?raw=true)
+![yellow star](images/010.png)
 
 - [ ] L’AVC a été décrit.
 - [ ] Le contour a un type d’angle jointure biseautée.
@@ -561,7 +561,7 @@
 
 #### Q76. Quelle option utilisez-vous pour créer le contour illustré ci-dessous ?
 
-![stroke](images/011.png?raw=true)
+![stroke](images/011.png)
 
 - [ ] Jointure ronde
 - [ ] Plafond de projection

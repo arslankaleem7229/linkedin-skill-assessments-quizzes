@@ -23,7 +23,7 @@
 
 #### Q4. The flow pictured saves new email attachments in SharePoint, adds a row to Excel to document the file save, and sends a message to TEAMS. What is the proper placement of steps B, D, and E?
 
-![Image of footer](images/Q01.png?raw=png)
+![Image of footer](images/Q01.png)
 
 - [x] B, D and E belong inside C in the order listed.
 
@@ -47,7 +47,7 @@
 
 #### Q7. What is the purpose of the flow?
 
-![Image of footer](images/Q02.png?raw=png)
+![Image of footer](images/Q02.png)
 
 - [ ] to add events. to an Outlook calender if they are deleted in Google Calender
 - [x] to delete Outlook calender events when they are deleted in Google Calender
@@ -116,7 +116,7 @@
 
 #### Q15. What control would you use to build parallel branches of conditional logic based on a single value?
 
-![Image of footer](images/Q03.png?raw=png)
+![Image of footer](images/Q03.png)
 
 - [x] Apply to each
 - [ ] Scope
@@ -222,7 +222,7 @@
 
 #### Q29. What control would you use to build parallel branches of conditional logic based on a single value?
 
-![Image of footer](images/Q01.png?raw=png)
+![Image of footer](images/Q01.png)
 
 - [ ] Apply to each
 - [ ] Scope
@@ -231,7 +231,7 @@
 
 #### Q30. In this flow, what is required for dynamic content to be available for use in the Email step?
 
-![Image of footer](images/Q30.png?raw=png)
+![Image of footer](images/Q30.png)
 
 - [ ] Recipient of email must have edit rights to the SharePoint library.
 - [ ] User must be owner of the SharePoint library.
@@ -254,7 +254,7 @@
 
 #### Q33. Who can use the Power Automate mobile app?
 
-![Image of footer](images/Q30.png?raw=png)
+![Image of footer](images/Q30.png)
 
 - [ ] Anyone who already has a Power Automate account can install and use the mobile app.
 - [ ] Anyone who purchases a Power Automate mobile license can install and use the mobile app.
@@ -263,7 +263,7 @@
 
 #### Q34. You want a flow that sends an email if a new spreadsheet is added to a SharePoint library. What is the correct order for the steps shown?
 
-![Image of footer](images/Q34.png?raw=png)
+![Image of footer](images/Q34.png)
 
 - [ ] A, B, D, E, C
 - [x] C, B, A, E, D
@@ -333,7 +333,7 @@ D. Store the approvals in the Common Data Service.
 
 #### Q43. When you open Power Automate, how do you find flows that are already available to you?
 
-![Image of footer](images/Q43.png?raw=png)
+![Image of footer](images/Q43.png)
 
 - [ ] You must search for flows individually. You must search for flows individually.
 - [ ] Scroll down the Power Automate Home page until you find your flows.
@@ -349,7 +349,7 @@ D. Store the approvals in the Common Data Service.
 
 #### Q45. In this flow, what dynamic content would you use to include identification of the person who added the file to SharePoint? (Select from values listed.)
 
-![Image of footer](images/Q45.png?raw=png)
+![Image of footer](images/Q45.png)
 
 - [ ] Add the value for Link to Item.
 - [x] Add the value for Created By DisplayName.

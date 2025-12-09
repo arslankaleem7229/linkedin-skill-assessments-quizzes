@@ -2,7 +2,7 @@
 
 #### P1. ¿Qué pasaría con el color de relleno del objeto que se muestra a continuación si lo copiara y pegara en otro archivo de Illustrator donde el modo de color del documento se estableciera en CMYK?
 
-![CMYK](images/002.png?raw=true)
+![CMYK](images/002.png)
 
 - [x] El color de relleno se convertiría a valores CMYK
 - [ ] El color de relleno no cambiaría.
@@ -11,7 +11,7 @@
 
 #### P2. Desea agregar algunas estrellas al objeto de fondo circular en la imagen a continuación, utilizando un pincel de dispersión. ¿Cómo puedes asegurarte de que las estrellas aparezcan solo dentro del círculo?
 
-![Add stars](images/006.png?raw=true)
+![Add stars](images/006.png)
 
 - [ ] Seleccione el modo de fusión de pantalla antes de cepillar.
 - [x] Seleccione el círculo y haga clic en el botón Dibujar dentro de la barra de herramientas antes de cepillar.
@@ -68,7 +68,7 @@
 
 #### P9. ¿Qué harías con el punto de anclaje izquierdo para que el objeto sea simétrico?
 
-![Make symmetrical](images/005.png?raw=true)
+![Make symmetrical](images/005.png)
 
 - [ ] Retíralo.
 - [ ] Corta el trazado en el punto de anclaje.
@@ -168,7 +168,7 @@
 
 #### P23. En la siguiente imagen, está intentando utilizar la herramienta Unir para eliminar las partes superpuestas de dos trazados (resaltados en amarillo), pero parece que no está sucediendo nada. ¿Por qué?
 
-![Overlapping circles](images/009.png?raw=true)
+![Overlapping circles](images/009.png)
 
 - [ ] Las rutas no tienen un atributo fill.
 - [ ] Sólo se selecciona uno de los trazados, pero es necesario seleccionar ambos.
@@ -191,7 +191,7 @@
 
 #### P26. ¿Cuál es el significado de los tres puntos en el icono de la nube en la imagen de abajo?
 
-![Cloud icon](images/007.png?raw=true)
+![Cloud icon](images/007.png)
 
 - [ ] Las fuentes Alana están desactivadas.
 - [ ] Las fuentes Alana son para uso exclusivo de la web.
@@ -232,7 +232,7 @@
 
 #### P31. Al ver la obra de arte que se muestra a continuación en el modo Esquema, ¿qué puede decir sobre la palabra "mochila"?
 
-![Outline mode](images/008.png?raw=true)
+![Outline mode](images/008.png)
 
 - [ ] Se ha convertido en contornos.
 - [x] Es texto en vivo.
@@ -297,7 +297,7 @@
 
 #### P40. Ha diseñado la etiqueta del producto que se muestra a continuación. Su cliente quiere que el círculo negro se imprima lo más oscuro posible y requiere que ninguno de los elementos coloridos del logotipo se muestre a través del círculo cuando se imprime la etiqueta. ¿Qué debes hacer?
 
-![Label](images/003.png?raw=true)
+![Label](images/003.png)
 
 - [x] Seleccione el círculo y active Rellenar sobreimpresión en el panel Atributos.
 - [ ] Seleccione el círculo y aplique el modo multiplicar mezcla.
@@ -320,7 +320,7 @@
 
 #### P43. En la tarjeta de regalo que se muestra a continuación, los pétalos de flores magenta deben imprimirse con un barniz. ¿Cómo configurarías el archivo para que el barniz se aplique sobre el color magenta de los pétalos?
 
-![Gift card](images/004.png?raw=true)
+![Gift card](images/004.png)
 
 - [ ] Utilice Información de archivo para dejar instrucciones para su proveedor de servicios de impresión.
 - [ ] Duplicar los pétalos a una nueva capa llamada "Barniz".
@@ -392,7 +392,7 @@
 
 #### Pregunta 53. La herramienta de ilustración que se muestra como una flecha blanca se conoce como el `___`
 
-![white arrow](images/001.png?raw=true)
+![white arrow](images/001.png)
 
 - [ ] Herramienta de selección
 - [ ] Herramienta de pintura
@@ -485,7 +485,7 @@
 
 #### Pregunta 66. ¿Por qué el punto superior de esta estrella parece diferente de los otros puntos?
 
-![yellow star](images/010.png?raw=true)
+![yellow star](images/010.png)
 
 - [ ] El trazo ha sido esbozado.
 - [ ] El trazo tiene un tipo de esquina de bevel join.
@@ -561,7 +561,7 @@
 
 #### Pregunta 76. ¿Qué opción utiliza para crear el trazo que se muestra a continuación?
 
-![stroke](images/011.png?raw=true)
+![stroke](images/011.png)
 
 - [ ] Unirse a la ronda
 - [ ] Tapa de proyección

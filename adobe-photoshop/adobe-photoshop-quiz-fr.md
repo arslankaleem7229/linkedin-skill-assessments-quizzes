@@ -29,7 +29,7 @@
 
 #### Q4. Comment éviter d’avoir des bords transparents le long du bord d’une photo panoramique tout en conservant la plus grande taille d’image ?
 
-![How can you avoid having transparent edges along the edge of a panoramic photo while retaining the largest image size?](images/007.png?raw=true)
+![How can you avoid having transparent edges along the edge of a panoramic photo while retaining the largest image size?](images/007.png)
 
 - [ ] Choisissez la méthode cylindrique.
 - [ ] Choisissez la méthode Perspective.
@@ -127,7 +127,7 @@ E. Perspective Warp
 
 #### Q16. Quelle fonctionnalité de Photoshop a été utilisée pour convertir cette image en noir et blanc ?
 
-![What Photoshop feature was used to convert this image to black and white?](images/008.png?raw=true)
+![What Photoshop feature was used to convert this image to black and white?](images/008.png)
 
 - [ ] Calque de réglage noir et blanc
 - [ ] Postériser
@@ -136,7 +136,7 @@ E. Perspective Warp
 
 #### Q17. Dans l’image montrée, pourquoi Sharpen Edges est-il grisé ?
 
-![In the image shown, why is Sharpen Edges grayed out?](images/009.png?raw=true)
+![In the image shown, why is Sharpen Edges grayed out?](images/009.png)
 
 - [ ] Le filtre ne fonctionne pas sur une image 16 bits.
 - [ ] Le serveur de fichiers n’est pas correctement installé.
@@ -145,7 +145,7 @@ E. Perspective Warp
 
 #### Q18. Dans l’image montrée, quelle fonctionnalité Camera Raw a été utilisée pour restreindre le filtre gradué afin d’éviter la statue ?
 
-![In the image shown, which Camera Raw feature was used to restrict the graduated filter to avoid the statue?](images/010.png?raw=true)
+![In the image shown, which Camera Raw feature was used to restrict the graduated filter to avoid the statue?](images/010.png)
 
 - [x] Pinceau de réglage
 - [ ] Masque de plage de profondeur
@@ -161,7 +161,7 @@ E. Perspective Warp
 
 #### Q20. Quelle méthode de transformation Camera Raw est utilisée dans l’exemple illustré ?
 
-![Which Camera Raw Transform method is being used in the example shown?](images/011.png?raw=true)
+![Which Camera Raw Transform method is being used in the example shown?](images/011.png)
 
 - [x] Guidé
 - [ ] Verticale
@@ -191,7 +191,7 @@ E. Perspective Warp
 
 #### Q24. Quelle option était **non** sélectionné dans l’outil Baguette magique pour créer une sélection comme celle illustrée ci-dessous ?
 
-![Which option was not selected in the Magic Wand tool to create a selection like the one shown below?](images/012.png?raw=true)
+![Which option was not selected in the Magic Wand tool to create a selection like the one shown below?](images/012.png)
 
 - [x] Contigu
 - [ ] Anti-alias
@@ -200,7 +200,7 @@ E. Perspective Warp
 
 #### Q25. Où devez-vous cliquer pour ouvrir une boîte de dialogue dans laquelle vous pouvez ensuite choisir d’ouvrir un fichier brut en tant qu’objet dynamique ?
 
-![Where should you click to open a dialog box in which you can then choose to open a raw file as a Smart Object?](images/013.png?raw=true)
+![Where should you click to open a dialog box in which you can then choose to open a raw file as a Smart Object?](images/013.png)
 
 - [ ] A
 - [ ] B
@@ -288,7 +288,7 @@ E. Perspective Warp
 
 #### Q37. Pour masquer les bordures blanches autour des pixels affichés à un grossissement élevé, quelle option désactivez-vous ?
 
-![To hide the white borders around pixels that are viewed at a high magnification, which option do you disable?](images/005.png?raw=true)
+![To hide the white borders around pixels that are viewed at a high magnification, which option do you disable?](images/005.png)
 
 - [ ] Fenêtre > Espace de travail > Grille
 - [ ] Afficher > Afficher les tranches >
@@ -348,7 +348,7 @@ E. Perspective Warp
 
 #### Q45. Vous essayez d’utiliser l’outil Pinceau de guérison, mais vous ne voyez pas les résultats. Quel est le problème?
 
-![You're trying to use the Healing Brush tool, but don't see results. What is the problem?](images/006.png?raw=true)
+![You're trying to use the Healing Brush tool, but don't see results. What is the problem?](images/006.png)
 
 - [x] Vous avez oublié de cliquer tout en maintenant la touche Maj enfoncée pour définir le point source de l’outil
 - [ ] Vous avez oublié de cliquer sur alt (Windows) ou option (Mac) pour définir le point source de l’outil
@@ -366,7 +366,7 @@ E. Perspective Warp
 
 #### Q47. Quelle option utilisez-vous avec les outils Dodge et Burn pour éviter les changements de couleur indésirables comme ceux affichés dans l’image?
 
-![Which option do you use with the Dodge and Burn tools to prevent unwanted color changes like those shown in the image?](images/001.png?raw=true)
+![Which option do you use with the Dodge and Burn tools to prevent unwanted color changes like those shown in the image?](images/001.png)
 
 - [ ] Échantillonner tous les calques
 - [x] Protéger les tonalités
@@ -377,7 +377,7 @@ E. Perspective Warp
 
 #### Q48. Quelle commande dans le **Objets dynamiques** sous-menu verriez-vous pour enregistrer le fichier d’origine pour le calque sélectionné ?
 
-![Which command in the Smart Objects submenu would you see to save the original file for the selected layer?](images/002.png?raw=true)
+![Which command in the Smart Objects submenu would you see to save the original file for the selected layer?](images/002.png)
 
 - [ ] Modifier le contenu
 - [ ] Remplacer le contenu
@@ -386,7 +386,7 @@ E. Perspective Warp
 
 #### Q49. Dans l’image montrée, quelle méthode Blur est utilisée pour contrôler la mise au point avec une série de broches ?
 
-![In the image shown, which Blur method is being used to control focus with a series of pins?](images/003.png?raw=true)
+![In the image shown, which Blur method is being used to control focus with a series of pins?](images/003.png)
 
 - [ ] Flou de tracé
 - [ ] Flou Tilt-Shift
@@ -395,7 +395,7 @@ E. Perspective Warp
 
 #### Q50. Dans l’image montrée, que représentent les zones bleues ?
 
-![In the image shown, what do the blue areas represent?](images/004.png?raw=true)
+![In the image shown, what do the blue areas represent?](images/004.png)
 
 - [ ] Couleur coulée
 - [ ] Détail de l’ombre découpée
@@ -404,7 +404,7 @@ E. Perspective Warp
 
 #### Q51. Que montre l’image en niveaux de gris de cette figure ?
 
-![What does the grayscale image in this figure show?](images/014.png?raw=true)
+![What does the grayscale image in this figure show?](images/014.png)
 
 - [x] les bords affectés par la commande Accentuer, tels qu’affinés par le curseur Masquage
 - [ ] les arêtes affectées par la commande Accentuer telles qu’affinées par le curseur Rayon
@@ -413,7 +413,7 @@ E. Perspective Warp
 
 #### Q52. Où cliquer pour ajuster le mode de fusion d’un filtre intelligent ?
 
-![Where do you click to adjust the blending mode for a Smart Filter?](images/015.png?raw=true)
+![Where do you click to adjust the blending mode for a Smart Filter?](images/015.png)
 
 - [ ] A
 - [ ] C

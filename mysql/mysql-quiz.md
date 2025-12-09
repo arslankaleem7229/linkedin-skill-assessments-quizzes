@@ -132,7 +132,7 @@
 
 #### Q9. You are working with the tables as shown in this diagram. You need to generate the list of customers who purchased certain car models. Which SQL clause do you use?
 
-![mysql Q09](images/mysql_q09.jpg?raw=true)
+![mysql Q09](images/mysql_q09.jpg)
 
 - [ ] LIKE
 - [x] IN
@@ -363,7 +363,7 @@
 
 #### Q40. Which statement is true for the diagram below
 
-![mysql Q41](images/mysql_q41.jpg?raw=true)
+![mysql Q41](images/mysql_q41.jpg)
 
 - [ ] carid is the primary key for purchases
 - [ ] carid is the foreign key for cars.carid
@@ -556,7 +556,7 @@ Note: both answers are correct - see [TRUNCATE TABLE Statement](https://dev.mysq
 
 #### Q60. You are working with the tables as shown in this diagram. You need to get the number of cars sold per the home state of each customer's residence. How can you accomplish this?
 
-![mysql Q61](images/mysql_q61.png?raw=true)
+![mysql Q61](images/mysql_q61.png)
 
 - [ ] `SELECT state, COUNT(*) FROM customers WHERE ID IN (SELECT customerID FROM purchases) GROUP BY state;`
 - [ ] `SELECT state, COUNT(*) FROM customers c LEFT JOIN purchases p ON c.ID = p.customerID GROUP BY state;`
@@ -725,7 +725,7 @@ WHERE MATCH(address) AGAINST ('street, drive');
 
 #### Q78. In the diagram below, the price field is declared as type DECIMAL. What would be a more efficient declaration for this field?
 
-![mysql picture](images/mysql_q80.png?raw=true)
+![mysql picture](images/mysql_q80.png)
 
 - [ ] FLOAT
 - [x] DECIMAL(10,2)
@@ -743,7 +743,7 @@ Explnation: BIT is not a string type
 
 #### Q80. This diagram shows what type of relationship between customers and cars?
 
-![mysql picture](images/mysql_q80.png?raw=true)
+![mysql picture](images/mysql_q80.png)
 
 - [ ] one-to-many
 - [ ] parent-child
@@ -768,7 +768,7 @@ Explanation: Both `SET` and `DECLARE` are used to create variables. Reference: [
 
 #### Q83. In the diagram below, the ID fields are declared as type CHAR instead of INT . Which is NOT one of the possible reasons behind that decision?
 
-![mysql picture](images/mysql_q85.png?raw=true)
+![mysql picture](images/mysql_q85.png)
 
 - [ ] The ID field needs to include letters and not just numbers.
 - [ ] You can have a consistent format across all of the tables that require ID fields.
@@ -806,7 +806,7 @@ SELECT name FROM students WHERE name REGEXP '^to';
 
 #### Q87. You are working with the tables as shown in the diagram. You need to generate the list of price totals for each make and model of car, with subtotals for each make, and the grand total of all prices. Which SQL clause do you use?
 
-![mysql picture](images/mysql_q92.png?raw=true)
+![mysql picture](images/mysql_q92.png)
 
 - [ ] UNION
 - [ ] SHOW TOTALS
@@ -857,7 +857,7 @@ SELECT name FROM students WHERE name REGEXP '^to';
 
 #### Q94. You are working with the tables shown below. You need to generate the list of all cars, whether or not they had been sold. Which statement accomplishes that?
 
-![mysql picture](images/mysql_q98.png?raw=true)
+![mysql picture](images/mysql_q98.png)
 
 - [ ] A
 
@@ -972,7 +972,7 @@ Table name: superheroes
 
 #### Q100. You are working on UPDATE trigger on the employee tablein this diagram. How can you access the new value for the address inside the trigger?
 
-![mysql picture](images/mysql_q116.png?raw=true)
+![mysql picture](images/mysql_q116.png)
 
 - [x] Use NEW.address
 - [ ] Use INSERTED.address
@@ -1070,7 +1070,7 @@ Table name: superheroes
 
 #### Q110. You are working with the tables shown below. You need to make sure that any record added to the purchases table consists of a customerlD, which already exists in the customers table, and a carlD, which already exists in the cars table. You decide to use a trigger to do the validation. Which one do you use?
 
-![mysql picture](images/mysql_q85.png?raw=true)
+![mysql picture](images/mysql_q85.png)
 
 - [ ] IF EXISTS
 - [ ] CROSS JOIN

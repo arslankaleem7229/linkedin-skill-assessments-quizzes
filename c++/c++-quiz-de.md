@@ -1250,7 +1250,7 @@ int main(){
 
 #### F74. Bei diesen Einträgen in einer Map, wie werden Sie den Wert für den Schlüssel "Sinead" auf 22 aktualisieren?
 
-![image](images/Q79.png?raw=png)
+![image](images/Q79.png)
 
 - [x] `marks["Sinead"] = 22`
 - [ ] `marks["Sinead"].22`

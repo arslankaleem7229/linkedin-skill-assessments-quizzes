@@ -2,7 +2,7 @@
 
 #### Q1. What would happen to the fill color of the object shown below if you copied and pasted it into another Illustrator file where the Document Color Mode was set to CMYK?
 
-![CMYK](images/002.png?raw=true)
+![CMYK](images/002.png)
 
 - [x] The fill color would be converted to CMYK values
 - [ ] The fill color would be unchanged.
@@ -11,7 +11,7 @@
 
 #### Q2. You want to add some stars to the circular background object in the image below, using a scatter brush. How can you ensure that the stars appear only inside the circle?
 
-![Add stars](images/006.png?raw=true)
+![Add stars](images/006.png)
 
 - [ ] Select the Screen blending mode before you brush.
 - [x] Select the circle and click the Draw Inside button on the toolbar before you brush.
@@ -68,7 +68,7 @@
 
 #### Q9. What would you do to the left anchor point to make the object symmetrical?
 
-![Make symmetrical](images/005.png?raw=true)
+![Make symmetrical](images/005.png)
 
 - [ ] Remove it.
 - [ ] Cut the path at the anchor point.
@@ -168,7 +168,7 @@
 
 #### Q23. In the image below, you are attempting to use the Join tool to remove the overlapping portions of two paths (highlighted in yellow), but nothing seems to be happening. Why is this?
 
-![Overlapping circles](images/009.png?raw=true)
+![Overlapping circles](images/009.png)
 
 - [x] The paths do not have a fill attribute.
 - [ ] Only one of the paths is selected, but both need to be selected.
@@ -191,7 +191,7 @@
 
 #### Q26. What is the meaning of the three dots on the cloud icon in the image below?
 
-![Cloud icon](images/007.png?raw=true)
+![Cloud icon](images/007.png)
 
 - [ ] The Alana fonts are deactivated.
 - [ ] The Alana fonts are for web-only use.
@@ -232,7 +232,7 @@
 
 #### Q31. When viewing the artwork shown below in Outline mode, what can you tell about the word "backpack"?
 
-![Outline mode](images/008.png?raw=true)
+![Outline mode](images/008.png)
 
 - [ ] It has been converted to outlines.
 - [x] It is live text.
@@ -297,7 +297,7 @@
 
 #### Q40. You have designed the product label shown below. Your client wants the black circle to print as dark as possible and requires that none of the colorful logo elements show through the circle when the label is printed. What should you do?
 
-![Label](images/003.png?raw=true)
+![Label](images/003.png)
 
 - [x] Select the circle and turn on Overprint Fill in the Attributes panel.
 - [ ] Select the circle and apply the Multiply blending mode.
@@ -320,7 +320,7 @@
 
 #### Q43. In the gift card shown below, the magenta flower petals need to be printed with a varnish. How would you set up the file so the varnish is applied over the magenta color of the petals?
 
-![Gift card](images/004.png?raw=true)
+![Gift card](images/004.png)
 
 - [ ] Use File Info to leave instructions for your print service provider.
 - [ ] Duplicate the petals to a new layer called "Varnish."
@@ -392,7 +392,7 @@
 
 #### Q53. The illustrator tool which is shown as a white arrow is known as the `___`
 
-![white arrow](images/001.png?raw=true)
+![white arrow](images/001.png)
 
 - [ ] Selection tool
 - [ ] Paint tool
@@ -485,7 +485,7 @@
 
 #### Q66. Why does the top point of this star appear different from the other points?
 
-![yellow star](images/010.png?raw=true)
+![yellow star](images/010.png)
 
 - [ ] The stroke has been outlined.
 - [ ] The stroke has a corner type of Bevel Join.
@@ -561,7 +561,7 @@
 
 #### Q76. Which option do you use to create the stroke shown below?
 
-![stroke](images/011.png?raw=true)
+![stroke](images/011.png)
 
 - [ ] Round Join
 - [ ] Projecting Cap
@@ -616,7 +616,7 @@
 
 #### Q82. This image shows a variable data project file for a business card. Which properties of the Color_Blocks variable are dynamic?
 
-![Business card](images/012.jpg?raw=true)
+![Business card](images/012.jpg)
 
 - [ ] position on the artboard
 - [ ] size
@@ -636,7 +636,7 @@
 
 #### Q84. Using the Width tool, how could you make the stroke on the top path match the bottom one?
 
-![Two objects](images/013.jpg?raw=true)
+![Two objects](images/013.jpg)
 
 - [ ] Press and hold the Option (Mac) or Alt (Windows) key, and drag the selected width point to the left.
 - [x] Drag the selected width point left until it snaps to the same position as the adjacent width point.
@@ -665,7 +665,7 @@
 
 #### Q87. How can you change the pattern fill in this image so that the flowers overlap more with smaller gaps?
 
-!['Spring' Pattern Font](images/014.png?raw=true)
+!['Spring' Pattern Font](images/014.png)
 
 - [ ] Use the **Overlap** buttons in the **Pattern Options** dialog box.
 - [ ] Select **Size Tile to Art** in the **Pattern Options** dialog box.
@@ -685,7 +685,7 @@
 
 #### Q89. You have access to the Creative Cloud library shown below, which was shared via the Collaborate feature library. For a particular document, you need to use the 10% Discount graphic but change the fill color to green. You're not allowed to change how this graphic appears for anyone else with access to the library. What must you do to accomplish this?
 
-![Sample library window](images/015.png?raw=true)
+![Sample library window](images/015.png)
 
 - [ ] Right-click the graphic in the library and select **Place Linked**.
 - [ ] Drag the graphic into your document and use the **Properties** panel to change the fill.
@@ -705,7 +705,7 @@
 
 #### Q91. What would you do to make the objects beneath the selected artwork visible inside the circle?
 
-![Rectangle with flower](images/016.png?raw=true)
+![Rectangle with flower](images/016.png)
 
 - [ ] Make a Live Paint group.
 - [ ] Make a clipping mask.

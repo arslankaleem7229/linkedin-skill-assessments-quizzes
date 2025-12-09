@@ -518,7 +518,7 @@ Certainly! Here are the questions and their multiple-choice answers translated i
 
 #### Q37. La propriété flex-direction est utilisée pour spécifier la direction dans laquelle les éléments flex sont affichés. Quelles sont les valeurs utilisées pour spécifier la direction des éléments dans les exemples suivants?
 
-![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png?raw=png)
+![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png)
 
 - [x] &shy;
   - Exemple 1: `flex-direction: row;`
@@ -595,7 +595,7 @@ h2 ~ p {
 
 gale les éléments flex à l'intérieur du conteneur présenté ci-dessous?
 
-![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png?raw=png)
+![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png)
 
 - [ ] justify-content: space-around;
 - [ ] justify-content: center;

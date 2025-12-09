@@ -23,7 +23,7 @@
 
 #### P4. ¿Cuántos agujeros se utilizaron en la fabricación de este objeto?
 
-![image](images/question_4.png?raw=true)
+![image](images/question_4.png)
 
 - [x] 1
 - [ ] 2
@@ -198,7 +198,7 @@
 
 #### P28. ¿Cuántos bocetos se requieren para crear este objeto?
 
-![image](images/question_28.png?raw=png)
+![image](images/question_28.png)
 
 - [x] Dos
 - [ ] Tres

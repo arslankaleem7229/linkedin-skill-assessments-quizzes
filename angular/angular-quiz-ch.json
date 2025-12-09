@@ -1,0 +1,1510 @@
+{
+  "quizz": {
+    "id": "b3af4fa3129ae1e1d0ffc3b7",
+    "title": "Angular",
+    "description": "Seeded from angular/angular-quiz-ch.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "d893b22a585ed69a59f88cf8",
+        "question": "\u95ee\u98981. \u5728\u8fd9\u4e2a\u7ec4\u4ef6\u7c7b\u4e2d\uff0cViewChild \u88c5\u9970\u5668\u7684\u4f5c\u7528\u662f\u4ec0\u4e48\uff1f\n```ts\n@Component({\n    ...\n    template: '<p #bio></p>'\n})\nexport class UserDetailsComponent {\n    @ViewChild('bio') bio;\n}\n```",
+        "answer": "\u5b83\u63d0\u4f9b\u4e86\u4ece\u7ec4\u4ef6\u7c7b\u5185\u90e8\u8bbf\u95ee\u5177\u6709 bio \u6a21\u677f\u5f15\u7528\u53d8\u91cf\u7684 `<p>` \u6807\u7b7e\u7684 ElementRef \u5bf9\u8c61\u7684\u80fd\u529b\u3002",
+        "explanation": "[DigitalOcean - viewchild-access-component](https://www.digitalocean.com/community/tutorials/angular-viewchild-access-component)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u63d0\u4f9b\u4e86\u4ece\u7ec4\u4ef6\u7c7b\u5185\u90e8\u8bbf\u95ee\u5177\u6709 bio \u6a21\u677f\u5f15\u7528\u53d8\u91cf\u7684 `<p>` \u6807\u7b7e\u7684 ElementRef \u5bf9\u8c61\u7684\u80fd\u529b\u3002"
+        ],
+        "options": [
+          "\u5b83\u63d0\u4f9b\u4e86\u4ece\u7ec4\u4ef6\u7c7b\u5185\u90e8\u8bbf\u95ee\u5177\u6709 bio \u6a21\u677f\u5f15\u7528\u53d8\u91cf\u7684 `<p>` \u6807\u7b7e\u7684 ElementRef \u5bf9\u8c61\u7684\u80fd\u529b\u3002",
+          "\u5b83\u8868\u793a `<p>` \u6807\u7b7e\u88ab\u6e32\u67d3\u4e3a\u4f7f\u7528\u6b64\u7ec4\u4ef6\u7684\u7236\u89c6\u56fe\u7684\u5b50\u5143\u7d20\u3002",
+          "\u5b83\u4f7f\u6a21\u677f\u4e2d\u7684 `<p>` \u6807\u7b7e\u652f\u6301\u5185\u5bb9\u6295\u5f71\u3002",
+          "\u5b83\u4f7f `<p>` \u6807\u7b7e\u5728\u6700\u7ec8\u6e32\u67d3\u4e2d\u53ef\u89c1\u3002\u5982\u679c\u5728\u6a21\u677f\u4e2d\u4f7f\u7528\u4e86 #bio \u4f46\u5728\u7c7b\u4e2d\u6ca1\u6709\u4f7f\u7528 @ViewChild\uff0c\u90a3\u4e48 Angular \u4f1a\u81ea\u52a8\u9690\u85cf\u5e26\u6709 #bio \u7684 `<p>` \u6807\u7b7e\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4862f1a074ae2d6b65821b4f",
+        "question": "\u95ee\u98982. \u5728\u54cd\u5e94\u5f0f\u8868\u5355\u4e2d\uff0c\u4f7f\u7528\u4ec0\u4e48\u65b9\u6cd5\u5c06 FormControl \u8fde\u63a5\u5230\u539f\u751f DOM input \u5143\u7d20\uff1f",
+        "answer": "\u4f7f\u7528 formControlName \u6307\u4ee4\uff0c\u5e76\u5c06\u503c\u8bbe\u7f6e\u4e3a FormControl \u7684\u5b57\u7b26\u4e32\u540d\u79f0\u3002",
+        "explanation": "[Angular.io - Reactive Form Groups](https://angular.io/guide/reactive-forms#creating-nested-form-groups)",
+        "hint": null,
+        "correctAnswer": [
+          "\u4f7f\u7528 formControlName \u6307\u4ee4\uff0c\u5e76\u5c06\u503c\u8bbe\u7f6e\u4e3a FormControl \u7684\u5b57\u7b26\u4e32\u540d\u79f0\u3002"
+        ],
+        "options": [
+          "\u5728 `<form>` \u5143\u7d20\u4e0a\u6dfb\u52a0\u4e00\u4e2a\u540d\u4e3a controls \u7684\u5c5e\u6027\uff0c\u5e76\u5c06 FormControl \u7684\u5b57\u7b26\u4e32\u540d\u79f0\u8d4b\u7ed9\u5b83\uff0c\u4ee5\u6307\u793a\u5e94\u8be5\u5305\u542b\u54ea\u4e9b\u5b57\u6bb5\u3002",
+          "\u5728 DOM \u5143\u7d20\u7684 value \u5c5e\u6027\u5468\u56f4\u4f7f\u7528\u65b9\u62ec\u53f7\u7ed1\u5b9a\u8bed\u6cd5\uff0c\u5e76\u5c06\u5176\u8bbe\u7f6e\u4e3a FormControl \u7684\u5b9e\u4f8b\u3002",
+          "\u4f7f\u7528 formControlName \u6307\u4ee4\uff0c\u5e76\u5c06\u503c\u8bbe\u7f6e\u4e3a FormControl \u7684\u5b57\u7b26\u4e32\u540d\u79f0\u3002",
+          "\u4f7f\u7528 FormControl \u7684\u5b57\u7b26\u4e32\u540d\u79f0\u4f5c\u4e3a DOM \u5143\u7d20 id \u5c5e\u6027\u7684\u503c\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dae8fe8e7389ea516fd93990",
+        "question": "\u95ee\u98983. ActivatedRoute \u7c7b\u4e0a\u7684 `paramMap` \u548c `queryParamMap` \u6709\u4ec0\u4e48\u533a\u522b\uff1f",
+        "answer": "\u4e24\u8005\u90fd\u662f\u5305\u542b\u8bf7\u6c42\u8def\u7531 URL \u5b57\u7b26\u4e32\u503c\u7684 Observable\u3002paramMap \u5305\u542b URL \u8def\u5f84\u4e2d\u7684\u53c2\u6570\u503c\uff0cqueryParamMap \u5305\u542b URL \u67e5\u8be2\u53c2\u6570\u3002",
+        "explanation": "[StackOverflow](https://stackoverflow.com/a/49617621)",
+        "hint": null,
+        "correctAnswer": [
+          "\u4e24\u8005\u90fd\u662f\u5305\u542b\u8bf7\u6c42\u8def\u7531 URL \u5b57\u7b26\u4e32\u503c\u7684 Observable\u3002paramMap \u5305\u542b URL \u8def\u5f84\u4e2d\u7684\u53c2\u6570\u503c\uff0cqueryParamMap \u5305\u542b URL \u67e5\u8be2\u53c2\u6570\u3002"
+        ],
+        "options": [
+          "paramMap \u662f\u8def\u7531 URL \u8def\u5f84\u4e2d\u53c2\u6570\u7684\u5bf9\u8c61\u5b57\u9762\u91cf\u3002queryParamMap \u662f\u8fd9\u4e9b\u76f8\u540c\u53c2\u6570\u7684 Observable\u3002",
+          "paramMap \u662f\u4e00\u4e2a\u5305\u542b\u8def\u7531 URL \u8def\u5f84\u4e2d\u53c2\u6570\u503c\u7684 Observable\u3002queryParamMap \u662f\u4e00\u4e2a\u63a5\u53d7\u952e\u6570\u7ec4\u7684\u65b9\u6cd5\uff0c\u7528\u4e8e\u5728 paramMap \u4e2d\u67e5\u627e\u7279\u5b9a\u53c2\u6570\u3002",
+          "paramMap \u662f Angular 3 \u7684\u9057\u7559\u540d\u79f0\u3002\u65b0\u540d\u79f0\u662f queryParamMap\u3002",
+          "\u4e24\u8005\u90fd\u662f\u5305\u542b\u8bf7\u6c42\u8def\u7531 URL \u5b57\u7b26\u4e32\u503c\u7684 Observable\u3002paramMap \u5305\u542b URL \u8def\u5f84\u4e2d\u7684\u53c2\u6570\u503c\uff0cqueryParamMap \u5305\u542b URL \u67e5\u8be2\u53c2\u6570\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c4b72ec7995405a7200848ef",
+        "question": "\u95ee\u98984. \u57fa\u4e8e\u4ee5\u4e0b async \u7ba1\u9053\u7684\u4f7f\u7528\uff0c\u5047\u8bbe users \u7c7b\u5b57\u6bb5\u662f\u4e00\u4e2a Observable\uff0c\u5bf9 users Observable \u8fdb\u884c\u4e86\u591a\u5c11\u6b21\u8ba2\u9605\uff1f\n```html\n<h2>\u59d3\u540d</h2>\n<div *ngFor=\"let user of users | async\">{{ user.name }}</div>\n<h2>\u5e74\u9f84</h2>\n<div *ngFor=\"let user of users | async\">{{ user.age }}</div>\n<h2>\u6027\u522b</h2>\n<div *ngFor=\"let user of users | async\">{{ user.gender }}</div>\n```",
+        "answer": "\u4e09\u6b21\u3002\u6bcf\u4e2a async \u7ba1\u9053\u90fd\u6709\u4e00\u6b21\u8ba2\u9605\u3002",
+        "explanation": "[UltimateCourses](https://ultimatecourses.com/blog/angular-ngfor-async-pipe)",
+        "hint": null,
+        "correctAnswer": [
+          "\u4e09\u6b21\u3002\u6bcf\u4e2a async \u7ba1\u9053\u90fd\u6709\u4e00\u6b21\u8ba2\u9605\u3002"
+        ],
+        "options": [
+          "\u6ca1\u6709\u3002async \u7ba1\u9053\u4e0d\u4f1a\u81ea\u52a8\u8ba2\u9605\u3002",
+          "\u6ca1\u6709\u3002\u6a21\u677f\u8bed\u6cd5\u4e0d\u6b63\u786e\u3002",
+          "\u4e09\u6b21\u3002\u6bcf\u4e2a async \u7ba1\u9053\u90fd\u6709\u4e00\u6b21\u8ba2\u9605\u3002",
+          "\u4e00\u6b21\u3002async \u7ba1\u9053\u5728\u5185\u90e8\u6309\u7c7b\u578b\u7f13\u5b58 Observable\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c470d6760a614c6741078dfd",
+        "question": "\u95ee\u98985. \u5982\u4f55\u5728 OrderService \u7684 addOrder \u51fd\u6570\u4e2d\u4f7f\u7528 HttpClient \u5411\u7aef\u70b9\u53d1\u9001 POST \u8bf7\u6c42\uff1f\n```ts\nexport class OrderService {\n  constructor(private httpClient: HttpClient) {}\n  addOrder(order: Order) {\n    // \u7f3a\u5c11\u7684\u4ee3\u7801\u884c\n  }\n}\n```",
+        "answer": "`this.httpClient.post<Order>(this.orderUrl, order).subscribe();`",
+        "explanation": "[Angular.io - Sending data to server](https://angular.io/guide/http#sending-data-to-a-server)",
+        "hint": null,
+        "correctAnswer": [
+          "`this.httpClient.post<Order>(this.orderUrl, order).subscribe();`"
+        ],
+        "options": [
+          "`this.httpClient.url(this.orderUrl).post(order);`",
+          "`this.httpClient.send(this.orderUrl, order);`",
+          "`this.httpClient.post<Order>(this.orderUrl, order);`",
+          "`this.httpClient.post<Order>(this.orderUrl, order).subscribe();`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e07f6dac0a928ada9b94ec62",
+        "question": "\u95ee\u98986. RouterModule.forRoot \u65b9\u6cd5\u7528\u4e8e\u4ec0\u4e48\uff1f",
+        "answer": "\u5728\u6839\u5e94\u7528\u7a0b\u5e8f\u7ea7\u522b\u6ce8\u518c\u8def\u7531\u5b9a\u4e49\u3002",
+        "explanation": "[O'REILLY](https://www.oreilly.com/library/view/switching-to-angular/9781788620703/c9e90774-0e10-410b-bd20-d3e9e0b8d117.xhtml)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5728\u6839\u5e94\u7528\u7a0b\u5e8f\u7ea7\u522b\u6ce8\u518c\u8def\u7531\u5b9a\u4e49\u3002"
+        ],
+        "options": [
+          "\u6ce8\u518c\u60a8\u6253\u7b97\u5728\u8def\u7531\u7ec4\u4ef6\u4e2d\u4f7f\u7528\u7684\u4efb\u4f55\u63d0\u4f9b\u8005\u3002",
+          "\u5728\u6839\u5e94\u7528\u7a0b\u5e8f\u7ea7\u522b\u6ce8\u518c\u8def\u7531\u5b9a\u4e49\u3002",
+          "\u6307\u793a Angular \u5e94\u8be5\u4e3a\u60a8\u7684\u8def\u7531\u7684\u6210\u529f\u52a0\u6cb9\u3002",
+          "\u58f0\u660e\u60a8\u6253\u7b97\u4ec5\u5728\u6839\u7ea7\u522b\u4f7f\u7528\u8def\u7531\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f1f636791c6ff1a67c25ffd1",
+        "question": "\u95ee\u98987. \u6b64\u7ec4\u4ef6\u5143\u6570\u636e\u9009\u62e9\u5668\u5c06\u5339\u914d\u54ea\u4e9b DOM \u5143\u7d20\uff1f\n```ts\n@Component({\n    selector: 'app-user-card',\n    . . .\n})\n```",
+        "answer": "`<app-user-card></app-user-card>` \u7684\u6240\u6709\u5b9e\u4f8b\u3002",
+        "explanation": "[Angular.io - Component Metadata](https://angular.io/guide/architecture-components#component-metadata)",
+        "hint": null,
+        "correctAnswer": [
+          "`<app-user-card></app-user-card>` \u7684\u6240\u6709\u5b9e\u4f8b\u3002"
+        ],
+        "options": [
+          "\u4efb\u4f55\u5177\u6709 app-user-card \u5c5e\u6027\u7684\u5143\u7d20\uff0c\u4f8b\u5982 `<div app-user-card></div>`\u3002",
+          "`<app-user-card></app-user-card>` \u7684\u7b2c\u4e00\u4e2a\u5b9e\u4f8b\u3002",
+          "`<app-user-card></app-user-card>` \u7684\u6240\u6709\u5b9e\u4f8b\u3002",
+          "`<user-card></user-card>` \u7684\u6240\u6709\u5b9e\u4f8b\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "46e2c5342269239f9c6b959c",
+        "question": "\u95ee\u98988. \u4f7f\u7528\u5185\u7f6e\u7684 ngFor \u7ed3\u6784\u6307\u4ee4\u6e32\u67d3 productNames \u5217\u8868\u7684\u6b63\u786e\u6a21\u677f\u8bed\u6cd5\u662f\u4ec0\u4e48\uff1f",
+        "answer": "C",
+        "explanation": "```html\n<ul>\n<li [ngFor]=\"let productName of productNames\">{{ productName }}</li>\n</ul>\n```\n```html\n<ul>\n<li ngFor=\"let productName of productNames\">{{ productName }}</li>\n</ul>\n```\n```html\n<ul>\n<li *ngFor=\"let productName of productNames\">{{ productName }}</li>\n</ul>\n```\n```html\n<ul>\n<? for productName in productNames { ?>\n<li>{{ productName }}</li>\n<? } ?>\n</ul>\n```\n[Angular.io- Structural Directives](https://angular.io/guide/built-in-directives#listing-items-with-ngfor)",
+        "hint": null,
+        "correctAnswer": [
+          "C"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4225756e1e03eadb7209e24f",
+        "question": "\u95ee\u98989. \u7528\u4e8e\u4e3a\u7ec4\u4ef6\u8bbe\u7f6e CSS \u6837\u5f0f\u7684\u4e24\u4e2a\u7ec4\u4ef6\u88c5\u9970\u5668\u5143\u6570\u636e\u5c5e\u6027\u662f\u4ec0\u4e48\uff1f",
+        "answer": "styles \u548c styleUrls\u3002",
+        "explanation": "[Angular.io - Component Styles](https://angular.io/guide/component-styles)",
+        "hint": null,
+        "correctAnswer": [
+          "styles \u548c styleUrls\u3002"
+        ],
+        "options": [
+          "viewEncapsulation \u548c viewEncapsulationFiles\u3002",
+          "\u53ea\u6709\u4e00\u4e2a\uff0c\u5b83\u662f\u540d\u4e3a css \u7684\u5c5e\u6027\u3002",
+          "css \u548c cssUrl\u3002",
+          "styles \u548c styleUrls\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "734100d8bba4a142bc7792f5",
+        "question": "\u95ee\u989810. \u5bf9\u4e8e\u4ee5\u4e0b\u7ec4\u4ef6\u7c7b\uff0c\u60a8\u5c06\u5728\u6a21\u677f\u4e2d\u4f7f\u7528\u4ec0\u4e48\u6a21\u677f\u8bed\u6cd5\u6765\u663e\u793a title \u7c7b\u5b57\u6bb5\u7684\u503c\uff1f\n```ts\n@Component({\n  selector: 'app-title-card',\n  template: '',\n})\nclass TitleCardComponent {\n  title = 'User Data';\n}\n```",
+        "answer": "`{{ title }}`",
+        "explanation": "[Angular.io - String Interpolation or Text Interpolation](https://angular.io/guide/interpolation)",
+        "hint": null,
+        "correctAnswer": [
+          "`{{ title }}`"
+        ],
+        "options": [
+          "`{{ 'title' }}`",
+          "`{{ title }}`",
+          "`[title]`",
+          "\u7c7b\u5b57\u6bb5\u65e0\u6cd5\u901a\u8fc7\u6a21\u677f\u8bed\u6cd5\u5728\u6a21\u677f\u4e2d\u663e\u793a\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b3f85b359acfa622223cd4c3",
+        "question": "\u95ee\u989811. FormControl \u4e0a\u7684 valueChanges \u65b9\u6cd5\u7684\u76ee\u7684\u662f\u4ec0\u4e48\uff1f",
+        "answer": "\u5b83\u662f\u4e00\u4e2a observable\uff0c\u6bcf\u6b21\u63a7\u4ef6\u503c\u66f4\u6539\u65f6\u90fd\u4f1a\u53d1\u51fa\uff0c\u56e0\u6b64\u60a8\u53ef\u4ee5\u54cd\u5e94\u65b0\u503c\u5e76\u5728\u90a3\u65f6\u505a\u51fa\u903b\u8f91\u51b3\u7b56\u3002",
+        "explanation": "[Angular.io - Displaying a from control value](https://angular.io/guide/reactive-forms#displaying-a-form-control-value)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u662f\u4e00\u4e2a observable\uff0c\u6bcf\u6b21\u63a7\u4ef6\u503c\u66f4\u6539\u65f6\u90fd\u4f1a\u53d1\u51fa\uff0c\u56e0\u6b64\u60a8\u53ef\u4ee5\u54cd\u5e94\u65b0\u503c\u5e76\u5728\u90a3\u65f6\u505a\u51fa\u903b\u8f91\u51b3\u7b56\u3002"
+        ],
+        "options": [
+          "\u5b83\u7528\u4e8e\u914d\u7f6e\u63a7\u4ef6\u5141\u8bb8\u7684\u503c\u3002",
+          "\u5b83\u7528\u4e8e\u5c06\u63a7\u4ef6\u7684\u503c\u66f4\u6539\u4e3a\u65b0\u503c\u3002\u60a8\u53ef\u4ee5\u8c03\u7528\u8be5\u65b9\u6cd5\u5e76\u4f20\u5165\u8868\u5355\u5b57\u6bb5\u7684\u65b0\u503c\u3002\u5b83\u751a\u81f3\u652f\u6301\u4f20\u5165\u53ef\u4ee5\u968f\u65f6\u95f4\u8bbe\u7f6e\u7684\u503c\u6570\u7ec4\u3002",
+          "\u5b83\u6839\u636e\u63a7\u4ef6\u7684\u503c\u662f\u5426\u4e0e\u521d\u59cb\u5316\u65f6\u7684\u503c\u4e0d\u540c\u8fd4\u56de\u4e00\u4e2a\u5e03\u5c14\u503c\u3002",
+          "\u5b83\u662f\u4e00\u4e2a observable\uff0c\u6bcf\u6b21\u63a7\u4ef6\u503c\u66f4\u6539\u65f6\u90fd\u4f1a\u53d1\u51fa\uff0c\u56e0\u6b64\u60a8\u53ef\u4ee5\u54cd\u5e94\u65b0\u503c\u5e76\u5728\u90a3\u65f6\u505a\u51fa\u903b\u8f91\u51b3\u7b56\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f3c340a94827a4bbda2efdac",
+        "question": "\u95ee\u989812. \u4f7f\u7528\u4ec0\u4e48\u6307\u4ee4\u5c06 `<a>` \u6807\u7b7e\u94fe\u63a5\u5230\u8def\u7531\uff1f",
+        "answer": "routerLink",
+        "explanation": "[Angular.io - RouterLink](https://angular.io/api/router/RouterLink#description)",
+        "hint": null,
+        "correctAnswer": [
+          "routerLink"
+        ],
+        "options": [
+          "routeTo",
+          "routerLink",
+          "routePath",
+          "appLink"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e0ef75532950da65194d847f",
+        "question": "\u95ee\u989813. \u5728\u6b64\u7ec4\u4ef6\u7c7b\u4e2d\uff0cOutput \u88c5\u9970\u5668\u7528\u4e8e\u4ec0\u4e48\uff1f\n```ts\n@Component({\n    selector: 'app-shopping-cart',\n    . . .\n})\nexport class ShoppingCartComponent {\n    @Output() itemTotalChanged = new EventEmitter();\n}\n```",
+        "answer": "\u5b83\u63d0\u4f9b\u4e86\u4e00\u79cd\u5c06\u4e8b\u4ef6\u7ed1\u5b9a\u5230 `itemTotalChanged` \u7c7b\u5b57\u6bb5\u7684\u65b9\u6cd5\uff0c\u5982\uff1a`<app-shopping-cart (itemTotalChanged)=\"logNewTotal($event)\"></app-shopping-cart>`\u3002",
+        "explanation": "[Angular.io - Sending data to parent component](https://angular.io/guide/inputs-outputs#sending-data-to-a-parent-component)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u63d0\u4f9b\u4e86\u4e00\u79cd\u5c06\u4e8b\u4ef6\u7ed1\u5b9a\u5230 `itemTotalChanged` \u7c7b\u5b57\u6bb5\u7684\u65b9\u6cd5\uff0c\u5982\uff1a`<app-shopping-cart (itemTotalChanged)=\"logNewTotal($event)\"></app-shopping-cart>`\u3002"
+        ],
+        "options": [
+          "\u5b83\u4f7f `itemTotalChanged` \u7c7b\u5b57\u6bb5\u6210\u4e3a\u516c\u5171\u7684\u3002",
+          "\u5b83\u63d0\u4f9b\u4e86\u4e00\u79cd\u5c06\u503c\u7ed1\u5b9a\u5230 `itemTotalChanged` \u7c7b\u5b57\u6bb5\u7684\u65b9\u6cd5\uff0c\u5982\uff1a`<app-shopping-cart [itemTotalChanged]=\"newTotal\"></app-shopping-cart>`\u3002",
+          "\u5b83\u63d0\u4f9b\u4e86\u4e00\u79cd\u5c06\u4e8b\u4ef6\u7ed1\u5b9a\u5230 `itemTotalChanged` \u7c7b\u5b57\u6bb5\u7684\u65b9\u6cd5\uff0c\u5982\uff1a`<app-shopping-cart (itemTotalChanged)=\"logNewTotal($event)\"></app-shopping-cart>`\u3002",
+          "\u5b83\u53ea\u662f\u5728\u7c7b\u5b57\u6bb5\u524d\u9762\u653e\u7f6e\u6ce8\u91ca\u4ee5\u8fdb\u884c\u6587\u6863\u8bb0\u5f55\u7684\u4e00\u79cd\u65b9\u5f0f\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dfa4586ddb400357f7f42e9a",
+        "question": "\u95ee\u989814. \u8fd9\u4e24\u4e2a\u6807\u8bb0\u793a\u4f8b\u5728\u6761\u4ef6\u5904\u7406\u663e\u793a\u65b9\u9762\u6709\u4ec0\u4e48\u533a\u522b\uff1f\n```html\n<div *ngIf=\"isVisible\">Active</div>\n<div [hidden]=\"!isVisible\">Active</div>\n```",
+        "answer": "\u5982\u679c\u8868\u8fbe\u5f0f\u4e3a false\uff0c`ngIf` \u6307\u4ee4\u4e0d\u4f1a\u5728 DOM \u4e2d\u6e32\u67d3 div\u3002`hidden` \u5c5e\u6027\u7528\u6cd5\u5728\u6d4f\u89c8\u5668\u89c6\u53e3\u4e2d\u9690\u85cf div \u5185\u5bb9\uff0c\u4f46 div \u4ecd\u7136\u5728 DOM \u4e2d\u3002",
+        "explanation": "[StackOverflow](https://stackoverflow.com/a/39778145)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5982\u679c\u8868\u8fbe\u5f0f\u4e3a false\uff0c`ngIf` \u6307\u4ee4\u4e0d\u4f1a\u5728 DOM \u4e2d\u6e32\u67d3 div\u3002`hidden` \u5c5e\u6027\u7528\u6cd5\u5728\u6d4f\u89c8\u5668\u89c6\u53e3\u4e2d\u9690\u85cf div \u5185\u5bb9\uff0c\u4f46 div \u4ecd\u7136\u5728 DOM \u4e2d\u3002"
+        ],
+        "options": [
+          "`ngIf` \u662f\u53e6\u4e00\u4e2a\u793a\u4f8b\u7684\u7b80\u5199\u3002\u5f53 Angular \u5904\u7406\u8be5\u6307\u4ee4\u65f6\uff0c\u5b83\u4f1a\u5411 DOM \u5199\u5165\u4e00\u4e2a\u5177\u6709 hidden \u5c5e\u6027\u7684 div \u5143\u7d20\u3002",
+          "\u5b83\u4eec\u57fa\u672c\u4e0a\u662f\u76f8\u540c\u7684\u3002",
+          "\u5982\u679c\u8868\u8fbe\u5f0f\u4e3a false\uff0c`ngIf` \u6307\u4ee4\u4e0d\u4f1a\u5728 DOM \u4e2d\u6e32\u67d3 div\u3002`hidden` \u5c5e\u6027\u7528\u6cd5\u5728\u6d4f\u89c8\u5668\u89c6\u53e3\u4e2d\u9690\u85cf div \u5185\u5bb9\uff0c\u4f46 div \u4ecd\u7136\u5728 DOM \u4e2d\u3002",
+          "`ngIf` \u662f\u6709\u6548\u7684\uff0c\u4f46 `hidden` \u5c5e\u6027\u7684\u4f7f\u7528\u662f\u9519\u8bef\u7684\uff0c\u4f1a\u629b\u51fa\u9519\u8bef\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a2da152f14de87605cf639c6",
+        "question": "\u95ee\u989815. \u5728\u8fd9\u4e2a\u6a21\u677f\u9a71\u52a8\u8868\u5355\u793a\u4f8b\u4e2d\uff0c\u5f53\u8868\u5355\u6709\u9519\u8bef\u65f6\uff0c\u5982\u4f55\u7981\u7528\u63d0\u4ea4\u6309\u94ae\uff1f\n```html\n<form #userForm=\"ngForm\">\n  <input type=\"text\" ngModel name=\"firstName\" required />\n  <input type=\"text\" ngModel name=\"lastName\" required />\n  <button (click)=\"submit(userForm.value)\">Save</button>\n</form>\n```",
+        "answer": "B",
+        "explanation": "```html\n<button (click)=\"submit(userForm.value)\" disable=\"userForm.invalid\">Save</button>\n```\n```html\n<button (click)=\"submit(userForm.value)\" [disabled]=\"userForm.invalid\">Save</button>\n```\n```html\n<button (click)=\"submit(userForm.value)\" [ngForm.disabled]=\"userForm.valid\">Save</button>\n```\n```html\n<button (click)=\"submit(userForm.value)\" *ngIf=\"userForm.valid\">Save</button>\n```\n[Angular.io - Submit the form with ngSubmit](https://angular.io/guide/forms#submit-the-form-with-ngsubmit)",
+        "hint": null,
+        "correctAnswer": [
+          "B"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9889a1fb70b9a81e39a3b899",
+        "question": "\u95ee\u989816. \u60a8\u60f3\u67e5\u770b\u521b\u5efa\u65b0\u7684 contact-card \u7ec4\u4ef6\u4f1a\u751f\u6210\u54ea\u4e9b\u6587\u4ef6\u3002\u60a8\u4f1a\u4f7f\u7528\u54ea\u4e2a\u547d\u4ee4\uff1f",
+        "answer": "ng generate component contact-card --dry-run",
+        "explanation": "[Angular.io - ng generate options](https://angular.io/cli/generate#options)",
+        "hint": null,
+        "correctAnswer": [
+          "ng generate component contact-card --dry-run"
+        ],
+        "options": [
+          "ng generate component contact-card --dry-run",
+          "ng generate component contact-card --no-files",
+          "ng generate component component --dry",
+          "ng generate component --exclude"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "513dc4324212bc72ec8c4fd5",
+        "question": "\u95ee\u989817. \u57fa\u4e8e\u4ee5\u4e0b\u7ec4\u4ef6\uff0c\u60a8\u5c06\u4f7f\u7528\u4ec0\u4e48\u6a21\u677f\u8bed\u6cd5\u5c06 TitleCardComponent \u7684 titleText \u5b57\u6bb5\u7ed1\u5b9a\u5230 h1 \u5143\u7d20\u7684 title \u5c5e\u6027\uff1f\n```ts\n@Component({\n  selector: 'app-title-card',\n  template: '<h1 title=\"User Data\"> {{titleText}}</h1>',\n})\nexport class TitleCardComponent {\n  titleText = 'User Data';\n}\n```",
+        "answer": "`<h1 [title]=\"titleText\">{{ titleText }}</h1>`",
+        "explanation": "[Angular.io - String Interpolation](https://angular.io/guide/interpolation)",
+        "hint": null,
+        "correctAnswer": [
+          "`<h1 [title]=\"titleText\">{{ titleText }}</h1>`"
+        ],
+        "options": [
+          "`<h1 data-title=\"titleText\">{{ titleText }}</h1>`",
+          "`<h1 title=\"titleText\">{{ titleText }}</h1>`",
+          "`<h1 [title]=\"titleText\">{{ titleText }}</h1>`",
+          "`<h1 titleText>{{ titleText }}</h1>`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "659341d87180ed27cd24a569",
+        "question": "\u95ee\u989818. \u4ec0\u4e48\u662f Angular \u751f\u547d\u5468\u671f\u94a9\u5b50\uff1f",
+        "answer": "\u4e3a\u7ec4\u4ef6\u548c\u6307\u4ee4\u4fdd\u7559\u7684\u547d\u540d\u65b9\u6cd5\uff0cAngular \u4f1a\u5728\u5176\u6267\u884c\u7684\u8bbe\u5b9a\u65f6\u95f4\u8c03\u7528\u8fd9\u4e9b\u65b9\u6cd5\uff0c\u53ef\u7528\u4e8e\u6316\u6398\u8fd9\u4e9b\u751f\u547d\u5468\u671f\u65f6\u523b",
+        "explanation": "[Angular.io - Lifecycle hooks](https://angular.io/guide/lifecycle-hooks)",
+        "hint": null,
+        "correctAnswer": [
+          "\u4e3a\u7ec4\u4ef6\u548c\u6307\u4ee4\u4fdd\u7559\u7684\u547d\u540d\u65b9\u6cd5\uff0cAngular \u4f1a\u5728\u5176\u6267\u884c\u7684\u8bbe\u5b9a\u65f6\u95f4\u8c03\u7528\u8fd9\u4e9b\u65b9\u6cd5\uff0c\u53ef\u7528\u4e8e\u6316\u6398\u8fd9\u4e9b\u751f\u547d\u5468\u671f\u65f6\u523b"
+        ],
+        "options": [
+          "\u7528\u4e8e\u8ddf\u8e2a Angular \u5e94\u7528\u7a0b\u5e8f\u5065\u5eb7\u72b6\u51b5\u7684\u65e5\u5fd7\u8bb0\u5f55\u5668",
+          "\u53ef\u7528\u4e8e\u8ddf\u8e2a\u7ec4\u4ef6\u5b9e\u4f8b\u7684\u63d0\u4f9b\u8005",
+          "\u53ef\u5728\u6a21\u677f\u4e2d\u7528\u4e8e DOM \u4e8b\u4ef6\u7684\u5185\u7f6e\u7ba1\u9053",
+          "\u4e3a\u7ec4\u4ef6\u548c\u6307\u4ee4\u4fdd\u7559\u7684\u547d\u540d\u65b9\u6cd5\uff0cAngular \u4f1a\u5728\u5176\u6267\u884c\u7684\u8bbe\u5b9a\u65f6\u95f4\u8c03\u7528\u8fd9\u4e9b\u65b9\u6cd5\uff0c\u53ef\u7528\u4e8e\u6316\u6398\u8fd9\u4e9b\u751f\u547d\u5468\u671f\u65f6\u523b"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6404dd1493ee6cf05871bc3e",
+        "question": "\u95ee\u989819. \u4e3a\u6b64\u6a21\u677f\u8bed\u6cd5\u4ee3\u7801\u9009\u62e9\u6700\u4f73\u63cf\u8ff0\uff1a\n```html\n<span>Boss: {{job?.bossName}} </span>\n```",
+        "answer": "\u5b83\u5728 job \u5b57\u6bb5\u4e0a\u4f7f\u7528\u5b89\u5168\u5bfc\u822a\u64cd\u4f5c\u7b26\uff08?\uff09\u3002\u5982\u679c job \u5b57\u6bb5\u672a\u5b9a\u4e49\uff0c\u5bf9 bossName \u7684\u8bbf\u95ee\u5c06\u88ab\u5ffd\u7565\uff0c\u4e0d\u4f1a\u53d1\u751f\u9519\u8bef\u3002",
+        "explanation": "[StackOverflow](https://stackoverflow.com/a/60182134)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u5728 job \u5b57\u6bb5\u4e0a\u4f7f\u7528\u5b89\u5168\u5bfc\u822a\u64cd\u4f5c\u7b26\uff08?\uff09\u3002\u5982\u679c job \u5b57\u6bb5\u672a\u5b9a\u4e49\uff0c\u5bf9 bossName \u7684\u8bbf\u95ee\u5c06\u88ab\u5ffd\u7565\uff0c\u4e0d\u4f1a\u53d1\u751f\u9519\u8bef\u3002"
+        ],
+        "options": [
+          "? \u662f async \u7ba1\u9053\u7684\u7b80\u5199\u3002job \u503c\u5fc5\u987b\u662f Observable\u3002",
+          "\u5b83\u5728 job \u5b57\u6bb5\u4e0a\u4f7f\u7528\u5b89\u5168\u5bfc\u822a\u64cd\u4f5c\u7b26\uff08?\uff09\u3002\u5982\u679c job \u5b57\u6bb5\u672a\u5b9a\u4e49\uff0c\u5bf9 bossName \u7684\u8bbf\u95ee\u5c06\u88ab\u5ffd\u7565\uff0c\u4e0d\u4f1a\u53d1\u751f\u9519\u8bef\u3002",
+          "\u6a21\u677f\u8bed\u6cd5\u4e2d\u6709\u9519\u8bef\u3002? \u5728\u8fd9\u91cc\u65e0\u6548\u3002",
+          "\u5982\u679c\u5b83\u6709\u503c\uff0c\u5b83\u4f1a\u663e\u793a job \u503c\uff1b\u5426\u5219\u5b83\u4f1a\u663e\u793a bossName\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "598a202de69d863732211107",
+        "question": "\u95ee\u989820. \u60a8\u5982\u4f55\u914d\u7f6e\u652f\u6301 URL \u8def\u5f84 user/23\uff08\u5176\u4e2d 23 \u8868\u793a\u8bf7\u6c42\u7528\u6237\u7684 id\uff09\u7684 UserDetailComponent \u7684\u8def\u7531\u5b9a\u4e49\uff1f",
+        "answer": "`{ path: 'user/:id', component: UserDetailComponent }`",
+        "explanation": "[CodeCraft - Parameterised Routes](https://codecraft.tv/courses/angular/routing/parameterised-routes/#_configuration)",
+        "hint": null,
+        "correctAnswer": [
+          "`{ path: 'user/:id', component: UserDetailComponent }`"
+        ],
+        "options": [
+          "`{ path: 'user/:id', component: UserDetailComponent }`",
+          "`{ url: 'user/:id', routedComponent: UserDetailComponent }`",
+          "`{ routedPath: 'user/:id', component: UserDetailComponent }`",
+          "`{ destination: new UserDetailComponent(), route: 'user/:id' }`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "99e9be284652a5d8f3ec9313",
+        "question": "\u95ee\u989821. \u6b64\u6307\u4ee4\u4e2d\u7684 HostListener \u88c5\u9970\u5668\u548c HostBinding \u88c5\u9970\u5668\u5728\u505a\u4ec0\u4e48\uff1f\n```ts\n@Directive({\n  selector: '[appCallout]',\n})\nexport class CalloutDirective {\n  @HostBinding('style.font-weight') fontWeight = 'normal';\n  @HostListener('mouseenter')\n  onMouseEnter() {\n    this.fontWeight = 'bold';\n  }\n  @HostListener('mouseleave')\n  onMouseLeave() {\n    this.fontWeight = 'normal';\n  }\n}\n```",
+        "answer": "\u5b83\u4eec\u6839\u636e\u9f20\u6807\u662f\u5426\u60ac\u505c\u5728 DOM \u5143\u7d20\u4e0a\u6765\u8bbe\u7f6e CalloutDirective.fontWeight \u5b57\u6bb5\u3002\u7136\u540e HostListener \u5c06 font-weight CSS \u5c5e\u6027\u8bbe\u7f6e\u4e3a fontWeight \u503c\u3002",
+        "explanation": "[DigitalOcean](https://www.digitalocean.com/community/tutorials/angular-hostbinding-hostlistener)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u4eec\u6839\u636e\u9f20\u6807\u662f\u5426\u60ac\u505c\u5728 DOM \u5143\u7d20\u4e0a\u6765\u8bbe\u7f6e CalloutDirective.fontWeight \u5b57\u6bb5\u3002\u7136\u540e HostListener \u5c06 font-weight CSS \u5c5e\u6027\u8bbe\u7f6e\u4e3a fontWeight \u503c\u3002"
+        ],
+        "options": [
+          "\u5b83\u4eec\u6839\u636e\u9f20\u6807\u662f\u5426\u60ac\u505c\u5728 DOM \u5143\u7d20\u4e0a\u6765\u8bbe\u7f6e CalloutDirective.fontWeight \u5b57\u6bb5\u3002\u7136\u540e HostListener \u5c06 font-weight CSS \u5c5e\u6027\u8bbe\u7f6e\u4e3a fontWeight \u503c\u3002",
+          "\u5b83\u4eec\u6b63\u5728\u8bbe\u7f6e\u6307\u4ee4\u4ee5\u68c0\u67e5\u5b83\u6240\u5728\u7684 DOM \u5143\u7d20\u3002\u5982\u679c\u5b83\u4e3a\u9f20\u6807\u8fdb\u5165\u548c\u79bb\u5f00\u6dfb\u52a0\u4e86\u4e8b\u4ef6\u7ed1\u5b9a\uff0c\u5b83\u5c06\u4f7f\u7528\u6b64\u4ee3\u7801\u3002\u5426\u5219\uff0c\u4ec0\u4e48\u90fd\u4e0d\u4f1a\u53d1\u751f\u3002",
+          "\u8fd9\u662f HostListener \u548c HostBinding \u7684\u9519\u8bef\u7528\u6cd5\u3002HostListener \u548c HostBinding \u88c5\u9970\u5668\u5728\u6307\u4ee4\u4e0a\u4e0d\u6267\u884c\u4efb\u4f55\u64cd\u4f5c\uff1b\u5b83\u4eec\u4ec5\u5728\u7ec4\u4ef6\u4e0a\u4f7f\u7528\u65f6\u624d\u8d77\u4f5c\u7528\u3002",
+          "\u5982\u679c\u6b64\u6307\u4ee4\u6240\u5728\u7684 DOM \u5143\u7d20\u8bbe\u7f6e\u4e86 CSS \u5c5e\u6027 font-weight\uff0c\u5219\u4f1a\u5f15\u53d1 mouseenter \u548c mouseleave \u4e8b\u4ef6\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8a0d05421947884455950cc2",
+        "question": "\u95ee\u989822. \u5728\u6b64\u6a21\u677f\u9a71\u52a8\u8868\u5355\u5b57\u6bb5\u4e0a\uff0c\u60a8\u53ef\u4ee5\u4f7f\u7528\u4ec0\u4e48 Angular \u6a21\u677f\u8bed\u6cd5\u6765\u8bbf\u95ee\u5b57\u6bb5\u503c\u5e76\u5728\u6a21\u677f\u6807\u8bb0\u4e2d\u68c0\u67e5\u9a8c\u8bc1\uff1f\n```html\n<input type=\"text\" ngModel name=\"firstName\" required minlength=\"4\" />\n<span *ngIf=\"\">Invalid field data</span>\n```",
+        "answer": "\u60a8\u53ef\u4ee5\u4f7f\u7528\u6a21\u677f\u5f15\u7528\u53d8\u91cf\u548c ngModel \u6307\u4ee4\u5177\u6709\u7684 exportAs \u529f\u80fd\u3002",
+        "explanation": "1. [Angular.io -Show and hide validation error ](https://angular.io/guide/forms#show-and-hide-validation-error-messages)\n2. [Medium](https://medium.com/@agoiabeladeyemi/template-driven-forms-in-angular-4a3a5ad960de)",
+        "hint": null,
+        "correctAnswer": [
+          "\u60a8\u53ef\u4ee5\u4f7f\u7528\u6a21\u677f\u5f15\u7528\u53d8\u91cf\u548c ngModel \u6307\u4ee4\u5177\u6709\u7684 exportAs \u529f\u80fd\u3002"
+        ],
+        "options": [
+          "\u60a8\u53ef\u4ee5\u4f7f\u7528\u6a21\u677f\u5f15\u7528\u53d8\u91cf\u548c ngModel \u6307\u4ee4\u5177\u6709\u7684 exportAs \u529f\u80fd\u3002",
+          "\u60a8\u53ef\u4ee5\u5c06 ngModel \u6307\u4ee4\u4e0e\u8f93\u5165\u5b57\u6bb5\u540d\u79f0\u7ed3\u5408\u4f7f\u7528\u3002",
+          "\u60a8\u53ef\u4ee5\u4e3a HTML input \u5143\u7d20\u4f7f\u7528\u6a21\u677f\u5f15\u7528\u53d8\u91cf\uff0c\u7136\u540e\u68c0\u67e5\u5176 valid \u5c5e\u6027\u3002",
+          "\u4f7f\u7528\u6a21\u677f\u9a71\u52a8\u8868\u5355\u65e0\u6cd5\u8bbf\u95ee\u5b57\u6bb5\u503c\u3002\u60a8\u5fc5\u987b\u4e3a\u6b64\u4f7f\u7528\u54cd\u5e94\u5f0f\u8868\u5355\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "11041eb94c0abd1b0a3a9f6c",
+        "question": "\u95ee\u989823. \u5728\u6b64\u6807\u8bb0\u4e2d\uff0cheaderText \u6a21\u677f\u5f15\u7528\u53d8\u91cf\u5c06\u5b58\u50a8\u4ec0\u4e48\u503c\u7c7b\u578b\uff1f\n```html\n<h1 #headerText>User List</h1>\n```",
+        "answer": "Angular ElementRef\uff0c\u539f\u751f\u5143\u7d20\u7684\u5305\u88c5\u5668",
+        "explanation": "[Pluralsight - Template reference variable](https://www.pluralsight.com/guides/how-to-use-template-reference-variables-in-angular)",
+        "hint": null,
+        "correctAnswer": [
+          "Angular ElementRef\uff0c\u539f\u751f\u5143\u7d20\u7684\u5305\u88c5\u5668"
+        ],
+        "options": [
+          "Angular ElementRef\uff0c\u539f\u751f\u5143\u7d20\u7684\u5305\u88c5\u5668",
+          "`<h1>` \u5143\u7d20\u7684\u5185\u90e8\u6587\u672c",
+          "header \u7ec4\u4ef6\u7c7b",
+          "\u539f\u751f DOM \u5143\u7d20\u7c7b\u578b HTMLHeadingElement"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "14500189fd734037277a0288",
+        "question": "\u95ee\u989824. \u57fa\u4e8e\u8fd9\u4e24\u4e2a\u63d0\u4f9b\u8005\u914d\u7f6e\uff0c\u7ed3\u679c\u4ee3\u7801\u903b\u8f91\u6709\u4ec0\u4e48\u533a\u522b\uff08\u5982\u679c\u6709\u7684\u8bdd\uff09\uff1f\n```ts\n[{ provide: FormattedLogger, useClass: Logger }][{ provide: FormattedLogger, useExisting: Logger }];\n```",
+        "answer": "useClass \u8bed\u6cd5\u544a\u8bc9\u6ce8\u5165\u5668\u521b\u5efa Logger \u7684\u65b0\u5b9e\u4f8b\u5e76\u5c06\u8be5\u5b9e\u4f8b\u7ed1\u5b9a\u5230 FormattedLogger \u4ee4\u724c\u3002useExisting \u8bed\u6cd5\u5f15\u7528\u5df2\u58f0\u660e\u4e3a Logger \u7684\u73b0\u6709\u5bf9\u8c61\u5b9e\u4f8b\u3002",
+        "explanation": "1. [Angular.io - Dependency Providers](https://angular.io/guide/dependency-injection-providers#defining-providers)\n2. [TektutorialHub](https://www.tektutorialshub.com/angular/angular-providers/)",
+        "hint": null,
+        "correctAnswer": [
+          "useClass \u8bed\u6cd5\u544a\u8bc9\u6ce8\u5165\u5668\u521b\u5efa Logger \u7684\u65b0\u5b9e\u4f8b\u5e76\u5c06\u8be5\u5b9e\u4f8b\u7ed1\u5b9a\u5230 FormattedLogger \u4ee4\u724c\u3002useExisting \u8bed\u6cd5\u5f15\u7528\u5df2\u58f0\u660e\u4e3a Logger \u7684\u73b0\u6709\u5bf9\u8c61\u5b9e\u4f8b\u3002"
+        ],
+        "options": [
+          "\u5b83\u4eec\u662f\u76f8\u540c\u7684\u3002\u4e24\u8005\u90fd\u5c06\u5bfc\u81f4\u7ed1\u5b9a\u5230 FormattedLogger \u4ee4\u724c\u7684 Logger \u65b0\u5b9e\u4f8b\u3002",
+          "useClass \u8bed\u6cd5\u544a\u8bc9\u6ce8\u5165\u5668\u521b\u5efa Logger \u7684\u65b0\u5b9e\u4f8b\u5e76\u5c06\u8be5\u5b9e\u4f8b\u7ed1\u5b9a\u5230 FormattedLogger \u4ee4\u724c\u3002useExisting \u8bed\u6cd5\u5f15\u7528\u5df2\u58f0\u660e\u4e3a Logger \u7684\u73b0\u6709\u5bf9\u8c61\u5b9e\u4f8b\u3002",
+          "\u4e24\u8005\u90fd\u662f\u9519\u8bef\u7684\u3002\u5f3a\u7c7b\u578b\u4e0d\u80fd\u7528\u4e8e useClass \u6216 useExisting\u3002",
+          "\u5b83\u4eec\u662f\u76f8\u540c\u7684\u3002\u4e24\u8005\u90fd\u5c06\u5bfc\u81f4 FormattedLogger \u4ee4\u724c\u6210\u4e3a Logger \u5b9e\u4f8b\u7684\u522b\u540d\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b3d47a249b384c63de701650",
+        "question": "\u95ee\u989825. \u8def\u7531\u914d\u7f6e\u4e2d\u7684 data \u5c5e\u6027\uff08\u5982\u4e0b\u4f8b\u6240\u793a\uff09\u7684\u76ee\u7684\u662f\u4ec0\u4e48\uff1f\n```ts\n   {\n       path: 'customers',\n       component: CustomerListComponent,\n       data: { accountSection: true }\n   }\n```",
+        "answer": "\u4e00\u79cd\u5305\u542b\u4e0e\u8def\u7531\u5173\u8054\u7684\u9759\u6001\u53ea\u8bfb\u6570\u636e\u7684\u65b9\u6cd5\uff0c\u53ef\u4ee5\u4ece ActivatedRoute \u68c0\u7d22",
+        "explanation": "1. [TektutorialsHub](https://www.tektutorialshub.com/angular/angular-pass-data-to-route/#:~:text=Angular%20allows%20us%20to%20pass,of%20the%20history%20state%20object)\n2. [StackOverflow](https://stackoverflow.com/a/36835156)",
+        "hint": null,
+        "correctAnswer": [
+          "\u4e00\u79cd\u5305\u542b\u4e0e\u8def\u7531\u5173\u8054\u7684\u9759\u6001\u53ea\u8bfb\u6570\u636e\u7684\u65b9\u6cd5\uff0c\u53ef\u4ee5\u4ece ActivatedRoute \u68c0\u7d22"
+        ],
+        "options": [
+          "\u7528\u4e8e\u5728\u8def\u7531\u7ec4\u4ef6\u5b9e\u4f8b\u4e0a\u8bbe\u7f6e @Input \u503c\u7684\u952e/\u503c\u6620\u5c04",
+          "\u4e00\u79cd\u5305\u542b\u4e0e\u8def\u7531\u5173\u8054\u7684\u9759\u6001\u53ea\u8bfb\u6570\u636e\u7684\u65b9\u6cd5\uff0c\u53ef\u4ee5\u4ece ActivatedRoute \u68c0\u7d22",
+          "\u8def\u7531\u4e0a\u7684\u5c5e\u6027\uff0c\u53ef\u7528\u4e8e\u4e3a\u8def\u7531\u52a0\u8f7d\u52a8\u6001\u6570\u636e",
+          "\u4e00\u4e2a\u5c06\u81ea\u52a8\u6ce8\u5165\u5230\u8def\u7531\u7ec4\u4ef6\u6784\u9020\u51fd\u6570\u4e2d\u7684\u5bf9\u8c61\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c779260fdedd30924d14463d",
+        "question": "\u95ee\u989826. \u57fa\u4e8e\u6b64\u6a21\u677f\u8bed\u6cd5\uff0c\u5185\u7f6e\u7684 `ngIf` \u7ed3\u6784\u6307\u4ee4\u5982\u4f55\u66f4\u6539\u6e32\u67d3\u7684 DOM\uff1f\n```ts\n@Component({\n  selector: 'app-product',\n  template: '<div *ngIf=\"product\">{{ product.name }}</div>',\n})\nexport class ProductComponent {\n  @Input() product;\n}\n```",
+        "answer": "\u5982\u679c product \u7c7b\u5b57\u6bb5\u4e3a\"\u771f\u503c\"\uff0c\u5219\u6e32\u67d3\u7684 DOM \u5c06\u5305\u542b\u5e26\u6709 `product.name` \u5b57\u6bb5\u503c\u7684 `<div>`\u3002\u5982\u679c\u4e0d\u662f\"\u771f\u503c\"\uff0c\u6e32\u67d3\u7684 DOM \u5c06\u4e0d\u5305\u542b `<div>` \u5143\u7d20\u3002",
+        "explanation": "[Reference (angular.io)](https://angular.io/api/common/NgIf)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5982\u679c product \u7c7b\u5b57\u6bb5\u4e3a\"\u771f\u503c\"\uff0c\u5219\u6e32\u67d3\u7684 DOM \u5c06\u5305\u542b\u5e26\u6709 `product.name` \u5b57\u6bb5\u503c\u7684 `<div>`\u3002\u5982\u679c\u4e0d\u662f\"\u771f\u503c\"\uff0c\u6e32\u67d3\u7684 DOM \u5c06\u4e0d\u5305\u542b `<div>` \u5143\u7d20\u3002"
+        ],
+        "options": [
+          "`<div>` \u5145\u5f53\u5360\u4f4d\u7b26\u3002\u5982\u679c product \u7c7b\u5b57\u6bb5\u4e3a\"\u771f\u503c\"\uff0c`<div>` \u5c06\u88ab\u4ec5 `product.name` \u503c\u66ff\u6362\uff1b\u5982\u679c\u4e0d\u662f\uff0c\u5219\u4e0d\u4f1a\u6e32\u67d3\u4efb\u4f55\u5185\u5bb9\u3002",
+          "`<div>` \u5c06\u59cb\u7ec8\u88ab\u6e32\u67d3\uff0c\u5982\u679c product \u5b57\u6bb5\u4e3a\"\u771f\u503c\"\uff0c`<div>` \u5143\u7d20\u5c06\u5305\u542b `product.name` \u503c\uff1b\u5426\u5219\uff0c\u5b83\u5c06\u6e32\u67d3\u6ca1\u6709\u503c\u7684 `<div>` \u5143\u7d20\u3002",
+          "\u5b83\u4f1a\u4ea7\u751f\u9519\u8bef\uff0c\u56e0\u4e3a ngIf \u4e0d\u662f\u5185\u7f6e\u7684\u7ed3\u6784\u6307\u4ee4\u3002",
+          "\u5982\u679c product \u7c7b\u5b57\u6bb5\u4e3a\"\u771f\u503c\"\uff0c\u5219\u6e32\u67d3\u7684 DOM \u5c06\u5305\u542b\u5e26\u6709 `product.name` \u5b57\u6bb5\u503c\u7684 `<div>`\u3002\u5982\u679c\u4e0d\u662f\"\u771f\u503c\"\uff0c\u6e32\u67d3\u7684 DOM \u5c06\u4e0d\u5305\u542b `<div>` \u5143\u7d20\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fc1c739823e8e90b1ab4610c",
+        "question": "\u95ee\u989827. \u8fd9\u6bb5\u4ee3\u7801\u5b8c\u6210\u4e86\u4ec0\u4e48\uff1f\n```ts\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\nplatformBrowserDynamic().bootstrapModule(AppModule);\n```",
+        "answer": "\u5b83\u58f0\u660e\u4e86\u4e00\u4e2a\u540d\u4e3a AppModule \u7684 Angular \u6a21\u5757\uff0c\u5176\u4e2d\u5305\u542b\u4e00\u4e2a\u540d\u4e3a AppComponent \u7684\u5f15\u5bfc\u7ec4\u4ef6\u3002\u7136\u540e\u5b83\u5c06\u8be5\u6a21\u5757\u6ce8\u518c\u5230 Angular\uff0c\u4ee5\u4fbf\u5e94\u7528\u7a0b\u5e8f\u53ef\u4ee5\u542f\u52a8\u3002",
+        "explanation": "[Angular.io - The basic NgModule](https://angular.io/guide/ngmodules#the-basic-ngmodule)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u58f0\u660e\u4e86\u4e00\u4e2a\u540d\u4e3a AppModule \u7684 Angular \u6a21\u5757\uff0c\u5176\u4e2d\u5305\u542b\u4e00\u4e2a\u540d\u4e3a AppComponent \u7684\u5f15\u5bfc\u7ec4\u4ef6\u3002\u7136\u540e\u5b83\u5c06\u8be5\u6a21\u5757\u6ce8\u518c\u5230 Angular\uff0c\u4ee5\u4fbf\u5e94\u7528\u7a0b\u5e8f\u53ef\u4ee5\u542f\u52a8\u3002"
+        ],
+        "options": [
+          "\u5b83\u4e3a NgModule \u6267\u884c\u5355\u5143\u6d4b\u8bd5\u3002",
+          "\u5b83\u63d0\u4f9b\u4e86\u4e00\u79cd\u7f16\u5199 Angular \u5e94\u7528\u7a0b\u5e8f\u6587\u6863\u7ed3\u6784\u7684\u65b9\u6cd5\u3002@NgModule \u662f\u4e00\u79cd\u5185\u8054\u4ee3\u7801\u6ce8\u91ca\u5f62\u5f0f\uff0c\u88ab TypeScript \u7f16\u8bd1\u5668\u5ffd\u7565\uff0c\u4f46\u4f1a\u5728\u4ee3\u7801\u7f16\u8f91\u5668\u5e94\u7528\u7a0b\u5e8f\u4e2d\u4ee5\u7279\u6b8a\u683c\u5f0f\u663e\u793a\u3002",
+          "\u5b83\u58f0\u660e\u4e86\u4e00\u4e2a\u540d\u4e3a AppModule \u7684 Angular \u6a21\u5757\uff0c\u5e76\u4f7f\u5176\u5728\u6574\u4e2a\u5e94\u7528\u7a0b\u5e8f\u4e2d\u53ef\u7528\u4e8e\u5ef6\u8fdf\u52a0\u8f7d\u3002",
+          "\u5b83\u58f0\u660e\u4e86\u4e00\u4e2a\u540d\u4e3a AppModule \u7684 Angular \u6a21\u5757\uff0c\u5176\u4e2d\u5305\u542b\u4e00\u4e2a\u540d\u4e3a AppComponent \u7684\u5f15\u5bfc\u7ec4\u4ef6\u3002\u7136\u540e\u5b83\u5c06\u8be5\u6a21\u5757\u6ce8\u518c\u5230 Angular\uff0c\u4ee5\u4fbf\u5e94\u7528\u7a0b\u5e8f\u53ef\u4ee5\u542f\u52a8\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e472bef6edce25577461df7e",
+        "question": "\u95ee\u989828. \u5728\u6b64\u8def\u7531\u914d\u7f6e\u4e2d\uff0c_resolve_ \u5c5e\u6027\u7684\u4f5c\u7528\u662f\u4ec0\u4e48\uff1f\n```ts\n{\n   path: ':id',\n   component: UserComponent,\n   resolve: {\n     user: UserResolverService\n   }\n}\n```",
+        "answer": "\u5728\u52a0\u8f7d _UserComponent_ \u4e4b\u524d\uff0c\u8def\u7531\u5668\u5c06\u8ba2\u9605 _UserResolverService_ \u4e2d _resolve_ \u65b9\u6cd5\u8fd4\u56de\u7684 _Observable_\u3002\u6b64\u6280\u672f\u53ef\u7528\u4e8e\u83b7\u53d6 _route_ \u7684\u9884\u52a0\u8f7d\u6570\u636e\u3002",
+        "explanation": "[angular.io](https://angular.io/api/router/Resolve)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5728\u52a0\u8f7d _UserComponent_ \u4e4b\u524d\uff0c\u8def\u7531\u5668\u5c06\u8ba2\u9605 _UserResolverService_ \u4e2d _resolve_ \u65b9\u6cd5\u8fd4\u56de\u7684 _Observable_\u3002\u6b64\u6280\u672f\u53ef\u7528\u4e8e\u83b7\u53d6 _route_ \u7684\u9884\u52a0\u8f7d\u6570\u636e\u3002"
+        ],
+        "options": [
+          "\u5728\u52a0\u8f7d _UserComponent_ \u4e4b\u524d\uff0c\u8def\u7531\u5668\u5c06\u8ba2\u9605 _UserResolverService_ \u4e2d _resolve_ \u65b9\u6cd5\u8fd4\u56de\u7684 _Observable_\u3002\u6b64\u6280\u672f\u53ef\u7528\u4e8e\u83b7\u53d6 _route_ \u7684\u9884\u52a0\u8f7d\u6570\u636e\u3002",
+          "\u5728 _route_ \u5b8c\u6210\u89e3\u6790\u540e\uff0c\u7ec4\u4ef6\u88ab\u52a0\u8f7d\u5e76\u6e32\u67d3\uff0c_UserResolverService_ \u5c06\u8fd0\u884c\u4e00\u4e2a\u540d\u4e3a _user_ \u7684\u65b9\u6cd5\uff0c\u8be5\u65b9\u6cd5\u5c06\u6e05\u7406\u4efb\u4f55\u6253\u5f00\u7684\u6570\u636e\u8fde\u63a5\u3002",
+          "\u6709\u9519\u8bef\u3002\u6b63\u786e\u7684\u5c5e\u6027\u540d\u79f0\u662f _onResolve_\u3002",
+          "_UserComponent_ \u7684\u6784\u9020\u51fd\u6570\u4e2d\u5c06\u6709\u4e00\u4e2a _user_ \u53c2\u6570\uff0c_router_ \u5c06\u5904\u7406\u4ece _UserResolverService_ \u4e2d\u7684 _user_ \u65b9\u6cd5\u8c03\u7528\u6ce8\u5165\u8be5\u503c\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0b361e5b8ed7183a9939e840",
+        "question": "\u95ee\u989829. \u5728\u6b64\u7ec4\u4ef6\u7c7b\u4e2d\uff0cContentChildren \u88c5\u9970\u5668\u7684\u76ee\u7684\u662f\u4ec0\u4e48\uff1f\n```ts\n@Component({\n . . .\n template: '<ng-content></ng-content>'\n})\nexport class TabsListComponent {\n @ContentChildren(TabComponent) tabs;\n}\n```",
+        "answer": "\u5b83\u63d0\u4f9b\u4e86\u4ece\u7ec4\u4ef6\u7c7b\u5185\u90e8\u8bbf\u95ee\u5df2\u5185\u5bb9\u6295\u5f71\u5230\u6b64\u7ec4\u4ef6\u7684 `<ng-content>` \u4e2d\u7684\u4efb\u4f55 _TabComponent_ \u7ec4\u4ef6\u7684\u80fd\u529b\u3002",
+        "explanation": "[betterprogramming.pub](https://betterprogramming.pub/understanding-contentchildren-with-an-example-e76ce78968db)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u63d0\u4f9b\u4e86\u4ece\u7ec4\u4ef6\u7c7b\u5185\u90e8\u8bbf\u95ee\u5df2\u5185\u5bb9\u6295\u5f71\u5230\u6b64\u7ec4\u4ef6\u7684 `<ng-content>` \u4e2d\u7684\u4efb\u4f55 _TabComponent_ \u7ec4\u4ef6\u7684\u80fd\u529b\u3002"
+        ],
+        "options": [
+          "\u5982\u679c\u5c06\u4efb\u4f55 _TabsComponent_ \u5143\u7d20\u6dfb\u52a0\u5230 _TabsListComponent_ \u6a21\u677f\uff0c\u5b83\u4eec\u5c06\u5728\u8fd0\u884c\u65f6\u88ab\u653e\u5165 `<ng-content>` \u5143\u7d20\u4e2d\u3002",
+          "\u5f53 _TabsListComponent_ \u5b9e\u4f8b\u5316\u65f6\uff0c\u5b83\u4f1a\u5728 _TabsListComponent_ \u6a21\u677f\u4e2d\u521b\u5efa _TabComponent_ \u7ec4\u4ef6\u3002",
+          "\u5b83\u63d0\u4f9b\u4e86\u4ece\u7ec4\u4ef6\u7c7b\u5185\u90e8\u8bbf\u95ee\u5df2\u5185\u5bb9\u6295\u5f71\u5230\u6b64\u7ec4\u4ef6\u7684 `<ng-content>` \u4e2d\u7684\u4efb\u4f55 _TabComponent_ \u7ec4\u4ef6\u7684\u80fd\u529b\u3002",
+          "\u5b83\u9650\u5236\u53ef\u4ee5\u653e\u5165 _TabsListComponent_ \u5143\u7d20\u7684\u5141\u8bb8\u5143\u7d20\uff0c\u53ea\u5141\u8bb8 _TabComponent_ \u5143\u7d20\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fe5d1bb0a0a75ad852c1efae",
+        "question": "\u95ee\u989830. \u4e3a\u4e86\u8ba9 Angular \u5904\u7406\u5e94\u7528\u7a0b\u5e8f\u4e2d\u7684\u7ec4\u4ef6\uff0c\u7ec4\u4ef6\u7c7b\u578b\u9700\u8981\u5728\u54ea\u91cc\u6ce8\u518c\uff1f",
+        "answer": "\u5728\u540d\u4e3a _declarations_ \u7684 NgModule \u88c5\u9970\u5668\u5143\u6570\u636e\u5c5e\u6027\u4e2d",
+        "explanation": "[angular.io](https://angular.io/guide/ngmodule-api#ngmodule-metadata)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5728\u540d\u4e3a _declarations_ \u7684 NgModule \u88c5\u9970\u5668\u5143\u6570\u636e\u5c5e\u6027\u4e2d"
+        ],
+        "options": [
+          "\u5728 index.html \u6587\u4ef6\u7684 script \u6807\u7b7e\u4e2d",
+          "\u5728\u540d\u4e3a _components_ \u7684 NgModule \u88c5\u9970\u5668\u5143\u6570\u636e\u6807\u7b7e\u4e2d",
+          "\u4e0d\u9700\u8981\u6ce8\u518c\uff0c\u53ea\u9700\u5c06\u7ec4\u4ef6\u6587\u4ef6\u5305\u542b\u5728 app \u76ee\u5f55\u4e2d\u5373\u53ef\u3002",
+          "\u5728\u540d\u4e3a _declarations_ \u7684 NgModule \u88c5\u9970\u5668\u5143\u6570\u636e\u5c5e\u6027\u4e2d"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0fbecd7e1c982c79de807743",
+        "question": "\u95ee\u989831. \u5728\u6b64\u5355\u5143\u6d4b\u8bd5\u4e2d\uff0c`fixture.detectChanges()` \u8c03\u7528\u7684\u76ee\u7684\u662f\u4ec0\u4e48\uff1f\n```ts\nTestBed.configureTestingModule({\n  declarations: [UserCardComponent],\n});\nlet fixture = TestBed.createComponent(UserCardComponent);\nfixture.detectChanges();\nexpect(fixture.nativeElement.querySelector('h1').textContent).toContain(\n  fixture.componentInstance.title,\n);\n```",
+        "answer": "\u5b83\u5f3a\u5236 Angular \u6267\u884c\u53d8\u66f4\u68c0\u6d4b\uff0c\u8fd9\u5c06\u5728\u60a8\u9a8c\u8bc1\u6a21\u677f\u4e4b\u524d\u6e32\u67d3 _UserCardComponent_\u3002",
+        "explanation": "[angular.io](https://angular.io/api/core/testing/ComponentFixture#detectChanges)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u5f3a\u5236 Angular \u6267\u884c\u53d8\u66f4\u68c0\u6d4b\uff0c\u8fd9\u5c06\u5728\u60a8\u9a8c\u8bc1\u6a21\u677f\u4e4b\u524d\u6e32\u67d3 _UserCardComponent_\u3002"
+        ],
+        "options": [
+          "\u5b83\u8ddf\u8e2a\u4efb\u4f55\u6f5c\u5728\u7684 UI \u66f4\u6539\uff0c\u5982\u679c\u8fdb\u884c\u4e86\u4efb\u4f55\u66f4\u6539\uff0c\u5c06\u4f7f\u5355\u5143\u6d4b\u8bd5\u5931\u8d25\u3002",
+          "\u5b83\u7528\u4e8e\u786e\u4fdd\u6574\u4e2a\u6d4b\u8bd5\u5957\u4ef6\u4e2d\u591a\u4e2a\u5355\u5143\u6d4b\u8bd5\u7684\u7ec4\u4ef6\u6a21\u677f\u7a33\u5b9a\u6027\u3002",
+          "\u5b83\u5f3a\u5236 Angular \u6267\u884c\u53d8\u66f4\u68c0\u6d4b\uff0c\u8fd9\u5c06\u5728\u60a8\u9a8c\u8bc1\u6a21\u677f\u4e4b\u524d\u6e32\u67d3 _UserCardComponent_\u3002",
+          "\u5b83\u7528\u4e8e\u5728\u5355\u5143\u6d4b\u8bd5\u8fd0\u884c\u671f\u95f4\u5c06\u53d8\u66f4\u68c0\u6d4b\u4e8b\u4ef6\u8bb0\u5f55\u5230\u63a7\u5236\u53f0\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2fe0b74799ed67a11a489260",
+        "question": "\u95ee\u989832. \u5f53 goToUser \u4f20\u9012\u503c 15 \u65f6\uff0c\u57fa\u4e8e\u4ee5\u4e0b\u5bf9 `Router.navigate` \u65b9\u6cd5\u7684\u8c03\u7528\uff0cURL \u6bb5\u5c06\u662f\u4ec0\u4e48\u6837\u5b50\uff1f\n```ts\nexport class ToolsComponent {\n  constructor(private router: Router) {}\n  goToUser(id: number) {\n    this.router.navigate(['user', id]);\n  }\n}\n```",
+        "answer": "/user/15",
+        "explanation": "[angular.io](https://angular.io/api/router/Router#navigate)",
+        "hint": null,
+        "correctAnswer": [
+          "/user/15"
+        ],
+        "options": [
+          "/user/15",
+          "/user?id=15",
+          "/user:15",
+          "/user;id=15"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b5b79edee3ff82d565c23983",
+        "question": "\u95ee\u989833. \u5f53\u4e3a root \u63d0\u4f9b\u670d\u52a1\u5e76\u4e14\u8fd8\u5c06\u5176\u6dfb\u52a0\u5230\u5ef6\u8fdf\u52a0\u8f7d\u6a21\u5757\u7684\u63d0\u4f9b\u8005\u914d\u7f6e\u65f6\uff0c\u6ce8\u5165\u5668\u5411\u5ef6\u8fdf\u52a0\u8f7d\u6a21\u5757\u4e2d\u7684\u6784\u9020\u51fd\u6570\u63d0\u4f9b\u8be5\u670d\u52a1\u7684\u4ec0\u4e48\u5b9e\u4f8b\uff1f",
+        "answer": "\u5f53\u6a21\u5757\u5ef6\u8fdf\u52a0\u8f7d\u65f6\uff0c\u5c06\u521b\u5efa\u8be5\u670d\u52a1\u7684\u65b0\u5b9e\u4f8b\u3002",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "\u5f53\u6a21\u5757\u5ef6\u8fdf\u52a0\u8f7d\u65f6\uff0c\u5c06\u521b\u5efa\u8be5\u670d\u52a1\u7684\u65b0\u5b9e\u4f8b\u3002"
+        ],
+        "options": [
+          "\u5f53\u6a21\u5757\u5ef6\u8fdf\u52a0\u8f7d\u65f6\uff0c\u5c06\u521b\u5efa\u8be5\u670d\u52a1\u7684\u65b0\u5b9e\u4f8b\u3002",
+          "\u4e0d\u5141\u8bb8\u5728\u5ef6\u8fdf\u52a0\u8f7d\u7684\u6a21\u5757\u7ea7\u522b\u63d0\u4f9b\u76f8\u540c\u7c7b\u578b\u7684\u670d\u52a1\u3002",
+          "\u5982\u679c\u5c1a\u672a\u5728\u6839\u7ea7\u522b\u521b\u5efa\u670d\u52a1\u5b9e\u4f8b\uff0c\u5b83\u5c06\u5728\u90a3\u91cc\u521b\u5efa\u4e00\u4e2a\uff0c\u7136\u540e\u4f7f\u7528\u5b83\u3002",
+          "\u8be5\u670d\u52a1\u7684\u5355\u4e2a\u5b9e\u4f8b\u59cb\u7ec8\u5728\u6839\u5904\u5b9e\u4f8b\u5316\uff0c\u5e76\u4e14\u662f\u552f\u4e00\u4f7f\u7528\u7684\u5b9e\u4f8b\uff0c\u5305\u62ec\u5728\u5ef6\u8fdf\u6a21\u5757\u4e2d\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "05c09f5df13ef19964a599cb",
+        "question": "\u95ee\u989834. \u6b64\u6307\u4ee4\u4e2d\u7684 HostBinding \u88c5\u9970\u5668\u5728\u505a\u4ec0\u4e48\uff1f\n```ts\n@Directive({\n  selector: ' [appHighlight] ',\n})\nexport class HighlightDirective {\n  @HostBinding('class.highlighted') highlight = true;\n}\n```",
+        "answer": "\u5b83\u5c06\u540d\u4e3a highlighted \u7684 CSS \u7c7b\u6dfb\u52a0\u5230\u4efb\u4f55\u5177\u6709 appHighlight \u6307\u4ee4\u7684 DOM \u5143\u7d20\u3002",
+        "explanation": "[StackOverflow](https://stackoverflow.com/a/46207423)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u5c06\u540d\u4e3a highlighted \u7684 CSS \u7c7b\u6dfb\u52a0\u5230\u4efb\u4f55\u5177\u6709 appHighlight \u6307\u4ee4\u7684 DOM \u5143\u7d20\u3002"
+        ],
+        "options": [
+          "\u5b83\u5c06\u540d\u4e3a highlighted \u7684 CSS \u7c7b\u6dfb\u52a0\u5230\u4efb\u4f55\u5177\u6709 appHighlight \u6307\u4ee4\u7684 DOM \u5143\u7d20\u3002",
+          "HostBinding \u5728\u6307\u4ee4\u4e0a\u4e0d\u6267\u884c\u4efb\u4f55\u64cd\u4f5c\uff0c\u4ec5\u5728\u7ec4\u4ef6\u4e0a\u6267\u884c\u3002",
+          "\u5b83\u6307\u5b9a\u5982\u679c\u5bbf\u4e3b\u5143\u7d20\u7684 class \u5c5e\u6027\u6dfb\u52a0\u4e86 highlighted \u7c7b\uff0c\u5219\u6307\u4ee4\u7c7b\u5b57\u6bb5 highlight \u5c06\u8bbe\u7f6e\u4e3a true\uff1b\u5982\u679c\u672a\u5728\u5bbf\u4e3b\u4e0a\u6dfb\u52a0\uff0c\u5b83\u5c06\u8bbe\u7f6e\u4e3a false\u3002",
+          "\u5b83\u5728\u5bbf\u4e3b\u5143\u7d20\u4e0a\u521b\u5efa\u5185\u8054\u6837\u5f0f\uff0cCSS \u5c5e\u6027\u540d\u4e3a highlight\uff0c\u8bbe\u7f6e\u4e3a true\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba24c140609fed9cb9f03f68",
+        "question": "\u95ee\u989835. \u5728\u54cd\u5e94\u5f0f\u8868\u5355\u4e2d\uff0c\u5728\u539f\u751f DOM `<form>` \u5143\u7d20\u4e0a\u4f7f\u7528\u4ec0\u4e48 Angular \u8868\u5355\u7c7b\u7c7b\u578b\u6765\u8fde\u63a5\u5b83\uff1f",
+        "answer": "`FormGroup`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`FormGroup`"
+        ],
+        "options": [
+          "`FormArray`",
+          "`FormControl`",
+          "`FormGroup`",
+          "`\u6240\u6709\u8fd9\u4e9b\u7b54\u6848`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "35f6c798337b8b5745bca886",
+        "question": "\u95ee\u989836. \u5047\u8bbe username FormControl \u5df2\u914d\u7f6e\u4e86 minLength \u9a8c\u8bc1\u5668\uff0c\u60a8\u5982\u4f55\u5728\u4ee5\u4e0b\u54cd\u5e94\u5f0f\u8868\u5355\u6807\u8bb0\u4e2d\u4e3a username \u5b57\u6bb5\u8bbe\u7f6e\u9519\u8bef\u663e\u793a\uff1f\n```html\n<form [formGroup]=\"form\">\n  <input type=\"text\" formControlName=\"username\" />\n  ...\n</form>\n```",
+        "answer": "D",
+        "explanation": "```html\n<span *ngIf=\"username.minLength.invalid\"> Username length is not valid </span>\n```\n```html\n<input type=\"text\" formControlName=\"username\" [showMinLength]=\"true\" />\n```\n```html\n<span *ngIf=\"form.get('username').getError('minLength') as minLengthError\">\nUsername must be at least {{ minLengthError.requiredLength }} characters.\n</span>\n```\n```html\n<input type=\"text\" formControlName=\"username\" #userName=\"ngModel\" />\n<span *ngIf=\"userName.errors.minlength\">\nUsername must be at least {{ userName.errors.minlength.requiredLength }} characters.\n</span>\n```\n[Codecraft](https://codecraft.tv/courses/angular/forms/template-driven/)",
+        "hint": null,
+        "correctAnswer": [
+          "D"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fc26b461d087a3952e8b1365",
+        "question": "\u95ee\u989837. \u4eff\u771f\u89c6\u56fe\u5c01\u88c5\u6a21\u5f0f\u5982\u4f55\u5904\u7406\u7ec4\u4ef6\u7684 CSS\uff1f",
+        "answer": "\u5b83\u4e3a DOM \u5143\u7d20\u521b\u5efa\u552f\u4e00\u5c5e\u6027\uff0c\u5e76\u5c06\u60a8\u7f16\u5199\u7684 CSS \u9009\u62e9\u5668\u8303\u56f4\u9650\u5b9a\u5230\u8fd9\u4e9b\u5c5e\u6027 ID\u3002",
+        "explanation": "[Angular.io](https://angular.io/guide/view-encapsulation#inspecting-generated-css)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u4e3a DOM \u5143\u7d20\u521b\u5efa\u552f\u4e00\u5c5e\u6027\uff0c\u5e76\u5c06\u60a8\u7f16\u5199\u7684 CSS \u9009\u62e9\u5668\u8303\u56f4\u9650\u5b9a\u5230\u8fd9\u4e9b\u5c5e\u6027 ID\u3002"
+        ],
+        "options": [
+          "\u5b83\u5b8c\u5168\u6309\u7167\u60a8\u7f16\u5199\u7684\u65b9\u5f0f\u6e32\u67d3 CSS\uff0c\u65e0\u9700\u4efb\u4f55\u66f4\u6539\u3002",
+          "\u5b83\u4f7f\u7528 shadow DOM \u6807\u8bb0\u548c CSS\u3002",
+          "\u5b83\u4e3a DOM \u5143\u7d20\u521b\u5efa\u552f\u4e00\u5c5e\u6027\uff0c\u5e76\u5c06\u60a8\u7f16\u5199\u7684 CSS \u9009\u62e9\u5668\u8303\u56f4\u9650\u5b9a\u5230\u8fd9\u4e9b\u5c5e\u6027 ID\u3002",
+          "\u5b83\u5c06\u60a8\u7f16\u5199\u7684\u6240\u6709 CSS \u89c4\u5219\u6e32\u67d3\u4e3a\u5728\u6a21\u677f\u4e2d\u4f7f\u7528\u7684\u6240\u6709 DOM \u5143\u7d20\u4e0a\u7684\u5185\u8054 CSS\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "85c2be1e6eb25725fbceffa1",
+        "question": "\u95ee\u989838. \u4f7f\u7528\u4ee5\u4e0b TestBed \u8bbe\u7f6e\uff0c\u53ef\u4ee5\u4f7f\u7528\u4ec0\u4e48\u6765\u8bbf\u95ee UserCardComponent \u7684\u6e32\u67d3 DOM\uff1f\n```ts\nTestBed.configureTestingModule({\n  declarations: [UserCardComponent],\n});\nlet fixture = TestBed.createComponent(UserCardComponent);\n```",
+        "answer": "`fixture.nativeElement`",
+        "explanation": "1. [StackOverflow](https://stackoverflow.com/a/56504773)\n2. [Angular.io](https://angular.io/guide/testing-components-basics#nativeelement)",
+        "hint": null,
+        "correctAnswer": [
+          "`fixture.nativeElement`"
+        ],
+        "options": [
+          "`fixture.componentTemplate`",
+          "`fixture.getComponentHtml()`",
+          "`fixture.nativeElement`",
+          "`fixture.componentInstance.template `"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "af478985e0d5d371f6776f08",
+        "question": "\u95ee\u989839. \u7ed9\u5b9a\u8fd9\u4e24\u4e2a\u7ec4\u4ef6\uff0c\u57fa\u4e8e\u6807\u8bb0\u7528\u6cd5\uff0c\u5c06\u5411 DOM \u6e32\u67d3\u4ec0\u4e48\uff1f\n```ts\n@Component({\n selector: 'app-card',\n template: '<h1>Data Card</h1><ng-content></ng-content>'\n})\nexport class CardComponent { }\n@Component({\n selector: 'app-bio',\n template: '<ng-content></ng-content>.\n})\nexport class BioComponent { }\n// \u6807\u8bb0\u7528\u6cd5\uff1a\n<app-card><app-bio>Been around for four years.</app-bio></app-card>\n```",
+        "answer": "A",
+        "explanation": "```html\n<app-card>\n<h1>Data Card</hl>\n<app-bio>\nBeen around for four years.\n</app-bio>\n</app-card>\n```\n```html\n<h1>Data Card</h1>\n<app-bio> Been around for four years. </app-bio>\n```\n```html\n<app-card>\n<h1>Data Card</hl>\n<ng-content></ng-content>\n<app-bio>\nBeen around for four years.\n<ng-content></ng-content>\n</app-bio>\n</app-card>\n```\n```html\n<app-card>\n<h1>Data Card</hl>\n</app-card>\n```",
+        "hint": null,
+        "correctAnswer": [
+          "A"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4f4e563ed4a088e23410a6e2",
+        "question": "\u95ee\u989840. \u7ed9\u5b9a\u4e0b\u9762\u4ee3\u7801\u4e2d\u7684 app-title-card \u7ec4\u4ef6\uff0capp-user-card \u7ec4\u4ef6\u5c06\u6e32\u67d3\u4ec0\u4e48 DOM\uff1f\n```ts\n@Component({\n   selector: 'app-user-card',\n   template: '<app-title-card></app-title-card><p>Jenny Smith</p>'\n})\n@Component({\n   selector: 'app-title-card',\n   template: '<h1>User Data</hl>'\n})\n// \u5728\u7236\u7ec4\u4ef6 html \u4e2d\u4f7f\u7528 user card \u7ec4\u4ef6\n<app-user-card></app-user-card>\n```",
+        "answer": "A",
+        "explanation": "```html\n<app-user-card>\n<app-title-card>\n<h1>User Data</h1>\n</app-title-card>\n<p>Jenny Smith</p>\n</app-user-card>\n```\n```html\n<h1>User Data</h1>\n<p>Jenny Smith</p>\n<p></p>\n```\n```html\n<app-user-card>\n<app-title-card></app-title-card>\n</app-user-card>\n```\n```html\n<div app-user-card>\n<h1 app-title-card>User Data</h1>\n<p>Jenny Smith</p>\n</div>\n```",
+        "hint": null,
+        "correctAnswer": [
+          "A"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3e4a2740ebc1d4ddd216af91",
+        "question": "\u95ee\u989841. \u4e3a @Inject() \u88c5\u9970\u5668\u6b63\u5728\u5bfb\u627e\u7684\u81ea\u5b9a\u4e49\u63d0\u4f9b\u8005\u6ce8\u518c\u9009\u62e9\u5339\u914d\u7684\u4ee3\u7801\uff1a\n```ts\nconstructor(@Inject('Logger') private logger) { }\n```",
+        "answer": "B",
+        "explanation": "```ts\nproviders: [Logger];\n```\n```ts\nproviders: [{ provide: 'Logger', useClass: Logger }];\n```\n```ts\n@Injectable({\nprovidedln: 'root'\n})\n```\n```ts\nproviders: [{ provide: 'Logger' }];\n```\n1. [StackOverflow](https://stackoverflow.com/a/37315355)\n2. [TektutorialHub](https://www.tektutorialshub.com/angular/angular-injector-injectable-inject/)\n3. [Angular.io - Dependency Injection In Action](https://angular.io/guide/dependency-injection-in-action#supply-a-custom-provider-with-inject)",
+        "hint": null,
+        "correctAnswer": [
+          "B"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1fa287e48cac0d6b46598f5d",
+        "question": "\u95ee\u989842. \u5728 getsettings \u7c7b\u65b9\u6cd5\u4e2d\uff0c\u4ee5\u4e0b HttpClient.get \u65b9\u6cd5\u7684\u4f7f\u7528\u63cf\u8ff0\u6700\u51c6\u786e\u7684\u662f\u54ea\u4e2a\uff1f\n```ts\nexport class SettingsService {\n    constructor(private httpClient: HttpClient) { }\n    ...\ngetSettings()\n{\n    return this.httpClient.get<Settings>(this.settingsUrl)\n        .pipe(\n            retry(3)\n        );\n}}\n```",
+        "answer": "\u5f53\u8ba2\u9605 getSettings \u65b9\u6cd5\u7684\u7ed3\u679c\u65f6\uff0c\u5c06\u8fdb\u884c HTTP GET \u8c03\u7528\uff1b\u5982\u679c\u5931\u8d25\uff0c\u5b83\u5c06\u5728\u653e\u5f03\u5e76\u8fd4\u56de\u9519\u8bef\u4e4b\u524d\u91cd\u8bd5\u6700\u591a\u4e09\u6b21\u3002",
+        "explanation": "1. [learnrxjs.io](https://www.learnrxjs.io/learn-rxjs/operators/error_handling/retry)\n2. [dev.to](https://dev.to/gparlakov/how-does-rxjs-retry-work-412p)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5f53\u8ba2\u9605 getSettings \u65b9\u6cd5\u7684\u7ed3\u679c\u65f6\uff0c\u5c06\u8fdb\u884c HTTP GET \u8c03\u7528\uff1b\u5982\u679c\u5931\u8d25\uff0c\u5b83\u5c06\u5728\u653e\u5f03\u5e76\u8fd4\u56de\u9519\u8bef\u4e4b\u524d\u91cd\u8bd5\u6700\u591a\u4e09\u6b21\u3002"
+        ],
+        "options": [
+          "RxJs pipe \u65b9\u6cd5\u662f subscribe \u65b9\u6cd5\u7684\u522b\u540d\uff0c\u56e0\u6b64\u5bf9 `getSettings` \u7684\u8c03\u7528\u5c06\u6267\u884c get \u67e5\u8be2\u3002retry \u64cd\u4f5c\u7b26\u7528\u4e8e\u544a\u8bc9 pipe \u8c03\u7528\u91cd\u8bd5 get \u67e5\u8be2\u4e09\u6b21\u3002",
+          "\u5b83\u5c06\u5728\u8fd0\u884c\u65f6\u4ea7\u751f\u9519\u8bef\uff0c\u56e0\u4e3a pipe \u65b9\u6cd5\u5728 `Httpclient.get` \u8c03\u7528\u4e4b\u540e\u4e0d\u53ef\u7528\u3002",
+          "\u6bcf\u6b21\u8c03\u7528 getSettings \u65b9\u6cd5\u90fd\u5c06\u5bfc\u81f4 Httpclient \u5411 settingsUrl \u53d1\u51fa\u603b\u5171\u4e09\u6b21 get \u8bf7\u6c42\uff0c\u8fd9\u5e76\u4e0d\u7406\u60f3\uff0c\u56e0\u4e3a\u603b\u4f1a\u6709\u4e24\u6b21\u989d\u5916\u7684\u4e0d\u9700\u8981\u7684\u8c03\u7528\u3002\u4e0d\u5e94\u4ee5\u8fd9\u79cd\u65b9\u5f0f\u4f7f\u7528 retry \u64cd\u4f5c\u7b26\u3002",
+          "\u5f53\u8ba2\u9605 getSettings \u65b9\u6cd5\u7684\u7ed3\u679c\u65f6\uff0c\u5c06\u8fdb\u884c HTTP GET \u8c03\u7528\uff1b\u5982\u679c\u5931\u8d25\uff0c\u5b83\u5c06\u5728\u653e\u5f03\u5e76\u8fd4\u56de\u9519\u8bef\u4e4b\u524d\u91cd\u8bd5\u6700\u591a\u4e09\u6b21\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "84014caef0a7d56a1fe8f652",
+        "question": "\u95ee\u989843. \u5f53\u670d\u52a1\u9700\u8981\u901a\u8fc7\u65b9\u6cd5\u8fdb\u884c\u4e00\u4e9b\u8bbe\u7f6e\u4ee5\u521d\u59cb\u5316\u5176\u9ed8\u8ba4\u72b6\u6001\u65f6\uff0c\u5982\u4f55\u786e\u4fdd\u5728\u670d\u52a1\u88ab\u6ce8\u5165\u5230\u4efb\u4f55\u5730\u65b9\u4e4b\u524d\u8c03\u7528\u8be5\u65b9\u6cd5\uff1f",
+        "answer": "\u5728\u6839 AppModule \u7ea7\u522b\u4f7f\u7528\u4f9d\u8d56\u4e8e\u670d\u52a1\u7684\u5de5\u5382\u63d0\u4f9b\u8005\u6765\u8c03\u7528\u8be5\u670d\u52a1\u65b9\u6cd5\u3002",
+        "explanation": "1. [Angular.io](https://angular.io/guide/dependency-injection-providers)\n2. [Stackoverflow](https://stackoverflow.com/questions/39803876/how-to-use-factory-provider)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5728\u6839 AppModule \u7ea7\u522b\u4f7f\u7528\u4f9d\u8d56\u4e8e\u670d\u52a1\u7684\u5de5\u5382\u63d0\u4f9b\u8005\u6765\u8c03\u7528\u8be5\u670d\u52a1\u65b9\u6cd5\u3002"
+        ],
+        "options": [
+          "\u5c06\u8be5\u670d\u52a1\u65b9\u6cd5\u7684\u903b\u8f91\u653e\u5165\u670d\u52a1\u6784\u9020\u51fd\u6570\u4e2d\u3002",
+          "\u5728\u6839 AppModule \u7ea7\u522b\u4f7f\u7528\u4f9d\u8d56\u4e8e\u670d\u52a1\u7684\u5de5\u5382\u63d0\u4f9b\u8005\u6765\u8c03\u7528\u8be5\u670d\u52a1\u65b9\u6cd5\u3002",
+          "\u65e0\u6cd5\u5728\u5e94\u7528\u7a0b\u5e8f\u542f\u52a8\u65f6\u6267\u884c\u6b64\u64cd\u4f5c\uff1b\u60a8\u53ea\u80fd\u5728\u7ec4\u4ef6\u7ea7\u522b\u6267\u884c\u6b64\u64cd\u4f5c\u3002",
+          "\u5728\u5168\u5c40\u7ea7\u522b\uff08window \u8303\u56f4\uff09\u5b9e\u4f8b\u5316\u670d\u52a1\u5b9e\u4f8b\uff0c\u7136\u540e\u8c03\u7528\u8be5\u65b9\u6cd5\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a8f125125df226597229cd28",
+        "question": "\u95ee\u989844. \u54ea\u4e2a\u8bed\u53e5\u6700\u80fd\u63cf\u8ff0 TestBed \u7684\u8fd9\u79cd\u7528\u6cd5\uff1f\n```ts\nconst spy = jasmine.createSpyObj('DataService', ['getUsersFromApi']);\nTestBed.configureTestingModule({\n  providers: [UserService, { provide: DataService, useValue: spy }],\n});\nconst userService = TestBed.get(UserService);\n```",
+        "answer": "TestBed \u4f7f\u7528\u4e24\u4e2a\u63d0\u4f9b\u8005\u642d\u5efa NgModule \u5e76\u5904\u7406\u4efb\u4f55\u4f9d\u8d56\u6ce8\u5165\u3002\u5982\u679c\u4efb\u4f55 Angular \u7c7b\u5728\u5176\u6784\u9020\u51fd\u6570\u4e2d\u8bf7\u6c42 DataService\uff0cTestBed \u5c06\u5728\u8be5\u6784\u9020\u51fd\u6570\u4e2d\u6ce8\u5165 spy\u3002",
+        "explanation": "`\u6240\u6709\u5176\u4ed6\u6d4b\u8bd5\u90fd\u5c06\u88ab\u5ffd\u7565\uff0c\u5305\u62ec\u9488\u5bf9\u8fd9\u4e9b\u63d0\u4f9b\u8005\u4e4b\u4e00\u548c\u672a\u5b9a\u4e49\u63d0\u4f9b\u8005\u8fdb\u884c\u65ad\u8a00\u7684\u6d4b\u8bd5\u3002`\n`\u5c3d\u7ba1\u5728\u5355\u4e2a\u6d4b\u8bd5\u4e2d\u9488\u5bf9\u6b64\u914d\u7f6e\u4e2d\u7684\u591a\u4e2a\u63d0\u4f9b\u8005\u8fdb\u884c\u65ad\u8a00\u65f6\u5b83\u4f1a\u8d77\u4f5c\u7528\u3002`",
+        "hint": null,
+        "correctAnswer": [
+          "TestBed \u4f7f\u7528\u4e24\u4e2a\u63d0\u4f9b\u8005\u642d\u5efa NgModule \u5e76\u5904\u7406\u4efb\u4f55\u4f9d\u8d56\u6ce8\u5165\u3002\u5982\u679c\u4efb\u4f55 Angular \u7c7b\u5728\u5176\u6784\u9020\u51fd\u6570\u4e2d\u8bf7\u6c42 DataService\uff0cTestBed \u5c06\u5728\u8be5\u6784\u9020\u51fd\u6570\u4e2d\u6ce8\u5165 spy\u3002"
+        ],
+        "options": [
+          "\u6bcf\u5f53\u60a8\u60f3\u5728 Angular \u63d0\u4f9b\u8005\u7684\u5355\u5143\u6d4b\u8bd5\u4e2d\u4f7f\u7528 spy \u5bf9\u8c61\u65f6\uff0c\u90fd\u9700\u8981 TestBed\u3002",
+          "TestBed \u6b63\u5728\u7528\u4e8e\u6d4b\u8bd5\u7ec4\u4ef6\u7684\u89c6\u56fe\u3002",
+          "TestBed \u4f7f\u7528\u4e24\u4e2a\u63d0\u4f9b\u8005\u642d\u5efa NgModule \u5e76\u5904\u7406\u4efb\u4f55\u4f9d\u8d56\u6ce8\u5165\u3002\u5982\u679c\u4efb\u4f55 Angular \u7c7b\u5728\u5176\u6784\u9020\u51fd\u6570\u4e2d\u8bf7\u6c42 DataService\uff0cTestBed \u5c06\u5728\u8be5\u6784\u9020\u51fd\u6570\u4e2d\u6ce8\u5165 spy\u3002",
+          "TestBed \u6b63\u5728\u914d\u7f6e\u6d4b\u8bd5\u8fd0\u884c\u5668\uff0c\u4ee5\u544a\u8bc9\u5b83\u4ec5\u6267\u884c\u5176 providers \u6570\u7ec4\u4e2d\u5217\u51fa\u7684\u4e24\u4e2a\u63d0\u4f9b\u8005\u7684\u6d4b\u8bd5\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "596569e2669e6e9504771faa",
+        "question": "\u95ee\u989845. \u7ec4\u4ef6\u548c\u6307\u4ee4\u4e4b\u95f4\u7684\u4e3b\u8981\u533a\u522b\u662f\u4ec0\u4e48\uff1f",
+        "answer": "\u7ec4\u4ef6\u6709\u6a21\u677f\uff0c\u800c\u6307\u4ee4\u6ca1\u6709\u3002",
+        "explanation": "[StackOverflow](https://stackoverflow.com/a/34616190)",
+        "hint": null,
+        "correctAnswer": [
+          "\u7ec4\u4ef6\u6709\u6a21\u677f\uff0c\u800c\u6307\u4ee4\u6ca1\u6709\u3002"
+        ],
+        "options": [
+          "\u7ec4\u4ef6\u4f7f\u7528\u9009\u62e9\u5668\u5143\u6570\u636e\u5c5e\u6027\uff0c\u800c\u6307\u4ee4\u4e0d\u4f7f\u7528\u3002",
+          "\u6307\u4ee4\u53ef\u7528\u4e8e\u5411 DOM \u6dfb\u52a0\u81ea\u5b9a\u4e49\u4e8b\u4ef6\uff0c\u800c\u7ec4\u4ef6\u4e0d\u80fd\u3002",
+          "\u7ec4\u4ef6\u6709\u6a21\u677f\uff0c\u800c\u6307\u4ee4\u6ca1\u6709\u3002",
+          "\u6307\u4ee4\u53ea\u80fd\u9488\u5bf9\u539f\u751f DOM \u5143\u7d20\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8dfd51c7777c273f9cca838e",
+        "question": "\u95ee\u989846. \u60a8\u53ef\u4ee5\u5411\u6b64\u6307\u4ee4\u7c7b\u6dfb\u52a0\u4ec0\u4e48\u4ee5\u5141\u8bb8\u5728\u6807\u8bb0\u4e2d\u4f7f\u7528\u6307\u4ee4\u65f6\u8bbe\u7f6e\u622a\u65ad\u957f\u5ea6\uff1f\n```ts\n@Directive({\n    selector: '[appTruncate]'\n})\nexport class TruncateDirective {\n    . . .\n}\n// \u671f\u671b\u7528\u6cd5\u793a\u4f8b\uff1a\n<p [appTruncate]=\"10\">Some very long text here</p>\n```",
+        "answer": "`@Input() appTruncate: number;`",
+        "explanation": "1. [Angular.io](https://angular.io/guide/attribute-directives#passing-values-into-an-attribute-directive)\n2. [StackOverflow](https://stackoverflow.com/a/46303049)",
+        "hint": null,
+        "correctAnswer": [
+          "`@Input() appTruncate: number;`"
+        ],
+        "options": [
+          "`@Input() appTruncate: number;`",
+          "`@Output() appTruncate;`",
+          "`constructor(maxLength: number) { }`",
+          "`\u65e0\u3002\u6307\u4ee4\u9009\u62e9\u5668\u4e0d\u80fd\u7528\u4e8e\u5c06\u503c\u4f20\u9012\u7ed9\u6307\u4ee4\u3002`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bcfa3b545a6a0466d1ffbb40",
+        "question": "\u95ee\u989847. \u5982\u4f55\u5c06\u67e5\u8be2\u53c2\u6570\u4f20\u9012\u7ed9\u6b64 `HttpClient.get` \u8bf7\u6c42\uff1f\n```ts\nexport class OrderService {\n  constructor(private httpClient: HttpClient) {}\n  getOrdersByYear(year: number): Observable<Order[]> {\n    return this.httpClient.get<Order[]>(this.ordersUrl);\n  }\n}\n```",
+        "answer": "C",
+        "explanation": "```ts\nconst options = { params: new HttpParams().set('year', year) };\nreturn this.httpClient.get<Order[]>(this.ordersUrl, options);\n```\n```ts\ngetOrdersByYear(year: number): Observable<Order[]> {\nreturn this.httpClient.addParam('year', year).get<Order[]>(this.ordersUrl, year);\n}\n```\n1. [StackOverflow](https://stackoverflow.com/a/34475594)\n2. [TektutorialHub](https://www.tektutorialshub.com/angular/angular-pass-url-parameters-query-strings/#httpparams)",
+        "hint": null,
+        "correctAnswer": [
+          "C"
+        ],
+        "options": [
+          "A `return this.httpClient.get<Order[]>(this.ordersUrl, {'year': year})`",
+          "B `return this.httpClient.get<Order[]>(this.ordersUrl, year)`",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5226824318232f77f334d36c",
+        "question": "\u95ee\u989848. \u5047\u8bbe `DataService` \u5df2\u5728\u5e94\u7528\u7a0b\u5e8f\u7684\u63d0\u4f9b\u8005\u4e2d\u6ce8\u518c\uff0c\u57fa\u4e8e\u6b64\u7ec4\u4ef6\u7684\u6784\u9020\u51fd\u6570\uff0c\u54ea\u4e2a\u7b54\u6848\u6700\u80fd\u63cf\u8ff0\u4f1a\u53d1\u751f\u4ec0\u4e48\uff1f\n```ts\n@Component({\n    ...\n})\nexport class OrderHistoryComponent {\n    constructor(private dataService: DataService) {}\n    ...\n}\n```",
+        "answer": "\u5f53 Angular \u521b\u5efa `OrderHistoryComponent` \u7684\u65b0\u5b9e\u4f8b\u65f6\uff0c\u6ce8\u5165\u5668\u5c06\u5411\u7ec4\u4ef6\u6784\u9020\u51fd\u6570\u7684\u7b2c\u4e00\u4e2a\u53c2\u6570\u63d0\u4f9b `DataService` \u7c7b\u7684\u5b9e\u4f8b\u3002\u6784\u9020\u51fd\u6570\u7684 `dataService` \u53c2\u6570\u5c06\u7528\u4e8e\u5728\u5b9e\u4f8b\u4e0a\u8bbe\u7f6e\u540c\u540d\u7684\u79c1\u6709\u5b9e\u4f8b\u5b57\u6bb5\u3002",
+        "explanation": "1. [StackOverflow](https://stackoverflow.com/a/49755822)\n2. [Angular.io - Dependency Injection](https://angular.io/guide/dependency-injection)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5f53 Angular \u521b\u5efa `OrderHistoryComponent` \u7684\u65b0\u5b9e\u4f8b\u65f6\uff0c\u6ce8\u5165\u5668\u5c06\u5411\u7ec4\u4ef6\u6784\u9020\u51fd\u6570\u7684\u7b2c\u4e00\u4e2a\u53c2\u6570\u63d0\u4f9b `DataService` \u7c7b\u7684\u5b9e\u4f8b\u3002\u6784\u9020\u51fd\u6570\u7684 `dataService` \u53c2\u6570\u5c06\u7528\u4e8e\u5728\u5b9e\u4f8b\u4e0a\u8bbe\u7f6e\u540c\u540d\u7684\u79c1\u6709\u5b9e\u4f8b\u5b57\u6bb5\u3002"
+        ],
+        "options": [
+          "\u5b83\u58f0\u660e `OrderHistoryComponent` \u5c06\u62e5\u6709\u81ea\u5df1\u7684 `DataService` \u7248\u672c\uff0c\u5e76\u4e14\u6c38\u8fdc\u4e0d\u5e94\u4f7f\u7528\u4efb\u4f55\u73b0\u6709\u5b9e\u4f8b\u3002`DataService` \u9700\u8981\u5728\u7c7b\u4e2d\u5b9e\u4f8b\u5316\u4e3a\u79c1\u6709\u5b57\u6bb5\uff0c\u6b64\u4ee3\u7801\u624d\u80fd\u5b8c\u6574\u4e14\u6b63\u5e38\u5de5\u4f5c\u3002",
+          "\u5f53 Angular \u521b\u5efa `OrderHistoryComponent` \u7684\u65b0\u5b9e\u4f8b\u65f6\uff0c\u6ce8\u5165\u5668\u5c06\u5411\u7ec4\u4ef6\u6784\u9020\u51fd\u6570\u7684\u7b2c\u4e00\u4e2a\u53c2\u6570\u63d0\u4f9b `DataService` \u7c7b\u7684\u5b9e\u4f8b\u3002\u6784\u9020\u51fd\u6570\u7684 `dataService` \u53c2\u6570\u5c06\u7528\u4e8e\u5728\u5b9e\u4f8b\u4e0a\u8bbe\u7f6e\u540c\u540d\u7684\u79c1\u6709\u5b9e\u4f8b\u5b57\u6bb5\u3002",
+          "\u5b83\u63d0\u4f9b\u4e86\u4e00\u79cd\u4ec5\u8fdb\u884c\u7ec4\u4ef6\u6d4b\u8bd5\u7684\u65b9\u6cd5\uff1b\u6784\u9020\u51fd\u6570\u5728 Angular \u5e94\u7528\u7a0b\u5e8f\u7684\u5b9e\u9645\u8fd0\u884c\u4e2d\u6ca1\u6709\u7528\u9014\u3002",
+          "\u5b83\u4f7f\u7ec4\u4ef6\u76ee\u6807\u7684\u81ea\u5b9a\u4e49\u5143\u7d20\u5177\u6709\u540d\u4e3a `dataService` \u7684\u81ea\u5b9a\u4e49\u5c5e\u6027\uff0c\u53ef\u7528\u4e8e\u7ed1\u5b9a\u73b0\u6709\u7684 `DataService` \u5b9e\u4f8b\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6ea16b575795db919b8c19da",
+        "question": "\u95ee\u989849. \u4f7f\u7528 `ngIf` \u6307\u4ee4\u5b8c\u6210\u6b64\u6807\u8bb0\u4ee5\u5b9e\u73b0 else \u60c5\u51b5\uff0c\u8be5\u60c5\u51b5\u5c06\u663e\u793a\u6587\u672c\"User is not active\"\uff1a\n```html\n<div *ngIf=\"userIsActive; else inactive\">Currently active!</div>\n```",
+        "answer": "D",
+        "explanation": "```html\n<div #inactive>User is not active.</div>\n```\n```html\n<div *ngIf=\"inactive\">User is not active.</div>\n```\n```html\n<ng-template #else=\"inactive\">\n<div>User is not active.</div>\n</ng-template>\n```\n```html\n<ng-template #inactive>\n<div>User is not active.</div>\n</ng-template>\n```\n[Angular.io](https://angular.io/api/common/NgIf)",
+        "hint": null,
+        "correctAnswer": [
+          "D"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cdf450c2e21a50ae096241ff",
+        "question": "\u95ee\u989850. \u5ef6\u8fdf\u52a0\u8f7d\u529f\u80fd\u6a21\u5757\u7684\u8def\u7531\u5b9a\u4e49\u7684\u6b63\u786e\u8bed\u6cd5\u662f\u4ec0\u4e48\uff1f",
+        "answer": "B",
+        "explanation": "```ts\n{\npath: 'users',\nlazy: './users/users.module#UsersModule'\n}\n```\n```ts\n{\npath: 'users',\nloadChildren: () => import('./users/users.module').then(m => m.UserModule)\n}\n```\n```ts\n{\npath: 'users',\nloadChildren: './users/users.module#UsersModule'\n}\n```\n```ts\n{\npath: 'users',\nmodule: UsersModule\n}\n```\n[Angular.io - Lazy Loading Modules](https://angular.io/guide/lazy-loading-ngmodules)",
+        "hint": null,
+        "correctAnswer": [
+          "B"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2de44bf9f8215bc0af5b3a68",
+        "question": "\u95ee\u989851. \u63cf\u8ff0\u6b64\u54cd\u5e94\u5f0f\u8868\u5355\u793a\u4f8b\u4e2d\u5982\u4f55\u8bbe\u7f6e\u548c\u914d\u7f6e\u9a8c\u8bc1\uff1a\n```ts\nexport class UserFormControl implements OnInit {\n    ...\n    ngOnInit() {\n        this.form = this.formBuilder.group({\n            username: this.formBuilder.control('',\n                [Validators.required, Validators.minLength(5), this.unique]),\n        )};\n    }\n    unique(control: FormControl) {\n        return control.value !== 'admin' ? null: {notUnique: true};\n    }\n}\n```",
+        "answer": "`username` \u7684 `FormControl` \u6b63\u5728\u914d\u7f6e\u4e09\u4e2a\u9a8c\u8bc1\u5668\uff1a\u6765\u81ea Angular \u7684 `required` \u548c `minLength` \u9a8c\u8bc1\u5668\uff0c\u4ee5\u53ca\u540d\u4e3a `unique` \u7684\u81ea\u5b9a\u4e49\u9a8c\u8bc1\u5668\u51fd\u6570\uff0c\u8be5\u51fd\u6570\u68c0\u67e5\u503c\u4e0d\u7b49\u4e8e\u5b57\u7b26\u4e32 `admin`\u3002",
+        "explanation": "1. [Angular.io - Form Validation](https://angular.io/guide/form-validation)\n2. [Angular University Blog](https://blog.angular-university.io/angular-custom-validators/)",
+        "hint": null,
+        "correctAnswer": [
+          "`username` \u7684 `FormControl` \u6b63\u5728\u914d\u7f6e\u4e09\u4e2a\u9a8c\u8bc1\u5668\uff1a\u6765\u81ea Angular \u7684 `required` \u548c `minLength` \u9a8c\u8bc1\u5668\uff0c\u4ee5\u53ca\u540d\u4e3a `unique` \u7684\u81ea\u5b9a\u4e49\u9a8c\u8bc1\u5668\u51fd\u6570\uff0c\u8be5\u51fd\u6570\u68c0\u67e5\u503c\u4e0d\u7b49\u4e8e\u5b57\u7b26\u4e32 `admin`\u3002"
+        ],
+        "options": [
+          "`username` \u7684 `FormControl` \u6b63\u5728\u914d\u7f6e\u4e3a\u4ece\u5141\u8bb8\u4f7f\u7528\u7684\u9a8c\u8bc1\u5668\u4e2d\u6392\u9664\u4e09\u4e2a\u9a8c\u8bc1\u5668\u3002",
+          "`username` \u7684 `FormControl` \u6b63\u5728\u914d\u7f6e\u4e3a\u5141\u8bb8\u4f7f\u7528\u4e09\u4e2a\u53ef\u80fd\u7684\u9a8c\u8bc1\u5668\uff1a`required, maxLength` \u548c\u540d\u4e3a `unique` \u7684\u81ea\u5b9a\u4e49\u9a8c\u8bc1\u5668\u3002\u8981\u542f\u7528\u8fd9\u4e9b `validators`\uff0c\u9700\u8981\u5728\u6807\u8bb0\u7684\u8868\u5355\u5b57\u6bb5\u4e0a\u653e\u7f6e\u9a8c\u8bc1\u5668\u6307\u4ee4\u3002",
+          "\u65e0\u6cd5\u4ee5\u8fd9\u79cd\u65b9\u5f0f\u5728\u54cd\u5e94\u5f0f\u8868\u5355\u4e2d\u8bbe\u7f6e\u9a8c\u8bc1\u3002",
+          "`username` \u7684 `FormControl` \u6b63\u5728\u914d\u7f6e\u4e09\u4e2a\u9a8c\u8bc1\u5668\uff1a\u6765\u81ea Angular \u7684 `required` \u548c `minLength` \u9a8c\u8bc1\u5668\uff0c\u4ee5\u53ca\u540d\u4e3a `unique` \u7684\u81ea\u5b9a\u4e49\u9a8c\u8bc1\u5668\u51fd\u6570\uff0c\u8be5\u51fd\u6570\u68c0\u67e5\u503c\u4e0d\u7b49\u4e8e\u5b57\u7b26\u4e32 `admin`\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5d918d01ac2f8e0ca04cd126",
+        "question": "\u95ee\u989852. Injectable \u88c5\u9970\u5668\u5728\u6b64\u670d\u52a1\u7c7b\u4e0a\u505a\u4ec0\u4e48\uff1f\n```ts\n@Injectable({\n    providedIn: 'root'\n)}\nexport class DataService { }\n```",
+        "answer": "\u5b83\u5728\u6839\u5e94\u7528\u7a0b\u5e8f\u6ce8\u5165\u5668\u4e2d\u4e3a\u670d\u52a1\u6ce8\u518c\u4e00\u4e2a\u63d0\u4f9b\u8005\uff0c\u4f7f\u5176\u5355\u4e2a\u5b9e\u4f8b\u5728\u6574\u4e2a\u5e94\u7528\u7a0b\u5e8f\u4e2d\u53ef\u7528\u3002",
+        "explanation": "[Angular.io](https://angular.io/guide/providers#providing-a-service)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u5728\u6839\u5e94\u7528\u7a0b\u5e8f\u6ce8\u5165\u5668\u4e2d\u4e3a\u670d\u52a1\u6ce8\u518c\u4e00\u4e2a\u63d0\u4f9b\u8005\uff0c\u4f7f\u5176\u5355\u4e2a\u5b9e\u4f8b\u5728\u6574\u4e2a\u5e94\u7528\u7a0b\u5e8f\u4e2d\u53ef\u7528\u3002"
+        ],
+        "options": [
+          "\u5b83\u4e3a\u670d\u52a1\u6ce8\u518c\u4e00\u4e2a\u63d0\u4f9b\u8005\uff0c\u8be5\u63d0\u4f9b\u8005\u4ec5\u5728\u6839\u6a21\u5757\u7ea7\u522b\u53ef\u7528\uff0c\u800c\u4e0d\u9002\u7528\u4e8e\u4efb\u4f55\u5b50\u6a21\u5757\u3002",
+          "\u5b83\u5728\u6839\u5e94\u7528\u7a0b\u5e8f\u6ce8\u5165\u5668\u4e2d\u4e3a\u670d\u52a1\u6ce8\u518c\u4e00\u4e2a\u63d0\u4f9b\u8005\uff0c\u4f7f\u5176\u5355\u4e2a\u5b9e\u4f8b\u5728\u6574\u4e2a\u5e94\u7528\u7a0b\u5e8f\u4e2d\u53ef\u7528\u3002",
+          "\u5b83\u4f7f\u670d\u52a1\u53ea\u80fd\u5728\u5e94\u7528\u7a0b\u5e8f\u7684\u5f15\u5bfc\u7ec4\u4ef6\u4e2d\u6ce8\u5165\u3002",
+          "\u5b83\u8bbe\u7f6e\u4e86\u4e00\u4e2a\u7f16\u8bd1\u65f6\u89c4\u5219\uff0c\u5141\u8bb8\u60a8\u4ec5\u5c06\u670d\u52a1\u7c7b\u578b\u653e\u5728\u6839 NgModule \u7684 providers \u5143\u6570\u636e\u5c5e\u6027\u4e2d\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e1ebf119a0486878dc5f81c2",
+        "question": "\u95ee\u989853. \u63cf\u8ff0\u6b64\u4ee3\u7801\u7684\u7528\u6cd5\n```ts\nexport interface AppSettings {\n  title: string;\n  version: number;\n}\nexport const APP_SETTINGS = new InjectionToken<AppSettings>('app.settings');\n```",
+        "answer": "InjectionToken \u7528\u4e8e\u4e3a\u975e\u7c7b\u4f9d\u8d56\u9879\u521b\u5efa\u63d0\u4f9b\u8005\u4ee4\u724c\u3002\u5bf9\u8c61\u5b57\u9762\u91cf\u53ef\u4ee5\u4f5c\u4e3a APP_SETTINGS \u4f9d\u8d56\u63d0\u4f9b\u8005\u7c7b\u578b\u7684\u503c\u63d0\u4f9b\uff0c\u7136\u540e\u53ef\u4ee5\u6ce8\u5165\u5230\u7ec4\u4ef6\u3001\u670d\u52a1\u7b49\u4e2d\u3002",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "InjectionToken \u7528\u4e8e\u4e3a\u975e\u7c7b\u4f9d\u8d56\u9879\u521b\u5efa\u63d0\u4f9b\u8005\u4ee4\u724c\u3002\u5bf9\u8c61\u5b57\u9762\u91cf\u53ef\u4ee5\u4f5c\u4e3a APP_SETTINGS \u4f9d\u8d56\u63d0\u4f9b\u8005\u7c7b\u578b\u7684\u503c\u63d0\u4f9b\uff0c\u7136\u540e\u53ef\u4ee5\u6ce8\u5165\u5230\u7ec4\u4ef6\u3001\u670d\u52a1\u7b49\u4e2d\u3002"
+        ],
+        "options": [
+          "InjectionToken \u901a\u8fc7 InjectionToken \u6784\u9020\u51fd\u6570\u8c03\u7528\u5c06 AppSettings \u7684\u5b9e\u4f8b\u6dfb\u52a0\u5230\u6839\u63d0\u4f9b\u8005\uff0c\u4f7f\u5176\u5728\u6574\u4e2a Angular \u5e94\u7528\u7a0b\u5e8f\u4e2d\u81ea\u52a8\u53ef\u7528\u4e8e\u6240\u6709 NgModules\u3001\u670d\u52a1\u548c\u7ec4\u4ef6\uff0c\u800c\u65e0\u9700\u5728\u4efb\u4f55\u5730\u65b9\u6ce8\u5165\u5b83\u3002",
+          "InjectionToken \u7528\u4e8e\u4e3a\u975e\u7c7b\u4f9d\u8d56\u9879\u521b\u5efa\u63d0\u4f9b\u8005\u4ee4\u724c\u3002\u5bf9\u8c61\u5b57\u9762\u91cf\u53ef\u4ee5\u4f5c\u4e3a APP_SETTINGS \u4f9d\u8d56\u63d0\u4f9b\u8005\u7c7b\u578b\u7684\u503c\u63d0\u4f9b\uff0c\u7136\u540e\u53ef\u4ee5\u6ce8\u5165\u5230\u7ec4\u4ef6\u3001\u670d\u52a1\u7b49\u4e2d\u3002",
+          "InjectionToken \u7528\u4e8e\u4e3a AppSettings \u521b\u5efa\u52a8\u6001\u88c5\u9970\u5668\uff0c\u53ef\u4ee5\u901a\u8fc7 @AppSettings \u88c5\u9970\u5668\u5728\u6784\u9020\u51fd\u6570\u53c2\u6570\u4e0a\u4f7f\u7528\u3002",
+          "\u6b64\u4ee3\u7801\u6709\u9519\u8bef\uff0c\u56e0\u4e3a\u60a8\u4e0d\u80fd\u5728 InjectionToken \u4e0a\u4f7f\u7528 TypeScript \u63a5\u53e3\u4f5c\u4e3a\u6cdb\u578b\u7c7b\u578b"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2e15614e1f1b1d0f448681e0",
+        "question": "\u95ee\u989854. \u5bf9\u4e8e\u4ee5\u4e0b\u6a21\u677f\u9a71\u52a8\u8868\u5355\u793a\u4f8b\uff0c\u53ef\u4ee5\u5c06\u4ec0\u4e48\u53c2\u6570\u4f20\u9012\u7ed9\u70b9\u51fb\u4e8b\u4ef6\u4e2d\u7684 submit \u65b9\u6cd5\u4ee5\u63d0\u4ea4\u8868\u5355\u6570\u636e\uff1f\n```html\n<form #form=\"ngForm\">\n  <input type=\"text\" ngModel=\"firstName\" /> <input type=\"text\" ngModel=\"lastName\" />\n  <button (click)=\"submit()\">Save</button>\n</form>\n```",
+        "answer": "submit(form.value)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "submit(form.value)"
+        ],
+        "options": [
+          "submit(form.value)",
+          "submit($event)",
+          "submit(ngForm.value)",
+          "submit(FirstName, lastName)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1d9a7393fe8976a6783607e1",
+        "question": "\u95ee\u989855. \u6b64\u8def\u7531\u5668\u4ee3\u7801\u4e2d `prelodingStrategy` \u5c5e\u6027\u914d\u7f6e\u7684\u76ee\u7684\u662f\u4ec0\u4e48\uff1f\n```ts\nRouterModule.forRoot(\n  ...{\n    preloadingStrategy: PreloadAllModules,\n  },\n);\n```",
+        "answer": "\u5b83\u914d\u7f6e\u8def\u7531\u5668\u7acb\u5373\u52a0\u8f7d\u5177\u6709 loadChildren \u5c5e\u6027\u7684\u6240\u6709\u8def\u7531\uff08\u901a\u5e38\u5728\u8bf7\u6c42\u65f6\u52a0\u8f7d\u7684\u8def\u7531\uff09",
+        "explanation": "\u53c2\u8003\uff1a\n- [Angular Router, PreloadAllModules](https://angular.io/api/router/PreloadAllModules)\n- [Route preloading in Angular](https://web.dev/route-preloading-in-angular/)\n- [Preloading strategy](https://www.tektutorialshub.com/angular/angular-preloading-strategy/)\n- [Custom preloading strategy](https://www.concretepage.com/angular-2/angular-custom-preloading-strategy#Preloading)\n- [Preloading strategy, save loading time](https://medium.com/geekculture/preloading-strategy-in-angularsave-loading-time-ca791074fe28)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u914d\u7f6e\u8def\u7531\u5668\u7acb\u5373\u52a0\u8f7d\u5177\u6709 loadChildren \u5c5e\u6027\u7684\u6240\u6709\u8def\u7531\uff08\u901a\u5e38\u5728\u8bf7\u6c42\u65f6\u52a0\u8f7d\u7684\u8def\u7531\uff09"
+        ],
+        "options": [
+          "\u5b83\u542f\u7528\u4e86\u6807\u8bb0\u5355\u4e2a\u8def\u7531\u8fdb\u884c\u9884\u52a0\u8f7d\u7684\u9009\u9879\u3002",
+          "\u5b83\u9884\u52a0\u8f7d\u8def\u7531\u7684\u6240\u6709\u4f9d\u8d56\u9879\uff0c\u5728\u5e94\u7528\u7a0b\u5e8f\u9996\u6b21\u542f\u52a8\u65f6\u521b\u5efa\u670d\u52a1\u5b9e\u4f8b",
+          "\u5b83\u786e\u4fdd\u6240\u6709\u6a21\u5757\u90fd\u6784\u5efa\u5230\u5355\u4e2a\u5e94\u7528\u7a0b\u5e8f\u6a21\u5757\u5305\u6587\u4ef6\u4e2d\u3002",
+          "\u5b83\u914d\u7f6e\u8def\u7531\u5668\u7acb\u5373\u52a0\u8f7d\u5177\u6709 loadChildren \u5c5e\u6027\u7684\u6240\u6709\u8def\u7531\uff08\u901a\u5e38\u5728\u8bf7\u6c42\u65f6\u52a0\u8f7d\u7684\u8def\u7531\uff09"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9f0870ffabd6a344542aaf20",
+        "question": "\u95ee\u989856. \u7f16\u5199\u6b64\u6807\u8bb0\u4ee5\u5c06\u7c7b\u5b57\u6bb5 `userName` \u7684\u503c\u7ed1\u5b9a\u5230 `h1` \u5143\u7d20 title \u5c5e\u6027\u7684\u66ff\u4ee3\u65b9\u6cd5\u662f\u4ec0\u4e48\uff1f\n```html\n<h1 [title]=\"userName\">Current user is {{ userName }}</h1>\n```",
+        "answer": "`title=\"{{ userName }}\"`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`title=\"{{ userName }}\"`"
+        ],
+        "options": [
+          "`title=\"userName\"`",
+          "`title=\"{{ userName }}\"`",
+          "`title=\"{{ 'userName' }}\"`",
+          "\u552f\u4e00\u7684\u65b9\u6cd5\u662f\u4f7f\u7528\u65b9\u62ec\u53f7\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ed1b0e170cfac0013e18c3e5",
+        "question": "\u95ee\u989857. \u5728\u6b64\u793a\u4f8b\u4e2d\uff0c`async` \u7ba1\u9053\u5728\u505a\u4ec0\u4e48\uff1f\n```ts\n@Component({\n  selector: 'app-users',\n  template: '<div *ngFor=\"let user of users | async\">{{ user.name }}</div>',\n})\nexport class UsersComponent implements OnInit {\n  users;\n  constructor(private httpClient: HttpClient) {}\n  ngOnInit(): void {\n    this.users = this.httpClient.get<{ name: string }>('users');\n  }\n}\n```",
+        "answer": "\u5b83\u8ba2\u9605\u4ece `HttpClient.get` \u65b9\u6cd5\u8fd4\u56de\u7684 observable\uff0c\u5e76\u89e3\u5305\u8fd4\u56de\u7684\u503c\uff0c\u4ee5\u4fbf\u53ef\u4ee5\u5728 `ngFor` \u4e2d\u8fdb\u884c\u8fed\u4ee3\u3002",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u8ba2\u9605\u4ece `HttpClient.get` \u65b9\u6cd5\u8fd4\u56de\u7684 observable\uff0c\u5e76\u89e3\u5305\u8fd4\u56de\u7684\u503c\uff0c\u4ee5\u4fbf\u53ef\u4ee5\u5728 `ngFor` \u4e2d\u8fdb\u884c\u8fed\u4ee3\u3002"
+        ],
+        "options": [
+          "\u5b83\u4ec0\u4e48\u90fd\u4e0d\u505a\uff0c\u56e0\u4e3a async \u7ba1\u9053\u4e0d\u80fd\u5728 `ngFor` \u8bed\u53e5\u4e2d\u4f7f\u7528\u3002",
+          "\u5b83\u914d\u7f6e `ngFor` \u8fed\u4ee3\u4ee5\u540c\u65f6\u652f\u6301\u591a\u4e2a\u7528\u6237\u5217\u8868\u3002",
+          "\u5b83\u8ba2\u9605\u4ece `HttpClient.get` \u65b9\u6cd5\u8fd4\u56de\u7684 observable\uff0c\u5e76\u89e3\u5305\u8fd4\u56de\u7684\u503c\uff0c\u4ee5\u4fbf\u53ef\u4ee5\u5728 `ngFor` \u4e2d\u8fdb\u884c\u8fed\u4ee3\u3002",
+          "\u5b83\u5141\u8bb8 `users` \u5b57\u6bb5\u4e2d\u7684\u6240\u6709\u7528\u6237\u540c\u65f6\u6e32\u67d3\u5230 DOM\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3ca7cb57287bd937af3b5621",
+        "question": "\u95ee\u989858. \u57fa\u4e8e\u5176\u9009\u62e9\u5668\u503c\uff0c\u60a8\u5c06\u5982\u4f55\u5728\u6807\u8bb0\u4e2d\u4f7f\u7528\u6b64\u6307\u4ee4\n```ts\n@Directive({  selector: '[appTruncate]'\n})\nexport class TruncateDirective{  . . .\n}\n```",
+        "answer": "`html <p appTruncate>Some long text</p> `",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`html <p appTruncate>Some long text</p> `"
+        ],
+        "options": [
+          "`html <p data-directive=\"appTruncate\">Some long text </p> `",
+          "`html <p appTruncate>Some long text</p> `",
+          "`html <p app-truncate>Some long text</p> `",
+          "`html <app-truncate>Some long text</app-truncate> `"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "148214bee2010fba6ce733bd",
+        "question": "\u95ee\u989859. \u53ef\u4ee5\u5728\u7ec4\u4ef6\u4e0a\u4f7f\u7528\u4ec0\u4e48\u751f\u547d\u5468\u671f\u94a9\u5b50\u6765\u76d1\u89c6\u8be5\u7ec4\u4ef6\u4e0a\u6240\u6709 @Input \u503c\u7684\u6240\u6709\u66f4\u6539\uff1f",
+        "answer": "ngOnChanges",
+        "explanation": "[How to detect when an @Input() value changes in Angular?](https://stackoverflow.com/a/44686085/1573267)",
+        "hint": null,
+        "correctAnswer": [
+          "ngOnChanges"
+        ],
+        "options": [
+          "ngOnInit",
+          "ngChanges",
+          "ngAfterInputChange",
+          "ngOnChanges"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4855b784238062e62c4bcad4",
+        "question": "\u95ee\u989860. \u6b64\u81ea\u5b9a\u4e49\u7ba1\u9053\u7684\u6a21\u677f\u8bed\u6cd5\u7528\u6cd5\u793a\u4f8b\u662f\u4ec0\u4e48\uff1f\n```ts\n@Pipe({ name: 'truncate' })\nexport class TruncatePipe implements PipeTransform {\n  transform(value: string, maxLength: number, showEllipsis: boolean) {\n    const newValue = maxLength ? value.substr(0, maxLength) : value;\n    return showEllipsis ? '${newValue}...' : newValue;\n  }\n}\n```",
+        "answer": "`{{ 'some long text' | truncate: 10, true }}`",
+        "explanation": "[How do I call an Angular 2 pipe with multiple arguments?] (https://stackoverflow.com/questions/36816788/how-do-i-call-an-angular-2-pipe-with-multiple-arguments)",
+        "hint": null,
+        "correctAnswer": [
+          "`{{ 'some long text' | truncate: 10, true }}`"
+        ],
+        "options": [
+          "`{{ 'some long text' | truncate:10 }}`",
+          "`{{ 'some long text' | truncate: 10, true }}`",
+          "`{{ 'some long text' | truncate }}`",
+          "\u6240\u6709\u8fd9\u4e9b\u7b54\u6848"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a0477e0e4a15b27521b5619a",
+        "question": "\u95ee\u989861. \u60a8\u5c06\u8fd0\u884c\u54ea\u4e2a Angular CLI \u547d\u4ee4\u6765\u751f\u6210 UsersComponent \u5e76\u5c06\u5176\u6dfb\u52a0\u5230 SharedModule\uff08\u5728\u5e94\u7528\u7a0b\u5e8f\u7684 shared.module.ts \u6587\u4ef6\u4e2d\uff09\uff1f",
+        "answer": "ng generate component users --module=shared",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "ng generate component users --module=shared"
+        ],
+        "options": [
+          "ng generate component --newModule=shared",
+          "ng generate component users --module=shared",
+          "ng generate component users --shared",
+          "ng generate component --add=shared"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "999cfc818160dd35332c60ef",
+        "question": "\u95ee\u989862. \u5982\u4f55\u91cd\u5199\u6b64\u6807\u8bb0\uff0c\u4ee5\u4fbf\u5728\u6700\u7ec8 DOM \u6e32\u67d3\u4e2d\u4e0d\u9700\u8981 div \u5bb9\u5668\n```html\n<div *ngIf=\"location\">\n  <h1>{{ location.name }}</h1>\n  <p>{{ location.description }}</p>\n</div>\n```",
+        "answer": "D",
+        "explanation": "```html\n<div *ngIf=\"location\">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n{{ endNgIf }}\n</div>\n```\n```html\n<ng-template *ngIf=\"location\">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n</ng-template>\n```\n```html\n<div *ngIf=\"location\" [display]=\" ' hidden' \">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n</div>\n```\n```html\n<ng-container *ngIf=\"location\">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n</ng-container>\n```",
+        "hint": null,
+        "correctAnswer": [
+          "D"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0a344c81ea282203fe0efa68",
+        "question": "\u95ee\u989863. \u5982\u4f55\u4f7f\u7528\u6a21\u677f\u8bed\u6cd5\u5c06\u540d\u4e3a tabWidth \u7684\u7ec4\u4ef6\u7c7b\u5b57\u6bb5\u7ed1\u5b9a\u5230\u6b64\u5143\u7d20\u4e0a\u7684\u5185\u8054\u6837\u5f0f width CSS \u5c5e\u6027\uff1f\n<div class=\"tab\"></div>",
+        "answer": "[style.width.px]=\"tabWidth\"",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "[style.width.px]=\"tabWidth\""
+        ],
+        "options": [
+          "<code>{{ width: tabWidth }}</code>",
+          "[width]=\"tabWidth\"",
+          "[inline.width]=\"tabWidth\"",
+          "[style.width.px]=\"tabWidth\""
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9338e1d3b625671491956c15",
+        "question": "\u95ee\u989864. \u5bf9\u6ca1\u6709\u6784\u9020\u51fd\u6570\u4f9d\u8d56\u9879\u7684\u670d\u52a1\u8fdb\u884c\u5355\u5143\u6d4b\u8bd5\u9700\u8981\u54ea\u4e9b Angular \u5b9e\u7528\u7a0b\u5e8f\uff08\u5982\u679c\u6709\uff09\uff1f",
+        "answer": "\u9700\u8981 TestBed \u7c7b\u6765\u5b9e\u4f8b\u5316\u670d\u52a1\u3002",
+        "explanation": "[Angular unit tests](https://angular.io/guide/testing-services) - \u91cd\u65b0\u68c0\u67e5\u7b54\u6848",
+        "hint": null,
+        "correctAnswer": [
+          "\u9700\u8981 TestBed \u7c7b\u6765\u5b9e\u4f8b\u5316\u670d\u52a1\u3002"
+        ],
+        "options": [
+          "\u9700\u8981 By.css() \u8f85\u52a9\u65b9\u6cd5",
+          "\u9700\u8981\u6587\u672c fixture \u624d\u80fd\u4e3a\u5355\u5143\u6d4b\u8bd5\u8fd0\u884c\u670d\u52a1\u3002",
+          "\u65e0\u3002\u53ef\u4ee5\u81ea\u884c\u5b9e\u4f8b\u5316\u670d\u52a1\u5e76\u8fdb\u884c\u5355\u5143\u6d4b\u8bd5\u3002",
+          "\u9700\u8981 TestBed \u7c7b\u6765\u5b9e\u4f8b\u5316\u670d\u52a1\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "594e14a37573e8c8556f3fa9",
+        "question": "\u95ee\u989865. CanActivate \u548c CanLoad \u8def\u7531\u5b88\u536b\u4e4b\u95f4\u6709\u4ec0\u4e48\u533a\u522b\uff1f",
+        "answer": "CanLoad \u9632\u6b62\u6574\u4e2a NgModule \u88ab\u4ea4\u4ed8\u548c\u52a0\u8f7d\u3002CanActivate \u505c\u6b62\u8def\u7531\u5230\u8be5 NgModule \u4e2d\u7684\u7ec4\u4ef6\uff0c\u4f46\u8be5\u6a21\u5757\u4ecd\u7136\u88ab\u52a0\u8f7d\u3002",
+        "explanation": "[CanActivate vs Canload](https://stackoverflow.com/questions/42026045/difference-between-angulars-canload-and-canactivate#:~:text=canActivate%20is%20used%20to%20prevent,not%20authorized%20to%20do%20so.) CanActivate \u963b\u6b62\u8bbf\u95ee\u8def\u7531\uff0cCanLoad \u963b\u6b62\u5ef6\u8fdf\u52a0\u8f7d\u3002",
+        "hint": null,
+        "correctAnswer": [
+          "CanLoad \u9632\u6b62\u6574\u4e2a NgModule \u88ab\u4ea4\u4ed8\u548c\u52a0\u8f7d\u3002CanActivate \u505c\u6b62\u8def\u7531\u5230\u8be5 NgModule \u4e2d\u7684\u7ec4\u4ef6\uff0c\u4f46\u8be5\u6a21\u5757\u4ecd\u7136\u88ab\u52a0\u8f7d\u3002"
+        ],
+        "options": [
+          "CanActivate \u7528\u4e8e\u68c0\u67e5\u8bbf\u95ee\u6743\u9650\u3002CanLoad \u7528\u4e8e\u4e3a\u8def\u7531\u9884\u52a0\u8f7d\u6570\u636e\u3002",
+          "CanLoad \u5728\u5e94\u7528\u7a0b\u5e8f\u542f\u52a8\u65f6\u4f7f\u7528\uff0c\u4ee5\u5141\u8bb8\u6216\u62d2\u7edd\u5c06\u8def\u7531\u6dfb\u52a0\u5230\u8def\u7531\u8868\u3002CanActivate \u7528\u4e8e\u5728\u8bf7\u6c42\u8def\u7531\u65f6\u7ba1\u7406\u5bf9\u8def\u7531\u7684\u8bbf\u95ee\u3002",
+          "CanActivate \u548c CanLoad \u5b8c\u5168\u505a\u540c\u6837\u7684\u4e8b\u60c5\u3002",
+          "CanLoad \u9632\u6b62\u6574\u4e2a NgModule \u88ab\u4ea4\u4ed8\u548c\u52a0\u8f7d\u3002CanActivate \u505c\u6b62\u8def\u7531\u5230\u8be5 NgModule \u4e2d\u7684\u7ec4\u4ef6\uff0c\u4f46\u8be5\u6a21\u5757\u4ecd\u7136\u88ab\u52a0\u8f7d\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5cb477b268b34a9cca56fbab",
+        "question": "\u95ee\u989866. \u5728\u6b64\u8def\u7531\u5668\u5b9a\u4e49\u5bf9\u8c61\u4e2d\uff0coutlet \u5c5e\u6027\u7528\u4e8e\u4ec0\u4e48\uff1f\n```ts\n{  path: 'document',  component: DocumentComponent,  outlet: 'document-box'\n}\n```",
+        "answer": "\u5b83\u7528\u4e8e\u4ee5 name \u5c5e\u6027\u4e0e\u5b57\u7b26\u4e32\u503c\u5339\u914d\u7684 `<router-outlet>` \u5143\u7d20\u4e3a\u76ee\u6807\uff0c\u4f5c\u4e3a\u8def\u7531\u5230\u65f6\u6e32\u67d3 DocumentComponent \u7684\u4f4d\u7f6e\u3002",
+        "explanation": "[Angular-outlet](https://angular.io/api/router/RouterOutlet) - \u91cd\u65b0\u68c0\u67e5\u7b54\u6848",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u7528\u4e8e\u4ee5 name \u5c5e\u6027\u4e0e\u5b57\u7b26\u4e32\u503c\u5339\u914d\u7684 `<router-outlet>` \u5143\u7d20\u4e3a\u76ee\u6807\uff0c\u4f5c\u4e3a\u8def\u7531\u5230\u65f6\u6e32\u67d3 DocumentComponent \u7684\u4f4d\u7f6e\u3002"
+        ],
+        "options": [
+          "\u5b83\u5c06\u5b9a\u4f4d DOM \u4e2d\u6240\u6709 `<document-box>` \u7684\u5b9e\u4f8b\uff0c\u5e76\u5728\u8def\u7531\u5bfc\u822a\u65f6\u5c06 DocumentComponent \u5143\u7d20\u63d2\u5165\u5176\u4e2d\u3002",
+          "\u5b83\u58f0\u660e DocumentComponent \u9664\u4e86\u53ef\u4ee5\u8def\u7531\u5230\u4e4b\u5916\uff0c\u8fd8\u53ef\u4ee5\u7528\u4f5c `<document-box>` \u5143\u7d20\u7684\u5b50\u5143\u7d20\u3002",
+          "\u5b83\u7528\u4e8e\u4ee5 name \u5c5e\u6027\u4e0e\u5b57\u7b26\u4e32\u503c\u5339\u914d\u7684 `<router-outlet>` \u5143\u7d20\u4e3a\u76ee\u6807\uff0c\u4f5c\u4e3a\u8def\u7531\u5230\u65f6\u6e32\u67d3 DocumentComponent \u7684\u4f4d\u7f6e\u3002",
+          "\u5b83\u662f\u8def\u7531\u5668\u7684\u52a8\u529b\u6e90\u3002\uff08\u7edd\u5bf9\u4e0d\u662f\u7b54\u6848 :P\uff09"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9ae495fe0655199aa3a1b048",
+        "question": "\u95ee\u989867. \u5728\u6b64\u6a21\u677f\u8bed\u6cd5\u4e2d\uff0c\u6bcf\u6b21\u66f4\u6539 items \u5c5e\u6027\uff08\u6dfb\u52a0\u3001\u5220\u9664\u7b49\uff09\u65f6\uff0cngFor \u7ed3\u6784\u6307\u4ee4\u90fd\u4f1a\u4e3a\u5faa\u73af\u4e2d\u7684\u6240\u6709 DOM \u5143\u7d20\u91cd\u65b0\u8fd0\u884c\u5176\u903b\u8f91\u3002\u53ef\u4ee5\u4f7f\u7528\u4ec0\u4e48\u8bed\u6cd5\u4f7f\u5176\u66f4\u9ad8\u6548\uff1f\n```html\n<div *ngFor=\"let item of items\">{{ item.id }} - {{ item.name }}</div>\n```",
+        "answer": "`*ngFor=\"let item of items; trackBy: trackById\"`",
+        "explanation": "[StackOverflow - How to use `trackBy` with `ngFor`](https://stackoverflow.com/a/58025894)",
+        "hint": null,
+        "correctAnswer": [
+          "`*ngFor=\"let item of items; trackBy: trackById\"`"
+        ],
+        "options": [
+          "`*ngFor=\"let item of items; let uniqueItem\"`",
+          "`*ngFor=\"let item of items.distinct()\"`",
+          "`*ngFor=\"let item of items: let i = index\"`",
+          "`*ngFor=\"let item of items; trackBy: trackById\"`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4685e6d1670bcd4694abce95",
+        "question": "\u95ee\u989868. \u6b64 Angular CLI \u547d\u4ee4\u505a\u4ec0\u4e48\uff1f\n```bash\nng build --configuration=production --progress=false\n```",
+        "answer": "\u5b83\u6784\u5efa Angular \u5e94\u7528\u7a0b\u5e8f\uff0c\u5c06\u6784\u5efa\u914d\u7f6e\u8bbe\u7f6e\u4e3a angular.json \u6587\u4ef6\u4e2d\u6307\u5b9a\u7684\"production\"\u76ee\u6807\uff0c\u5e76\u963b\u6b62\u8fdb\u5ea6\u8f93\u51fa\u5230\u63a7\u5236\u53f0\u3002",
+        "explanation": "[Angular documentation - `ng build`](https://angular.io/cli/build#:~:text=%2D%2D-,progress,-Log%20progress%20to)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u6784\u5efa Angular \u5e94\u7528\u7a0b\u5e8f\uff0c\u5c06\u6784\u5efa\u914d\u7f6e\u8bbe\u7f6e\u4e3a angular.json \u6587\u4ef6\u4e2d\u6307\u5b9a\u7684\"production\"\u76ee\u6807\uff0c\u5e76\u963b\u6b62\u8fdb\u5ea6\u8f93\u51fa\u5230\u63a7\u5236\u53f0\u3002"
+        ],
+        "options": [
+          "\u5b83\u6784\u5efa Angular \u5e94\u7528\u7a0b\u5e8f\uff0c\u5c06\u6784\u5efa\u914d\u7f6e\u8bbe\u7f6e\u4e3a angular.json \u6587\u4ef6\u4e2d\u6307\u5b9a\u7684\"production\"\u76ee\u6807\uff0c\u5e76\u5c06\u8fdb\u5ea6\u8f93\u51fa\u8bb0\u5f55\u5230\u63a7\u5236\u53f0\u3002",
+          "\u5b83\u6784\u5efa Angular \u5e94\u7528\u7a0b\u5e8f\uff0c\u5c06\u6784\u5efa\u914d\u7f6e\u8bbe\u7f6e\u4e3a angular.json \u6587\u4ef6\u4e2d\u6307\u5b9a\u7684\"production\"\u76ee\u6807\uff0c\u5e76\u76d1\u89c6\u6587\u4ef6\u7684\u66f4\u6539\u3002",
+          "\u5b83\u6784\u5efa Angular \u5e94\u7528\u7a0b\u5e8f\uff0c\u5c06\u6784\u5efa\u914d\u7f6e\u8bbe\u7f6e\u4e3a angular.json \u6587\u4ef6\u4e2d\u6307\u5b9a\u7684\"production\"\u76ee\u6807\uff0c\u5e76\u7981\u7528\u76d1\u89c6\u6587\u4ef6\u7684\u66f4\u6539\u3002",
+          "\u5b83\u6784\u5efa Angular \u5e94\u7528\u7a0b\u5e8f\uff0c\u5c06\u6784\u5efa\u914d\u7f6e\u8bbe\u7f6e\u4e3a angular.json \u6587\u4ef6\u4e2d\u6307\u5b9a\u7684\"production\"\u76ee\u6807\uff0c\u5e76\u963b\u6b62\u8fdb\u5ea6\u8f93\u51fa\u5230\u63a7\u5236\u53f0\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0dfa55615f9ed39a610402b1",
+        "question": "\u95ee\u989869. \u670d\u52a1\u7c7b\u53ef\u4ee5\u901a\u8fc7\u54ea\u4e9b\u88c5\u9970\u5668\u6ce8\u518c\u4e3a\u63d0\u4f9b\u8005\uff1f",
+        "answer": "\u4ec5 @Injectable\u3002",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "\u4ec5 @Injectable\u3002"
+        ],
+        "options": [
+          "@Injectable, @NgModule, @Component \u548c @Directive\u3002",
+          "\u4ec5 @Injectable\u3002",
+          "\u4ec5 @Injectable \u548c @NgModule\u3002",
+          "\u4ec5 @Service \u548c @NgModule\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "72d376d7abf712d810aea59a",
+        "question": "\u95ee\u989870. \u5728\u6b64\u7ec4\u4ef6\u7c7b\u4e2d\uff0cInput \u88c5\u9970\u5668\u7528\u4e8e\u4ec0\u4e48\uff1f\n```ts\n@Component({  selector:'app-product-name',  ...\n})\nexport class ProductNameComponent {  @Input() productName: string\n}\n```",
+        "answer": "\u5b83\u63d0\u4f9b\u4e86\u4e00\u79cd\u901a\u8fc7\u4f7f\u7528\u7ec4\u4ef6\u9009\u62e9\u5668\u5c06\u503c\u7ed1\u5b9a\u5230 productName \u5b57\u6bb5\u7684\u65b9\u6cd5\u3002",
+        "explanation": "<input type='text' id='productName'>` Dom \u5143\u7d20\u3002\n[Angular documentation - `Input()`](https://angular.io/guide/inputs-outputs)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u63d0\u4f9b\u4e86\u4e00\u79cd\u901a\u8fc7\u4f7f\u7528\u7ec4\u4ef6\u9009\u62e9\u5668\u5c06\u503c\u7ed1\u5b9a\u5230 productName \u5b57\u6bb5\u7684\u65b9\u6cd5\u3002"
+        ],
+        "options": [
+          "\u5b83\u53ea\u662f\u7528\u4e8e\u5728\u7c7b\u5b57\u6bb5\u524d\u9762\u653e\u7f6e\u6ce8\u91ca\u4ee5\u8fdb\u884c\u6587\u6863\u8bb0\u5f55\u3002",
+          "\u5b83\u63d0\u4f9b\u4e86\u4e00\u79cd\u901a\u8fc7\u4f7f\u7528\u7ec4\u4ef6\u9009\u62e9\u5668\u5c06\u503c\u7ed1\u5b9a\u5230 productName \u5b57\u6bb5\u7684\u65b9\u6cd5\u3002",
+          "\u5b83\u5728\u7ec4\u4ef6\u6a21\u677f\u4e2d\u81ea\u52a8\u751f\u6210 `html",
+          "\u5b83\u63d0\u4f9b\u4e86\u4e00\u79cd\u5c06\u503c\u7ed1\u5b9a\u5230 productName \u5b9e\u4f8b\u5b57\u6bb5\u7684\u65b9\u6cd5\uff0c\u5c31\u50cf\u539f\u751f DOM \u5143\u7d20\u5c5e\u6027\u7ed1\u5b9a\u4e00\u6837\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "61daf14ae337a7f7fe69a850",
+        "question": "\u95ee\u989871. \u54ea\u4e2a\u8def\u7531\u5b88\u536b\u53ef\u7528\u4e8e\u8c03\u89e3\u5bfc\u822a\u5230\u8def\u7531\uff1f",
+        "answer": "\u6240\u6709\u8fd9\u4e9b\u7b54\u6848\u3002",
+        "explanation": "[Angular documentation - `Input()`](https://angular.io/guide/inputs-outputs)",
+        "hint": null,
+        "correctAnswer": [
+          "\u6240\u6709\u8fd9\u4e9b\u7b54\u6848\u3002"
+        ],
+        "options": [
+          "\u6240\u6709\u8fd9\u4e9b\u7b54\u6848\u3002",
+          "CanDeactivate\u3002",
+          "CanLoad",
+          "CanActivate\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "df110205bb9bcfd6a151c28c",
+        "question": "\u95ee\u989872. \u5982\u4f55\u914d\u7f6e\u6ce8\u5165\u5668\u4f7f\u7528\u73b0\u6709\u5bf9\u8c61\u4f5c\u4e3a\u4ee4\u724c\uff0c\u800c\u4e0d\u662f\u8ba9\u5b83\u5b9e\u4f8b\u5316\u7c7b\u5b9e\u4f8b\uff1f",
+        "answer": "\u4f7f\u7528 `useValue` \u63d0\u4f9b\u8005\u914d\u7f6e\uff0c\u5e76\u5c06\u5176\u8bbe\u7f6e\u4e3a\u73b0\u6709\u5bf9\u8c61\u6216\u5bf9\u8c61\u5b57\u9762\u91cf\u3002",
+        "explanation": "[Configuring dependency providers](https://angular.io/guide/dependency-injection-providers)",
+        "hint": null,
+        "correctAnswer": [
+          "\u4f7f\u7528 `useValue` \u63d0\u4f9b\u8005\u914d\u7f6e\uff0c\u5e76\u5c06\u5176\u8bbe\u7f6e\u4e3a\u73b0\u6709\u5bf9\u8c61\u6216\u5bf9\u8c61\u5b57\u9762\u91cf\u3002"
+        ],
+        "options": [
+          "\u4f7f\u7528 `useValue` \u63d0\u4f9b\u8005\u914d\u7f6e\uff0c\u5e76\u5c06\u5176\u8bbe\u7f6e\u4e3a\u73b0\u6709\u5bf9\u8c61\u6216\u5bf9\u8c61\u5b57\u9762\u91cf\u3002",
+          "\u4e0d\u53ef\u80fd\u3002\u63d0\u4f9b\u8005\u53ea\u80fd\u914d\u7f6e\u7c7b\u7c7b\u578b\u3002",
+          "\u53ea\u9700\u5c06\u5bf9\u8c61\u5b9e\u4f8b\u6216\u5b57\u9762\u91cf\u6dfb\u52a0\u5230\u63d0\u4f9b\u8005\u7684\u6570\u7ec4\u4e2d\u3002",
+          "\u4f7f\u7528 `asValue` \u63d0\u4f9b\u8005\u914d\u7f6e\u5c5e\u6027\uff0c\u5c06\u5176\u8bbe\u7f6e\u4e3a true\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "efaad15aefb7006792132b94",
+        "question": "\u95ee\u989873. \u57fa\u4e8e\u6b64\u8def\u7531\u5b9a\u4e49\uff0c\u53ef\u4ee5\u5c06\u4ec0\u4e48\u6ce8\u5165\u5230 UserDetailComponent \u6784\u9020\u51fd\u6570\u4e2d\u4ee5\u83b7\u53d6 id \u8def\u7531\u53c2\u6570\uff1f\n```ts\n{path: 'user/:id', component: UserDetailComponent }\n```",
+        "answer": "ActivatedRoute",
+        "explanation": "[Common Routing Tasks](https://angular.io/guide/router#observable-parammap-and-component-reuse)",
+        "hint": null,
+        "correctAnswer": [
+          "ActivatedRoute"
+        ],
+        "options": [
+          "ActivatedRoute",
+          "CurrentRoute",
+          "UrlPath",
+          "@Inject('id')"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d98504c6b080e321fe1c605f",
+        "question": "\u95ee\u989874. \u4f7f\u7528\u4ee5\u4e0b\u54cd\u5e94\u5f0f\u8868\u5355\u6807\u8bb0\uff0c\u60a8\u5c06\u6dfb\u52a0\u4ec0\u4e48\u6765\u8fde\u63a5\u5bf9 onSubmit \u7c7b\u65b9\u6cd5\u7684\u8c03\u7528\uff1f\n```html\n<form [formGroup]=\"form\">\n  <input type=\"text\" formControlName=\"username\" />\n  <button type=\"submit\" [disabled]=\"form. invalid\">Submit</button>\n</form>\n```",
+        "answer": "\u5c06 (ngSubmit )=\"onSubmit ()\" \u6dfb\u52a0\u5230 `<form>` \u5143\u7d20\u3002",
+        "explanation": "[Angular - Forms](https://angular.io/guide/forms)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5c06 (ngSubmit )=\"onSubmit ()\" \u6dfb\u52a0\u5230 `<form>` \u5143\u7d20\u3002"
+        ],
+        "options": [
+          "\u8fd9\u4e24\u4e2a\u7b54\u6848\u90fd\u4e0d\u662f",
+          "\u5c06 (click)=\"onSubmit()\" \u6dfb\u52a0\u5230 `<button>` \u5143\u7d20\u3002",
+          "\u5c06 (ngSubmit )=\"onSubmit ()\" \u6dfb\u52a0\u5230 `<form>` \u5143\u7d20\u3002",
+          "\u8fd9\u4e24\u4e2a\u7b54\u6848\u90fd\u662f"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b07d4d81aa7f7775e9a74ca7",
+        "question": "\u95ee\u989875. \u5f53 isActive \u4e3a true \u65f6\uff0cngClass \u5c5e\u6027\u6307\u4ee4\u7684\u8fd9\u79cd\u7528\u6cd5\u7684\u9884\u671f DOM \u4ee3\u7801\u662f\u4ec0\u4e48\uff1f\n```html\n<div [ngClass]=\"{ 'active-item': isActive }\">Item One</div>\n```",
+        "answer": "`<div class=\"active-item\">Item One</div>`",
+        "explanation": "[Angular - NgClass](https://angular.io/api/common/NgClass)",
+        "hint": null,
+        "correctAnswer": [
+          "`<div class=\"active-item\">Item One</div>`"
+        ],
+        "options": [
+          "`<div active-item>Item One</div>`",
+          "`<div class=\"active-item\">Item One</div>`",
+          "`<div class=\"is-active\">Item One</div>`",
+          "`<div class=\"active-item isActive\">Item One</div>`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a903a081f9f5b8ee8e4cb105",
+        "question": "\u95ee\u989876. \u54ea\u4e2a\u7b54\u6848\u6700\u80fd\u89e3\u91ca\u6b64\u6a21\u677f\u4ee3\u7801\u4e2d ngModel \u7684\u7528\u6cd5\uff1f\n```html\n<input [(ngModel)]=\"user.name\" />\n```",
+        "answer": "\u5b83\u662f\u53cc\u5411\u6570\u636e\u7ed1\u5b9a\u8bed\u6cd5\u3002input \u5143\u7d20 value \u5c5e\u6027\u5c06\u7ed1\u5b9a\u5230 user.name \u5c5e\u6027\uff0c\u8868\u5355\u5143\u7d20\u7684 value change \u4e8b\u4ef6\u5c06\u66f4\u65b0 user.name \u5c5e\u6027\u503c\u3002",
+        "explanation": "[Angular - NgModel](https://angular.io/api/forms/NgModel)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u662f\u53cc\u5411\u6570\u636e\u7ed1\u5b9a\u8bed\u6cd5\u3002input \u5143\u7d20 value \u5c5e\u6027\u5c06\u7ed1\u5b9a\u5230 user.name \u5c5e\u6027\uff0c\u8868\u5355\u5143\u7d20\u7684 value change \u4e8b\u4ef6\u5c06\u66f4\u65b0 user.name \u5c5e\u6027\u503c\u3002"
+        ],
+        "options": [
+          "\u5982\u679c user.name \u5c5e\u6027\u6709\u503c\uff0c\u5b83\u4f1a\u6709\u6761\u4ef6\u5730\u663e\u793a input \u5143\u7d20\u3002",
+          "\u5b83\u662f\u53cc\u5411\u6570\u636e\u7ed1\u5b9a\u8bed\u6cd5\u3002input \u5143\u7d20 value \u5c5e\u6027\u5c06\u7ed1\u5b9a\u5230 user.name \u5c5e\u6027\uff0c\u8868\u5355\u5143\u7d20\u7684 value change \u4e8b\u4ef6\u5c06\u66f4\u65b0 user.name \u5c5e\u6027\u503c\u3002",
+          "\u4ee3\u7801\u4e2d\u6709\u9519\u5b57\u3002\u5b83\u5e94\u8be5\u53ea\u6709\u65b9\u62ec\u53f7\u3002",
+          "\u5b83\u5c06 user.name \u5c5e\u6027\u7684\u503c\u7ed1\u5b9a\u5230 input \u5143\u7d20\u7684 val \u5c5e\u6027\u4ee5\u8bbe\u7f6e\u5176\u521d\u59cb\u503c\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3c34b985e3b063c964bb8d52",
+        "question": "\u95ee\u989877. NgModules \u53ef\u4ee5\u5305\u542b\u5728\u5176\u4ed6 NgModules \u4e2d\u3002\u60a8\u5e94\u8be5\u4f7f\u7528\u54ea\u4e2a\u4ee3\u7801\u793a\u4f8b\u5728 SharedModule \u4e2d\u5305\u542b TableModule\uff1f",
+        "answer": "@NgModule({",
+        "explanation": "exports: [TableModule]\n})\nexport class SharedModule {}\ntext\nimports: [TableModule]\n})\nexport class SharedModule {}\ntext\ndeclarations: [TableModule]\n})\nexport class SharedModule {}\ntext\nproviders: [TableModule]\n})\nexport class SharedModule {}",
+        "hint": null,
+        "correctAnswer": [
+          "@NgModule({"
+        ],
+        "options": [
+          "@NgModule({",
+          "@NgModule({",
+          "@NgModule({",
+          "@NgModule({"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8386c4af9f73f255c8d942b1",
+        "question": "\u95ee\u989878. \u53ef\u4ee5\u4f7f\u7528\u4ec0\u4e48\u5176\u4ed6\u6a21\u677f\u8bed\u6cd5\uff08\u66ff\u6362 ngClass \u6307\u4ee4\uff09\u5728\u6b64\u6807\u8bb0\u4e2d\u6dfb\u52a0\u6216\u5220\u9664 CSS \u7c7b\u540d\uff1f\n```html\n<span [ngClass]=\"{ 'active': isActive, 'can-toggle': canToggle }\"> Employed </span>\n```",
+        "answer": "B",
+        "explanation": "```html\n<span class=\"{{ isActive ? 'is-active' : '' }} {{ canToggle ? 'can-toggle' : '' }}\">\nEmployed\n</span>\n```\n```html\n<span [class.active]=\"isActive\" [class.can-toggle]=\"canToggle\"> Employed </span>\n```\n```html\n<span [styles.class.active]=\"isActive\" [styles.class.can-toggle]=\"canToggle\"> Employed </span>\n```\n```html\n<span [css.class.active]=\"isActive\" [css.class.can-toggle]=\"canToggle\"> Employed </span>\n```",
+        "hint": null,
+        "correctAnswer": [
+          "B"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "87ec6d13e721f2813ff2324c",
+        "question": "\u95ee\u989879. \u5728\u6b64\u6307\u4ee4\u88c5\u9970\u5668\u793a\u4f8b\u4e2d\uff0c\u63d0\u4f9b\u8005\u5bf9\u8c61\u5b57\u9762\u91cf\u4e2d\u7684 multi \u5c5e\u6027\u7684\u76ee\u7684\u662f\u4ec0\u4e48\uff1f\n```ts\n@Directive({\n  selector: '[customValidator]',\n  providers: [\n    {\n      provide: NG_VALIDATORS,\n      useExisting: CustomValidatorDirective,\n      multi: true,\n    },\n  ],\n})\nexport class CustomValidatorDirective implements Validator {}\n```",
+        "answer": "\u5b83\u5141\u8bb8\u4e3a\u5355\u4e2a NG_VALIDATORS \u4ee4\u724c\u6ce8\u518c\u4e0d\u540c\u7684\u63d0\u4f9b\u8005\u3002\u5728\u8fd9\u79cd\u60c5\u51b5\u4e0b\uff0c\u5b83\u5c06 CustomValidatorDirective \u6dfb\u52a0\u5230\u53ef\u7528\u7684\u8868\u5355\u9a8c\u8bc1\u5668\u5217\u8868\u4e2d\u3002",
+        "explanation": "[StackOverflow](https://stackoverflow.com/questions/38144641/what-is-multi-provider-in-angular2)",
+        "hint": null,
+        "correctAnswer": [
+          "\u5b83\u5141\u8bb8\u4e3a\u5355\u4e2a NG_VALIDATORS \u4ee4\u724c\u6ce8\u518c\u4e0d\u540c\u7684\u63d0\u4f9b\u8005\u3002\u5728\u8fd9\u79cd\u60c5\u51b5\u4e0b\uff0c\u5b83\u5c06 CustomValidatorDirective \u6dfb\u52a0\u5230\u53ef\u7528\u7684\u8868\u5355\u9a8c\u8bc1\u5668\u5217\u8868\u4e2d\u3002"
+        ],
+        "options": [
+          "\u5b83\u8868\u793a CustomValidatorDirective \u53ef\u7528\u4e8e\u591a\u79cd\u8868\u5355\u5143\u7d20\u7c7b\u578b\u3002",
+          "\u5b83\u5141\u8bb8\u5b9e\u4f8b\u5316 CustomValidatorDirective \u7684\u591a\u4e2a\u5b9e\u4f8b\u3002\u5982\u679c\u6ca1\u6709 multi\uff0cCustomValidatorDirective \u5c06\u662f\u6574\u4e2a\u5e94\u7528\u7a0b\u5e8f\u7684\u5355\u4f8b\u3002",
+          "\u5b83\u5141\u8bb8\u4e3a\u5355\u4e2a NG_VALIDATORS \u4ee4\u724c\u6ce8\u518c\u4e0d\u540c\u7684\u63d0\u4f9b\u8005\u3002\u5728\u8fd9\u79cd\u60c5\u51b5\u4e0b\uff0c\u5b83\u5c06 CustomValidatorDirective \u6dfb\u52a0\u5230\u53ef\u7528\u7684\u8868\u5355\u9a8c\u8bc1\u5668\u5217\u8868\u4e2d\u3002",
+          "\u5b83\u8868\u793a\u5c06\u6709\u591a\u4e2a\u7c7b\u5904\u7406\u81ea\u5b9a\u4e49\u9a8c\u8bc1\u5668\u7684\u903b\u8f91\u5b9e\u73b0\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f31f58d0c92570e1f6d0a7a7",
+        "question": "\u95ee\u989880. \u60a8\u5c06\u4f7f\u7528\u54ea\u4e2a Angular CLI \u547d\u4ee4\u6765\u8fd0\u884c\u5355\u5143\u6d4b\u8bd5\uff0c\u8be5\u8fc7\u7a0b\u4f1a\u5728\u6587\u4ef6\u66f4\u6539\u65f6\u91cd\u65b0\u8fd0\u884c\u6d4b\u8bd5\u5957\u4ef6\uff1f",
+        "answer": "ng test",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "ng test"
+        ],
+        "options": [
+          "ng test --single-run=false",
+          "ng test --watch-files",
+          "ng test --progress",
+          "ng test"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "969876315f8aa9ee3e44deb7",
+        "question": "\u95ee\u989881. ngOnDestory \u751f\u547d\u5468\u671f\u94a9\u5b50\u6700\u5e38\u89c1\u7684\u7528\u9014\u662f\u4ec0\u4e48\uff1f",
+        "answer": "\u53d6\u6d88\u8ba2\u9605 observables \u5e76\u5206\u79bb",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "\u53d6\u6d88\u8ba2\u9605 observables \u5e76\u5206\u79bb"
+        ],
+        "options": [
+          "\u4ece\u7ec4\u4ef6\u89c6\u56fe\u4e2d\u5220\u9664 dom \u5143\u7d20",
+          "\u5220\u9664\u4efb\u4f55\u6ce8\u5165\u7684\u670d\u52a1",
+          "\u53d6\u6d88\u8ba2\u9605 observables \u5e76\u5206\u79bb",
+          "\u4ee5\u4e0a\u6240\u6709"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b9a984bddc0af25ec5c12b83",
+        "question": "\u95ee\u989882. \u5229\u7528\u4ec0\u4e48 NgModule \u88c5\u9970\u5668\u5143\u6570\u636e\u5c5e\u6027\u6765\u5141\u8bb8\u5176\u4ed6....\uff1f",
+        "answer": "declarations",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "declarations"
+        ],
+        "options": [
+          "public",
+          "experts",
+          "Shared",
+          "declarations"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "613a306456b596ad72432d20",
+        "question": "\u95ee\u989883. \u4f7f\u7528\u4ee5\u4e0b\u7ec4\u4ef6\u7c7b\uff0c\u60a8\u5c06\u5728\u6a21\u677f\u4e2d\u4f7f\u7528\u4ec0\u4e48\u6a21\u677f\u8bed\u6cd5\u6765\u663e\u793a\u8c03\u7528 currentYear \u7c7b\u51fd\u6570\u7684\u7ed3\u679c\uff1f\n```ts\n@Component({\n  selector: 'app-date-card',\n  template: '',\n})\nexport class DateCardComponent {\n  currentYear() {\n    return new Date().getFullYear();\n  }\n}\n```",
+        "answer": "`{% raw %}{{ currentYear() }}{% endraw %}`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`{% raw %}{{ currentYear() }}{% endraw %}`"
+        ],
+        "options": [
+          "`{% raw %}{{ currentYear() }}{% endraw %}`",
+          "`{% raw %}{{ component.currentYear() }}{% endraw %}`",
+          "`{% raw %}{{ currentYear }}{% endraw %}`",
+          "\u4e0d\u80fd\u4ece\u6a21\u677f\u8bed\u6cd5\u8c03\u7528\u7c7b\u51fd\u6570\u3002"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "angular/angular-quiz-ch.md",
+    "language": "ch",
+    "generatedAt": "2025-12-09T14:56:13.984533+00:00",
+    "warnings": []
+  }
+}

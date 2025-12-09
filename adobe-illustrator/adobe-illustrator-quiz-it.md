@@ -2,7 +2,7 @@
 
 #### D1. Cosa accadrebbe al colore di riempimento dell'oggetto mostrato di seguito se lo copiassi e incollassi in un altro file Illustrator in cui la modalità colore documento è impostata su CMYK?
 
-![CMYK](images/002.png?raw=true)
+![CMYK](images/002.png)
 
 - [x] Il colore di riempimento verrebbe convertito in valori CMYK
 - [ ] Il colore di riempimento rimarrebbe invariato.
@@ -11,7 +11,7 @@
 
 #### D2. Si desidera aggiungere alcune stelle all'oggetto di sfondo circolare nell'immagine seguente, utilizzando un pennello a dispersione. Come puoi assicurarti che le stelle appaiano solo all'interno del cerchio?
 
-![Add stars](images/006.png?raw=true)
+![Add stars](images/006.png)
 
 - [ ] Selezionate il metodo di fusione Schermo prima di pennellare.
 - [x] Selezionare il cerchio e fare clic sul pulsante Disegna all'interno sulla barra degli strumenti prima di pennellare.
@@ -68,7 +68,7 @@
 
 #### D9. Cosa faresti al punto di ancoraggio sinistro per rendere simmetrico l'oggetto?
 
-![Make symmetrical](images/005.png?raw=true)
+![Make symmetrical](images/005.png)
 
 - [ ] Rimuoverlo.
 - [ ] Tagliate il tracciato nel punto di ancoraggio.
@@ -168,7 +168,7 @@
 
 #### D23. Nell'immagine seguente, si sta tentando di utilizzare lo strumento Unisci per rimuovere le parti sovrapposte di due percorsi (evidenziate in giallo), ma sembra che non stia accadendo nulla. Perché?
 
-![Overlapping circles](images/009.png?raw=true)
+![Overlapping circles](images/009.png)
 
 - [ ] I percorsi non hanno un attributo fill.
 - [ ] Viene selezionato solo uno dei percorsi, ma entrambi devono essere selezionati.
@@ -191,7 +191,7 @@
 
 #### D26. Qual è il significato dei tre punti sull'icona della nuvola nell'immagine qui sotto?
 
-![Cloud icon](images/007.png?raw=true)
+![Cloud icon](images/007.png)
 
 - [ ] I font Alana sono disattivati.
 - [ ] I font Alana sono per uso solo web.
@@ -232,7 +232,7 @@
 
 #### D31. Quando visualizzi l'opera d'arte mostrata di seguito in modalità Contorno, cosa puoi dire della parola "zaino"?
 
-![Outline mode](images/008.png?raw=true)
+![Outline mode](images/008.png)
 
 - [ ] È stato convertito in contorni.
 - [x] È testo in tempo reale.
@@ -297,7 +297,7 @@
 
 #### D40. Hai progettato l'etichetta del prodotto mostrata di seguito. Il cliente desidera che il cerchio nero venga stampato il più scuro possibile e richiede che nessuno degli elementi colorati del logo venga visualizzato attraverso il cerchio quando l'etichetta viene stampata. Cosa dovresti fare?
 
-![Label](images/003.png?raw=true)
+![Label](images/003.png)
 
 - [x] Selezionate il cerchio e attivate Riempimento sovrastampa nel pannello Attributi.
 - [ ] Selezionate il cerchio e applicate il metodo di fusione Moltiplica.,
@@ -320,7 +320,7 @@
 
 #### D43. Nella carta regalo mostrata di seguito, i petali di fiori magenta devono essere stampati con una vernice. Come imposteresti il file in modo che la vernice venga applicata sul colore magenta dei petali?
 
-![Gift card](images/004.png?raw=true)
+![Gift card](images/004.png)
 
 - [ ] Utilizzare Informazioni file per lasciare istruzioni per il provider di servizi di stampa.
 - [ ] Duplica i petali in un nuovo livello chiamato "Vernice".
@@ -392,7 +392,7 @@
 
 #### D53. Lo strumento illustratore che viene mostrato come una freccia bianca è noto come il `___`
 
-![white arrow](images/001.png?raw=true)
+![white arrow](images/001.png)
 
 - [ ] Strumento di selezione
 - [ ] Strumento di disegno
@@ -485,7 +485,7 @@
 
 #### D66. Perché il punto superiore di questa stella appare diverso dagli altri punti?
 
-![yellow star](images/010.png?raw=true)
+![yellow star](images/010.png)
 
 - [ ] Il tratto è stato delineato.
 - [ ] Il tratto ha un tipo di angolo di Bevel Join.
@@ -561,7 +561,7 @@
 
 #### D76. Quale opzione utilizzate per creare il tratto mostrato di seguito?
 
-![stroke](images/011.png?raw=true)
+![stroke](images/011.png)
 
 - [ ] Round Join
 - [ ] Tappo sporgente

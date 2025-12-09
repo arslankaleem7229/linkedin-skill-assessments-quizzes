@@ -1826,7 +1826,7 @@ myFunction()
 
 #### Q123. Pandas を使用して、以下の画像に構造化されているデータ セットを Kaggle から読み込みます。生存者の総数を返すコマンドはどれですか?
 
-![Q129](images/Q129.png?raw=png)
+![Q129](images/Q129.png)
 
 - [x] `sum(タイタニック['生存'])`
 - [ ] `[x for x in タイタニック['Survived'] if x == 1]`
@@ -1872,7 +1872,7 @@ myFunction()
 
 #### Q126. Jaccard 類似度は、2 つのセットがどの程度類似しているかを示す数式です。これは、交差の基数を和集合の基数で割ったものとして定義されます。 Python での正確な実装はどの選択肢でしょうか?
 
-![Q132](images/Q132.png?raw=png)
+![Q132](images/Q132.png)
 
 - [ ] `def jaccard(a, b): len (a | b) / len (a & b) を返します`
 - [x] `def jaccard(a, b): len (a & b) / len (a | b) を返します`
@@ -1979,7 +1979,7 @@ print("foo" if (256).bit_length() > 8 else "bar")
 
 #### Q138.下の画像は Matplotlib を使用して作成されました。これは、関数 **\_** を使用して数値で埋められた整数のリストを **\_** でプロットした分布プロットです。
 
-![Q132](images/Q138.png?raw=png)
+![Q132](images/Q138.png)
 
 - [ ] `random.uniform(0,50);plt.hist`
 - [x] `random.gauss(50,20);plt.hist`

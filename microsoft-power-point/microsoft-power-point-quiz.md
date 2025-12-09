@@ -518,7 +518,7 @@ If your Word document contains no Heading 1 or Heading 2 styles, PowerPoint will
 
 #### Q67. The picture on the left is the original image. The image on the right is smaller, but the flowers are the same size and part of the picture has been removed. What method was used to format this picture?
 
-![images](images/Q68.png?raw=png)
+![images](images/Q68.png)
 
 - [ ] changing the width and height with aspect ration locked
 - [ ] drapping a corner sizing handle
@@ -593,7 +593,7 @@ If your Word document contains no Heading 1 or Heading 2 styles, PowerPoint will
 
 #### Q76. A few lines of text are overflowing the placeholder on your slide. How can you fix it on your slide?
 
-![Q79](images/Q79.png?raw=png)
+![Q79](images/Q79.png)
 
 - [ ] Delete the overflowing text.
 - [ ] Select **Stop Fitting Text to This Placeholder**.
@@ -609,7 +609,7 @@ If your Word document contains no Heading 1 or Heading 2 styles, PowerPoint will
 
 #### Q78. What do the labels Introduction and ProjectsByMonth indicate?
 
-![Q81](images/Q81.png?raw=png)
+![Q81](images/Q81.png)
 
 - [x] section names
 - [ ] layouts

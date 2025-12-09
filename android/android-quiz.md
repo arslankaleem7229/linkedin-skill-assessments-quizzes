@@ -264,7 +264,7 @@ Notice: AndroidJUnitRunner lets us run JUnit3/4-style tests on Android Devices
 
 #### Q21. Which drawable definition allows you to achieve the shape below?
 
-![img](image/shape.png?raw=png)
+![img](image/shape.png)
 
 - [ ] A
 
@@ -931,16 +931,16 @@ override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanc
 #### Q61. Which layout hierarchy is likely to be drawn the most quickly?
 
 - [x] A
-      ![img](https://i.imgur.com/mT08jag.png?raw=png)
+      ![img](https://i.imgur.com/mT08jag.png)
 
 - [ ] B
-      ![img](https://i.imgur.com/rz9eKYc.png?raw=png)
+      ![img](https://i.imgur.com/rz9eKYc.png)
 
 - [ ] C
-      ![img](https://i.imgur.com/ETaHhaS.png?raw=png)
+      ![img](https://i.imgur.com/ETaHhaS.png)
 
 - [ ] D
-      ![img](https://i.imgur.com/1QBrTwR.png?raw=png)
+      ![img](https://i.imgur.com/1QBrTwR.png)
 
 #### Q62. What is the current recommended way to handle long-running background tasks?
 

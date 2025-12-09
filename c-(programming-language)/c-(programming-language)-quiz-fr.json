@@ -1,0 +1,2444 @@
+{
+  "quizz": {
+    "id": "e6ed15f668f983fb19dc65f5",
+    "title": "C (Langage de programmation)",
+    "description": "Seeded from c-(programming-language)/c-(programming-language)-quiz-fr.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "245b2690ce66f07381ba7c19",
+        "question": "Quel exemple de code finira par \u00e9puiser la m\u00e9moire de l'ordinateur?",
+        "answer": ":",
+        "explanation": "```c\nwhile(1)\n{\nchar *smallString = (char *) malloc(10);\n}\n```\n```c\nlong long number = 1;\nwhile(1)\nnumber *= 2;\n```\n```c\nwhile(1)\n{\nchar hugeString[1000000L];\nmemset(hugeString, 0, 1000000L);\n}\n```\n```c\nwhile(1)\n{\nlong *bigArray = (long *) malloc(sizeof(long) * 1000);\nmemset(bigArray, 1000000, 1000);\n(bigArray);\n}\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "64c976e2f446c147edaf6d50",
+        "question": "Quelle sera la sortie du code ci-dessous?\n```c\nint f1 (int a, int b)\n{\n    if (a > b)\n    {\n        printf(\"A is greater than B\\n\");\n        return 1;\n    }\n    else\n    {\n        printf(\"B is greater than A\");\n        return 0;\n    }\n}\nmain()\n{\n    if (f1(20,10) || f1(10,20))\n        printf(\"C is fun!\\n\");\n}\n```",
+        "answer": ":",
+        "explanation": "```\nA is greater than B\nC is fun!\n```\n```\nA is greater than B\nB is greater than A\nC is fun!\n```\n```\nA is greater than B\nB is greater than A\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          "Rien n'est affich\u00e9 \u00e0 l'\u00e9cran"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dc551473052765e74770f4c2",
+        "question": "Quel est le nom pour appeler une fonction \u00e0 l'int\u00e9rieur de la m\u00eame fonction?",
+        "answer": "r\u00e9cursion",
+        "explanation": "[R\u00e9f\u00e9rence](https://www.cprogramming.com/tutorial/c/lesson16.html)",
+        "hint": null,
+        "correctAnswer": [
+          "r\u00e9cursion"
+        ],
+        "options": [
+          "r\u00e9cursion",
+          "sous-fonction",
+          "appel interne",
+          "boucle infinie"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1fc1b3c2600296894a039da1",
+        "question": "Que d\u00e9montre la d\u00e9claration de la variable c2?\n```c\nmain(){\n    char c1 ='a';\n    char c2 = c1+10;\n}\n```",
+        "answer": "arithm\u00e9tique de caract\u00e8res",
+        "explanation": "[R\u00e9f\u00e9rence](https://tutorialspoint.dev/language/c/character-arithmetic-c-c)",
+        "hint": null,
+        "correctAnswer": [
+          "arithm\u00e9tique de caract\u00e8res"
+        ],
+        "options": [
+          "arithm\u00e9tique de caract\u00e8res",
+          "affectation non d\u00e9finie",
+          "conversion de type",
+          "d\u00e9claration invalide"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4e52edebb62fe59e245542c3",
+        "question": "De quoi cette d\u00e9claration est-elle un exemple?\n```c\nstruct s {\n    int i;\n    struct s *s1;\n    struct s *s2;\n};\n```",
+        "answer": "un n\u0153ud",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "un n\u0153ud"
+        ],
+        "options": [
+          "un n\u0153ud",
+          "une liste cha\u00een\u00e9e",
+          "une pile",
+          "un arbre binaire"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f4a327f913e660f3253be404",
+        "question": "Les fichiers d'en-t\u00eate sont list\u00e9s en utilisant la directive de pr\u00e9traitement #include, et peuvent avoir l'un des formats suivants : #include &lt;fichierA&gt; ou #include \"fichierB\". Quelle est la diff\u00e9rence entre ces deux formats?",
+        "answer": "Le pr\u00e9processeur essaiera de localiser fichierA dans un chemin de r\u00e9pertoire pr\u00e9d\u00e9termin\u00e9. Il essaiera de localiser fichierB dans le m\u00eame r\u00e9pertoire que le fichier source ainsi qu'un chemin de r\u00e9pertoire personnalis\u00e9.",
+        "explanation": "[R\u00e9f\u00e9rence](https://www.geeksforgeeks.org/difference-between-include-and-include-in-c-c-with-examples/#:~:text=The%20difference%20between%20the%20two,be%20included%20in%20the%20code.&text=%23include%20is%20for%20pre%2Ddefined%20header%20files.)",
+        "hint": null,
+        "correctAnswer": [
+          "Le pr\u00e9processeur essaiera de localiser fichierA dans un chemin de r\u00e9pertoire pr\u00e9d\u00e9termin\u00e9. Il essaiera de localiser fichierB dans le m\u00eame r\u00e9pertoire que le fichier source ainsi qu'un chemin de r\u00e9pertoire personnalis\u00e9."
+        ],
+        "options": [
+          "Le pr\u00e9processeur essaiera de localiser fichierA dans le m\u00eame r\u00e9pertoire que le fichier source, et fichierB dans un chemin de r\u00e9pertoire pr\u00e9d\u00e9termin\u00e9.",
+          "Le pr\u00e9processeur essaiera de localiser fichierA dans le r\u00e9pertoire syst\u00e8me fixe. Il essaiera de localiser fichierB dans le chemin de r\u00e9pertoire d\u00e9sign\u00e9 par l'option -I ajout\u00e9e \u00e0 la ligne de commande lors de la compilation du code source.",
+          "Le fichier utilisant la syntaxe fichierA doit \u00eatre un fichier syst\u00e8me, en nombre illimit\u00e9; fichierB doit \u00eatre un fichier utilisateur au maximum d'un par fichier source.",
+          "Le pr\u00e9processeur essaiera de localiser fichierA dans un chemin de r\u00e9pertoire pr\u00e9d\u00e9termin\u00e9. Il essaiera de localiser fichierB dans le m\u00eame r\u00e9pertoire que le fichier source ainsi qu'un chemin de r\u00e9pertoire personnalis\u00e9."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "93623da0f18e99738de7da3b",
+        "question": "En utilisant une boucle for, comment pourriez-vous \u00e9crire un code C pour compter de 10 \u00e0 1 et afficher chaque nombre sur sa propre ligne?",
+        "answer": ":",
+        "explanation": "```c\nfor (int i = 0; i>=0, i--){\nprintf(\"%d\\n\", i);\n}//fin de la boucle\n```\n```c\nint i;\nfor (i=1; i<=10; i++){\nprintf(\"%d\", i);\n}\n```\n```c\nint i = 10;\nwhile (i>0){\nprintf(\"%d\\n\", i);\ni--;\n}\n```\n```c\nint i;\nfor (i= 10; i>0; i--){\nprintf(\"%d\\n\", i);\n}// fin de la boucle\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "78a2f4642ef49ea14ad5535e",
+        "question": "Lequel n'est pas un mot r\u00e9serv\u00e9 en C standard?",
+        "answer": "typeof",
+        "explanation": "[R\u00e9f\u00e9rence](https://www.ibm.com/docs/en/adfz/developer-for-zos/14.2.0?topic=programs-c-reserved-keywords)",
+        "hint": null,
+        "correctAnswer": [
+          "typeof"
+        ],
+        "options": [
+          "volatile",
+          "typeof",
+          "register",
+          "typedef"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fbf27cabd73243807a607add",
+        "question": "Que retourne le programme ci-dessous?\n```c\nint main(){\n    int a=1, b=2, c=3, d=4;\n    int x = a;\n    if (a>b)\n    if (b<c) x=b;\n    else x=c;\n    return(x);\n}\n```",
+        "answer": "1",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "1"
+        ],
+        "options": [
+          "1",
+          "3",
+          "2",
+          "0"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "93297dd4e026e772b0908e62",
+        "question": "En utilisant la d\u00e9claration Union ci-dessous, combien d'octets d'espace m\u00e9moire les donn\u00e9es de ce type occuperont-elles?\n```c\nunion Cars {\n    char make[20];\n    char model[30];\n    short year;\n} car;\n```",
+        "answer": "30",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "30"
+        ],
+        "options": [
+          "32",
+          "54",
+          "30",
+          "52"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4097ffcceb70bb08a4609edf",
+        "question": "Dans cet exemple de code, qu'est-ce qui n'est pas un probl\u00e8me pour le compilateur C?\n```c\nmain(){\n    constant int PI = 3.14;\n    printf(\"%f\\n\", pi);\n}\n```",
+        "answer": "La valeur de PI doit \u00eatre d\u00e9finie \u00e0 3.141593, et non 3.14",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "La valeur de PI doit \u00eatre d\u00e9finie \u00e0 3.141593, et non 3.14"
+        ],
+        "options": [
+          "La valeur de PI doit \u00eatre d\u00e9finie \u00e0 3.141593, et non 3.14",
+          "La d\u00e9claration de PI doit dire const, et non constant.",
+          "Le type de donn\u00e9es de PI doit \u00eatre float, et non int.",
+          "L'instruction printf doit utiliser PI, et non pi."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a49b3c3aaa817669fedadcf7",
+        "question": "Quel est le plus petit programme \u00e0 compiler et ex\u00e9cuter sans erreurs?",
+        "answer": "int main() {return 0;}",
+        "explanation": "[R\u00e9f\u00e9rence](https://www.beningo.com/150-the-wolrds-shortest-c-program/)",
+        "hint": null,
+        "correctAnswer": [
+          "int main() {return 0;}"
+        ],
+        "options": [
+          "main()",
+          "int main() {return 0;}",
+          "main() { }",
+          "main() { ; }"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4cc4cd7660906b04f5fba079",
+        "question": "Qu'est-ce qui est optionnel dans une d\u00e9claration de fonction?",
+        "answer": "noms des param\u00e8tres",
+        "explanation": "> **Explication:**\n> Dans toutes les normes C modernes, les noms de param\u00e8tres dans une d\u00e9claration de fonction sont optionnels.\n> Cependant, la signification d'une liste de param\u00e8tres vide (`int f();`) diff\u00e8re selon la norme:\n>\n> - **Avant C23:** D\u00e9clare une fonction avec un nombre non sp\u00e9cifi\u00e9 de param\u00e8tres (pas un prototype).\n> - **En C23:** \u00c9quivalent \u00e0 `int f(void);` \u2014 d\u00e9clare une fonction qui ne prend aucun param\u00e8tre.\n>\n> [R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/function_declaration)",
+        "hint": null,
+        "correctAnswer": [
+          "noms des param\u00e8tres"
+        ],
+        "options": [
+          "type de donn\u00e9es des param\u00e8tres",
+          "type de retour de la fonction",
+          "noms des param\u00e8tres",
+          "nombre de param\u00e8tres"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "306551452b24a6f5f98d8c51",
+        "question": "C traite tous les p\u00e9riph\u00e9riques, tels que l'\u00e9cran et le clavier, comme des fichiers. Quel fichier s'ouvre automatiquement lorsqu'un programme s'ex\u00e9cute?",
+        "answer": "stdout",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "stdout"
+        ],
+        "options": [
+          "stdout",
+          "stdio.h",
+          "default.h",
+          "string.h"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4b78ea1d0d6aa9b958c9faa5",
+        "question": "Dans quel segment l'allocation de m\u00e9moire dynamique a-t-elle lieu?",
+        "answer": "tas",
+        "explanation": "[R\u00e9f\u00e9rence](http://www.it.uc3m.es/pbasanta/asng/course_notes/dynamic_memory_heap_en.html#:~:text=The%20dynamic%20memory%20that%20is,reads%20a%20set%20of%20words.)",
+        "hint": null,
+        "correctAnswer": [
+          "tas"
+        ],
+        "options": [
+          "Segment BSS",
+          "pile",
+          "tas",
+          "segment de donn\u00e9es"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "afdb7ae9e3568a17c7fdb8ea",
+        "question": "Quelle fonction utilisez-vous pour d\u00e9sallouer de la m\u00e9moire?",
+        "answer": "free()",
+        "explanation": "[R\u00e9f\u00e9rence](https://devdocs.io/c/memory/free)\n[R\u00e9f\u00e9rence](https://www.tutorialspoint.com/c_standard_library/c_function_free.htm)",
+        "hint": null,
+        "correctAnswer": [
+          "free()"
+        ],
+        "options": [
+          "dalloc()",
+          "dealloc()",
+          "release()",
+          "free()"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b886f8509f675de6a473efe3",
+        "question": "En langage C, quels sont les blocs de construction de base qui sont construits ensemble pour \u00e9crire un programme?",
+        "answer": "jetons",
+        "explanation": "[R\u00e9f\u00e9rence](https://fresh2refresh.com/c-programming/c-tokens-identifiers-keywords/#:~:text=C%20tokens%20are%20the%20basic,are%20known%20as%20C%20tokens.)",
+        "hint": null,
+        "correctAnswer": [
+          "jetons"
+        ],
+        "options": [
+          "mots-cl\u00e9s",
+          "identificateurs",
+          "jetons",
+          "fonctions"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "43f31e7a3ec65de2dabdc28f",
+        "question": "Quand la m\u00e9moire pour une variable est-elle allou\u00e9e?",
+        "answer": "lors de la d\u00e9claration de la variable",
+        "explanation": "[R\u00e9f\u00e9rence](https://www.codingame.com/playgrounds/14589/how-to-play-with-pointers-in-c/dynamic-memory-allocation#:~:text=When%20a%20variable%20is%20declared,allocation%20or%20dynamic%20memory%20allocation.)",
+        "hint": null,
+        "correctAnswer": [
+          "lors de la d\u00e9claration de la variable"
+        ],
+        "options": [
+          "lors de l'affectation de la variable",
+          "lors de l'initialisation de la variable",
+          "lors de la d\u00e9claration de la variable",
+          "lors de la d\u00e9finition de la variable"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e1f0494dc889539067b58463",
+        "question": "C utilise la m\u00e9thode d'appel par valeur pour passer des arguments aux fonctions. Comment pouvez-vous invoquer la m\u00e9thode d'appel par r\u00e9f\u00e9rence?",
+        "answer": "en utilisant des pointeurs",
+        "explanation": "[R\u00e9f\u00e9rence](https://www.javatpoint.com/call-by-value-and-call-by-reference-in-c)",
+        "hint": null,
+        "correctAnswer": [
+          "en utilisant des pointeurs"
+        ],
+        "options": [
+          "en utilisant des pointeurs",
+          "en d\u00e9clarant les fonctions s\u00e9par\u00e9ment de leur d\u00e9finition",
+          "en utilisant des fonctions r\u00e9cursives",
+          "en utilisant des variables globales"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f4a27d527ef8b1f7bdcad4a0",
+        "question": "Une union vous permet de stocker diff\u00e9rents `___` dans le m\u00eame `___`.",
+        "answer": "Types de donn\u00e9es; Espace m\u00e9moire",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Types de donn\u00e9es; Espace m\u00e9moire"
+        ],
+        "options": [
+          "Objets; Structure",
+          "Variables; D\u00e9claration",
+          "Types de donn\u00e9es; Espace m\u00e9moire",
+          "Tableaux; Fichier d'en-t\u00eate"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e73ce0f1db2935e88fe5f607",
+        "question": "Quelle est la sortie de ce programme?\n```c\nmain() {\n    char c1='a' , c2='A';\n    int i=c2-c1;\n    printf(\"%d\", i);\n}\n```",
+        "answer": "-32",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "-32"
+        ],
+        "options": [
+          "32",
+          "Erreur d'ex\u00e9cution",
+          "-32",
+          "0"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a73a40c64fc78b7610d19e4d",
+        "question": "Quelle est la diff\u00e9rence entre les fonctions scanf() et sscanf()?",
+        "answer": "La fonction scanf() lit des donn\u00e9es format\u00e9es depuis le clavier; La fonction sscanf() lit une entr\u00e9e format\u00e9e depuis une cha\u00eene.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "La fonction scanf() lit des donn\u00e9es format\u00e9es depuis le clavier; La fonction sscanf() lit une entr\u00e9e format\u00e9e depuis une cha\u00eene."
+        ],
+        "options": [
+          "La fonction scanf() lit des donn\u00e9es format\u00e9es sous forme de cha\u00eene; La fonction sscanf() lit une entr\u00e9e de cha\u00eene depuis l'\u00e9cran.",
+          "La fonction scanf() lit des donn\u00e9es format\u00e9es depuis le clavier; La fonction sscanf() lit une entr\u00e9e format\u00e9e depuis une cha\u00eene.",
+          "La fonction scanf() lit des donn\u00e9es de cha\u00eene depuis le clavier; La fonction sscanf() lit des donn\u00e9es de cha\u00eene depuis une cha\u00eene.",
+          "La fonction scanf() lit des donn\u00e9es format\u00e9es depuis un fichier; La fonction sscanf() lit une entr\u00e9e depuis une cha\u00eene s\u00e9lectionn\u00e9e"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4ef369632e7a567e7ce0d49a",
+        "question": "Quelle n'est pas une commande valide avec cette d\u00e9claration?\n```c\nchar *string[20] = { \"one\", \"two\", \"three\"};\n```",
+        "answer": "`printf(\"%s\", string[1][2]);`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`printf(\"%s\", string[1][2]);`"
+        ],
+        "options": [
+          "`printf(\"%c\", string[1][2]);`",
+          "`printf(\"%s\", string[1][2]);`",
+          "`printf(\"%s\", string[1]);`",
+          "`printf(string[1]);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "73522e5122abbad1d25c8a32",
+        "question": "\u00c0 quoi l'expression player->name est-elle \u00e9quivalente?",
+        "answer": "`(*player).name`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`(*player).name`"
+        ],
+        "options": [
+          "`player.name`",
+          "`(*player).name`",
+          "`*player.name`",
+          "`player.*name`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d6af45139bb999e23ccd5887",
+        "question": "Quel programme se compilera et s'ex\u00e9cutera sans erreurs?",
+        "answer": ":",
+        "explanation": "```c\nmain() {\nfor(i=0; i<10; i++) ;\n}\n```\n```c\nmain() {\nint i=0;\nfor(; i<10; i++) ;\n}\n```\n```c\nmain() {\nint i;\nfor(i=0; i<j; i++) ;\n}\n```\n```c\nmain() {\nint i;\nfor (i= 10; i<10; i++)\n}\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "82d4793faa96fd036b34e17c",
+        "question": "Que retourne cet appel de fonction?\n```c\n1 main() { float x = f1(10, 5); }\n2 float f1(int a, int b) { return (a/b); }\n```",
+        "answer": "une erreur de compilation",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "une erreur de compilation"
+        ],
+        "options": [
+          "2",
+          "2.000000",
+          "une erreur d'ex\u00e9cution",
+          "une erreur de compilation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d1791c96864341d922fa080f",
+        "question": "Que cr\u00e9e ce programme?\n```c\n#include <stdio.h>\nint main() {\n    int *p = NULL;\n    return 0;\n}\n```",
+        "answer": "un pointeur NULL",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "un pointeur NULL"
+        ],
+        "options": [
+          "une erreur d'ex\u00e9cution",
+          "un pointeur NULL",
+          "une erreur de compilation",
+          "un pointeur void"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "61240555c549dd6d2ccb7ebe",
+        "question": "Quelle est une mani\u00e8re alternative d'\u00e9crire l'expression (\\*x).y?",
+        "answer": "x->y",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "x->y"
+        ],
+        "options": [
+          "Il n'y a pas d'\u00e9quivalent.",
+          "x->y",
+          "\\*x->y",
+          "y->x"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "958e1eed21d41cdde489d7b2",
+        "question": "Les erreurs de compilation sont des erreurs statiques qui peuvent \u00eatre trouv\u00e9es dans le code.",
+        "answer": "dans les d\u00e9clarations et les d\u00e9finitions",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "dans les d\u00e9clarations et les d\u00e9finitions"
+        ],
+        "options": [
+          "dans les d\u00e9clarations et les d\u00e9finitions",
+          "dans les fonctions et les expressions",
+          "dans la syntaxe et la s\u00e9mantique",
+          "dans les objets et les instructions"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9b1d23f29442d779db20bfca",
+        "question": "L'entr\u00e9e et la sortie de fichiers (E/S) en C sont fortement bas\u00e9es sur la fa\u00e7on dont cela est fait `___`?",
+        "answer": "sous Unix",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "sous Unix"
+        ],
+        "options": [
+          "sous Unix",
+          "en C++",
+          "en C#",
+          "sous DOS"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5e8a51ec68d619b2df1b7289",
+        "question": "Que retourne la fonction strcmp(str1, str2);?",
+        "answer": "0 si str1 et str2 sont identiques, un nombre n\u00e9gatif si str1 est inf\u00e9rieur \u00e0 str2, un nombre positif si str1 est sup\u00e9rieur \u00e0 str2",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "0 si str1 et str2 sont identiques, un nombre n\u00e9gatif si str1 est inf\u00e9rieur \u00e0 str2, un nombre positif si str1 est sup\u00e9rieur \u00e0 str2"
+        ],
+        "options": [
+          "0 si str1 et str2 sont identiques, un nombre n\u00e9gatif si str1 est inf\u00e9rieur \u00e0 str2, un nombre positif si str1 est sup\u00e9rieur \u00e0 str2",
+          "vrai (1) si str1 et str2 sont identiques, faux (0) si str1 et str2 ne sont pas identiques",
+          "vrai (1) si str1 et str2 sont identiques, NULL si str1 et str2 ne sont pas identiques",
+          "0 si str1 et str2 sont identiques, un nombre n\u00e9gatif si str2 est inf\u00e9rieur \u00e0 str1, un nombre positif si str2 est sup\u00e9rieur \u00e0 str1"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "229c81d84757f7bb460b9a7e",
+        "question": "Quelle est la sortie de ce programme?\n```c\nint a=10, b=20;\nint f1(a) { return(a*b); }\nmain() {\nprintf(\"%d\", f1(5));\n}\n```",
+        "answer": "100",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "100"
+        ],
+        "options": [
+          "100",
+          "200",
+          "5",
+          "50"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bd426ac84ccae5a79609daa2",
+        "question": "Quelle n'est _pas_ une mani\u00e8re correcte de d\u00e9clarer une variable de cha\u00eene?",
+        "answer": "`char string = \"Hello World\";`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`char string = \"Hello World\";`"
+        ],
+        "options": [
+          "`char *string = \"Hello World\";`",
+          "`char string = \"Hello World\";`",
+          "`char string[20] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'};`",
+          "`char string[] = \"Hello World\";`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f6b0769ab1d11a9e90845d43",
+        "question": "Quel choix est un garde d'inclusion pour le fichier d'en-t\u00eate mylib.h?",
+        "answer": ":",
+        "explanation": "```c\n#ifdef MYLIB_H\n#undef MYLIB_H\n// contenu de mylib.h\n#endif /* MYLIB_H */\n```\n```c\n#ifndef MYLIB_H\n#define MYLIB_H\n// contenu de mylib.h\n#endif /* MYLIB_H */\n```\n```c\n#define MYLIB_H\n#include \"mylib.h\"\n#undef MYLIB_H\n```\n```c\n#ifdef MYLIB_H\n#define MYLIB_H\n// contenu de mylib.h\n#endif /* MYLIB_H */\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fd6fc94ae5246bdd16f5e119",
+        "question": "Combien de fois le code \u00e0 l'int\u00e9rieur de la boucle while est-il ex\u00e9cut\u00e9 dans ce programme?\n```c\nmain(){\n int x=1;\n while(x++<100){\n    x*=x;\n    if(x<10) continue;\n    if(x>50) break;\n }\n}\n```",
+        "answer": "3",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "3"
+        ],
+        "options": [
+          "100",
+          "3",
+          "5",
+          "50"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "650d20606c68b1097ed3fd48",
+        "question": "L'entr\u00e9e et la sortie de fichiers (E/S) en C se font \u00e0 travers quoi?",
+        "answer": "appels de fonction",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "appels de fonction"
+        ],
+        "options": [
+          "composants bas\u00e9s sur la syntaxe",
+          "interfaces natives",
+          "objets syst\u00e8me",
+          "appels de fonction"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b9740936eb24c388b3d00254",
+        "question": "Les directives sont traduites par le?",
+        "answer": "Pr\u00e9processeur",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Pr\u00e9processeur"
+        ],
+        "options": [
+          "Pr\u00e9processeur",
+          "Compilateur",
+          "\u00c9diteur de liens",
+          "\u00c9diteur"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a0e061050f9b4af627e3281e",
+        "question": "Les principales structures de boucle en programmation C sont la boucle for, la boucle while, et quelle autre boucle?",
+        "answer": "do...while",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "do...while"
+        ],
+        "options": [
+          "do...while",
+          "for...in",
+          "repeat...until",
+          "do...until"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5549d4937a72c6e7ada5572e",
+        "question": "Par d\u00e9faut, les fonctions C sont de quel type de fonctions?",
+        "answer": "globales",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "globales"
+        ],
+        "options": [
+          "globales",
+          "statiques",
+          "biblioth\u00e8que",
+          "syst\u00e8me"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "29d9a7027a24cfbef90db058",
+        "question": "Vous avez \u00e9crit une fonction que vous souhaitez inclure en tant que membre de la structure 'a'. Comment un tel membre de structure est-il d\u00e9fini?",
+        "answer": "B",
+        "explanation": "```c\nstruct a {\nvoid *f1;\n};\n```\n```c\nstruct a {\nvoid (*f1)();\n};\n```\n```c\nstruct a {\n*(void *f1)();\n};\n```\n```c\nstruct a {\nvoid *f1();\n};\n```",
+        "hint": null,
+        "correctAnswer": [
+          "B"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b24cf3bda5d823e54a074996",
+        "question": "Une structure de donn\u00e9es de pile permet toutes les op\u00e9rations de donn\u00e9es \u00e0 une seule extr\u00e9mit\u00e9, ce qui en fait quel type d'impl\u00e9mentation?",
+        "answer": "LIFO",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "LIFO"
+        ],
+        "options": [
+          "FIFO",
+          "LIFO",
+          "LILO",
+          "LOLI"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "02a84bff48ea19fa1c50a959",
+        "question": "Qu'affiche ce programme?\n```c\nmain(){\n    char *p = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\n    int i;\n    for (i=0;i<5;i++) *p++; *p++;\n    printf(\"%c\",*p++);\n}\n```",
+        "answer": "G",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "G"
+        ],
+        "options": [
+          "K",
+          "M",
+          "H",
+          "G"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1d1230ebf7a0724c48733dff",
+        "question": "D\u00e9crivez la relation entre lvalue et rvalue.",
+        "answer": "Une lvalue peut appara\u00eetre du c\u00f4t\u00e9 gauche ou droit d'une affectation; une rvalue peut appara\u00eetre uniquement du c\u00f4t\u00e9 droit.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Une lvalue peut appara\u00eetre du c\u00f4t\u00e9 gauche ou droit d'une affectation; une rvalue peut appara\u00eetre uniquement du c\u00f4t\u00e9 droit."
+        ],
+        "options": [
+          "Une lvalue peut appara\u00eetre uniquement du c\u00f4t\u00e9 gauche d'une affectation; une rvalue peut appara\u00eetre uniquement du c\u00f4t\u00e9 droit.",
+          "Une lvalue peut appara\u00eetre uniquement du c\u00f4t\u00e9 gauche d'une affectation; une rvalue peut appara\u00eetre du c\u00f4t\u00e9 gauche ou droit.",
+          "Une lvalue et une rvalue peuvent appara\u00eetre du c\u00f4t\u00e9 gauche ou droit d'une affectation.",
+          "Une lvalue peut appara\u00eetre du c\u00f4t\u00e9 gauche ou droit d'une affectation; une rvalue peut appara\u00eetre uniquement du c\u00f4t\u00e9 droit."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "13b4693fd38a986fb1dacb53",
+        "question": "Quel op\u00e9rateur est utilis\u00e9 pour acc\u00e9der \u00e0 l'adresse d'une variable?",
+        "answer": "`&`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`&`"
+        ],
+        "options": [
+          "`%`",
+          "`**`",
+          "`*`",
+          "`&`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2946cf5f330d15d169843b8e",
+        "question": "Quelle fonction add retourne correctement la valeur mise \u00e0 jour du r\u00e9sultat?",
+        "answer": "A",
+        "explanation": "```c\nvoid add (int a, int b, int *result)\n{\n*result = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(a,b,&result);\n}\n```\n```c\nvoid add (int a, int b, int result)\n{\nresult = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(a,b,result);\n}\n```\n```c\nvoid add (int a, int b, int *result)\n{\nresult = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(a,b,result);\n}\n```\n```c\nvoid add (int *a, int *b, int *result)\n{\nresult = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(*a,*b,*result);\n}\n```",
+        "hint": null,
+        "correctAnswer": [
+          "A"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7e75886ec265dcdaa127a0a2",
+        "question": "Consid\u00e9rez les nombres de la s\u00e9rie de Fibonacci inf\u00e9rieurs \u00e0 100 : 0,1,1,2,3,5,8,13,21,34,55,89. Quel morceau de code affiche la s\u00e9quence?",
+        "answer": "C",
+        "explanation": "```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", a);\nfibonacci(a,b);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```\n```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", b);\nfibonacci(a,c);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```\n```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", a);\nfibonacci(b,c);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```\n```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", c);\nfibonacci(b,c);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```",
+        "hint": null,
+        "correctAnswer": [
+          "C"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1e861fa39fd4fe699beaf1e5",
+        "question": "Lequel n'est _pas_ un sp\u00e9cificateur de classe de stockage?",
+        "answer": "`intern`",
+        "explanation": "[R\u00e9f\u00e9rence](https://en.cppreference.com/w/cpp/language/storage_duration)",
+        "hint": null,
+        "correctAnswer": [
+          "`intern`"
+        ],
+        "options": [
+          "`intern`",
+          "`extern`",
+          "`register`",
+          "`static`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e2dda43efb9f5d6765723446",
+        "question": "Quelle ligne de code, apr\u00e8s ex\u00e9cution, donne \u00e0 `i` la valeur de 1?",
+        "answer": "`for(i=1; i==10; i++);`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`for(i=1; i==10; i++);`"
+        ],
+        "options": [
+          "`for(i=1; i<=1; i++);`",
+          "`for(i=1; i=10; i++);`",
+          "`for(i=1; i==10; i++);`",
+          "`for(i=10; i>=1; i--);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "12beb848a82c8712b773a07a",
+        "question": "Quelle est la valeur de la variable c \u00e0 la fin de ce programme?\n```\n1 main() {\n2   int a, b, c;\n3   a=10; b=50;\n4   c=a * b % a;\n5 }\n```",
+        "answer": "0",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "0"
+        ],
+        "options": [
+          "50",
+          "5",
+          "0",
+          "500"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba43f752d455a000d7e92e5c",
+        "question": "Lequel n'est _pas_ l'un des types de donn\u00e9es de base en C?",
+        "answer": "array (tableau)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "array (tableau)"
+        ],
+        "options": [
+          "long double",
+          "unsigned char",
+          "array (tableau)",
+          "float"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "12e06a7d74930ad35673da8e",
+        "question": "Quel est l'op\u00e9rateur d'acc\u00e8s aux membres pour une structure?",
+        "answer": ".",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "."
+        ],
+        "options": [
+          ",",
+          "[]",
+          ".",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a256316a1027a58c1fa2acb6",
+        "question": "Quel type de donn\u00e9es standard fournit la plus petite taille de stockage et peut \u00eatre utilis\u00e9 dans les calculs?",
+        "answer": "char",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "char"
+        ],
+        "options": [
+          "char",
+          "float",
+          "int",
+          "short"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4de12c2641e7d67414d5b39c",
+        "question": "Que fait la fonction ctype tolower()?",
+        "answer": "Elle convertit une lettre majuscule de l'alphabet en minuscule.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Elle convertit une lettre majuscule de l'alphabet en minuscule."
+        ],
+        "options": [
+          "Elle retourne TRUE pour les lettres minuscules de l'alphabet.",
+          "Elle garantit que la sortie de texte utilise uniquement des valeurs ASCII (0 \u00e0 127).",
+          "Elle retourne FALSE pour les lettres minuscules de l'alphabet.",
+          "Elle convertit une lettre majuscule de l'alphabet en minuscule."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "34f2c99d1e9c0009f4687db3",
+        "question": "Le pointeur void _vptr_ est affect\u00e9 \u00e0 l'adresse de la variable float _g_. Quelle est une mani\u00e8re valide de d\u00e9r\u00e9f\u00e9rencer _vptr_ pour affecter sa valeur point\u00e9e \u00e0 une variable float nomm\u00e9e _f_ plus tard dans le programme?\n```c\nfloat g;\nvoid *vptr=&g;\n```",
+        "answer": "`f=*(float *)vptr;`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`f=*(float *)vptr;`"
+        ],
+        "options": [
+          "`f=(float *)vptr;`",
+          "`f=*(float *)vptr;`",
+          "`f=*(float)vptr;`",
+          "`f=(float)*vptr;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "29c908bafa9390f4ba1eef89",
+        "question": "Les fonctions d'allocation de m\u00e9moire dynamique sont d\u00e9finies dans quel fichier d'en-t\u00eate syst\u00e8me?",
+        "answer": "stdlib.h",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "stdlib.h"
+        ],
+        "options": [
+          "stdio.h",
+          "stdlib.h",
+          "limits.h",
+          "stddef.h"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c64483fe38ea92c80a0e4a58",
+        "question": "Une fonction est un ensemble d'**\\_**.",
+        "answer": "instructions",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "instructions"
+        ],
+        "options": [
+          "d\u00e9clarations",
+          "instructions",
+          "variables",
+          "objets"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "805ea2679181c1681a96e001",
+        "question": "En quoi les fonctions statiques diff\u00e8rent-elles des fonctions globales?",
+        "answer": "Les fonctions statiques ne peuvent \u00eatre accessibles que dans le fichier o\u00f9 elles sont d\u00e9clar\u00e9es.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Les fonctions statiques ne peuvent \u00eatre accessibles que dans le fichier o\u00f9 elles sont d\u00e9clar\u00e9es."
+        ],
+        "options": [
+          "Les fonctions statiques doivent \u00eatre d\u00e9clar\u00e9es \u00e0 l'avance avant d'\u00eatre d\u00e9finies.",
+          "Les fonctions statiques doivent \u00eatre d\u00e9clar\u00e9es dans un fichier d'en-t\u00eate s\u00e9par\u00e9.",
+          "Les fonctions statiques retournent toujours la m\u00eame valeur.",
+          "Les fonctions statiques ne peuvent \u00eatre accessibles que dans le fichier o\u00f9 elles sont d\u00e9clar\u00e9es."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba046ea412f009fcfd1918d3",
+        "question": "Quel exemple de code cr\u00e9e la cha\u00eene \"Hello Mars\" dans le tampon de stockage `hello`?",
+        "answer": ":",
+        "explanation": "```c\nchar hello[25];\nstrcpy(hello, \"Hello \");\nstrcpy(hello, \"Mars\");\n```\n```c\nchar hello[25];\nchar *p;\nstrcpy(hello, \"Hello World\");\np = hello;\np +=6;\nstrcpy(p, \"Mars\");\n```\n```c\nchar *hello;\nstrcpy(hello, \"Hello World\");\nhello+=6;\nstrcpy(hello, \"Mars\");\n```\n```c\nchar hello[25];\nstrcpy(hello, \"Hello World\");\nstrcpy(*hello[6], \"Mars\");\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1fa110a006d9891c60ef2892",
+        "question": "Si vous utilisez la fonction fopen() avec le mode \"a\", que se passe-t-il si le fichier nomm\u00e9 n'existe pas?",
+        "answer": "Le fichier est cr\u00e9\u00e9 et ouvert en \u00e9criture.",
+        "explanation": "[R\u00e9f\u00e9rence](https://www.tutorialspoint.com/c_standard_library/c_function_fopen.htm)",
+        "hint": null,
+        "correctAnswer": [
+          "Le fichier est cr\u00e9\u00e9 et ouvert en \u00e9criture."
+        ],
+        "options": [
+          "Le fichier est cr\u00e9\u00e9 et ouvert en lecture.",
+          "Le fichier est cr\u00e9\u00e9 et ouvert en \u00e9criture.",
+          "La fonction fopen() retourne NULL indiquant que l'op\u00e9ration a \u00e9chou\u00e9.",
+          "Le fichier est cr\u00e9\u00e9 et ouvert en \u00e9criture et en lecture"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7f9059ccbc84b4e475cb647e",
+        "question": "Que retourne cette fonction?\n```c\nint fl(int a, int b) { return(a>b?a:b); }\n```",
+        "answer": "la plus grande valeur des deux param\u00e8tres pass\u00e9s",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "la plus grande valeur des deux param\u00e8tres pass\u00e9s"
+        ],
+        "options": [
+          "erreur de compilateur",
+          "la plus petite valeur des deux param\u00e8tres pass\u00e9s",
+          "erreur d'ex\u00e9cution",
+          "la plus grande valeur des deux param\u00e8tres pass\u00e9s"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0466a2419f3598d0d9a9c7f8",
+        "question": "Quelle option est un nom de fonction valide?",
+        "answer": "draw_star()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "draw_star()"
+        ],
+        "options": [
+          "draw_star()",
+          "5times()",
+          "upper-limit()",
+          "auto()"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1f4810bae71f8ea86b1533e5",
+        "question": "Quelle n'est pas une d\u00e9finition de type valide d'une structure qui contient des coordonn\u00e9es x et y sous forme d'entiers, et qui peut \u00eatre utilis\u00e9e comme indiqu\u00e9 pour la variable nomm\u00e9e point?\n```c\ncoord point;\npoint.x = 9;\npoint.y = 3;\n```",
+        "answer": ":",
+        "explanation": "```c\nstruct coord{\nint x;\nint y;\n};\ntypedef struct coord coord;\n```\n```c\ntypedef struct coord{\nint x;\nint y;\n};\n```\n```c\ntypedef struct coord{\nint x;\nint y;\n} coord;\n```\n```c\ntypedef struct{\nint x;\nint y;\n} coord;\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c9f84f36a7c03ce9a3cde3ad",
+        "question": "Quelle est la sortie du programme ci-dessous?\n```c\n#include <stdio.h>\n#if X == 3\n    #define Y 3\n#else\n    #define Y 5\n#endif\nint main()\n{\n    printf(\"%d\", Y);\n    return 0;\n}\n```",
+        "answer": "5",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "5"
+        ],
+        "options": [
+          "3",
+          "5",
+          "3 ou 5 selon l'entr\u00e9e",
+          "Erreur de compilation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "21fd0ceecedd16facf939020",
+        "question": "Qu'allouent les fonctions malloc() et calloc()?",
+        "answer": "m\u00e9moire dynamique",
+        "explanation": "[Calloc](https://devdocs.io/c/memory/calloc)\n[Malloc](https://devdocs.io/c/memory/malloc)",
+        "hint": null,
+        "correctAnswer": [
+          "m\u00e9moire dynamique"
+        ],
+        "options": [
+          "m\u00e9moire r\u00e9allou\u00e9e",
+          "m\u00e9moire statique",
+          "m\u00e9moire dynamique",
+          "m\u00e9moire fragment\u00e9e"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a4e6936748896190bbbe4605",
+        "question": "Vous devez d\u00e9terminer si une variable de cha\u00eene est une sous-cha\u00eene d'une autre cha\u00eene. Quelle fonction de biblioth\u00e8que C standard utilisez-vous?",
+        "answer": "strstr(str1, str2);",
+        "explanation": "[R\u00e9f\u00e9rence](https://devdocs.io/c/string/byte/strstr)",
+        "hint": null,
+        "correctAnswer": [
+          "strstr(str1, str2);"
+        ],
+        "options": [
+          "substr(str1, str2);",
+          "strstr(str1, str2);",
+          "substring(str1, str2);",
+          "strspn(str1, str2);"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5b96966b9313a9fa2ca3b5f8",
+        "question": "Trouvez la sortie du programme.\n```c\n#include <stdio.h>\n#define L 10\nint main(){\n    int a =10;\n    switch (a,a<<2){\n        case L:printf(\"a==L\");     break;\n        case L*2 : printf(\"a = L* 2\\n\");     break;\n        case L*4 : printf(\"a = L* 4\\n\");    break;\n        default: printf(\"Error\\n\");\n    }\n}\n```",
+        "answer": "`a=L*4`",
+        "explanation": "[R\u00e9f\u00e9rence](https://www.geeksforgeeks.org/left-shift-right-shift-operators-c-cpp/)",
+        "hint": null,
+        "correctAnswer": [
+          "`a=L*4`"
+        ],
+        "options": [
+          "`a=L*2`",
+          "`a=L`",
+          "`Error`",
+          "`a=L*4`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a88c7c6007867e88126caede",
+        "question": "Pr\u00e9disez la sortie du code suivant lorsque les variables **enti\u00e8res** x est initialis\u00e9e \u00e0 10, y \u00e0 2, et z \u00e0 0.\n```c\nz = x + y * x + 10 / 2 * x;\nprintf(\"value is =%d\",z);\n```",
+        "answer": "80",
+        "explanation": "[R\u00e9f\u00e9rence](https://www.informit.com/articles/article.aspx?p=2062174&seqNum=4)",
+        "hint": null,
+        "correctAnswer": [
+          "80"
+        ],
+        "options": [
+          "80",
+          "170",
+          "31.5",
+          "6"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4793bdb30283671c60c83c2f",
+        "question": "Quelle sera la sortie de l'extrait de code suivant?\n```c\n#include <stdio.h>\nvoid solve() {\n    int x = 2;\n    printf(\"%d\", (x << 1) + (x >> 1));\n}\nint main() {\n    solve();\n\treturn 0;\n}\n```",
+        "answer": "5",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "5"
+        ],
+        "options": [
+          "5",
+          "4",
+          "2",
+          "1"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a12eb4c7a1fe94259680896e",
+        "question": "Quelle est la sortie de ce programme?\n```c\nint a=20, b=10;\nint f1(a) {\n    return(a*b);\n}\nmain() {\n    printf(\"%d\", f1(5));\n}\n```",
+        "answer": "50",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "50"
+        ],
+        "options": [
+          "100",
+          "200",
+          "5",
+          "50"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "71b04243bfe11fac8bcd273f",
+        "question": "Qu'est-ce que le caract\u00e8re \\0?",
+        "answer": "Caract\u00e8re NULL",
+        "explanation": "[R\u00e9f\u00e9rence](<https://www.youth4work.com/Talent/C-Language/Forum/117150-what-is-the-use-of-a-0-character-in-c-language#:~:text=by%20using%20of%20null%20character(%27%5C0%27)%20it%20terminates%20the%20string%20untill%20the%20null%20character%20hit...%20which%20means%20comes%20out%20of%20the%20loop...%20In%20strings%20by%20default%20takes%20the%20null%20charater>)",
+        "hint": null,
+        "correctAnswer": [
+          "Caract\u00e8re NULL"
+        ],
+        "options": [
+          "Cha\u00eene",
+          "Caract\u00e8re NULL",
+          "Z\u00c9RO",
+          "Variable"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e5231d2674325d8f66e411c1",
+        "question": "Quelle est la sortie correcte pour le code suivant?\n```c\n#include<stdio.h>\n#include<conio.h>\nmain()\n{\n     int a=10, b=20;\n     clrscr();\n     printf(\"Avant l'\u00e9change a=%d b=%d\",a,b);\n     a=a+b;\n     b=a-b;\n     a=a-b;\n     printf(\"\\nApr\u00e8s l'\u00e9change a=%d b=%d\",a,b);\n     getch();\n}\n```",
+        "answer": "Avant a=10 b=20 , Apr\u00e8s a=20 b=10",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Avant a=10 b=20 , Apr\u00e8s a=20 b=10"
+        ],
+        "options": [
+          "Avant a=10 b=20 , Apr\u00e8s a=10 b=10",
+          "Avant a=10 b=10 , Apr\u00e8s a=20 b=10",
+          "Avant a=10 b=20 , Apr\u00e8s a=20 b=20",
+          "Avant a=10 b=20 , Apr\u00e8s a=20 b=10"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0abd24526579100497f25fd2",
+        "question": "Quelle est l'option incorrecte qui explique la directive #pragma?",
+        "answer": "#pragma startup ne permet pas de sp\u00e9cifier des fonctions appel\u00e9es au d\u00e9marrage du programme.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "#pragma startup ne permet pas de sp\u00e9cifier des fonctions appel\u00e9es au d\u00e9marrage du programme."
+        ],
+        "options": [
+          "#pragma exit nous permet de sp\u00e9cifier des fonctions appel\u00e9es \u00e0 la sortie du programme.",
+          "Il s'agit d'une directive de pr\u00e9processeur qui peut \u00eatre utilis\u00e9e pour activer ou d\u00e9sactiver certaines fonctionnalit\u00e9s.",
+          "#pragma startup ne permet pas de sp\u00e9cifier des fonctions appel\u00e9es au d\u00e9marrage du programme.",
+          "Elle est de deux types : #pragma startup, #pragma exit et pragma warn."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "41178bf45a6966ed3832a931",
+        "question": "Quelle sera la sortie de l'extrait de code suivant?\n```c\n#include <stdio.h>\nunion School {\n    int age, rollNo;\n    double marks;\n};\nvoid solve() {\n    union School sc;\n    sc.age = 19;\n    sc.rollNo = 82;\n    sc.marks = 19.04;\n    printf(\"%d\", (int)sizeof(sc));\n}\nint main() {\n    solve();\n\treturn 0;\n}\n```",
+        "answer": "8",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "8"
+        ],
+        "options": [
+          "2",
+          "4",
+          "8",
+          "10"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a3bcda4ed590f14c852d1f92",
+        "question": "Quelle sera la sortie de l'extrait de code suivant?\n```c\n#include <stdio.h>\nstruct School {\n    int age, rollNo;\n};\nvoid solve() {\n    struct School sc;\n    sc.age = 19;\n    sc.rollNo = 82;\n    printf(\"%d %d\", sc.age, sc.rollNo);\n}\nint main() {\n    solve();\n\treturn 0;\n}\n```",
+        "answer": "19 82",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "19 82"
+        ],
+        "options": [
+          "19 82",
+          "Erreur de compilation",
+          "82 19",
+          "Aucune de ces r\u00e9ponses"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3149170e88e47f08058f7287",
+        "question": "Quelle est la sortie de l'extrait de code suivant?\n```c\nint main() {\n\tint sum = 2 + 4 / 2 + 6 * 2;\n\tprintf(\"%d\", sum);\n\treturn 0;\n}\n```",
+        "answer": "16",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "16"
+        ],
+        "options": [
+          "2",
+          "15",
+          "16",
+          "18"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fe7f0d71e4cc972c334d2532",
+        "question": "Que signifie la d\u00e9claration suivante?\n```\nint (*ptr)[10];\n```",
+        "answer": "ptr est un pointeur vers un tableau de 10 entiers",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "ptr est un pointeur vers un tableau de 10 entiers"
+        ],
+        "options": [
+          "ptr est un tableau de pointeurs vers 10 entiers",
+          "ptr est un pointeur vers un tableau de 10 entiers",
+          "ptr est un tableau de 10 entiers",
+          "ptr est un pointeur vers un tableau"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "16ad6fe805dc8b8f5159ce6c",
+        "question": "Quelle sera la sortie de l'extrait de code suivant?\n```c\n#include <stdio.h>\nvoid change(int,int);\nint main()\n{\n   int a=10,b=20;\n   change(a,b); //appel d'une fonction en passant les valeurs des variables.\n   printf(\"Valeur de a est: %d\",a);\n   printf(\"\\n\");\n   printf(\"Valeur de b est: %d\",b);\n   return 0;\n}\nvoid change(int x,int y)\n{\n   x=13;\n   y=17;\n}\n```",
+        "answer": "10,20",
+        "explanation": "**Explication:** La fonction \"change\" changera la valeur de x et y uniquement dans sa propre port\u00e9e, donc a et b ne sont pas affect\u00e9s.",
+        "hint": null,
+        "correctAnswer": [
+          "10,20"
+        ],
+        "options": [
+          "10,20",
+          "10,10",
+          "20,20",
+          "20,10"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "94ae10fb2891a8631c6a8b5d",
+        "question": "Choisissez vrai ou faux. Lorsqu'une variable est cr\u00e9\u00e9e en C, une adresse m\u00e9moire est attribu\u00e9e \u00e0 la variable.",
+        "answer": "Vrai",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Vrai"
+        ],
+        "options": [
+          "Vrai",
+          "Faux"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6108e6ffb4fd4ad35db24cac",
+        "question": "Qu'affiche le fragment de programme C suivant?\n```c\n#include <stdio.h>\nint main()\n{\n    char c[] = \"GATE2011\";\n    char *p = c;\n    printf(\"%s\", p + p[3] -p[1]);\n    return 0;\n}\n```",
+        "answer": "2011",
+        "explanation": "**Explication:** char c[ ] = \"GATE2011\"; puisque char \\*p =c cela signifie que p repr\u00e9sente l'adresse de base de la cha\u00eene \"GATE2011\" DONC p[3] est 'E' et p[1] est 'A'. La valeur de la sous-expression p[3] \u2013 p[1] = valeur ASCII de 'E' \u2013 valeur ASCII de 'A' = 4. Donc l'expression p + p[3] \u2013 p[1] devient (p + 4) Et (p+4) repr\u00e9sente l'adresse de base de la cha\u00eene \"2011\" printf(\"%s\", p + p[3] \u2013 p[1]) ; Donc cela affichera 2011",
+        "hint": null,
+        "correctAnswer": [
+          "2011"
+        ],
+        "options": [
+          "GATE 2011",
+          "E2011",
+          "2011",
+          "01"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "591358b8634117b614423760",
+        "question": "Quelle est la sortie de l'extrait de code suivant?\n```c\nint main() {\n\tint a = 5, b = 6, c;\n\tc = a++ + ++b;\n\tprintf(\"%d %d %d\", a, b, c);\n\treturn 0;\n}\n```",
+        "answer": "6 7 12",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "6 7 12"
+        ],
+        "options": [
+          "5 6 11",
+          "6 7 12",
+          "5 6 12",
+          "6 6 12"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cf3b65772d3868c968c0217b",
+        "question": "Quelle sera la sortie du segment de programme C suivant?\n```c\nchar inchar = 'A';\nswitch (inchar)\n{\ncase 'A' :\n\tprintf (\"choix A \\n\") ;\ncase 'B' :\n\tprintf (\"choix B \") ;\ncase 'C' :\ncase 'D' :\ncase 'E' :\ndefault:\n\tprintf (\"Pas de choix\") ;\n}\n```",
+        "answer": "Choix A",
+        "explanation": "Choix B Pas de choix",
+        "hint": null,
+        "correctAnswer": [
+          "Choix A"
+        ],
+        "options": [
+          "Pas de choix",
+          "Choix A",
+          "Choix A",
+          "Le programme ne donne aucune sortie car il est erron\u00e9"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4ec6b2850cc9f4e228f419c4",
+        "question": "La variable de cha\u00eene str1 a la valeur \"abc\", et la variable de cha\u00eene str2 a la valeur \"xyz\". Quelles sont les valeurs de str1 et str2 apr\u00e8s l'ex\u00e9cution de cette instruction?\n```c\nstrcpy(str1, str2);\n```",
+        "answer": "str1: \"xyz\" ; str2: \"xyz\"",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "str1: \"xyz\" ; str2: \"xyz\""
+        ],
+        "options": [
+          "str1: \"xyz\" ; str2: \"xyz\"",
+          "str1: \"abc\" ; str2: \"xyz\"",
+          "str1: \"xyz\" ; str2: \"abc\"",
+          "str1: \"abc\" ; str2: \"abc\""
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "54c8028a96004d5d150e06e7",
+        "question": "Quelle n'est pas une commande valide avec cette d\u00e9claration?\n```c\nchar *string[20] = { \"one\", \"two\", \"three\"};\n```",
+        "answer": "`printf(\"%s\", string[1][2]);`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`printf(\"%s\", string[1][2]);`"
+        ],
+        "options": [
+          "`printf(\"%c\", string[1][2]);`",
+          "`printf(\"%s\", string[1][2]);`",
+          "`printf(\"%s\", string[1]);`",
+          "`printf(string[1]);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9af286a5d221b1205f234b6a",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 5;\nint y = ++x + x++;\nprintf(\"%d %d\", x, y);\n```",
+        "answer": "7 12",
+        "explanation": "**Explication:**\nD'abord, ++x incr\u00e9mente x \u00e0 6 et utilise 6 dans l'expression. Ensuite x++ utilise 6 et incr\u00e9mente x \u00e0 7 apr\u00e8s. Donc y = 6 + 6 = 12, et x devient 7.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_precedence)",
+        "hint": null,
+        "correctAnswer": [
+          "7 12"
+        ],
+        "options": [
+          "6 11",
+          "7 12",
+          "7 11",
+          "6 12"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7736fc8e9f7aaa00d9cf1a4a",
+        "question": "Qu'indique le mot-cl\u00e9 `volatile` en C?",
+        "answer": "La variable peut \u00eatre modifi\u00e9e par des facteurs externes",
+        "explanation": "**Explication:**\nLe mot-cl\u00e9 `volatile` indique au compilateur que la valeur d'une variable peut \u00eatre modifi\u00e9e par des facteurs externes (mat\u00e9riel, interruptions, autres threads), donc le compilateur ne doit pas optimiser les lectures/\u00e9critures.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/volatile)",
+        "hint": null,
+        "correctAnswer": [
+          "La variable peut \u00eatre modifi\u00e9e par des facteurs externes"
+        ],
+        "options": [
+          "La variable ne peut pas \u00eatre modifi\u00e9e",
+          "La variable peut \u00eatre modifi\u00e9e par des facteurs externes",
+          "La variable est stock\u00e9e en ROM",
+          "La variable est une constante"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "066341e27e6de7c358cda22d",
+        "question": "Quel est le but du mot-cl\u00e9 `restrict` en C99?",
+        "answer": "Indiquer qu'un pointeur est le seul moyen d'acc\u00e9der \u00e0 un objet",
+        "explanation": "**Explication:**\nLe mot-cl\u00e9 `restrict` est un qualificateur de type qui peut \u00eatre appliqu\u00e9 aux pointeurs. Il indique au compilateur que pendant la dur\u00e9e de vie du pointeur, seul lui ou une valeur directement d\u00e9riv\u00e9e de lui sera utilis\u00e9 pour acc\u00e9der \u00e0 l'objet vers lequel il pointe. Cela permet certaines optimisations du compilateur.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/restrict)",
+        "hint": null,
+        "correctAnswer": [
+          "Indiquer qu'un pointeur est le seul moyen d'acc\u00e9der \u00e0 un objet"
+        ],
+        "options": [
+          "Indiquer qu'un pointeur est le seul moyen d'acc\u00e9der \u00e0 un objet",
+          "Restreindre la port\u00e9e d'une variable",
+          "Emp\u00eacher la modification d'une variable",
+          "Restreindre l'acc\u00e8s aux fonctions"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a6ba90211d62d9847d0dd14f",
+        "question": "Quelle est la diff\u00e9rence entre `malloc()` et `calloc()`?",
+        "answer": "calloc initialise la m\u00e9moire allou\u00e9e \u00e0 z\u00e9ro, malloc ne le fait pas",
+        "explanation": "**Explication:**\n`calloc()` alloue de la m\u00e9moire et initialise tous les octets \u00e0 z\u00e9ro, tandis que `malloc()` alloue de la m\u00e9moire mais la laisse non initialis\u00e9e. `calloc()` prend \u00e9galement deux arguments (nombre d'\u00e9l\u00e9ments et taille de chaque \u00e9l\u00e9ment) tandis que `malloc()` en prend un (taille totale en octets).\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/memory/calloc)",
+        "hint": null,
+        "correctAnswer": [
+          "calloc initialise la m\u00e9moire allou\u00e9e \u00e0 z\u00e9ro, malloc ne le fait pas"
+        ],
+        "options": [
+          "malloc est plus rapide que calloc",
+          "calloc initialise la m\u00e9moire allou\u00e9e \u00e0 z\u00e9ro, malloc ne le fait pas",
+          "malloc peut allouer plus de m\u00e9moire que calloc",
+          "Il n'y a pas de diff\u00e9rence"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f007d67b14256a8cf4f94c8d",
+        "question": "Qu'est-ce qu'un pointeur pendant?",
+        "answer": "Un pointeur qui pointe vers de la m\u00e9moire lib\u00e9r\u00e9e ou supprim\u00e9e",
+        "explanation": "**Explication:**\nUn pointeur pendant est un pointeur qui pointe vers de la m\u00e9moire qui a \u00e9t\u00e9 lib\u00e9r\u00e9e ou supprim\u00e9e. L'acc\u00e8s \u00e0 un tel pointeur conduit \u00e0 un comportement ind\u00e9fini.\n[R\u00e9f\u00e9rence](https://en.wikipedia.org/wiki/Dangling_pointer)",
+        "hint": null,
+        "correctAnswer": [
+          "Un pointeur qui pointe vers de la m\u00e9moire lib\u00e9r\u00e9e ou supprim\u00e9e"
+        ],
+        "options": [
+          "Un pointeur qui pointe vers NULL",
+          "Un pointeur qui pointe vers de la m\u00e9moire lib\u00e9r\u00e9e ou supprim\u00e9e",
+          "Un pointeur qui n'a pas \u00e9t\u00e9 initialis\u00e9",
+          "Un pointeur qui pointe vers une constante"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8a0584b3c7cd73c8a8760cc0",
+        "question": "Quelle est la sortie de ce code?\n```c\nint arr[] = {1, 2, 3, 4, 5};\nprintf(\"%d\", *(arr + 3));\n```",
+        "answer": "4",
+        "explanation": "**Explication:**\n`arr` est un pointeur vers le premier \u00e9l\u00e9ment. `arr + 3` pointe vers le 4\u00e8me \u00e9l\u00e9ment (indice 3). L'op\u00e9rateur `*` le d\u00e9r\u00e9f\u00e9rence pour obtenir la valeur 4.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_member_access)",
+        "hint": null,
+        "correctAnswer": [
+          "4"
+        ],
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "edf157ca43ddd6fbeb9978c2",
+        "question": "Que fait le mot-cl\u00e9 `static` lorsqu'il est appliqu\u00e9 \u00e0 une fonction?",
+        "answer": "Limite la port\u00e9e de la fonction au fichier actuel",
+        "explanation": "**Explication:**\nLorsque `static` est appliqu\u00e9 \u00e0 une fonction, il limite la liaison de la fonction \u00e0 une liaison interne, ce qui signifie qu'elle ne peut \u00eatre appel\u00e9e que depuis la m\u00eame unit\u00e9 de traduction (fichier source).\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/storage_duration)",
+        "hint": null,
+        "correctAnswer": [
+          "Limite la port\u00e9e de la fonction au fichier actuel"
+        ],
+        "options": [
+          "Limite la port\u00e9e de la fonction au fichier actuel",
+          "Rend la fonction plus rapide",
+          "Emp\u00eache la fonction d'\u00eatre appel\u00e9e",
+          "Rend la fonction en ligne"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c7cfab6339ffb7677d34afb4",
+        "question": "Quelle est la taille d'un pointeur dans un syst\u00e8me 64 bits?",
+        "answer": "8 octets",
+        "explanation": "**Explication:**\nSur un syst\u00e8me 64 bits, les pointeurs font g\u00e9n\u00e9ralement 8 octets (64 bits) quelle que soit la cible vers laquelle ils pointent. La taille est d\u00e9termin\u00e9e par l'architecture du syst\u00e8me, pas par le type point\u00e9.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/pointer)",
+        "hint": null,
+        "correctAnswer": [
+          "8 octets"
+        ],
+        "options": [
+          "4 octets",
+          "8 octets",
+          "16 octets",
+          "D\u00e9pend de ce vers quoi il pointe"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "203add74d40fe82f7bcfca9c",
+        "question": "Quel est le but de `typedef`?",
+        "answer": "Cr\u00e9er un alias pour un type de donn\u00e9es existant",
+        "explanation": "**Explication:**\n`typedef` cr\u00e9e un alias (nom alternatif) pour un type de donn\u00e9es existant. Il ne cr\u00e9e pas un nouveau type, juste un nouveau nom pour un type existant.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/typedef)",
+        "hint": null,
+        "correctAnswer": [
+          "Cr\u00e9er un alias pour un type de donn\u00e9es existant"
+        ],
+        "options": [
+          "D\u00e9finir un nouveau type de donn\u00e9es",
+          "Cr\u00e9er un alias pour un type de donn\u00e9es existant",
+          "D\u00e9clarer une variable",
+          "D\u00e9finir une macro"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "75b4bf785a3bbf8d00f316d9",
+        "question": "Qu'est-ce qu'une fuite m\u00e9moire?",
+        "answer": "Lorsque la m\u00e9moire allou\u00e9e n'est pas lib\u00e9r\u00e9e",
+        "explanation": "**Explication:**\nUne fuite m\u00e9moire se produit lorsque de la m\u00e9moire allou\u00e9e dynamiquement (via `malloc`, `calloc`, etc.) n'est pas lib\u00e9r\u00e9e en utilisant `free()`, ce qui fait que le programme consomme de plus en plus de m\u00e9moire au fil du temps.\n[R\u00e9f\u00e9rence](https://en.wikipedia.org/wiki/Memory_leak)",
+        "hint": null,
+        "correctAnswer": [
+          "Lorsque la m\u00e9moire allou\u00e9e n'est pas lib\u00e9r\u00e9e"
+        ],
+        "options": [
+          "Lorsqu'un pointeur pointe vers une m\u00e9moire invalide",
+          "Lorsque la m\u00e9moire allou\u00e9e n'est pas lib\u00e9r\u00e9e",
+          "Lorsqu'une variable sort de la port\u00e9e",
+          "Lorsqu'un d\u00e9bordement de pile se produit"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1e0d605465fa9aca907e59a6",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 10;\nint *p = &x;\n*p = 20;\nprintf(\"%d\", x);\n```",
+        "answer": "20",
+        "explanation": "**Explication:**\n`p` pointe vers `x`. `*p = 20` modifie la valeur \u00e0 l'adresse vers laquelle p pointe, qui est `x`. Donc `x` devient 20.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/pointer)",
+        "hint": null,
+        "correctAnswer": [
+          "20"
+        ],
+        "options": [
+          "10",
+          "20",
+          "Adresse de x",
+          "Ind\u00e9fini"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8b3179aa09f94521642e0e1f",
+        "question": "Que retourne toujours `sizeof(char)` en C?",
+        "answer": "1",
+        "explanation": "**Explication:**\nPar d\u00e9finition dans la norme C, `sizeof(char)` vaut toujours 1. C'est l'unit\u00e9 fondamentale de taille en C, et toutes les autres tailles en sont des multiples.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/sizeof)",
+        "hint": null,
+        "correctAnswer": [
+          "1"
+        ],
+        "options": [
+          "1",
+          "2",
+          "4",
+          "D\u00e9pend du syst\u00e8me"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "df940da02630ec94cd29649b",
+        "question": "Quelle est la diff\u00e9rence entre `++i` et `i++`?",
+        "answer": "++i incr\u00e9mente avant utilisation, i++ incr\u00e9mente apr\u00e8s utilisation",
+        "explanation": "**Explication:**\n`++i` (pr\u00e9-incr\u00e9mentation) incr\u00e9mente la variable et retourne la nouvelle valeur. `i++` (post-incr\u00e9mentation) retourne la valeur actuelle puis incr\u00e9mente la variable.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_incdec)",
+        "hint": null,
+        "correctAnswer": [
+          "++i incr\u00e9mente avant utilisation, i++ incr\u00e9mente apr\u00e8s utilisation"
+        ],
+        "options": [
+          "++i incr\u00e9mente avant utilisation, i++ incr\u00e9mente apr\u00e8s utilisation",
+          "++i est plus rapide que i++",
+          "i++ ne peut \u00eatre utilis\u00e9 que dans les boucles",
+          "Il n'y a pas de diff\u00e9rence"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f1de7f102f1400a6bf03894d",
+        "question": "Qu'est-ce qu'une erreur de segmentation?",
+        "answer": "Une erreur caus\u00e9e par l'acc\u00e8s \u00e0 une m\u00e9moire invalide",
+        "explanation": "**Explication:**\nUne erreur de segmentation (segfault) se produit lorsqu'un programme tente d'acc\u00e9der \u00e0 une m\u00e9moire qu'il n'est pas autoris\u00e9 \u00e0 acc\u00e9der, comme d\u00e9r\u00e9f\u00e9rencer un pointeur NULL ou acc\u00e9der \u00e0 de la m\u00e9moire lib\u00e9r\u00e9e.\n[R\u00e9f\u00e9rence](https://en.wikipedia.org/wiki/Segmentation_fault)",
+        "hint": null,
+        "correctAnswer": [
+          "Une erreur caus\u00e9e par l'acc\u00e8s \u00e0 une m\u00e9moire invalide"
+        ],
+        "options": [
+          "Une erreur de syntaxe",
+          "Une erreur caus\u00e9e par l'acc\u00e8s \u00e0 une m\u00e9moire invalide",
+          "Une erreur de compilation",
+          "Un avertissement"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d37f3d6fc45c09c091d44d97",
+        "question": "Quel est le but du mot-cl\u00e9 `const` avec les pointeurs?\n```c\nconst int *p;\n```",
+        "answer": "La valeur point\u00e9e ne peut pas \u00eatre modifi\u00e9e via p",
+        "explanation": "**Explication:**\n`const int *p` signifie que p pointe vers un entier constant - vous ne pouvez pas modifier la valeur via p, mais vous pouvez changer l'endroit o\u00f9 p pointe. Pour `int * const p`, le pointeur lui-m\u00eame est constant.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/const)",
+        "hint": null,
+        "correctAnswer": [
+          "La valeur point\u00e9e ne peut pas \u00eatre modifi\u00e9e via p"
+        ],
+        "options": [
+          "La valeur point\u00e9e ne peut pas \u00eatre modifi\u00e9e via p",
+          "Le pointeur p ne peut pas \u00eatre modifi\u00e9",
+          "Le pointeur et la valeur sont tous deux constants",
+          "Cela n'a aucun effet"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "993aa76a5f4fda4435e75739",
+        "question": "Quelle est la sortie de ce code?\n```c\nint arr[5] = {1, 2, 3};\nprintf(\"%d\", arr[4]);\n```",
+        "answer": "0",
+        "explanation": "**Explication:**\nLorsqu'un tableau est partiellement initialis\u00e9, les \u00e9l\u00e9ments restants sont automatiquement initialis\u00e9s \u00e0 0. Donc arr[3] et arr[4] sont tous deux 0.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/array_initialization)",
+        "hint": null,
+        "correctAnswer": [
+          "0"
+        ],
+        "options": [
+          "0",
+          "3",
+          "Valeur al\u00e9atoire",
+          "Erreur de compilation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9ab5b96c0e786d7c4fa8ed65",
+        "question": "Que fait le mot-cl\u00e9 `extern`?",
+        "answer": "D\u00e9clare une variable d\u00e9finie ailleurs",
+        "explanation": "**Explication:**\n`extern` d\u00e9clare une variable ou une fonction d\u00e9finie dans un autre fichier source ou plus tard dans le m\u00eame fichier. Il indique au compilateur que la d\u00e9finition existe ailleurs.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/extern)",
+        "hint": null,
+        "correctAnswer": [
+          "D\u00e9clare une variable d\u00e9finie ailleurs"
+        ],
+        "options": [
+          "Rend une variable externe au programme",
+          "D\u00e9clare une variable d\u00e9finie ailleurs",
+          "Exporte une variable vers d'autres programmes",
+          "Cr\u00e9e une variable globale"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f3c3a846946bcbfae47f39e6",
+        "question": "Quelle est la diff\u00e9rence entre `struct` et `union`?",
+        "answer": "Les membres de struct ont une m\u00e9moire s\u00e9par\u00e9e, les membres de union partagent la m\u00e9moire",
+        "explanation": "**Explication:**\nDans une `struct`, chaque membre a son propre emplacement m\u00e9moire. Dans une `union`, tous les membres partagent le m\u00eame emplacement m\u00e9moire, et un seul membre peut contenir une valeur \u00e0 la fois. La taille d'une union est la taille de son plus grand membre.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/union)",
+        "hint": null,
+        "correctAnswer": [
+          "Les membres de struct ont une m\u00e9moire s\u00e9par\u00e9e, les membres de union partagent la m\u00e9moire"
+        ],
+        "options": [
+          "Les membres de struct ont une m\u00e9moire s\u00e9par\u00e9e, les membres de union partagent la m\u00e9moire",
+          "struct est plus rapide que union",
+          "union peut avoir plus de membres que struct",
+          "Il n'y a pas de diff\u00e9rence"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "57700b71c4ac2e1798f30ec8",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 5;\nprintf(\"%d\", x << 2);\n```",
+        "answer": "20",
+        "explanation": "**Explication:**\nL'op\u00e9rateur `<<` est un d\u00e9calage de bits vers la gauche. `x << 2` d\u00e9cale les bits de x vers la gauche de 2 positions, ce qui \u00e9quivaut \u00e0 multiplier par 2^2 = 4. Donc 5 \\* 4 = 20.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_arithmetic)",
+        "hint": null,
+        "correctAnswer": [
+          "20"
+        ],
+        "options": [
+          "5",
+          "7",
+          "20",
+          "10"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c7f7e2bd67aaaed954614b94",
+        "question": "Qu'est-ce qu'un pointeur de fonction?",
+        "answer": "Un pointeur qui stocke l'adresse d'une fonction",
+        "explanation": "**Explication:**\nUn pointeur de fonction est une variable qui stocke l'adresse d'une fonction. Il peut \u00eatre utilis\u00e9 pour appeler la fonction indirectement ou passer des fonctions comme arguments \u00e0 d'autres fonctions.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/pointer#Pointers_to_functions)",
+        "hint": null,
+        "correctAnswer": [
+          "Un pointeur qui stocke l'adresse d'une fonction"
+        ],
+        "options": [
+          "Un pointeur vers la valeur de retour d'une fonction",
+          "Un pointeur qui stocke l'adresse d'une fonction",
+          "Une fonction qui retourne un pointeur",
+          "Un pointeur \u00e0 l'int\u00e9rieur d'une fonction"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5d66d412f5a25ecd08baf40a",
+        "question": "Que repr\u00e9sente `NULL` en C?",
+        "answer": "Une constante de pointeur nul",
+        "explanation": "**Explication:**\n`NULL` est une macro qui repr\u00e9sente une constante de pointeur nul. Elle est g\u00e9n\u00e9ralement d\u00e9finie comme `((void*)0)` ou simplement `0`. Elle indique qu'un pointeur ne pointe vers aucun emplacement m\u00e9moire valide.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/types/NULL)",
+        "hint": null,
+        "correctAnswer": [
+          "Une constante de pointeur nul"
+        ],
+        "options": [
+          "Le nombre z\u00e9ro",
+          "Une constante de pointeur nul",
+          "Une cha\u00eene vide",
+          "Une valeur ind\u00e9finie"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9f338aa988494c3de6082026",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 10, y = 20;\nint *p1 = &x, *p2 = &y;\n*p1 = *p2;\nprintf(\"%d %d\", x, y);\n```",
+        "answer": "20 20",
+        "explanation": "**Explication:**\n`*p1 = *p2` copie la valeur point\u00e9e par p2 (qui est 20) vers l'emplacement point\u00e9 par p1 (qui est x). Donc x devient 20, y reste 20.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/pointer)",
+        "hint": null,
+        "correctAnswer": [
+          "20 20"
+        ],
+        "options": [
+          "10 20",
+          "20 20",
+          "10 10",
+          "20 10"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2f9ab3b11b1538999efdb305",
+        "question": "Quel est le but de la directive `#pragma`?",
+        "answer": "Fournir des instructions sp\u00e9cifiques au compilateur",
+        "explanation": "**Explication:**\n`#pragma` est une directive de pr\u00e9processeur qui fournit des informations suppl\u00e9mentaires au compilateur. Elle est d\u00e9finie par l'impl\u00e9mentation et utilis\u00e9e pour des fonctionnalit\u00e9s sp\u00e9cifiques au compilateur.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/preprocessor/impl)",
+        "hint": null,
+        "correctAnswer": [
+          "Fournir des instructions sp\u00e9cifiques au compilateur"
+        ],
+        "options": [
+          "Inclure des fichiers d'en-t\u00eate",
+          "D\u00e9finir des macros",
+          "Fournir des instructions sp\u00e9cifiques au compilateur",
+          "D\u00e9clarer des variables"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "920296865ab18d26ba3f555c",
+        "question": "Quelle est la diff\u00e9rence entre `break` et `continue`?",
+        "answer": "break sort de la boucle, continue passe \u00e0 l'it\u00e9ration suivante",
+        "explanation": "**Explication:**\n`break` termine compl\u00e8tement la boucle et continue l'ex\u00e9cution apr\u00e8s la boucle. `continue` saute le reste de l'it\u00e9ration actuelle et passe \u00e0 l'it\u00e9ration suivante de la boucle.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/break)",
+        "hint": null,
+        "correctAnswer": [
+          "break sort de la boucle, continue passe \u00e0 l'it\u00e9ration suivante"
+        ],
+        "options": [
+          "break sort de la boucle, continue passe \u00e0 l'it\u00e9ration suivante",
+          "break est plus rapide que continue",
+          "continue sort de la boucle, break saute l'it\u00e9ration",
+          "Il n'y a pas de diff\u00e9rence"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f46bbb88d6265d551c1ec6a9",
+        "question": "Quelle est la sortie de ce code?\n```c\nint arr[] = {1, 2, 3, 4, 5};\nprintf(\"%d\", sizeof(arr) / sizeof(arr[0]));\n```",
+        "answer": "5",
+        "explanation": "**Explication:**\n`sizeof(arr)` donne la taille totale du tableau en octets. `sizeof(arr[0])` donne la taille d'un \u00e9l\u00e9ment. Les diviser donne le nombre d'\u00e9l\u00e9ments : 5.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/sizeof)",
+        "hint": null,
+        "correctAnswer": [
+          "5"
+        ],
+        "options": [
+          "4",
+          "5",
+          "20",
+          "1"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4f854426ab0b81d931efff42",
+        "question": "Qu'est-ce qu'un pointeur void?",
+        "answer": "Un pointeur g\u00e9n\u00e9rique qui peut pointer vers n'importe quel type de donn\u00e9es",
+        "explanation": "**Explication:**\nUn pointeur `void*` est un pointeur g\u00e9n\u00e9rique qui peut pointer vers n'importe quel type de donn\u00e9es. Il doit \u00eatre converti vers le type appropri\u00e9 avant le d\u00e9r\u00e9f\u00e9rencement.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/pointer)",
+        "hint": null,
+        "correctAnswer": [
+          "Un pointeur g\u00e9n\u00e9rique qui peut pointer vers n'importe quel type de donn\u00e9es"
+        ],
+        "options": [
+          "Un pointeur qui ne pointe vers rien",
+          "Un pointeur g\u00e9n\u00e9rique qui peut pointer vers n'importe quel type de donn\u00e9es",
+          "Un pointeur vers des fonctions void",
+          "Un pointeur invalide"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "71bbf394bb3bef3b776dd921",
+        "question": "Que sugg\u00e8re le mot-cl\u00e9 `register` au compilateur?",
+        "answer": "Stocker une variable dans un registre CPU pour un acc\u00e8s plus rapide",
+        "explanation": "**Explication:**\nLe mot-cl\u00e9 `register` sugg\u00e8re (mais ne garantit pas) que le compilateur devrait stocker la variable dans un registre CPU pour un acc\u00e8s plus rapide. Les compilateurs modernes ignorent souvent cet indice et prennent leurs propres d\u00e9cisions d'optimisation.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/storage_duration)",
+        "hint": null,
+        "correctAnswer": [
+          "Stocker une variable dans un registre CPU pour un acc\u00e8s plus rapide"
+        ],
+        "options": [
+          "Rendre une variable globale",
+          "Stocker une variable dans un registre CPU pour un acc\u00e8s plus rapide",
+          "Prot\u00e9ger une variable contre la modification",
+          "Allouer de la m\u00e9moire sur le tas"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e8b04909aff0ebd573bdf3dc",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 5;\nint y = (x > 3) ? 10 : 20;\nprintf(\"%d\", y);\n```",
+        "answer": "10",
+        "explanation": "**Explication:**\nC'est l'op\u00e9rateur ternaire. Puisque x > 3 est vrai, y re\u00e7oit la valeur 10.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_other)",
+        "hint": null,
+        "correctAnswer": [
+          "10"
+        ],
+        "options": [
+          "10",
+          "20",
+          "5",
+          "3"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bade0c56672e25090991f274",
+        "question": "Quelle est la diff\u00e9rence entre `malloc()` et `realloc()`?",
+        "answer": "realloc redimensionne la m\u00e9moire pr\u00e9c\u00e9demment allou\u00e9e",
+        "explanation": "**Explication:**\n`malloc()` alloue une nouvelle m\u00e9moire. `realloc()` modifie la taille d'un bloc de m\u00e9moire pr\u00e9c\u00e9demment allou\u00e9, le d\u00e9pla\u00e7ant potentiellement vers un nouvel emplacement si n\u00e9cessaire.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/memory/realloc)",
+        "hint": null,
+        "correctAnswer": [
+          "realloc redimensionne la m\u00e9moire pr\u00e9c\u00e9demment allou\u00e9e"
+        ],
+        "options": [
+          "malloc est plus rapide que realloc",
+          "realloc redimensionne la m\u00e9moire pr\u00e9c\u00e9demment allou\u00e9e",
+          "malloc initialise la m\u00e9moire, realloc ne le fait pas",
+          "Il n'y a pas de diff\u00e9rence"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7316d00444f76878f59d6c2e",
+        "question": "Qu'est-ce qu'une \u00e9num\u00e9ration en C?",
+        "answer": "Un type d\u00e9fini par l'utilisateur consistant en constantes enti\u00e8res nomm\u00e9es",
+        "explanation": "**Explication:**\nUne \u00e9num\u00e9ration (`enum`) est un type d\u00e9fini par l'utilisateur qui consiste en un ensemble de constantes enti\u00e8res nomm\u00e9es. Elle rend le code plus lisible en donnant des noms significatifs aux valeurs enti\u00e8res.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/enum)",
+        "hint": null,
+        "correctAnswer": [
+          "Un type d\u00e9fini par l'utilisateur consistant en constantes enti\u00e8res nomm\u00e9es"
+        ],
+        "options": [
+          "Une construction de boucle",
+          "Un type d\u00e9fini par l'utilisateur consistant en constantes enti\u00e8res nomm\u00e9es",
+          "Une fonction qui compte les \u00e9l\u00e9ments",
+          "Un tableau de constantes"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "60f1aea62179b8c2b960f03d",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 10;\nint y = x++ + ++x;\nprintf(\"%d %d\", x, y);\n```",
+        "answer": "12 22",
+        "explanation": "**Explication:**\nD'abord, x++ utilise 10 et incr\u00e9mente x \u00e0 11. Ensuite ++x incr\u00e9mente x \u00e0 12 et utilise 12. Donc y = 10 + 12 = 22, et x vaut 12.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_incdec)",
+        "hint": null,
+        "correctAnswer": [
+          "12 22"
+        ],
+        "options": [
+          "11 21",
+          "12 22",
+          "12 21",
+          "11 22"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1dcf94aa535f5244389c5d32",
+        "question": "Quel est le but de la macro `assert()`?",
+        "answer": "V\u00e9rifier les hypoth\u00e8ses et terminer si faux",
+        "explanation": "**Explication:**\n`assert()` est une macro utilis\u00e9e pour le d\u00e9bogage. Elle v\u00e9rifie si une condition est vraie. Si elle est fausse, elle affiche un message d'erreur et termine le programme. Elle est g\u00e9n\u00e9ralement d\u00e9sactiv\u00e9e dans les versions de production.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/error/assert)",
+        "hint": null,
+        "correctAnswer": [
+          "V\u00e9rifier les hypoth\u00e8ses et terminer si faux"
+        ],
+        "options": [
+          "Affecter des valeurs aux variables",
+          "V\u00e9rifier les hypoth\u00e8ses et terminer si faux",
+          "Affirmer la dominance sur d'autres fonctions",
+          "Cr\u00e9er des assertions dans la documentation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d230837d0796ac47c16f1e84",
+        "question": "Quelle est la diff\u00e9rence entre `fgets()` et `gets()`?",
+        "answer": "fgets est plus s\u00fbr car il limite la taille de l'entr\u00e9e",
+        "explanation": "**Explication:**\n`gets()` n'est pas s\u00fbr car il ne v\u00e9rifie pas la taille du tampon, ce qui entra\u00eene des vuln\u00e9rabilit\u00e9s de d\u00e9bordement de tampon. `fgets()` vous permet de sp\u00e9cifier le nombre maximum de caract\u00e8res \u00e0 lire, ce qui le rend plus s\u00fbr. `gets()` a \u00e9t\u00e9 supprim\u00e9 de la norme C11.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/io/fgets)",
+        "hint": null,
+        "correctAnswer": [
+          "fgets est plus s\u00fbr car il limite la taille de l'entr\u00e9e"
+        ],
+        "options": [
+          "fgets est plus rapide que gets",
+          "fgets est plus s\u00fbr car il limite la taille de l'entr\u00e9e",
+          "gets peut lire depuis n'importe quel fichier",
+          "Il n'y a pas de diff\u00e9rence"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9bca6ff9b72a8ba4dbe326fa",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 5;\nint *p = &x;\nprintf(\"%p %p\", (void*)&x, (void*)p);\n```",
+        "answer": "La m\u00eame adresse affich\u00e9e deux fois",
+        "explanation": "**Explication:**\n`&x` donne l'adresse de x, et p stocke l'adresse de x. Les deux affichent la m\u00eame adresse (en format hexad\u00e9cimal en raison de %p).\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/io/fprintf)",
+        "hint": null,
+        "correctAnswer": [
+          "La m\u00eame adresse affich\u00e9e deux fois"
+        ],
+        "options": [
+          "La m\u00eame adresse affich\u00e9e deux fois",
+          "Deux adresses diff\u00e9rentes",
+          "Erreur de compilation",
+          "5 5"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "74aa1a236df0371e5c646f7c",
+        "question": "Qu'est-ce qu'une directive de pr\u00e9processeur?",
+        "answer": "Une instruction au pr\u00e9processeur avant la compilation",
+        "explanation": "**Explication:**\nLes directives de pr\u00e9processeur (comme #include, #define, #ifdef) sont des instructions trait\u00e9es avant la compilation r\u00e9elle. Elles commencent par # et sont g\u00e9r\u00e9es par le pr\u00e9processeur.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/preprocessor)",
+        "hint": null,
+        "correctAnswer": [
+          "Une instruction au pr\u00e9processeur avant la compilation"
+        ],
+        "options": [
+          "Une fonction qui traite les donn\u00e9es",
+          "Une instruction au pr\u00e9processeur avant la compilation",
+          "Une directive du processeur",
+          "Un type de boucle"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e10f282856b10ac71e639f74",
+        "question": "Quelle est la sortie de ce code?\n{% raw %}\n```c\nint arr[3][3] = {{1,2,3},{4,5,6},{7,8,9}};\nprintf(\"%d\", arr[1][2]);\n```\n{% endraw %}",
+        "answer": "6",
+        "explanation": "**Explication:**\n`arr[1][2]` acc\u00e8de \u00e0 la ligne 1 (deuxi\u00e8me ligne: {4,5,6}), colonne 2 (troisi\u00e8me \u00e9l\u00e9ment: 6).\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/array)",
+        "hint": null,
+        "correctAnswer": [
+          "6"
+        ],
+        "options": [
+          "5",
+          "6",
+          "8",
+          "9"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "071cba4bd2dec219006c48a2",
+        "question": "Quel est le but de la fonction `memset()`?",
+        "answer": "Remplir un bloc de m\u00e9moire avec une valeur sp\u00e9cifique",
+        "explanation": "**Explication:**\n`memset()` remplit un bloc de m\u00e9moire avec une valeur d'octet sp\u00e9cifi\u00e9e. Elle est couramment utilis\u00e9e pour initialiser des tableaux ou des structures \u00e0 z\u00e9ro.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/string/byte/memset)",
+        "hint": null,
+        "correctAnswer": [
+          "Remplir un bloc de m\u00e9moire avec une valeur sp\u00e9cifique"
+        ],
+        "options": [
+          "Allouer de la m\u00e9moire",
+          "Remplir un bloc de m\u00e9moire avec une valeur sp\u00e9cifique",
+          "Copier de la m\u00e9moire",
+          "Lib\u00e9rer de la m\u00e9moire"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8571949667c6584ca0f488f5",
+        "question": "Quelle est la diff\u00e9rence entre `strcpy()` et `strncpy()`?",
+        "answer": "strncpy limite le nombre de caract\u00e8res copi\u00e9s",
+        "explanation": "**Explication:**\n`strcpy()` copie toute la cha\u00eene y compris le terminateur nul. `strncpy()` copie au maximum n caract\u00e8res, offrant une protection contre le d\u00e9bordement de tampon.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/string/byte/strncpy)",
+        "hint": null,
+        "correctAnswer": [
+          "strncpy limite le nombre de caract\u00e8res copi\u00e9s"
+        ],
+        "options": [
+          "strcpy est plus rapide",
+          "strncpy limite le nombre de caract\u00e8res copi\u00e9s",
+          "strcpy peut copier n'importe quel type de donn\u00e9es",
+          "Il n'y a pas de diff\u00e9rence"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6525981b01c2b78046045638",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 10;\nint y = 3;\nprintf(\"%d\", x % y);\n```",
+        "answer": "1",
+        "explanation": "**Explication:**\nL'op\u00e9rateur `%` est l'op\u00e9rateur modulo. 10 % 3 donne le reste de 10 divis\u00e9 par 3, qui est 1.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_arithmetic)",
+        "hint": null,
+        "correctAnswer": [
+          "1"
+        ],
+        "options": [
+          "1",
+          "3",
+          "0",
+          "10"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f884471d248b09918ac70f91",
+        "question": "Qu'est-ce qu'une macro en C?",
+        "answer": "Une directive de pr\u00e9processeur qui d\u00e9finit un fragment de code",
+        "explanation": "**Explication:**\nUne macro est d\u00e9finie en utilisant #define et repr\u00e9sente un fragment de code qui est remplac\u00e9 par le pr\u00e9processeur avant la compilation. Elle peut \u00eatre une constante ou une construction de type fonction.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/preprocessor/replace)",
+        "hint": null,
+        "correctAnswer": [
+          "Une directive de pr\u00e9processeur qui d\u00e9finit un fragment de code"
+        ],
+        "options": [
+          "Une grande fonction",
+          "Une directive de pr\u00e9processeur qui d\u00e9finit un fragment de code",
+          "Un type de variable",
+          "Une construction de boucle"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2c8256ebd4e7a6d170b1bfcb",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 5;\nint y = 10;\nint z = (x > y) ? x : y;\nprintf(\"%d\", z);\n```",
+        "answer": "10",
+        "explanation": "**Explication:**\nL'op\u00e9rateur ternaire v\u00e9rifie si x > y. Comme c'est faux (5 n'est pas sup\u00e9rieur \u00e0 10), z re\u00e7oit la valeur de y, qui est 10.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_other)",
+        "hint": null,
+        "correctAnswer": [
+          "10"
+        ],
+        "options": [
+          "5",
+          "10",
+          "1",
+          "0"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "95e2aaebecc7287ba470bdb5",
+        "question": "Quel est le but de la fonction `free()`?",
+        "answer": "D\u00e9sallouer de la m\u00e9moire allou\u00e9e dynamiquement",
+        "explanation": "**Explication:**\n`free()` d\u00e9salloue la m\u00e9moire qui a \u00e9t\u00e9 pr\u00e9c\u00e9demment allou\u00e9e par `malloc()`, `calloc()` ou `realloc()`. C'est essentiel pour \u00e9viter les fuites m\u00e9moire.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/memory/free)",
+        "hint": null,
+        "correctAnswer": [
+          "D\u00e9sallouer de la m\u00e9moire allou\u00e9e dynamiquement"
+        ],
+        "options": [
+          "Lib\u00e9rer des ressources CPU",
+          "D\u00e9sallouer de la m\u00e9moire allou\u00e9e dynamiquement",
+          "Lib\u00e9rer des variables de leur port\u00e9e",
+          "Effacer l'\u00e9cran"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2f2a21670755ede967dde7b4",
+        "question": "Quelle est la sortie de ce code?\n```c\nchar str[] = \"Hello\";\nprintf(\"%d\", strlen(str));\n```",
+        "answer": "5",
+        "explanation": "**Explication:**\n`strlen()` retourne la longueur de la cha\u00eene en excluant le terminateur nul. \"Hello\" a 5 caract\u00e8res.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/string/byte/strlen)",
+        "hint": null,
+        "correctAnswer": [
+          "5"
+        ],
+        "options": [
+          "6",
+          "5",
+          "4",
+          "Ind\u00e9fini"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "910a67902823794476c39089",
+        "question": "Qu'est-ce qu'une variable statique \u00e0 l'int\u00e9rieur d'une fonction?",
+        "answer": "Une variable qui conserve sa valeur entre les appels de fonction",
+        "explanation": "**Explication:**\nUne variable statique \u00e0 l'int\u00e9rieur d'une fonction conserve sa valeur entre les appels de fonction. Elle n'est initialis\u00e9e qu'une seule fois et existe pendant toute la dur\u00e9e de vie du programme.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/storage_duration)",
+        "hint": null,
+        "correctAnswer": [
+          "Une variable qui conserve sa valeur entre les appels de fonction"
+        ],
+        "options": [
+          "Une variable qui ne peut pas changer",
+          "Une variable qui conserve sa valeur entre les appels de fonction",
+          "Une variable stock\u00e9e en ROM",
+          "Une variable globale"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cca5ccb0f66e6b14b66aae14",
+        "question": "Quelle est la sortie de ce code?\n```c\nint arr[] = {1, 2, 3, 4, 5};\nint *p = arr + 2;\nprintf(\"%d\", *p);\n```",
+        "answer": "3",
+        "explanation": "**Explication:**\n`arr + 2` pointe vers le troisi\u00e8me \u00e9l\u00e9ment (indice 2). Le d\u00e9r\u00e9f\u00e9rencer avec `*p` donne la valeur 3.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_member_access)",
+        "hint": null,
+        "correctAnswer": [
+          "3"
+        ],
+        "options": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a176da210d13f4e429c07fd4",
+        "question": "Quelle est la diff\u00e9rence entre `printf()` et `sprintf()`?",
+        "answer": "sprintf \u00e9crit dans une cha\u00eene, printf \u00e9crit sur stdout",
+        "explanation": "**Explication:**\n`printf()` \u00e9crit une sortie format\u00e9e sur stdout (console). `sprintf()` \u00e9crit une sortie format\u00e9e dans un tampon de cha\u00eene de caract\u00e8res.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/io/fprintf)",
+        "hint": null,
+        "correctAnswer": [
+          "sprintf \u00e9crit dans une cha\u00eene, printf \u00e9crit sur stdout"
+        ],
+        "options": [
+          "printf est plus rapide",
+          "sprintf \u00e9crit dans une cha\u00eene, printf \u00e9crit sur stdout",
+          "sprintf ne peut imprimer que des cha\u00eenes",
+          "Il n'y a pas de diff\u00e9rence"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b42215b3e3f94a17df5623c6",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 5;\nprintf(\"%d\", x & 3);\n```",
+        "answer": "1",
+        "explanation": "**Explication:**\nL'op\u00e9rateur `&` est un ET bit \u00e0 bit. 5 en binaire est 101, 3 est 011. 101 & 011 = 001 = 1.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_arithmetic)",
+        "hint": null,
+        "correctAnswer": [
+          "1"
+        ],
+        "options": [
+          "5",
+          "3",
+          "1",
+          "8"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ffd0377aa6d1804e4f7c4a3b",
+        "question": "Qu'est-ce qu'un garde d'en-t\u00eate?",
+        "answer": "Une construction de pr\u00e9processeur pour emp\u00eacher l'inclusion multiple",
+        "explanation": "**Explication:**\nLes gardes d'en-t\u00eate (utilisant #ifndef, #define, #endif) emp\u00eachent un fichier d'en-t\u00eate d'\u00eatre inclus plusieurs fois dans la m\u00eame unit\u00e9 de compilation, ce qui causerait des erreurs de red\u00e9finition.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/preprocessor/conditional)",
+        "hint": null,
+        "correctAnswer": [
+          "Une construction de pr\u00e9processeur pour emp\u00eacher l'inclusion multiple"
+        ],
+        "options": [
+          "Une fonctionnalit\u00e9 de s\u00e9curit\u00e9",
+          "Une construction de pr\u00e9processeur pour emp\u00eacher l'inclusion multiple",
+          "Une fonction qui prot\u00e8ge les en-t\u00eates",
+          "Un type de commentaire"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "551aa644fdd775d92d599caa",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 10;\nint y = 20;\nint *p = &x;\np = &y;\nprintf(\"%d\", *p);\n```",
+        "answer": "20",
+        "explanation": "**Explication:**\nInitialement p pointe vers x. Ensuite `p = &y` fait pointer p vers y. `*p` d\u00e9r\u00e9f\u00e9rence p pour obtenir la valeur de y, qui est 20.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/pointer)",
+        "hint": null,
+        "correctAnswer": [
+          "20"
+        ],
+        "options": [
+          "10",
+          "20",
+          "Adresse de x",
+          "Adresse de y"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fe794a69613c6db67de13990",
+        "question": "Quel est le but de la fonction `memcpy()`?",
+        "answer": "Copier un bloc de m\u00e9moire de la source vers la destination",
+        "explanation": "**Explication:**\n`memcpy()` copie n octets de la m\u00e9moire source vers la m\u00e9moire de destination. Elle est plus rapide que de copier \u00e9l\u00e9ment par \u00e9l\u00e9ment mais ne g\u00e8re pas les r\u00e9gions de m\u00e9moire qui se chevauchent (utilisez `memmove()` pour cela).\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/string/byte/memcpy)",
+        "hint": null,
+        "correctAnswer": [
+          "Copier un bloc de m\u00e9moire de la source vers la destination"
+        ],
+        "options": [
+          "Allouer de la m\u00e9moire",
+          "Copier un bloc de m\u00e9moire de la source vers la destination",
+          "Comparer des blocs de m\u00e9moire",
+          "Lib\u00e9rer de la m\u00e9moire"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c8165056b9e8634ea26468cc",
+        "question": "Quelle est la sortie de ce code?\n```c\nint x = 5;\nprintf(\"%d\", x | 3);\n```",
+        "answer": "7",
+        "explanation": "**Explication:**\nL'op\u00e9rateur `|` est un OU bit \u00e0 bit. 5 en binaire est 101, 3 est 011. 101 | 011 = 111 = 7.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/language/operator_arithmetic)",
+        "hint": null,
+        "correctAnswer": [
+          "7"
+        ],
+        "options": [
+          "3",
+          "5",
+          "7",
+          "8"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e262aa9480c0e1f722bddf78",
+        "question": "Quelle est la diff\u00e9rence entre `strcmp()` et `strncmp()`?",
+        "answer": "strncmp compare uniquement les n premiers caract\u00e8res",
+        "explanation": "**Explication:**\n`strcmp()` compare des cha\u00eenes enti\u00e8res. `strncmp()` compare au maximum n caract\u00e8res, ce qui est utile pour comparer des pr\u00e9fixes de cha\u00eenes ou limiter la longueur de comparaison.\n[R\u00e9f\u00e9rence](https://en.cppreference.com/w/c/string/byte/strncmp)",
+        "hint": null,
+        "correctAnswer": [
+          "strncmp compare uniquement les n premiers caract\u00e8res"
+        ],
+        "options": [
+          "strcmp est sensible \u00e0 la casse, strncmp ne l'est pas",
+          "strncmp compare uniquement les n premiers caract\u00e8res",
+          "strcmp est plus rapide",
+          "Il n'y a pas de diff\u00e9rence"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "c-(programming-language)/c-(programming-language)-quiz-fr.md",
+    "language": "fr",
+    "generatedAt": "2025-12-09T14:56:14.130811+00:00",
+    "warnings": []
+  }
+}

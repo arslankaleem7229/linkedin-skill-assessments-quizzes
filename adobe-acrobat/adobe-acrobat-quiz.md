@@ -331,10 +331,10 @@
 
 #### Q46. While customizing the **Quick Tools** toolbar, you would like to add vertical dividers to organize the tools. Which icon in the **Customize Quick Tools** options will enable you to do this?
 
-- [x] ![image](images/001.jpg?raw=jpg)
-- [ ] ![image](images/002.jpg?raw=jpg)
-- [ ] ![image](images/003.jpg?raw=jpg)
-- [ ] ![image](images/004.jpg?raw=jpg)
+- [x] ![image](images/001.jpg)
+- [ ] ![image](images/002.jpg)
+- [ ] ![image](images/003.jpg)
+- [ ] ![image](images/004.jpg)
 
 [Reference](https://uhlcithelp.zendesk.com/hc/en-us/articles/360051734294-Adobe-Acrobat-Workspace-Basics)
 

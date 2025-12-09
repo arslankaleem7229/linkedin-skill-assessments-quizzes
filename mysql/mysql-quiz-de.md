@@ -132,7 +132,7 @@
 
 #### F9. Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie müssen die Liste der Kunden erstellen, die bestimmte Automodelle gekauft haben. Welche SQL-Klausel verwenden Sie?
 
-![mysql Q09](images/mysql_q09.jpg?raw=true)
+![mysql Q09](images/mysql_q09.jpg)
 
 - [ ] LIKE
 - [x] IN
@@ -363,7 +363,7 @@
 
 #### Q40. Welche Aussage trifft auf das folgende Diagramm zu?
 
-![mysql Q41](images/mysql_q41.jpg?raw=true)
+![mysql Q41](images/mysql_q41.jpg)
 
 - [ ] carid ist der Primärschlüssel für Käufe
 - [ ] carid ist der Fremdschlüssel für cars.carid
@@ -379,7 +379,7 @@
 
 #### F42. Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie müssen sicherstellen, dass jeder zur Tabelle „Einkäufe“ hinzugefügte Datensatz aus einer Kunden-ID besteht, die bereits in der Tabelle „Kunden“ vorhanden ist, und einer Fahrzeug-ID, die bereits in der Tabelle „Autos“ vorhanden ist. Sie entscheiden sich, einen Trigger für die Validierung zu verwenden. Welches verwendest du?
 
-![mysql Q43](images/mysql_q85.jpg?raw=true)
+![mysql Q43](images/mysql_q85.jpg)
 
 - [ ] `AFTER INSERT`
 - [x] `BEFORE INSERT`
@@ -567,7 +567,7 @@ Hinweis: Beide Antworten sind richtig – siehe [TRUNCATE TABLE Statement](https
 
 #### Q60. Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie müssen die Anzahl der verkauften Autos pro Heimatstaat des Wohnsitzes jedes Kunden erhalten. Wie können Sie dies erreichen?
 
-![mysql Q61](images/mysql_q61.png?raw=true)
+![mysql Q61](images/mysql_q61.png)
 
 - [ ] `SELECT state, COUNT(*) FROM customers WHERE ID IN (SELECT customerID FROM purchases) GROUP BY state;`
 - [ ] `SELECT state, COUNT(*) FROM customers c LEFT JOIN purchases p ON c.ID = p.customerID GROUP BY state;`
@@ -743,7 +743,7 @@ WHERE MATCH(address) AGAINST ('street, drive');
 
 #### Q79. Im folgenden Diagramm ist das Preisfeld als Typ DECIMAL deklariert. Was wäre eine effizientere Deklaration für dieses Feld?
 
-![Mysql-Bild](images/mysql_q80.png?raw=true)
+![Mysql-Bild](images/mysql_q80.png)
 
 - [ ] FLOAT
 - [x] DECIMAL(10,2)
@@ -761,7 +761,7 @@ Erläuterung: BIT ist kein String-Typ
 
 #### F81. Dieses Diagramm zeigt, welche Art von Beziehung zwischen Kunden und Autos?
 
-![Mysql-Bild](images/mysql_q80.png?raw=true)
+![Mysql-Bild](images/mysql_q80.png)
 
 - [ ] one-to-many
 - [ ] parent-child
@@ -786,7 +786,7 @@ Erläuterung: Sowohl `SET` als auch `DECLARE` werden verwendet, um Variablen zu 
 
 #### F84. Im folgenden Diagramm sind die ID-Felder als Typ CHAR statt INT deklariert. Was ist KEIN möglicher Grund für diese Entscheidung?
 
-![Mysql-Bild](images/mysql_q85.png?raw=true)
+![Mysql-Bild](images/mysql_q85.png)
 
 - [ ] Das ID-Feld muss Buchstaben und nicht nur Zahlen enthalten.
 - [ ] Sie können ein konsistentes Format für alle Tabellen haben, die ID-Felder erfordern.
@@ -824,7 +824,7 @@ SELECT name FROM students WHERE name REGEXP '^to';
 
 #### Q88. Sie arbeiten mit den Tabellen wie in der Abbildung dargestellt. Sie müssen die Liste der Gesamtpreise für jede Automarke und jedes Automodell erstellen, mit Zwischensummen für jede Marke und der Gesamtsumme aller Preise. Welche SQL-Klausel verwenden Sie?
 
-![Mysql-Bild](images/mysql_q92.png?raw=true)
+![Mysql-Bild](images/mysql_q92.png)
 
 - [ ] UNION
 - [ ] SHOW TOTALS
@@ -882,7 +882,7 @@ SELECT name FROM students WHERE name REGEXP '^to';
 
 #### Q96. Sie arbeiten mit den unten gezeigten Tabellen. Sie müssen die Liste aller Autos erstellen, unabhängig davon, ob sie verkauft wurden oder nicht. Welche Aussage leistet das?
 
-![Mysql-Bild](images/mysql_q98.png?raw=true)
+![Mysql-Bild](images/mysql_q98.png)
 
 - [ ] A
 
@@ -1004,7 +1004,7 @@ Tabellenname: Superhelden
 
 #### Q103. In diesem Diagramm arbeiten Sie am UPDATE-Trigger in der Mitarbeitertabelle. Wie können Sie auf den neuen Wert für die Adresse innerhalb des Triggers zugreifen?
 
-![Mysql-Bild](images/mysql_q103.png?raw=true)
+![Mysql-Bild](images/mysql_q103.png)
 
 - [x] Use NEW.address
 - [ ] Use INSERTED.address

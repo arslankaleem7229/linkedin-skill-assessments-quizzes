@@ -271,7 +271,7 @@ Aviso: AndroidJUnitRunner nos permite ejecutar pruebas de estilo JUnit3/4 en dis
 
 #### P22. ¿Qué definición dibujable le permite lograr la forma a continuación?
 
-![img](image/shape.png?raw=png)
+![img](image/shape.png)
 
 - [ ] &shy;
 
@@ -942,16 +942,16 @@ Aviso: AndroidJUnitRunner nos permite ejecutar pruebas de estilo JUnit3/4 en dis
 #### P62. ¿Qué jerarquía de diseño es probable que se dibuje más rápidamente?
 
 - [x] A
-      ![img](https://i.imgur.com/mT08jag.png?raw=png)
+      ![img](https://i.imgur.com/mT08jag.png)
 
 - [ ] B
-      ![img](https://i.imgur.com/rz9eKYc.png?raw=png)
+      ![img](https://i.imgur.com/rz9eKYc.png)
 
 - [ ] C
-      ![img](https://i.imgur.com/ETaHhaS.png?raw=png)
+      ![img](https://i.imgur.com/ETaHhaS.png)
 
 - [ ] D
-      ![img](https://i.imgur.com/1QBrTwR.png?raw=png)
+      ![img](https://i.imgur.com/1QBrTwR.png)
 
 #### P63. ¿Cuál es la forma recomendada actual de manejar tareas en segundo plano de larga duración?
 

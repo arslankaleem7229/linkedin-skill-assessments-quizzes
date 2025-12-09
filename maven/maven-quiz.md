@@ -308,7 +308,7 @@
 
 #### Q42. Below is a report generated for a multimodule project with the Checkstyle Plugin. Why might the highlighted links to the two child projects _not_ work?
 
-![q43](q43.png?raw=png)
+![q43](q43.png)
 
 - [ ] The Checkstyle Plugin does not work on child modules.
 - [ ] Each Checkstyle report is in the target/site folder of the respective module.
@@ -554,7 +554,7 @@
 
 #### Q70. This POM file contains an XML validation error. What is the cause of the error?
 
-![q70](q70.png?raw=png)
+![q70](q70.png)
 
 - [ ] JUnit is not a valid dependency of a Maven project.
 - [x] The `<dependency>` elements should be inside `<dependencies>` elements.
@@ -563,7 +563,7 @@
 
 #### Q71. Below is the configuration for a server on settings.xml. What does this configuration do?
 
-![q71](q71.png?raw=png)
+![q71](q71.png)
 
 - [ ] It disables put requests to headers.
 - [ ] It sets the headers for all GET requests.

@@ -727,7 +727,7 @@ git checkout -b beta-test
 
 #### Q76. Розглянемо такий робочий процес Git:
 
-![image](images/Git-WorkFlow.png?raw=png)
+![image](images/Git-WorkFlow.png)
 Який із наведених варіант правильний?
 
 - [ ] `1. Develop 2. Release 3. Hotfix 4. Feature 5. Master`

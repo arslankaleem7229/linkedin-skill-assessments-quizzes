@@ -271,7 +271,7 @@ Avviso: AndroidJUnitRunner ci consente di eseguire test in stile JUnit3 / 4 su d
 
 #### D22. Quale definizione disegnabile ti consente di ottenere la forma sottostante?
 
-![img](image/shape.png?raw=png)
+![img](image/shape.png)
 
 - [ ] &shy;
 
@@ -942,16 +942,16 @@ Avviso: AndroidJUnitRunner ci consente di eseguire test in stile JUnit3 / 4 su d
 #### D62. Quale gerarchia di layout è probabile che venga disegnata più rapidamente?
 
 - [x] A
-      ![img](https://i.imgur.com/mT08jag.png?raw=png)
+      ![img](https://i.imgur.com/mT08jag.png)
 
 - [ ] B
-      ![img](https://i.imgur.com/rz9eKYc.png?raw=png)
+      ![img](https://i.imgur.com/rz9eKYc.png)
 
 - [ ] C
-      ![img](https://i.imgur.com/ETaHhaS.png?raw=png)
+      ![img](https://i.imgur.com/ETaHhaS.png)
 
 - [ ] D
-      ![img](https://i.imgur.com/1QBrTwR.png?raw=png)
+      ![img](https://i.imgur.com/1QBrTwR.png)
 
 #### D63. Qual è il modo attualmente consigliato per gestire le attività in background a esecuzione prolungata?
 

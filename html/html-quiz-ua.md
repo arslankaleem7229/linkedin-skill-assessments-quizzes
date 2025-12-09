@@ -81,7 +81,7 @@
 
 #### Q11. Який найкращий спосіб закодувати показаний зразок?
 
-![Sample text](images/ss-2.png?raw=true)
+![Sample text](images/ss-2.png)
 
 - [ ] A
 
@@ -262,7 +262,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q21. Перегляньте текст у червоному полі на зображенні. Який найкращий спосіб закодувати це в HTML?
 
-![Image of footer](images/ss-3.png?raw=true)
+![Image of footer](images/ss-3.png)
 
 - [ ] впорядкований список
 - [ ] невпорядкований список всередині навігаційного елемента
@@ -347,7 +347,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q25. Який код створить цю таблицю?
 
-![Table with yellow background](images/ss-4.png?raw=true)
+![Table with yellow background](images/ss-4.png)
 
 - [ ] A
 
@@ -546,7 +546,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q34. Яка правильна вкладена розмітка для цього списку?
 
-![Sample list](images/ss-6.png?raw=true)
+![Sample list](images/ss-6.png)
 
 - [ ] A
 
@@ -613,7 +613,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q36. Який семантично правильний спосіб розмітки цього макета?
 
-![quote](images/ss-5.png?raw=true)
+![quote](images/ss-5.png)
 
 - [ ] A
 
@@ -725,7 +725,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q44. Який фрагмент коду створює показаний макет, починаючи з `<table>` і закінчуючи `</table>`?
 
-![Table](images/ss-1.png?raw=true 'table')
+![Table](images/ss-1.png 'table')
 
 - [ ] A
 
@@ -1160,7 +1160,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q68. Враховуючи наведену тут структуру файлів та каталогів, який елемент потрібно розмістити у файлі profit.html для посилання на info.html?
 
-![Image of footer](images/ss-7.png?raw=true)
+![Image of footer](images/ss-7.png)
 
 - [ ] `<a href="../work/info.html">See Information </a>`
 - [x] `<a href="../info.html">See Information </a>`
@@ -1299,7 +1299,7 @@ As Steve Krug once said, happy talk must die.
 
 #### Q76. Який вибір є найкращим способом розмітки цього макета?
 
-![Image of footer](images/ss-8.png?raw=true)
+![Image of footer](images/ss-8.png)
 
 - [x] A
 

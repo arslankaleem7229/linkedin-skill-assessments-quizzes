@@ -1,0 +1,3269 @@
+{
+  "quizz": {
+    "id": "3713dcbd1afdd27f80060ae0",
+    "title": "C++",
+    "description": "Seeded from c++/c++-quiz-es.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "123173709decbc61033882d7",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\nvector<int> v(22);\nbool b = (v[6]);\nprintf(\"%d\", !b);\n```",
+        "answer": "1",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["1"],
+        "options": ["Falso", "0", "1", "Este c\u00f3digo tiene un error."],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "70649df81ef86b794c08a88b",
+        "question": "\u00bfCu\u00e1l de las siguientes es una raz\u00f3n por la que usar esta l\u00ednea se considera una mala pr\u00e1ctica? (_Alternativa_: \u00bfPor qu\u00e9 usar esta l\u00ednea se considera una mala pr\u00e1ctica?)\n```cpp\nusing namespace std;\n```",
+        "answer": "Si el c\u00f3digo utiliza una funci\u00f3n definida en dos bibliotecas diferentes con el mismo prototipo pero posiblemente con diferentes implementaciones, habr\u00e1 un error de compilaci\u00f3n debido a la ambig\u00fcedad.",
+        "explanation": "[Referencia](https://www.geeksforgeeks.org/using-namespace-std-considered-bad-practice/)",
+        "hint": null,
+        "correctAnswer": [
+          "Si el c\u00f3digo utiliza una funci\u00f3n definida en dos bibliotecas diferentes con el mismo prototipo pero posiblemente con diferentes implementaciones, habr\u00e1 un error de compilaci\u00f3n debido a la ambig\u00fcedad."
+        ],
+        "options": [
+          "El c\u00f3digo compilado siempre es m\u00e1s grande debido a todos los s\u00edmbolos importados.",
+          "Si el c\u00f3digo utiliza una funci\u00f3n definida en dos bibliotecas diferentes con el mismo prototipo pero posiblemente con diferentes implementaciones, habr\u00e1 un error de compilaci\u00f3n debido a la ambig\u00fcedad.",
+          "Incluye autom\u00e1ticamente todos los archivos de encabezado en la biblioteca est\u00e1ndar (cstdint, cstdlib, cstdio, iostream, etc).",
+          "Hace que el compilador aplique la inclusi\u00f3n exclusiva de archivos de encabezado pertenecientes a la biblioteca est\u00e1ndar, generando un error de compilaci\u00f3n cuando se incluye un archivo de encabezado diferente."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a992dfaf44cdc6b267edc070",
+        "question": "\u00bfCu\u00e1l es el tama\u00f1o m\u00e1s peque\u00f1o que una variable de tipo child_t puede ocupar en memoria?\n```cpp\ntypedef struct{\n    unsigned int  age    : 4;\n    unsigned char gender : 1;\n    unsigned int  size   : 2;\n}child_t;\n```",
+        "answer": "1 byte.",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/bit_field)",
+        "hint": null,
+        "correctAnswer": ["1 byte."],
+        "options": ["7 bits.", "25 bytes.", "1 bit.", "1 byte."],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "834a86b1bb4316254b3252ff",
+        "question": "\u00bfCu\u00e1les son los vectores v1 y v2 despu\u00e9s de ejecutar el c\u00f3digo?\n```cpp\nstd::vector<int> v1{1,2,3},v2;\nv2=v1;\nv1.push_back(4);\nv2.push_back(5);\n```",
+        "answer": "v1:{1,2,3,4}; v2:{1,2,3,5};",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["v1:{1,2,3,4}; v2:{1,2,3,5};"],
+        "options": [
+          "Error",
+          "v1:{1,2,3,4}; v2:{5};",
+          "v1:{1,2,3,4,5}; v2:{1,2,3,4,5};",
+          "v1:{1,2,3,4}; v2:{1,2,3,5};"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8689eb871781447b05a4a434",
+        "question": "\u00bfCu\u00e1l de las siguientes es una afirmaci\u00f3n verdadera sobre la diferencia entre punteros e iteradores?",
+        "answer": "Incrementar un iterador siempre significa acceder al siguiente elemento en el contenedor (si existe), sin importar el contenedor. Incrementar el puntero significa apuntar al siguiente elemento en memoria, no siempre el siguiente elemento.",
+        "explanation": "[Referencia](https://stackoverflow.com/a/31128162)",
+        "hint": null,
+        "correctAnswer": [
+          "Incrementar un iterador siempre significa acceder al siguiente elemento en el contenedor (si existe), sin importar el contenedor. Incrementar el puntero significa apuntar al siguiente elemento en memoria, no siempre el siguiente elemento."
+        ],
+        "options": [
+          "Mientras que los punteros son variables que contienen direcciones de memoria, los iteradores son funciones gen\u00e9ricas utilizadas para recorrer contenedores. Esta funci\u00f3n permite al programador implementar c\u00f3digo de lectura y escritura mientras se recorre el contenedor.",
+          "Incrementar un iterador siempre significa acceder al siguiente elemento en el contenedor (si existe), sin importar el contenedor. Incrementar el puntero significa apuntar al siguiente elemento en memoria, no siempre el siguiente elemento.",
+          "Los punteros son variables que contienen direcciones de memoria, mientras que el iterador son enteros sin signo que se refieren a desplazamientos en arreglos.",
+          "Todos los iteradores se implementan con punteros, por lo que todos los iteradores son punteros, pero no todos los punteros son iteradores."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2e29b80d327739b12830ca69",
+        "question": "\u00bfCu\u00e1l es el almacenamiento ocupado por u1?\n```cpp\nunion {\n    uint16_t a;\n    uint32_t b;\n    int8_t c;\n} u1;\n```",
+        "answer": "4 bytes",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/union)",
+        "hint": null,
+        "correctAnswer": ["4 bytes"],
+        "options": ["4 bytes", "7 bytes", "8 bytes", "2 bytes"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ce526017efd8ed77609dc7c6",
+        "question": "\u00bfCu\u00e1l de los siguientes operadores puede ser sobrecargado?",
+        "answer": "`new`",
+        "explanation": "[Referencia](https://www.tutorialspoint.com/operators-that-cannot-be-overloaded-in-cplusplus)",
+        "hint": null,
+        "correctAnswer": ["`new`"],
+        "options": ["`?:`", "`new`", "`::`", "`.`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6a254d9b06643dda50ba2b27",
+        "question": "\u00bfCu\u00e1l de las siguientes muestra el contenido del vector apuntado por v1 y v2 despu\u00e9s de ejecutar este c\u00f3digo?\n```cpp\nstd:: vector<int> *v1 = new std::vector<int>({1,2,3});\nstd:: vector<int> *v2;\nv2=v1;\nv1->push_back(4);\nv2->push_back(5);\n```",
+        "answer": "`*v1:{1,2,3,4,5}; *v2:{1,2,3,4,5};`",
+        "explanation": "v1 y v2 apuntan al mismo vector.",
+        "hint": null,
+        "correctAnswer": ["`*v1:{1,2,3,4,5}; *v2:{1,2,3,4,5};`"],
+        "options": [
+          "`*v1:{1,2,3,4}; *v2:{5};`",
+          "`*v1:{1,2,3,4,5}; *v2:{1,2,3,4,5};`",
+          "Error",
+          "`*v1:{1,2,3,4}; *v2:{1,2,3,5};`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "042b95c05f2b12cae814b431",
+        "question": "\u00bfCu\u00e1l de las siguientes NO es una diferencia entre una clase y una estructura?",
+        "answer": "Los par\u00e1metros de tipo de plantilla se pueden declarar con clases, pero no con la palabra clave struct.",
+        "explanation": "Las plantillas se pueden usar tanto con clases como con estructuras\n[Referencia](https://docs.microsoft.com/en-us/cpp/cpp/struct-cpp?view=msvc-170)\n[Referencia](https://www.fluentcpp.com/2017/06/13/the-real-difference-between-struct-class/)",
+        "hint": null,
+        "correctAnswer": [
+          "Los par\u00e1metros de tipo de plantilla se pueden declarar con clases, pero no con la palabra clave struct."
+        ],
+        "options": [
+          "Debido a que las estructuras son parte del lenguaje de programaci\u00f3n C, hay cierta complejidad entre las estructuras de C y C++. Este no es el caso con las clases.",
+          "Las clases pueden tener funciones miembro; las estructuras son privadas.",
+          "El especificador de acceso predeterminado para miembros de una estructura es p\u00fablico, mientras que para miembros de la clase es privado.",
+          "Los par\u00e1metros de tipo de plantilla se pueden declarar con clases, pero no con la palabra clave struct."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a8c0eeb10fecf5847982a4d7",
+        "question": "Suponga que necesita mantener una estructura de datos con permiso para acceder a alg\u00fan recurso basado en los d\u00edas de la semana, pero no puede usar una variable bool para cada d\u00eda. Necesita usar un bit por d\u00eda de la semana. \u00bfCu\u00e1l de las siguientes es una implementaci\u00f3n correcta de una estructura con campos de bits para esta aplicaci\u00f3n?",
+        "answer": "A",
+        "explanation": "```cpp\ntypedef struct {\nint sunday:1;\nint monday:1;\n// m\u00e1s d\u00edas\nint friday:1;\nint saturday:1;\n} weekdays;\n```\n```cpp\ntypedef char[7]: weekdays;\n```\n```cpp\ntypedef struct {\nbit sunday:1;\nbit monday:1;\n// m\u00e1s d\u00edas\nbit friday:1;\nbit saturday:1;\n} weekdays;\n```\n```cpp\ntypedef struct {\nbit sunday;\nbit monday;\n// m\u00e1s d\u00edas\nbit friday;\nbit saturday;\n} weekdays;\n```\n[Referencia](https://en.cppreference.com/w/cpp/language/bit_field) _NOTA_: La sintaxis correcta es que cada variable tiene un tama\u00f1o de 1 bit. `bit` no es un tipo en C++.",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d5f29a0f6e45ef25a3eaa191",
+        "question": "\u00bfQu\u00e9 es un lvalue?",
+        "answer": "Es un valor de ubicaci\u00f3n, es decir, una direcci\u00f3n de memoria adecuada para asignar a un puntero o referencia.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Es un valor de ubicaci\u00f3n, es decir, una direcci\u00f3n de memoria adecuada para asignar a un puntero o referencia."
+        ],
+        "options": [
+          "Es una expresi\u00f3n constante, es decir, una expresi\u00f3n compuesta de constantes y operaciones.",
+          "Es una expresi\u00f3n que representa un objeto con una direcci\u00f3n.",
+          "Es una expresi\u00f3n adecuada para el operando del lado izquierdo en una operaci\u00f3n binaria.",
+          "Es un valor de ubicaci\u00f3n, es decir, una direcci\u00f3n de memoria adecuada para asignar a un puntero o referencia."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d1f3f28b2bdb67ccfab7a8f0",
+        "question": "\u00bfQu\u00e9 hace el especificador de tipo auto en esta l\u00ednea de c\u00f3digo (desde C++11)?\n```cpp\nauto x = 4000.22;\n```",
+        "answer": "Especifica que el tipo de x se deducir\u00e1 del inicializador - en este caso, double.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Especifica que el tipo de x se deducir\u00e1 del inicializador - en este caso, double."
+        ],
+        "options": [
+          "Especifica que el tipo de x se deducir\u00e1 del inicializador - en este caso, double.",
+          "Especifica que el tipo de x es autom\u00e1tico, lo que significa que puede ser asignado a diferentes tipos de datos a lo largo del programa.",
+          "Especifica que x es una variable con duraci\u00f3n de almacenamiento autom\u00e1tico.",
+          "Especifica que se asignar\u00e1 m\u00e1s memoria para x en caso de que necesite m\u00e1s espacio, evitando la p\u00e9rdida de datos debido al desbordamiento."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0dfe2c96bc122fa9ee4a2b8e",
+        "question": "Una plantilla de clase es \u00bfqu\u00e9?",
+        "answer": "Una clase escrita con el paradigma de programaci\u00f3n gen\u00e9rica, especificando comportamiento en t\u00e9rminos de par\u00e1metro de tipo en lugar de tipo espec\u00edfico.",
+        "explanation": "[Referencia](https://www.mygreatlearning.com/blog/templates-in-cpp/)",
+        "hint": null,
+        "correctAnswer": [
+          "Una clase escrita con el paradigma de programaci\u00f3n gen\u00e9rica, especificando comportamiento en t\u00e9rminos de par\u00e1metro de tipo en lugar de tipo espec\u00edfico."
+        ],
+        "options": [
+          "Una clase escrita con el paradigma de programaci\u00f3n gen\u00e9rica, especificando comportamiento en t\u00e9rminos de par\u00e1metro de tipo en lugar de tipo espec\u00edfico.",
+          "Una superclase en blanco destinada a la herencia y el polimorfismo.",
+          "Una clase que solo consiste en una variable miembro, sin constructor, destructor o funciones miembro.",
+          "C\u00f3digo fuente esqueleto para una clase donde el programador debe completar partes espec\u00edficas para definir los tipos de datos y algoritmos utilizados."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "48725347d042b3480c7d70e5",
+        "question": "\u00bfCu\u00e1l es el operador ternario equivalente a este fragmento de c\u00f3digo?\n```cpp\nif(x)\n    y=a;\nelse\n    y=b;\n```",
+        "answer": "`y=x?a:b;`",
+        "explanation": "[Referencia](https://www.w3schools.com/cpp/cpp_conditions_shorthand.asp)",
+        "hint": null,
+        "correctAnswer": ["`y=x?a:b;`"],
+        "options": ["`y=a?b:x;`", "`y=if(x?a:b);`", "`y=(x&a)?a:(x&b)?b:0;`", "`y=x?a:b;`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d752de0474c504a28ce034b1",
+        "question": "\u00bfCu\u00e1l es la salida del c\u00f3digo dado a continuaci\u00f3n?\n```cpp\n#include <iostream>\nint main(){\n    int x=10, y=20;\n    std::cout << \"x = \" << x++ << \" and y = \" << --y << std::endl;\n    std::cout << \"x = \" << x-- << \" and y = \" << ++y << std::endl;\n    return(0);\n}\n```",
+        "answer": "`x = 10 and y = 19`",
+        "explanation": "`x = 11 and y = 19`\n`x = 10 and y = 20`\n`x = 11 and y = 20`\n`x = 10 and y = 19`",
+        "hint": null,
+        "correctAnswer": ["`x = 10 and y = 19`"],
+        "options": [
+          "`x = 10 and y = 20`",
+          "`x = 11 and y = 19`",
+          "`x = 10 and y = 19`",
+          "`x = 11 and y = 20`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fa8ec4a21ff8bb65601ff4cf",
+        "question": "\u00bfCu\u00e1l es el significado de las dos partes especificadas entre par\u00e9ntesis en un bucle for basado en rango, separadas por dos puntos?",
+        "answer": "La primera es una declaraci\u00f3n de variable que contendr\u00e1 un elemento en una secuencia. La segunda es la secuencia a recorrer.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "La primera es una declaraci\u00f3n de variable que contendr\u00e1 un elemento en una secuencia. La segunda es la secuencia a recorrer."
+        ],
+        "options": [
+          "La primera es una declaraci\u00f3n de variable que contendr\u00e1 un elemento en una secuencia. La segunda es la secuencia a recorrer.",
+          "La primera es un iterador, y la segunda es el valor de incremento que se agregar\u00e1 al iterador.",
+          "La primera es la variable iteradora. La segunda es un `std::pair` que especifica el rango (inicio y fin) en el que la variable iterar\u00e1.",
+          "La primera es un objeto contenedor. La segunda es un `std::pair` que especifica el rango (inicio y fin) en el que se acceder\u00e1 a los elementos dentro del bucle."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dbd608a2e6d3bf7df430cbb2",
+        "question": "\u00bfCu\u00e1l es la salida del c\u00f3digo dado a continuaci\u00f3n?\n```cpp\nint8_t a=200;\nuint8_t b=100;\nif(a>b)\n    std::cout<<\"greater\";\nelse\n    std::cout<<\"less\";\n```",
+        "answer": "less",
+        "explanation": "Nota: una variante de la pregunta a continuaci\u00f3n.",
+        "hint": null,
+        "correctAnswer": ["less"],
+        "options": [
+          "No hay salida porque hay una excepci\u00f3n al comparar un int8_t con un uint8_t.",
+          "greater",
+          "less",
+          "No hay salida porque hay un error del compilador."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fc76ec2110e349b41df76166",
+        "question": "\u00bfCu\u00e1l es la salida de este bloque de c\u00f3digo?\n```cpp\nint8_t a=200;\nuint8_t b=100;\nstd::cout<<\"a=\"<<(int)a;\nstd::cout<<\", b=\"<<(int)b;\n```",
+        "answer": "a=-56, b=100",
+        "explanation": "Nota: Conversi\u00f3n impl\u00edcita de 'int' a 'int8_t' (tambi\u00e9n conocido como 'signed char') cambia el valor de 200 a -56",
+        "hint": null,
+        "correctAnswer": ["a=-56, b=100"],
+        "options": ["a=-56, b=100", "a=-55, b=100", "a=200, b=-156", "a=200, b=100"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "87a661e6e9531c7520d6c1fe",
+        "question": "\u00bfCu\u00e1l es la salida despu\u00e9s de ejecutar este fragmento de c\u00f3digo?\n```cpp\nint x=5, y=2;\nif(x & y) {\n    /*_parte A_*/\n}\nelse {\n    /*_parte B_*/\n}\n```",
+        "answer": "La parte B se ejecuta porque (x & y) resulta en 0, o falso.",
+        "explanation": "[Referencia](https://stackoverflow.com/questions/63867765/dont-understand-why-if-5-2-is-false)",
+        "hint": null,
+        "correctAnswer": ["La parte B se ejecuta porque (x & y) resulta en 0, o falso."],
+        "options": [
+          "La parte A se ejecuta porque x==5 (verdadero) e y==2 (verdadero), por lo tanto la operaci\u00f3n AND se eval\u00faa como verdadero.",
+          "La parte B se ejecuta porque (x & y) resulta en 0, o falso.",
+          "La parte A se ejecuta porque (x & y) resulta en un valor distinto de cero, o verdadero.",
+          "La parte B se ejecuta porque la declaraci\u00f3n (x & y) no es v\u00e1lida, por lo tanto falso."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e5c19c591bc545884f62a6f8",
+        "question": "\u00bfCu\u00e1l es una definici\u00f3n v\u00e1lida para la funci\u00f3n `get_length`, que devuelve la longitud de una cadena terminada en nulo?",
+        "answer": "A",
+        "explanation": "```cpp\nint get_length(char *str) {\nint count=0;\nwhile(str[count++]);\nreturn count-1;\n}\n```\n```cpp\nint get_length(char *str) {\nint count=0;\nwhile(str!=NULL){\ncount++;\nstr++;\n}\nreturn count;\n}\n```\n```cpp\nint get_length(char *str) {\nint count=0;\nwhile((*str)++)\ncount++;\nreturn count;\n}\n```\n```cpp\nint get_length(char *str) {\nint count=0;\nwhile(str++)\ncount++;\nreturn count;\n}\n```",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "16e1e99f19e6e141c9ba8565",
+        "question": "\u00bfQu\u00e9 clase STL es la m\u00e1s adecuada para implementar una colecci\u00f3n de datos que siempre est\u00e1 ordenada de modo que la operaci\u00f3n pop siempre obtenga el mayor de los elementos? Suponga que solo est\u00e1 interesado en las operaciones push y pop.",
+        "answer": "`std::priority_queue`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`std::priority_queue`"],
+        "options": ["`std::list`", "`std::vector`", "`std::priority_queue`", "`std::map`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "35a8dda7216aad49c76af009",
+        "question": "\u00bfCu\u00e1l es el significado de las tres secciones especificadas entre par\u00e9ntesis en un bucle for separadas por punto y coma?",
+        "answer": "La primera es el bloque de inicializaci\u00f3n, la segunda es la condici\u00f3n para iterar, y la tercera es el bloque de incremento.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "La primera es el bloque de inicializaci\u00f3n, la segunda es la condici\u00f3n para iterar, y la tercera es el bloque de incremento."
+        ],
+        "options": [
+          "La primera es el nombre de la variable iteradora, la segunda es el n\u00famero de veces a iterar, y la tercera es el incremento o decremento deseado (especificado con un entero con signo).",
+          "La primera es el bloque de inicializaci\u00f3n, la segunda es la condici\u00f3n para iterar, y la tercera es el bloque de incremento.",
+          "La primera es la variable iteradora, la segunda es el contenedor en el que debe operar, y la tercera es una condici\u00f3n de salida para abortar en cualquier momento.",
+          "La primera es el nombre de la variable iteradora, la segunda es el valor inicial para la variable iteradora, y la tercera es el valor de parada (el \u00faltimo valor m\u00e1s uno)."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8460d3150b1386ed7663286b",
+        "question": "\u00bfQu\u00e9 imprime este c\u00f3digo?\n```cpp\nint i = 0;\nprintf(\"%d\", i++);\nprintf(\"%d\", i--);\nprintf(\"%d\", ++i);\nprintf(\"%d\", --i);\n```",
+        "answer": "0,1,1,0",
+        "explanation": "[Referencia](https://www.geeksforgeeks.org/pre-increment-and-post-increment-in-c/)",
+        "hint": null,
+        "correctAnswer": ["0,1,1,0"],
+        "options": ["0,1,1,0", "0,1,0,1", "0,0,1,0", "1,0,1,0"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b11515a9213b69cb54835761",
+        "question": "\u00bfQu\u00e9 es verdad sobre la variable llamada `ptr`?\n```cpp\nvoid *ptr;\n```",
+        "answer": "Es un puntero a un valor sin tipo espec\u00edfico, por lo que puede ser convertido para apuntar a cualquier tipo.",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/pointer)",
+        "hint": null,
+        "correctAnswer": [
+          "Es un puntero a un valor sin tipo espec\u00edfico, por lo que puede ser convertido para apuntar a cualquier tipo."
+        ],
+        "options": [
+          "Es un puntero inicializado en NULL.",
+          "Es un puntero a una funci\u00f3n void.",
+          "Esa declaraci\u00f3n causa un error del compilador, ya que los punteros deben especificar un tipo.",
+          "Es un puntero a un valor sin tipo espec\u00edfico, por lo que puede ser convertido para apuntar a cualquier tipo."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d638826a7b896be3f444cc11",
+        "question": "\u00bfCu\u00e1l es la salida del c\u00f3digo dado a continuaci\u00f3n?\n```cpp\nint c=3; char d='A';\nstd::printf(\"c is %d and d is %c\",c,d);\n```",
+        "answer": "c is 3 and d is A",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["c is 3 and d is A"],
+        "options": [
+          "c is d and d is c",
+          "c is A and d is 3",
+          "c is 3 and d is A",
+          "c is c and d is d"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "53b550ba512d577c0a282eb7",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\nprintf(\"1/2 = %f\",(float)(1/2));\n```",
+        "answer": "1/2 = 0.000000",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["1/2 = 0.000000"],
+        "options": ["1/2 = 0.499999", "1/2 = 0", "1/2 = 0.000000", "1/2 = 0.5"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "00df4ea82dbc782057fc42d5",
+        "question": "\u00bfCu\u00e1l es la diferencia entre un miembro de clase p\u00fablico y uno privado?",
+        "answer": "Los miembros p\u00fablicos pueden ser accedidos por cualquier funci\u00f3n. Los miembros privados solo pueden ser accedidos por las funciones miembro de la misma clase y los amigos de la clase.",
+        "explanation": "[Referencia](https://www.geeksforgeeks.org/difference-between-public-and-private-in-c-with-example/)",
+        "hint": null,
+        "correctAnswer": [
+          "Los miembros p\u00fablicos pueden ser accedidos por cualquier funci\u00f3n. Los miembros privados solo pueden ser accedidos por las funciones miembro de la misma clase y los amigos de la clase."
+        ],
+        "options": [
+          "Los miembros p\u00fablicos son iguales a las variables globales, por lo que cada parte del c\u00f3digo tiene acceso a ellos. Los miembros privados son iguales a las variables autom\u00e1ticas, por lo que solo su clase tiene acceso a ellos.",
+          "Los miembros p\u00fablicos son accesibles a cualquier aplicaci\u00f3n en ejecuci\u00f3n. Los miembros privados son accesibles solo a la aplicaci\u00f3n donde se instancia el objeto.",
+          "Los miembros p\u00fablicos se compilar\u00e1n como variables compartidas en un entorno multihilo. Los miembros privados se compilar\u00e1n como variables locales de hilo.",
+          "Los miembros p\u00fablicos pueden ser accedidos por cualquier funci\u00f3n. Los miembros privados solo pueden ser accedidos por las funciones miembro de la misma clase y los amigos de la clase."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "77ae19249718ac8fdc2d5634",
+        "question": "\u00bfCu\u00e1l es el valor de `x` despu\u00e9s de ejecutar este c\u00f3digo?\n```cpp\nint x=10, a=-3;\nx+=a;\n```",
+        "answer": "7",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["7"],
+        "options": ["3", "7", "-3", "13"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "de8975cc097c3074e16b2e29",
+        "question": "\u00bfCu\u00e1l afirmaci\u00f3n es verdadera?",
+        "answer": "C++ soporta herencia m\u00faltiple.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["C++ soporta herencia m\u00faltiple."],
+        "options": [
+          "Solo las clases pueden tener variables miembro y m\u00e9todos.",
+          "C++ soporta herencia m\u00faltiple.",
+          "C++ soporta solo herencia simple.",
+          "Solo las estructuras pueden heredar."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3b599289cc057f296dddafa4",
+        "question": "Considere un puntero a void, llamado `ptr`, que ha sido configurado para apuntar a una variable de punto flotante `g`. \u00bfCu\u00e1l opci\u00f3n es una forma v\u00e1lida de desreferenciar `ptr` para asignar su valor apuntado a una variable float `f` m\u00e1s adelante en el programa?\n```cpp\nfloat g;\nvoid *ptr=&g;\n```",
+        "answer": "`float f=*(float *)ptr;`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`float f=*(float *)ptr;`"],
+        "options": [
+          "`float f=*(float)ptr;`",
+          "`float f=(float *)ptr;`",
+          "`float f=(float)*ptr;`",
+          "`float f=*(float *)ptr;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3bac6d41525d14ccf6826b7b",
+        "question": "\u00bfQu\u00e9 es el operador `.*` y qu\u00e9 hace?",
+        "answer": "Es el operador de puntero a miembro, y permite acceder a un miembro de un objeto a trav\u00e9s de un puntero a ese miembro de clase espec\u00edfico.",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/operator_member_access)",
+        "hint": null,
+        "correctAnswer": [
+          "Es el operador de puntero a miembro, y permite acceder a un miembro de un objeto a trav\u00e9s de un puntero a ese miembro de clase espec\u00edfico."
+        ],
+        "options": [
+          "Es lo mismo que el operador de acceso a miembro de clase, o operador de flecha `(->)`, que permite acceder a un miembro de un objeto a trav\u00e9s de un puntero al objeto.",
+          "Es el operador de puntero a miembro, y permite acceder a un miembro de un objeto a trav\u00e9s de un puntero a ese miembro de clase espec\u00edfico.",
+          "Es el operador de acceso a miembro con direcci\u00f3n del operador, que devuelve la direcci\u00f3n de un miembro de clase o estructura.",
+          "Es una combinaci\u00f3n del operador de acceso a miembro `(.)` y el operador de desreferencia `(*)`, por lo que permite acceder al objeto al que apunta un puntero de miembro."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7770e2487ca0d5eb19a4464d",
+        "question": "Para estas declaraciones, \u00bfcu\u00e1l opci\u00f3n muestra cuatro formas equivalentes de asignar el car\u00e1cter \"y\" en la cadena a una variable char c?\n```cpp\nchar buff[50] = \"strings as arrays of characters are fun!\"\nchar *str = buff+11;\nchar c;\n```",
+        "answer": "C",
+        "explanation": "```cpp\nc = buff[16];\nc = str[5];\nc = *(buff+16);\nc = *(str+5);\n```\n```cpp\nc = *(buff[15]);\nc = *(str[4]);\nc = buff+15;\nc = str+4;\n```\n```cpp\nc = buff[15];\nc = str[4];\nc = *(buff+15);\nc = *(str+4);\n```\n```cpp\nc = *(buff[16]);\nc = *(str[5]);\nc = buff+16;\nc = str+5;\n```",
+        "hint": null,
+        "correctAnswer": ["C"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f0f73c62c81aeb7965677e9a",
+        "question": "\u00bfCu\u00e1l opci\u00f3n es la declaraci\u00f3n correcta para la clase llamada Dog, derivada de la clase Animal?\n```cpp\nclass Animal{\n    //....\n}\n```",
+        "answer": "B",
+        "explanation": "```cpp\nclass Dog :: public Animal {\n//....\n};\n```\n```cpp\nclass Dog : public Animal {\n//....\n};\n```\n```cpp\npublic class Animal :: Dog {\n//....\n};\n```\n```cpp\npublic class Dog extends Animal {\n//....\n};\n```",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "30901879d6bd2cb2bd17f455",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo dado a continuaci\u00f3n?\n```cpp\n#include <cstdio>\nusing namespace std;\nint main(){\n    char c = 255;\n    if(c>10)\n        printf(\"c = %i, which is greater than 10\", c);\n    else\n        printf(\"c = %i, which is less than 10\", c);\n    return 0;\n}\n```",
+        "answer": "c = -1, which is less than 10",
+        "explanation": "T\u00e9cnicamente, si un `char` es `signed` o `unsigned` depende de la implementaci\u00f3n;\nen el \u00faltimo caso, la segunda respuesta ser\u00eda correcta.\n[Referencia](https://en.cppreference.com/w/cpp/language/types)",
+        "hint": null,
+        "correctAnswer": ["c = -1, which is less than 10"],
+        "options": [
+          "c = -1, which is less than 10",
+          "c = 255, which is greater than 10",
+          "c = -1, which is greater than 10",
+          "c = 255, which is less than 10"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f7d52810133d4acb3fb2e573",
+        "question": "\u00bfC\u00f3mo puede el c\u00f3digo C++ llamar a una funci\u00f3n C?",
+        "answer": "usando extern \"C\"",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["usando extern \"C\""],
+        "options": [
+          "simplemente llamando al c\u00f3digo C",
+          "No hay forma de que C++ llame a una funci\u00f3n C",
+          "usando extern \"C\"",
+          "importando el c\u00f3digo fuente C"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e8c9ea4d3f70968b6a772419",
+        "question": "\u00bfCu\u00e1l opci\u00f3n NO es una definici\u00f3n de tipo v\u00e1lida de una estructura que contiene coordenadas x e y como enteros, y que puede usarse exactamente como se muestra para la variable llamada `center`?\n```cpp\ncoord center;\ncenter.x = 5;\ncenter.y = 3;\n```",
+        "answer": "A",
+        "explanation": "```cpp\ntypedef struct coord {\nint x;\nint y;\n};\n```\n```cpp\ntypedef struct coord {\nint x;\nint y;\n} coord;\n```\n```cpp\ntypedef struct {\nint x;\nint y;\n} coord;\n```\n```cpp\nstruct coord {\nint x;\nint y;\n};\ntypedef struct coord coord;\n```",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "10e8638eab17532ca7a711d9",
+        "question": "\u00bfCu\u00e1l opci\u00f3n NO produce la misma salida que este fragmento de c\u00f3digo? Suponga que la variable `i` no se usar\u00e1 en ning\u00fan otro lugar del c\u00f3digo.\n```cpp\nfor (i=1;i<10;i++){\n    cout<<i<<endl;\n}\n```",
+        "answer": "A",
+        "explanation": "```cpp\ni=1;\nwhile(i<10){\ncout<<++i<<endl;\n}\n```\n```cpp\nfor (int i:{1,2,3,4,5,6,7,8,9}) {\ncout<<i<<endl;\n}\n```\n```cpp\ni = 1;\ndo {\ncout<<i++<<endl;\n} while(i<10);\n```\n```cpp\ni = 1;\nloop:\ncout<<i++<<endl;\nif(i<10) goto loop;\n```",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4bc04afb38b815535e1fbd46",
+        "question": "\u00bfQu\u00e9 hace esta parte de un archivo main.cpp?\n```cpp\n#include \"library.h\"\n```",
+        "answer": "Causa el reemplazo de la directiva `#include` por todo el contenido del archivo fuente library.h. Esto es similar a la operaci\u00f3n de Copiar-Pegar de library.h en main.cpp.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Causa el reemplazo de la directiva `#include` por todo el contenido del archivo fuente library.h. Esto es similar a la operaci\u00f3n de Copiar-Pegar de library.h en main.cpp."
+        ],
+        "options": [
+          "Hace que la cadena de herramientas compile todo el contenido de library.h para que su c\u00f3digo ejecutable est\u00e9 disponible cuando sea necesario por la aplicaci\u00f3n final.",
+          "Selecciona cuidadosamente library.h para las declaraciones y definiciones de todos los datos y funciones utilizadas en el resto del archivo fuente main.cpp, finalmente reemplazando la directiva `#include` con esas declaraciones y definiciones.",
+          "Informa al enlazador que algunas funciones o datos utilizados en el archivo fuente main.cpp est\u00e1n contenidos en library.h, para que puedan ser llamados en tiempo de ejecuci\u00f3n. Esto tambi\u00e9n se conoce como enlace din\u00e1mico.",
+          "Causa el reemplazo de la directiva `#include` por todo el contenido del archivo fuente library.h. Esto es similar a la operaci\u00f3n de Copiar-Pegar de library.h en main.cpp."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "18d031c86f4972615dd65d9b",
+        "question": "Considere esta declaraci\u00f3n de funci\u00f3n de `is_even`, que toma un entero y devuelve true si el argumento es un n\u00famero par y false en caso contrario. \u00bfCu\u00e1les declaraciones son correctas para versiones sobrecargadas de esa funci\u00f3n para soportar n\u00fameros de punto flotante y representaciones de cadena de n\u00fameros?\n```cpp\nbool is_even(int);\n```",
+        "answer": "A",
+        "explanation": "```cpp\nbool is_even(float f);\nbool is_even(char *str);\n```\n```cpp\nbool is_even(float f);\nbool is_even(char str);\n```\n```cpp\nbool is_even_float(float f);\nbool is_even_str(char *str);\n```\n```cpp\nfloat is_even(float f);\nchar *is_even(char *str);\n```",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "752d187dd518cac21a8be4c4",
+        "question": "\u00bfCu\u00e1l opci\u00f3n es un guardia de inclusi\u00f3n para el archivo de encabezado `my_library.h`?",
+        "answer": "B",
+        "explanation": "```cpp\n#ifdef MY_LIBRARY_H\n#define MY_LIBRARY_H\n// contenido de my_library.h\n#endif /* MY_LIBRARY_H */\n```\n```cpp\n#ifndef MY_LIBRARY_H\n#define MY_LIBRARY_H\n// contenido de my_library.h\n#endif /* MY_LIBRARY_H */\n```\n```cpp\n#ifdef MY_LIBRARY_H\n#undef MY_LIBRARY_H\n// contenido de my_library.h\n#endif /* MY_LIBRARY_H */\n```\n```cpp\n#define MY_LIBRARY_H\n#include MY_LIBRARY_H\n// contenido de my_library.h\n#undef MY_LIBRARY_H\n```",
+        "hint": null,
+        "correctAnswer": ["B"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7722b94e756bec9fcf9086d3",
+        "question": "\u00bfQu\u00e9 est\u00e1 mal con esta definici\u00f3n cuando se usa un compilador pre-C++11?\n```cpp\nstd::vector<std::vector<int>> thematrix;\n```",
+        "answer": "`>>` se analiza como el operador de desplazamiento a la derecha, y por lo tanto resulta en un error de compilaci\u00f3n.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`>>` se analiza como el operador de desplazamiento a la derecha, y por lo tanto resulta en un error de compilaci\u00f3n."
+        ],
+        "options": [
+          "No hay nada malo con ella.",
+          "Un `std::vector` no puede contener m\u00e1s contenedores `std::vector` como sus elementos.",
+          "La sintaxis correcta deber\u00eda ser: `std::vector[std::vector[int]] thematrix;`",
+          "`>>` se analiza como el operador de desplazamiento a la derecha, y por lo tanto resulta en un error de compilaci\u00f3n."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5790eec2af562e8fc8df44eb",
+        "question": "\u00bfA qu\u00e9 es equivalente la declaraci\u00f3n a continuaci\u00f3n?",
+        "answer": null,
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [],
+        "options": [],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "92f65963f73e2e4a23f80507",
+        "question": "b. \u00bfA qu\u00e9 es equivalente la declaraci\u00f3n?\n```cpp\nsprite->x\n```",
+        "answer": "`(*sprite).x`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`(*sprite).x`"],
+        "options": ["`sprite.x`", "`sprite.*x`", "`(*sprite).x`", "`*sprite.x`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "53981802f65c40d03c262f1c",
+        "question": "Considere una clase llamada `complexNumber`. \u00bfQu\u00e9 c\u00f3digo resultar\u00e1 en un objeto equivalente?\n```cpp\ncomplexNumber(float real, float im)\n: real_part(real),\n im_part(im){}\n```",
+        "answer": "C",
+        "explanation": "```cpp\ncomplexNumber(float real, float im) {\nthis->real = real_part;\nthis->im = im_part;\n}\n```\n```cpp\ncomplexNumber(float real, float im) {\nthis->real_part(real);\nthis->im_part(im);\n}\n```\n```cpp\ncomplexNumber(float real, float im) {\nthis->real_part = real;\nthis->im_part = im;\n}\n```\n```cpp\ncomplexNumber(float real, float im) {\nthis->real_part = &real;\nthis->im_part = &im;\n}\n```",
+        "hint": null,
+        "correctAnswer": ["C"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "60ccee16c3dd2bc75aa07332",
+        "question": "\u00bfCu\u00e1l es el resultado de ejecutar este fragmento de c\u00f3digo?\n```cpp\nbool x=true, y=false;\nif (~x || y) {\n    /*parte A*/\n} else {\n    /*parte B*/\n}\n```",
+        "answer": "La parte A se ejecuta porque `~x` no es cero, lo que significa verdadero.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "La parte A se ejecuta porque `~x` no es cero, lo que significa verdadero."
+        ],
+        "options": [
+          "La parte A se ejecuta porque la expresi\u00f3n `(~x || y)` siempre resulta en verdadero si `y==false`.",
+          "La parte B se ejecuta porque la declaraci\u00f3n `(~x || y)` no es v\u00e1lida, por lo tanto falso.",
+          "La parte A se ejecuta porque `~x` no es cero, lo que significa verdadero.",
+          "La parte B se ejecuta porque `~x` es falso e `y` es falso, por lo tanto la operaci\u00f3n OR se eval\u00faa como falso."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7c43847d66ca8167823a851c",
+        "question": "\u00bfCu\u00e1l ser\u00eda la salida de este c\u00f3digo?\n```cpp\nint32_t nums[3]={2,4,3};\nstd::cout << ( nums[0] << nums[1] << nums[2] );\n```",
+        "answer": "256",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["256"],
+        "options": [
+          "La salida son las direcciones de `nums[0]`, `nums[1]`, y `nums[2]`, en ese orden, sin espacios.",
+          "256",
+          "`0`",
+          "`243`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "286fe32eb12ac59536941b9c",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\nfloat values[5]={0.54f, 2.71828f, 3.14159f, 5.499999f, 10.0f};\nfor(auto f:values)\n    printf(\"%i \",(int)(f+0.5f));\n```",
+        "answer": "`1 3 3 5 10`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`1 3 3 5 10`"],
+        "options": [
+          "`0.54 2.71828 3.14159 5.499999 10.0`",
+          "`1 3 4 6 11`",
+          "`0 2 3 5 10`",
+          "`1 3 3 5 10`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c9e8207a291665dcea8be837",
+        "question": "\u00bfCu\u00e1l de las siguientes clases STL es la m\u00e1s adecuada para implementar una gu\u00eda telef\u00f3nica? Suponga que cada entrada contiene un nombre y un n\u00famero de tel\u00e9fono, sin duplicados, y desea tener una b\u00fasqueda por nombre.",
+        "answer": "`std::map`",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/container/map)",
+        "hint": null,
+        "correctAnswer": ["`std::map`"],
+        "options": ["`std::priority_queue`", "`std::list`", "`std::vector`", "`std::map`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "569084ff447613ea12662f78",
+        "question": "\u00bfQu\u00e9 hace este programa?\n```cpp\n#include <iostream>\n#include <fstream>\nusing namespace std;\nint main(){\n    ifstream file1(\"text1.txt\", ios::binary);\n    ofstream file2(\"text2.txt\", ios::binary);\n    file2 << file1.rdbuf();\n}\n```",
+        "answer": "Copia el contenido de text1.txt en text2.txt - es decir, hace una copia de text1.txt, llamada text2.txt.",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/header/fstream)",
+        "hint": null,
+        "correctAnswer": [
+          "Copia el contenido de text1.txt en text2.txt - es decir, hace una copia de text1.txt, llamada text2.txt."
+        ],
+        "options": [
+          "Renombra text1.txt a text2.txt.",
+          "Crea un directorio llamado text2.txt y mueve text1.txt all\u00ed.",
+          "Copia el contenido de text1.txt en text2.txt - es decir, hace una copia de text1.txt, llamada text2.txt.",
+          "A\u00f1ade el contenido de text1.txt en text2.txt - es decir, reemplaza el contenido de text2.txt por la concatenaci\u00f3n de text2.txt y text1.txt."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "baf0fa861c0600c5cf4d60c7",
+        "question": "\u00bfCu\u00e1l de las siguientes NO es una consecuencia de declarar la variable miembro `count` de my_class como static? / Alt.: \u00bfCu\u00e1l afirmaci\u00f3n es verdadera al declarar la variable miembro `count` como static?\n```cpp\nclass my_class {\n    public: static int count;\n}\n```",
+        "answer": "La variable no puede ser modificada por ninguna parte del c\u00f3digo en la misma aplicaci\u00f3n o hilo. Sin embargo, otros hilos pueden modificarla.",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/static)",
+        "hint": null,
+        "correctAnswer": [
+          "La variable no puede ser modificada por ninguna parte del c\u00f3digo en la misma aplicaci\u00f3n o hilo. Sin embargo, otros hilos pueden modificarla."
+        ],
+        "options": [
+          "La variable no puede ser modificada por ninguna parte del c\u00f3digo en la misma aplicaci\u00f3n o hilo. Sin embargo, otros hilos pueden modificarla.",
+          "La variable existe incluso cuando no se han definido objetos de la clase, por lo que puede ser modificada en cualquier punto del c\u00f3digo fuente.",
+          "La variable se asigna solo una vez, independientemente de cu\u00e1ntos objetos se instancien, porque est\u00e1 vinculada a la clase misma, no a sus instancias.",
+          "Todos los objetos que intentan acceder a su variable miembro count realmente se refieren a la \u00fanica variable count vinculada a la clase static."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0931aee733ad245ffd64e89c",
+        "question": "\u00bfCu\u00e1l es el tipo asumido de una constante representada en el c\u00f3digo fuente como `0.44`?",
+        "answer": "double",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["double"],
+        "options": ["double", "long float", "long double", "float"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "36b59b7bb1083c6f8536ae3a",
+        "question": "\u00bfCu\u00e1l es una forma apropiada de eliminar `my_object` como se muestra a continuaci\u00f3n?\n```cpp\nmy_class *my_object = new my_class();\n```",
+        "answer": "`delete(my_object);`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`delete(my_object);`"],
+        "options": [
+          "`delete(my_object);`",
+          "`free(my_object);`",
+          "El recolector de basura destruir\u00e1 el objeto eventualmente.",
+          "Salir del alcance destruir\u00e1 el objeto."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "89c9ac83cd1d2d23929fc529",
+        "question": "\u00bfCu\u00e1l es la forma correcta de llamar a la funci\u00f3n miembro `count` para el puntero de objeto llamado `grades`?\n```cpp\nclass my_array{\n    public:\n        int count();\n};  // ... m\u00e1s miembros arriba\nint main(){\n    my_array *grades = new my_array();\n};  // ... m\u00e1s c\u00f3digo arriba\n```",
+        "answer": "`grades->count();`",
+        "explanation": "[Referencia](https://en.cppreference.com/w/c/language/operator_member_access)",
+        "hint": null,
+        "correctAnswer": ["`grades->count();`"],
+        "options": [
+          "`grades.count();`",
+          "`my_array->count();`",
+          "`grades->count();`",
+          "`my_array.count();`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "251a4a2f29b73f21bdcaf444",
+        "question": "\u00bfCu\u00e1l ser\u00eda la salida de este c\u00f3digo?\n```cpp\nint i0=4, i1=6, i2=8;\nint& nums[3]={i2,i0,i1};\nstd::cout<<nums[0]<<nums[1]<<nums[2];\n```",
+        "answer": "No hay salida. El c\u00f3digo causa un error del compilador porque `nums` es un arreglo de referencias, lo cual es ilegal.",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/array)",
+        "hint": null,
+        "correctAnswer": [
+          "No hay salida. El c\u00f3digo causa un error del compilador porque `nums` es un arreglo de referencias, lo cual es ilegal."
+        ],
+        "options": [
+          "No hay salida. El c\u00f3digo causa un error del compilador porque `nums` es un arreglo de referencias, lo cual es ilegal.",
+          "846",
+          "La salida son las direcciones de `i2`, `i0`, e `i1`, en ese orden, sin espacios.",
+          "468"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba4360e84bf397b891fff0a9",
+        "question": "\u00bfEste c\u00f3digo causa un error del compilador? Si es as\u00ed, \u00bfpor qu\u00e9, y si no, \u00bfqu\u00e9 es `child_t`?\n```cpp\ntypedef struct{\n    unsigned int  age    : 4;\n    unsigned char gender : 1;\n    char                 : 0;\n    unsigned int  size   : 2;\n}child_t;\n```",
+        "answer": "No, y `child_t` es un tipo definido como una estructura con campos de bits. Tiene 4 bits para age y 1 bit para gender en el primer byte, y 2 bits para size en el segundo byte.",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/bit_field)",
+        "hint": null,
+        "correctAnswer": [
+          "No, y `child_t` es un tipo definido como una estructura con campos de bits. Tiene 4 bits para age y 1 bit para gender en el primer byte, y 2 bits para size en el segundo byte."
+        ],
+        "options": [
+          "S\u00ed, causa un error del compilador porque el car\u00e1cter de dos puntos no est\u00e1 permitido en definiciones de estructura.",
+          "No, y `child_t` es un tipo definido como una estructura con campos de bits. Tiene 4 bits para age y 1 bit para gender en el primer byte, y 2 bits para size en el segundo byte.",
+          "S\u00ed, causa un error del compilador porque hay un campo sin nombre.",
+          "S\u00ed, causa un error del compilador porque un campo est\u00e1 definido como teniendo un tama\u00f1o de 0."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fa417f18b825a4661ce8476d",
+        "question": "\u00bfA qu\u00e9 es equivalente esta expresi\u00f3n?\n```cpp\nA->B\n```",
+        "answer": "`(*A).B`",
+        "explanation": "Nota: una variante m\u00e1s simple de la pregunta a continuaci\u00f3n.",
+        "hint": null,
+        "correctAnswer": ["`(*A).B`"],
+        "options": ["`*(A.B)`", "`B=A`", "`(*A).B`", "`&A.B`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cd5dfff4420870fb59f4d91b",
+        "question": "\u00bfA qu\u00e9 es equivalente esta expresi\u00f3n?\n```cpp\nA->B->C->D\n```",
+        "answer": "`*(*((*A).B).C).D`",
+        "explanation": "**Nota:** una variante m\u00e1s compleja de la pregunta anterior.",
+        "hint": null,
+        "correctAnswer": ["`*(*((*A).B).C).D`"],
+        "options": ["`A.B.C.D`", "`*A.*B.*C.*D`", "`&A.&B.&C.&D`", "`*(*((*A).B).C).D`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b032d7cb4b27fbb8cf93c704",
+        "question": "\u00bfQu\u00e9 hace esta funci\u00f3n?\n```cpp\nauto buff = new char[50];\nstd::memset(buff,20,50);\n```",
+        "answer": "Escribe el valor 20 en cada direcci\u00f3n de memoria desde buff hasta buff+49.",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/string/byte/memset)",
+        "hint": null,
+        "correctAnswer": [
+          "Escribe el valor 20 en cada direcci\u00f3n de memoria desde buff hasta buff+49."
+        ],
+        "options": [
+          "Declara un buffer de memoria llamado buff que comienza en la direcci\u00f3n 20 y termina en la direcci\u00f3n 70.",
+          "Establece todos los bits en el arreglo llamado buffer desde su elemento en el \u00edndice 20 hasta su elemento en el \u00edndice 50.",
+          "Escribe el valor 20 en cada direcci\u00f3n de memoria desde buff hasta buff+49.",
+          "Declara un buffer de memoria llamado buff que comienza en la direcci\u00f3n 20 y termina en la direcci\u00f3n 50."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "643e25d2f1eb172e053ef557",
+        "question": "Considere una clase llamada `CustomData`. \u00bfCu\u00e1l opci\u00f3n es una sintaxis de declaraci\u00f3n correcta para sobrecargar el operador posfijo `++` como un miembro de clase?",
+        "answer": "`CustomData operator++(int);`",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/operators)",
+        "hint": null,
+        "correctAnswer": ["`CustomData operator++(int);`"],
+        "options": [
+          "`CustomData& operator++();`",
+          "`void operator++(CustomData);`",
+          "`CustomData operator++(CustomData);`",
+          "`CustomData operator++(int);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5a5210fe2269b69c5bb2947d",
+        "question": "Desea ordenar my_array, declarado a continuaci\u00f3n. \u00bfCu\u00e1l opci\u00f3n es la llamada correcta a std::sort, usando una expresi\u00f3n lambda como funci\u00f3n de comparaci\u00f3n?\n```cpp\nstd::array<uint32_t, 50> my_array;\n```",
+        "answer": "A",
+        "explanation": "```cpp\nstd::sort(my_array.begin(), my_array.end(),\n[](uint32_t a, uint32_t b) {\nreturn a < b;\n})\n```\n```cpp\nlambda(uint32_t a, uint32_t b){\nreturn a < b;\n}\nstd::sort(my_array.begin(), my_array.end(), lambda);\n```\n```cpp\nstd::sort(my_array.begin(), my_array.end(),\nlambda(uint32_t a, uint32_t b){\nreturn a < b;\n})\n```\n```cpp\nlambda(uint32_t a, uint32_t b){\nreturn a < b;\n}\nstd::sort(my_array.begin(), my_array.end(), &lambda);\n```\n[Referencia](https://docs.microsoft.com/en-us/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160)",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "71d3801c8ec8258e9fed0bc8",
+        "question": "\u00bfCu\u00e1l opci\u00f3n es la implementaci\u00f3n m\u00e1s razonable de la funci\u00f3n std::mutex::lock() usando std::mutex::try_lock()?",
+        "answer": "A",
+        "explanation": "```cpp\nvoid std::mutex::lock(){\nwhile(!this->try_lock());\n}\n```\n```cpp\nvoid std::mutex::lock(){\nreturn (this->try_lock());\n}\n```\n```cpp\nvoid std::mutex::lock(){\nwhile(1)\nthis->try_lock();\n}\n```\n```cpp\nvoid std::mutex::lock(){\nwhile(this->try_lock());\n}\n```\nNota: variante de la pregunta a continuaci\u00f3n.",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fba0ebbe3dbae23fcdf27684",
+        "question": "\u00bfCu\u00e1l es la diferencia principal entre estas dos Funciones?\n```cpp\nstd::mutex::lock()\nstd::mutex::try_lock()\n```",
+        "answer": "Ambos intentan adquirir un bloqueo, pero `lock()` bloquea si el mutex no est\u00e1 disponible, mientras que `try_lock()` devuelve si el mutex est\u00e1 disponible o no.",
+        "explanation": "Nota: variante de la pregunta anterior.\n[Referencia](https://en.cppreference.com/w/cpp/thread/mutex/try_lock)",
+        "hint": null,
+        "correctAnswer": [
+          "Ambos intentan adquirir un bloqueo, pero `lock()` bloquea si el mutex no est\u00e1 disponible, mientras que `try_lock()` devuelve si el mutex est\u00e1 disponible o no."
+        ],
+        "options": [
+          "`lock()` tiene un privilegio mayor sobre `try_lock()`. Esto significa que tiene una mejor oportunidad de adquirir un mutex `con lock()`.",
+          "Ambos intentan adquirir un bloqueo, pero `lock()` bloquea si el mutex no est\u00e1 disponible, mientras que `try_lock()` devuelve si el mutex est\u00e1 disponible o no.",
+          "`lock()` fuerza la preferencia, mientras que `try_lock()` sugiere la preferencia.",
+          "Si el mutex no est\u00e1 disponible, `try_lock()` devuelve con un c\u00f3digo correspondiente, mientras que `lock()` arrebata el mutex del hilo que actualmente lo tiene."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a6ef42bdd322070db2668b02",
+        "question": "\u00bfCu\u00e1l es el prop\u00f3sito de un destructor?",
+        "answer": "Permite al programador escribir el c\u00f3digo necesario para liberar los recursos adquiridos por el objeto antes de eliminar el objeto mismo.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Permite al programador escribir el c\u00f3digo necesario para liberar los recursos adquiridos por el objeto antes de eliminar el objeto mismo."
+        ],
+        "options": [
+          "Permite al programador escribir el c\u00f3digo necesario para liberar los recursos adquiridos por el objeto antes de eliminar el objeto mismo.",
+          "Elimina un objeto. Un ejemplo de un destructor es la funci\u00f3n `delete()`.",
+          "Termina un programa. Esto puede lograrse como una llamada de funci\u00f3n regular o como una excepci\u00f3n.",
+          "No hay destructores en C++."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "268cd252387211ce1cf72793",
+        "question": "\u00bfCu\u00e1l es un beneficio de declarar el par\u00e1metro como una referencia `const` en lugar de declararlo como un objeto regular?\n```cpp\nint calculateMedian(const my_array& a)\n```",
+        "answer": "El calificador `const` proh\u00edbe que el c\u00f3digo modifique el argumento, por lo que el programador puede estar seguro de que el objeto fuente permanecer\u00e1 sin cambios. / Alt.: El argumento se pasa como una referencia, por lo que si el objeto my_array pasado es grande, el programa requerir\u00e1 menos tiempo y memoria.",
+        "explanation": "[Referencia](https://stackoverflow.com/a/2627179/10773894)",
+        "hint": null,
+        "correctAnswer": [
+          "El calificador `const` proh\u00edbe que el c\u00f3digo modifique el argumento, por lo que el programador puede estar seguro de que el objeto fuente permanecer\u00e1 sin cambios. / Alt.: El argumento se pasa como una referencia, por lo que si el objeto my_array pasado es grande, el programa requerir\u00e1 menos tiempo y memoria."
+        ],
+        "options": [
+          "En realidad, los objetos no se pueden pasar como variables regulares, porque requieren una llamada al constructor. Por lo tanto, una referencia `const` es la \u00fanica forma de pasar instancias de clase a funciones.",
+          "No hay beneficios porque una referencia y un objeto se tratan como la misma cosa.",
+          "El calificador `const` proh\u00edbe que el c\u00f3digo modifique el argumento, por lo que el programador puede estar seguro de que el objeto fuente permanecer\u00e1 sin cambios. / Alt.: El argumento se pasa como una referencia, por lo que si el objeto my_array pasado es grande, el programa requerir\u00e1 menos tiempo y memoria.",
+          "El argumento se pasa como una referencia, por lo que la funci\u00f3n recibe una copia que puede ser modificada sin afectar la variable original."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "547d183c492309375f34974c",
+        "question": "\u00bfQu\u00e9 es un guardia de inclusi\u00f3n?",
+        "answer": "una declaraci\u00f3n de preprocesador que previene que un archivo fuente sea incluido m\u00e1s de una vez en un proyecto",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "una declaraci\u00f3n de preprocesador que previene que un archivo fuente sea incluido m\u00e1s de una vez en un proyecto"
+        ],
+        "options": [
+          "una directiva de preprocesador que previene comportamientos inconsistentes en l\u00edneas que contienen las directivas #ifdef, #ifndef, o #elif",
+          "una opci\u00f3n del compilador que previene que el c\u00f3digo del usuario incluya bibliotecas adicionales",
+          "una declaraci\u00f3n de preprocesador que previene que un archivo fuente sea incluido m\u00e1s de una vez en un proyecto",
+          "una biblioteca que agrega caracter\u00edsticas de seguridad como mutexes, temporizadores de vigilancia y aserciones al proyecto"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "649f0c86528b5039b6b6954f",
+        "question": "\u00bfCu\u00e1l ser\u00eda la declaraci\u00f3n correcta de un constructor predeterminado para una clase llamada Sprite?",
+        "answer": "A",
+        "explanation": "```cpp\npublic: Sprite();\n```\n```cpp\nprivate: void Sprite();\n```\n```cpp\npublic: void Sprite();\n```\n```cpp\nprivate: Sprite();\n```",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0d3784c63662f6c208ea2e5b",
+        "question": "\u00bfCu\u00e1l es el prop\u00f3sito de esta l\u00ednea en un archivo de encabezado?\n```cpp\n#pragma once\n```",
+        "answer": "hacer que el compilador analice ese archivo de encabezado solo una vez, incluso si est\u00e1 incluido varias veces en el fuente",
+        "explanation": "[referencia aqu\u00ed](https://en.cppreference.com/w/cpp/preprocessor/impl)",
+        "hint": null,
+        "correctAnswer": [
+          "hacer que el compilador analice ese archivo de encabezado solo una vez, incluso si est\u00e1 incluido varias veces en el fuente"
+        ],
+        "options": [
+          "restringir el uso de su contenido a solo un archivo fuente",
+          "decirle al compilador que solo una variable puede ser instanciada de las clases o tipos contenidos en este archivo de encabezado",
+          "ayudar al compilador a terminar m\u00e1s r\u00e1pido asegurando que solo una pasada del compilador es necesaria para el c\u00f3digo incluido en este archivo de encabezado",
+          "hacer que el compilador analice ese archivo de encabezado solo una vez, incluso si est\u00e1 incluido varias veces en el fuente"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0716e6838a330427967b60fe",
+        "question": "\u00bfQu\u00e9 es una variable de tipo double?",
+        "answer": "un n\u00famero de punto flotante",
+        "explanation": "[Referencia](https://www.educba.com/c-plus-plus-double/)",
+        "hint": null,
+        "correctAnswer": ["un n\u00famero de punto flotante"],
+        "options": [
+          "una tupla de 2 elementos",
+          "un n\u00famero entero",
+          "un n\u00famero de punto flotante",
+          "una cadena con m\u00e1s de 255 caracteres"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4172d48e1c4983885ac4e2a1",
+        "question": "Adem\u00e1s de desplazar bits a la izquierda, \u00bfpara qu\u00e9 se usa el operador << ?",
+        "answer": "insertar caracteres en un flujo de salida como std::cout.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["insertar caracteres en un flujo de salida como std::cout."],
+        "options": [
+          "desplazar caracteres a la izquierda en una cadena.",
+          "insertar caracteres en un flujo de salida como std::cout.",
+          "comparar n\u00fameros de punto flotante como menor que.",
+          "asignar una variable a una referencia."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e99d1152509d86cc7c4a046a",
+        "question": "\u00bfCu\u00e1l opci\u00f3n es una raz\u00f3n para especificar el tipo de un puntero en lugar de usar `void *`, que funciona como un puntero a cualquier tipo?",
+        "answer": "El compilador necesita el tipo de datos para saber cu\u00e1nta memoria asignar para el puntero porque diferentes tipos de datos requieren diferentes longitudes de puntero.",
+        "explanation": "[Referencia](https://stackoverflow.com/questions/9802585/why-is-the-data-type-needed-in-pointer-declarations)",
+        "hint": null,
+        "correctAnswer": [
+          "El compilador necesita el tipo de datos para saber cu\u00e1nta memoria asignar para el puntero porque diferentes tipos de datos requieren diferentes longitudes de puntero."
+        ],
+        "options": [
+          "El compilador necesita el tipo de datos para asegurarse de que el puntero no se va a usar en tipos ilegales no apuntables como funciones, etiquetas, punteros y referencias.",
+          "`void *` no funciona para ning\u00fan tipo. El lenguaje no permite asignar nada m\u00e1s que `void` a un puntero a `void *`.",
+          "El compilador necesita el tipo de datos para saber cu\u00e1nta memoria asignar para el puntero porque diferentes tipos de datos requieren diferentes longitudes de puntero.",
+          "S\u00ed, causa un error del compilador porque un campo est\u00e1 definido como teniendo un tama\u00f1o de 0."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5100ddc19f09471978031f1b",
+        "question": "\u00bfQu\u00e9 est\u00e1 mal con este fragmento de c\u00f3digo?\n```cpp\n#include <iostream>\nchar str[20];\nint main(){\n    std::cout << \"What's your name? \";\n    str << std::cin\n    std::cout << \"Hello, \" << str;\n    return 0;\n}\n```",
+        "answer": "El flujo del operador de entrada est\u00e1 invertido. deber\u00eda comenzar desde `std::cin` y luego fluir (>>) hacia `str`.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "El flujo del operador de entrada est\u00e1 invertido. deber\u00eda comenzar desde `std::cin` y luego fluir (>>) hacia `str`."
+        ],
+        "options": [
+          "Se supone que la funci\u00f3n main debe tener un tipo de retorno void.",
+          "`std::cin` y `std::cout` no son v\u00e1lidos. Los nombres correctos para los flujos de entrada y salida de caracteres son `cin` y `cout`.",
+          "Se supone que se debe usar la direcci\u00f3n de `str`. Es decir `&str` en lugar de `str`.",
+          "El flujo del operador de entrada est\u00e1 invertido. deber\u00eda comenzar desde `std::cin` y luego fluir (>>) hacia `str`."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1e1b6b8de04957ce8a67f300",
+        "question": "Cuando se coloca en un contexto de ejecuci\u00f3n v\u00e1lido, \u00bfcu\u00e1l declaraci\u00f3n asignar\u00e1 din\u00e1micamente memoria del heap para un entero de valor 11?",
+        "answer": "`int* anInt = new int(11);`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`int* anInt = new int(11);`"],
+        "options": [
+          "`int anInt = new int(11);`",
+          "`int* anInt = new int[11];`",
+          "`int anInt = new int[11];`",
+          "`int* anInt = new int(11);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b1954c26d50b79f3d705f2eb",
+        "question": "\u00bfCu\u00e1l opci\u00f3n describe mejor el tipo `long`?",
+        "answer": "un n\u00famero entero de al menos 32 bits",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["un n\u00famero entero de al menos 32 bits"],
+        "options": [
+          "un n\u00famero entero de al menos 32 bits",
+          "una cadena con m\u00e1s de 255 caracteres",
+          "un puntero",
+          "un n\u00famero de punto flotante de 64 bits"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fddfbf514c0d7f2f9c01c7b8",
+        "question": "\u00bfCu\u00e1l de los siguientes tipos tiene la funcionalidad m\u00e1s cercana a una clase?",
+        "answer": "`struct`",
+        "explanation": "[Referencia](https://en.cppreference.com/w/c/language/struct)",
+        "hint": null,
+        "correctAnswer": ["`struct`"],
+        "options": ["`struct`", "`union`", "`enum`", "`namespace`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b565afe9364ad5c1ca0c537f",
+        "question": "Dados estos registros en un mapa, \u00bfc\u00f3mo actualizar\u00e1 el valor de la clave \"Sinead\" a 22?\n![image](images/Q79.png)",
+        "answer": "`marks[\"Sinead\"] = 22`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`marks[\"Sinead\"] = 22`"],
+        "options": [
+          "`marks[\"Sinead\"] = 22`",
+          "`marks[\"Sinead\"].22`",
+          "`marks[\"Sinead\"] -> 22`",
+          "`marks[\"Sinead\"].value = 22`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": [
+          {
+            "id": "5ac8efd17af07a161794f757",
+            "url": "images/Q79.png",
+            "type": "question"
+          }
+        ]
+      },
+      {
+        "id": "c0063432245f4e2faed0e2ff",
+        "question": "\u00bfPor qu\u00e9 puede std::sort recibir un objeto funci\u00f3n como uno de sus par\u00e1metros?",
+        "answer": "`La funci\u00f3n std::sort es una plantilla. El programador es libre de ingresar el algoritmo de ordenamiento en un objeto funci\u00f3n como argumento.`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`La funci\u00f3n std::sort es una plantilla. El programador es libre de ingresar el algoritmo de ordenamiento en un objeto funci\u00f3n como argumento.`"
+        ],
+        "options": [
+          "`La funci\u00f3n std::sort es una plantilla. El programador es libre de ingresar el algoritmo de ordenamiento en un objeto funci\u00f3n como argumento.`",
+          "`En realidad, std::sort toma solo un argumento, que es el contenedor a ordenar.`",
+          "`std::sort opera en un contenedor de plantilla. El compilador no sabe c\u00f3mo comparar relacionalmente los valores que contiene, por lo que se debe proporcionar una funci\u00f3n para hacer la comparaci\u00f3n.`",
+          "`std::sort usar\u00e1 la funci\u00f3n de par\u00e1metro como un manejador de errores. La funci\u00f3n ser\u00e1 llamada si ocurre un error.`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4bd067c9ec1f5574f254fc28",
+        "question": "\u00bfQu\u00e9 suceder\u00e1 cuando ejecute este fragmento de c\u00f3digo?\n```\n#include <iostream>\nint main() {\nfloat a = 5.51;\nint b = static_cast<int>(a);\nstd::cout << b;\n}\n```",
+        "answer": "`5 se imprimir\u00e1 en la salida est\u00e1ndar, sin advertencias de compilaci\u00f3n generadas.`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`5 se imprimir\u00e1 en la salida est\u00e1ndar, sin advertencias de compilaci\u00f3n generadas.`"
+        ],
+        "options": [
+          "`6 se imprimir\u00e1 en la salida est\u00e1ndar, sin advertencias de compilaci\u00f3n generadas.`",
+          "`5 se imprimir\u00e1 en la salida est\u00e1ndar, sin advertencias de compilaci\u00f3n generadas.`",
+          "`6 se imprimir\u00e1 en la salida est\u00e1ndar, con advertencias de compilaci\u00f3n generadas.`",
+          "`5 se imprimir\u00e1 en la salida est\u00e1ndar, con advertencias de compilaci\u00f3n generadas.`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e665cd1075ecab97e270018a",
+        "question": "\u00bfQu\u00e9 especificador de acceso no permite que los miembros de la clase sean accedidos desde fuera de la clase, pero permite que sean accedidos por clases derivadas?",
+        "answer": "protected",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["protected"],
+        "options": ["guarded", "protected", "public", "private"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b40a689f5a0fae389f89472a",
+        "question": "La generaci\u00f3n de ejecutables predeterminada en UNIX para un programa C++ es \\_",
+        "answer": "a.out",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["a.out"],
+        "options": ["a.exe", "a", "a.out", "out.a"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "13cb284441c70d1a589d4d02",
+        "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente programa?\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\n  int a=1;\n  cout<<(a++)*(++a)<<endl;\n  return 0;\n}\n```",
+        "answer": "3",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["3"],
+        "options": ["1", "2", "3", "6"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "19f291b0035ed7c93a0291c9",
+        "question": "\u00bfQu\u00e9 significa \"c\" en cout y cin?",
+        "answer": "character (car\u00e1cter)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["character (car\u00e1cter)"],
+        "options": [
+          "compiler (compilador)",
+          "console (consola)",
+          "character (car\u00e1cter)",
+          "standard namespace (espacio de nombres est\u00e1ndar)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "83594123c700e21c238d3432",
+        "question": "\u00bfCu\u00e1l es el uso de tellp()?",
+        "answer": "Posici\u00f3n del puntero de salida actual",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Posici\u00f3n del puntero de salida actual"],
+        "options": [
+          "Posici\u00f3n del puntero de entrada actual",
+          "Posici\u00f3n del puntero de salida actual",
+          "\u00daltima posici\u00f3n del puntero de entrada",
+          "\u00daltima posici\u00f3n del puntero de salida"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "32e82258a7de9d21f49744c1",
+        "question": "\u00bfQu\u00e9 es una funci\u00f3n callback?",
+        "answer": "Puntero a una funci\u00f3n",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Puntero a una funci\u00f3n"],
+        "options": [
+          "Puntero a un puntero",
+          "Puntero a una funci\u00f3n",
+          "funci\u00f3n para un puntero",
+          "funci\u00f3n para una clase"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e837312aa47cf5431ecb5366",
+        "question": "\u00bfCu\u00e1l es la sintaxis correcta para imprimir \"Hello World\" en C++?",
+        "answer": "`cout << \"Hello World\";`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`cout << \"Hello World\";`"],
+        "options": [
+          "`cout << \"Hello World\";`",
+          "`System.out.println(\"Hello World\");`",
+          "`print(\"Hello World\");`",
+          "`Console.WriteLine(\"Hello World\");`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4d6806701a72c972628cab88",
+        "question": "\u00bfCu\u00e1ntas categor\u00edas de iteradores hay en C++?",
+        "answer": "5",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["5"],
+        "options": ["4", "3", "7", "5"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e29fc5c03d5e6b67fdaf9aed",
+        "question": "\u00bfCu\u00e1l es el significado de clase base en C++?",
+        "answer": "Otra clase hered\u00f3 de esta clase",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Otra clase hered\u00f3 de esta clase"],
+        "options": [
+          "Hereda otra clase",
+          "Tiene una variable puntero",
+          "Es la primera clase declarada",
+          "Otra clase hered\u00f3 de esta clase"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d96251780ff7689c73eb445a",
+        "question": "El tama\u00f1o de los objetos C++ se expresa en t\u00e9rminos de m\u00faltiplos del tama\u00f1o de un ** y el tama\u00f1o de un char es **.",
+        "answer": "char, 1",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["char, 1"],
+        "options": ["char, 4", "float, 8", "int, 1", "char, 1"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3c2358e1d1052ecf78fa2ec0",
+        "question": "Los aspectos dependientes de la implementaci\u00f3n sobre una implementaci\u00f3n se pueden encontrar en",
+        "answer": "`<limits>`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["`<limits>`"],
+        "options": ["`<numeric>`", "`<limit>`", "`<limits>`", "`<implementation>`"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b0e0b6e0dd37eb809ab0c4d7",
+        "question": "\u00bfQu\u00e9 es un constructor predeterminado?",
+        "answer": "un constructor que se puede usar sin argumentos",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["un constructor que se puede usar sin argumentos"],
+        "options": [
+          "un constructor que se puede usar sin argumentos",
+          "un constructor que no tiene un valor de retorno",
+          "un constructor que es usado por m\u00faltiples clases",
+          "un constructor que inicializa todos los miembros de una clase"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "17494876ebcc97ce193ceeff",
+        "question": "Al proteger un archivo de encabezado, \u00bfpor qu\u00e9 usar\u00eda '#pragma once' en lugar de 'include' guard?",
+        "answer": "Un include guard usa una macro para lograr una sola inclusi\u00f3n, pero el compilador no puede evitar que el programador defina esa macro en otro lugar, lo que resultar\u00eda en ninguna inclusi\u00f3n en absoluto",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Un include guard usa una macro para lograr una sola inclusi\u00f3n, pero el compilador no puede evitar que el programador defina esa macro en otro lugar, lo que resultar\u00eda en ninguna inclusi\u00f3n en absoluto"
+        ],
+        "options": [
+          "No hay raz\u00f3n para elegir porque sirven prop\u00f3sitos diferentes",
+          "Un include guard usa una macro para lograr una sola inclusi\u00f3n, pero el compilador no puede evitar que el programador defina esa macro en otro lugar, lo que resultar\u00eda en ninguna inclusi\u00f3n en absoluto",
+          "'#pragma once' garantiza que el c\u00f3digo del encabezado nunca se cambiar\u00e1 porque est\u00e1 aplicado por el compilador",
+          "Los include guards se refieren al archivo de encabezado en el sistema de archivos, no al c\u00f3digo, por lo que no son \u00fatiles si el archivo de encabezado existe m\u00e1s de una vez en un proyecto. Esto no es un problema con '#pragma once'"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ab41384abba5c646a2809071",
+        "question": "\u00bfCu\u00e1l de las siguientes declaraciones es v\u00e1lida?",
+        "answer": "No podemos cambiar las plantillas de operadores.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["No podemos cambiar las plantillas de operadores."],
+        "options": [
+          "Podemos crear un nuevo operador de C++.",
+          "Podemos cambiar la precedencia del operador de C++.",
+          "No podemos cambiar las plantillas de operadores.",
+          "Podemos cambiar la asociatividad de los operadores de C++."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f22d89c9d67c440555546fcd",
+        "question": "\u00bfCu\u00e1l de las siguientes se agrega/n autom\u00e1ticamente a cada clase, si no escribimos la nuestra?",
+        "answer": "Todas las anteriores",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Todas las anteriores"],
+        "options": [
+          "Constructor de copia",
+          "Operador de asignaci\u00f3n",
+          "Un constructor sin ning\u00fan par\u00e1metro",
+          "Todas las anteriores"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d461fcb220f171a8f7995aff",
+        "question": "La declaraci\u00f3n if-else puede ser reemplazada por \u00bfqu\u00e9 operador?",
+        "answer": "estructura selectiva",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["estructura selectiva"],
+        "options": [
+          "estructura cierta",
+          "estructura de elecci\u00f3n",
+          "estructura selectiva",
+          "Ninguna de las anteriores"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "45453126f2b79f7288020521",
+        "question": "\u00bfCu\u00e1l opci\u00f3n ser\u00eda una soluci\u00f3n recursiva al problema del factorial n!?",
+        "answer": "&shy;",
+        "explanation": "```cpp\nvoid fact(int n) {\nif (n <= 0)\nreturn 0;\nelse\nreturn 1;\n}\n```\n```cpp\nint fact(int n) {\nif (n <= 0)\nreturn 1;\nelse\nreturn (fact(n) * (n-1));\n}\n```\n```cpp\nint fact(int n) {\nif (n >= 0)\nreturn 1;\nelse\nreturn (fact(n-1) * n);\n}\n```\n```cpp\nint fact(int n) {\nif (n <= 0)\nreturn 1;\nelse\nreturn (fact(n-1) * n);\n}\n```",
+        "hint": null,
+        "correctAnswer": ["&shy;"],
+        "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "54ff80e714776632d0123be6",
+        "question": "Se puede llamar al destructor de una clase cuando ocurren diversas situaciones. \u00bfCu\u00e1l opci\u00f3n NO es una de esas situaciones?",
+        "answer": "El recolector de basura detecta que un objeto ya no se va a usar.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["El recolector de basura detecta que un objeto ya no se va a usar."],
+        "options": [
+          "El programa se termina. Esto llama al destructor de objetos de duraci\u00f3n est\u00e1tica.",
+          "Se llama a la funci\u00f3n delete() para un puntero de objeto asignado con el operador new.",
+          "El recolector de basura detecta que un objeto ya no se va a usar.",
+          "Un objeto de duraci\u00f3n de almacenamiento autom\u00e1tico sale del alcance."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0e80c9f9eb2e1f6f54cd97bf",
+        "question": "Est\u00e1 dise\u00f1ando un sistema de pagos de cambio de divisas en C++. Necesita modelar una transacci\u00f3n de una moneda que tiene un entero como su cantidad y un float como su precio. Luego desea declarar un objeto real de este tipo. \u00bfC\u00f3mo lograr\u00e1 esto?",
+        "answer": "A",
+        "explanation": "```cpp\nstruct currencyDeal {\nfloat price;\nint quantity;\n};\ncurrencyDeal firstDeal;\n```\n```cpp\nunion currencyDeal {\nfloat price;\nint quantity;\n};\ncurrencyDeal firstDeal;\n```\n```cpp\nstruct currencyDeal {\nfloat price;\nint quantity;\n};\n```\n```cpp\nunion currencyDeal {\nfloat price;\nint quantity;\n};\n```",
+        "hint": null,
+        "correctAnswer": ["A"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3bf7b94adee4b1102755fb1a",
+        "question": "\u00bfQu\u00e9 suceder\u00e1 si intenta llamar a esta funci\u00f3n con checkConcatThreshold(\"a\");?\n```cpp\nint checkConcatThreshold(string a, string b) {\n    return (a + b).length () > 120;\n}\n```",
+        "answer": "Ocurrir\u00e1 un error de compilaci\u00f3n.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Ocurrir\u00e1 un error de compilaci\u00f3n."],
+        "options": [
+          "Ocurrir\u00e1 una advertencia de compilaci\u00f3n y al segundo argumento se le dar\u00e1 un valor predeterminado de b.",
+          "Ocurrir\u00e1 una advertencia de compilaci\u00f3n y al segundo argumento se le dar\u00e1 un valor predeterminado de la cadena vac\u00eda.",
+          "Ocurrir\u00e1 un error de compilaci\u00f3n.",
+          "No ocurrir\u00e1n errores de compilaci\u00f3n y no ocurrir\u00e1n advertencias de compilaci\u00f3n."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bf2f6648cd87f35378620fa5",
+        "question": "Necesita definir una funci\u00f3n lambda de C++. Desea que la funci\u00f3n tenga acceso solo a las variables que son locales a ella. La funci\u00f3n debe recibir un solo par\u00e1metro, y un nombre, y construir un saludo simple. \u00bfC\u00f3mo lograr\u00e1 esto?",
+        "answer": "C",
+        "explanation": "```cpp\nauto myVeryFirstLambda = [=] (string name) {\nreturn \"Hello \" + name + \"!\";\n};\n```\n```cpp\nmyVeryFirstLambda = [&] (string name) {\nreturn \"Hello \" + name + \"!\";\n};\n```\n```cpp\nauto myVeryFirstLambda = [] (string name) {\nreturn \"Hello \" + name + \"!\";\n};\n```\n```cpp\nmyVeryFirstLambda = [] (string name) {\nreturn \"Hello \" + name + \"!\";\n};\n```\n[Referencia](https://docs.microsoft.com/en-us/cpp/cpp/lambda-expressions-in-cpp?view=msvc-160)",
+        "hint": null,
+        "correctAnswer": ["C"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a453580eec8b30be574e86ef",
+        "question": "\u00bfCu\u00e1l es el valor de X despu\u00e9s de ejecutar este c\u00f3digo?\n```cpp\nint x=10, a=-3;\nX+=a;\n```",
+        "answer": "7",
+        "explanation": "**Explicaci\u00f3n:** `+=` significa aumentar el valor. Por lo tanto `x += a` es equivalente a `x = x + a`",
+        "hint": null,
+        "correctAnswer": ["7"],
+        "options": ["-3", "7", "13", "3"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "60401d967b71dc561b5574b3",
+        "question": "Una vez que haya terminado de escribir en un archivo, \u00bfqu\u00e9 m\u00e9todo llamar\u00e1 en el `ofstream` para notificar al sistema operativo?",
+        "answer": "close()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["close()"],
+        "options": ["printout()", "close()", "destroy()", "flush()"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6d19f4fbdbc4e098e66ba663",
+        "question": "\u00bfCu\u00e1l opci\u00f3n NO es una palabra clave de C++?",
+        "answer": "comPl",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["comPl"],
+        "options": ["static_assert", "reinterpret_cast", "comPl", "alignas"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "05caed6944972b827d57a006",
+        "question": "La funci\u00f3n size_in_bits parece tomar cualquier tipo de par\u00e1metro. Esto se puede hacer sobrecargando la funci\u00f3n, o dejando que el compilador se encargue de ello escribiendo una plantilla. \u00bfCu\u00e1l opci\u00f3n es una implementaci\u00f3n de esa plantilla?\n```cpp\nint main()\n{\ncout \u00ab size_in_bits(21) \u00ab endl;\ncout \u00ab size_in_bits('f') \u00ab endl;\ncout \u00ab size_in_bits(32.1f) \u00ab endl;\ncout \u00ab size_in_bits(32.1) \u00ab endl;\nreturn 0;\n}\n```",
+        "answer": "A; C",
+        "explanation": "```cpp\ntemplate <typename T>\nsize_t size_in_bits(const T& a){\nreturn sizeof(a)*8;\n}\n```\n```cpp\ntemplate size_t size_in_bits(const {int,float,double,char,long}& a){\nreturn sizeof(a)*8;\n}\n```\n```cpp\ntemplate <typename T {int,float,double,char,long>\nsize_t size_in_bits(const T& a){\nreturn sizeof(a)*8;\n}\n```\n```cpp\nsize_t size_in_bits(void * a){\nreturn sizeof(a)*8;\n}\n```",
+        "hint": null,
+        "correctAnswer": ["A", "C"],
+        "options": ["A", "B", "C", "D"],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "60f8a5cdef6ffa430113ad78",
+        "question": "Para usar el teclado como entrada se incluye la biblioteca iostream. Para leer entrada de archivos como entrada, \u00bfqu\u00e9 biblioteca se necesita?",
+        "answer": "fstream",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["fstream"],
+        "options": ["fstream", "cstdlib", "filestream", "iostream"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a96c57fcb51be28ccd63a450",
+        "question": "\u00bfQu\u00e9 imprimir\u00e1 este programa orientado a objetos?\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\nclass Vehicle {\npublic:\n\tstring fuel = \"none\";\n};\nclass MotorizedVehicle : public Vehicle {\npublic:\n\tstring fuel = \"fossil\";\n};\nclass NextgenMotorizedVehicle : public MotorizedVehicle {\npublic:\n\tstring fuel = \"hydrogen\";\n};\nint main() {\n\tMotorizedVehicle aCar;\n\tcout << aCar.fuel;\n\treturn 0;\n}\n```",
+        "answer": "fossil",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["fossil"],
+        "options": ["fossil", "fossil none", "hydrogen", "none"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7b1ba219681895a8dc5bfcad",
+        "question": "El programa a continuaci\u00f3n est\u00e1 manejando un contenedor de pila. \u00bfCu\u00e1l es la salida de ejecutar el programa?\n```cpp\n#include <iostream>\n#include <stack>\nint main()\n{\n\tstd::stack<int> stack;\n\tstack.push(1);\n\tstack.push(2);\n\tstack.push(3);\n\tstack.pop();\n\tstack.push(4);\n\tstack.top();\n\tstack.pop();\n\tstd::cout << stack.top();\n}\n```",
+        "answer": "2",
+        "explanation": "#Explicaci\u00f3n detallada:\nAqu\u00ed se supone que implementamos una estructura de datos de pila que sigue el principio **FILO** o (First IN Last Out - Primero en Entrar \u00daltimo en Salir),\n_stack.push()_ -> empuja un elemento al final del arreglo.\n_stack.pop()_ -> elimina un elemento del final del arreglo.\n_stack.top()_ -> Solo nos da el elemento superior del arreglo.\nAhora siguiendo las secuencias de push y pop: **[1,2,3]** luego se usa la funci\u00f3n pop,\nEl arreglo reci\u00e9n formado es: **[1,2,4]** luego se usa top para recuperar el elemento superior '4' y luego se usa nuevamente la funci\u00f3n pop que elimina 4.\nas\u00ed, el arreglo resultante es: 1,2.\nLuego imprime el elemento superior (ie: 2).",
+        "hint": null,
+        "correctAnswer": ["2"],
+        "options": ["1", "2", "3", "4"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e5389387fc5b593377594861",
+        "question": "\u00bfCu\u00e1l opci\u00f3n es una forma v\u00e1lida de sobrecargar el operador condicional ternario?",
+        "answer": "`El operador ternario no es sobrecargable.`",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/operators)",
+        "hint": null,
+        "correctAnswer": ["`El operador ternario no es sobrecargable.`"],
+        "options": [
+          "`void& operator ?:(const bool cond, const void& iftrue, const void& iffalse);`",
+          "`El operador ternario no es sobrecargable.`",
+          "`void& operator conditional(const bool cond, const void& iftrue, const void& iffalse);`",
+          "`void* operator ?:(const bool cond, const void* iftrue, const void* iffalse);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "40cea006cc3c01c35f912975",
+        "question": "\u00bfQu\u00e9 jerarqu\u00eda de clases representa un ejemplo de herencia multinivel?",
+        "answer": "En el mismo programa, en diferentes puntos, una clase dada deriva individualmente de m\u00e1s de dos clases diferentes.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "En el mismo programa, en diferentes puntos, una clase dada deriva individualmente de m\u00e1s de dos clases diferentes."
+        ],
+        "options": [
+          "En el mismo programa, en diferentes puntos, una clase dada deriva individualmente de m\u00e1s de una clase diferente.",
+          "Una primera clase deriva directamente, al mismo tiempo, de una segunda y tercera clase.",
+          "En el mismo programa, en diferentes puntos, una clase dada deriva individualmente de m\u00e1s de dos clases diferentes.",
+          "Una primera clase deriva de una segunda clase, y esa segunda clase ya est\u00e1 derivada de una tercera clase"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f50504224f85c8050d17674a",
+        "question": "\u00bfCu\u00e1l de las siguientes es la sintaxis correcta para imprimir el mensaje en lenguaje C++?",
+        "answer": "cout <<\"Hello world!\";",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/io/cout)",
+        "hint": null,
+        "correctAnswer": ["cout <<\"Hello world!\";"],
+        "options": [
+          "Out <<\"Hello world!",
+          "Cout << Hello world! ;",
+          "cout <<\"Hello world!\";",
+          "Ninguna de las anteriores"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "feecd2d683f09a6bdae68d6a",
+        "question": "Considere el siguiente programa. \u00bfCu\u00e1l ser\u00e1 la salida/error?\n```cpp\n#include<iostream>\n#include<algorithm>\n#include<string.h>\nusing namespace std;\nbool compare(char c1, char c2){\nreturn tolower(c1) > tolower(c2);    //L\u00cdNEA-1\n}\nint main(){\nchar arr1[20] = \"C++ Program\", arr2[20] = \"C Program\";\ncout << lexicographical_compare(arr1, arr1+strlen(arr1), arr2, arr2+strlen(arr2),\ncompare);\nreturn 0;\n}\n```",
+        "answer": "1",
+        "explanation": "[Referencia](https://www.geeksforgeeks.org/tolower-function-in-cpp/)",
+        "hint": null,
+        "correctAnswer": ["1"],
+        "options": [
+          "1",
+          "0",
+          "-1",
+          "Error de compilaci\u00f3n: la funci\u00f3n no est\u00e1 definida"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "85e02b0297ffc83f8170a054",
+        "question": "Considere el siguiente segmento de c\u00f3digo. Complete el espacio en blanco en L\u00cdNEA-1 para que el programa imprima \"not found\"?\n```cpp\n#include <iostream>\n#include <algorithm>\nusing namespace std;\nint main() {\nint data[] = {1,2,3,4,5};\nint key = 5;\nif(binary_search(__________))    //L\u00cdNEA-1\ncout << \"found\";\nelse\ncout << \"not found\";\nreturn 0;\n}\n```",
+        "answer": "&data[0], &data[4], key; data+1, data+4, key",
+        "explanation": "[Referencia](https://www.geeksforgeeks.org/binary-search-algorithms-the-c-standard-template-library-stl/)",
+        "hint": null,
+        "correctAnswer": ["&data[0], &data[4], key", "data+1, data+4, key"],
+        "options": [
+          "&data[0], &data[5], key",
+          "data, data+5, key",
+          "&data[0], &data[4], key",
+          "data+1, data+4, key"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "55aabc16b181d1d32fa2ccce",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfCu\u00e1l ser\u00e1 la salida?\n```cpp\n#include <iostream>\n#include <algorithm>\nusing namespace std;\nint main () {\nint data[] = {50, 30, 40, 10, 20};\nsort (&data[1], &data[4]);\nfor (int i = 0; i < 5; i++)\ncout << data[i] << \" \";\nreturn 0;\n}\n```",
+        "answer": "50 10 30 40 20",
+        "explanation": "[Referencia](https://cplusplus.com/reference/algorithm/sort/)",
+        "hint": null,
+        "correctAnswer": ["50 10 30 40 20"],
+        "options": ["10 20 30 40 50", "10 30 40 50 20", "50 10 30 40 20", "50 10 20 30 40"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f1ec318d242a3c4bb4eb78a2",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfCu\u00e1l ser\u00e1 la salida?\n```cpp\n#include <iostream>\n#include <algorithm>\nusing namespace std;\nint main() {\nint element[5];\nfor(int i = 1; i <= 5; i++)\n*(element + i - 1) = i * 5;\nrotate(element, element + 4, element + 5);\nrotate(element, element + 1, element + 4);\nfor (int i = 0; i < 5; ++i)\ncout << element[i] << \" \";\nreturn 0;\n}\n```",
+        "answer": "5 10 15 25 20",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/algorithm/rotate)",
+        "hint": null,
+        "correctAnswer": ["5 10 15 25 20"],
+        "options": ["5 10 15 20 25", "5 10 15 25 20", "20 10 15 25 5", "25 5 10 15 20"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "58549a6d39503e938ff2aece",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfCu\u00e1l ser\u00e1 la salida?\n```cpp\n#include <iostream>\n#include <vector>\nusing namespace std;\nint main() {\nconst int size = 3, c = 65;\nvector<char> vc(size, 'A');\nfor (int i = 1; i <= 2; i++)\nvc.push_back(65 + i);\nvc.resize(10, 90);\nvc.resize(8);\nfor (int i = 0; i < vc.size(); i++)\ncout << vc[i] << \" \";\nreturn 0;\n}\n```",
+        "answer": "A A A B C Z Z Z",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/container/vector)",
+        "hint": null,
+        "correctAnswer": ["A A A B C Z Z Z"],
+        "options": ["A A A B C Z Z Z", "A A B B C Z Z Z", "A A A B C Z Z", "A A A B C Z Z Z Z"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "44c6e5ea2adbdb03450f0b5c",
+        "question": "Considere el siguiente segmento de c\u00f3digo. Elija la opci\u00f3n apropiada para completar el espacio en blanco en L\u00cdNEA-1, de modo que la salida del c\u00f3digo sea: a C++ Program.\n```cpp\n#include <iostream>\n#include <string>\nusing namespace std;\nint main(void) {\nstring s1 = \"C++ \";\nstring s2 = \"Program\";\n__________________;    //L\u00cdNEA-1\ncout << s1;\nreturn 0;\n}\n```",
+        "answer": "s1 += s2; s1.append(s2)",
+        "explanation": "[Referencia](https://www.geeksforgeeks.org/stdstringappend-in-c/)",
+        "hint": null,
+        "correctAnswer": ["s1 += s2", "s1.append(s2)"],
+        "options": ["s1 += s2", "strcat(s1, s2)", "s1.append(s2)", "s1.insert(s2)"],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "73c96180846e1fed26b02b15",
+        "question": "Considere el siguiente segmento de c\u00f3digo. Complete el espacio en blanco en L\u00cdNEA-1 de modo que la salida sea 5 2 3 4 5\n```cpp\n#include <iostream>\n#include <algorithm>\nusing namespace std;\nint main() {\nint data[] = { 1, 2, 3, 4, 5 };\nfor (int i = 0; i < 1; i++) {\nint j = data[i];\nreplace(data, data + 5, j, *(_________________));    //L\u00cdNEA-1\n}\nfor (int i = 0; i < 5; ++i)\ncout << data[i] << \" \";\nreturn 0;\n}\n```",
+        "answer": "data + 4 - i",
+        "explanation": "[Referencia](https://www.geeksforgeeks.org/stdstringreplace-stdstringreplace_if-c/)",
+        "hint": null,
+        "correctAnswer": ["data + 4 - i"],
+        "options": ["data + 4 - i", "data + 5 - i", "data + i - 4", "data + i - 5"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5492cf884a32a304bd7bc883",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfCu\u00e1l ser\u00e1 la salida?\n```cpp\n#include <iostream>\n#include <cstring>\n#include <stack>\nusing namespace std;\nint main(){\nchar str[10] = \"123456789\";\nstack<char> s1, s2;\nint i;\nfor(i = 0; i < strlen(str)/2; i++)\ns1.push(str[i]);\nfor(i=i-1; i < strlen(str); i++)\ns2.push(str[i]);\nwhile (!s1.empty()) {\ns2.push(s1.top()); s1.pop();\n}\nwhile (!s2.empty()) {\ncout << s2.top(); s2.pop();\n}\nreturn 0;\n}\n```",
+        "answer": "1234987654",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/container/stack)",
+        "hint": null,
+        "correctAnswer": ["1234987654"],
+        "options": ["1234987654", "123498765", "1234897654", "123459876"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3fb09717ecb3ee52323997ec",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfQu\u00e9 declaraci\u00f3n/declaraciones es/son correcta(s)?\n```cpp\nint i = 5;\nconst int *p = &i;\nint * const q = &i;\nint const *r = &i;\nint const * const s = &i;\n*p = 10; //STMT-1\n*q = 10; //STMT-2\n*r = 10; //STMT-3\n*s = 10; //STMT-4\n```",
+        "answer": "STMT-2",
+        "explanation": "[Referencia](https://www.geeksforgeeks.org/const-keyword-in-cpp/)",
+        "hint": null,
+        "correctAnswer": ["STMT-2"],
+        "options": ["STMT-1", "STMT-2", "STMT-3", "STMT-4"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f879cfc9252a5ff1f31293aa",
+        "question": "Considere el siguiente programa. \u00bfCu\u00e1l ser\u00e1 la salida/error(es)?\n```cpp\n#include <iostream>\nusing namespace std;\nchar add(char c1 = 'a') { return c1; }\nchar add(char c1 = 'a', char c2 = 'b') { return c1 + c2 - 'a';}\nchar add(char c1 = 'a', int d1 = 100){ return c1 + d1 - 'a'; }\nchar add(char c1 = 'a', char c2 = 'b', char c3) { return c1 + c2 + c3 - 'a'; }\nint main() {\nchar c = add('o', 'k');\ncout << c << endl;\nreturn 0;\n}\n```",
+        "answer": "Error de compilaci\u00f3n: falta argumento predeterminado para \"char add(char, char, char)\"; Error de compilaci\u00f3n: llamada de sobrecarga \"add(char, char)\" es ambigua",
+        "explanation": "[Referencia](https://learn.microsoft.com/en-us/cpp/cpp/function-overloading?view=msvc-170)",
+        "hint": null,
+        "correctAnswer": [
+          "Error de compilaci\u00f3n: falta argumento predeterminado para \"char add(char, char, char)\"",
+          "Error de compilaci\u00f3n: llamada de sobrecarga \"add(char, char)\" es ambigua"
+        ],
+        "options": [
+          "y",
+          "z",
+          "Error de compilaci\u00f3n: falta argumento predeterminado para \"char add(char, char, char)\"",
+          "Error de compilaci\u00f3n: llamada de sobrecarga \"add(char, char)\" es ambigua"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "5edcd2ff89d554f5636ac03c",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfCu\u00e1l ser\u00e1 la salida?\n```cpp\n#include <iostream>\nusing namespace std;\n#define SQR(x) (x)*(x)\nint main() {\nint a=3;\ncout << SQR(a++) << endl;\nreturn 0;\n}\n```",
+        "answer": "12",
+        "explanation": "[Referencia](https://www.geeksforgeeks.org/output-of-the-program-use-macros-carefully/)",
+        "hint": null,
+        "correctAnswer": ["12"],
+        "options": ["12", "25", "9", "16"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2e6b215154d9120865ea07ab",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfQu\u00e9 l\u00ednea/s le dar\u00e1n un error?\n```cpp\n#include<iostream>\n#define X 1\nusing namespace std;\nint main(){\nint i;\nconst int i1 = 2;\nconst int i2 = i1; //L\u00cdNEA-1\ni2 = X;\ni = i1;\ni1 = i;\nreturn 0;\n//L\u00cdNEA-2\n//L\u00cdNEA-3\n//L\u00cdNEA-4\n}\n```",
+        "answer": "L\u00cdNEA-2; L\u00cdNEA-4",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["L\u00cdNEA-2", "L\u00cdNEA-4"],
+        "options": ["L\u00cdNEA-1", "L\u00cdNEA-2", "L\u00cdNEA-3", "L\u00cdNEA-4"],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "053814a7695ea6cc2ad9ec1f",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfCu\u00e1l ser\u00e1 la salida/error?\n```cpp\n#include<iostream>\nusing namespace std;\nint main(){\nint a = 5;\nint &b = a+1;\na = a*b;\ncout << a << \" \" << b;\nreturn 0;\n}\n```",
+        "answer": "Error de compilaci\u00f3n: inicializaci\u00f3n no v\u00e1lida de referencia no constante",
+        "explanation": "#Explicaci\u00f3n detallada:\nEl error est\u00e1 ocurriendo porque est\u00e1 tratando de crear una referencia a un valor temporal. En la l\u00ednea int &b = a+1; estamos intentando crear una referencia b al resultado de la expresi\u00f3n a + 1, que es un valor temporal. Las referencias deben estar vinculadas a un objeto real, no a un valor temporal o una expresi\u00f3n que no tenga una ubicaci\u00f3n de memoria.",
+        "hint": null,
+        "correctAnswer": [
+          "Error de compilaci\u00f3n: inicializaci\u00f3n no v\u00e1lida de referencia no constante"
+        ],
+        "options": [
+          "36",
+          "30",
+          "25",
+          "Error de compilaci\u00f3n: inicializaci\u00f3n no v\u00e1lida de referencia no constante"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b56abf1c015306d42490a81d",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfCu\u00e1l ser\u00e1 la salida?\n```cpp\n#include <iostream>\nusing namespace std;\nint& func(int& i) {     //L\u00cdNEA-1\nreturn i = i+5;\n}\nint main() {\nint x = 1, y = 2;\nint& z = func(x);\ncout << x << \" \" << z << \" \";\nfunc(x) = y;\ncout << x << \" \" << z;\nreturn 0;\n}\n```",
+        "answer": "6 6 2 2",
+        "explanation": "[Referencia](https://www.ibm.com/docs/en/zos/2.4.0?topic=calls-pass-by-reference-c-only)",
+        "hint": null,
+        "correctAnswer": ["6 6 2 2"],
+        "options": ["6 6 2 2", "6 6 7 7", "1 1 2 2", "1 1 7 7"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "63a411e18573214b915d2555",
+        "question": "Considere el siguiente segmento de c\u00f3digo. Elija la opci\u00f3n apropiada para completar los espacios en blanco en L\u00cdNEA-1, de modo que la salida del c\u00f3digo sea: 300 20000.\n```cpp\n#include <iostream>\nusing namespace std;\nvoid compute(int n1, int n2, ________, ________){ //L\u00cdNEA-1\nn3 = n1 + n2;\n*n4 = n1 * n2;\n}\nint main(){\nint a = 100, b = 200, c = 0, d = 0;\ncompute(a, b, c, &d); //L\u00cdNEA-2\ncout << c << \", \";\ncout << d;\nreturn 0;\n}\n```",
+        "answer": "int& n3, int \\*n4",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["int& n3, int \\*n4"],
+        "options": [
+          "int n3, int\\* n4",
+          "int& n3, int \\*n4",
+          "int* n3, int* n4",
+          "int& n3, int& n4"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1d5fdc53b65f922bc2180e4b",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfCu\u00e1l ser\u00e1 la salida/error?\n```cpp\n#include <iostream>\nusing namespace std;\nint main() {\nint a = 2, *b;\n*b = 5;\nint * const ptr;    // L\u00cdNEA-1\n// L\u00cdNEA-2\nptr = b;\ncout << *ptr;\nreturn 0;\n}\n```",
+        "answer": "Error de compilaci\u00f3n en L\u00cdNEA-1: 'ptr' const no inicializado; Error de compilaci\u00f3n en L\u00cdNEA-2: asignaci\u00f3n de variable de solo lectura 'ptr'",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Error de compilaci\u00f3n en L\u00cdNEA-1: 'ptr' const no inicializado",
+          "Error de compilaci\u00f3n en L\u00cdNEA-2: asignaci\u00f3n de variable de solo lectura 'ptr'"
+        ],
+        "options": [
+          "`<valor basura>`",
+          "5",
+          "Error de compilaci\u00f3n en L\u00cdNEA-1: 'ptr' const no inicializado",
+          "Error de compilaci\u00f3n en L\u00cdNEA-2: asignaci\u00f3n de variable de solo lectura 'ptr'"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "9b1bba994e834040b1d5583a",
+        "question": "Considere el siguiente segmento de c\u00f3digo. \u00bfCu\u00e1l ser\u00e1 la salida/error?\n```cpp\n#include <iostream>\nusing namespace std;\nvoid fun(int a = 5) { cout << a << endl; }\n//L\u00cdNEA-1\nint fun(int x = 10) { cout << x << endl; return 0; }    //L\u00cdNEA-2\nint main() {\nfun();\nreturn 0;\n}\n```",
+        "answer": "Error de compilaci\u00f3n en L\u00cdNEA-2: nueva declaraci\u00f3n ambigua de 'int fun(int)'",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Error de compilaci\u00f3n en L\u00cdNEA-2: nueva declaraci\u00f3n ambigua de 'int fun(int)'"
+        ],
+        "options": [
+          "5",
+          "10",
+          "5",
+          "Error de compilaci\u00f3n en L\u00cdNEA-2: nueva declaraci\u00f3n ambigua de 'int fun(int)'"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "162c2aa2d3e89522394b725b",
+        "question": "Considere el siguiente segmento de c\u00f3digo. Complete el espacio en blanco en L\u00cdNEA-1 de modo que el programa imprima 5 + i3\n```cpp\n#include<iostream>\nusing namespace std;\nstruct complex{\nint re, im;\nvoid show(){ cout << re << \" + i\" << im; }\n};\n______________________________________{ //L\u00ednea-1\nc2.re = c1.re+c2.re;\nc2.im = c1.im+c2.im;\nreturn c2;\n}\nint main(){\nstruct complex c1={2,5},c2{3,-2};\nstruct complex t = c1 + c2;\nt.show();\nreturn 0;\n}\n```",
+        "answer": "complex operator+(complex &c1, complex &c2)",
+        "explanation": "[Referencia](https://www.w3schools.com/cpp/cpp_structs.asp)",
+        "hint": null,
+        "correctAnswer": ["complex operator+(complex &c1, complex &c2)"],
+        "options": [
+          "complex operator+(complex &c1, complex &c2)",
+          "complex operator+(const complex &c1, const complex &c2)",
+          "operator+(complex &c1, complex &c2)",
+          "complex +(complex &c1, complex &c2)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e471c234fd3df8893127c73b",
+        "question": "Considere el siguiente programa. \u00bfQu\u00e9 l\u00ednea/s generar\u00e1(n) un error?\n```cpp\n#include<iostream>\nusing namespace std;\nclass myClass{\nint pra = 5;\npublic:\nint pub = 10;\nvoid set_pr(int x){ pra = x; }\nvoid set_pu(int x){ pub = x; }\n};\nint main(){\nmyClass m;\nint a, b;\na = m.pra; //L\u00cdNEA-1\nb = m.pub; //L\u00cdNEA-2\nm.set_pr(100); //L\u00cdNEA-3\nm.set_pu(200); //L\u00cdNEA-4\nreturn 0;\n}\n```",
+        "answer": "L\u00cdNEA-1",
+        "explanation": "[Referencia](https://stackoverflow.com/questions/4855422/c-classes-public-private-and-protected)",
+        "hint": null,
+        "correctAnswer": ["L\u00cdNEA-1"],
+        "options": ["L\u00cdNEA-1", "L\u00cdNEA-2", "L\u00cdNEA-3", "L\u00cdNEA-4"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "701af0f8a64df1f753c6204f",
+        "question": "Considere la siguiente clase. Complete los espacios en blanco con especificadores de acceso apropiados para que el miembro y pueda ser accedido desde fuera de la clase pero el miembro x no pueda ser accedido.\n```cpp\nclass Test{\n________:\nint x;\n________:\nint y;\n/* M\u00e1s c\u00f3digo */\n};\n```",
+        "answer": "private, private",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["private, private"],
+        "options": ["public, public", "public, private", "private, public", "private, private"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "02b3ed2c12de35e115600923",
+        "question": "\u00bfQu\u00e9 est\u00e1ndar de C++ agreg\u00f3 inicializadores de miembros predeterminados en clase?",
+        "answer": "C++11",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["C++11"],
+        "options": ["C++98", "C++11", "C++14", "C++17."],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "23b91c687ce8997d983e7da5",
+        "question": "\u00bfPuede usar la deducci\u00f3n de tipo auto para miembros de datos no est\u00e1ticos?",
+        "answer": "No",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["No"],
+        "options": ["S\u00ed, desde C++11", "No", "S\u00ed, desde C++20"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "496a7906ab5cd70eb0c72765",
+        "question": "\u00bfNecesita definir un miembro de datos inline static en un archivo cpp?",
+        "answer": "No, la definici\u00f3n ocurre en el mismo lugar donde se declara un miembro inline static.",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/bit_field)",
+        "hint": null,
+        "correctAnswer": [
+          "No, la definici\u00f3n ocurre en el mismo lugar donde se declara un miembro inline static."
+        ],
+        "options": [
+          "No, la definici\u00f3n ocurre en el mismo lugar donde se declara un miembro inline static.",
+          "S\u00ed, el compilador necesita la definici\u00f3n en un archivo cpp.",
+          "S\u00ed, el compilador necesita una definici\u00f3n en todas las unidades de traducci\u00f3n que usen esta variable."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9ddb992adbf9369a7d2f14a4",
+        "question": "\u00bfCu\u00e1l es la salida del siguiente c\u00f3digo:\n```cpp\nstruct S {\n    int a { 10 };\n    int b { 42 };\n};\nS s { 1 };\nstd::cout << s.a << \", \" << s.b;\n```",
+        "answer": "La salida es: 1, 42",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["La salida es: 1, 42"],
+        "options": ["La salida es: 1, 0", "La salida es: 10, 42", "La salida es: 1, 42"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5ef962524f1524eccd5b005b",
+        "question": "\u00bfPuede una variable inline static ser no constante?",
+        "answer": "S\u00ed, es solo una variable regular.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["S\u00ed, es solo una variable regular."],
+        "options": [
+          "S\u00ed, es solo una variable regular.",
+          "No, las variables inline deben ser constantes."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "47d80b63d6d8f39a7704420a",
+        "question": "Considere el siguiente c\u00f3digo:\n```cpp\nstruct C {\n    C(int x) : a(x) { }\n    int a { 10 };\n    int b { 42 };\n};\nC c(0);\n```",
+        "answer": "C::a se inicializa solo una vez con 0 en el constructor.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["C::a se inicializa solo una vez con 0 en el constructor."],
+        "options": [
+          "C::a se inicializa dos veces. La primera vez, se inicializa con 10, y luego la segunda vez con 0 en el constructor.",
+          "C::a se inicializa solo una vez con 0 en el constructor.",
+          "El c\u00f3digo no compila porque el compilador no puede decidir c\u00f3mo inicializar el miembro C::a.",
+          "2 bytes"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2686d785b7c89b4c4dfcc000",
+        "question": "\u00bfQu\u00e9 sucede cuando lanzas una excepci\u00f3n desde un constructor?",
+        "answer": "El objeto se considera \"parcialmente creado\", y por lo tanto, el compilador no llamar\u00e1 a su destructor.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "El objeto se considera \"parcialmente creado\", y por lo tanto, el compilador no llamar\u00e1 a su destructor."
+        ],
+        "options": [
+          "El objeto se considera \"creado\", por lo que seguir\u00e1 el ciclo de vida regular de un objeto.",
+          "El objeto se considera \"parcialmente creado\", y por lo tanto, el compilador no llamar\u00e1 a su destructor.",
+          "El compilador llama a std::terminate ya que no se pueden lanzar excepciones desde constructores."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d23210d53361e246363b8a08",
+        "question": "\u00bfQu\u00e9 sucede cuando compilas este c\u00f3digo?\n```cpp\nstruct Point { int x; int y; };\nPoint pt {.y = 10, .x = 11 };\nstd::cout << pt.x << \", \" << pt.y;\n```",
+        "answer": "El c\u00f3digo no compila. Los designadores deben estar en el mismo orden que los miembros de datos en la clase Point.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "El c\u00f3digo no compila. Los designadores deben estar en el mismo orden que los miembros de datos en la clase Point."
+        ],
+        "options": [
+          "El c\u00f3digo no compila. Los designadores deben estar en el mismo orden que los miembros de datos en la clase Point.",
+          "El c\u00f3digo compila e imprime 11, 10.",
+          "El c\u00f3digo compila e imprime 10, 11."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ead68ccb092898b4dba4f0d6",
+        "question": "\u00bfFuncionar\u00e1 este c\u00f3digo en C++11?\n```cpp\nstruct User { std::string name = \"unknown\"; unsigned age { 0 }; };\nUser u { \"John\", 101 };\n```",
+        "answer": "El c\u00f3digo compila a partir del modo C++14.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["El c\u00f3digo compila a partir del modo C++14."],
+        "options": [
+          "S\u00ed, el c\u00f3digo compila en modo C++11.",
+          "El c\u00f3digo compila a partir del modo C++14.",
+          "El c\u00f3digo no compila incluso en C++20."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2789507396f433d647c4c37f",
+        "question": "Suponga que tiene un std::map<string, int> m;. Seleccione la \u00fanica afirmaci\u00f3n verdadera sobre el siguiente bucle:\n```cpp\nfor (const pair<string, int>& elem : m)\n```",
+        "answer": "A El bucle itera correctamente sobre el mapa, sin crear copias adicionales.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "A El bucle itera correctamente sobre el mapa, sin crear copias adicionales."
+        ],
+        "options": [
+          "A El bucle itera correctamente sobre el mapa, sin crear copias adicionales.",
+          "B El bucle crear\u00e1 una copia de cada elemento en el mapa ya que el tipo de elem no coincide.",
+          "C El c\u00f3digo no compilar\u00e1 porque un par const no puede vincularse a un mapa."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5a5c1b3b641685d0bab33245",
+        "question": "Identifique la extensi\u00f3n correcta del archivo de encabezado definido por el usuario en C++.",
+        "answer": ".h",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [".h"],
+        "options": [".cpp", ".hg", ".h", ".hf"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "594e76c998486380907a8c22",
+        "question": "Identifique el tipo de constructor incorrecto.\n```cpp\nauto x = 4000.22;\n```",
+        "answer": "Constructor Amigo",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Constructor Amigo"],
+        "options": [
+          "Constructor Amigo",
+          "Constructor Predeterminado",
+          "Constructor Parametrizado",
+          "Constructor de Copia"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "84cfc3ca98ac6ac7f659a1a0",
+        "question": "\u00bfCu\u00e1l de los siguientes tipos de datos es compatible con C++ pero no con C?",
+        "answer": "bool",
+        "explanation": "[Referencia]: https://stackoverflow.com/questions/1608318/is-bool-a-native-c-type",
+        "hint": null,
+        "correctAnswer": ["bool"],
+        "options": ["bool", "int", "double", "float"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "abd47fdd1be14791ebbede04",
+        "question": "Identifique la sintaxis correcta para declarar arreglos en C++.",
+        "answer": "int arr[10]",
+        "explanation": "[Referencia]: (https://en.cppreference.com/w/cpp/language/array)",
+        "hint": null,
+        "correctAnswer": ["int arr[10]"],
+        "options": ["int arr[10]", "array arr[10]", "array{10}", "int arr"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9a25b931e89d26c6f9eb5d73",
+        "question": "El tama\u00f1o de wchat_t es.",
+        "answer": "Depende del n\u00famero de bits en el sistema",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Depende del n\u00famero de bits en el sistema"],
+        "options": ["2", "4", "2 o 4", "Depende del n\u00famero de bits en el sistema"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3fc30e3d4dceb086e77ecf54",
+        "question": "\u00bfCu\u00e1l de los siguientes bucles es mejor cuando conocemos el n\u00famero de iteraciones?",
+        "answer": "for",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["for"],
+        "options": ["while", "for", "do", "Todos los anteriores"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3813a3f84e17ab987ca4755f",
+        "question": "\u00bfQu\u00e9 palabra clave se usa para definir las macros en C++?",
+        "answer": "#define",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["#define"],
+        "options": ["#macro", "#define", "macro", "keyword"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8827dbcfb746a32dfc7ecca3",
+        "question": "\u00bfCu\u00e1l de los siguientes operadores deber\u00eda preferirse para sobrecargarse como una funci\u00f3n global en lugar de un m\u00e9todo miembro?",
+        "answer": "Operador de Comparaci\u00f3n",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Operador de Comparaci\u00f3n"],
+        "options": [
+          "Postfijo ++",
+          "Operador de Comparaci\u00f3n",
+          "Operador de Inserci\u00f3n <<",
+          "Prefijo++"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e4e9d85958bdf786bdaf1b58",
+        "question": "\u00bfC\u00f3mo podemos restringir la asignaci\u00f3n din\u00e1mica de objetos de una clase usando new?",
+        "answer": "Haciendo operadores new y new[] privados vac\u00edos",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Haciendo operadores new y new[] privados vac\u00edos"],
+        "options": [
+          "Sobrecargando el operador new",
+          "Haciendo un operador new privado vac\u00edo.",
+          "Haciendo operadores new y new[] privados vac\u00edos",
+          "Sobrecargando operadores new y operadores new[]"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d13e4ff88b48ea31398b9d90",
+        "question": "\u00bfCu\u00e1l es la complejidad temporal del c\u00f3digo a continuaci\u00f3n?\n```cpp\nfor(int i=0;i<n;i++){\n   for(int j=0;j<n;j++){\n       cout<<\"hello\";\n    }\n}\n```",
+        "answer": "O(n^2)",
+        "explanation": "[Referencia](<https://medium.com/enjoy-algorithm/analysis-of-loop-in-programming-cc9a644ef8cd#:~:text=At%20each%20step%20of%20the%20iteration%2C%20the%20nested%20loop%20is,%20%3D%20O(n%C2%B2)>)",
+        "hint": null,
+        "correctAnswer": ["O(n^2)"],
+        "options": ["O(n^3)", "O(n^2)", "O(n)", "O(1)"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba1c5d50ca9deb580496f8eb",
+        "question": "\u00bfCu\u00e1l es la salida del c\u00f3digo dado a continuaci\u00f3n?\n```cpp\nint a=10;\nint k=++a;\nint m=a++;\ncout<<k+m;\n```",
+        "answer": "22",
+        "explanation": "Tanto **++a** como **a++** aumentan el valor de a en 1 (es decir: 11) y por lo tanto k+m se convierte en 22.",
+        "hint": null,
+        "correctAnswer": ["22"],
+        "options": ["20", "21", "22", "23"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "de5667332ce25f90cc42157f",
+        "question": "\u00bfQu\u00e9 construcci\u00f3n de C++ se usa para el manejo de excepciones?",
+        "answer": "try-catch",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["try-catch"],
+        "options": ["try-catch", "if-else", "for loop", "switch-case"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d929421a16aae80ecf6c22e5",
+        "question": "\u00bfCu\u00e1l es el prop\u00f3sito de la declaraci\u00f3n `break` en un bucle en C++?",
+        "answer": "Terminar el bucle",
+        "explanation": "[Referencia]: (https://www.tutorialspoint.com/cprogramming/c_break_statement.htm)",
+        "hint": null,
+        "correctAnswer": ["Terminar el bucle"],
+        "options": [
+          "Salir del programa",
+          "Saltar la iteraci\u00f3n actual y continuar con la siguiente",
+          "Terminar el bucle",
+          "Devolver un valor"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e1b8a27df6198e55588f43b7",
+        "question": "En C++, \u00bfcu\u00e1l es el prop\u00f3sito de la palabra clave `const` cuando se usa con una variable?",
+        "answer": "Hace que la variable sea inmutable",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Hace que la variable sea inmutable"],
+        "options": [
+          "Hace que la variable sea inmutable",
+          "Cambia el tipo de datos",
+          "Define una funci\u00f3n constante",
+          "Hace que la variable sea un puntero"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "107d9cff7a5e37ed120faa5e",
+        "question": "\u00bfCu\u00e1l es m\u00e1s efectivo al llamar a las funciones de C++?",
+        "answer": "Llamada por referencia",
+        "explanation": "[Referencia]: (https://www.algbly.com/More/MCQs/Cpp-mcq/Cpp-functions.html)",
+        "hint": null,
+        "correctAnswer": ["Llamada por referencia"],
+        "options": [
+          "Llamada por referencia",
+          "Llamada por valor",
+          "Llamada por puntero",
+          "Llamada por objeto"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0023ee9f2323275dfd2ac291",
+        "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente programa de C++?\n```cpp\n#include <iostream>\nusing namespace std;\nclass A{\npublic:\n\tA(){\n\t\tcout<<\"Constructor called\\n\";\n\t   }\n\t~A(){\n\t\tcout<<\"Destructor called\\n\";\n\t    }\n};\nint main(int argc, char const *argv[])\n{\n\tA *a = new A[5];\n\tdelete[] a;\n\treturn 0;\n}\n```",
+        "answer": "\"Constructor called\" cinco veces y luego \"Destructor called\" cinco veces",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "\"Constructor called\" cinco veces y luego \"Destructor called\" cinco veces"
+        ],
+        "options": [
+          "Fallo de segmentaci\u00f3n",
+          "\"Constructor called\" cinco veces y luego \"Destructor called\" cinco veces",
+          "\"Constructor called\" cinco veces y luego \"Destructor called\" una vez",
+          "Error"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8d01084d3f83b86cb4d61bca",
+        "question": "\u00bfCu\u00e1l opci\u00f3n NO est\u00e1 relacionada con declarar la variable miembro count como static en my_class?\n```cpp\nclass my_class{\n    public: static int count;\n}\n```",
+        "answer": "La variable no puede ser modificada por ninguna parte del c\u00f3digo en la misma aplicaci\u00f3n o hilo. Sin embargo, otros hilos pueden modificarla.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "La variable no puede ser modificada por ninguna parte del c\u00f3digo en la misma aplicaci\u00f3n o hilo. Sin embargo, otros hilos pueden modificarla."
+        ],
+        "options": [
+          "Todos los objetos que intentan acceder a su variable miembro count realmente se refieren a la \u00fanica variable count vinculada a la clase static.",
+          "La variable existe incluso cuando no se han definido objetos de la clase, por lo que puede ser modificada en cualquier punto del c\u00f3digo fuente.",
+          "La variable no puede ser modificada por ninguna parte del c\u00f3digo en la misma aplicaci\u00f3n o hilo. Sin embargo, otros hilos pueden modificarla.",
+          "La variable se asigna solo una vez, independientemente de cu\u00e1ntos objetos se instancien, porque est\u00e1 vinculada a la clase misma, no a sus instancias."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a850a76e0e9b59ac0002c03e",
+        "question": "\u00bfCu\u00e1l es el prop\u00f3sito de la palabra clave `constexpr` en C++?",
+        "answer": "`constexpr` se usa para indicar que una expresi\u00f3n puede ser evaluada en tiempo de compilaci\u00f3n, haci\u00e9ndola adecuada para su uso en expresiones constantes.",
+        "explanation": "[Ref](https://learn.microsoft.com/en-us/cpp/cpp/constexpr-cpp?view=msvc-170#:~:text=constexpr%20indica%20que%20el%20valor,argumentos%20de%20plantilla%20y%20declaraciones%20de%20arreglos.)",
+        "hint": null,
+        "correctAnswer": [
+          "`constexpr` se usa para indicar que una expresi\u00f3n puede ser evaluada en tiempo de compilaci\u00f3n, haci\u00e9ndola adecuada para su uso en expresiones constantes."
+        ],
+        "options": [
+          "Se usa para definir constantes en C++.",
+          "`constexpr` se usa para especificar que una variable es un puntero constante.",
+          "`constexpr` se usa para indicar que una expresi\u00f3n puede ser evaluada en tiempo de compilaci\u00f3n, haci\u00e9ndola adecuada para su uso en expresiones constantes.",
+          "Es una palabra clave usada para crear funciones as\u00edncronas."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "210f4d78e6a70a4bf52296ff",
+        "question": "\u00bfQu\u00e9 es un metaprograma de plantilla en C++?\n- Ref(https://www.geeksforgeeks.org/template-metaprogramming-in-c/)",
+        "answer": "Un metaprograma de plantilla es una computaci\u00f3n en tiempo de compilaci\u00f3n, donde las plantillas y la especializaci\u00f3n de plantillas se usan para realizar c\u00e1lculos en tiempo de compilaci\u00f3n.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Un metaprograma de plantilla es una computaci\u00f3n en tiempo de compilaci\u00f3n, donde las plantillas y la especializaci\u00f3n de plantillas se usan para realizar c\u00e1lculos en tiempo de compilaci\u00f3n."
+        ],
+        "options": [
+          "Un metaprograma de plantilla es un lenguaje de programaci\u00f3n de alto nivel.",
+          "Se refiere a la metaprogramaci\u00f3n que usa plantillas en C++.",
+          "Es un tipo de patr\u00f3n de dise\u00f1o de interfaz de usuario.",
+          "Un metaprograma de plantilla es una computaci\u00f3n en tiempo de compilaci\u00f3n, donde las plantillas y la especializaci\u00f3n de plantillas se usan para realizar c\u00e1lculos en tiempo de compilaci\u00f3n."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b40771b2054a681849010946",
+        "question": "Identifique el ejemplo correcto para un operador de pre-incremento.",
+        "answer": "++i",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["++i"],
+        "options": ["++i", "i++", "--i", "+i"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "573a68659efdd0ab2bba9ae7",
+        "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente c\u00f3digo?\n```cpp\n{% raw %}\nint matrix[3][3] = {{1, 2, 3},{4, 5, 6},{7, 8, 9}};\nfor(int i=0;i<3;i++){\n    for(int j=0;j<3;j++){\n        int a = matrix[i][j];\n        matrix[i][j] = matrix[j][i];\n        matrix[j][i] = a;\n    }\n}\n{% endraw %}\n```",
+        "answer": "Misma matriz",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": ["Misma matriz"],
+        "options": [
+          "Transpuesta de matriz",
+          "Misma matriz",
+          "Imagen especular de la matriz",
+          "Matriz invertida"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f13af9b8caa86d54c52deab7",
+        "question": "\u00bfQu\u00e9 es una condici\u00f3n de carrera en C++?",
+        "answer": "Una condici\u00f3n donde m\u00faltiples hilos acceden a datos compartidos concurrentemente, y el resultado depende del momento de su ejecuci\u00f3n",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/language/memory_model)",
+        "hint": null,
+        "correctAnswer": [
+          "Una condici\u00f3n donde m\u00faltiples hilos acceden a datos compartidos concurrentemente, y el resultado depende del momento de su ejecuci\u00f3n"
+        ],
+        "options": [
+          "Una condici\u00f3n donde el programa se ejecuta m\u00e1s r\u00e1pido de lo esperado",
+          "Una condici\u00f3n donde m\u00faltiples hilos acceden a datos compartidos concurrentemente, y el resultado depende del momento de su ejecuci\u00f3n",
+          "Una condici\u00f3n donde dos hilos compiten por tiempo de CPU",
+          "Una condici\u00f3n donde un bucle se ejecuta demasiado r\u00e1pido y necesita ser ralentizado"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "25f711842dbc828174937558",
+        "question": "Considere el siguiente c\u00f3digo que tiene una condici\u00f3n de carrera. \u00bfCu\u00e1l es la forma correcta de arreglarlo?\n```cpp\n#include <thread>\n#include <vector>\nint counter = 0;\nvoid incrementCounter() {\n    for(int i = 0; i < 1000; i++) {\n        counter++;\n    }\n}\nint main() {\n    std::vector<std::thread> threads;\n    for(int i = 0; i < 10; i++) {\n        threads.push_back(std::thread(incrementCounter));\n    }\n    for(auto& t : threads) {\n        t.join();\n    }\n    return 0;\n}\n```",
+        "answer": "Usar `std::mutex` para bloquear/desbloquear alrededor de `counter++` en la secci\u00f3n cr\u00edtica",
+        "explanation": "[Referencia](https://en.cppreference.com/w/cpp/thread/mutex)",
+        "hint": null,
+        "correctAnswer": [
+          "Usar `std::mutex` para bloquear/desbloquear alrededor de `counter++` en la secci\u00f3n cr\u00edtica"
+        ],
+        "options": [
+          "Agregar la palabra clave `volatile`: `volatile int counter = 0;`",
+          "Usar `std::mutex` para bloquear/desbloquear alrededor de `counter++` en la secci\u00f3n cr\u00edtica",
+          "Usar `std::this_thread::sleep_for()` para retrasar cada incremento",
+          "Cambiar `counter++` a `++counter` para operaci\u00f3n at\u00f3mica"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "457c42f9afa867e8c3ca0aaf",
+        "question": "\u00bfCu\u00e1l es el prop\u00f3sito de `std::move` en C++11?",
+        "answer": "Convertir un objeto a una referencia rvalue, habilitando la sem\u00e1ntica de movimiento",
+        "explanation": "**Explicaci\u00f3n:**\n`std::move` es una conversi\u00f3n que produce una referencia rvalue a su argumento, permitiendo que los recursos se muevan en lugar de copiarse. No mueve nada por s\u00ed mismo, pero permite que se llamen constructores de movimiento y operadores de asignaci\u00f3n de movimiento.\n[Referencia](https://en.cppreference.com/w/cpp/utility/move)",
+        "hint": null,
+        "correctAnswer": [
+          "Convertir un objeto a una referencia rvalue, habilitando la sem\u00e1ntica de movimiento"
+        ],
+        "options": [
+          "Copiar un objeto a una nueva ubicaci\u00f3n",
+          "Convertir un objeto a una referencia rvalue, habilitando la sem\u00e1ntica de movimiento",
+          "Mover f\u00edsicamente la memoria de una direcci\u00f3n a otra",
+          "Eliminar un objeto y crear uno nuevo"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0c4aa429031adad4d67d412d",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\n#include <vector>\nint main() {\n    std::vector<int> v1 = {1, 2, 3};\n    std::vector<int> v2 = std::move(v1);\n    std::cout << v1.size() << \" \" << v2.size();\n    return 0;\n}\n```",
+        "answer": "0 3",
+        "explanation": "**Explicaci\u00f3n:**\nDespu\u00e9s de `std::move(v1)`, v1 est\u00e1 en un estado v\u00e1lido pero no especificado. T\u00edpicamente, queda vac\u00edo (tama\u00f1o 0) y v2 toma posesi\u00f3n de los elementos.\n[Referencia](https://en.cppreference.com/w/cpp/utility/move)",
+        "hint": null,
+        "correctAnswer": ["0 3"],
+        "options": ["3 3", "0 3", "3 0", "Error de compilaci\u00f3n"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9ad2404cb62a04f8779d1bdd",
+        "question": "\u00bfQu\u00e9 es una expresi\u00f3n lambda en C++?",
+        "answer": "Un objeto funci\u00f3n an\u00f3nimo que puede capturar variables de su \u00e1mbito envolvente",
+        "explanation": "**Explicaci\u00f3n:**\nLas expresiones lambda, introducidas en C++11, permiten escribir funciones an\u00f3nimas en l\u00ednea. Pueden capturar variables del \u00e1mbito circundante y se usan a menudo con algoritmos de la STL.\n[Referencia](https://en.cppreference.com/w/cpp/language/lambda)",
+        "hint": null,
+        "correctAnswer": [
+          "Un objeto funci\u00f3n an\u00f3nimo que puede capturar variables de su \u00e1mbito envolvente"
+        ],
+        "options": [
+          "Una funci\u00f3n matem\u00e1tica",
+          "Un objeto funci\u00f3n an\u00f3nimo que puede capturar variables de su \u00e1mbito envolvente",
+          "Una funci\u00f3n plantilla",
+          "Una definici\u00f3n de macro"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "97734f2b9a0baca4d09e6d56",
+        "question": "\u00bfQu\u00e9 hace la palabra clave `auto` en C++11?",
+        "answer": "Deduce autom\u00e1ticamente el tipo de una variable desde su inicializador",
+        "explanation": "**Explicaci\u00f3n:**\nLa palabra clave `auto` en C++11 permite la deducci\u00f3n autom\u00e1tica de tipo desde el inicializador, haciendo el c\u00f3digo m\u00e1s conciso y f\u00e1cil de mantener.\n[Referencia](https://en.cppreference.com/w/cpp/language/auto)",
+        "hint": null,
+        "correctAnswer": [
+          "Deduce autom\u00e1ticamente el tipo de una variable desde su inicializador"
+        ],
+        "options": [
+          "Hace que una variable tenga duraci\u00f3n de almacenamiento autom\u00e1tico",
+          "Deduce autom\u00e1ticamente el tipo de una variable desde su inicializador",
+          "Hace que una funci\u00f3n sea inline",
+          "Declara una variable global"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "91efdb67457cfba46254d99a",
+        "question": "\u00bfCu\u00e1l es la diferencia entre `std::unique_ptr` y `std::shared_ptr`?",
+        "answer": "unique_ptr tiene propiedad exclusiva, shared_ptr permite m\u00faltiples propietarios",
+        "explanation": "**Explicaci\u00f3n:**\n`std::unique_ptr` proporciona propiedad exclusiva - solo un unique_ptr puede poseer un recurso. `std::shared_ptr` usa conteo de referencias para permitir que m\u00faltiples shared_ptrs posean el mismo recurso.\n[Referencia](https://en.cppreference.com/w/cpp/memory/unique_ptr)",
+        "hint": null,
+        "correctAnswer": [
+          "unique_ptr tiene propiedad exclusiva, shared_ptr permite m\u00faltiples propietarios"
+        ],
+        "options": [
+          "unique_ptr tiene propiedad exclusiva, shared_ptr permite m\u00faltiples propietarios",
+          "unique_ptr es m\u00e1s r\u00e1pido pero menos seguro",
+          "shared_ptr solo puede usarse con clases",
+          "No hay diferencia"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a0168c8c04d7e2c685985b84",
+        "question": "\u00bfQu\u00e9 es RAII en C++?",
+        "answer": "Resource Acquisition Is Initialization (La Adquisici\u00f3n de Recursos es Inicializaci\u00f3n)",
+        "explanation": "**Explicaci\u00f3n:**\nRAII es un modismo de programaci\u00f3n de C++ donde la adquisici\u00f3n de recursos est\u00e1 vinculada al tiempo de vida del objeto. Los recursos se adquieren en constructores y se liberan en destructores, asegurando una limpieza adecuada.\n[Referencia](https://en.cppreference.com/w/cpp/language/raii)",
+        "hint": null,
+        "correctAnswer": [
+          "Resource Acquisition Is Initialization (La Adquisici\u00f3n de Recursos es Inicializaci\u00f3n)"
+        ],
+        "options": [
+          "Interfaz de Iterador de Acceso Aleatorio",
+          "Resource Acquisition Is Initialization (La Adquisici\u00f3n de Recursos es Inicializaci\u00f3n)",
+          "Interfaz de Implementaci\u00f3n de Algoritmo Recursivo",
+          "Asignaci\u00f3n e Inicializaci\u00f3n en Tiempo de Ejecuci\u00f3n"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ea4824aeffc092f0ec2736cb",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\nint main() {\n    int x = 5;\n    auto lambda = [x]() mutable { x += 10; return x; };\n    std::cout << lambda() << \" \" << x;\n    return 0;\n}\n```",
+        "answer": "15 5",
+        "explanation": "**Explicaci\u00f3n:**\nLa lambda captura x por valor. La palabra clave `mutable` permite la modificaci\u00f3n de la copia capturada. La x original permanece sin cambios.\n[Referencia](https://en.cppreference.com/w/cpp/language/lambda)",
+        "hint": null,
+        "correctAnswer": ["15 5"],
+        "options": ["5 5", "15 5", "15 15", "5 15"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f46d8a4ede76b4315ed8c9d8",
+        "question": "\u00bfQu\u00e9 es `constexpr` en C++11?",
+        "answer": "Especifica que una funci\u00f3n o variable puede evaluarse en tiempo de compilaci\u00f3n",
+        "explanation": "**Explicaci\u00f3n:**\n`constexpr` indica que un valor o funci\u00f3n puede evaluarse en tiempo de compilaci\u00f3n, habilitando c\u00f3mputo y optimizaci\u00f3n en tiempo de compilaci\u00f3n.\n[Referencia](https://en.cppreference.com/w/cpp/language/constexpr)",
+        "hint": null,
+        "correctAnswer": [
+          "Especifica que una funci\u00f3n o variable puede evaluarse en tiempo de compilaci\u00f3n"
+        ],
+        "options": [
+          "Una expresi\u00f3n constante que solo puede usarse con enteros",
+          "Especifica que una funci\u00f3n o variable puede evaluarse en tiempo de compilaci\u00f3n",
+          "Una macro para definir constantes",
+          "Una palabra clave para declarar punteros const"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d8d920891c2d7d2383b60578",
+        "question": "\u00bfCu\u00e1l es el prop\u00f3sito de `std::forward`?",
+        "answer": "Preservar la categor\u00eda de valor (lvalue/rvalue) de un argumento reenviado",
+        "explanation": "**Explicaci\u00f3n:**\n`std::forward` se usa en funciones plantilla para reenviar perfectamente argumentos mientras preserva su categor\u00eda de valor, esencial para implementar el reenv\u00edo perfecto.\n[Referencia](https://en.cppreference.com/w/cpp/utility/forward)",
+        "hint": null,
+        "correctAnswer": [
+          "Preservar la categor\u00eda de valor (lvalue/rvalue) de un argumento reenviado"
+        ],
+        "options": [
+          "Mover un objeto hacia adelante en la memoria",
+          "Preservar la categor\u00eda de valor (lvalue/rvalue) de un argumento reenviado",
+          "Iterar hacia adelante a trav\u00e9s de un contenedor",
+          "Declarar una declaraci\u00f3n anticipada"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ff6e67f10410db901e02ff0a",
+        "question": "\u00bfQu\u00e9 es una plantilla vari\u00e1dica?",
+        "answer": "Una plantilla que acepta un n\u00famero variable de par\u00e1metros de plantilla",
+        "explanation": "**Explicaci\u00f3n:**\nLas plantillas vari\u00e1dicas, introducidas en C++11, permiten que las plantillas acepten cualquier n\u00famero de argumentos de plantilla, habilitando programaci\u00f3n gen\u00e9rica flexible.\n[Referencia](https://en.cppreference.com/w/cpp/language/parameter_pack)",
+        "hint": null,
+        "correctAnswer": [
+          "Una plantilla que acepta un n\u00famero variable de par\u00e1metros de plantilla"
+        ],
+        "options": [
+          "Una plantilla con tipos de retorno variables",
+          "Una plantilla que acepta un n\u00famero variable de par\u00e1metros de plantilla",
+          "Una plantilla que puede instanciarse m\u00faltiples veces",
+          "Una plantilla con par\u00e1metros opcionales"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a147ec81afd27e99b91451ef",
+        "question": "\u00bfQu\u00e9 representa `nullptr`?",
+        "answer": "Una constante de puntero nulo con tipo std::nullptr_t",
+        "explanation": "**Explicaci\u00f3n:**\n`nullptr` es una palabra clave introducida en C++11 que representa un puntero nulo. Es seguro en tipos a diferencia de NULL o 0.\n[Referencia](https://en.cppreference.com/w/cpp/language/nullptr)",
+        "hint": null,
+        "correctAnswer": ["Una constante de puntero nulo con tipo std::nullptr_t"],
+        "options": [
+          "Un car\u00e1cter nulo",
+          "Una constante de puntero nulo con tipo std::nullptr_t",
+          "Una cadena vac\u00eda",
+          "Valor cero"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "030e7de206cd3aeae5d0f08e",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\n#include <memory>\nint main() {\n    std::shared_ptr<int> p1 = std::make_shared<int>(42);\n    std::shared_ptr<int> p2 = p1;\n    std::cout << p1.use_count();\n    return 0;\n}\n```",
+        "answer": "2",
+        "explanation": "**Explicaci\u00f3n:**\nTanto p1 como p2 comparten la propiedad del mismo entero, por lo que el conteo de referencias es 2.\n[Referencia](https://en.cppreference.com/w/cpp/memory/shared_ptr)",
+        "hint": null,
+        "correctAnswer": ["2"],
+        "options": ["1", "2", "42", "0"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "06bb0c86ebc7e200f7f8803e",
+        "question": "\u00bfQu\u00e9 es `std::optional` en C++17?",
+        "answer": "Un envoltorio que puede o no contener un valor",
+        "explanation": "**Explicaci\u00f3n:**\n`std::optional` es una clase plantilla que representa un valor opcional - contiene un valor o est\u00e1 vac\u00edo, proporcionando una forma segura en tipos de representar \"sin valor\".\n[Referencia](https://en.cppreference.com/w/cpp/utility/optional)",
+        "hint": null,
+        "correctAnswer": ["Un envoltorio que puede o no contener un valor"],
+        "options": [
+          "Un par\u00e1metro opcional en una funci\u00f3n",
+          "Un envoltorio que puede o no contener un valor",
+          "Una plantilla para compilaci\u00f3n opcional",
+          "Una palabra clave para tipos opcionales"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0105d2ef244b59bfee11217a",
+        "question": "\u00bfQu\u00e9 es el enlace estructurado en C++17?\n```cpp\nauto [x, y, z] = std::make_tuple(1, 2, 3);\n```",
+        "answer": "Una caracter\u00edstica que desempaqueta objetos tipo tupla en variables individuales",
+        "explanation": "**Explicaci\u00f3n:**\nLos enlaces estructurados permiten descomponer objetos en sus elementos constituyentes, haciendo el c\u00f3digo m\u00e1s legible al trabajar con tuplas, pares o estructuras.\n[Referencia](https://en.cppreference.com/w/cpp/language/structured_binding)",
+        "hint": null,
+        "correctAnswer": [
+          "Una caracter\u00edstica que desempaqueta objetos tipo tupla en variables individuales"
+        ],
+        "options": [
+          "Una forma de enlazar estructuras juntas",
+          "Una caracter\u00edstica que desempaqueta objetos tipo tupla en variables individuales",
+          "Un m\u00e9todo para crear datos estructurados",
+          "Un enlace para miembros de estructuras"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b88e3086a8f3287cea84ee3c",
+        "question": "\u00bfQu\u00e9 es `std::string_view` en C++17?",
+        "answer": "Una referencia no propietaria a una cadena que evita copias",
+        "explanation": "**Explicaci\u00f3n:**\n`std::string_view` proporciona una referencia ligera y no propietaria a una cadena, evitando copias innecesarias y mejorando el rendimiento.\n[Referencia](https://en.cppreference.com/w/cpp/string/basic_string_view)",
+        "hint": null,
+        "correctAnswer": ["Una referencia no propietaria a una cadena que evita copias"],
+        "options": [
+          "Una vista de una cadena en una GUI",
+          "Una referencia no propietaria a una cadena que evita copias",
+          "Una cadena que solo puede verse, no modificarse",
+          "Una clase de vista para mostrar cadenas"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e03c568c88b583d8c0841ebf",
+        "question": "\u00bfQu\u00e9 son los conceptos en C++20?",
+        "answer": "Conjuntos nombrados de requisitos para par\u00e1metros de plantilla",
+        "explanation": "**Explicaci\u00f3n:**\nLos conceptos son una caracter\u00edstica de C++20 que permite especificar restricciones en par\u00e1metros de plantilla, haciendo el c\u00f3digo de plantilla m\u00e1s legible y proporcionando mejores mensajes de error.\n[Referencia](https://en.cppreference.com/w/cpp/language/constraints)",
+        "hint": null,
+        "correctAnswer": ["Conjuntos nombrados de requisitos para par\u00e1metros de plantilla"],
+        "options": [
+          "Ideas abstractas en programaci\u00f3n",
+          "Conjuntos nombrados de requisitos para par\u00e1metros de plantilla",
+          "Patrones de dise\u00f1o conceptuales",
+          "Comentarios de documentaci\u00f3n"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7dbe40184d475d0e224030cc",
+        "question": "\u00bfQu\u00e9 es el operador de comparaci\u00f3n de tres v\u00edas (<=>) en C++20?",
+        "answer": "Un operador que devuelve informaci\u00f3n de ordenamiento (menor, igual, mayor)",
+        "explanation": "**Explicaci\u00f3n:**\nEl operador nave espacial (<=>) realiza una comparaci\u00f3n de tres v\u00edas y devuelve una categor\u00eda de ordenamiento, simplificando las definiciones de operadores de comparaci\u00f3n.\n[Referencia](https://en.cppreference.com/w/cpp/language/operator_comparison)",
+        "hint": null,
+        "correctAnswer": [
+          "Un operador que devuelve informaci\u00f3n de ordenamiento (menor, igual, mayor)"
+        ],
+        "options": [
+          "Una comparaci\u00f3n de tres valores",
+          "Un operador que devuelve informaci\u00f3n de ordenamiento (menor, igual, mayor)",
+          "Tres operadores de comparaci\u00f3n separados",
+          "Una comparaci\u00f3n ternaria"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3934f05181bcc331fd76776e",
+        "question": "\u00bfQu\u00e9 es `std::span` en C++20?",
+        "answer": "Una vista no propietaria sobre una secuencia contigua de objetos",
+        "explanation": "**Explicaci\u00f3n:**\n`std::span` proporciona una vista sobre una secuencia contigua de objetos sin poseerlos, \u00fatil para pasar datos tipo array sin copiar.\n[Referencia](https://en.cppreference.com/w/cpp/container/span)",
+        "hint": null,
+        "correctAnswer": ["Una vista no propietaria sobre una secuencia contigua de objetos"],
+        "options": [
+          "Una medida de intervalo de tiempo",
+          "Una vista no propietaria sobre una secuencia contigua de objetos",
+          "Una estructura de datos de \u00e1rbol de expansi\u00f3n",
+          "Un elemento span en HTML"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0386de9a3d200ab7206834be",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\n#include <vector>\nint main() {\n    std::vector<int> v = {1, 2, 3, 4, 5};\n    for (auto& x : v) {\n        x *= 2;\n    }\n    std::cout << v[2];\n    return 0;\n}\n```",
+        "answer": "6",
+        "explanation": "**Explicaci\u00f3n:**\nEl bucle for basado en rango con `auto&` modifica cada elemento en su lugar. v[2] (originalmente 3) se convierte en 6.\n[Referencia](https://en.cppreference.com/w/cpp/language/range-for)",
+        "hint": null,
+        "correctAnswer": ["6"],
+        "options": ["3", "6", "2", "12"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "61fb5d19a221044fc9dc1b6b",
+        "question": "\u00bfQu\u00e9 es `std::variant` en C++17?",
+        "answer": "Una uni\u00f3n segura en tipos que puede contener uno de varios tipos",
+        "explanation": "**Explicaci\u00f3n:**\n`std::variant` es una uni\u00f3n segura en tipos que puede contener un valor de uno de varios tipos especificados, proporcionando una alternativa m\u00e1s segura a las uniones de C.\n[Referencia](https://en.cppreference.com/w/cpp/utility/variant)",
+        "hint": null,
+        "correctAnswer": ["Una uni\u00f3n segura en tipos que puede contener uno de varios tipos"],
+        "options": [
+          "Una variable que puede variar",
+          "Una uni\u00f3n segura en tipos que puede contener uno de varios tipos",
+          "Una variante de una clase",
+          "Una plantilla de variable"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "685ea4bf55ba918a16a295a2",
+        "question": "\u00bfQu\u00e9 es `std::any` en C++17?",
+        "answer": "Un contenedor seguro en tipos para valores \u00fanicos de cualquier tipo",
+        "explanation": "**Explicaci\u00f3n:**\n`std::any` puede almacenar un \u00fanico valor de cualquier tipo copiable por construcci\u00f3n, proporcionando almacenamiento seguro en tipos con verificaci\u00f3n de tipo en tiempo de ejecuci\u00f3n.\n[Referencia](https://en.cppreference.com/w/cpp/utility/any)",
+        "hint": null,
+        "correctAnswer": [
+          "Un contenedor seguro en tipos para valores \u00fanicos de cualquier tipo"
+        ],
+        "options": [
+          "Cualquier tipo de variable",
+          "Un contenedor seguro en tipos para valores \u00fanicos de cualquier tipo",
+          "Un tipo comod\u00edn",
+          "Un tipo opcional"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eced0024b117b189fcf2b971",
+        "question": "\u00bfCu\u00e1l es la diferencia entre `std::array` y los arrays de estilo C?",
+        "answer": "std::array conoce su tama\u00f1o y proporciona funciones miembro",
+        "explanation": "**Explicaci\u00f3n:**\n`std::array` es un contenedor que encapsula arrays de tama\u00f1o fijo, proporcionando informaci\u00f3n de tama\u00f1o e interfaz de contenedor STL mientras mantiene el rendimiento de los arrays de estilo C.\n[Referencia](https://en.cppreference.com/w/cpp/container/array)",
+        "hint": null,
+        "correctAnswer": ["std::array conoce su tama\u00f1o y proporciona funciones miembro"],
+        "options": [
+          "std::array conoce su tama\u00f1o y proporciona funciones miembro",
+          "std::array es m\u00e1s lento",
+          "Los arrays de estilo C son m\u00e1s seguros",
+          "No hay diferencia"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "86f322fd459af84df79f1187",
+        "question": "\u00bfQu\u00e9 es el reenv\u00edo perfecto?",
+        "answer": "Preservar la categor\u00eda de valor de los argumentos al pasarlos a otra funci\u00f3n",
+        "explanation": "**Explicaci\u00f3n:**\nEl reenv\u00edo perfecto usa `std::forward` y referencias universales para pasar argumentos a otra funci\u00f3n mientras preserva su categor\u00eda de valor (lvalue o rvalue).\n[Referencia](https://en.cppreference.com/w/cpp/utility/forward)",
+        "hint": null,
+        "correctAnswer": [
+          "Preservar la categor\u00eda de valor de los argumentos al pasarlos a otra funci\u00f3n"
+        ],
+        "options": [
+          "Reenv\u00edo sin errores",
+          "Preservar la categor\u00eda de valor de los argumentos al pasarlos a otra funci\u00f3n",
+          "Paso r\u00e1pido de par\u00e1metros",
+          "Declaraci\u00f3n anticipada de funciones"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2a58d3c1386f197f62370831",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\ntemplate<typename T>\nvoid func(T&& x) {\n    std::cout << std::is_lvalue_reference<T>::value;\n}\nint main() {\n    int a = 5;\n    func(a);\n    return 0;\n}\n```",
+        "answer": "1",
+        "explanation": "**Explicaci\u00f3n:**\nCuando se pasa un lvalue a una referencia universal, T se deduce como una referencia lvalue, por lo que `std::is_lvalue_reference<T>::value` es verdadero (1).\n[Referencia](https://en.cppreference.com/w/cpp/language/reference)",
+        "hint": null,
+        "correctAnswer": ["1"],
+        "options": ["1", "0", "5", "Error de compilaci\u00f3n"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "734f269f2579c80e8f0235f0",
+        "question": "\u00bfQu\u00e9 es `std::invoke` en C++17?",
+        "answer": "Una utilidad para llamar cualquier objeto invocable con argumentos dados",
+        "explanation": "**Explicaci\u00f3n:**\n`std::invoke` proporciona una forma uniforme de llamar cualquier invocable (funci\u00f3n, puntero a funci\u00f3n, funci\u00f3n miembro, functor) con argumentos.\n[Referencia](https://en.cppreference.com/w/cpp/utility/functional/invoke)",
+        "hint": null,
+        "correctAnswer": [
+          "Una utilidad para llamar cualquier objeto invocable con argumentos dados"
+        ],
+        "options": [
+          "Una funci\u00f3n para invocar programas",
+          "Una utilidad para llamar cualquier objeto invocable con argumentos dados",
+          "Un operador de invocaci\u00f3n de m\u00e9todos",
+          "Un invocador para constructores"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "12a65e97d46d51e03f0a45e1",
+        "question": "\u00bfQu\u00e9 es `if constexpr` en C++17?",
+        "answer": "Un condicional en tiempo de compilaci\u00f3n que descarta ramas en tiempo de compilaci\u00f3n",
+        "explanation": "**Explicaci\u00f3n:**\n`if constexpr` eval\u00faa la condici\u00f3n en tiempo de compilaci\u00f3n y solo instancia la rama tomada, \u00fatil en metaprogramaci\u00f3n de plantillas.\n[Referencia](https://en.cppreference.com/w/cpp/language/if)",
+        "hint": null,
+        "correctAnswer": [
+          "Un condicional en tiempo de compilaci\u00f3n que descarta ramas en tiempo de compilaci\u00f3n"
+        ],
+        "options": [
+          "Una declaraci\u00f3n if constante",
+          "Un condicional en tiempo de compilaci\u00f3n que descarta ramas en tiempo de compilaci\u00f3n",
+          "Una declaraci\u00f3n if que debe ser constante",
+          "Una funci\u00f3n constexpr con if"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0385ddda697f3413c9a46a70",
+        "question": "\u00bfQu\u00e9 es una expresi\u00f3n de pliegue en C++17?",
+        "answer": "Una forma de aplicar un operador binario a todos los elementos de un paquete de par\u00e1metros",
+        "explanation": "**Explicaci\u00f3n:**\nLas expresiones de pliegue proporcionan una sintaxis concisa para aplicar operadores binarios a paquetes de par\u00e1metros en plantillas vari\u00e1dicas.\n[Referencia](https://en.cppreference.com/w/cpp/language/fold)",
+        "hint": null,
+        "correctAnswer": [
+          "Una forma de aplicar un operador binario a todos los elementos de un paquete de par\u00e1metros"
+        ],
+        "options": [
+          "Una expresi\u00f3n que pliega c\u00f3digo",
+          "Una forma de aplicar un operador binario a todos los elementos de un paquete de par\u00e1metros",
+          "Un algoritmo de plegado",
+          "Una expresi\u00f3n para plegar contenedores"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5b05740c085316dc9d3df2e3",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    int* p = arr;\n    std::cout << *(p + 3);\n    return 0;\n}\n```",
+        "answer": "4",
+        "explanation": "**Explicaci\u00f3n:**\nAritm\u00e9tica de punteros: p + 3 apunta al 4\u00ba elemento (\u00edndice 3), que es 4.\n[Referencia](https://en.cppreference.com/w/cpp/language/operator_arithmetic)",
+        "hint": null,
+        "correctAnswer": ["4"],
+        "options": ["1", "2", "3", "4"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "535508bb6e152a2bc51cd156",
+        "question": "\u00bfQu\u00e9 es `std::filesystem` en C++17?",
+        "answer": "Una biblioteca para realizar operaciones en sistemas de archivos y rutas",
+        "explanation": "**Explicaci\u00f3n:**\n`std::filesystem` proporciona facilidades para realizar operaciones en sistemas de archivos y sus componentes, como rutas, archivos regulares y directorios.\n[Referencia](https://en.cppreference.com/w/cpp/filesystem)",
+        "hint": null,
+        "correctAnswer": [
+          "Una biblioteca para realizar operaciones en sistemas de archivos y rutas"
+        ],
+        "options": [
+          "Un controlador de sistema de archivos",
+          "Una biblioteca para realizar operaciones en sistemas de archivos y rutas",
+          "Un sistema de archivos virtual",
+          "Una clase de flujo de archivos"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "104dc6dd952dcd79ee5ee24c",
+        "question": "\u00bfPara qu\u00e9 se usa `std::atomic`?",
+        "answer": "Operaciones seguras para hilos en variables compartidas sin bloqueos",
+        "explanation": "**Explicaci\u00f3n:**\n`std::atomic` proporciona operaciones at\u00f3micas en variables compartidas, asegurando acceso seguro para hilos sin bloqueo expl\u00edcito.\n[Referencia](https://en.cppreference.com/w/cpp/atomic/atomic)",
+        "hint": null,
+        "correctAnswer": ["Operaciones seguras para hilos en variables compartidas sin bloqueos"],
+        "options": [
+          "C\u00e1lculos de energ\u00eda at\u00f3mica",
+          "Operaciones seguras para hilos en variables compartidas sin bloqueos",
+          "Tipos de datos at\u00f3micos",
+          "Operaciones indivisibles en \u00e1tomos"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ae3086e7ca26d8887a1751a1",
+        "question": "\u00bfCu\u00e1l es la diferencia entre `std::mutex` y `std::recursive_mutex`?",
+        "answer": "recursive_mutex puede bloquearse m\u00faltiples veces por el mismo hilo",
+        "explanation": "**Explicaci\u00f3n:**\n`std::recursive_mutex` permite que el mismo hilo lo bloquee m\u00faltiples veces, mientras que `std::mutex` causar\u00eda un interbloqueo si el mismo hilo intenta bloquearlo dos veces.\n[Referencia](https://en.cppreference.com/w/cpp/thread/recursive_mutex)",
+        "hint": null,
+        "correctAnswer": [
+          "recursive_mutex puede bloquearse m\u00faltiples veces por el mismo hilo"
+        ],
+        "options": [
+          "recursive_mutex puede bloquearse m\u00faltiples veces por el mismo hilo",
+          "mutex es m\u00e1s r\u00e1pido",
+          "recursive_mutex est\u00e1 obsoleto",
+          "No hay diferencia"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5160df2daf7655151b0e7216",
+        "question": "\u00bfQu\u00e9 es `std::future` en C++11?",
+        "answer": "Un objeto que proporciona acceso al resultado de una operaci\u00f3n as\u00edncrona",
+        "explanation": "**Explicaci\u00f3n:**\n`std::future` se usa para recuperar el resultado de una operaci\u00f3n as\u00edncrona iniciada con `std::async` o `std::promise`.\n[Referencia](https://en.cppreference.com/w/cpp/thread/future)",
+        "hint": null,
+        "correctAnswer": [
+          "Un objeto que proporciona acceso al resultado de una operaci\u00f3n as\u00edncrona"
+        ],
+        "options": [
+          "Una versi\u00f3n futura de C++",
+          "Un objeto que proporciona acceso al resultado de una operaci\u00f3n as\u00edncrona",
+          "Una clase basada en tiempo",
+          "Una declaraci\u00f3n futura"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c3ba4a903e07916911c3fa2c",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\nclass Base {\npublic:\n    virtual void show() { std::cout << \"Base\"; }\n};\nclass Derived : public Base {\npublic:\n    void show() override { std::cout << \"Derived\"; }\n};\nint main() {\n    Base* b = new Derived();\n    b->show();\n    delete b;\n    return 0;\n}\n```",
+        "answer": "Derived",
+        "explanation": "**Explicaci\u00f3n:**\nDebido al polimorfismo de funci\u00f3n virtual, se llama al show() de la clase Derived aunque el puntero sea de tipo Base\\*.\n[Referencia](https://en.cppreference.com/w/cpp/language/virtual)",
+        "hint": null,
+        "correctAnswer": ["Derived"],
+        "options": ["Base", "Derived", "Error de compilaci\u00f3n", "Comportamiento indefinido"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fcbf17c5676741999ec1d698",
+        "question": "\u00bfPara qu\u00e9 se usa `std::enable_if`?",
+        "answer": "Para instanciaci\u00f3n condicional de plantillas basada en SFINAE",
+        "explanation": "**Explicaci\u00f3n:**\n`std::enable_if` se usa para SFINAE (Substitution Failure Is Not An Error) para habilitar o deshabilitar condicionalmente especializaciones de plantilla.\n[Referencia](https://en.cppreference.com/w/cpp/types/enable_if)",
+        "hint": null,
+        "correctAnswer": ["Para instanciaci\u00f3n condicional de plantillas basada en SFINAE"],
+        "options": [
+          "Para habilitar declaraciones if",
+          "Para instanciaci\u00f3n condicional de plantillas basada en SFINAE",
+          "Para habilitar caracter\u00edsticas",
+          "Para verificar si algo est\u00e1 habilitado"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5bb0f558d81fc9a595840284",
+        "question": "\u00bfQu\u00e9 es `std::tuple` en C++11?",
+        "answer": "Una colecci\u00f3n de tama\u00f1o fijo de valores heterog\u00e9neos",
+        "explanation": "**Explicaci\u00f3n:**\n`std::tuple` es una colecci\u00f3n de tama\u00f1o fijo que puede contener elementos de diferentes tipos, generalizando `std::pair` a cualquier n\u00famero de elementos.\n[Referencia](https://en.cppreference.com/w/cpp/utility/tuple)",
+        "hint": null,
+        "correctAnswer": ["Una colecci\u00f3n de tama\u00f1o fijo de valores heterog\u00e9neos"],
+        "options": [
+          "Un par de dos elementos",
+          "Una colecci\u00f3n de tama\u00f1o fijo de valores heterog\u00e9neos",
+          "Un triple de valores",
+          "Una tupla en matem\u00e1ticas"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "419d88bf4b3d13601ec9021d",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\nint main() {\n    int x = 10;\n    int& ref = x;\n    ref = 20;\n    std::cout << x;\n    return 0;\n}\n```",
+        "answer": "20",
+        "explanation": "**Explicaci\u00f3n:**\nref es una referencia a x. Modificar ref modifica x directamente, por lo que x se convierte en 20.\n[Referencia](https://en.cppreference.com/w/cpp/language/reference)",
+        "hint": null,
+        "correctAnswer": ["20"],
+        "options": ["10", "20", "Error de compilaci\u00f3n", "Indefinido"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ecc2d78e1cf09b69a3038961",
+        "question": "\u00bfPara qu\u00e9 se usa `std::chrono`?",
+        "answer": "Utilidades de tiempo que incluyen relojes, puntos de tiempo y duraciones",
+        "explanation": "**Explicaci\u00f3n:**\n`std::chrono` es una biblioteca para operaciones relacionadas con el tiempo, proporcionando relojes, puntos de tiempo y duraciones con seguridad de tipos.\n[Referencia](https://en.cppreference.com/w/cpp/chrono)",
+        "hint": null,
+        "correctAnswer": [
+          "Utilidades de tiempo que incluyen relojes, puntos de tiempo y duraciones"
+        ],
+        "options": [
+          "Ordenamiento cronol\u00f3gico",
+          "Utilidades de tiempo que incluyen relojes, puntos de tiempo y duraciones",
+          "Funciones de cron\u00f3metro",
+          "Gesti\u00f3n de enfermedades cr\u00f3nicas"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fdc3de953d95603d3a70996b",
+        "question": "\u00bfQu\u00e9 es `std::regex` en C++11?",
+        "answer": "Una biblioteca para coincidencia de patrones de expresiones regulares",
+        "explanation": "**Explicaci\u00f3n:**\n`std::regex` proporciona soporte de expresiones regulares para coincidencia de patrones y procesamiento de texto en C++.\n[Referencia](https://en.cppreference.com/w/cpp/regex)",
+        "hint": null,
+        "correctAnswer": ["Una biblioteca para coincidencia de patrones de expresiones regulares"],
+        "options": [
+          "Un motor de expresiones regulares",
+          "Una biblioteca para coincidencia de patrones de expresiones regulares",
+          "Una herramienta de reemplazo de texto",
+          "Un formateador de cadenas"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "228749d77db9db43efde9eb6",
+        "question": "\u00bfQu\u00e9 es `std::initializer_list`?",
+        "answer": "Un objeto proxy ligero para acceder a arrays de const T",
+        "explanation": "**Explicaci\u00f3n:**\n`std::initializer_list` permite que las funciones acepten listas de valores entre llaves, habilitando sintaxis de inicializaci\u00f3n uniforme.\n[Referencia](https://en.cppreference.com/w/cpp/utility/initializer_list)",
+        "hint": null,
+        "correctAnswer": ["Un objeto proxy ligero para acceder a arrays de const T"],
+        "options": [
+          "Una lista de inicializadores",
+          "Un objeto proxy ligero para acceder a arrays de const T",
+          "Una funci\u00f3n de inicializaci\u00f3n",
+          "Un constructor de lista"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "43c2dda8ed6c618ddb80adbd",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\nint main() {\n    const int x = 10;\n    int* p = const_cast<int*>(&x);\n    *p = 20;\n    std::cout << x;\n    return 0;\n}\n```",
+        "answer": "10 (comportamiento indefinido)",
+        "explanation": "**Explicaci\u00f3n:**\nEsto es comportamiento indefinido. Modificar un objeto const a trav\u00e9s de const_cast conduce a resultados impredecibles. El compilador puede optimizar bas\u00e1ndose en la suposici\u00f3n de const.\n[Referencia](https://en.cppreference.com/w/cpp/language/const_cast)",
+        "hint": null,
+        "correctAnswer": ["10 (comportamiento indefinido)"],
+        "options": ["10 (comportamiento indefinido)", "20", "Error de compilaci\u00f3n", "0"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "aca85c1c1e3cee7d522f0ad5",
+        "question": "\u00bfQu\u00e9 es `std::function` en C++11?",
+        "answer": "Un envoltorio de funci\u00f3n polim\u00f3rfico de prop\u00f3sito general",
+        "explanation": "**Explicaci\u00f3n:**\n`std::function` es un envoltorio con tipo borrado que puede almacenar cualquier objeto invocable (funci\u00f3n, lambda, functor) con una firma espec\u00edfica.\n[Referencia](https://en.cppreference.com/w/cpp/utility/functional/function)",
+        "hint": null,
+        "correctAnswer": [
+          "Un envoltorio de funci\u00f3n polim\u00f3rfico de prop\u00f3sito general"
+        ],
+        "options": [
+          "Una declaraci\u00f3n de funci\u00f3n",
+          "Un envoltorio de funci\u00f3n polim\u00f3rfico de prop\u00f3sito general",
+          "Un puntero a funci\u00f3n",
+          "Una biblioteca de programaci\u00f3n funcional"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ca4a9044642506e26f49e2d3",
+        "question": "\u00bfPara qu\u00e9 se usa `std::bind`?",
+        "answer": "Para crear un nuevo invocable enlazando argumentos a una funci\u00f3n",
+        "explanation": "**Explicaci\u00f3n:**\n`std::bind` crea un nuevo objeto funci\u00f3n enlazando algunos argumentos a una funci\u00f3n, \u00fatil para aplicaci\u00f3n parcial de funciones.\n[Referencia](https://en.cppreference.com/w/cpp/utility/functional/bind)",
+        "hint": null,
+        "correctAnswer": ["Para crear un nuevo invocable enlazando argumentos a una funci\u00f3n"],
+        "options": [
+          "Para enlazar variables juntas",
+          "Para crear un nuevo invocable enlazando argumentos a una funci\u00f3n",
+          "Para enlazar clases",
+          "Para enlazar memoria"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a280652023794e801e5eb691",
+        "question": "\u00bfEn qu\u00e9 se basa `std::unordered_map`?",
+        "answer": "Tabla hash",
+        "explanation": "**Explicaci\u00f3n:**\n`std::unordered_map` se implementa usando una tabla hash, proporcionando tiempo de b\u00fasqueda promedio O(1) comparado con O(log n) para `std::map`.\n[Referencia](https://en.cppreference.com/w/cpp/container/unordered_map)",
+        "hint": null,
+        "correctAnswer": ["Tabla hash"],
+        "options": ["\u00c1rbol binario de b\u00fasqueda", "Tabla hash", "Lista enlazada", "Array"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6a959f5f19e149a7846cbffb",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\nint main() {\n    int arr[] = {1, 2, 3, 4, 5};\n    std::cout << sizeof(arr) / sizeof(arr[0]);\n    return 0;\n}\n```",
+        "answer": "5",
+        "explanation": "**Explicaci\u00f3n:**\nsizeof(arr) da el total de bytes, sizeof(arr[0]) da bytes por elemento. La divisi\u00f3n da el n\u00famero de elementos: 5.\n[Referencia](https://en.cppreference.com/w/cpp/language/sizeof)",
+        "hint": null,
+        "correctAnswer": ["5"],
+        "options": ["4", "5", "20", "1"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "13cb29aefd6b72199cb4d102",
+        "question": "\u00bfQu\u00e9 es `std::make_unique` en C++14?",
+        "answer": "Una funci\u00f3n para crear objetos std::unique_ptr",
+        "explanation": "**Explicaci\u00f3n:**\n`std::make_unique` es una funci\u00f3n de utilidad que crea y devuelve un `std::unique_ptr`, proporcionando seguridad de excepciones y sintaxis m\u00e1s limpia.\n[Referencia](https://en.cppreference.com/w/cpp/memory/unique_ptr/make_unique)",
+        "hint": null,
+        "correctAnswer": ["Una funci\u00f3n para crear objetos std::unique_ptr"],
+        "options": [
+          "Un generador de identificadores \u00fanicos",
+          "Una funci\u00f3n para crear objetos std::unique_ptr",
+          "Un verificador de unicidad",
+          "Un creador de valores \u00fanicos"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c258c58eb86c5ad73e62a9fc",
+        "question": "\u00bfQu\u00e9 es `std::exchange` en C++14?",
+        "answer": "Reemplaza un valor y devuelve el valor antiguo at\u00f3micamente",
+        "explanation": "**Explicaci\u00f3n:**\n`std::exchange` reemplaza el valor de un objeto y devuelve su valor antiguo en una sola operaci\u00f3n.\n[Referencia](https://en.cppreference.com/w/cpp/utility/exchange)",
+        "hint": null,
+        "correctAnswer": ["Reemplaza un valor y devuelve el valor antiguo at\u00f3micamente"],
+        "options": [
+          "Un programa de intercambio de valores",
+          "Reemplaza un valor y devuelve el valor antiguo at\u00f3micamente",
+          "Un operador de intercambio",
+          "Una funci\u00f3n de intercambio"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8ecdf6935e4ce42037bea6da",
+        "question": "\u00bfQu\u00e9 es `std::apply` en C++17?",
+        "answer": "Invoca un invocable con una tupla de argumentos",
+        "explanation": "**Explicaci\u00f3n:**\n`std::apply` invoca un objeto invocable con una tupla de argumentos, desempaquetando la tupla como argumentos de funci\u00f3n.\n[Referencia](https://en.cppreference.com/w/cpp/utility/apply)",
+        "hint": null,
+        "correctAnswer": ["Invoca un invocable con una tupla de argumentos"],
+        "options": [
+          "Un lanzador de aplicaciones",
+          "Invoca un invocable con una tupla de argumentos",
+          "Una funci\u00f3n de aplicaci\u00f3n",
+          "Un aplicador de funciones"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "56b09028fd4d28698036f6b0",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\nint main() {\n    int x = 5;\n    int y = ++x + x++;\n    std::cout << y;\n    return 0;\n}\n```",
+        "answer": "Comportamiento indefinido",
+        "explanation": "**Explicaci\u00f3n:**\nModificar x m\u00faltiples veces entre puntos de secuencia conduce a comportamiento indefinido. El resultado es impredecible.\n[Referencia](https://en.cppreference.com/w/cpp/language/eval_order)",
+        "hint": null,
+        "correctAnswer": ["Comportamiento indefinido"],
+        "options": ["11", "12", "Comportamiento indefinido", "13"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c49a4707799c02d53639b585",
+        "question": "\u00bfQu\u00e9 es `std::decay` en C++11?",
+        "answer": "Aplica conversi\u00f3n de array a puntero, funci\u00f3n a puntero y elimina calificadores cv",
+        "explanation": "**Explicaci\u00f3n:**\n`std::decay` aplica transformaciones de tipo similares a lo que sucede al pasar argumentos por valor.\n[Referencia](https://en.cppreference.com/w/cpp/types/decay)",
+        "hint": null,
+        "correctAnswer": [
+          "Aplica conversi\u00f3n de array a puntero, funci\u00f3n a puntero y elimina calificadores cv"
+        ],
+        "options": [
+          "Una funci\u00f3n de decaimiento",
+          "Aplica conversi\u00f3n de array a puntero, funci\u00f3n a puntero y elimina calificadores cv",
+          "Un marcador de obsolescencia",
+          "Una constante de decaimiento"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1530c53c9cfe821a08302dc5",
+        "question": "\u00bfQu\u00e9 es `std::conditional` en C++11?",
+        "answer": "Elige un tipo u otro basado en un booleano en tiempo de compilaci\u00f3n",
+        "explanation": "**Explicaci\u00f3n:**\n`std::conditional` es una metafunci\u00f3n que selecciona uno de dos tipos bas\u00e1ndose en una condici\u00f3n booleana en tiempo de compilaci\u00f3n.\n[Referencia](https://en.cppreference.com/w/cpp/types/conditional)",
+        "hint": null,
+        "correctAnswer": [
+          "Elige un tipo u otro basado en un booleano en tiempo de compilaci\u00f3n"
+        ],
+        "options": [
+          "Una declaraci\u00f3n condicional",
+          "Elige un tipo u otro basado en un booleano en tiempo de compilaci\u00f3n",
+          "Un operador condicional",
+          "Un verificador de condiciones"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "07ab35cce8ab39a38c539514",
+        "question": "\u00bfPara qu\u00e9 se usa `std::is_same`?",
+        "answer": "Para verificar si dos tipos son iguales en tiempo de compilaci\u00f3n",
+        "explanation": "**Explicaci\u00f3n:**\n`std::is_same` es un trait de tipo que verifica si dos tipos son id\u00e9nticos en tiempo de compilaci\u00f3n.\n[Referencia](https://en.cppreference.com/w/cpp/types/is_same)",
+        "hint": null,
+        "correctAnswer": ["Para verificar si dos tipos son iguales en tiempo de compilaci\u00f3n"],
+        "options": [
+          "Para verificar si los valores son iguales",
+          "Para verificar si dos tipos son iguales en tiempo de compilaci\u00f3n",
+          "Para comparar objetos",
+          "Para verificar igualdad"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f5c4a86e80c83b3137a85772",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\nint main() {\n    int x = 10;\n    int* p = &x;\n    int** pp = &p;\n    std::cout << **pp;\n    return 0;\n}\n```",
+        "answer": "10",
+        "explanation": "**Explicaci\u00f3n:**\npp es un puntero a puntero. \\*\\*pp desreferencia dos veces para obtener el valor de x, que es 10.\n[Referencia](https://en.cppreference.com/w/cpp/language/pointer)",
+        "hint": null,
+        "correctAnswer": ["10"],
+        "options": [
+          "10",
+          "Direcci\u00f3n de x",
+          "Direcci\u00f3n de p",
+          "Error de compilaci\u00f3n"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4d73b1ab603ee917d6c42f1a",
+        "question": "\u00bfPara qu\u00e9 se usa `std::remove_if`?",
+        "answer": "Para eliminar elementos de un rango que satisfacen un predicado",
+        "explanation": "**Explicaci\u00f3n:**\n`std::remove_if` elimina elementos de un rango que satisfacen un predicado dado, usado con erase para eliminaci\u00f3n real.\n[Referencia](https://en.cppreference.com/w/cpp/algorithm/remove)",
+        "hint": null,
+        "correctAnswer": ["Para eliminar elementos de un rango que satisfacen un predicado"],
+        "options": [
+          "Para eliminar declaraciones if",
+          "Para eliminar elementos de un rango que satisfacen un predicado",
+          "Para eliminar archivos condicionalmente",
+          "Para eliminar condiciones"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "15308f613d71a1497b62378e",
+        "question": "\u00bfPara qu\u00e9 se usa `std::transform`?",
+        "answer": "Para aplicar una funci\u00f3n a un rango y almacenar resultados en otro rango",
+        "explanation": "**Explicaci\u00f3n:**\n`std::transform` aplica una funci\u00f3n dada a un rango de elementos y almacena el resultado en otro rango.\n[Referencia](https://en.cppreference.com/w/cpp/algorithm/transform)",
+        "hint": null,
+        "correctAnswer": [
+          "Para aplicar una funci\u00f3n a un rango y almacenar resultados en otro rango"
+        ],
+        "options": [
+          "Para transformar c\u00f3digo",
+          "Para aplicar una funci\u00f3n a un rango y almacenar resultados en otro rango",
+          "Para transformar tipos",
+          "Para realizar transformaciones"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7d472754cf8dc7667d574b5e",
+        "question": "\u00bfPara qu\u00e9 se usa `std::accumulate`?",
+        "answer": "Para calcular la suma o plegar un rango de elementos",
+        "explanation": "**Explicaci\u00f3n:**\n`std::accumulate` calcula la suma de un rango de elementos o aplica una operaci\u00f3n binaria para plegar el rango.\n[Referencia](https://en.cppreference.com/w/cpp/algorithm/accumulate)",
+        "hint": null,
+        "correctAnswer": ["Para calcular la suma o plegar un rango de elementos"],
+        "options": [
+          "Para acumular errores",
+          "Para calcular la suma o plegar un rango de elementos",
+          "Para acumular datos",
+          "Para sumar n\u00fameros"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5698f6f8f58d94def4f284fe",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\nint main() {\n    int x = 5;\n    int y = 10;\n    int z = x > y ? x : y;\n    std::cout << z;\n    return 0;\n}\n```",
+        "answer": "10",
+        "explanation": "**Explicaci\u00f3n:**\nEl operador ternario verifica si x > y. Como es falso, z se asigna y, que es 10.\n[Referencia](https://en.cppreference.com/w/cpp/language/operator_other)",
+        "hint": null,
+        "correctAnswer": ["10"],
+        "options": ["5", "10", "1", "0"],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a6e8e85df38d9a464d2f71a8",
+        "question": "\u00bfPara qu\u00e9 se usa `std::copy`?",
+        "answer": "Para copiar elementos de un rango a otro",
+        "explanation": "**Explicaci\u00f3n:**\n`std::copy` copia elementos de un rango de origen a un rango de destino.\n[Referencia](https://en.cppreference.com/w/cpp/algorithm/copy)",
+        "hint": null,
+        "correctAnswer": ["Para copiar elementos de un rango a otro"],
+        "options": [
+          "Para copiar archivos",
+          "Para copiar elementos de un rango a otro",
+          "Para duplicar objetos",
+          "Para copiar memoria"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "76b53bb7863a84a0c21fc7d1",
+        "question": "\u00bfPara qu\u00e9 se usa `std::find`?",
+        "answer": "Para encontrar la primera ocurrencia de un valor en un rango",
+        "explanation": "**Explicaci\u00f3n:**\n`std::find` busca la primera ocurrencia de un valor en un rango y devuelve un iterador a \u00e9l.\n[Referencia](https://en.cppreference.com/w/cpp/algorithm/find)",
+        "hint": null,
+        "correctAnswer": ["Para encontrar la primera ocurrencia de un valor en un rango"],
+        "options": [
+          "Para encontrar archivos",
+          "Para encontrar la primera ocurrencia de un valor en un rango",
+          "Para buscar patrones",
+          "Para localizar objetos"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "204bdacc02d65a0ca961f4f2",
+        "question": "\u00bfEn qu\u00e9 se basa `std::sort`?",
+        "answer": "Introsort (h\u00edbrido de quicksort, heapsort y ordenamiento por inserci\u00f3n)",
+        "explanation": "**Explicaci\u00f3n:**\n`std::sort` t\u00edpicamente usa introsort, que combina quicksort, heapsort y ordenamiento por inserci\u00f3n para rendimiento \u00f3ptimo.\n[Referencia](https://en.cppreference.com/w/cpp/algorithm/sort)",
+        "hint": null,
+        "correctAnswer": [
+          "Introsort (h\u00edbrido de quicksort, heapsort y ordenamiento por inserci\u00f3n)"
+        ],
+        "options": [
+          "Ordenamiento de burbuja",
+          "Introsort (h\u00edbrido de quicksort, heapsort y ordenamiento por inserci\u00f3n)",
+          "Solo merge sort",
+          "Ordenamiento por selecci\u00f3n"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "94919ba46efe2c145d19b3b0",
+        "question": "\u00bfCu\u00e1l es la salida de este c\u00f3digo?\n```cpp\n#include <iostream>\n#include <algorithm>\n#include <vector>\nint main() {\n    std::vector<int> v = {5, 2, 8, 1, 9};\n    std::sort(v.begin(), v.end());\n    std::cout << v[2];\n    return 0;\n}\n```",
+        "answer": "5",
+        "explanation": "**Explicaci\u00f3n:**\nDespu\u00e9s de ordenar, el vector se convierte en {1, 2, 5, 8, 9}. v[2] es el tercer elemento, que es 5.\n[Referencia](https://en.cppreference.com/w/cpp/algorithm/sort)",
+        "hint": null,
+        "correctAnswer": ["5"],
+        "options": ["8", "2", "5", "1"],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "c++/c++-quiz-es.md",
+    "language": "es",
+    "generatedAt": "2025-12-09T14:56:14.099945+00:00",
+    "warnings": ["Question 42 has no marked correct answers", "Question 42 has no options"]
+  }
+}

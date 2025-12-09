@@ -1,0 +1,1111 @@
+{
+  "quizz": {
+    "id": "d67fb87d1631fc2a2e9656f9",
+    "title": "Scala",
+    "description": "Seeded from scala/scala-quiz.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "44af7c8cf3343d4635b1446c",
+        "question": "Scala bytecode can run on top of Java VM. What is the fundamental difference between Java object.clone() and Scala object.copy()?",
+        "answer": "copy() allows you to change values during the copying process; clone() does not.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "copy() allows you to change values during the copying process; clone() does not."
+        ],
+        "options": [
+          "One is a Java object, the other is a Scala object.",
+          "clone() will copy class structures but not the data, while copy() will also copy data into new objects.",
+          "There is no difference.",
+          "copy() allows you to change values during the copying process; clone() does not."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2d7ee0674b27fd2762227f87",
+        "question": "What value does this code return?\n```scala\nval m1 = Map(\"a\"->1,\"b\"->2,\"c\"->3)\nm1(\"a\")\n```",
+        "answer": "1",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "1"
+        ],
+        "options": [
+          "a",
+          "2",
+          "b",
+          "1"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ce1301cd4473fe23efc98ebe",
+        "question": "What is one way to avoid low-level parallelization details?",
+        "answer": "parallel collections",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "parallel collections"
+        ],
+        "options": [
+          "monads",
+          "literal functions",
+          "partially applied functions",
+          "parallel collections"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0c7cee1e05853eb44c59a9b4",
+        "question": "What do you use in ScalaTest to see a detailed diagram of error messages when a test fails?",
+        "answer": "DiagrammedAssertions",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "DiagrammedAssertions"
+        ],
+        "options": [
+          "ArgumentExceptions",
+          "AssertionException",
+          "DiagrammedAssertions",
+          "JUnit"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "709f1a68c8d7565fa90b12be",
+        "question": "What data type would you use to store an immutable collection of objects that contain a fixed number of varying types?",
+        "answer": "Tuple",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Tuple"
+        ],
+        "options": [
+          "Array",
+          "ImmutableCollection",
+          "List",
+          "Tuple"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f2b11c8f1b2337701b3f23a7",
+        "question": "After defining a function in the interpreter, Scala returns the following. What does the `()` indicate?\n```\nmyfnc: ()Unit\n```",
+        "answer": "The function returns no value.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The function returns no value."
+        ],
+        "options": [
+          "The function has no side effects.",
+          "The function takes no parameters.",
+          "The function returns no value.",
+          "Returning unit types to the function is a closures."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "68e901b2e75112d482ff3ce8",
+        "question": "What type of number is 1234.e5?",
+        "answer": "floating point",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "floating point"
+        ],
+        "options": [
+          "hexadecimal",
+          "short",
+          "floating point",
+          "long"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "59c0fc16993473f520839a25",
+        "question": "When you convert a map to a list using the `toList` method of the map, the result will be of which type?",
+        "answer": "`List`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`List`"
+        ],
+        "options": [
+          "`List[(String, String)]`",
+          "`List[(Array, Array)]`",
+          "`List[(Collection, Collection)]`",
+          "`List`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2cc4ef389e2cc6504020078d",
+        "question": "What type of object does this code create?\n```\nval x = (1234, \"Active\")\n```",
+        "answer": "Tuple",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Tuple"
+        ],
+        "options": [
+          "List",
+          "Map",
+          "Tuple",
+          "Array"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "53bd12ad72329d18fbe2575f",
+        "question": "Which is a subclass of all classes?",
+        "answer": "Null",
+        "explanation": "[Null in Scala Standard library](https://www.scala-lang.org/api/current/scala/Null.html). The question is a bit incorrect - Null is a subtype of every type _except those of value classes_",
+        "hint": null,
+        "correctAnswer": [
+          "Null"
+        ],
+        "options": [
+          "AnyVal",
+          "AnyRef",
+          "Method",
+          "Null"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "02b70640db654a92ffb7f77a",
+        "question": "For the for-yield construct, is the scope separate between for-body and yield-body?",
+        "answer": "No, because for-yield shares the same scope, even though they are within separate curly braces.",
+        "explanation": "**Example**: yield-body has access to the `e` variable from the for-body\n```scala\nval a = Array(1, 2, 3, 4, 5)\nfor {\ne <- a if e > 2\n} yield e\n```",
+        "hint": null,
+        "correctAnswer": [
+          "No, because for-yield shares the same scope, even though they are within separate curly braces."
+        ],
+        "options": [
+          "Yes and no. It is different depending on the for construct and what it does.",
+          "Yes, because the for section does not expose its scope.",
+          "No, because for-yield shares the same scope, even though they are within separate curly braces.",
+          "Yes, because they are within different curly braces."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fc59484558ffb82e136be470",
+        "question": "What is one way to implement pattern matching on methods?",
+        "answer": "using case classes",
+        "explanation": "Note: ambiguous question, it's not clear what kind of [pattern matching](https://docs.scala-lang.org/tour/pattern-matching.html) is meant here.",
+        "hint": null,
+        "correctAnswer": [
+          "using case classes"
+        ],
+        "options": [
+          "using regex",
+          "using monads",
+          "using string matching",
+          "using case classes"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "23181936918dc1f04d27284b",
+        "question": "What is the value of z after executing this code?\n```\nval y = List('a','b')\nval z = y::List('c')\n```",
+        "answer": "List(List(a, b), c)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "List(List(a, b), c)"
+        ],
+        "options": [
+          "List(a,b,c)",
+          "List(List(a, b), c)",
+          "List(c,a,b)",
+          "List(c,List(a,b))"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "61b1a8f44eae8d8628378648",
+        "question": "What term is used to specify a precondition?",
+        "answer": "assert",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "assert"
+        ],
+        "options": [
+          "assert",
+          "require",
+          "precondition",
+          "mustHave"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4ac2b32114711795a28dc817",
+        "question": "Which Scala type may throw an exception or a successfully computed value, and is commonly used to trap and propagate errors?",
+        "answer": "`scala.util.Try`",
+        "explanation": "[scala.util.Try](https://www.scala-lang.org/api/current/scala/util/Try.html)",
+        "hint": null,
+        "correctAnswer": [
+          "`scala.util.Try`"
+        ],
+        "options": [
+          "`scala.util.ExceptionHandling`",
+          "`scala.Catch.Throw`",
+          "`scala.exception.TryFinally`",
+          "`scala.util.Try`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1465f8d8be165d7a99c4eaea",
+        "question": "What is the data type of y after this code is executed?\n```\nval y = (math floor 3.1415 * 2)\n```",
+        "answer": "double",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "double"
+        ],
+        "options": [
+          "short",
+          "double",
+          "int",
+          "bigInt"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a2f69e58762f91ddda5c1243",
+        "question": "When using pattern matching, which character matches on any object?",
+        "answer": "`_`",
+        "explanation": "[Pattern Matching](https://docs.scala-lang.org/tour/pattern-matching.html)",
+        "hint": null,
+        "correctAnswer": [
+          "`_`"
+        ],
+        "options": [
+          "`%`",
+          "`_`",
+          "`^`",
+          "`-`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1a7a9c9b002f4a4eed0d1374",
+        "question": "You have created an array using val. Can you change the value of any element of the array\u2014and why or why not?",
+        "answer": "Yes, the reference to the array is immutable, so the location that the array points to is immutable. The values in the array are mutable.",
+        "explanation": "**Explanation**:\n```scala\nval a1 = Array(1, 2, 3)\na1{1} = 3 // OK\na1 = Array(1, 3, 3) // error: reassignment to val\n```",
+        "hint": null,
+        "correctAnswer": [
+          "Yes, the reference to the array is immutable, so the location that the array points to is immutable. The values in the array are mutable."
+        ],
+        "options": [
+          "Yes, the reference to the array is immutable, so the location that the array points to is immutable. The values in the array are mutable.",
+          "The 0th element is immutable and cannot be modified. All other elements can be modified.",
+          "Yes, val does not make arrays immutable.",
+          "No, val makes the array and values of the array immutable."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9fdfb5213bd6e63edff86312",
+        "question": "What is the output of this function?\n```scala\ndef main () {\n     var a = 0\n     for (a<-1 until 5){println(a)}\n```",
+        "answer": "1,2,3,4",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "1,2,3,4"
+        ],
+        "options": [
+          "1,2,3,4,5",
+          "0,1,2,3,4",
+          "1,2,3,4",
+          "2,3,4,5"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "be8d132c700d2763be74714e",
+        "question": "What do you call objects with immutable state?",
+        "answer": "functional objects",
+        "explanation": "**Note:** singletons may have mutable state",
+        "hint": null,
+        "correctAnswer": [
+          "functional objects"
+        ],
+        "options": [
+          "singletons",
+          "stationary objects",
+          "functional objects",
+          "fixed objects"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e1d5ea7f8534d6014630f155",
+        "question": "You have written a Scala script. How would you access command-line arguments in the script?",
+        "answer": "use array named args",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "use array named args"
+        ],
+        "options": [
+          "use array named args",
+          "use tuple named args",
+          "use numbered variables with a _ prefix for example _ 1, _ 2, _ 3",
+          "use numbered variables with a $ prefix - for example $1, $2, $3"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "25ffac76c6ad95dab84d837e",
+        "question": "What does this code return? `val x = 3; if (x > 2) x = 4 else x = x*2`",
+        "answer": "an error",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "an error"
+        ],
+        "options": [
+          "4",
+          "an error",
+          "6",
+          "3"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "69617c36883f63fb421980f9",
+        "question": "Which statement returns a success or a failure indicator when you execute this code?\n`val MyFuture = Future {runBackgroundFunction() }`",
+        "answer": "myFuture.onComplete",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "myFuture.onComplete"
+        ],
+        "options": [
+          "myFuture.onComplete",
+          "myFuture(status)",
+          "myFuture.Finished",
+          "complete(myFuture)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0332d266f6e23c64b79ed3b7",
+        "question": "To denote a parameter that may be repeated, what should you place after type?",
+        "answer": "`-`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`-`"
+        ],
+        "options": [
+          "`%`",
+          "`&`",
+          "`_`",
+          "`-`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dfee72e5be04e387e63a3e15",
+        "question": "What is called when a superclass has more than one subclass in Scala?",
+        "answer": "hierarchical inheritance",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "hierarchical inheritance"
+        ],
+        "options": [
+          "polyinheritance",
+          "multilevel inheritance",
+          "multimode inheritance",
+          "hierarchical inheritance"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5658f6b778dbdc78e46ac243",
+        "question": "One way to improve code reliability is to use `__` , which will evaluate a condition and return an error if the condition is violated.",
+        "answer": "assertions",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "assertions"
+        ],
+        "options": [
+          "packages",
+          "polymorphisms",
+          "assertions",
+          "traits"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "072564a54ac1e1efcbec3b14",
+        "question": "Which statement about if-else-if-else statements is true?",
+        "answer": "If an else-if succeeds, then none of the remaining else-if statements or elses will tested.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "If an else-if succeeds, then none of the remaining else-if statements or elses will tested."
+        ],
+        "options": [
+          "If the first else-if does not succeed, then no other else-ifs are tested.",
+          "If an else-if does not succeed, then none of the remaining else-if statements or elses will be tested.",
+          "All else-if statements are tested in all cases.",
+          "If an else-if succeeds, then none of the remaining else-if statements or elses will tested."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7eb21e029c70e7b2178ed1e9",
+        "question": "What do you call the process of changing the definition of an inherited method?",
+        "answer": "overriding methods",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "overriding methods"
+        ],
+        "options": [
+          "recursive methods",
+          "currying methods",
+          "redefining methods",
+          "overriding methods"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "15ccee743446d126f0f27501",
+        "question": "To denote a parameter that may be repeated, what should you place after the type?",
+        "answer": "`*`",
+        "explanation": "[Repeated Parameters in Scala](https://www.baeldung.com/scala/repeated-parameters)",
+        "hint": null,
+        "correctAnswer": [
+          "`*`"
+        ],
+        "options": [
+          "`_`",
+          "`*`",
+          "`%`",
+          "`&`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7b68018b2067d1b7388be41c",
+        "question": "What is the code below equivalent to?\n```scala\nmyClass.foreach(println _)\n```",
+        "answer": "`myClass.foreach(x => println(x))`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`myClass.foreach(x => println(x))`"
+        ],
+        "options": [
+          "`myClass.foreach(println ())`",
+          "`myClass.foreach(print NIL)`",
+          "`myClass.loop(println ())`",
+          "`myClass.foreach(x => println(x))`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cbacf3527211faeab2921369",
+        "question": "What is an advantage of an immutable object?",
+        "answer": "Immutable objects are threadsafe.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Immutable objects are threadsafe."
+        ],
+        "options": [
+          "Immutable objects use less memory than their mutable counterparts.",
+          "Immutable objects do not require error handling.",
+          "Immutable objects can be used in classes, mutable objects cannot.",
+          "Immutable objects are threadsafe."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1f1b3d6ecea1967502c44404",
+        "question": "You want to create an iteration loop that tests the condition at the end of the loop body. Which iteration would you use?",
+        "answer": "do-while loop",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "do-while loop"
+        ],
+        "options": [
+          "do-while loop",
+          "while loop",
+          "for loop",
+          "do-until loop"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e15f18f264ff0d2b4d72c67b",
+        "question": "What can you use to make querying a database more efficient, by avoiding the need to parse the SQL string every time a query is executed from Scala?",
+        "answer": "prepared statement",
+        "explanation": "[PreparedStatement from Java](https://docs.oracle.com/javase/8/docs/api/java/sql/PreparedStatement.html) which is also used in Scala",
+        "hint": null,
+        "correctAnswer": [
+          "prepared statement"
+        ],
+        "options": [
+          "database driver",
+          "connection",
+          "prepared statement",
+          "SQL view"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5bc7790fbb3214202cda57d0",
+        "question": "Which is _not_ a member of the collections hierarchy?",
+        "answer": "Hash",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Hash"
+        ],
+        "options": [
+          "Set",
+          "Seq",
+          "Hash",
+          "Map"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d9f1e31b91adb21a02d7c854",
+        "question": "Which term makes the contents of packages available without prefixing?",
+        "answer": "import",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "import"
+        ],
+        "options": [
+          "use",
+          "include",
+          "import",
+          "assertion"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5ae927f7f83347003b4c9ad1",
+        "question": "If you wanted to find the remainder after division, what operator would you use?",
+        "answer": "%",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "%"
+        ],
+        "options": [
+          "%",
+          "DIV",
+          "//",
+          "/"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cd9c051abd7622a35c0ad336",
+        "question": "What are defined inside a class definition?",
+        "answer": "fields and methods",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "fields and methods"
+        ],
+        "options": [
+          "method",
+          "fields and methods",
+          "fields, methods, and packages",
+          "fields"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fad9092e750e4b2e632c80b0",
+        "question": "What defines methods and fields that can then be reused by mixing into classes?",
+        "answer": "trait",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "trait"
+        ],
+        "options": [
+          "singleton",
+          "assertion",
+          "trait",
+          "monad"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "394b926d943cd3bd44855aba",
+        "question": "When do you need to explicitly state the return type in a function definition?",
+        "answer": "when the function is recursive",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "when the function is recursive"
+        ],
+        "options": [
+          "when the function has no side effects",
+          "when the function returns a Unit type",
+          "when the function is recursive",
+          "when the function has side effects"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8bf1cf4d5ed9fd6c6bf3d942",
+        "question": "Why would you make a field private?",
+        "answer": "so only methods in the same class could access the field",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "so only methods in the same class could access the field"
+        ],
+        "options": [
+          "so only methods in the same file can access the field",
+          "so only methods in the same package can access the field",
+          "so only methods in the same class could access the field",
+          "so only methods defined in a Java class can access the field"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ce46e0c7840ea9a6056a52e3",
+        "question": "What's the difference between `.equals` and `==`?",
+        "answer": "`==` is a wrapper of `.equals()` and checks for nulls",
+        "explanation": "[Source:](https://www.programmersought.com/article/3717957705/)",
+        "hint": null,
+        "correctAnswer": [
+          "`==` is a wrapper of `.equals()` and checks for nulls"
+        ],
+        "options": [
+          "They do the exact same thing",
+          "`==` won't work on objects",
+          "`==` cannot be applied to `String`",
+          "`==` is a wrapper of `.equals()` and checks for nulls"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eb61eff26fbb5e34999edb55",
+        "question": "What is denotes the intersection between two sets?",
+        "answer": "&",
+        "explanation": "[Source:](https://docs.scala-lang.org/overviews/collections/sets.html)",
+        "hint": null,
+        "correctAnswer": [
+          "&"
+        ],
+        "options": [
+          "||",
+          "&&",
+          "&",
+          "%"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "35d8186aa1d0e3253452297e",
+        "question": "What do you call a function defined in a block?",
+        "answer": "local function",
+        "explanation": "A function defined within a block of code, such as within a method or another function, is called a local function. This is because it is only visible and accessible within the scope of the block in which it is defined, and is not accessible outside of that block.",
+        "hint": null,
+        "correctAnswer": [
+          "local function"
+        ],
+        "options": [
+          "private function",
+          "block function",
+          "local function",
+          "method"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "342b06ad10845866a28d49fd",
+        "question": "What do you call a Scala method that is parametrized by type as well as by value?",
+        "answer": "polymorphic method",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "polymorphic method"
+        ],
+        "options": [
+          "multimode method",
+          "polymorphic method",
+          "closure",
+          "collection method"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fd07f65f07a8b9a4180c0afc",
+        "question": "What type of exception is thrown when a precondition is violated?",
+        "answer": "IllegalArgumentException",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "IllegalArgumentException"
+        ],
+        "options": [
+          "IllegalArgumentException",
+          "NumberFormatException",
+          "NullPointerExcepetion",
+          "MalformedParameterException"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6df56e47d25339b5cc105efd",
+        "question": "In scala what is precondition?",
+        "answer": "a class of predifined error messages",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "a class of predifined error messages"
+        ],
+        "options": [
+          "a constraint on where a method may be called from",
+          "a constraint on values passed to a methode constructor",
+          "a class of predifined error messages",
+          "a class of Boolean operators"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "861f6328adc6bda93005f8e3",
+        "question": "What would you change in this code to make it execute in parallel?\n```\n val myNums = (1 to 500).toList\n list.map(_ + 1)\n```",
+        "answer": "Change **list.map** to **list.par.map.**",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Change **list.map** to **list.par.map.**"
+        ],
+        "options": [
+          "Change **list.map** to **list.par.map.**",
+          "Change **toList** to **toListPar**",
+          "Change **val** to **val.par**",
+          "Change **toList** to **toParallelList**"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f988a02cdaa04587722170cd",
+        "question": "What is a free variable?",
+        "answer": "a variable defined outside a function",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "a variable defined outside a function"
+        ],
+        "options": [
+          "a variable defined outside a function",
+          "a variable referenced in a function that is not assigned a value by that function",
+          "a variable that has a global scope",
+          "a variable defined in a class and available to all methods in that class"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "afcad82de08e4d71ddc7d361",
+        "question": "What's the best way to execute code in the background in a separate thread?",
+        "answer": "Future",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Future"
+        ],
+        "options": [
+          "AltThread",
+          "AltFuture",
+          "AltProcess",
+          "Future"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "966953aed3fb76fc36197514",
+        "question": "What value does this code return?\n```scala\nx= List(1,2,4); x(1)?\n```",
+        "answer": "2",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "2"
+        ],
+        "options": [
+          "(1,2,4)",
+          "1",
+          "Nil",
+          "2"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ca991e3448a1381cc5d5a9c5",
+        "question": "Which data type does Scala use instead of null for optional values?",
+        "answer": "Option",
+        "explanation": "In Scala, the Option data type is used instead of null for optional values. It is a container that can either hold a value or be empty, and it is used to represent the presence or absence of a value. This makes it safer to work with than using null, as it eliminates the risk of null pointer exceptions.",
+        "hint": null,
+        "correctAnswer": [
+          "Option"
+        ],
+        "options": [
+          "Nil",
+          "Option",
+          "Singleton",
+          "Collection"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "153184df86d35f32a101033c",
+        "question": "What is equivalent to this code?\n```val a = \"baz\"\ns\"Foo $a?\"\n```",
+        "answer": "\"Foo \" + a + \"?\"",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "\"Foo \" + a + \"?\""
+        ],
+        "options": [
+          "\"Foo \" + a + \"?\""
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4b3bdcb03949ef3dec750ba7",
+        "question": "Which expression is one way to iterate over a collection and generate a collection of each iteration's result?",
+        "answer": "for-yield",
+        "explanation": "- for-yield is one way to iterate over a collection and generate a collection of each iteration's result. The for loop with the yield keyword is used to iterate over a collection and generate a new collection with the results of each iteration.",
+        "hint": null,
+        "correctAnswer": [
+          "for-yield"
+        ],
+        "options": [
+          "for-yield",
+          "for-collect",
+          "for-collect until",
+          "collectuntil"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f6b6ebbeb571c386033c9047",
+        "question": "Which statement accesses the third element of an array named foo?",
+        "answer": "foo[2]",
+        "explanation": "- In many programming languages, arrays are indexed starting at 0, so the first element of the array is at index 0, the second element is at index 1, and so on. Therefore, to access the third element of an array named \"foo\", you would use the index 2 (since the array is indexed starting at 0). This can be done using the syntax foo[2] or foo(2) depending on the programming language. In some languages like Java, you can use foo[2] or foo[3] to access the third element.",
+        "hint": null,
+        "correctAnswer": [
+          "foo[2]"
+        ],
+        "options": [
+          "foo[2]",
+          "foo(3)",
+          "foo[3]",
+          "foo(2)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "498c17fa1b86fdb8cbdac621",
+        "question": "What data type would you use to store an immutable collection of objects when you don't know how many members will be in the collection?",
+        "answer": "List",
+        "explanation": "- You would use a List data type to store an immutable collection of objects when you don't know how many members will be in the collection. Lists are indexed collections of elements that can be accessed by their position in the list, and they are commonly used to store collections of items that need to be processed in order. Additionally, Lists are immutable, which means that their elements cannot be modified once they have been created, making them ideal for use cases where data integrity is important.",
+        "hint": null,
+        "correctAnswer": [
+          "List"
+        ],
+        "options": [
+          "Tuple",
+          "List",
+          "Object",
+          "Array"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a102a0d4f3b1faa2d94825c7",
+        "question": "From where do all classes in Scala inherit?",
+        "answer": "AnyRef",
+        "explanation": "- All classes in Scala inherit from the AnyRef class by default. AnyRef is the base class for all reference types in Scala, and it is equivalent to the java.lang.Object class in Java. AnyVal is the base class for all value types in Scala, and Any is the base class for all types in Scala.",
+        "hint": null,
+        "correctAnswer": [
+          "AnyRef"
+        ],
+        "options": [
+          "AnyRef",
+          "AnyColl",
+          "AnyVal",
+          "AnyClass"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4cc18f7dda7972c360f1ede3",
+        "question": "In Scala, what is a precondition?",
+        "answer": "A constraint on values passed to a method or constructor",
+        "explanation": "- A precondition in Scala is a constraint on the input values passed to a method or constructor, specifying the conditions that must be met for the method or constructor to execute correctly. It is used to check the validity of input values before the method or constructor is executed, and can be used to ensure that the method or constructor is called with the correct arguments.",
+        "hint": null,
+        "correctAnswer": [
+          "A constraint on values passed to a method or constructor"
+        ],
+        "options": [
+          "A class of boolean operators",
+          "A class of predefined error messages",
+          "A constraint on values passed to a method or constructor",
+          "A constraint on where a method may be called from"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2e587a4360233390e76fbf39",
+        "question": "Which code sample will print the integers 1 through 4, each on a separate line?",
+        "answer": "for(i <- 0 to 3) println(i+1)",
+        "explanation": "- The correct answer is for(i <- 0 to 3) println(i+1) because it will start the iteration from 0 and end at 3, incrementing the value by 1 each time and printing it.",
+        "hint": null,
+        "correctAnswer": [
+          "for(i <- 0 to 3) println(i+1)"
+        ],
+        "options": [
+          "for(i <- 0 to 4) println(i)",
+          "for(i <- 0 to 3) println(i+1)",
+          "for(i <- 1 to 8 if i < 5) println(i)",
+          "for(i <- 1 to 4) println(i)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "991cf08cc0ac7dc9151dece4",
+        "question": "Which operator should you use to take the intersection of two sets?",
+        "answer": "&",
+        "explanation": "- The & or intersect method can be used to take the intersection of two sets in Scala.",
+        "hint": null,
+        "correctAnswer": [
+          "&"
+        ],
+        "options": [
+          "&",
+          "||",
+          "&&",
+          "%"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9e112b70440c7bb2cf09911f",
+        "question": "Which data type does Scala use instead of null for optional values?",
+        "answer": "Option",
+        "explanation": "- In Scala, the Option data type is used instead of null for optional values. It is a container that can either hold a value or be empty, and it is used to represent the presence or absence of a value. This makes it safer to work with than using null, as it eliminates the risk of null pointer exceptions.",
+        "hint": null,
+        "correctAnswer": [
+          "Option"
+        ],
+        "options": [
+          "Nil",
+          "Option",
+          "Singleton",
+          "Collection"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2325b4ab9f23ce243326ee92",
+        "question": "What is the difference between a Scala trait and an interface?",
+        "answer": "A trait can have concrete implementations, while an interface cannot.",
+        "explanation": "[reference](https://www.geeksforgeeks.org/difference-between-traits-and-abstract-classes-in-scala/)",
+        "hint": null,
+        "correctAnswer": [
+          "A trait can have concrete implementations, while an interface cannot."
+        ],
+        "options": [
+          "A trait can have concrete implementations, while an interface cannot.",
+          "An interface can have concrete implementations, while a trait cannot.",
+          "Traits can be mixed together, while interfaces cannot.",
+          "Interfaces can be mixed together, while traits cannot."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "scala/scala-quiz.md",
+    "language": "md",
+    "generatedAt": "2025-12-09T14:56:14.458141+00:00",
+    "warnings": []
+  }
+}

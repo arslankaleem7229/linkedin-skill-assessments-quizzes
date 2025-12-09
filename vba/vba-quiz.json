@@ -1,0 +1,1132 @@
+{
+  "quizz": {
+    "id": "67cd5af4c34778018ea8b82f",
+    "title": "Visual Basic for Applications (VBA)",
+    "description": "Seeded from vba/vba-quiz.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "a2256fa224baa88700af0096",
+        "question": "Which two sets of values are printed by this function and sub?\n```vb\nFunction GetVitals(ID As Long, Age As Long, Optional Weight As Long) As String\n    GetVitals=\"ID=\" & ID &\"Age=\" & Age & \"Weight=\" & Weight\nEnd Function\nSub ShowVitals()\n    Dim ID As Long, Age As Long,Weight as Long\n    Debug.Print GetVitals(ID:=5,Age:=20)\n    Debug.Print GetVitals(ID:=6,Age:=25,Weight:=130)\nEnd Sub\n```",
+        "answer": ":",
+        "explanation": "```\nID=5 Age = 20 Weight=\nID=6 Age = 25 Weight=130\n```\n```\nID=5 Age = 20 Weight=0\nID=6 Age = 25 Weight=130\n```\n```\nID=5 Age = 20 Weight=Null\nID=6 Age = 25 Weight=130\n```\n```\nID=5 Age = 20\nID=6 Age = 25 Weight=130\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8f61148573516c9d436f0592",
+        "question": "This code shows the first statement of CalledSub. Which calling statement will work properly?\n`Sub CalledSub(Surname, Age)`",
+        "answer": "calledsub \"smith\", 26",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "calledsub \"smith\", 26"
+        ],
+        "options": [
+          "call Calledsub \"smith\",26",
+          "calledsub (surname=\"smith\", Age = 26)",
+          "calledsub (Surname:=\"Smith\", Age:=26)",
+          "calledsub \"smith\", 26"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5a44f86c80e5c05ec0264c89",
+        "question": "What is the principal difference between a class and an object?",
+        "answer": "A class describes the design of an object. An object is an instance of that design.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "A class describes the design of an object. An object is an instance of that design."
+        ],
+        "options": [
+          "There is no meaningful difference. The terms are used interchangeably.",
+          "A class declares an object's properties. An object completes the declaration by defining events and methods.",
+          "An object is a template for a class.",
+          "A class describes the design of an object. An object is an instance of that design."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "724c3fdd3832510a761aed93",
+        "question": "What value does the MsgBox statement display?\n```vb\nSub MySub(VarA As Long, ParamArray VarB() As Variant)\nMsgBox VarB(0)\nEnd Sub\nSub ShowValue()\nCall MySub(10, \"First arg\", 2, 3.1416)\nEnd Sub\n```",
+        "answer": "First arg",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "First arg"
+        ],
+        "options": [
+          "2",
+          "10",
+          "First arg",
+          "3.1416"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2dce8c685c6d18bd98981cd9",
+        "question": "What object is needed to put a userform module in a VBA project?",
+        "answer": "UserForm",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "UserForm"
+        ],
+        "options": [
+          "associated standard code module",
+          "UserForm",
+          "associated class module",
+          "userForm class"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "408166d7c879340c4caf472f",
+        "question": "What is the output?\n```vb\nSub UseSum()\nDim TestArray() As Integer, Total As Integer\nReDim TestArray(1)\nTestArray(1) = 6\nReDim TestArray(2)\nTestArray(2) = 3\nTotal = WorksheetFunction.Sum(TestArray)\nEnd Sub\n```",
+        "answer": "3",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "3"
+        ],
+        "options": [
+          "3",
+          "0",
+          "9",
+          "6"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f91af38bfe93e6a60094fc24",
+        "question": "The Driver subroutine is declared by Sub Driver (Y). Which statement results in a compile error?",
+        "answer": "Driver x; call Driver x",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Driver x",
+          "call Driver x"
+        ],
+        "options": [
+          "Driver x",
+          "call Driver(x)",
+          "call Driver x",
+          "Driver (X)"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "ec10dd72a96113adae20947e",
+        "question": "You have several variables to display on a user form, and there are too many variables to display at once. Which control best enables the user to see all the variables?",
+        "answer": "ListBox",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "ListBox"
+        ],
+        "options": [
+          "Frame",
+          "multipage",
+          "TabStrip",
+          "ListBox"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b07d162c2b442c287d9b6823",
+        "question": "Below is a function named SquareIt. Which version of the subroutine named Area results in a compile error?\n```vb\nFunction SquareIt(ByRef Basis As Integer) As Long\nSquareIt = Basis ^ 2\nEnd Function\n```",
+        "answer": null,
+        "explanation": "```vb\nDim Result As Long, Side As Integer\nSide = 5\nResult = Squarelt(Side)\nEnd Sub\n```\n```vb\nDim Result As Long, Side\nSide = 5\nResult = SquareIt(Cint(Side))\nEnd Sub\n```",
+        "hint": null,
+        "correctAnswer": [],
+        "options": [
+          "sub Area()",
+          "Sub Area()"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7b8dcd71275ed69816e50e3b",
+        "question": "EmailAddress() is an array. It is declared by Dim EmailAddress(10) As String, and option Base 1 is in effect. How many rows and columns are in EmailAddress()?",
+        "answer": "10 rows and 1 column",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "10 rows and 1 column"
+        ],
+        "options": [
+          "10 rows and 10 columns",
+          "10 rows and 1 column",
+          "10 rows and 0 columns",
+          "1 row and 10 columns"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ee3a45b12f2e2de2b52176c2",
+        "question": "Which cell is selected if you run this code?\n`Range(\"E3:312\").Range(\"B3\").Select`",
+        "answer": "F3",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "F3"
+        ],
+        "options": [
+          "F5",
+          "F3",
+          "B3",
+          "E3"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1e43f0fb6caeca3b869abad5",
+        "question": "Which variable name is valid in VBA?",
+        "answer": "`My_Var`",
+        "explanation": "[Reference link](https://docs.microsoft.com/en-us/office/vba/language/concepts/getting-started/visual-basic-naming-rules)\n`Use the following rules when you name procedures, constants, variables, and arguments in a Visual Basic module: You must use a letter as the first character. You can't use a space, period (.), exclamation mark (!), or the characters @, &, $, # in the name. Name can't exceed 255 characters in length.`",
+        "hint": null,
+        "correctAnswer": [
+          "`My_Var`"
+        ],
+        "options": [
+          "`_MyVar`",
+          "`My_Var`",
+          "`My-Var`",
+          "`1MyVar`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9814842ce12b5d0666742ea9",
+        "question": "Which is a valid definition of a user-defined data type?",
+        "answer": ":",
+        "explanation": "```vb\nType CBC\nName As String\nNext As String\nEnd Type\n```\n```vb\nType CBC\nName As String\n_Next As String\nEnd Type\n```\n```vb\nType CBC\nName As String\n@Option As String\nEnd Type\n```\n```vb\nType CBC\nName As String\n%For As String\nEnd Type\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "969c816d4cab5ba369170008",
+        "question": "What is one way to duplicate a user form from one project into a different project?",
+        "answer": ":",
+        "explanation": "1. Save and close the project with the existing user form.\n2. Click Insert > File.\n3. Browse to the location of the existing project.\n4. Right-click it and select the user-form you want to duplicate.\n1. Open the existing user form in Desing Mode.\n2. Right-click the form and select Copy.\n3. Switch to the other project.\n4. Right-click Module and select Paste.\n1. In the Project Explorer, right-click the user form and select Copy.\n2. Switch to the new project.\n3. Right-click UserForms and select Paste.\n1. Open the existing user form in Design Mode.\n2. Click File > Export File.\n3. Switch to the other project.\n4. Click File > Import File.",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a9570cb28e101fca15e523b3",
+        "question": "The recording of a macro in Word is likely to be an incomplete record of the user's actions. Why?",
+        "answer": "Word's Macro Recorder does not record actions that inlove the selection of text by pointing with the mouse pointer.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Word's Macro Recorder does not record actions that inlove the selection of text by pointing with the mouse pointer."
+        ],
+        "options": [
+          "Word's Macro Recorder does not record actions initiated by keyboard shortcuts.",
+          "Word's Macro Recorder does not support Find & Replace edits.",
+          "Word's Macro Recorder does not record actions initiated by clicking a button on the Ribbon's Developer tab.",
+          "Word's Macro Recorder does not record actions that inlove the selection of text by pointing with the mouse pointer."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "717e3bb9ae86ed31aa8a6cc8",
+        "question": "Which statement should precede a subroutine's error handler?",
+        "answer": "Exit Sub",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Exit Sub"
+        ],
+        "options": [
+          "End",
+          "Return",
+          "Exit Sub",
+          "Stop"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "233fd208fa6f97503985e3a6",
+        "question": "How many values can MyArray hold?\n```\nOption Base 0\nSub BuildArray()\nDim MyArray(5) As Integer\n```",
+        "answer": "6",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "6"
+        ],
+        "options": [
+          "0",
+          "32,769",
+          "5",
+          "6"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8dc3e523a141072a59ceba07",
+        "question": "Which statement is true?",
+        "answer": "Let establish a value in a class; Get returns a value from a class.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Let establish a value in a class; Get returns a value from a class."
+        ],
+        "options": [
+          "Set establishes a value in a class; Let returns a value from a class.",
+          "Let establishes a value in a class; Set returns a value from a class.",
+          "Let establish a value in a class; Get returns a value from a class.",
+          "Get establishes a value in a class; Set returns a value from a class."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "abd637d423737074d0356e3f",
+        "question": "A declaration has a scope, which has three levels. What are they?",
+        "answer": "Procedure, Private Module and Public Module",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Procedure, Private Module and Public Module"
+        ],
+        "options": [
+          "Module, Project and Automation",
+          "Procedure, Private Module and Public Module",
+          "Subroutine, Module and Project",
+          "Procedure, Project and Global"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f2d483fc9666717cf18583a5",
+        "question": "There are two references that must be selected in the Visual Basic Editor in order for any Visual Basic code to run in Excel. What are these two references?",
+        "answer": "VBA and Excel object library",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "VBA and Excel object library"
+        ],
+        "options": [
+          "MS Excel object library and MS Office object library",
+          "VBA and MS Office object library",
+          "VBA and Excel object library",
+          "MS Excel object library and OLE automation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6c5e6a4002db6d4b7e64d122",
+        "question": "Which action will cause your project to reset its variables?",
+        "answer": "Click End in a run-time error dialog.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Click End in a run-time error dialog."
+        ],
+        "options": [
+          "Edit the list of arguments of the current routine while in debug mode.",
+          "Click End in a run-time error dialog.",
+          "Add an ActiveXcontrol to a worksheet.",
+          "All of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7599c7c48bffa23cb528ca69",
+        "question": "Which keyboard shortcut causes VBE to locate the declaration of a procedure?",
+        "answer": "Shift+F2",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Shift+F2"
+        ],
+        "options": [
+          "Shift+F3",
+          "Alt+F (Windows) or Option+F (Mac)",
+          "Shift+F2",
+          "Ctrl+F (Windows) or Command+F (Mac)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "26ab593a57e37188c849894d",
+        "question": "When you define a new class of object, where do you assign a name to it?",
+        "answer": "in a standard module's Properties",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "in a standard module's Properties"
+        ],
+        "options": [
+          "in the class module's name",
+          "in the class module's code",
+          "in a standard module's code",
+          "in a standard module's Properties"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "02748b5597c23640cd562baf",
+        "question": "How does a class module indicate that it uses a particular interface?",
+        "answer": "The name of the interface is passed as a parameter.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The name of the interface is passed as a parameter."
+        ],
+        "options": [
+          "The interface itself is part of the class module.",
+          "by means of the Interface keyword and the name of the interface",
+          "by means of the Implements keyword and the name of the interface",
+          "The name of the interface is passed as a parameter."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "99a627189017795020fc36fc",
+        "question": "What is needed for the contents of Module1 to be available to other modules in a VBA project, but not to any other VBA project?",
+        "answer": "Set Option Private Module at the top of Module1",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Set Option Private Module at the top of Module1"
+        ],
+        "options": [
+          "Set Option Global at the top of Module1",
+          "Declare module-level variables as Private",
+          "Set Module Level Scope at the top of Module1",
+          "Set Option Private Module at the top of Module1"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a8ce8183ba08fa9fca229521",
+        "question": "When used with an array named MyArray, what is the preferred way to set the beginning and ending values of a loop control variable?",
+        "answer": "For i = LBound(MyArray,1) To UBound(MyArray,1)",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "For i = LBound(MyArray,1) To UBound(MyArray,1)"
+        ],
+        "options": [
+          "For i = 0 To UBound(MyArray,1)",
+          "For i = 1 To UBound(MyArray,1)",
+          "For i = LBound(MyArray,1) To UBound(MyArray,1)",
+          "It depends on whether Option Base 0 or Option Base 1 is in use."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7b9ad34e76a2219ff1885023",
+        "question": "What is the value of Test3?\n```vb\nEnum TestEnum\n    Test1\n    Test2\n    Test3\nEnd Enum\n```",
+        "answer": "2",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "2"
+        ],
+        "options": [
+          "0",
+          "1",
+          "3",
+          "2"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5a0d2a5bb4bd2edf24b0879d",
+        "question": "Which statement declares an array?",
+        "answer": "Dim MyArray() As Integer",
+        "explanation": "[reference](https://docs.microsoft.com/en-us/office/vba/language/concepts/getting-started/declaring-arrays)",
+        "hint": null,
+        "correctAnswer": [
+          "Dim MyArray() As Integer"
+        ],
+        "options": [
+          "Dim MyArray() As Integer",
+          "Dim MyArray() As Array",
+          "Dim MyArray As Integer",
+          "Dim MyArray As Array"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b63bab0a062c9f34a06096b8",
+        "question": "To use VBA code to maintain a different VBA project, you can make use of VBA's extensibility. What is needed to enable extensibility?",
+        "answer": "Include a reference to Microsoft VBA Extensibility 5.3",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Include a reference to Microsoft VBA Extensibility 5.3"
+        ],
+        "options": [
+          "Set Macro Security to Trust Access to the VBA Project Object Model",
+          "The project's workbook should be protected in the Ribbon's Review tab",
+          "Include a reference to Microsoft VBA Extensibility 5.3",
+          "Include a reference to Microsoft VBA Extensibility 5.3 and set Macro Security to Trust Access to the VBA Project Object Model"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6a2c59dd4aab8866e5eb69a6",
+        "question": "How do you add a user form to a VBA project?",
+        "answer": ":",
+        "explanation": "1. Select the project in the Project window of the Visual Basic Editor\n2. Click the Design Mode button and select Insert Mode\n1. Select the project in the Project window of the Visual Basic Editor\n2. Click the Toolbox button and select UserForm\n1. Select the project in the Project window of the Visual Basic Editor\n2. Right-click the Run menu and select Customize\n1. Select the project in the Project window of the Visual Basic Editor\n2. Click Insert > UserForm",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba0530bfe9735be4bc6bbd17",
+        "question": "Explicit variable declaration is required. MyVar is declared at both the module and the procedure level. What is the value of MyVar after first AAA() and then BBB() are run?\n```vb\nDim MyVar As String\nSub AAA()\nDim MyVar As String\nMyVar = \"Procedure AAA Scope\"\nEnd Sub\nSub BBB()\nMyVar = \"Procedure BBB Scope\"\nEnd Sub\n```",
+        "answer": "MyVar equals \"Procedure BBB Scope\"",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "MyVar equals \"Procedure BBB Scope\""
+        ],
+        "options": [
+          "MyVar equals \"Procedure AAA Scope\"",
+          "ISNULL(MyVar) is TRUE",
+          "MyVar equals \"Procedure BBB Scope\"",
+          "MyVar is NULL"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c2bee78f8c94e70a4b27e585",
+        "question": "Which code block from class modules returns a compile error?",
+        "answer": ":",
+        "explanation": "```vb\nPublic Property Get HDL() As Double\nHDL = pHDL\nEnd Property\nPublic Property Let HDL(Value As Double)\npHDL = Value\nEnd Property\n```\n```vb\nProperty Get HDL() As Double\nHDL = Value\nEnd Property\nProperty Let HDL(Value As Double)\npHDL = Value\nEnd Property\n```\n```vb\nPublic Property Get HDL() As Double\nHDL = Value\nEnd Property\nPublic Property Let HDL(Value As Double)\npHDL = Value\nEnd Property\n```\n```vb\nPublic Property Get HDL() As Single\nHDL = pHDL\nEnd Property\nPublic Property Let HDL(Value As Double)\npHDL = Value\nEnd Property\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5b5a3160e222d2f8bae255fa",
+        "question": "If VBA code declares FileCount as a constant rather than a variable, the code tends to run faster. Why is this?",
+        "answer": "The Const declaration specifies the most efficient type given the constant's value",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The Const declaration specifies the most efficient type given the constant's value"
+        ],
+        "options": [
+          "The scope of constants is limited to the procedure that declares them",
+          "Constants are declared at compile time, but variables are declared at run time",
+          "Once declared in a project, the value of a constant cannot be changed. There is no need to look up the current value of FileCount when it is a constant.",
+          "The Const declaration specifies the most efficient type given the constant's value"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "41c7eb629bbd61ed39534582",
+        "question": "A VBA project must declare four classes. How many class modules are needed?",
+        "answer": "as many as are required by the variable types that the objects return",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "as many as are required by the variable types that the objects return"
+        ],
+        "options": [
+          "two (one for the properties and one for the methods)",
+          "one (each class is declared in the same module)",
+          "four (one for each class)",
+          "as many as are required by the variable types that the objects return"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1a18f86690b03b062c38378e",
+        "question": "What does this code display?\n```vb\nSub MakeErrors()\nDim Y As Variant, Z As Variant\nOn Error Resume Next\nY = 1 / 0\nMsgBox \"Y = \" & Y\nOn Error GoTo 0\nZ - (0 - 3) ^ 0.5\nMsgBox \"Z = \" & Z\nEnd Sub\n```",
+        "answer": "Z = in a message box and then a subsequent error message",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Z = in a message box and then a subsequent error message"
+        ],
+        "options": [
+          "an error message",
+          "Y and Z",
+          "Z = in a message box and then a subsequent error message",
+          "Y = in a message box and then a subsequent error message"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2052d3eb10b6021d6af97533",
+        "question": "The VBA code block shown in the following four options runs when UserForm1's CommandButton1 button is clicked. Which block of code leaves UserForm1 loaded but not visible until the FoundErrors function has checked it, and then enables processing to continue if no errors are found?",
+        "answer": ":",
+        "explanation": "```vb\nPrivate Sub CommandButton1_Click()\nIf FoundErrors(Me) Then _\nMe.Show\nEnd Sub\n```\n```vb\nPrivate Sub CommandButton1_Click()\nIf Not FoundErrors(UserForm1) Then _\nUnload UserForm1\nEnd Sub\n```\n```vb\nPrivate Sub CommandButton1_Click()\nMe.Hide\nDo While FoundErrors(Me)\nMe.Show\nLoop\nEnd Sub\n```\n```vb\nPrivate Sub CommandButton1_Click()\nDo While FoundErrors(UserForm1)\nUserForm1.show\nLoop\nEnd Sub\n```\n> The first requirement is to make UserForm1 loaded but not visible, therefore, we need Me.Hide, **Me** in here referring to UserForm1",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fb7040297bf269df9e1dcd21",
+        "question": "Which is the correct way to structure a With block?",
+        "answer": ":",
+        "explanation": "```vb\nWith Selection\n&TypeText Text:=\"8/24/2019\"\n&TypeParagraph\n&TypeText Text:=\"1161 Alamosa Drive\"\nEnd With\n```\n```vb\nWith Selection\n.TypeText Text:=\"8/24/2019\"\n.TypeParagraph\n.TypeText Text:=\"1161 Alamosa Drive\"\nEnd With\n```\n```vb\nWith Selection\nTypeText Text:=\"8/24/2019\"\nTypeParagraph\nTypeText Text:=\"1161 Alamosa Drive\"\nEnd With\n```\n```vb\nWith Selection:\n&TypeText Text:=\"8/24/2019\"\n&TypeParagraph\n&TypeText Text:=\"1161 Alamosa Drive\"\nEnd With\n```\n[reference](https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/with-statement)",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e21549d8a166a0a1bfcde1cf",
+        "question": "Why does this code generate a \"Subscript out of range\" error?\n```vb\nSub Example()\n    Dim MyArr() As Variant\n    ReDim MyArr(3, 4)\n    'some code\n    ReDim Preserve MyArr(4, 4)\nEnd Sub\n```",
+        "answer": "You can resize only the last dimension of an array when you specify `ReDim Preserve`.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "You can resize only the last dimension of an array when you specify `ReDim Preserve`."
+        ],
+        "options": [
+          "Arrays cannot be resized more than once.",
+          "MyArr was originally declared with three \"rows\".",
+          "You can resize only the last dimension of an array when you specify `ReDim Preserve`.",
+          "The correct syntax is `ReDim Preserve MyArr(0 To 4, 0 To 4)`."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "05392430b626c71eb6c844c6",
+        "question": "Which subroutine declaration does not cause a compile error?",
+        "answer": "`Sub Called(Salary As Long, ParamArray Vals() As Variant)`; `Sub Called(Optional Salary As Long, ParamArray Vals() As Variant)`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`Sub Called(Salary As Long, ParamArray Vals() As Variant)`",
+          "`Sub Called(Optional Salary As Long, ParamArray Vals() As Variant)`"
+        ],
+        "options": [
+          "`Sub Called(Salary As Long, ParamArray Vals() As Variant)`",
+          "`Sub Called(ParamArray Vals() As Variant, Salary As Long)`",
+          "`Sub Called(Optional Salary As Long, ParamArray Vals() As Variant)`",
+          "`Sub Called(Salary As Long, ParamArray Vals() As String)`"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "17d4060b3900bd9c6b0374c7",
+        "question": "How can a user enter data on a worksheet or document, or switch windows, while UserForm1 is displayed on the screen?",
+        "answer": "Set the user from's `ShowModal` property to False.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Set the user from's `ShowModal` property to False."
+        ],
+        "options": [
+          "Show the form with this statement: `UserForm1.Show vbModal`",
+          "Include this statement in the code: `UserForm1.Hwnd = False.`",
+          "Set the user from's `SpecialEffect` property to `frmShowModal`",
+          "Set the user from's `ShowModal` property to False."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e78f3b2c2e163212d2102fc0",
+        "question": "SubA passes MyVar to SubB. How can you ensure that MyVar has its original value when control returns to SubA?",
+        "answer": "Declare SubB as Sub SubB(ByVal MyVar).",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Declare SubB as Sub SubB(ByVal MyVar)."
+        ],
+        "options": [
+          "Declare SubB as Sub SubB(ByRef MyVar).",
+          "Declare SubB as Sub SubB(MyVar).",
+          "Declare SubB as Sub SubB(Static MyVar).",
+          "Declare SubB as Sub SubB(ByVal MyVar)."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d2bce2f7ac009400f1f7b0df",
+        "question": "Which procedure declaration is syntactically correct?",
+        "answer": ":",
+        "explanation": "```vb\nSub MySub(VarA As String, Optional VarB _\nAs Variant, Optional VarC As Long)\n```\n```vb\nSub MySub(VarA As String, Optional VarB _\nAs Variant, VarC As Long)\n```\n```vb\nSub MySub(Optional VarA As String, Optional VarB _\nAs Variant, VarC as Long)\n```\n```vb\nSub MySub(OPtional VarA As String, VarB _\nAs Variant, Optional VarC as Long)\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "15db850346a562131adbd9d3",
+        "question": "What are the two principal kinds of procedures in VBA?",
+        "answer": "Function and Event",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Function and Event"
+        ],
+        "options": [
+          "Function and Event",
+          "Function and Scope",
+          "Subroutine and Event",
+          "Subroutine and Function"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cd408115322a04c839faaeb6",
+        "question": "Which code block compiles without error?",
+        "answer": "`Sub Decs() Dim MyInt% * 1 MyInt = 7 MsgBox MyInt End Sub`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`Sub Decs() Dim MyInt% * 1 MyInt = 7 MsgBox MyInt End Sub`"
+        ],
+        "options": [
+          "`Sub Decs() Dim MyFixed As String * 0 MyFixed = \"A\" MsgBox MyFixed End Sub`",
+          "`Sub Decs() Dim MyInt% * 1 MyInt = 7 MsgBox MyInt End Sub`",
+          "`Sub Decs() Dim MyInt% As Integer * 1 MyInt = 5 MsgBox MyInt End Sub`",
+          "`Sub Decs() Dim MyInt, MyNum As Integer MyInt = \"A\" MsgBox MyInt End Sub`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c081933ba8f3b90dd72bfbfe",
+        "question": "What is used in the Immediate window to display the current value of the variable CountValues?",
+        "answer": "`? CountValues? CountValues`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`? CountValues? CountValues`"
+        ],
+        "options": [
+          "`= CountValues= CountValues`",
+          "`| CountValues| CountValues`",
+          "`: CountValues: CountValues`",
+          "`? CountValues? CountValues`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d1690fd150d64fa062bc100c",
+        "question": "At which level can you declare a variable in this way: Private TopSecret As String?",
+        "answer": "module",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "module"
+        ],
+        "options": [
+          "function",
+          "module",
+          "subroutine",
+          "procedure"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7eaee30f01fa49690fc2a1a5",
+        "question": "How can a user enter data on a worksheet or document, or switch windows, while UserForm1 is displayed on the screen?",
+        "answer": "Set the user form's ShowModal property to False.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Set the user form's ShowModal property to False."
+        ],
+        "options": [
+          "Show the form with this statement: UserForm1.Show vbModal.",
+          "Set the user form's SpecialEffect property to frmShowModal.",
+          "Include this statement in the code: `UserForm1.Hwnd = False.`",
+          "Set the user form's ShowModal property to False."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8a47fafac93c9a4fb71e7638",
+        "question": "SubA passes MyVar to SubB. How can you ensure that MyVar has its original value when control returns to SubA?",
+        "answer": "Declare SubB as Sub SubB(ByVal MyVar).",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Declare SubB as Sub SubB(ByVal MyVar)."
+        ],
+        "options": [
+          "Declare SubB as Sub SubB(Static MyVar).",
+          "Declare SubB as Sub SubB(ByVal MyVar).",
+          "Declare SubB as Sub SubB(MyVar).",
+          "Declare SubB as Sub SubB(ByRef MyVar)."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "522badd56df4291c694f0198",
+        "question": "Arrays cannot be resized more than once.\n```vb\nSub Example() Dim MyArr() As Variant ReDim MyArr(3, 4) 'some code ReDim Preserve MyArr(4, 4)\nEnd Sub Sub Example() Dim MyArr() As Variant ReDim MyArr(3, 4) 'some code ReDim Preserve MyArr(4, 4) End Sub\n```",
+        "answer": "You can resize only the last dimension of an array when you specify ReDim Preserve.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "You can resize only the last dimension of an array when you specify ReDim Preserve."
+        ],
+        "options": [
+          "The correct syntax is ReDim Preserve MyArr(0 To 4, 0 To 4).",
+          "You can resize only the last dimension of an array when you specify ReDim Preserve.",
+          "MyArr was originally declared with three \"rows.\"",
+          "Declare SubB as Sub SubB(ByRef MyVar)."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e11d79447e08fdb78284af5d",
+        "question": "Which block of code ends with the variable i equal to 5 and the variable X equal to 10?",
+        "answer": ":",
+        "explanation": "```vb\nDo\nX = X + 1\ni = i + 1\nLoop Until i < 5\nEnd Sub\n```\n```vb\nSub Loopi()\nDim X As Integer, i As Integer\nFor i = 1 To 5\nX = X + 1\nNext I\nEnd Sub\n```\n```vb\nSub Loopi()\nDim X As Integer, i As Integer\nDo Until i < 5\nX = X + 1\ni = i + 1\nLoop\nEnd Sub\n```\n```vb\nSub Loopi()\nDim X As Integer, i As Integer\nDo\nX = X + 1\ni = i + 1\nLoop While i < 5\nEnd Sub\n```",
+        "hint": null,
+        "correctAnswer": [
+          ":"
+        ],
+        "options": [
+          ":",
+          ":",
+          ":",
+          ":"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6deea7f6134518429eab9d30",
+        "question": "How does a class module indicate that it uses a particular interface?",
+        "answer": "by means of the _Implemets_ keyword and the name of interface.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "by means of the _Implemets_ keyword and the name of interface."
+        ],
+        "options": [
+          "by means of the _Implemets_ keyword and the name of interface.",
+          "bymeans of the _Interface_ keyword and the name of the interface.",
+          "The name of the interface is passed as a parameter.",
+          "The interface itself is part of the class module."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "92734714176c2d9b7385318c",
+        "question": "Which part of the VBE can help you explore VBA syntax?",
+        "answer": "project explorer",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "project explorer"
+        ],
+        "options": [
+          "Locals windows",
+          "object browser",
+          "project explorer",
+          "optional dialog"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "55ba95ca147763bf4c73893a",
+        "question": "This code is trying to establish a new collection consisting of employee names and numbers. Assoc is a class. What statement is missing from the code?\n```vb\nDim Associates As Collection, Assoc As CAssoc, i As Byte\nFor i = 1 To 200\n    Set Assoc = New CAssoc\n    Assoc.Name = Cells(i,1)\n    Assoc.Number = Cells(i,2)\n    Associates.Add Assoc\nNext i\n```",
+        "answer": "`Set Associates = New Collection`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`Set Associates = New Collection`"
+        ],
+        "options": [
+          "`Set Associates = New Collection`",
+          "`Set Associates = Collection`",
+          "`Redim(Associates(Associates.Count+1))`",
+          "`Redim(Associates _ (Unbound(Associates)+1))`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c49bee1c241b152cdfcda6fc",
+        "question": "What is the standard term for a variable or value that is passed from one subroutine or function to another?",
+        "answer": "argument",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "argument"
+        ],
+        "options": [
+          "reference",
+          "element",
+          "argument",
+          "attribute"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "449f20f62e683b2e79464189",
+        "question": "What is the standard term for a variable or value that is passed from one subroutine or function to another?",
+        "answer": "argument",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "argument"
+        ],
+        "options": [
+          "reference",
+          "element",
+          "argument",
+          "attribute"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "594564f9ddc98934ab76180c",
+        "question": "Where is the event procedure named Worksheet_Change found?",
+        "answer": "in the workbook's code module",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "in the workbook's code module"
+        ],
+        "options": [
+          "in any standard code module",
+          "in the worksheet's object module",
+          "in the Worksheet_Change class module",
+          "in the workbook's code module"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "43aaf67f2b62f5bb34e9b642",
+        "question": "You are building an event procedure for a worksheet, and you edit the argument list in the event procedure's Sub statement. What happens when the event procedure runs?",
+        "answer": "The procedure won't compile.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "The procedure won't compile."
+        ],
+        "options": [
+          "There's no difference compared to the results of a standard procedure.",
+          "The results are unpredictable.",
+          "The procedure won't compile.",
+          "The procedure throws a run-time error."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8f3ba4551542b01c227ec0a6",
+        "question": "Based on this code, which procedure calls the subroutine SumCosts correctly?\n```vb\nSub Sumosts(AcctName As String, Amount As Long)\n    Range(\"A1\") = AcctName\nEnd Sub\n```",
+        "answer": "SumCosts(\"Totalcosts\", 3)",
+        "explanation": "[Source](https://learn.microsoft.com/en-us/office/vba/language/concepts/getting-started/calling-sub-and-function-procedures)",
+        "hint": null,
+        "correctAnswer": [
+          "SumCosts(\"Totalcosts\", 3)"
+        ],
+        "options": [
+          "call SumCosts \"Totalcosts\", 3",
+          "SumCosts \"Totalcosts\", 3",
+          "SumCosts(\"Totalcosts\", 3)",
+          "Call SumCosts"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "bea6e6acdf6d4ab9a8cbcf5f",
+        "question": "You want to declare an object that describes cars so that your VBA code can apply tests such as the following. What keyword do you use to declare Cars?\n```vb\nIf Cars(1).Make=\"Ford\" And Cars (1).MPG > 20\n    Then Cars(1).Selected = True\n```",
+        "answer": "Type",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Type"
+        ],
+        "options": [
+          "Dataframe",
+          "Type",
+          "object",
+          "Variant"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7a31c0fc8c5bb7738d10e67b",
+        "question": "What is the purpose of the .Range(\"A1:E5\").Select portion of this statement?\n```vb\nActiveCell.Offset(3,4).Range(\"A1:E5\").Select\n```",
+        "answer": "it specifies the range of cells in which the contents of the offset are to be written",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "it specifies the range of cells in which the contents of the offset are to be written"
+        ],
+        "options": [
+          "If specifies the range that is to be selected after the offset is found",
+          "it specifies the range of cells in which the contents of the offset are to be written",
+          "It provides Resize information - in this case, the offset returns a reference of five rows and five columns",
+          "It specifies the range of cells at which the offset is to be based"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "889cd244f8b5a0ae5977dbdb",
+        "question": "In Excel, what is the effect of the two statements below?\n```vb\nRange(\"b3:f5, c4:d9\").Select\n    \tRange(\"b3:f5\", \"c4:d9\").Select\n```",
+        "answer": "it specifies the range of cells in which the contents of the offset are to be written",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "it specifies the range of cells in which the contents of the offset are to be written"
+        ],
+        "options": [
+          "If specifies the range that is to be selected after the offset is found",
+          "it specifies the range of cells in which the contents of the offset are to be written",
+          "It provides Resize information - in this case, the offset returns a reference of five rows and five columns",
+          "It specifies the range of cells at which the offset is to be based"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1d9a47632f16f19a367b68e0",
+        "question": "What does VBA stand for in the context of programming?",
+        "answer": "Visual Basic Application",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Visual Basic Application"
+        ],
+        "options": [
+          "Very Basic Application",
+          "Visual Basic Application",
+          "Volatile Business Automation",
+          "Visualized Binary Algorithm"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "vba/vba-quiz.md",
+    "language": "md",
+    "generatedAt": "2025-12-09T14:56:14.477847+00:00",
+    "warnings": [
+      "Question 9 has no marked correct answers"
+    ]
+  }
+}

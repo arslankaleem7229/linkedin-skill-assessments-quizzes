@@ -132,7 +132,7 @@
 
 #### Q9. Ви працюєте з таблицями, як показано на цій діаграмі. Вам потрібно створити список клієнтів, які придбали певні моделі автомобілів. Яку SQL-умову ви використовуєте?
 
-![mysql Q09](images/mysql_q09.jpg?raw=true)
+![mysql Q09](images/mysql_q09.jpg)
 
 - [ ] LIKE
 - [x] IN
@@ -363,7 +363,7 @@
 
 #### Q40. Яке твердження є правильним для наведеної нижче діаграми?
 
-![mysql Q41](images/mysql_q41.jpg?raw=true)
+![mysql Q41](images/mysql_q41.jpg)
 
 - [ ] carid є первинним ключем для purchases
 - [ ] carid є зовнішнім ключем для cars.carid
@@ -555,7 +555,7 @@ ROWS IDENTIFIED BY `<car>`;
 
 #### Q60. Ви працюєте з таблицями, як показано на цій діаграмі. Вам потрібно отримати кількість проданих автомобілів за домашнім штатом кожного клієнта. Як це можна зробити?
 
-![mysql Q61](images/mysql_q61.png?raw=true)
+![mysql Q61](images/mysql_q61.png)
 
 - [ ] `SELECT state, COUNT(*) FROM customers WHERE ID IN (SELECT customerID FROM purchases) GROUP BY state;`
 - [ ] `SELECT state, COUNT(*) FROM customers c LEFT JOIN purchases p ON c.ID = p.customerID GROUP BY state;`
@@ -724,7 +724,7 @@ WHERE MATCH(address) AGAINST ('street, drive');
 
 #### Q78. На діаграмі нижче поле price оголошено як тип DECIMAL. Яке було б більш ефективне оголошення для цього поля?
 
-![mysql picture](images/mysql_q80.png?raw=true)
+![mysql picture](images/mysql_q80.png)
 
 - [ ] FLOAT
 - [x] DECIMAL(10,2)
@@ -742,7 +742,7 @@ WHERE MATCH(address) AGAINST ('street, drive');
 
 #### Q80. Ця діаграма показує який тип відносин між клієнтами та автомобілями?
 
-![mysql picture](images/mysql_q80.png?raw=true)
+![mysql picture](images/mysql_q80.png)
 
 - [ ] один-до-багатьох (one-to-many)
 - [ ] батько-дитина (parent-child)
@@ -767,7 +767,7 @@ WHERE MATCH(address) AGAINST ('street, drive');
 
 #### Q83. На діаграмі нижче поля ID оголошені як тип CHAR замість INT. Яка з можливих причин _не_ є правильною для цього рішення?
 
-![mysql picture](images/mysql_q85.png?raw=true)
+![mysql picture](images/mysql_q85.png)
 
 - [ ] Поле ID повинно містити літери, а не лише цифри.
 - [ ] Ви можете мати послідовний формат у всіх таблицях, які потребують полів ID.
@@ -805,7 +805,7 @@ SELECT name FROM students WHERE name REGEXP '^to';
 
 #### Q87. Ви працюєте з таблицями, як показано на діаграмі. Вам потрібно згенерувати список загальних цін для кожної марки та моделі автомобіля, з підсумками для кожної марки та загальним підсумком усіх цін. Яку SQL-інструкцію ви використовуєте?
 
-![mysql picture](images/mysql_q92.png?raw=true)
+![mysql picture](images/mysql_q92.png)
 
 - [ ] UNION
 - [ ] SHOW TOTALS
@@ -856,7 +856,7 @@ SELECT name FROM students WHERE name REGEXP '^to';
 
 #### Q94. Ви працюєте з таблицями, показаними нижче. Вам потрібно згенерувати список усіх автомобілів, незалежно від того, чи були вони продані. Яка інструкція це виконує?
 
-![mysql picture](images/mysql_q98.png?raw=true)
+![mysql picture](images/mysql_q98.png)
 
 - [ ] A
 
@@ -971,7 +971,7 @@ SELECT cars.*, purchases.date FROM cars LEFT JOIN purchases ON cars.ID = purchas
 
 #### Q100. Ви працюєте над тригером UPDATE у таблиці employee на цій діаграмі. Як можна отримати доступ до нового значення для адреси всередині тригера?
 
-![mysql picture](images/mysql_q116.png?raw=true)
+![mysql picture](images/mysql_q116.png)
 
 - [x] Скористатися NEW.address
 - [ ] Скористатися INSERTED.address
@@ -1069,7 +1069,7 @@ SELECT cars.*, purchases.date FROM cars LEFT JOIN purchases ON cars.ID = purchas
 
 #### Q110. Ви працюєте з таблицями, показаними нижче. Вам потрібно переконатися, що будь-який запис, доданий до таблиці purchases, містить customerID, який вже існує в таблиці customers, і carID, який вже існує в таблиці cars. Ви вирішуєте використовувати тригер для перевірки. Який тригер ви використовуєте?
 
-![mysql picture](images/mysql_q85.png?raw=true)
+![mysql picture](images/mysql_q85.png)
 
 - [ ] IF EXISTS
 - [ ] CROSS JOIN

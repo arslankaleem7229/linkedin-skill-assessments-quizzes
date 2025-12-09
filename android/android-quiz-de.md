@@ -264,7 +264,7 @@ Hinweis: AndroidJUnitRunner ermöglicht es uns, JUnit3/4-Stil-Tests auf Android-
 
 #### F21. Welche Drawable-Definition ermöglicht es Ihnen, die folgende Form zu erreichen?
 
-![img](image/shape.png?raw=png)
+![img](image/shape.png)
 
 - [ ] A
 
@@ -931,16 +931,16 @@ override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanc
 #### F61. Welche Layout-Hierarchie wird wahrscheinlich am schnellsten gezeichnet?
 
 - [x] A
-      ![img](https://i.imgur.com/mT08jag.png?raw=png)
+      ![img](https://i.imgur.com/mT08jag.png)
 
 - [ ] B
-      ![img](https://i.imgur.com/rz9eKYc.png?raw=png)
+      ![img](https://i.imgur.com/rz9eKYc.png)
 
 - [ ] C
-      ![img](https://i.imgur.com/ETaHhaS.png?raw=png)
+      ![img](https://i.imgur.com/ETaHhaS.png)
 
 - [ ] D
-      ![img](https://i.imgur.com/1QBrTwR.png?raw=png)
+      ![img](https://i.imgur.com/1QBrTwR.png)
 
 #### F62. Was ist die derzeit empfohlene Methode zur Handhabung von lang laufenden Hintergrundaufgaben?
 

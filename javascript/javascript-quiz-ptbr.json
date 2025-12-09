@@ -1,0 +1,2737 @@
+{
+  "quizz": {
+    "id": "4e755b366b5e5a064beb3410",
+    "title": "JavaScript",
+    "description": "Seeded from javascript/javascript-quiz-ptbr.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "fca8924351ad6ad4da7a1aa4",
+        "question": "Qual operador retorna verdadeiro se os dois valores comparados n\u00e3o forem iguais?",
+        "answer": "`!==`",
+        "explanation": "[Reference Javascript Comparison Operators](https://www.w3schools.com/js/js_operators.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`!==`"
+        ],
+        "options": [
+          "`<>`",
+          "`~`",
+          "`==!`",
+          "`!==`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7feae45cab9a4a6fb6d8b78a",
+        "question": "Como uma instru\u00e7\u00e3o forEach \u00e9 diferente de uma instru\u00e7\u00e3o for?",
+        "answer": "Uma instru\u00e7\u00e3o for \u00e9 gen\u00e9rica, mas uma instru\u00e7\u00e3o forEach pode ser usada apenas com um array.",
+        "explanation": "[Reference Differences between forEach and for loop](https://www.geeksforgeeks.org/difference-between-foreach-and-for-loop-in-javascript/)",
+        "hint": null,
+        "correctAnswer": [
+          "Uma instru\u00e7\u00e3o for \u00e9 gen\u00e9rica, mas uma instru\u00e7\u00e3o forEach pode ser usada apenas com um array."
+        ],
+        "options": [
+          "A instru\u00e7\u00e3o for usa somente uma fun\u00e7\u00e3o de retorno de chamada.",
+          "Uma instru\u00e7\u00e3o for \u00e9 gen\u00e9rica, mas uma instru\u00e7\u00e3o forEach pode ser usada apenas com um array.",
+          "Somente uma instru\u00e7\u00e3o forEach permite que voc\u00ea especifique seu pr\u00f3prio iterador.",
+          "Uma instru\u00e7\u00e3o forEach \u00e9 gen\u00e9rica, mas uma instru\u00e7\u00e3o for pode ser usada apenas com um array."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b3eeabff81237d13c21f1aa1",
+        "question": "Revise o c\u00f3digo abaixo. Qual instru\u00e7\u00e3o chama a fun\u00e7\u00e3o addTax e passa 50 como argumento?\n```js\nfunction addTax(total) {\n  return total * 1.05;\n}\n```",
+        "answer": "`addTax(50);`",
+        "explanation": "[Reference functions in javascript](https://www.w3schools.com/js/js_functions.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`addTax(50);`"
+        ],
+        "options": [
+          "`addTax = 50;`",
+          "`return addTax 50;`",
+          "`addTax(50);`",
+          "`addTax 50;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "590a742e79e991df6f3f34eb",
+        "question": "Qual declara\u00e7\u00e3o \u00e9 a maneira correta de criar uma vari\u00e1vel chamada rate e atribuir a ela o valor 100?",
+        "answer": "`let rate = 100;`",
+        "explanation": "[Reference Javascript Assignment operators](https://www.w3schools.com/js/js_operators.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`let rate = 100;`"
+        ],
+        "options": [
+          "`let rate = 100;`",
+          "`let 100 = rate;`",
+          "`100 = let rate;`",
+          "`rate = 100;`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "491e88062bf8f2994e660d17",
+        "question": "Qual instru\u00e7\u00e3o cria um novo objeto usando o construtor Person? Qual instru\u00e7\u00e3o cria um novo objeto Person chamado \"estudante\"?",
+        "answer": "`var student = new Person();`",
+        "explanation": "[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)",
+        "hint": null,
+        "correctAnswer": [
+          "`var student = new Person();`"
+        ],
+        "options": [
+          "`var student = new Person();`",
+          "`var student = construct Person;`",
+          "`var student = Person();`",
+          "`var student = construct Person();`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e8c085bdb50b381e40eb3577",
+        "question": "Quando a declara\u00e7\u00e3o final do c\u00f3digo mostrado sera exibida no console? Quando o 'Results shown' sera exibido no console?\n```js\nlet modal = document.querySelector('#result');\nsetTimeout(function () {\n  modal.classList.remove('hidden');\n}, 10000);\nconsole.log('Results shown');\n```",
+        "answer": "imediatamente",
+        "explanation": "[Reference Javascript is synchronous and single threaded](https://stackoverflow.com/a/2035662/15067394)",
+        "hint": null,
+        "correctAnswer": [
+          "imediatamente"
+        ],
+        "options": [
+          "depois de 10 segundos",
+          "depois que os resultados s\u00e3o recebidos da solicita\u00e7\u00e3o HTTP",
+          "depois de 10000 segundos",
+          "imediatamente"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "98d3c3c44bb4ef4ef5b2a005",
+        "question": "Qual trecho voc\u00ea poderia adicionar a este c\u00f3digo para imprimir \"food\" no console?\n```js\nclass Animal {\n  static belly = [];\n  eat() {\n    Animal.belly.push('food');\n  }\n}\nlet a = new Animal();\na.eat();\nconsole.log(/* Snippet Here */); //Prints food\n```",
+        "answer": "`Animal.belly[0]`",
+        "explanation": "[Reference Javascript Class static Keyword](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)",
+        "hint": null,
+        "correctAnswer": [
+          "`Animal.belly[0]`"
+        ],
+        "options": [
+          "`a.prototype.belly[0]`",
+          "`Object.getPrototype0f (a).belly[0]`",
+          "`Animal.belly[0]`",
+          "`a.belly[0]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ed90210f2b90716db985bf3e",
+        "question": "Voc\u00ea escreveu o c\u00f3digo mostrado para registrar um conjunto de valores consecutivos, mas, em vez disso, resulta no valor 5, 5, 5 e 5 sendo exibido no console. Qual vers\u00e3o revisada do c\u00f3digo resultaria na exibi\u00e7\u00e3o dos valores 1, 2, 3 e 4?",
+        "answer": "`D`",
+        "explanation": "```js\nfor (var i = 1; i <= 4; i++) {\nsetTimeout(function () {\nconsole.log(i);\n}, i * 10000);\n}\n```\n```js\nfor (var i = 1; i <= 4; i++) {\n(function (i) {\nsetTimeout(function () {\nconsole.log(j);\n}, j * 1000);\n})(j);\n}\n```\n```js\nfor (var i = 1; i <= 4; i++) {\nsetTimeout(function () {\nconsole.log(i);\n}, i * 1000);\n}\n```\n```js\nfor (var i = 1; i <= 4; i++) {\n(function (j) {\nsetTimeout(function () {\nconsole.log(j);\n}, j * 1000);\n})(i);\n}\n```\n```js\nfor (var j = 1; j <= 4; j++) {\nsetTimeout(function () {\nconsole.log(j);\n}, j * 1000);\n}\n```\n1. [Reference setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)\n2. [Reference immediately invoked anonymous functions](https://www.javascripttutorial.net/javascript-anonymous-functions/)",
+        "hint": null,
+        "correctAnswer": [
+          "`D`"
+        ],
+        "options": [
+          "`A`",
+          "`B`",
+          "`C`",
+          "`D`",
+          "`E`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "98fe7c8b5a772ca5fbc38b72",
+        "question": "Como uma fun\u00e7\u00e3o cria uma clausura?",
+        "answer": "Ele retorna uma refer\u00eancia a uma vari\u00e1vel em seu escopo pai.",
+        "explanation": "[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)",
+        "hint": null,
+        "correctAnswer": [
+          "Ele retorna uma refer\u00eancia a uma vari\u00e1vel em seu escopo pai."
+        ],
+        "options": [
+          "Ele recarrega o documento sempre que o valor muda.",
+          "Ele retorna uma refer\u00eancia a uma vari\u00e1vel em seu escopo pai.",
+          "Ele conclui a execu\u00e7\u00e3o sem retornar.",
+          "Ele vai copiar uma vari\u00e1vel local para o escopo global."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "af0d53902f43ab79ffd47737",
+        "question": "Qual instru\u00e7\u00e3o cria uma nova fun\u00e7\u00e3o chamada DiscountPrice?",
+        "answer": "`A`; `D`",
+        "explanation": "```js\nlet discountPrice = function (price) {\nreturn price * 0.85;\n};\n```\n```js\nlet discountPrice(price) {\nreturn price * 0.85;\n};\n```\n```js\nlet function = discountPrice(price) {\nreturn price * 0.85;\n};\n```\n```js\ndiscountPrice = function (price) {\nreturn price * 0.85;\n};\n```\n[Reference defining javascript functions](https://www.w3schools.com/js/js_functions.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`A`",
+          "`D`"
+        ],
+        "options": [
+          "`A`",
+          "`B`",
+          "`C`",
+          "`D`"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "33290403f15cda4b72ea2b89",
+        "question": "Qual \u00e9 o resultado no console da execu\u00e7\u00e3o do c\u00f3digo mostrado?\n```js\nvar Storm = function () {};\nStorm.prototype.precip = 'rain';\nvar WinterStorm = function () {};\nWinterStorm.prototype = new Storm();\nWinterStorm.prototype.precip = 'snow';\nvar bob = new WinterStorm();\nconsole.log(bob.precip);\n```",
+        "answer": "'snow'",
+        "explanation": "[Reference prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)",
+        "hint": null,
+        "correctAnswer": [
+          "'snow'"
+        ],
+        "options": [
+          "Storm()",
+          "undefined",
+          "'rain'",
+          "'snow'"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "32de3e5403921ea4cc35167a",
+        "question": "Voc\u00ea precisa corresponder a um valor de tempo como 12:00:32. Qual das seguintes express\u00f5es regulares funcionaria para o seu c\u00f3digo?",
+        "answer": "`/\\d\\d:\\d\\d:\\d\\d/`",
+        "explanation": "**NOTA**: As tr\u00eas primeiras est\u00e3o parcialmente corretas e corresponder\u00e3o a d\u00edgitos, mas a **segunda op\u00e7\u00e3o \u00e9 a mais correta** porque corresponder\u00e1 **apenas** a valores de tempo de **2 d\u00edgitos** (12: 00h32). A primeira op\u00e7\u00e3o teria funcionado se o intervalo de repeti\u00e7\u00f5es parecesse `[0-9]{2}`, por\u00e9m por causa da **v\u00edrgula** `[0-9]{2,}` ele selecionar\u00e1 2 **ou mais** d\u00edgitos (120:000:321). A terceira op\u00e7\u00e3o ter\u00e1 qualquer intervalo de d\u00edgitos de tempo, \u00fanico _e_ m\u00faltiplo (significando `1:2:3` tamb\u00e9m corresponder\u00e1).\n**Mais recursos:**\n1. [Caracteres Repetidos](https://regexone.com/lesson/repeating_characters)\n2. [Operadores Kleene](https://regexone.com/lesson/kleene_operators)",
+        "hint": null,
+        "correctAnswer": [
+          "`/\\d\\d:\\d\\d:\\d\\d/`"
+        ],
+        "options": [
+          "`/[0-9]{2,}:[0-9]{2,}:[0-9]{2,}/`",
+          "`/\\d\\d:\\d\\d:\\d\\d/`",
+          "`/[0-9]+:[0-9]+:[0-9]+/`",
+          "`/ : : /`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f24462746716ff01baad6db4",
+        "question": "Qual \u00e9 o resultado no console da execu\u00e7\u00e3o desse c\u00f3digo?\n```js\n'use strict';\nfunction logThis() {\n  this.desc = 'logger';\n  console.log(this);\n}\nnew logThis();\n```",
+        "answer": "`{desc: \"logger\"}`",
+        "explanation": "[Reference javascript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)",
+        "hint": null,
+        "correctAnswer": [
+          "`{desc: \"logger\"}`"
+        ],
+        "options": [
+          "`undefined`",
+          "`window`",
+          "`{desc: \"logger\"}`",
+          "`function`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "76cb64416cb0dd3a53a4c3bb",
+        "question": "Como voc\u00ea faria refer\u00eancia ao texto 'avenue' no c\u00f3digo mostrado?\n```js\nlet roadTypes = ['street', 'road', 'avenue', 'circle'];\n```",
+        "answer": "roadTypes\\[2\\]",
+        "explanation": "[Reference accessing javascript arrays](https://www.w3schools.com/js/js_arrays.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "roadTypes\\[2\\]"
+        ],
+        "options": [
+          "roadTypes.2",
+          "roadTypes\\[3\\]",
+          "roadTypes.3",
+          "roadTypes\\[2\\]"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6b45dd8e7d7d3f80ab41e811",
+        "question": "Qual \u00e9 o resultado da execu\u00e7\u00e3o desta instru\u00e7\u00e3o?\n```js\nconsole.log(typeof 42);\n```",
+        "answer": "`'number'`",
+        "explanation": "[Reference javascript data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)",
+        "hint": null,
+        "correctAnswer": [
+          "`'number'`"
+        ],
+        "options": [
+          "`'float'`",
+          "`'value'`",
+          "`'number'`",
+          "`'integer'`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2eb14996343267b36edc3528",
+        "question": "Qual propriedade referencia o objeto DOM que despachou um evento?",
+        "answer": "`target`",
+        "explanation": "[Reference DOM events](https://www.w3schools.com/jsref/dom_obj_event.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`target`"
+        ],
+        "options": [
+          "`self`",
+          "`object`",
+          "`target`",
+          "`source`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9a86296d0add554ac165ed9c",
+        "question": "Voc\u00ea est\u00e1 adicionando tratamento de erros ao c\u00f3digo mostrado. Qual c\u00f3digo voc\u00ea incluiria dentro do bloco de instru\u00e7\u00e3o do if para especificar uma mensagem de erro?\n```js\nfunction addNumbers(x, y) {\n  if (isNaN(x) || isNaN(y)) {\n  }\n}\n```",
+        "answer": "`throw('One or both parameters are not numbers')`",
+        "explanation": "[Reference javascript throw](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)",
+        "hint": null,
+        "correctAnswer": [
+          "`throw('One or both parameters are not numbers')`"
+        ],
+        "options": [
+          "`exception('One or both parameters are not numbers')`",
+          "`catch('One or both parameters are not numbers')`",
+          "`error('One or both parameters are not numbers')`",
+          "`throw('One or both parameters are not numbers')`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ba16a5468307184b88462b6c",
+        "question": "Qual m\u00e9todo converte dados JSON em um objeto JavaScript?",
+        "answer": "`JSON.parse()`",
+        "explanation": "[Reference convert json to javascript object](https://www.w3schools.com/js/js_json_parse.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`JSON.parse()`"
+        ],
+        "options": [
+          "`JSON.fromString();`",
+          "`JSON.parse()`",
+          "`JSON.toObject()`",
+          "`JSON.stringify()`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9ae52f0a4962b3e49ade3d22",
+        "question": "Quando voc\u00ea usaria uma instru\u00e7\u00e3o condicional?",
+        "answer": "Quando voc\u00ea deseja que seu c\u00f3digo escolha entre v\u00e1rias op\u00e7\u00f5es.",
+        "explanation": "[Reference javascript conditionals](https://www.javascript.com/learn/conditionals)",
+        "hint": null,
+        "correctAnswer": [
+          "Quando voc\u00ea deseja que seu c\u00f3digo escolha entre v\u00e1rias op\u00e7\u00f5es."
+        ],
+        "options": [
+          "Quando voc\u00ea deseja reutilizar um conjunto de instru\u00e7\u00f5es v\u00e1rias vezes.",
+          "Quando voc\u00ea deseja que seu c\u00f3digo escolha entre v\u00e1rias op\u00e7\u00f5es.",
+          "Quando voc\u00ea deseja agrupar dados.",
+          "Quando voc\u00ea deseja percorrer um grupo de instru\u00e7\u00f5es."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9c6da35eac769ed2affb0732",
+        "question": "Qual seria o resultado no console da execu\u00e7\u00e3o desse c\u00f3digo?\n```js\nfor (var i = 0; i < 5; i++) {\n  console.log(i);\n}\n```",
+        "answer": "0 1 2 3 4",
+        "explanation": "[Reference javascript for loops](https://www.w3schools.com/js/js_loop_for.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "0 1 2 3 4"
+        ],
+        "options": [
+          "1 2 3 4 5",
+          "1 2 3 4",
+          "0 1 2 3 4",
+          "0 1 2 3 4 5"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fe07aa86cb83ac8fdc0ca8ee",
+        "question": "Qual m\u00e9todo Object retorna um iter\u00e1vel que pode ser usado para iterar sobre as propriedades de um objeto?",
+        "answer": "`Object.keys()`",
+        "explanation": "[Reference javascript object static methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#static_methods)",
+        "hint": null,
+        "correctAnswer": [
+          "`Object.keys()`"
+        ],
+        "options": [
+          "`Object.get()`",
+          "`Object.loop()`",
+          "`Object.each()`",
+          "`Object.keys()`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b855c7520a28d6db6ddf6de0",
+        "question": "O que ser\u00e1 registrado no console?\n```js\nvar a = ['dog', 'cat', 'hen'];\na[100] = 'fox';\nconsole.log(a.length);\n```",
+        "answer": "101",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "101"
+        ],
+        "options": [
+          "101",
+          "3",
+          "4",
+          "100"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "81791380e2101e14973cf65d",
+        "question": "Qual \u00e9 a diferen\u00e7a entre cole\u00e7\u00f5es criadas com Map e cole\u00e7\u00f5es criadas com Object?",
+        "answer": "Voc\u00ea pode contar os registros em um mapa com uma \u00fanica chamada de m\u00e9todo.",
+        "explanation": "**Explanation:** `Map.prototype.size returns the number of elements in a Map, whereas Object does not have a built-in method to return its size.`\n[Reference map methods javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)",
+        "hint": null,
+        "correctAnswer": [
+          "Voc\u00ea pode contar os registros em um mapa com uma \u00fanica chamada de m\u00e9todo."
+        ],
+        "options": [
+          "Voc\u00ea pode iterar sobre valores em um mapa em sua ordem de inser\u00e7\u00e3o.",
+          "Voc\u00ea pode contar os registros em um mapa com uma \u00fanica chamada de m\u00e9todo.",
+          "As teclas em Maps podem ser strings.",
+          "Voc\u00ea pode acessar valores em um mapa sem iterar em toda a cole\u00e7\u00e3o."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3dd10200b3f96467e58814ee",
+        "question": "Qual \u00e9 o valor de sobremesa.type depois de executar este c\u00f3digo?\n```js\nconst dessert = { type: 'pie' };\ndessert.type = 'pudding';\n```",
+        "answer": "pudim",
+        "explanation": "[Reference working with js objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)",
+        "hint": null,
+        "correctAnswer": [
+          "pudim"
+        ],
+        "options": [
+          "torta",
+          "O c\u00f3digo gerar\u00e1 um erro.",
+          "pudim",
+          "Indefinido"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0daa6d9920ce2f01afd7a3b8",
+        "question": "0 && hi",
+        "answer": "0",
+        "explanation": "[Reference boolean logic](https://ntgard.medium.com/https-medium-com-ntgard-boolean-logic-in-javascript-part-1-3371af974f19)",
+        "hint": null,
+        "correctAnswer": [
+          "0"
+        ],
+        "options": [
+          "ReferenceError",
+          "true",
+          "0",
+          "false"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3a86de3f65dc507d2b1590aa",
+        "question": "Which of the following operators can be used to do a short-circuit evaluation?",
+        "answer": "`||`",
+        "explanation": "[Reference short circuit javascript](https://codeburst.io/javascript-what-is-short-circuit-evaluation-ff22b2f5608c)",
+        "hint": null,
+        "correctAnswer": [
+          "`||`"
+        ],
+        "options": [
+          "`++`",
+          "`--`",
+          "`==`",
+          "`||`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "de77a8ac14a8e7b96b82a81e",
+        "question": "Which statement sets the Person constructor as the parent of the Student constructor in the prototype chain?",
+        "answer": "`Student.prototype = new Person();`",
+        "explanation": "[Reference prototype object js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)",
+        "hint": null,
+        "correctAnswer": [
+          "`Student.prototype = new Person();`"
+        ],
+        "options": [
+          "`Student.parent = Person;`",
+          "`Student.prototype = new Person();`",
+          "`Student.prototype = Person;`",
+          "`Student.prototype = Person();`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "11306a87d3a337e148cd09f7",
+        "question": "Why would you include a \"use strict\" statement in a JavaScript file?",
+        "answer": "to tell parsers to enforce all JavaScript syntax rules when processing your code",
+        "explanation": "[Reference what is use strict in js](https://www.w3schools.com/js/js_strict.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "to tell parsers to enforce all JavaScript syntax rules when processing your code"
+        ],
+        "options": [
+          "to tell parsers to interpret your JavaScript syntax loosely",
+          "to tell parsers to enforce all JavaScript syntax rules when processing your code",
+          "to instruct the browser to automatically fix any errors it finds in the code",
+          "to enable ES6 features in your code"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5534a8767fc05c11b6e7a759",
+        "question": "Which Variable-defining keyword allows its variable to be accessed (as undefined) before the line that defines it?",
+        "answer": "`var`",
+        "explanation": "[Reference var vs let vs const in js](https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/)",
+        "hint": null,
+        "correctAnswer": [
+          "`var`"
+        ],
+        "options": [
+          "all of them",
+          "`const`",
+          "`var`",
+          "`let`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "60cdd230cd404e0ced7270bc",
+        "question": "Which of the following values is not a Boolean false?",
+        "answer": "`Boolean(\"false\")`",
+        "explanation": "[Reference boolean of a string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)",
+        "hint": null,
+        "correctAnswer": [
+          "`Boolean(\"false\")`"
+        ],
+        "options": [
+          "`Boolean(0)`",
+          "`Boolean(\"\")`",
+          "`Boolean(NaN)`",
+          "`Boolean(\"false\")`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d8144756b0186a491902b3a4",
+        "question": "Which of the following is not a keyword in JavaScript?",
+        "answer": "`array`",
+        "explanation": "[Reference js reserved words](https://www.w3schools.com/js/js_reserved.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`array`"
+        ],
+        "options": [
+          "`this`",
+          "`catch`",
+          "`function`",
+          "`array`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c396bc26a7ed604e041526dc",
+        "question": "Which variable is an implicit parameter for every function in JavaScript?",
+        "answer": "Arguments",
+        "explanation": "[Reference implicit js parameters for functions](https://www.codeproject.com/Tips/1221966/JavaScript-Functions-Implicit-Parameters)",
+        "hint": null,
+        "correctAnswer": [
+          "Arguments"
+        ],
+        "options": [
+          "Arguments",
+          "args",
+          "argsArray",
+          "argumentsList"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1ec5d4e45e0b6f37da9d26dc",
+        "question": "For the following class, how do you get the value of 42 from an instance of X?\n```js\nclass X {\n  get Y() {\n    return 42;\n  }\n}\nvar x = new X();\n```",
+        "answer": "`x.Y`",
+        "explanation": "[Reference getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)",
+        "hint": null,
+        "correctAnswer": [
+          "`x.Y`"
+        ],
+        "options": [
+          "`x.get('Y')`",
+          "`x.Y`",
+          "`x.Y()`",
+          "`x.get().Y`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "47ff5b6033eed9b790c6377b",
+        "question": "What is the result of running this code?\n```js\nsum(10, 20);\ndiff(10, 20);\nfunction sum(x, y) {\n  return x + y;\n}\nlet diff = function (x, y) {\n  return x - y;\n};\n```",
+        "answer": "30, ReferenceError",
+        "explanation": "[Reference accessing before initialization](https://stackoverflow.com/questions/56318460/cannot-access-variable-name-before-initialization)",
+        "hint": null,
+        "correctAnswer": [
+          "30, ReferenceError"
+        ],
+        "options": [
+          "30, ReferenceError, 30, -10",
+          "30, ReferenceError",
+          "30, -10",
+          "ReferenceError, -10"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d11a402afb0aab43c6ba8c8b",
+        "question": "Why is it usually better to work with Objects instead of Arrays to store a collection of records?",
+        "answer": "Most operations involve looking up a record, and objects can do that better than arrays.",
+        "explanation": "[Reference efficiency of lookups](https://stackoverflow.com/questions/17295056/array-vs-object-efficiency-in-javascript)\n**Explanation:** Records in an object can be retrieved using their key which can be any given value (e.g. an employee ID, a city name, etc), whereas to retrieve a record from an array we need to know its index.",
+        "hint": null,
+        "correctAnswer": [
+          "Most operations involve looking up a record, and objects can do that better than arrays."
+        ],
+        "options": [
+          "Objects are more efficient in terms of storage.",
+          "Adding a record to an object is significantly faster than pushing a record into an array.",
+          "Most operations involve looking up a record, and objects can do that better than arrays.",
+          "Working with objects makes the code more readable."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d03b5b4faf5ee7e257670ef6",
+        "question": "Which statement is true about the \"async\" attribute for the HTML script tag?",
+        "answer": "It can be used only for external JavaScript code.",
+        "explanation": "[Reference async attribute for html](https://www.w3schools.com/tags/att_script_async.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "It can be used only for external JavaScript code."
+        ],
+        "options": [
+          "It can be used for both internal and external JavaScript code.",
+          "It can be used only for internal JavaScript code.",
+          "It can be used only for internal or external JavaScript code that exports a promise.",
+          "It can be used only for external JavaScript code."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1f8fc6b50abd953a7e5c3668",
+        "question": "How do you import the lodash library making it top-level Api available as the \"\\_\" variable?",
+        "answer": "`import _ from 'lodash';`",
+        "explanation": "[Reference how to import library in js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)",
+        "hint": null,
+        "correctAnswer": [
+          "`import _ from 'lodash';`"
+        ],
+        "options": [
+          "`import _ from 'lodash';`",
+          "`import 'lodash' as _;`",
+          "`import '_' from 'lodash;`",
+          "`import lodash as _ from 'lodash';`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c1e58f249783b1900cec8ce8",
+        "question": "What does the following expression evaluate to?\n```js\n[] == [];\n```",
+        "answer": "false",
+        "explanation": "[Reference arrays in js are objects](https://stackoverflow.com/questions/30820611/why-doesnt-equality-check-work-with-arrays)",
+        "hint": null,
+        "correctAnswer": [
+          "false"
+        ],
+        "options": [
+          "true",
+          "undefined",
+          "[]",
+          "false"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "cbadb32edd74d08b19a7bef9",
+        "question": "What type of function can have its execution suspended and then resumed at a later point?",
+        "answer": "Generator function",
+        "explanation": "[Reference what are generators in nodejs](https://www.guru99.com/node-js-generators-compare-callbacks.html#:~:text=Generators%20are%20function%20executions%20that,resumed%20at%20a%20later%20point.)",
+        "hint": null,
+        "correctAnswer": [
+          "Generator function"
+        ],
+        "options": [
+          "Generator function",
+          "Arrow function",
+          "Async/ Await function",
+          "Promise function"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a91293b7089defbcb0177044",
+        "question": "What will this code print?\n```js\nvar v = 1;\nvar f1 = function () {\n  console.log(v);\n};\nvar f2 = function () {\n  var v = 2;\n  f1();\n};\nf2();\n```",
+        "answer": "1",
+        "explanation": "[Reference closures in js \\/ nested functions](https://javascript.info/closure)",
+        "hint": null,
+        "correctAnswer": [
+          "1"
+        ],
+        "options": [
+          "2",
+          "1",
+          "Nothing - this code will throw an error.",
+          "undefined"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "74254125506354955494cfa8",
+        "question": "Which statement is true about Functional Programming?",
+        "answer": "Side effects are not allowed.",
+        "explanation": "[Reference functional programming](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)",
+        "hint": null,
+        "correctAnswer": [
+          "Side effects are not allowed."
+        ],
+        "options": [
+          "Every object in the program has to be a function.",
+          "Code is grouped with the state it modifies.",
+          "Date fields and methods are kept in units.",
+          "Side effects are not allowed."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6085e9872fe51168b17402e4",
+        "question": "Your code is producing the error: TypeError: Cannot read property 'reduce' of undefined. What does that mean?",
+        "answer": "You are calling a method named reduce on an object that's declared but has no value.",
+        "explanation": "**Explanation**: `You cannot invoke reduce on undefined object... It will throw (yourObject is not Defined...)`",
+        "hint": null,
+        "correctAnswer": [
+          "You are calling a method named reduce on an object that's declared but has no value."
+        ],
+        "options": [
+          "You are calling a method named reduce on an object that's declared but has no value.",
+          "You are calling a method named reduce on an object that does not exist.",
+          "You are calling a method named reduce on an empty array.",
+          "You are calling a method named reduce on an object that's has a null value."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "30d6bf62dfee47108e31b1ca",
+        "question": "How many prototype objects are in the chain for the following array?\n`let arr = [];`",
+        "answer": "2",
+        "explanation": "[Reference array prototype](https://www.w3schools.com/jsref/jsref_prototype_array.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "2"
+        ],
+        "options": [
+          "3",
+          "2",
+          "0",
+          "1"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5792b4b31bd0fa8e94a28a47",
+        "question": "Which choice is _not_ a unary operator?",
+        "answer": "`instanceof`",
+        "explanation": "[Reference js unary operators](https://www.digitalocean.com/community/tutorials/javascript-unary-operators-simple-and-useful#:~:text=A%20unary%20operation%20is%20an,therefore%20their%20functionality%20is%20guaranteed.)",
+        "hint": null,
+        "correctAnswer": [
+          "`instanceof`"
+        ],
+        "options": [
+          "`typeof`",
+          "`delete`",
+          "`instanceof`",
+          "`void`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ca36285ca7360888222bbf75",
+        "question": "What type of scope does the end variable have in the code shown?\n```js\nvar start = 1;\nif (start === 1) {\n  let end = 2;\n}\n```",
+        "answer": "block",
+        "explanation": "[Reference block vs function scope](https://josephcardillo.medium.com/the-difference-between-function-and-block-scope-in-javascript-4296b2322abe)",
+        "hint": null,
+        "correctAnswer": [
+          "block"
+        ],
+        "options": [
+          "conditional",
+          "block",
+          "global",
+          "function"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "19022336acec86bfee116b5c",
+        "question": "What will the value of y be in this code:\n```js\nconst x = 6 % 2;\nconst y = x ? 'One' : 'Two';\n```",
+        "answer": "Two",
+        "explanation": "[Reference ternary operator js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)",
+        "hint": null,
+        "correctAnswer": [
+          "Two"
+        ],
+        "options": [
+          "One",
+          "undefined",
+          "TRUE",
+          "Two"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "19eafba941869aec320686ef",
+        "question": "Which keyword is used to create an error?",
+        "answer": "`throw`",
+        "explanation": "[Reference throwing errors in js](<https://www.w3schools.com/jsref/jsref_throw.asp#:~:text=The%20throw%20statement%20throws%20(generates,to%20create%20a%20custom%20error.)>)",
+        "hint": null,
+        "correctAnswer": [
+          "`throw`"
+        ],
+        "options": [
+          "`throw`",
+          "`exception`",
+          "`catch`",
+          "`error`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2bd718572655bd5437b09aea",
+        "question": "What's one difference between the async and defer attributes of the HTML script tag?",
+        "answer": "The defer attribute will asynchronously load the scripts in order.",
+        "explanation": "[Reference async vs defer](https://www.digitalocean.com/community/tutorials/html-defer-async#:~:text=%3E-,Async%20vs%20Defer,order%20as%20they%20are%20called.)",
+        "hint": null,
+        "correctAnswer": [
+          "The defer attribute will asynchronously load the scripts in order."
+        ],
+        "options": [
+          "The defer attribute can work synchronously.",
+          "The defer attribute works only with generators.",
+          "The defer attribute works only with promises.",
+          "The defer attribute will asynchronously load the scripts in order."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4f6facd6e913736b54ec2bc9",
+        "question": "The following program has a problem. What is it?\n```js\nvar a;\nvar b = (a = 3) ? true : false;\n```",
+        "answer": "The condition in the ternary is using the assignment operator.",
+        "explanation": "[Reference ternary operator js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)",
+        "hint": null,
+        "correctAnswer": [
+          "The condition in the ternary is using the assignment operator."
+        ],
+        "options": [
+          "The condition in the ternary is using the assignment operator.",
+          "You can't define a variable without initializing it.",
+          "You can't use a ternary in the right-hand side of an assignment operator.",
+          "The code is using the deprecated var keyword."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a98b3e66f5d62e9c4b734da1",
+        "question": "Which statement references the DOM node created by the code shown?\n```html\n<p class=\"pull\">lorem ipsum</p>\n```",
+        "answer": "`document.querySelector('.pull');`",
+        "explanation": "[Reference query selector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)",
+        "hint": null,
+        "correctAnswer": [
+          "`document.querySelector('.pull');`"
+        ],
+        "options": [
+          "`Document.querySelector('class.pull')`",
+          "`document.querySelector('.pull');`",
+          "`Document.querySelector('pull')`",
+          "`Document.querySelector('#pull')`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "68925b15153bcf636adb15ae",
+        "question": "What value does this code return?\n```js\nlet answer = true;\nif (answer === false) {\n  return 0;\n} else {\n  return 10;\n}\n```",
+        "answer": "10",
+        "explanation": "[Reference javascript conditionals](https://www.javascript.com/learn/conditionals)",
+        "hint": null,
+        "correctAnswer": [
+          "10"
+        ],
+        "options": [
+          "10",
+          "true",
+          "false",
+          "0"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0227889861f20203c69fe9ad",
+        "question": "What is the result in the console of running the code shown?\n```js\nvar start = 1;\nfunction setEnd() {\n  var end = 10;\n}\nsetEnd();\nconsole.log(end);\n```",
+        "answer": "ReferenceError",
+        "explanation": "[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)",
+        "hint": null,
+        "correctAnswer": [
+          "ReferenceError"
+        ],
+        "options": [
+          "10",
+          "0",
+          "ReferenceError",
+          "undefined"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6451108bb2df0b0f5cb6af40",
+        "question": "What will this code log in the console?\n```js\nfunction sayHello() {\n  console.log('hello');\n}\nconsole.log(sayHello.prototype);\n```",
+        "answer": "an object with a constructor property",
+        "explanation": "[Reference prototypes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)",
+        "hint": null,
+        "correctAnswer": [
+          "an object with a constructor property"
+        ],
+        "options": [
+          "undefined",
+          "\"hello\"",
+          "an object with a constructor property",
+          "an error message"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3dc343b6874dee1319a60a5d",
+        "question": "Which collection object allows unique value to be inserted only once?",
+        "answer": "Set",
+        "explanation": "[Reference javascript sets](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set)",
+        "hint": null,
+        "correctAnswer": [
+          "Set"
+        ],
+        "options": [
+          "Object",
+          "Set",
+          "Array",
+          "Map"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "28e9557e876dd4a3591a17f2",
+        "question": "What two values will this code print?\n```js\nfunction printA() {\n  console.log(answer);\n  var answer = 1;\n}\nprintA();\nprintA();\n```",
+        "answer": "`undefined` then `undefined`",
+        "explanation": "[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)",
+        "hint": null,
+        "correctAnswer": [
+          "`undefined` then `undefined`"
+        ],
+        "options": [
+          "`1` then `1`",
+          "`1` then `undefined`",
+          "`undefined` then `undefined`",
+          "`undefined` then `1`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3ed8c8ad295ec3b5deb713cf",
+        "question": "How does the `forEach()` method differ from a `for` statement?",
+        "answer": "forEach can be used only with an array, whereas for can be used with additional data types.",
+        "explanation": "[Reference Differences between forEach and for loop](https://www.geeksforgeeks.org/difference-between-foreach-and-for-loop-in-javascript/)",
+        "hint": null,
+        "correctAnswer": [
+          "forEach can be used only with an array, whereas for can be used with additional data types."
+        ],
+        "options": [
+          "forEach allows you to specify your own iterator, whereas for does not.",
+          "forEach can be used only with strings, whereas for can be used with additional data types.",
+          "forEach can be used only with an array, whereas for can be used with additional data types.",
+          "for loops can be nested; whereas forEach loops cannot."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e4bbdd7539aea080494549e0",
+        "question": "Which choice is an incorrect way to define an arrow function that returns an empty object?",
+        "answer": "=> `{}`",
+        "explanation": "[Reference arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)",
+        "hint": null,
+        "correctAnswer": [
+          "=> `{}`"
+        ],
+        "options": [
+          "=> `({})`",
+          "=> `{}`",
+          "=> `{ return {};}`",
+          "=> `(({}))`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f17f80bdc5a323f6c47b26fe",
+        "question": "Why might you choose to make your code asynchronous?",
+        "answer": "to start tasks that might take some time without blocking subsequent tasks from executing immediately",
+        "explanation": "**EXPLANATION:** `\"to ensure that tasks further down in your code are not initiated until earlier tasks have completed\" you use the normal (synchronous) flow where each command is executed sequentially. Asynchronous code allows you to break this sequence: start a long running function (AJAX call to an external service) and continue running the rest of the code in parallel.`",
+        "hint": null,
+        "correctAnswer": [
+          "to start tasks that might take some time without blocking subsequent tasks from executing immediately"
+        ],
+        "options": [
+          "to start tasks that might take some time without blocking subsequent tasks from executing immediately",
+          "to ensure that tasks further down in your code are not initiated until earlier tasks have completed",
+          "to make your code faster",
+          "to ensure that the call stack maintains a LIFO (Last in, First Out) structure"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "081e27e6f7c6bbfc44ad84e2",
+        "question": "Which expression evaluates to true?",
+        "answer": "`3 == '3'`",
+        "explanation": "1. [Reference booleans](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)\n2. [Reference 2 - booleans](https://www.scaler.com/topics/boolean-in-javascript/)",
+        "hint": null,
+        "correctAnswer": [
+          "`3 == '3'`"
+        ],
+        "options": [
+          "`[3] == [3]`",
+          "`3 == '3'`",
+          "`3 != '3'`",
+          "`3 === '3'`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5ebfea9fa7680359419dd568",
+        "question": "Which of these is a valid variable name?",
+        "answer": "firstName",
+        "explanation": "[Reference coding conventions](https://www.w3schools.com/js/js_conventions.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "firstName"
+        ],
+        "options": [
+          "5thItem",
+          "firstName",
+          "grand total",
+          "function"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c272304756b05922896602ee",
+        "question": "Which method cancels event default behavior?",
+        "answer": "`preventDefault()`",
+        "explanation": "[Reference javascript events](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)",
+        "hint": null,
+        "correctAnswer": [
+          "`preventDefault()`"
+        ],
+        "options": [
+          "`cancel()`",
+          "`stop()`",
+          "`preventDefault()`",
+          "`prevent()`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a98caba5a4fccc7635addbcc",
+        "question": "Which method do you use to attach one DOM node to another?",
+        "answer": "`appendChild()`",
+        "explanation": "[Reference Node interface](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)",
+        "hint": null,
+        "correctAnswer": [
+          "`appendChild()`"
+        ],
+        "options": [
+          "`attachNode()`",
+          "`getNode()`",
+          "`querySelector()`",
+          "`appendChild()`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "71440ae428a646bf5dc2937a",
+        "question": "What statement can be used to skip an iteration in a loop?",
+        "answer": "`continue`",
+        "explanation": "[Reference break vs continue](https://www.w3schools.com/js/js_break.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`continue`"
+        ],
+        "options": [
+          "`break`",
+          "`pass`",
+          "`skip`",
+          "`continue`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "626f03c6e815f56e70ceb762",
+        "question": "Which choice is a valid example for an arrow function?",
+        "answer": "`(a,b) => c`",
+        "explanation": "[Reference arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)",
+        "hint": null,
+        "correctAnswer": [
+          "`(a,b) => c`"
+        ],
+        "options": [
+          "`(a,b) => c`",
+          "`a, b => {return c;}`",
+          "`a, b => c`",
+          "`{ a, b } => c`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5e158359e42f83d26cf2fc9a",
+        "question": "Which concept is defined as a template that can be used to generate different objects that share some shape and/or behavior?",
+        "answer": "class",
+        "explanation": "[Reference javascript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)",
+        "hint": null,
+        "correctAnswer": [
+          "class"
+        ],
+        "options": [
+          "class",
+          "generator function",
+          "map",
+          "proxy"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3383fb7ef307e9fd2b596b6a",
+        "question": "How do you add a comment to JavaScript code?",
+        "answer": "`// This is a comment`",
+        "explanation": "[Reference comments in javascript](https://www.w3schools.com/js/js_comments.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`// This is a comment`"
+        ],
+        "options": [
+          "`! This is a comment`",
+          "`# This is a comment`",
+          "`\\\\ This is a comment`",
+          "`// This is a comment`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "70fb2cf1e897cf36de87f135",
+        "question": "If you attempt to call a value as a function but the value is not a function, what kind of error would you get?",
+        "answer": "TypeError",
+        "explanation": "[Reference javascript errors](https://developer.mozilla.org/en-US/docs/web/javascript/reference/global_objects/error)",
+        "hint": null,
+        "correctAnswer": [
+          "TypeError"
+        ],
+        "options": [
+          "TypeError",
+          "SystemError",
+          "SyntaxError",
+          "LogicError"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e66f07c3147fe37e4880b172",
+        "question": "Which method is called automatically when an object is initialized?",
+        "answer": "constructor()",
+        "explanation": "[Reference javascript constructors](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)",
+        "hint": null,
+        "correctAnswer": [
+          "constructor()"
+        ],
+        "options": [
+          "create()",
+          "new()",
+          "constructor()",
+          "init()"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "59bdd82cc290dd9c3468a19a",
+        "question": "What is the result of running the statement shown?\n```js\nlet a = 5;\nconsole.log(++a);\n```",
+        "answer": "6",
+        "explanation": "[Reference ++x vs x++](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment)",
+        "hint": null,
+        "correctAnswer": [
+          "6"
+        ],
+        "options": [
+          "4",
+          "10",
+          "6",
+          "5"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7d822a96ebd767eef98a91ea",
+        "question": "You've written the event listener shown below for a form button, but each time you click the button, the page reloads. Which statement would stop this from happening?\n```js\nbutton.addEventListener(\n  'click',\n  function (e) {\n    button.className = 'clicked';\n  },\n  false,\n);\n```",
+        "answer": "`e.preventDefault();`",
+        "explanation": "[Reference events in javascript](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault)",
+        "hint": null,
+        "correctAnswer": [
+          "`e.preventDefault();`"
+        ],
+        "options": [
+          "`e.blockReload();`",
+          "`button.preventDefault();`",
+          "`button.blockReload();`",
+          "`e.preventDefault();`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e55bfdd4e9dffbcb03c7788f",
+        "question": "Which statement represents the starting code converted to an IIFE?",
+        "answer": "`(function() { console.log('lorem ipsum'); })();`",
+        "explanation": "[Reference what is an Immediately Invoked Function Expression](https://javascript.plainenglish.io/https-medium-com-javascript-in-plain-english-stop-feeling-iffy-about-using-an-iife-7b0292aba174)",
+        "hint": null,
+        "correctAnswer": [
+          "`(function() { console.log('lorem ipsum'); })();`"
+        ],
+        "options": [
+          "`function() { console.log('lorem ipsum'); }()();`",
+          "`function() { console.log('lorem ipsum'); }();`",
+          "`(function() { console.log('lorem ipsum'); })();`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e397edab85c310e90ffa7b20",
+        "question": "Which statement selects all img elements in the DOM tree?",
+        "answer": "`Document.querySelectorAll('img')`",
+        "explanation": "[Reference query selector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)",
+        "hint": null,
+        "correctAnswer": [
+          "`Document.querySelectorAll('img')`"
+        ],
+        "options": [
+          "`Document.querySelector('img')`",
+          "`Document.querySelectorAll('<img>')`",
+          "`Document.querySelectorAll('img')`",
+          "`Document.querySelector('<img>')`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fd4de5d2cc968b301628593b",
+        "question": "Why would you choose an asynchronous structure for your code?",
+        "answer": "To start tasks that might take some time without blocking subsequent tasks from executing immediately",
+        "explanation": "[Reference async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)",
+        "hint": null,
+        "correctAnswer": [
+          "To start tasks that might take some time without blocking subsequent tasks from executing immediately"
+        ],
+        "options": [
+          "To use ES6 syntax",
+          "To start tasks that might take some time without blocking subsequent tasks from executing immediately",
+          "To ensure that parsers enforce all JavaScript syntax rules when processing your code",
+          "To ensure that tasks further down in your code aren't initiated until earlier tasks have completed"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2db2af4edc1838fd8418505c",
+        "question": "What is the HTTP verb to request the contents of an existing resource?",
+        "answer": "GET",
+        "explanation": "[Reference http methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)",
+        "hint": null,
+        "correctAnswer": [
+          "GET"
+        ],
+        "options": [
+          "DELETE",
+          "GET",
+          "PATCH",
+          "POST"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "1b7ad4150d8c0c7dc535149f",
+        "question": "Which event is fired on a text field within a form when a user tabs to it, or clicks or touches it?",
+        "answer": "focus",
+        "explanation": "[Reference javascript events](https://developer.mozilla.org/en-US/docs/Web/Events)",
+        "hint": null,
+        "correctAnswer": [
+          "focus"
+        ],
+        "options": [
+          "focus",
+          "blur",
+          "hover",
+          "enter"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5c3ee41c7a3a7a5a8f392ca4",
+        "question": "What is the result in the console of running this code?\n```js\nfunction logThis() {\n  console.log(this);\n}\nlogThis();\n```",
+        "answer": "window",
+        "explanation": "[Reference what is the javascript window](https://www.w3schools.com/js/js_window.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "window"
+        ],
+        "options": [
+          "function",
+          "undefined",
+          "Function.prototype",
+          "window"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b619f97ae2db9581a4e7a7f5",
+        "question": "Which class-based component is equivalent to this function component?\n```js\nconst Greeting = ({ name }) => <h1>Hello {name}!</h1>;\n```",
+        "answer": "`class Greeting extends React.Component { render() { return <h1>Hello {this.props.name}!</h1>; } }`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`class Greeting extends React.Component { render() { return <h1>Hello {this.props.name}!</h1>; } }`"
+        ],
+        "options": [
+          "`class Greeting extends React.Component { render() { return <h1>Hello {this.props.name}!</h1>; } }`",
+          "`class Greeting extends React.Component { constructor() { return <h1>Hello {this.props.name}!</h1>; } }`",
+          "`class Greeting extends React.Component { <h>Hello {this.props.name}!</h>; } }`",
+          "`class Greeting extends React.Component { render({ name }) { return <h1>Hello {name}!</h1>; } }`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4cd07d739e4eb31ae49c8c78",
+        "question": "Which class-based lifecycle method would be called at the same time as this effect Hook?\n```js\nuseEffect(() => {\n  // do things\n}, []);\n```",
+        "answer": "componentDidMount",
+        "explanation": "[Reference](https://reactjs.org/docs/react-component.html)",
+        "hint": null,
+        "correctAnswer": [
+          "componentDidMount"
+        ],
+        "options": [
+          "componentWillUnmount",
+          "componentDidUpdate",
+          "render",
+          "componentDidMount"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9e4894c6025cabed401e6bfc",
+        "question": "What is the output of this code?\n```js\nvar obj;\nconsole.log(obj);\n```",
+        "answer": "`undefined`",
+        "explanation": "[Reference working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)",
+        "hint": null,
+        "correctAnswer": [
+          "`undefined`"
+        ],
+        "options": [
+          "`ReferenceError: obj is not defined`",
+          "`{}`",
+          "`undefined`",
+          "`null`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8e2a3072752de32f9558fcc6",
+        "question": "How would you use the TaxCalculator to determine the amount of tax on \\$50?\n```js\nclass TaxCalculator {\n  static calculate(total) {\n    return total * 0.05;\n  }\n}\n```",
+        "answer": "TaxCalculator.calculate(50);",
+        "explanation": "[Reference functions in javascript](https://www.w3schools.com/js/js_functions.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "TaxCalculator.calculate(50);"
+        ],
+        "options": [
+          "calculate(50);",
+          "new TaxCalculator().calculate(\\$50);",
+          "TaxCalculator.calculate(50);",
+          "new TaxCalculator().calculate(50);"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "953d5f8d75991733e74359d6",
+        "question": "What is wrong with this code?\n```js\nconst foo = {\n  bar() {\n    console.log('Hello, world!');\n  },\n  name: 'Albert',\n  age: 26,\n};\n```",
+        "answer": "Nothing, there are no errors.",
+        "explanation": "1. [Reference functions in javascript](https://www.w3schools.com/js/js_functions.asp)\n2. [Reference working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)",
+        "hint": null,
+        "correctAnswer": [
+          "Nothing, there are no errors."
+        ],
+        "options": [
+          "The function bar needs to be defined as a key/value pair.",
+          "Trailing commas are not allowed in JavaScript.",
+          "Functions cannot be declared as properties of objects.",
+          "Nothing, there are no errors."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d47dc8928b0b55cd17e6d769",
+        "question": "What will be logged to the console?\n```js\nconsole.log('I');\nsetTimeout(() => {\n  console.log('love');\n}, 0);\nconsole.log('Javascript!');\n```",
+        "answer": ".",
+        "explanation": "```plaintext\nI\nJavascript!\nlove\n```\n```plaintext\nlove\nI\nJavascript!\n```\n```plaintext\nI\nlove\nJavascript!\n```\n**Reference**\nhttps://developer.mozilla.org/en-US/docs/Web/API/setTimeout#reasons_for_delays_longer_than_specified especially see the 'late timeouts' section.",
+        "hint": null,
+        "correctAnswer": [
+          "."
+        ],
+        "options": [
+          ".",
+          ".",
+          "The output may change with each execution of code and cannot be determined.",
+          "."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9c378fc18d77933547343cba",
+        "question": "What will this code log to the console?\n```js\nconst foo = [1, 2, 3];\nconst [n] = foo;\nconsole.log(n);\n```",
+        "answer": "1",
+        "explanation": "[Reference array deconstruction](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)",
+        "hint": null,
+        "correctAnswer": [
+          "1"
+        ],
+        "options": [
+          "1",
+          "undefined",
+          "NaN",
+          "Nothing--this is not proper JavaScript syntax and will throw an error."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a91c2aa1b6439c346fbf05fe",
+        "question": "How do you remove the property name from this object?\n```js\nconst foo = {\n  name: 'Albert',\n};\n```",
+        "answer": "delete foo.name;",
+        "explanation": "[Reference working with objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)",
+        "hint": null,
+        "correctAnswer": [
+          "delete foo.name;"
+        ],
+        "options": [
+          "delete name from foo;",
+          "delete foo.name;",
+          "del foo.name;",
+          "remove foo.name;"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "12ac39391d2b25196df05e69",
+        "question": "What is the difference between the `map()` and the `forEach()` methods on the Array prototype?",
+        "answer": "The map() methods returns a new array with a transformation applied on each item in the original array, whereas the `forEach()` method iterates through an array with no return value.",
+        "explanation": "1. [Reference map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)\n2. [Reference Differences between forEach and for loop](https://www.geeksforgeeks.org/difference-between-foreach-and-for-loop-in-javascript/)",
+        "hint": null,
+        "correctAnswer": [
+          "The map() methods returns a new array with a transformation applied on each item in the original array, whereas the `forEach()` method iterates through an array with no return value."
+        ],
+        "options": [
+          "There is no difference.",
+          "The `forEach()` method returns a single output value, whereas the `map()` method performs operation on each value in the array.",
+          "The map() methods returns a new array with a transformation applied on each item in the original array, whereas the `forEach()` method iterates through an array with no return value.",
+          "The `forEach()` methods returns a new array with a transformation applied on each item in the original array, whereas the `map()` method iterates through an array with no return value."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e4b73a59588ee0b881179a4c",
+        "question": "Which concept does this code illustrate?\n```js\nfunction makeAdder(x) {\n  return function (y) {\n    return x + y;\n  };\n}\nvar addFive = makeAdder(5);\nconsole.log(addFive(3));\n```",
+        "answer": "currying",
+        "explanation": "[Reference currying](https://javascript.info/currying-partials)",
+        "hint": null,
+        "correctAnswer": [
+          "currying"
+        ],
+        "options": [
+          "overloading",
+          "closure",
+          "currying",
+          "overriding"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0366f41dcf82f9f5fcb553c9",
+        "question": "Which tag pair is used in HTML to embed JavaScript?",
+        "answer": "`<script></script>`",
+        "explanation": "[Reference add js to html file](https://www.w3schools.com/tags/tag_script.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`<script></script>`"
+        ],
+        "options": [
+          "`<script></script>`",
+          "`<js></js>`",
+          "`<javascript></javascript>`",
+          "`<code></code>`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a7e837975d35b955f6b8bd69",
+        "question": "If your app receives data from a third-party API, which HTTP response header must the server specify to allow exceptions to the same-origin policy?",
+        "answer": "Access-Control-Allow-Origin",
+        "explanation": "[Reference Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)",
+        "hint": null,
+        "correctAnswer": [
+          "Access-Control-Allow-Origin"
+        ],
+        "options": [
+          "Security-Mode",
+          "Access-Control-Allow-Origin",
+          "Different-Origin",
+          "Same-Origin"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fcde4c7251198de28c6c1024",
+        "question": "What is the output of this code?\n```js\nlet rainForests = ['Amazon', 'Borneo', 'Cerrado', 'Congo'];\nrainForests.splice(0, 2);\nconsole.log(rainForests);\n```",
+        "answer": "`[\"Cerrado\", \"Congo\"]`",
+        "explanation": "[Reference array methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)",
+        "hint": null,
+        "correctAnswer": [
+          "`[\"Cerrado\", \"Congo\"]`"
+        ],
+        "options": [
+          "`[\"Amazon\",\"Borneo\",\"Cerrado\",\"Congo\"]`",
+          "`[\"Cerrado\", \"Congo\"]`",
+          "`[\"Congo\"]`",
+          "`[\"Amazon\",\"Borneo\"]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d65e599add85ea3cbdae35d4",
+        "question": "Which missing line would allow you to create five variables(one,two,three,four,five) that correspond to their numerical values (1,2,3,4,5)?\n```js\nconst numbers = [1, 2, 3, 4, 5];\n//MISSING LINE\n```",
+        "answer": "`const [one,two,three,four,five]=numbers`",
+        "explanation": "[Reference array destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)",
+        "hint": null,
+        "correctAnswer": [
+          "`const [one,two,three,four,five]=numbers`"
+        ],
+        "options": [
+          "`const [one,two,three,four,five]=numbers`",
+          "`const {one,two,three,four,five}=numbers`",
+          "`const [one,two,three,four,five]=[numbers]`",
+          "`const {one,two,three,four,five}={numbers}`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e6fdb7967bd5765c0d67726c",
+        "question": "What will this code print?\n```js\nconst obj = {\n  a: 1,\n  b: 2,\n  c: 3,\n};\nconst obj2 = {\n  ...obj,\n  a: 0,\n};\nconsole.log(obj2.a, obj2.b);\n```",
+        "answer": "0 2",
+        "explanation": "[Reference spread syntax es6](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)",
+        "hint": null,
+        "correctAnswer": [
+          "0 2"
+        ],
+        "options": [
+          "Nothing, it will throw an error",
+          "0 2",
+          "undefined 2",
+          "undefined 2"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9c2897bcd7cced87dc7b949d",
+        "question": "Which line could you add to this code to print \"jaguar\" to the console?\n```js\nlet animals = ['jaguar', 'eagle'];\n//Missing Line\nconsole.log(animals.pop()); //Prints jaguar\n```",
+        "answer": "`animals.reverse();`; `animals.pop();`",
+        "explanation": "**Note:** `this question has two correct answers.`\n[Reference Javascript Array Reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)",
+        "hint": null,
+        "correctAnswer": [
+          "`animals.reverse();`",
+          "`animals.pop();`"
+        ],
+        "options": [
+          "`animals.filter(e => e === \"jaguar\");`",
+          "`animals.reverse();`",
+          "`animals.shift();`",
+          "`animals.pop();`"
+        ],
+        "nature": "ChooseMany",
+        "attachments": []
+      },
+      {
+        "id": "e6ffb006e1daae715c9de7c5",
+        "question": "What line is missing from this code?\n```js\n//Missing Line\nfor (var i = 0; i < vowels.length; i++) {\n  console.log(vowels[i]);\n  //Each letter printed on a separate line as follows;\n  //a\n  //e\n  //i\n  //o\n  //u\n}\n```",
+        "answer": "`let vowels = \"aeiou\";`",
+        "explanation": "[Reference working with arrays](https://www.w3schools.com/js/js_arrays.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`let vowels = \"aeiou\";`"
+        ],
+        "options": [
+          "`let vowels = \"aeiou\".toArray();`",
+          "`let vowels = Array.of(\"aeiou\");`",
+          "`let vowels = {\"a\", \"e\", \"i\", \"o\", \"u\"};`",
+          "`let vowels = \"aeiou\";`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "be2b0b04180e9fe7f1da1b56",
+        "question": "What will be logged to the console?\n```js\nconst x = 6 % 2;\nconst y = x ? 'One' : 'Two';\nconsole.log(y);\n```",
+        "answer": "Two",
+        "explanation": "**Note:** `this question is same with Q46.`\n[Reference ternary operator js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)",
+        "hint": null,
+        "correctAnswer": [
+          "Two"
+        ],
+        "options": [
+          "undefined",
+          "One",
+          "true",
+          "Two"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "78f3403818327028b51f591f",
+        "question": "How would you access the word It from this multidimensional array?\n`let matrix = [[\"You\",\"Can\"],[\"Do\",\"It\"],[\"!\",\"!\",\"!\"]];`",
+        "answer": "`matrix[1][1]`",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "`matrix[1][1]`"
+        ],
+        "options": [
+          "`matrix[1[2]]`",
+          "`matrix[1][1]`",
+          "`matrix[1,2]`",
+          "`matrix[1][2]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6174b5d19be0b21f68c9ad4a",
+        "question": "What does this code do?\n```js\nconst animals = ['Rabbit', 'Dog', 'Cat'];\nanimals.unshift('Lizard');\n```",
+        "answer": "It adds \"Lizard\" to the start of the animals array.",
+        "explanation": "[Reference working with arrays](https://www.w3schools.com/js/js_arrays.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "It adds \"Lizard\" to the start of the animals array."
+        ],
+        "options": [
+          "It adds \"Lizard\" to the start of the animals array.",
+          "It adds \"Lizard\" to the end of the animals array.",
+          "It replaces \"Rabbit\" with \"Lizard\" in the animals array.",
+          "It replaces \"Cat\" with \"Lizard\" in the animals array."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "407d8288d9f1f519b0b6d8bf",
+        "question": "What is the output of this code?\n```js\nlet x = 6 + 3 + '3';\nconsole.log(x);\n```",
+        "answer": "93",
+        "explanation": "[Reference type coercion](https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/)",
+        "hint": null,
+        "correctAnswer": [
+          "93"
+        ],
+        "options": [
+          "93",
+          "12",
+          "66",
+          "633"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ed96001311bdc4b8f3f74ddc",
+        "question": "Which statement can take a single expression as input and then look through a number of choices until one that matches that value is found?",
+        "answer": "switch",
+        "explanation": "[Reference switch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)",
+        "hint": null,
+        "correctAnswer": [
+          "switch"
+        ],
+        "options": [
+          "else",
+          "when",
+          "if",
+          "switch"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2056879d7ae07b4685007994",
+        "question": "Which statement prints \"roar\" to the console?\n```js\nvar sound = 'grunt';\nvar bear = { sound: 'roar' };\nfunction roar() {\n  console.log(this.sound);\n}\n```",
+        "answer": "`roar.apply(bear);`",
+        "explanation": "1. [Reference Apply](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)\n2. [Reference this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)\n3. [Reference bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind)",
+        "hint": null,
+        "correctAnswer": [
+          "`roar.apply(bear);`"
+        ],
+        "options": [
+          "`bear.bind(roar);`",
+          "`roar.bind(bear);`",
+          "`roar.apply(bear);`",
+          "`bear[roar]();`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0477277cffeebdad9ad07153",
+        "question": "Which choice is a valid example of an arrow function, assuming c is defined in the outer scope?",
+        "answer": "`(a,b) => c`",
+        "explanation": "[Reference arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)",
+        "hint": null,
+        "correctAnswer": [
+          "`(a,b) => c`"
+        ],
+        "options": [
+          "`a, b => { return c; }`",
+          "`a, b => c`",
+          "`{ a, b } => c`",
+          "`(a,b) => c`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e7886542c11142c20736fd22",
+        "question": "Which statement correctly imports this code from some-file.js?\n```js\n//some-file.js\nexport const printMe = (str) => console.log(str);\n```",
+        "answer": "`import { printMe } from './some-file';`",
+        "explanation": "[Reference importing libraries in javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)",
+        "hint": null,
+        "correctAnswer": [
+          "`import { printMe } from './some-file';`"
+        ],
+        "options": [
+          "`import printMe from './some-file';`",
+          "`import { printMe } from './some-file';`",
+          "`import default as printMe from './some-file';`",
+          "`const printMe = import './some-file';`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b9b9c6c3957b2ec608e78f7b",
+        "question": "What will be the output of this code?\n```js\nconst arr1 = [2, 4, 6];\nconst arr2 = [3, 5, 7];\nconsole.log([...arr1, ...arr2]);\n```",
+        "answer": "`[2, 4, 6, 3, 5, 7]`",
+        "explanation": "[Reference spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)",
+        "hint": null,
+        "correctAnswer": [
+          "`[2, 4, 6, 3, 5, 7]`"
+        ],
+        "options": [
+          "`[2, 3, 4, 5, 6, 7]`",
+          "`[3,5,7,2,4,6]`",
+          "`[3, 5, 7, 2, 4, 6]`",
+          "`[[2, 4, 6], [3, 5, 7]]`",
+          "`[2, 4, 6, 3, 5, 7]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6164b9c20f45614c8120ff99",
+        "question": "Which method call is chained to handle a successful response returned by `fetch()`?",
+        "answer": "`then()`",
+        "explanation": "[Reference fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)",
+        "hint": null,
+        "correctAnswer": [
+          "`then()`"
+        ],
+        "options": [
+          "`done()`",
+          "`then()`",
+          "`finally()`",
+          "`catch()`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8c910f7446e8f59d6623b868",
+        "question": "Which choice is not an array method?",
+        "answer": "`array.replace()`",
+        "explanation": "[Reference working with arrays](https://www.w3schools.com/js/js_arrays.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`array.replace()`"
+        ],
+        "options": [
+          "`array.slice()`",
+          "`array.shift()`",
+          "`array.push()`",
+          "`array.replace()`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3eb1b73c0f4c922acaae3e64",
+        "question": "Which JavaScript loop ensures that at least a singular iteration will happen?",
+        "answer": "do\u2026while",
+        "explanation": "[Reference loops in js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)",
+        "hint": null,
+        "correctAnswer": [
+          "do\u2026while"
+        ],
+        "options": [
+          "do\u2026while",
+          "forEach",
+          "while",
+          "for"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "fa7c29cbac99bbd11e4ea091",
+        "question": "What will be logged to the console?\n```js\nconsole.log(typeof 'blueberry');\n```",
+        "answer": "`string`",
+        "explanation": "[Reference what is typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)",
+        "hint": null,
+        "correctAnswer": [
+          "`string`"
+        ],
+        "options": [
+          "`string`",
+          "`array`",
+          "`Boolean`",
+          "`object`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "537d820db1a06eb97b128835",
+        "question": "What is the output that is printed when the div containing the text \"Click Here\" is clicked?\n```html\n//HTML Markup\n<div id=\"A\">\n  <div id=\"B\">\n    <div id=\"C\">Click Here</div>\n  </div>\n</div>\n```\n```js\n//JavaScript\ndocument.querySelectorAll('div').forEach((e) => {\n  e.onclick = (e) => console.log(e.currentTarget.id);\n});\n```",
+        "answer": "C B A",
+        "explanation": "1. [Reference query selector](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)\n2. [Reference events](https://developer.mozilla.org/en-US/docs/Web/Events)",
+        "hint": null,
+        "correctAnswer": [
+          "C B A"
+        ],
+        "options": [
+          "C B A",
+          "A",
+          "C",
+          "A B C"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2e2377e30f396dfc9ecbf56b",
+        "question": "What will this code log to the console?\n```js\nconst myNumbers = [1, 2, 3, 4, 5, 6, 7];\nconst myFunction = (arr) => {\n  return arr.map((x) => x + 3).filter((x) => x < 7);\n};\nconsole.log(myFunction(myNumbers));\n```",
+        "answer": "`[4,5,6]`",
+        "explanation": "[Reference functions in javascript](https://www.w3schools.com/js/js_functions.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`[4,5,6]`"
+        ],
+        "options": [
+          "`[4,5,6,7,8,9,10]`",
+          "`[4,5,6,7]`",
+          "`[1,2,3,4,5,6]`",
+          "`[4,5,6]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c57e9466a38aabb7ff0755a1",
+        "question": "What does this code print to the console?\n```js\nlet rainForestAcres = 10;\nlet animals = 0;\nwhile (rainForestAcres < 13 || animals <= 2) {\n  rainForestAcres++;\n  animals += 2;\n}\nconsole.log(animals);\n```",
+        "answer": "6",
+        "explanation": "[Reference MDN JavaScript Looping code](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code)",
+        "hint": null,
+        "correctAnswer": [
+          "6"
+        ],
+        "options": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "edc3cebc144fc118e616f82c",
+        "question": "Which snippet could you add to this code to print \"YOU GOT THIS\" to the console?\n```js\nlet cipherText = [...'YZOGUT QGMORTZ MTRHTILS'];\nlet plainText = '';\n/* Missing Snippet */\nconsole.log(plainText); //Prints YOU GOT THIS\n```",
+        "answer": "C",
+        "explanation": "```js\nfor (let key of cipherText.keys()) {\nplainText += key % 2 === 0 ? key : ' ';\n}\n```\n```js\nfor (let [index, value] of cipherText.entries()) {\nplainText += index % 2 !== 0 ? value : '';\n}\n```\n```js\nfor (let [index, value] of cipherText.entries()) {\nplainText += index % 2 === 0 ? value : '';\n}\n```\n```js\nfor (let value of cipherText) {\nplainText += value;\n}\n```\n1. [Reference MDN JavaScript Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)\n2. [Reference MDN JavaScript Array entries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries)\n3. [Reference MDN JavaScript Remainder/Modulo](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)",
+        "hint": null,
+        "correctAnswer": [
+          "C"
+        ],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8ea4ce8ca237335e52559f22",
+        "question": "Which Pokemon will be logged to the console?\n```js\nvar pokedex = ['Snorlax', 'Jigglypuff', 'Charmander', 'Squirtle'];\npokedex.pop();\nconsole.log(pokedex.pop());\n```",
+        "answer": "Charmander",
+        "explanation": "**Explanation**: `The pop() method removes the last element from an array and returns that element. This method changes the length of the array.`\n[Reference Array.pop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)",
+        "hint": null,
+        "correctAnswer": [
+          "Charmander"
+        ],
+        "options": [
+          "Charmander",
+          "Jigglypuff",
+          "Snorlax",
+          "Squirtle"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2acc61a57ee18a77394d616a",
+        "question": "Which statement can be used to select the element from the DOM containing the text \"The LinkedIn Learning library has great JavaScript courses\" from this markup?\n```html\n<h1 class=\"content\">LinkedIn Learning</h1>\n<div class=\"content\">\n  <span class=\"content\">The LinkedIn Learning library has great JavaScript courses!</span>\n</div>\n```",
+        "answer": "document.querySelector(\"span.content\")",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "document.querySelector(\"span.content\")"
+        ],
+        "options": [
+          "document.querySelector(\"div.content\")",
+          "document.querySelector(\"span.content\")",
+          "document.querySelector(\".content\")",
+          "document.querySelector(\"div.span\")"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c49b622cd9c6cd2ec6069e6a",
+        "question": "Which value is not falsey?",
+        "answer": "`[]`",
+        "explanation": "[Reference Falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)",
+        "hint": null,
+        "correctAnswer": [
+          "`[]`"
+        ],
+        "options": [
+          "`[]`",
+          "`undefined`",
+          "`0`",
+          "`null`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "327ebc7045e432b6322c96e8",
+        "question": "What line of code causes this code segment to throw an error?\n```js\nconst lion = 1;\nlet tiger = 2;\nvar bear;\n++lion;\nbear += lion + tiger;\ntiger++;\n```",
+        "answer": "`line 5, because lion cannot be reassigned a value`",
+        "explanation": "1. [Reference const in js](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)\n2. [Reference TypeError: invalid assignment to const \"x\"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_const_assignment)",
+        "hint": null,
+        "correctAnswer": [
+          "`line 5, because lion cannot be reassigned a value`"
+        ],
+        "options": [
+          "`line 5, because lion cannot be reassigned a value`",
+          "`line 6, because the += operator cannot be used with the undefined variable bear`",
+          "`line 5, because the prefix (++) operator does not exist in JavaScript`",
+          "`line 3, because the variable bear is left undefined`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c26c0229e6965a1642e61063",
+        "question": "What will be the value of `result` after running this code?\n```js\nconst person = { name: 'Dave', age: 40, hairColor: 'blue' };\nconst result = Object.keys(person).map((x) => x.toUpperCase());\n```",
+        "answer": "`[\"NAME\", \"AGE\", \"HAIRCOLOR\"]`",
+        "explanation": "1. [Reference Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)\n2. [Reference Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)\n3. [Reference String.prototype.toUpperCase()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase)",
+        "hint": null,
+        "correctAnswer": [
+          "`[\"NAME\", \"AGE\", \"HAIRCOLOR\"]`"
+        ],
+        "options": [
+          "It will throw a TypeError.",
+          "`[\"Name\", \"Age\", \"HairColor\"]`",
+          "`[\"DAVE\", 40, \"BLUE\"]`",
+          "`[\"NAME\", \"AGE\", \"HAIRCOLOR\"]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8aa5fe96c6d4129febbde30e",
+        "question": "Which snippet could you insert to this code to print \"swim\" to the console?\n```js\nlet animals = [\"eagle\", \"osprey\", \"salmon\"];\nlet key = animal => animal === \"salmon\";\nif(/* Insert Snippet Here */){\n  console.log(\"swim\");\n}\n```",
+        "answer": "`animals.some(key)`",
+        "explanation": "[Reference Array.prototype.some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)",
+        "hint": null,
+        "correctAnswer": [
+          "`animals.some(key)`"
+        ],
+        "options": [
+          "`animals.every(key)`",
+          "`animals.some(key).length === 1`",
+          "`animals.filter(key) === true`",
+          "`animals.some(key)`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "aba94e84fd769260f39ad434",
+        "question": "What is the output of this code?\n```js\nclass RainForest {\n  static minimumRainFall = 60;\n}\nlet congo = new RainForest();\nRainForest.minimumRainFall = 80;\nconsole.log(congo.minimumRainFall);\n```",
+        "answer": "`undefined`",
+        "explanation": "[Reference Classes static](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static)",
+        "hint": null,
+        "correctAnswer": [
+          "`undefined`"
+        ],
+        "options": [
+          "`undefined`",
+          "`None of these answers, as static is not a feature in Javascript.`",
+          "`60`",
+          "`80`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b2d570f30a03adfce2046c92",
+        "question": "How can you attempt to access the property `a.b` on `obj` without throwing an error if a is undefined?\n```js\nlet obj = {};\n```",
+        "answer": "`obj.a?.b`",
+        "explanation": "[Reference Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)",
+        "hint": null,
+        "correctAnswer": [
+          "`obj.a?.b`"
+        ],
+        "options": [
+          "`obj?.a.b`",
+          "`obj.a?.b`",
+          "`obj[a][b]`",
+          "`obj.?a.?b`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "887dbe09458b345e4bf78b8c",
+        "question": "What happens when you run this code?\n```js\nif (true) {\n  var x = 5;\n  const y = 6;\n  let z = 7;\n}\nconsole.log(x + y + z);\n```",
+        "answer": "It will throw a `ReferenceError` about `y`.",
+        "explanation": "[Reference let statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let)",
+        "hint": null,
+        "correctAnswer": [
+          "It will throw a `ReferenceError` about `y`."
+        ],
+        "options": [
+          "It will throw a `ReferenceError` about `x`.",
+          "It will print `18`.",
+          "It will print `undefined`.",
+          "It will throw a `ReferenceError` about `y`."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "dd7b3a578815488ca8b22cac",
+        "question": "What does this code print to the console?\n```js\nconst x = [1, 2];\nconst y = [5, 7];\nconst z = [...x, ...y];\nconsole.log(z);\n```",
+        "answer": "`[1,2,5,7]`",
+        "explanation": "[Reference spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)",
+        "hint": null,
+        "correctAnswer": [
+          "`[1,2,5,7]`"
+        ],
+        "options": [
+          "`[1,2,5,7]`",
+          "`[[1, 2], [5, 7]]`",
+          "`[2,7]`",
+          "`[2,1,7,5]`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "573433a8ee25cdb9cb45e3e3",
+        "question": "Given this code, which statement will evaluate to false?\n```js\nconst a = { x: 1 };\nconst b = { x: 1 };\n```",
+        "answer": "`a === b`",
+        "explanation": "[Reference](http://adripofjavascript.com/blog/drips/object-equality-in-javascript.html)",
+        "hint": null,
+        "correctAnswer": [
+          "`a === b`"
+        ],
+        "options": [
+          "`a['x'] === b['x']`",
+          "`a != b`",
+          "`a === b`",
+          "`a.x === b.x`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7a1567625322f39736bab7f3",
+        "question": "What will this code log to the console?\n```js\nconsole.log(typeof 41.1);\n```",
+        "answer": "`number`",
+        "explanation": "[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#basic_usage)",
+        "hint": null,
+        "correctAnswer": [
+          "`number`"
+        ],
+        "options": [
+          "`Nothing. It resuults in a ReferenceError.`",
+          "`decimal`",
+          "`float`",
+          "`number`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8b7580f60b830c134be5a102",
+        "question": "What is the output of this code?\n```js\nlet scores = [];\nscores.push(1, 2);\nscores.pop();\nscores.push(3, 4);\nscores.pop();\nscore = scores.reduce((a, b) => a + b);\nconsole.log(score);\n```",
+        "answer": "`4`",
+        "explanation": "1. [Reference Array.prototype.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)\n2. [Reference Array.prototype.pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)\n3. [Reference Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)",
+        "hint": null,
+        "correctAnswer": [
+          "`4`"
+        ],
+        "options": [
+          "`3`",
+          "`4`",
+          "`6`",
+          "`7`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c31d462ce49e55e17b0cc2ce",
+        "question": "What does this code print to the console?\n```js\nlet bear = {\n  sound: 'roar',\n  roar() {\n    console.log(this.sound);\n  },\n};\nbear.sound = 'grunt';\nlet bearSound = bear.roar;\nbearSound();\n```",
+        "answer": "`undefined`",
+        "explanation": "[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)",
+        "hint": null,
+        "correctAnswer": [
+          "`undefined`"
+        ],
+        "options": [
+          "`Nothing is printed to the console.`",
+          "`grunt`",
+          "`undefined`",
+          "`roar`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "976d7a0c2b47b6c136a616d4",
+        "question": "What is the output of this code?\n```js\nvar cat = { name: 'Athena' };\nfunction swap(feline) {\n  feline.name = 'Wild';\n  feline = { name: 'Tabby' };\n}\nswap(cat);\nconsole.log(cat.name);\n```",
+        "answer": "Wild",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Wild"
+        ],
+        "options": [
+          "undefined",
+          "Wild",
+          "Tabby",
+          "Athena"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a46109a7bc267765f1c646ba",
+        "question": "What will this code output to the log?\n```js\nvar thing;\nlet func = (str = 'no arg') => {\n  console.log(str);\n};\nfunc(thing);\nfunc(null);\n```",
+        "answer": "no arg null",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "no arg null"
+        ],
+        "options": [
+          "null no arg",
+          "no arg no arg",
+          "null null",
+          "no arg null"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "00b19f27b97cee6eb7870981",
+        "question": "What will this code print to the console?\n```js\nconst myFunc = () => {\n  const a = 2;\n  return () => console.log('a is ' + a);\n};\nconst a = 1;\nconst test = myFunc();\ntest();\n```",
+        "answer": "a is 2",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "a is 2"
+        ],
+        "options": [
+          "a is 1",
+          "a is undefined",
+          "It won't print anything.",
+          "a is 2"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b5cad104ee956e4538ac053e",
+        "question": "What will this code print to the console?\n```js\nconst myFunc = (num1, num2 = 2, num3 = 2) => {\n  return num1 + num2 + num3;\n};\nlet values = [1, 5];\nconst test = myFunc(2, ...values);\nconsole.log(test);\n```",
+        "answer": "8",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "8"
+        ],
+        "options": [
+          "8",
+          "6",
+          "2",
+          "12"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0723902d4e9fb65eaf1216f0",
+        "question": "Which code would you use to access the Irish flag?\n```js\nvar flagsJSON =\n  '{ \"countries\" : [' +\n  '{ \"country\":\"Ireland\" , \"flag\":\"\ud83c\uddee\ud83c\uddea\" },' +\n  '{ \"country\":\"Serbia\" , \"flag\":\"\ud83c\uddf7\ud83c\uddf8\" },' +\n  '{ \"country\":\"Peru\" , \"flag\":\"\ud83c\uddf5\ud83c\uddea\" } ]}';\nvar flagDatabase = JSON.parse(flagsJSON);\n```",
+        "answer": "flagDatabase.countries[0].flag",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "flagDatabase.countries[0].flag"
+        ],
+        "options": [
+          "flagDatabase.countries[1].flag",
+          "flagDatabase.countries[0].flag",
+          "flagDatabase[1].flag",
+          "flagsJSON.countries[0].flag"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c9fa6d6ab40e13c9513e921b",
+        "question": "Which snippet allows the acresOfRainForest variable to increase?\n```js\nlet conservation = true;\nlet deforestation = false;\nlet acresOfRainForest = 100;\nif (/* Snipped goes here */){\n    ++acresOfRainForest;\n}\n```",
+        "answer": "conservation && !deforestation",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "conservation && !deforestation"
+        ],
+        "options": [
+          "conservation && !deforestation",
+          "!deforestation && !conservation",
+          "!conservation || deforestation",
+          "deforestation && conservation || deforestation"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "be298b83fe417d40122b0fe7",
+        "question": "Which of these evaluate to true?",
+        "answer": "Boolean(\"false\")",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Boolean(\"false\")"
+        ],
+        "options": [
+          "Boolean(\"false\")",
+          "Boolean(\"\")",
+          "Boolean(0)",
+          "Boolean(NaN)"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "903ae9fa5ba502faa2b44b63",
+        "question": "Which method converts a JSON string to a Javascript object?",
+        "answer": "JSON.parse()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "JSON.parse()"
+        ],
+        "options": [
+          "JSON.parse()",
+          "JSON.fromString();",
+          "JSON.stringify()",
+          "JSON.toObject()"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d28dea10a162562867569410",
+        "question": "Which method do you use to attach one DOM mode to another?",
+        "answer": "appendChild()",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "appendChild()"
+        ],
+        "options": [
+          "attachNode()",
+          "appendChild()",
+          "querySelector()",
+          "getNode()"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "91125b3f4347ea6d87651c4e",
+        "question": "How would you add a data item named animal with a value of sloth to local storage for the current domain?",
+        "answer": "document.localStorage.setItem(\"animal\",\"sloth\");",
+        "explanation": "[Reference](https://blog.logrocket.com/localstorage-javascript-complete-guide/#setitem)",
+        "hint": null,
+        "correctAnswer": [
+          "document.localStorage.setItem(\"animal\",\"sloth\");"
+        ],
+        "options": [
+          "LocalStorage.setItem(\"animal\",\"sloth\");",
+          "document.localStorage.setItem(\"animal\",\"sloth\");",
+          "localStorage.setItem({animal:\"sloth\"});",
+          "localStorage.setItem(\"animal\",\"sloth\");"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c49d9b46bf9664fa8006f192",
+        "question": "What value is printed to the console after this code execute?\n```js\nlet cat = Object.create({ type: 'lion' });\ncat.size = 'large';\nlet copyCat = { ...cat };\ncat.type = 'tiger';\nconsole.log(copyCat.type, copyCat.size);\n```",
+        "answer": "undefined large",
+        "explanation": "[Reference]((https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create)",
+        "hint": null,
+        "correctAnswer": [
+          "undefined large"
+        ],
+        "options": [
+          "tiger large",
+          "lion undefined",
+          "undefined large",
+          "lion large"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "828895e24687f11eeabe8507",
+        "question": "What does this code print to the console?\n```js\nlet animals = [{ type: 'lion' }, 'tiger'];\nlet clones = animals.slice();\nclones[0].type = 'bear';\nclones[1] = 'sheep';\nconsole.log(animals[0].type, clones[0].type);\nconsole.log(animals[1], clones[1]);\n```",
+        "answer": "bear bear",
+        "explanation": "tiger sheep\nsheep sheep\ntiger tiger\ntiger sheep\n[Reference](https://blog.logrocket.com/localstorage-javascript-complete-guide/#setitem)",
+        "hint": null,
+        "correctAnswer": [
+          "bear bear"
+        ],
+        "options": [
+          "bear bear",
+          "lion bear",
+          "bear bear",
+          "lion bear"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2cc124ec40e9427afeeacc22",
+        "question": "What will be the output of the following code.\n```js\na=5;\nb=4;\nalert(a++(+(+(+b))));\n```",
+        "answer": "9",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "9"
+        ],
+        "options": [
+          "18",
+          "10",
+          "9",
+          "20"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "05533561cd541b887b231bdd",
+        "question": "Which snippet could you add to this code to print \"{\"type\": \"tiger\"}\" to the console?\n```js\nlet cat = { type: \"tiger\", size: \"large\" };\nlet json = /* Snippet here */;\nconsole.log(json); // print {\"type\":\"tiger\"}\n```",
+        "answer": "`JSON.stringify(cat, [\"type\"]);`",
+        "explanation": "[Reference](https://www.w3schools.com/jsref/jsref_stringify.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "`JSON.stringify(cat, [\"type\"]);`"
+        ],
+        "options": [
+          "`cat.toJSON(\"type\");`",
+          "`JSON.stringify(cat, [\"type\"]);`",
+          "`JSON.stringify(cat);`",
+          "`JSON.stringify(cat, /type/);`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4d3f52471a7b7f9d6a915679",
+        "question": "Which document method is not used to get a reference to a DOM node?",
+        "answer": "document.getNode();",
+        "explanation": "[Reference](<https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById#:~:text=querySelector()%20and%20Document.,element%20objects%20in%20the%20DOM.>)",
+        "hint": null,
+        "correctAnswer": [
+          "document.getNode();"
+        ],
+        "options": [
+          "document.getNode();",
+          "document.getElementsByClassName();",
+          "document.querySelectorAll();",
+          "document.querySelector();"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7be7b3eaf0e74a33d892da8e",
+        "question": "In JavaScript, all objects inherit a built-in property from a **\\*\\*\\*\\***\\_\\_\\_**\\*\\*\\*\\***.",
+        "answer": "prototype",
+        "explanation": "[Reference](https://www.freecodecamp.org/news/javascript-prototype-explained-with-examples/)",
+        "hint": null,
+        "correctAnswer": [
+          "prototype"
+        ],
+        "options": [
+          "node",
+          "instance variable",
+          "prototype",
+          "accessor"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "87d72f409028e392b94d55d8",
+        "question": "Which of the following are not server-side Javascript objects?",
+        "answer": "FileUpload",
+        "explanation": "[Reference](https://docs.oracle.com/cd/E19957-01/816-6411-10/jsserv.htm#1035757)",
+        "hint": null,
+        "correctAnswer": [
+          "FileUpload"
+        ],
+        "options": [
+          "Date",
+          "FileUpload",
+          "Function",
+          "All of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "e8fc5285dcb0495887d981b5",
+        "question": "What will be the output of the following code snippet?\n```javascript\nconst obj1 = { first: 20, second: 30, first: 50 };\nconsole.log(obj1);\n```",
+        "answer": "first: 50 , second: 30",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "first: 50 , second: 30"
+        ],
+        "options": [
+          "first: 30 , second: 50",
+          "first: 50 , second: 30",
+          "first: 30 , second: 20",
+          "None of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0558f2eb97c27318ed83b570",
+        "question": "Which object in Javascript doesn\u2019t have a prototype?",
+        "answer": "Base Object",
+        "explanation": "[Reference](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)",
+        "hint": null,
+        "correctAnswer": [
+          "Base Object"
+        ],
+        "options": [
+          "Base Object",
+          "All objects have prototype",
+          "None of the objects have prototype",
+          "None of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "9f530feb22404aaf7ec34377",
+        "question": "What does \u2026 operator do in JS?",
+        "answer": "Used to spread iterables to individual elements",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Used to spread iterables to individual elements"
+        ],
+        "options": [
+          "Used to spread iterables to individual elements",
+          "Describe datatype of undefined",
+          "No such operator exists",
+          "None of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "94e616a9b76ed1e7c64c8939",
+        "question": "How to stop an interval timer in Javascript?",
+        "answer": "clearInterval",
+        "explanation": "[Reference](https://www.interviewbit.com/javascript-mcq/)",
+        "hint": null,
+        "correctAnswer": [
+          "clearInterval"
+        ],
+        "options": [
+          "clearInterval",
+          "clearTimer",
+          "intervalOver",
+          "None of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8e131b6c3428a4859c9f23fb",
+        "question": "What will be the output of the following code snippet?\n```javascript\nprint(typeof NaN);\n```",
+        "answer": "Number",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Number"
+        ],
+        "options": [
+          "Object",
+          "Number",
+          "String",
+          "None of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b6e856b20fbe372f00f95f72",
+        "question": "What will be the output of the following code snippet?\n```javascript\n<script type=\"text/javascript\">a = 5 + \"9\"; document.write(a);</script>\n```",
+        "answer": "59",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "59"
+        ],
+        "options": [
+          "Compilation Error",
+          "14",
+          "Runtime Error",
+          "59"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "01d3bd906de2cba6a3b0e511",
+        "question": "Which of the following methods can be used to display data in some form using Javascript?",
+        "answer": "all of the above",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "all of the above"
+        ],
+        "options": [
+          "document.write()",
+          "console.log()",
+          "window.alert()",
+          "all of the above"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "29b3b77b0803ee7a25eea3c8",
+        "question": "What value is assigned to total after this code executes?\n```javascript\nfunction sum(num1, num2 = 2, num3 = 3) {\n  return num1 + num2 + num3;\n}\nlet values = [1, 5];\nlet total = sum(4, ...values);\n```",
+        "answer": "10",
+        "explanation": "[Reference: Rest parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)",
+        "hint": null,
+        "correctAnswer": [
+          "10"
+        ],
+        "options": [
+          "10",
+          "6",
+          "7",
+          "8"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3876a5f8f93f97f0737cb039",
+        "question": "Which statement is applicable to the defer attribute of the HTML <script> tag?",
+        "answer": "defer allows the browser to continue processing the page while the script loads in the background.",
+        "explanation": "[Reference: defer html script attribute](https://www.w3schools.com/tags/att_script_defer.asp)",
+        "hint": null,
+        "correctAnswer": [
+          "defer allows the browser to continue processing the page while the script loads in the background."
+        ],
+        "options": [
+          "defer allows the browser to continue processing the page while the script loads in the background.",
+          "defer causes the script to be loaded from the backup content delivery network (CDN).",
+          "defer blocks the browser from processing HTML below the tag until the script is completely loaded.",
+          "defer lazy loads the script, causing it to download only when it is called by another script on the page."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "82e64327a5492b279f688011",
+        "question": "Which method of a class is called to initialize an object of that class?",
+        "answer": "constructor()",
+        "explanation": "[Reference: constructor method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)",
+        "hint": null,
+        "correctAnswer": [
+          "constructor()"
+        ],
+        "options": [
+          "init()",
+          "create()",
+          "new()",
+          "constructor()"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "javascript/javascript-quiz-ptbr.md",
+    "language": "pt",
+    "generatedAt": "2025-12-09T14:56:14.301738+00:00",
+    "warnings": []
+  }
+}

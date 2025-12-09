@@ -1250,7 +1250,7 @@ int main(){
 
 #### D74. Dati questi record in una mappa, come aggiornerai il valore per la chiave "Sinead" a 22?
 
-![image](images/Q79.png?raw=png)
+![image](images/Q79.png)
 
 - [x] `marks["Sinead"] = 22`
 - [ ] `marks["Sinead"].22`

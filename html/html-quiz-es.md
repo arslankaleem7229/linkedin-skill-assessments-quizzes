@@ -81,7 +81,7 @@
 
 #### Q11. ¿Cuál es la mejor manera de codificar la muestra mostrada?
 
-![Sample text](images/ss-2.png?raw=true)
+![Sample text](images/ss-2.png)
 
 - [ ] A
 
@@ -262,7 +262,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q21. Revisa el texto en el cuadro rojo en la imagen mostrada. ¿Cuál es la mejor manera de codificar esto en HTML?
 
-![Image of footer](images/ss-3.png?raw=true)
+![Image of footer](images/ss-3.png)
 
 - [ ] lista ordenada
 - [ ] lista no ordenada dentro de un elemento nav
@@ -347,7 +347,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q25. ¿Qué código producirá esta tabla?
 
-![Table with yellow background](images/ss-4.png?raw=true)
+![Table with yellow background](images/ss-4.png)
 
 - [ ] A
 
@@ -546,7 +546,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q34. ¿Cuál es el marcado correctamente anidado para esta lista?
 
-![Sample list](images/ss-6.png?raw=true)
+![Sample list](images/ss-6.png)
 
 - [ ] A
 
@@ -613,7 +613,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q36. ¿Cuál es la forma semánticamente correcta de marcar este diseño?
 
-![quote](images/ss-5.png?raw=true)
+![quote](images/ss-5.png)
 
 - [ ] A
 
@@ -725,7 +725,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q44. ¿Qué fragmento de código crea el diseño mostrado, comenzando en `<table>` y terminando en `</table>`?
 
-![Table](images/ss-1.png?raw=true 'table')
+![Table](images/ss-1.png 'table')
 
 - [ ] A
 
@@ -1160,7 +1160,7 @@ Usa elementos <p>, y usa propiedades CSS como margin para controlar su espaciado
 
 #### Q68. Dada la estructura de archivos y directorios mostrada aquí, ¿cuál es el elemento correcto para colocar en el archivo profit.html para enlazar a info.html?
 
-![Image of footer](images/ss-7.png?raw=true)
+![Image of footer](images/ss-7.png)
 
 - [ ] `<a href="../work/info.html">Ver Información </a>`
 - [x] `<a href="../info.html">Ver Información </a>`
@@ -1299,7 +1299,7 @@ As Steve Krug once said, happy talk must die.
 
 #### Q76. ¿Cuál opción es la mejor manera de marcar este diseño?
 
-![Image of footer](images/ss-8.png?raw=true)
+![Image of footer](images/ss-8.png)
 
 - [x] A
 

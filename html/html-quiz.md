@@ -81,7 +81,7 @@
 
 #### Q11. What is the best way to code the sample shown?
 
-![Sample text](images/ss-2.png?raw=true)
+![Sample text](images/ss-2.png)
 
 - [ ] A
 
@@ -262,7 +262,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q21. Review the text in the red box in the image shown. What is the best way to code this in HTML?
 
-![Image of footer](images/ss-3.png?raw=true)
+![Image of footer](images/ss-3.png)
 
 - [ ] ordered list
 - [ ] unordered list inside a nav element
@@ -347,7 +347,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q25. What code will produce this table?
 
-![Table with yellow background](images/ss-4.png?raw=true)
+![Table with yellow background](images/ss-4.png)
 
 - [ ] A
 
@@ -546,7 +546,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q34. What is the correctly nested markup for this list?
 
-![Sample list](images/ss-6.png?raw=true)
+![Sample list](images/ss-6.png)
 
 - [ ] A
 
@@ -613,7 +613,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q36. What is the semantically correct way to mark up this layout?
 
-![quote](images/ss-5.png?raw=true)
+![quote](images/ss-5.png)
 
 - [ ] A
 
@@ -725,7 +725,7 @@ On July 21, 1969, Neil Armstrong said, "One small step for man, one giant leap f
 
 #### Q44. Which code snippet creates the layout shown, starting at `<table>` and ending at `</table>`?
 
-![Table](images/ss-1.png?raw=true 'table')
+![Table](images/ss-1.png 'table')
 
 - [ ] A
 
@@ -1160,7 +1160,7 @@ Use <p> elements, and use CSS properties like margin to control their spacing.
 
 #### Q68. Given the file and directory structure shown here, what is the correct element to place in the file profit.html to link to info.html?
 
-![Image of footer](images/ss-7.png?raw=true)
+![Image of footer](images/ss-7.png)
 
 - [ ] `<a href="../work/info.html">See Information </a>`
 - [x] `<a href="../info.html">See Information </a>`
@@ -1299,7 +1299,7 @@ As Steve Krug once said, happy talk must die.
 
 #### Q76. Which choice is the best way to mark up this layout?
 
-![Image of footer](images/ss-8.png?raw=true)
+![Image of footer](images/ss-8.png)
 
 - [x] A
 

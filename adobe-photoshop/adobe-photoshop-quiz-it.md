@@ -29,7 +29,7 @@
 
 #### D4. Come puoi evitare di avere bordi trasparenti lungo il bordo di una foto panoramica mantenendo le dimensioni dell'immagine più grandi?
 
-![How can you avoid having transparent edges along the edge of a panoramic photo while retaining the largest image size?](images/007.png?raw=true)
+![How can you avoid having transparent edges along the edge of a panoramic photo while retaining the largest image size?](images/007.png)
 
 - [ ] Scegliere il metodo cilindrico.
 - [ ] Scegli il metodo Perspective.
@@ -127,7 +127,7 @@ E. Perspective Warp
 
 #### D16. Quale funzione di Photoshop è stata utilizzata per convertire questa immagine in bianco e nero?
 
-![What Photoshop feature was used to convert this image to black and white?](images/008.png?raw=true)
+![What Photoshop feature was used to convert this image to black and white?](images/008.png)
 
 - [ ] Livello di regolazione in bianco e nero
 - [ ] Posterizza
@@ -136,7 +136,7 @@ E. Perspective Warp
 
 #### D17. Nell'immagine mostrata, perché Sharpen Edges è disattivato?
 
-![In the image shown, why is Sharpen Edges grayed out?](images/009.png?raw=true)
+![In the image shown, why is Sharpen Edges grayed out?](images/009.png)
 
 - [ ] Il filtro non funziona su un'immagine a 16 bit.
 - [ ] Il filer non è installato correttamente.
@@ -145,7 +145,7 @@ E. Perspective Warp
 
 #### D18. Nell'immagine mostrata, quale funzione Camera Raw è stata utilizzata per limitare il filtro graduato per evitare la statua?
 
-![In the image shown, which Camera Raw feature was used to restrict the graduated filter to avoid the statue?](images/010.png?raw=true)
+![In the image shown, which Camera Raw feature was used to restrict the graduated filter to avoid the statue?](images/010.png)
 
 - [x] Pennello di regolazione
 - [ ] Maschera intervallo di profondità
@@ -161,7 +161,7 @@ E. Perspective Warp
 
 #### D20. Quale metodo Camera Raw Transform viene utilizzato nell'esempio mostrato?
 
-![Which Camera Raw Transform method is being used in the example shown?](images/011.png?raw=true)
+![Which Camera Raw Transform method is being used in the example shown?](images/011.png)
 
 - [x] Guidato
 - [ ] Verticale
@@ -191,7 +191,7 @@ E. Perspective Warp
 
 #### D24. Quale opzione era **non** selezionato nello strumento Bacchetta magica per creare una selezione come quella mostrata di seguito?
 
-![Which option was not selected in the Magic Wand tool to create a selection like the one shown below?](images/012.png?raw=true)
+![Which option was not selected in the Magic Wand tool to create a selection like the one shown below?](images/012.png)
 
 - [x] Contiguo
 - [ ] Anti-alias
@@ -200,7 +200,7 @@ E. Perspective Warp
 
 #### D25. Dove fare clic per aprire una finestra di dialogo in cui è possibile scegliere di aprire un file raw come oggetto avanzato?
 
-![Where should you click to open a dialog box in which you can then choose to open a raw file as a Smart Object?](images/013.png?raw=true)
+![Where should you click to open a dialog box in which you can then choose to open a raw file as a Smart Object?](images/013.png)
 
 - [ ] A
 - [ ] B
@@ -288,7 +288,7 @@ E. Perspective Warp
 
 #### D37. Per nascondere i bordi bianchi intorno ai pixel visualizzati con un ingrandimento elevato, quale opzione disabilitare?
 
-![To hide the white borders around pixels that are viewed at a high magnification, which option do you disable?](images/005.png?raw=true)
+![To hide the white borders around pixels that are viewed at a high magnification, which option do you disable?](images/005.png)
 
 - [ ] Finestra > area di lavoro > griglia
 - [ ] Visualizza > Mostra > slice
@@ -348,7 +348,7 @@ E. Perspective Warp
 
 #### D45. Stai tentando di utilizzare lo strumento Pennello correttivo, ma non vedi i risultati. Qual è il problema?
 
-![You're trying to use the Healing Brush tool, but don't see results. What is the problem?](images/006.png?raw=true)
+![You're trying to use the Healing Brush tool, but don't see results. What is the problem?](images/006.png)
 
 - [x] Hai dimenticato di fare clic tenendo premuto Maiusc per impostare il punto sorgente per lo strumento
 - [ ] Hai dimenticato di fare clic tenendo premuto Alt (Windows) o Opzione (Mac) per impostare il punto sorgente dello strumento
@@ -366,7 +366,7 @@ E. Perspective Warp
 
 #### D47. Quale opzione usi con gli strumenti Dodge e Burn per prevenire cambiamenti di colore indesiderati come quelli mostrati nell'immagine?
 
-![Which option do you use with the Dodge and Burn tools to prevent unwanted color changes like those shown in the image?](images/001.png?raw=true)
+![Which option do you use with the Dodge and Burn tools to prevent unwanted color changes like those shown in the image?](images/001.png)
 
 - [ ] Campionario di tutti i livelli
 - [x] Proteggi i toni
@@ -377,7 +377,7 @@ E. Perspective Warp
 
 #### D48. Quale comando nella casella **Oggetti avanzati** sottomenu che vedresti per salvare il file originale per il livello selezionato?
 
-![Which command in the Smart Objects submenu would you see to save the original file for the selected layer?](images/002.png?raw=true)
+![Which command in the Smart Objects submenu would you see to save the original file for the selected layer?](images/002.png)
 
 - [ ] Modifica contenuti
 - [ ] Sostituisci contenuti
@@ -386,7 +386,7 @@ E. Perspective Warp
 
 #### D49. Nell'immagine mostrata, quale metodo Blur viene utilizzato per controllare la messa a fuoco con una serie di pin?
 
-![In the image shown, which Blur method is being used to control focus with a series of pins?](images/003.png?raw=true)
+![In the image shown, which Blur method is being used to control focus with a series of pins?](images/003.png)
 
 - [ ] Sfocatura percorso
 - [ ] Tilt-Shift Blur
@@ -395,7 +395,7 @@ E. Perspective Warp
 
 #### D50. Nell'immagine mostrata, cosa rappresentano le aree blu?
 
-![In the image shown, what do the blue areas represent?](images/004.png?raw=true)
+![In the image shown, what do the blue areas represent?](images/004.png)
 
 - [ ] Cast di colori
 - [ ] Dettaglio ombra ritagliato
@@ -404,7 +404,7 @@ E. Perspective Warp
 
 #### D51. Cosa mostra l'immagine in scala di grigi in questa figura?
 
-![What does the grayscale image in this figure show?](images/014.png?raw=true)
+![What does the grayscale image in this figure show?](images/014.png)
 
 - [x] i bordi interessati dal comando Nitidezza come perfezionato dal cursore Mascheratura
 - [ ] i bordi interessati dal comando Nitidezza come perfezionato dal cursore Raggio (Radius)
@@ -413,7 +413,7 @@ E. Perspective Warp
 
 #### D52. Dove si fa clic per regolare il metodo di fusione per un filtro intelligente?
 
-![Where do you click to adjust the blending mode for a Smart Filter?](images/015.png?raw=true)
+![Where do you click to adjust the blending mode for a Smart Filter?](images/015.png)
 
 - [ ] A
 - [ ] C

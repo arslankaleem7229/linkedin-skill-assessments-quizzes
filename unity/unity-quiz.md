@@ -316,7 +316,7 @@ Public string PlayerName;
 
 #### Q39. You can perfectly align two mesh objects together at the vertices by using vertex snapping. How do you best access this tool?
 
-![Vertex](images/Q39.png?raw=true)
+![Vertex](images/Q39.png)
 
 - [ ] Select a mesh object and press the W key over the destination vertex
 - [ ] While holding down the C key, click and drag from the source to the destination mesh

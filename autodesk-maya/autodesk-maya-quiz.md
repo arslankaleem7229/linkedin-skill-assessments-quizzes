@@ -50,7 +50,7 @@
 - [ ] 2D texture
 - [ ] Substance texture
 
-![Which texture type does not require UVs to render in software?](images/image01.png?raw=true)
+![Which texture type does not require UVs to render in software?](images/image01.png)
 
 #### Q7. Before rendering any dynamic simulation, what must you do in order to get a predictable and consistent result?
 
@@ -63,7 +63,7 @@
 
 #### Q8. The marking menu provides shortcuts to context-sensitive commands and tools. How is markin menu accessed for the selected object?
 
-![Which texture type does not require UVs to render in software?](images/image02.png?raw=true)
+![Which texture type does not require UVs to render in software?](images/image02.png)
 
 - [ ] Position the mouse cursor in a viewport and hold down the Spacebar
 - [x] Position the mouse cursor in a viewport and hold down the right mouse button
@@ -74,7 +74,7 @@
 
 #### Q9. Camera field of view is indicated by a pyramid shape. What is this shape called?
 
-![Camera field of view is indicated by a pyramid shape. What is this shape called?](images/image03.png?raw=true)
+![Camera field of view is indicated by a pyramid shape. What is this shape called?](images/image03.png)
 
 - [ ] clip plane
 - [ ] film back
@@ -86,7 +86,7 @@
 
 #### Q10. Which of these images shows a Bezier curve?
 
-![Which of these images shows a Bezier curve?](images/image04.png?raw=true)
+![Which of these images shows a Bezier curve?](images/image04.png)
 
 - [x] A
 - [ ] B
@@ -97,7 +97,7 @@
 
 #### Q11. Which type of light is best for a flood studio lighting setup?
 
-![Which type of light is best for a flood studio lighting setup?](images/image05.png?raw=true)
+![Which type of light is best for a flood studio lighting setup?](images/image05.png)
 
 - [ ] point
 - [ ] directional

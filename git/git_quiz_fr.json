@@ -1,0 +1,557 @@
+{
+  "quizz": {
+    "id": "3cd4e254c0eac457411bc17c",
+    "title": "Git",
+    "description": "Seeded from git/git_quiz_fr.md",
+    "createdById": "seed-user",
+    "questions": [
+      {
+        "id": "be602f25b58c96d7e6232ea3",
+        "question": "Comment pouvez-vous v\u00e9rifier votre version actuelle de Git ?",
+        "answer": "git --version",
+        "explanation": "[R\u00e9f\u00e9rence](https://www.howtogeek.com/759319/how-to-check-and-update-your-git-version/)",
+        "hint": null,
+        "correctAnswer": [
+          "git --version"
+        ],
+        "options": [
+          "git --v",
+          "git --version",
+          "git --option",
+          "git --current"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c741407f6b8f60e1f1b3f74d",
+        "question": "Quelle commande vous permet de cr\u00e9er une connexion entre un d\u00e9p\u00f4t local et distant ?",
+        "answer": "git remote add origin",
+        "explanation": "[R\u00e9f\u00e9rence](https://stackoverflow.com/questions/20291731/how-to-connect-to-a-remote-git-repository)",
+        "hint": null,
+        "correctAnswer": [
+          "git remote add origin"
+        ],
+        "options": [
+          "git remote add new",
+          "git remote add origin",
+          "git remote new origin",
+          "git remote origin"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c1197c84fd67ff6fef1812d6",
+        "question": "D\u00e9crivez ce que font ces commandes Git dans l'historique des commits :\n```bash\ngit reset --hard HEAD~5\ngit merge --squash HEAD@{1}\n```",
+        "answer": "HEAD de la branche actuelle est r\u00e9initialis\u00e9 en arri\u00e8re de cinq commits, puis les commits pr\u00e9c\u00e9dents sont \u00e9cras\u00e9s en un seul commit.",
+        "explanation": "**Explication :**\n- `git reset --hard HEAD~5` r\u00e9initialise la branche actuelle au commit juste avant les 5 derniers (voir `man gitrevisions` pour plus de d\u00e9tails sur cette notation et d'autres alternatives int\u00e9ressantes comme `HEAD@{2 days ago}`). Comme il s'agit d'une r\u00e9initialisation dure, elle \u00e9crasera \u00e9galement tous les changements dans l'arborescence de travail. Voir `man git-reset`.\n- `git merge --squash HEAD@{1}` HEAD@{1} est l\u00e0 o\u00f9 la branche \u00e9tait juste avant la commande pr\u00e9c\u00e9dente (encore une fois, voir `man gitrevisions`). Cette commande configure l'\u00e9tat de l'index comme il le serait juste apr\u00e8s une fusion \u00e0 partir de ce commit. Toute cette op\u00e9ration pourrait \u00eatre une mani\u00e8re de prendre 5 commits d'une branche dans laquelle vous avez commenc\u00e9 une nouvelle fonctionnalit\u00e9 et de les \u00e9craser en un seul commit, un commit significatif.\n[R\u00e9f\u00e9rence](https://stackoverflow.com/questions/70962338/documentation-of-default-target-of-git-merge-squash)",
+        "hint": null,
+        "correctAnswer": [
+          "HEAD de la branche actuelle est r\u00e9initialis\u00e9 en arri\u00e8re de cinq commits, puis les commits pr\u00e9c\u00e9dents sont \u00e9cras\u00e9s en un seul commit."
+        ],
+        "options": [
+          "Elles r\u00e9initialisent HEAD au cinqui\u00e8me commit dans le d\u00e9p\u00f4t, puis fusionnent avec la branche principale.",
+          "HEAD de la branche actuelle est r\u00e9initialis\u00e9 en arri\u00e8re de cinq commits, puis les commits pr\u00e9c\u00e9dents sont \u00e9cras\u00e9s en un seul commit.",
+          "Elles suppriment les cinq derniers commits.",
+          "Elles fusionnent les cinq derniers commits dans une nouvelle branche."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "95cb31cb9466f8c85d0378e3",
+        "question": "Votre projet actuel comporte plusieurs branches : master, beta et push-notifications. Vous venez de terminer la fonctionnalit\u00e9 de notification dans la branche push-notifications et vous souhaitez la valider dans la branche beta. Comment pouvez-vous y parvenir ?",
+        "answer": "Basculez sur la branche beta et ex\u00e9cutez git merge push-notifications.",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)",
+        "hint": null,
+        "correctAnswer": [
+          "Basculez sur la branche beta et ex\u00e9cutez git merge push-notifications."
+        ],
+        "options": [
+          "Basculez sur la branche push-notifications et ex\u00e9cutez git merge beta.",
+          "Basculez sur la branche master et ex\u00e9cutez git merge beta -> push-notifications.",
+          "Supprimez la branche push-notifications et elle sera automatiquement valid\u00e9e dans la branche master.",
+          "Basculez sur la branche beta et ex\u00e9cutez git merge push-notifications."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b0be67491ea60d406a89e04c",
+        "question": "Quelle est la signification de la commande suivante ?\n`git add -A`",
+        "answer": "Tous les fichiers nouveaux et mis \u00e0 jour sont ajout\u00e9s \u00e0 la zone de transit.",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/docs/git-add)\n[R\u00e9f\u00e9rence](https://www.geeksforgeeks.org/difference-between-git-add-a-and-git-add/)",
+        "hint": null,
+        "correctAnswer": [
+          "Tous les fichiers nouveaux et mis \u00e0 jour sont ajout\u00e9s \u00e0 la zone de transit."
+        ],
+        "options": [
+          "Tous les fichiers nouveaux et mis \u00e0 jour sont ajout\u00e9s \u00e0 la zone de transit.",
+          "Les fichiers sont ajout\u00e9s \u00e0 la zone de transit dans l'ordre alphab\u00e9tique.",
+          "Tous les fichiers nouveaux sont ajout\u00e9s \u00e0 la zone de transit.",
+          "Seuls les fichiers mis \u00e0 jour sont ajout\u00e9s \u00e0 la zone de transit."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "3c5a64bda0727e9cb3656687",
+        "question": "Que va afficher la commande suivante dans le Terminal ?\n`git remote -v`",
+        "answer": "Une liste des d\u00e9p\u00f4ts distants et de leurs URL.",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/docs/git-remote)\n[R\u00e9f\u00e9rence](https://www.javatpoint.com/git-remote)",
+        "hint": null,
+        "correctAnswer": [
+          "Une liste des d\u00e9p\u00f4ts distants et de leurs URL."
+        ],
+        "options": [
+          "Une liste des d\u00e9p\u00f4ts distants et de leurs URL.",
+          "La version actuelle de Git que vous ex\u00e9cutez.",
+          "Un \u00e9diteur en ligne pour modifier les d\u00e9p\u00f4ts distants.",
+          "Les cinq derni\u00e8res versions de Git que vous avez install\u00e9es."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d8df4564bfae3577558115cd",
+        "question": "En regardant les commandes suivantes, d\u00e9crivez ce qui se passe.\n```bash\ngit checkout feature-user-location\ngit cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231\n```",
+        "answer": "Un commit est copi\u00e9 de sa branche d'origine vers la branche feature-user-location.",
+        "explanation": "Explication :\n'git checkout feature-user-location' bascule sur la branche 'feature-user-location'.\n'git cherry-pick kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231' applique les modifications du commit sp\u00e9cifi\u00e9 ('kj2342134sdf090093f0sdgasdf99sdfo992mmmf9921231') \u00e0 la branche actuelle (feature-user-location). Cela revient en fait \u00e0 copier le commit de sa branche d'origine dans la branche feature-user-location.\nAinsi, cette s\u00e9quence de commandes permet de cherry-pick un commit sp\u00e9cifique sur la branche feature-user-location.",
+        "hint": null,
+        "correctAnswer": [
+          "Un commit est copi\u00e9 de sa branche d'origine vers la branche feature-user-location."
+        ],
+        "options": [
+          "Le commit est marqu\u00e9 pour une publication sur la branche feature-user-location.",
+          "Un commit est copi\u00e9 de sa branche d'origine vers la branche feature-user-location.",
+          "Le commit est s\u00e9lectionn\u00e9 comme nouvelle t\u00eate de l'historique des commits.",
+          "Un commit est copi\u00e9 de la branche feature-user-location vers la branche master.",
+          "La branche est bascul\u00e9e sur la branche feature-user-location, et le commit sp\u00e9cifi\u00e9 est appliqu\u00e9 \u00e0 la branche."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "96520ae954ca5d8f84aae737",
+        "question": "Que fait la commande suivante dans le r\u00e9f\u00e9rentiel Git ?\n`git reset --soft HEAD^`",
+        "answer": "Elle positionne HEAD sur le commit pr\u00e9c\u00e9dent et laisse les modifications du commit annul\u00e9 dans la zone de transit.",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/docs/git-reset)\n[R\u00e9f\u00e9rence](https://stackoverflow.com/questions/24568936/what-is-the-difference-between-git-reset-hard-head1-and-git-reset-soft-head)",
+        "hint": null,
+        "correctAnswer": [
+          "Elle positionne HEAD sur le commit pr\u00e9c\u00e9dent et laisse les modifications du commit annul\u00e9 dans la zone de transit."
+        ],
+        "options": [
+          "Elle supprime tous les commits pr\u00e9c\u00e9dents et r\u00e9initialise l'historique du r\u00e9f\u00e9rentiel \u00e0 son \u00e9tat initial.",
+          "Elle r\u00e9initialise la branche de travail au premier commit.",
+          "Elle maintient HEAD au commit actuel mais efface tous les commits pr\u00e9c\u00e9dents.",
+          "Elle positionne HEAD sur le commit pr\u00e9c\u00e9dent et laisse les modifications du commit annul\u00e9 dans la zone de transit."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "f356f2aaafd17319cb23bee5",
+        "question": "Vous trouvez un bogue dans votre projet, mais vous ne pouvez pas localiser o\u00f9 il a \u00e9t\u00e9 introduit dans l'historique des commits. Comment diagnostiqueriez-vous ce\nprobl\u00e8me ?",
+        "answer": "Utilisez git bisect pour comparer le commit probl\u00e9matique \u00e0 un commit ant\u00e9rieur qui fonctionne comme pr\u00e9vu.",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/docs/git-bisect)\n[R\u00e9f\u00e9rence](https://stackoverflow.com/questions/69552866/how-to-diagnose-a-problem-in-git-commit-history)",
+        "hint": null,
+        "correctAnswer": [
+          "Utilisez git bisect pour comparer le commit probl\u00e9matique \u00e0 un commit ant\u00e9rieur qui fonctionne comme pr\u00e9vu."
+        ],
+        "options": [
+          "Revenez manuellement en arri\u00e8re dans votre historique des commits.",
+          "Utilisez git search -diff pour comparer tous les commits de l'historique de votre r\u00e9f\u00e9rentiel.",
+          "Ex\u00e9cutez un rebasage Git pour trouver le commit probl\u00e9matique.",
+          "Utilisez git bisect pour comparer le commit probl\u00e9matique \u00e0 un commit ant\u00e9rieur qui fonctionne comme pr\u00e9vu."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "2a38c311bfe7cae087ca017a",
+        "question": "Pourquoi utiliseriez-vous la commande suivante ?\n`git rebase -i HEAD~10`",
+        "answer": "Pour r\u00e9pertorier les 10 derniers commits et les modifier avec les commandes squash ou fixup.",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/docs/git-rebase#_interactive_mode)\n[R\u00e9f\u00e9rence](https://stackoverflow.com/questions/363908/how-do-i-use-git-rebase-i-to-rebase-all-changes-in-a-branch)",
+        "hint": null,
+        "correctAnswer": [
+          "Pour r\u00e9pertorier les 10 derniers commits et les modifier avec les commandes squash ou fixup."
+        ],
+        "options": [
+          "Pour effectuer une recherche comparative des 10 derniers commits pour trouver les diff\u00e9rences.",
+          "Pour r\u00e9pertorier les 10 derniers commits et les modifier avec les commandes squash ou fixup.",
+          "Pour supprimer les 10 derniers commits et r\u00e9initialiser HEAD.",
+          "Pour mettre en cache localement les 10 derniers commits."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "314b24b162e7b38fb18df090",
+        "question": "Pourquoi utiliseriez-vous un crochet pre-receive dans votre r\u00e9f\u00e9rentiel distant ?",
+        "answer": "Pour ex\u00e9cuter un script lorsque un d\u00e9p\u00f4t distant re\u00e7oit une pouss\u00e9e qui est d\u00e9clench\u00e9e avant que les r\u00e9f\u00e9rences ne soient mises \u00e0 jour.",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/docs/githooks)\n[R\u00e9f\u00e9rence](https://docs.github.com/en/enterprise-server@3.10/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/working-with-pre-receive-hooks)",
+        "hint": null,
+        "correctAnswer": [
+          "Pour ex\u00e9cuter un script lorsque un d\u00e9p\u00f4t distant re\u00e7oit une pouss\u00e9e qui est d\u00e9clench\u00e9e avant que les r\u00e9f\u00e9rences ne soient mises \u00e0 jour."
+        ],
+        "options": [
+          "Vous ne le feriez pas, vous l'utiliseriez dans le r\u00e9f\u00e9rentiel local.",
+          "Pour ex\u00e9cuter un script lorsque un d\u00e9p\u00f4t distant re\u00e7oit une pouss\u00e9e qui est d\u00e9clench\u00e9e avant que les r\u00e9f\u00e9rences ne soient mises \u00e0 jour.",
+          "Pour ex\u00e9cuter un script apr\u00e8s les mises \u00e0 jour effectu\u00e9es dans le r\u00e9f\u00e9rentiel distant.",
+          "Pour d\u00e9boguer toutes les balises de commit et les versions de publication."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "8b9fd26d1fbae5badb296a3e",
+        "question": "Quelle option pouvez-vous utiliser pour appliquer des configurations Git dans tout votre environnement Git ?",
+        "answer": "`--global`",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/docs/git-config)\n[R\u00e9f\u00e9rence](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)",
+        "hint": null,
+        "correctAnswer": [
+          "`--global`"
+        ],
+        "options": [
+          "`--all`",
+          "`--master`",
+          "`--global`",
+          "`--update`"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "5d53f7500ef3d64f1d4f0bf6",
+        "question": "Comment pourriez-vous fusionner plusieurs commits en un seul sans utiliser git merge --squash ?",
+        "answer": "Rebaser",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/docs/git-rebase#_interactive_mode)\n[R\u00e9f\u00e9rence](https://stackoverflow.com/questions/31409736/squash-commits-directly-on-feature-without-rebase-or-merge)",
+        "hint": null,
+        "correctAnswer": [
+          "Rebaser"
+        ],
+        "options": [
+          "Mise en cache",
+          "Vous ne le pouvez pas. git merge --squash est la seule commande Git pour cette op\u00e9ration.",
+          "Rebaser",
+          "Reflog"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "b97d334505a542b085fe3f82",
+        "question": "Si vous avez clon\u00e9 un r\u00e9f\u00e9rentiel Git existant, qu'arriverait-il ?",
+        "answer": "Une copie du r\u00e9f\u00e9rentiel serait cr\u00e9\u00e9e sur votre machine locale.",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/docs/git-clone)\n[R\u00e9f\u00e9rence](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)",
+        "hint": null,
+        "correctAnswer": [
+          "Une copie du r\u00e9f\u00e9rentiel serait cr\u00e9\u00e9e sur votre machine locale."
+        ],
+        "options": [
+          "Une nouvelle copie \u00e9craserait le r\u00e9f\u00e9rentiel central.",
+          "Une copie du r\u00e9f\u00e9rentiel serait cr\u00e9\u00e9e sur votre machine locale.",
+          "Rien, le clonage n'est pas une fonction Git prise en charge.",
+          "Une copie du r\u00e9f\u00e9rentiel serait cr\u00e9\u00e9e sur la plateforme d'h\u00e9bergement."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c61eb50185d41e8d60a7c5f6",
+        "question": "Comment pouvez-vous afficher une liste des fichiers ajout\u00e9s ou modifi\u00e9s dans un commit sp\u00e9cifique ?",
+        "answer": "Utilisez la commande `diff-tree` avec le hachage du commit.",
+        "explanation": "[R\u00e9f\u00e9rence](https://git-scm.com/docs/git-diff-tree)\n[R\u00e9f\u00e9rence](https://stackoverflow.com/questions/424071/how-do-i-list-all-the-files-in-a-commit#:~:text=If%20you%20want%20to%20get%20the%20list%20of,you%20can%20use%20git%20ls-tree%20--name-only%20-r%20%3Ccommit-ish%3E)",
+        "hint": null,
+        "correctAnswer": [
+          "Utilisez la commande `diff-tree` avec le hachage du commit."
+        ],
+        "options": [
+          "Trouvez le commit dans le r\u00e9f\u00e9rentiel distant, car c'est le seul endroit o\u00f9 ce type d'information est stock\u00e9.",
+          "Utilisez la commande `diff-tree` avec le hachage du commit.",
+          "Ex\u00e9cutez `git commit --info` avec le hachage du commit.",
+          "Acc\u00e9dez aux donn\u00e9es du stash du commit avec `git stash`."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a39487ebed5aaa2583d1bff3",
+        "question": "What files is this .gitignore programmed to leave out?\n```shell\n#.swift\nbuild/\n*.txt\n*.metadata\n```",
+        "answer": "All files in the build directory, as well as files ending with .txt or .metadata",
+        "explanation": "[Reference](https://git-scm.com/docs/gitignore)\nA line starting with `#` serves as a comment. Hence `# .swift` does not do anything. See `man gitignore`.",
+        "hint": null,
+        "correctAnswer": [
+          "All files in the build directory, as well as files ending with .txt or .metadata"
+        ],
+        "options": [
+          "All files with a .swift, .txt, or metadata file extension, as well as the entire build directory",
+          "Only the build directory",
+          "All files in the build directory, as well as files ending with .txt or .metadata",
+          "Only files with .swift and .txt extensions."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "6d967b1f1e461d4acd441dbc",
+        "question": "After you make changes to a local repository, you run the following command. What will this do?\n`git commit -a -m \"Refactor code base\"`",
+        "answer": "Adds all modified files to the staging area, then commits them with a message",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "Adds all modified files to the staging area, then commits them with a message"
+        ],
+        "options": [
+          "Nothing, you can't use multiple options in the same command",
+          "Adds all new files to the staging area",
+          "Commits all new files with a message",
+          "Adds all modified files to the staging area, then commits them with a message"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "052bc22da3f1641ae3ac1739",
+        "question": "After checking your git status you get the following output, which shows the file beta-notes.js in the commit but also unstaged. How can this situation occur?\n```shell\nChange to be committed:\n(use \"git reset HEAD <file>...\" to unstage)\nmodified: beta-notes.js\nChanges not staged for commit:\n(use \"git add <file>...\" to update what will be committed)\n(use \"git checkout --<file>...\" to discard changes in working directory)\nmodified: beta-notes.js\n```",
+        "answer": "beta-notes.js was staged, then modified afterwards, creating two different versions of the file",
+        "explanation": "[Reference](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)",
+        "hint": null,
+        "correctAnswer": [
+          "beta-notes.js was staged, then modified afterwards, creating two different versions of the file"
+        ],
+        "options": [
+          "There were two copies of beta-notes.js but one was deleted",
+          "beta-notes.js was staged, then modified afterwards, creating two different versions of the file",
+          "Two copies of beta-notes.js were created, but only one is being tracked",
+          "There are two tracked copies of beta-notes.js, but one was removed from the commit"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "eac64670ad58022f233b6576",
+        "question": "Where are files stored before they are committed to the local repository?",
+        "answer": "Staging area",
+        "explanation": "[Reference](https://www.geeksforgeeks.org/what-is-a-git-repository/)",
+        "hint": null,
+        "correctAnswer": [
+          "Staging area"
+        ],
+        "options": [
+          "Saved files",
+          "git documents",
+          "Staging area",
+          "git cache"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "ab17d834da815ee6575c8512",
+        "question": "What commands would you use to force an overwrite of your local files with the master branch?",
+        "answer": "\u2800",
+        "explanation": "```bash\ngit pull --all\ngit reset --hard origin/master\n```\n```bash\ngit pull -u origin master\ngit reset --hard master\n```\n```bash\ngit pull origin master\ngit reset --hard origin/myCurrentBranch\n```\n```bash\ngit fetch --all\ngit reset --hard origin/master\n```\n**Note**: - The command `pull` is `fetch` followed by either `merge` or `rebase` (in this case, `merge`). We don't want to merge. Merge would be an action to our **repository**. We just want to overwrite our **local files**.",
+        "hint": null,
+        "correctAnswer": [
+          "\u2800"
+        ],
+        "options": [
+          "\u2800",
+          "\u2800",
+          "\u2800",
+          "\u2800"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "d5a18cb47b5ab9439f457ffd",
+        "question": "Which statement is true when you use the git add -A command?",
+        "answer": "All new and updated files from the working directory are staged to the index.",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "All new and updated files from the working directory are staged to the index."
+        ],
+        "options": [
+          "Only new files in the working directory are staged to the index.",
+          "All new and updated files from the working directory are staged to the index.",
+          "All files in the working directory are staged to the index in alphabetical order.",
+          "Only updated files in the working directory are staged to the index."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "0f774ee47b2242815a11b692",
+        "question": "You find that your project has a tag and branch both named push-notifications, which causes confusion when trying to print out given reference. How can you specify which branch you want to look at?",
+        "answer": "use git show refs/head/push-notifications",
+        "explanation": "[Reference](https://geedew.com/fixing-git-branch-and-tag-name-collision/)",
+        "hint": null,
+        "correctAnswer": [
+          "use git show refs/head/push-notifications"
+        ],
+        "options": [
+          "use git show refs/push-notifications",
+          "use git show push-notifications",
+          "use git show head/refs/push-notifications",
+          "use git show refs/head/push-notifications"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "51ff15a9d0bccb2021c5919b",
+        "question": "Your team lead needs a list of all commits that will be moved before you perform a rebase. Which command can you use to access that information?",
+        "answer": "git rebase -i",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "git rebase -i"
+        ],
+        "options": [
+          "git rebase -log",
+          "git rebase -i",
+          "git rebase -verbose",
+          "git rebase -all"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "7c7fe5b764d208256f31811f",
+        "question": "What is the operation doing given the Git commands below?\n```\ngit bisect start\ngit bisect bad 5d41402abc4b2a76b9719d911017c592\ngit bisect good 69faab6268350295550de7d587bc323d\n```",
+        "answer": "It performs a binary search using a known bad commit and known good commit to determine which commit introduced a bug",
+        "explanation": null,
+        "hint": null,
+        "correctAnswer": [
+          "It performs a binary search using a known bad commit and known good commit to determine which commit introduced a bug"
+        ],
+        "options": [
+          "It runs a merge of a good commit that is discovered using a known bad commit and known good commit",
+          "It marks a commit for deletion using a known bad commit and known good commit to determine which commit introduced a bug",
+          "It defines a bad commit and resets the HEAD using a known bad commit and known good commit",
+          "It performs a binary search using a known bad commit and known good commit to determine which commit introduced a bug"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "420e99c8ee3dba0725bf3dcd",
+        "question": "In a situation where you have several commits for a single task, what is the most efficient way to restructure your commit history?",
+        "answer": "Squash the related commits together into a single coherent commit.",
+        "explanation": "[Reference](https://git-scm.com/docs/git-rebase#_interactive_mode)",
+        "hint": null,
+        "correctAnswer": [
+          "Squash the related commits together into a single coherent commit."
+        ],
+        "options": [
+          "Cherry pick the related commits to another branch.",
+          "Delete the task commits and recommit with a new message.",
+          "Squash the related commits together into a single coherent commit.",
+          "Stash the related commits under a new hash."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4f09021c15f3e03591cdf447",
+        "question": "Which of the following is true of the git push command?\n**Note:** Which statement is true of the `git push` command?",
+        "answer": "By default a push doesn't send tags to the remote repository.",
+        "explanation": "[Reference](https://git-scm.com/book/en/v2/Git-Basics-Tagging#:~:text=Sharing%20Tags)",
+        "hint": null,
+        "correctAnswer": [
+          "By default a push doesn't send tags to the remote repository."
+        ],
+        "options": [
+          "By default a push doesn't send tags to the remote repository.",
+          "Commits can only be tagged when they are created.",
+          "Tags are pushed to the remote repository with their respective commits.",
+          "Only annotated tags are automatically pushed to the remote repository with a commit."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "c6beac60334e439b9ac4752e",
+        "question": "After pushing commits to the remote repository for the first time using the command below, what shorthand command can you use in future?\n```bash\ngit push -u origin master\n```",
+        "answer": "git push",
+        "explanation": "[Reference](https://git-scm.com/docs/git-push)",
+        "hint": null,
+        "correctAnswer": [
+          "git push"
+        ],
+        "options": [
+          "git push master",
+          "git push origin",
+          "Same as before, git push -u origin master",
+          "git push"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "4e078fb0868b7859d261fecd",
+        "question": "How would you create a custom shortcut or command across your Git environment?",
+        "answer": "Create an alias using the `git config` command.",
+        "explanation": "[Reference](https://git-scm.com/docs/git-config)",
+        "hint": null,
+        "correctAnswer": [
+          "Create an alias using the `git config` command."
+        ],
+        "options": [
+          "Run `git hotfix` with the shortcut name.",
+          "Assign a shortcut or command using git options file.",
+          "Use the `git custom-key` command.",
+          "Create an alias using the `git config` command."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "12e182d4315d9a02924b4af6",
+        "question": "What is the status of the beta-notes.js file in the following output?\n```shell\nChanges not staged for commit:\n(use \"git add <file>...\" to update what will be committed)\n(use \"git checkout -- <file>...\" to discard changes in working directory)\nmodified: beta-notes.js\n```",
+        "answer": "beta-notes.js is a tracked file and has been modified, but has not been added to the current commit.",
+        "explanation": "[Reference](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository)",
+        "hint": null,
+        "correctAnswer": [
+          "beta-notes.js is a tracked file and has been modified, but has not been added to the current commit."
+        ],
+        "options": [
+          "beta-notes.js is untracked and has been modified.",
+          "beta-notes.js is a tracked file and has been modified, but has not been added to the current commit.",
+          "beta-notes.js is untracked but has been added to the current commit.",
+          "beta-notes.js is tracked, and the modified file has been added to the current commit."
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      },
+      {
+        "id": "a833908f5077cd77315cdb34",
+        "question": "What command would let you modify your previous commit?",
+        "answer": "--amend",
+        "explanation": "[Reference](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History",
+        "hint": null,
+        "correctAnswer": [
+          "--amend"
+        ],
+        "options": [
+          "--fix",
+          "--quickfix",
+          "--modify",
+          "--amend"
+        ],
+        "nature": "ChooseOne",
+        "attachments": []
+      }
+    ]
+  },
+  "meta": {
+    "source": "git/git_quiz_fr.md",
+    "language": "en",
+    "generatedAt": "2025-12-09T14:56:14.252698+00:00",
+    "warnings": []
+  }
+}

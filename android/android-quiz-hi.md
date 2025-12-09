@@ -264,7 +264,7 @@
 
 #### प्रश्न 21. कौन सी drawable definition आपको नीचे दी गई shape प्राप्त करने की अनुमति देती है?
 
-![img](image/shape.png?raw=png)
+![img](image/shape.png)
 
 - [ ] A
 
@@ -931,16 +931,16 @@ override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(savedInstanc
 #### प्रश्न 61. कौन सी layout hierarchy सबसे तेज़ी से draw होने की संभावना है?
 
 - [x] A
-      ![img](https://i.imgur.com/mT08jag.png?raw=png)
+      ![img](https://i.imgur.com/mT08jag.png)
 
 - [ ] B
-      ![img](https://i.imgur.com/rz9eKYc.png?raw=png)
+      ![img](https://i.imgur.com/rz9eKYc.png)
 
 - [ ] C
-      ![img](https://i.imgur.com/ETaHhaS.png?raw=png)
+      ![img](https://i.imgur.com/ETaHhaS.png)
 
 - [ ] D
-      ![img](https://i.imgur.com/1QBrTwR.png?raw=png)
+      ![img](https://i.imgur.com/1QBrTwR.png)
 
 #### प्रश्न 62. Long-running background tasks को handle करने का वर्तमान recommended तरीका क्या है?
 

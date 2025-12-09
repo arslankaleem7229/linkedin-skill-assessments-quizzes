@@ -466,7 +466,7 @@ p {
 
 #### Q37. flex-direction 属性用于指定 flex 项显示的方向。在以下示例中，哪些值用于指定项的方向？
 
-![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png?raw=png)
+![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png)
 
 - [x] &shy;
   - 示例 1: `flex-direction: row;`
@@ -541,7 +541,7 @@ h2 ~ p {
 
 #### Q40. 使用 Flexbox 时，"justify-content" 属性可以用于沿主轴分配 flex 项之间的空间。以下哪个值应该用于在容器中均匀分布 flex 项？
 
-![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png?raw=png)
+![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png)
 
 - [ ] `justify-content: space-around;`
 - [ ] `justify-content: center;`
@@ -1541,7 +1541,7 @@ D. font-size: 20px
 
 #### Q111. 在这张图片中，蓝色框和示例文本都包含在同一个父元素中。蓝色框浮动在容器的左边缘。为什么它没有包含在容器中？
 
-![Sample text](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-3.png?raw=png)
+![Sample text](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-3.png)
 
 - [ ] 蓝色框的浮动增加了它的高度。
 - [ ] 蓝色框浮动在左边也会向下移动。
@@ -2238,7 +2238,7 @@ input.invalid {
 
 #### Q141. 哪个样式规则会在网格中放置一个 X 来赢得游戏？
 
-![A](img/Q-141.png?raw=png)
+![A](img/Q-141.png)
 
 - [ ] `row: 3; column: 3;`
 - [x] `grid-row: 3; grid-column: 3;`

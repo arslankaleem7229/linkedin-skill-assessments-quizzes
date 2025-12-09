@@ -511,7 +511,7 @@ p {
 
 #### Q37. Властивість flex-direction використовується для визначення напрямку, у якому відображаються flex елементи. Які значення використовуються для визначення напрямку елементів у наведених нижче прикладах?
 
-![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png?raw=png)
+![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png)
 
 - [x] &shy;
   - Example 1: `flex-direction: row;`
@@ -586,7 +586,7 @@ h2 ~ p {
 
 #### Q40. Під час використання Flexbox властивість «justify-content» можна використовувати для розподілу простору між елементами flex уздовж головної осі. Яке значення слід використовувати для рівномірного розподілу flex елементів у показаному нижче контейнері?
 
-![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png?raw=png)
+![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-2.png)
 
 - [ ] justify-content: space-around;
 - [ ] justify-content: center;
@@ -1618,7 +1618,7 @@ D. font-size: 20px
 
 #### Q111. На цьому зображенні синє поле та зразок тексту містяться в одному батьківському елементі. Синє поле плаває на лівому боці контейнера. Чому воно не міститься в контейнері?
 
-![Sample text](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-3.png?raw=png)
+![Sample text](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-3.png)
 
 - [ ] Float блакитного прямокутника збільшило його висоту.
 - [ ] Float-left також переміщує його вниз.
@@ -2324,7 +2324,7 @@ input.invalid {
 
 #### Q141. Яке правило розмістить X у сітці, щоб виграти гру?
 
-![A](img/Q-141.png?raw=png)
+![A](img/Q-141.png)
 
 - [ ] row: 3;
       column: 3;

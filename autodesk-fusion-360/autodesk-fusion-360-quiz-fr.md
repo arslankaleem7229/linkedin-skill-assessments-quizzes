@@ -23,7 +23,7 @@
 
 #### Q4. Combien de trous ont été utilisés dans la fabrication de cet objet?
 
-![image](images/question_4.png?raw=true)
+![image](images/question_4.png)
 
 - [x] 1
 - [ ] 2
@@ -198,7 +198,7 @@
 
 #### Q28. Combien d’esquisses sont nécessaires pour créer cet objet ?
 
-![image](images/question_28.png?raw=png)
+![image](images/question_28.png)
 
 - [x] Deux
 - [ ] Trois

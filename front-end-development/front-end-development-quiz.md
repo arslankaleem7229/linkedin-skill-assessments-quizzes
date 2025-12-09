@@ -461,7 +461,7 @@ console.log(currencies);
 
 #### Q48. The image below has float: left applied. Text wraps the float on the right and bottom. How would you force the second paragraph to start underneath the float, leaving a gap after the preceding paragraph?
 
-![CSS clear](images/Q48.png?raw=true)
+![CSS clear](images/Q48.png)
 
 - [ ] Apply `float: left` to the second paragraph.
 - [ ] Apply `clear: right` to the floated item.
@@ -597,7 +597,7 @@ console.log(currencies);
 ```css
 .box {
   background-color: blue;
-  background: url(images/star.png?raw=png) no-repeat left top;
+  background: url(images/star.png) no-repeat left top;
 }
 ```
 
@@ -690,7 +690,7 @@ console.log(currencies);
 
 #### Q69. Under the standard CSS box model, what is the total visible width of the element (content + padding + border), excluding margins?
 
-```css
+````css
 box {
   width: 200px;
   padding: 10px;
@@ -788,7 +788,7 @@ box {
   font-family: Helvetica;
   font-display: swap;
 }
-```
+````
 
 - [ ] The browser will show no content until the web font loads.
 - [ ] The browser will ignore the web font.
