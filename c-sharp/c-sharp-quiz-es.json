@@ -1,1618 +1,1805 @@
 {
   "quizz": {
     "id": "25be9df094d4d2a776b4c250",
-    "title": "C#",
-    "description": "Seeded from c-sharp/c-sharp-quiz-es.md",
-    "createdById": "seed-user",
-    "questions": [
-      {
-        "id": "413f1fb13f4221a415b8c350",
-        "question": "\u00bfEn cu\u00e1l de estas situaciones son las interfaces mejores que las clases abstractas?",
-        "answer": "Cuando necesitas una lista de capacidades y datos que son independientes de las clases, usa una interface. Cuando necesitas que un cierto tipo de objeto comparta caracter\u00edsticas, usa una clase abstracta.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Cuando necesitas una lista de capacidades y datos que son independientes de las clases, usa una interface. Cuando necesitas que un cierto tipo de objeto comparta caracter\u00edsticas, usa una clase abstracta."
-        ],
-        "options": [
-          "Cuando necesitas definir las caracter\u00edsticas de un tipo de objeto, usa una interface. Cuando necesitas definir las capacidades de un tipo de objeto, usa una clase abstracta.",
-          "Las interfaces son un legado de versiones anteriores de C#, y son intercambiables con la caracter\u00edstica m\u00e1s nueva de clase abstracta.",
-          "Cuando necesitas una lista de capacidades y datos que son independientes de las clases, usa una interface. Cuando necesitas que un cierto tipo de objeto comparta caracter\u00edsticas, usa una clase abstracta.",
-          "Deber\u00edas usar tanto una interface como una clase abstracta al definir cualquier objeto complejo."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3d41beb67cef0ec310572331",
-        "question": "\u00bfCu\u00e1l afirmaci\u00f3n es verdadera sobre los delegates?",
-        "answer": "Pueden ser encadenados juntos.",
-        "explanation": "[Documentaci\u00f3n oficial: Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/#delegates-overview)",
-        "hint": null,
-        "correctAnswer": [
-          "Pueden ser encadenados juntos."
-        ],
-        "options": [
-          "Los delegates no est\u00e1n soportados en la versi\u00f3n actual de C#",
-          "No pueden ser usados como callbacks.",
-          "Solo las variables pueden ser pasadas a los delegates como par\u00e1metros.",
-          "Pueden ser encadenados juntos."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c5fb8291372e2575516f865f",
-        "question": "\u00bfCu\u00e1l opci\u00f3n define mejor el modelo de programaci\u00f3n as\u00edncrona de C#?",
-        "answer": "basado en tareas",
-        "explanation": "[Documentaci\u00f3n oficial: Modelo de programaci\u00f3n as\u00edncrona basado en tareas](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model) respuesta correta --> var contacts = new List<string>();",
-        "hint": null,
-        "correctAnswer": [
-          "basado en tareas"
-        ],
-        "options": [
-          "reactivo",
-          "callback heredado",
-          "basado en tareas",
-          "basado en callbacks"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5b783ebe55b5dca265448210",
-        "question": "\u00bfC\u00f3mo determinar\u00edas si una clase tiene un atributo particular?",
-        "answer": ".",
-        "explanation": "```cs\nvar type = typeof(SomeType);\nvar attribute = type.GetCustomAttribute<SomeAttribute>();\n```\n```cs\nvar typeof(MyPresentationModel).Should().BeDecoratedWith<SomeAttribute>();\n```\n```cs\nAttribute.GetCustomAttribute, typeof(SubControllerActionToViewDataAttribute)\n```\n```cs\nAttribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActionToViewDataAttribute))\n```\n1. [Documentaci\u00f3n oficial: Clase Attribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute?view=net-5.0)\n2. [Documentaci\u00f3n oficial: M\u00e9todo Attribute.GetCustomAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute.getcustomattribute?view=net-5.0)",
-        "hint": null,
-        "correctAnswer": [
-          "."
-        ],
-        "options": [
-          ".",
-          ".",
-          ".",
-          "."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3296f15adb44bcbbd3481cf8",
-        "question": "\u00bfCu\u00e1l es la diferencia entre las palabras clave ref y out?",
-        "answer": "Las variables pasadas a out pueden ser pasadas a una funci\u00f3n sin ser inicializadas, mientras que ref especifica que el valor es un valor de referencia que puede ser cambiado dentro del m\u00e9todo que llama.",
-        "explanation": "1. [Documentaci\u00f3n oficial: ref](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref)\n2. [Documentaci\u00f3n oficial: modificador de par\u00e1metro out](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier)",
-        "hint": null,
-        "correctAnswer": [
-          "Las variables pasadas a out pueden ser pasadas a una funci\u00f3n sin ser inicializadas, mientras que ref especifica que el valor es un valor de referencia que puede ser cambiado dentro del m\u00e9todo que llama."
-        ],
-        "options": [
-          "Las variables pasadas a out especifican que el par\u00e1metro es un par\u00e1metro de salida, mientras que ref especifica que una variable puede ser pasada a una funci\u00f3n sin ser inicializada.",
-          "Las variables pasadas a ref pueden ser pasadas a una funci\u00f3n sin ser inicializadas, mientras que out especifica que el valor es un valor de referencia que puede ser cambiado dentro del m\u00e9todo que llama.",
-          "Las variables pasadas a out pueden ser pasadas a una funci\u00f3n sin ser inicializadas, mientras que ref especifica que el valor es un valor de referencia que puede ser cambiado dentro del m\u00e9todo que llama.",
-          "Las variables pasadas a ref especifican que el par\u00e1metro es un par\u00e1metro de salida, mientras que out especifica que una variable puede ser pasada a una funci\u00f3n sin ser inicializada."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2f11e4fb2e948153a2912a64",
-        "question": "\u00bfC\u00f3mo podr\u00edas recuperar informaci\u00f3n sobre una clase, as\u00ed como crear una instancia en tiempo de ejecuci\u00f3n?",
-        "answer": "reflexi\u00f3n",
-        "explanation": "[Documentaci\u00f3n oficial: Reflexi\u00f3n](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection)",
-        "hint": null,
-        "correctAnswer": [
-          "reflexi\u00f3n"
-        ],
-        "options": [
-          "reflexi\u00f3n",
-          "serializaci\u00f3n",
-          "abstracci\u00f3n",
-          "inyecci\u00f3n de dependencias"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c21286f5a5d2b4386f4748e8",
-        "question": "\u00bfDe qu\u00e9 es un ejemplo este c\u00f3digo?\n```cs\n    private static object objA;\n    private static object objB;\n    private static void performTaskA()\n    {\n        lock (objB)\n        {\n            Thread.Sleep(1000);\n            lock (objA) { }\n        }\n    }\n    private static void PerformTaskB()\n    {\n        lock (objA)\n        {\n            lock (objB) { }\n        }\n    }\n```",
-        "answer": "un deadlock potencial",
-        "explanation": "[Documentaci\u00f3n oficial: Deadlocks y condiciones de carrera](https://docs.microsoft.com/en-us/dotnet/standard/threading/managed-threading-best-practices#deadlocks-and-race-conditions)",
-        "hint": null,
-        "correctAnswer": [
-          "un deadlock potencial"
-        ],
-        "options": [
-          "una clase privada que usa multithreading",
-          "codificaci\u00f3n multithread",
-          "mala gesti\u00f3n de hilos",
-          "un deadlock potencial"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7b3196e27c357e75ada5ec54",
-        "question": "\u00bfCu\u00e1l es la diferencia entre un tipo an\u00f3nimo y un tipo de datos regular?",
-        "answer": "Los tipos an\u00f3nimos no tienen nombres de tipo",
-        "explanation": "[Documentaci\u00f3n oficial: Tipos An\u00f3nimos](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types)",
-        "hint": null,
-        "correctAnswer": [
-          "Los tipos an\u00f3nimos no tienen nombres de tipo"
-        ],
-        "options": [
-          "Los tipos an\u00f3nimos no tienen nombres de tipo",
-          "Los tipos an\u00f3nimos solo pueden ser est\u00e1ticos",
-          "Los tipos an\u00f3nimos solo pueden ser usados en structs",
-          "Los tipos an\u00f3nimos no funcionan con LINQ."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "538f6095c74437459f64f692",
-        "question": "\u00bfCu\u00e1ndo usar\u00edas un Dictionary en lugar de un tipo Array en tu aplicaci\u00f3n?",
-        "answer": "Cuando necesitas almacenar pares clave-valor en lugar de valores \u00fanicos",
-        "explanation": "[Documentaci\u00f3n oficial: Clase Dictionary<TKey,TValue>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-5.0)",
-        "hint": null,
-        "correctAnswer": [
-          "Cuando necesitas almacenar pares clave-valor en lugar de valores \u00fanicos"
-        ],
-        "options": [
-          "Cuando necesitas una estructura de colecci\u00f3n irregular",
-          "Cuando necesitas almacenar valores del mismo tipo",
-          "Cuando necesitas almacenar pares clave-valor en lugar de valores \u00fanicos",
-          "Cuando necesitas una lista ordenada y buscable"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "58d58781d6ffed9bc0b529fc",
-        "question": "\u00bfCu\u00e1l es la diferencia entre a.Equals(b) y a == b?",
-        "answer": "El m\u00e9todo .Equals compara contenidos mientras que `==` compara identidad de referencia.",
-        "explanation": "1. [Documentaci\u00f3n oficial: Object.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals)\n2. [c-sharpcorner: Operador de Igualdad(==) vs .Equals()](https://www.c-sharpcorner.com/UploadFile/3d39b4/difference-between-operator-and-equals-method-in-C-Sharp)",
-        "hint": null,
-        "correctAnswer": [
-          "El m\u00e9todo .Equals compara contenidos mientras que `==` compara identidad de referencia."
-        ],
-        "options": [
-          "El m\u00e9todo .Equals compara identidades de referencia mientras que `==` compara contenidos.",
-          "El m\u00e9todo .Equals compara valores primitivos mientras que `==` compara todos los valores.",
-          "El m\u00e9todo .Equals compara contenidos mientras que `==` compara identidad de referencia.",
-          "El m\u00e9todo .Equals compara tipos de referencia mientras que `==` compara tipos de valor primitivos"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3402e803e43f9621ae05c2ad",
-        "question": "\u00bfCu\u00e1l opci\u00f3n describe mejor una situaci\u00f3n de deadlock?",
-        "answer": "cuando instrucciones simult\u00e1neas est\u00e1n esperando unas a otras para terminar antes de ejecutarse",
-        "explanation": "[Documentaci\u00f3n oficial: Deadlocks y condiciones de carrera](https://docs.microsoft.com/en-us/dotnet/standard/threading/managed-threading-best-practices#deadlocks-and-race-conditions)",
-        "hint": null,
-        "correctAnswer": [
-          "cuando instrucciones simult\u00e1neas est\u00e1n esperando unas a otras para terminar antes de ejecutarse"
-        ],
-        "options": [
-          "cuando intentas instanciar dos objetos al mismo tiempo en la misma clase o struct",
-          "cuando est\u00e1s tratando de ejecutar una acci\u00f3n despu\u00e9s de que se registra un evento de usuario",
-          "cuando instrucciones simult\u00e1neas est\u00e1n esperando unas a otras para terminar antes de ejecutarse",
-          "cuando intentas ejecutar una serie de eventos simult\u00e1neamente en m\u00faltiples hilos"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fafbd73733271b8531697c52",
-        "question": "\u00bfC\u00f3mo funciona la palabra clave async?",
-        "answer": "Permite que la palabra clave await sea usada en un m\u00e9todo",
-        "explanation": "[Documentaci\u00f3n oficial: async](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async)",
-        "hint": null,
-        "correctAnswer": [
-          "Permite que la palabra clave await sea usada en un m\u00e9todo"
-        ],
-        "options": [
-          "Permite acceso a m\u00e9todos as\u00edncronos en la API de C#",
-          "Permite agrupaci\u00f3n de hilos y procesos s\u00edncronos en clases est\u00e1ticas.",
-          "Permite que la palabra clave await sea usada en un m\u00e9todo",
-          "Permite acceso a m\u00e9todos s\u00edncronos en la API de C#"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "41666b6272c9879dd72ddc0c",
-        "question": "\u00bfQu\u00e9 es un objeto en C#?",
-        "answer": "una instancia de una clase o struct que incluye campos, propiedades y/o m\u00e9todos",
-        "explanation": "[Documentaci\u00f3n oficial: Objetos](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/objects)",
-        "hint": null,
-        "correctAnswer": [
-          "una instancia de una clase o struct que incluye campos, propiedades y/o m\u00e9todos"
-        ],
-        "options": [
-          "una clase o struct, incluyendo sus variables y funciones",
-          "un tipo de datos primitivo que solo puede ser creado en tiempo de compilaci\u00f3n",
-          "un tipo de valor que solo puede ser usado con una clase abstracta",
-          "una instancia de una clase o struct que incluye campos, propiedades y/o m\u00e9todos"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f4ec1325ce22171a1658a7d2",
-        "question": "\u00bfQu\u00e9 fragmento de c\u00f3digo declara un tipo an\u00f3nimo llamado userData?",
-        "answer": "`var userData = new { name = \"John\", age = 32 };`",
-        "explanation": "[Documentaci\u00f3n oficial: Tipos An\u00f3nimos](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types)",
-        "hint": null,
-        "correctAnswer": [
-          "`var userData = new { name = \"John\", age = 32 };`"
-        ],
-        "options": [
-          "`var<<!---->T> userData = new <<!---->T> { name = \"John\", age = 32 };`",
-          "`var userData = new { name = \"John\", age = 32 };`",
-          "`AType userData = new AType { name = \"John\", age = 32 };`",
-          "`Anonymous<T> userData = new Anonymous<T> { name = \"John\", age = 32 };`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1c26e12915e56851dc53e213",
-        "question": "\u00bfQu\u00e9 ser\u00e1 retornado cuando este m\u00e9todo sea ejecutado?\n`public void userInput(string charParameters) { }`",
-        "answer": "Nada",
-        "explanation": "[Documentaci\u00f3n oficial: void](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/void)",
-        "hint": null,
-        "correctAnswer": [
-          "Nada"
-        ],
-        "options": [
-          "Nada",
-          "un Boolean",
-          "una variable string",
-          "un entero"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3bdd062eb59974d516bcbbbb",
-        "question": "\u00bfEn qu\u00e9 orden ser\u00edan impresos los nombres de empleados en este ejemplo en la consola?\n```cs\nstring[] employees = { \"Joe\", \"Bob\", \"Carol\", \"Alice\", \"Will\" };\nIEnumerable<string> employeeQuery = from person in employees\n                                    orderby person\n                                    select person;\nforeach(string employee in employeeQuery)\n{\n    Console.WriteLine(employee);\n}\n```",
-        "answer": "ascendente",
-        "explanation": "[dotnetpattern: Operador LINQ OrderBy](http://dotnetpattern.com/linq-orderby-operator)",
-        "hint": null,
-        "correctAnswer": [
-          "ascendente"
-        ],
-        "options": [
-          "ascendente",
-          "desordenado",
-          "descendente",
-          "primero en entrar, primero en salir"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "da5667f4d65bd49be05a6f5b",
-        "question": "Las expresiones lambda son frecuentemente usadas en conjunto con cu\u00e1l de las siguientes?",
-        "answer": "LINQ",
-        "explanation": "[Documentaci\u00f3n oficial: Resumen de Language Integrated Query (LINQ)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/)",
-        "hint": null,
-        "correctAnswer": [
-          "LINQ"
-        ],
-        "options": [
-          "Namespaces",
-          "LINQ",
-          "Alias de Tipos",
-          "Assemblies"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "00666cd77a33371652960f9f",
-        "question": "\u00bfCu\u00e1l es el formato correcto para comentarios de una l\u00ednea y m\u00faltiples l\u00edneas?",
-        "answer": "`// Una L\u00ednea`",
-        "explanation": "`/_ - M\u00faltiples l\u00edneas`\n`/_ Una L\u00ednea _/`\n`/ Una L\u00ednea`\n`/* M\u00faltiples l\u00edneas */`\n[w3schools: Comentarios C#](https://www.w3schools.com/cs/cs_comments.php)",
-        "hint": null,
-        "correctAnswer": [
-          "`// Una L\u00ednea`"
-        ],
-        "options": [
-          "`/_/ - Una L\u00ednea`",
-          "`// M\u00faltiples l\u00edneas`",
-          "`//\\* M\u00faltiples l\u00edneas`",
-          "`// Una L\u00ednea`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d4ca88673bb3b1669841859f",
-        "question": "\u00bfC\u00f3mo haces que un m\u00e9todo en una clase abstracta sea sobrescribible?",
-        "answer": "Hazlo virtual",
-        "explanation": "1. [Documentaci\u00f3n oficial: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)\n2. [Documentaci\u00f3n oficial: abstract](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)",
-        "hint": null,
-        "correctAnswer": [
-          "Hazlo virtual"
-        ],
-        "options": [
-          "Hazlo p\u00fablico",
-          "Hazlo est\u00e1tico",
-          "Hazlo privado",
-          "Hazlo virtual"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "abdade12d3262edb634461ff",
-        "question": "\u00bfC\u00f3mo escribir\u00edas c\u00f3digo para una propiedad entera llamada Age con un getter y setter?",
-        "answer": "public int Age { get; set; }",
-        "explanation": "[Documentaci\u00f3n oficial: Usando Propiedades](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties)",
-        "hint": null,
-        "correctAnswer": [
-          "public int Age { get; set; }"
-        ],
-        "options": [
-          "public int Age { get - set }",
-          "public int Age: get set;",
-          "public int Age (get, set );",
-          "public int Age { get; set; }"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4152bcb1d8e2e107ddfe6ec7",
-        "question": "\u00bfQu\u00e9 es una clase abstracta?",
-        "answer": "una clase que solo puede ser usada como una clase base",
-        "explanation": "[Documentaci\u00f3n oficial: Clases Abstractas y Selladas y Miembros de Clase](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members)",
-        "hint": null,
-        "correctAnswer": [
-          "una clase que solo puede ser usada como una clase base"
-        ],
-        "options": [
-          "una clase que est\u00e1 denotada por la palabra clave class (puede ser vista y usada por cualquier otra clase en el sistema--por lo tanto es p\u00fablica por defecto)",
-          "algo denotado por la palabra clave abstract y usado en todo el sistema; si quieres que cualquier programa cree un objeto de una clase usas la clase abstracta",
-          "una clase que est\u00e1 denotada por la palabra clave virtual",
-          "una clase que solo puede ser usada como una clase base"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f6601f40e91eab9a87e86631",
-        "question": "\u00bfQu\u00e9 pasa con un hilo dado despu\u00e9s de que termina su tarea cuando usas un thread pool?",
-        "answer": "El hilo regresa al pool para reutilizaci\u00f3n.",
-        "explanation": "[Documentaci\u00f3n oficial: Caracter\u00edsticas del thread pool](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool#thread-pool-characteristics)",
-        "hint": null,
-        "correctAnswer": [
-          "El hilo regresa al pool para reutilizaci\u00f3n."
-        ],
-        "options": [
-          "El hilo es destruido y la memoria es liberada.",
-          "El hilo corre en un bucle hasta la siguiente asignaci\u00f3n.",
-          "El hilo se vuelve inactivo en el fondo y espera la recolecci\u00f3n de basura.",
-          "El hilo regresa al pool para reutilizaci\u00f3n."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a08f60f2a11ff68d92bb9f1e",
-        "question": "\u00bfCu\u00e1l opci\u00f3n representa una clase que hereda comportamiento de una clase base?",
-        "answer": "una clase derivada",
-        "explanation": "[Documentaci\u00f3n oficial: Herencia](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)",
-        "hint": null,
-        "correctAnswer": [
-          "una clase derivada"
-        ],
-        "options": [
-          "una segunda clase base",
-          "una clase revisada",
-          "una clase derivada",
-          "una clase padre"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b34eef03e0278a4b2cd2e523",
-        "question": "\u00bfQu\u00e9 te permite hacer la sobrecarga de operadores?",
-        "answer": "definir funcionalidad personalizada para operadores comunes como suma e igualdad",
-        "explanation": "[Documentaci\u00f3n oficial: Sobrecarga de operadores](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading)",
-        "hint": null,
-        "correctAnswer": [
-          "definir funcionalidad personalizada para operadores comunes como suma e igualdad"
-        ],
-        "options": [
-          "ocultar operadores integrados cuando sea necesario",
-          "agregar m\u00e9todos para ser interpretados por el compilador en tiempo de ejecuci\u00f3n",
-          "definir c\u00f3mo funcionan los enums y otros tipos de valor primitivos dentro del resto de la aplicaci\u00f3n",
-          "definir funcionalidad personalizada para operadores comunes como suma e igualdad"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "73e05fc552f0356fd2795379",
-        "question": "\u00bfCu\u00e1l es el prop\u00f3sito principal de LINQ?",
-        "answer": "para consultar y transformar datos",
-        "explanation": "[Documentaci\u00f3n oficial: Resumen de Language Integrated Query (LINQ)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/#query-expression-overview)",
-        "hint": null,
-        "correctAnswer": [
-          "para consultar y transformar datos"
-        ],
-        "options": [
-          "para eliminar datos duplicados",
-          "para vincular namespaces y assemblies",
-          "para consultar y transformar datos",
-          "para conectar assemblies"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8018a767639103368523f861",
-        "question": "\u00bfCu\u00e1l es la sintaxis correcta para una nueva lista gen\u00e9rica de strings llamada contacts?",
-        "answer": "var contacts = new List<string>();",
-        "explanation": "[Documentaci\u00f3n oficial: Clase List<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-5.0)",
-        "hint": null,
-        "correctAnswer": [
-          "var contacts = new List<string>();"
-        ],
-        "options": [
-          "public List<string names> contacts = new List<string names>();",
-          "public List(string names) contacts = new List(string names)();",
-          "var contacts = new List<string>();",
-          "var contacts = new List(string);"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9ebf65a581ef54dcf91c3b4a",
-        "question": "\u00bfCu\u00e1l es la diferencia entre throw exceptions y throw clauses?",
-        "answer": "Las throw exceptions sobrescriben el stack trace, mientras que las throw clauses retienen la informaci\u00f3n del stack.",
-        "explanation": "1. [Documentaci\u00f3n oficial: throw](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw)\n2. [c-sharpcorner: Diferencia Entre Throw Exception y Throw Clause](https://www.c-sharpcorner.com/UploadFile/akkiraju/difference-between-throw-exception-and-throw-clause/)",
-        "hint": null,
-        "correctAnswer": [
-          "Las throw exceptions sobrescriben el stack trace, mientras que las throw clauses retienen la informaci\u00f3n del stack."
-        ],
-        "options": [
-          "Las throw clauses se disparan solo en tiempo de ejecuci\u00f3n, mientras que las throw exceptions pueden dispararse en cualquier momento.",
-          "Las throw exceptions sobrescriben el stack trace, mientras que las throw clauses retienen la informaci\u00f3n del stack.",
-          "Las throw clauses sobrescriben el stack trace, mientras que las throw exceptions retienen la informaci\u00f3n del stack.",
-          "Las throw exceptions se disparan solo en tiempo de ejecuci\u00f3n, mientras que las throw clauses pueden dispararse durante el tiempo de compilaci\u00f3n."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5eb1c3fb5455f990e3b12e7a",
-        "question": "Cuando un m\u00e9todo as\u00edncrono es ejecutado, el c\u00f3digo corre pero no pasa nada m\u00e1s que una advertencia del compilador. \u00bfQu\u00e9 es lo m\u00e1s probable que est\u00e9 causando que el m\u00e9todo no retorne nada?",
-        "answer": "El m\u00e9todo est\u00e1 faltando una palabra clave await en su cuerpo.",
-        "explanation": "[Documentaci\u00f3n oficial: Iniciando tareas concurrentemente](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/#start-tasks-concurrently)",
-        "hint": null,
-        "correctAnswer": [
-          "El m\u00e9todo est\u00e1 faltando una palabra clave await en su cuerpo."
-        ],
-        "options": [
-          "Falta la declaraci\u00f3n return yield al final del m\u00e9todo.",
-          "El m\u00e9todo est\u00e1 faltando una palabra clave await en su cuerpo.",
-          "Falta la palabra clave wait al final del m\u00e9todo.",
-          "Falta la palabra clave yield en el m\u00e9todo."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9c1c7c894b342e981194ede1",
-        "question": "\u00bfQu\u00e9 son los eventos de C#?",
-        "answer": "acciones que generan notificaciones, que son enviadas a sus listeners registrados",
-        "explanation": "[Documentaci\u00f3n oficial: Introducci\u00f3n a eventos](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)",
-        "hint": null,
-        "correctAnswer": [
-          "acciones que generan notificaciones, que son enviadas a sus listeners registrados"
-        ],
-        "options": [
-          "acciones del sistema que se comunican directamente con el compilador en tiempo de ejecuci\u00f3n",
-          "acciones que se ejecutan cuando el c\u00f3digo compila, generando logs y salida de prueba",
-          "acciones que generan notificaciones, que son enviadas a sus listeners registrados",
-          "m\u00e9todos solo de usuario que env\u00edan datos al backend de la aplicaci\u00f3n"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7a43285cdb9359689230c695",
-        "question": "\u00bfQu\u00e9 tipo de valores pueden almacenar los arrays?",
-        "answer": "m\u00faltiples variables, o colecciones, del mismo tipo",
-        "explanation": "[Documentaci\u00f3n oficial: Arrays](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/)",
-        "hint": null,
-        "correctAnswer": [
-          "m\u00faltiples variables, o colecciones, del mismo tipo"
-        ],
-        "options": [
-          "colecciones desordenadas de valores num\u00e9ricos",
-          "pares clave-valor de cualquier tipo soportado por C#",
-          "instancias de clase y struct",
-          "m\u00faltiples variables, o colecciones, del mismo tipo"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b048330493398f286bfc70f7",
-        "question": "Dada esta enumeraci\u00f3n, \u00bfc\u00f3mo acceder\u00edas al valor de tipo entero de 'AppState.Loading'?\n`enum AppState { OffLine, Loading, Ready }`",
-        "answer": "int currentState = (int)AppState.Loading;",
-        "explanation": "[Documentaci\u00f3n oficial: Tipos de enumeraci\u00f3n](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum#conversions)",
-        "hint": null,
-        "correctAnswer": [
-          "int currentState = (int)AppState.Loading;"
-        ],
-        "options": [
-          "string currentState = (string)AppState.Loading;",
-          "string currentState = AppState.Loading.integralVal;",
-          "int currentState = AppState.Loading.rawValue;",
-          "int currentState = (int)AppState.Loading;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9a09b3148a077a0f78bf55aa",
-        "question": "\u00bfQu\u00e9 car\u00e1cter usar\u00edas para iniciar un patr\u00f3n de expresi\u00f3n regular en un l\u00edmite de palabra?",
-        "answer": "\\b",
-        "explanation": "1. [regular-expressions: L\u00edmites de Palabra](https://www.regular-expressions.info/wordboundaries.html)\n2. [Documentaci\u00f3n oficial: Referencia R\u00e1pida del Lenguaje de Expresi\u00f3n Regular](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)",
-        "hint": null,
-        "correctAnswer": [
-          "\\b"
-        ],
-        "options": [
-          "d",
-          "\\a",
-          "\\b",
-          "\\w"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "70dd6e79ef07af80fd2d6489",
-        "question": "Para conformar a la siguiente interface, \u00bfcu\u00e1les de sus miembros necesitan ser implementados?\n```cs\npublic interface INameable\n{\n    string FirstName { get; set; }\n    string LastName { get; }\n}\n```",
-        "answer": "Ambas propiedades FirstName y LastName necesitan ser implementadas.",
-        "explanation": "[Documentaci\u00f3n oficial: interface](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface)",
-        "hint": null,
-        "correctAnswer": [
-          "Ambas propiedades FirstName y LastName necesitan ser implementadas."
-        ],
-        "options": [
-          "Ambas propiedades FirstName y LastName necesitan ser implementadas.",
-          "Ninguna, ambas son opcionales.",
-          "Solo la propiedad LastName necesita ser implementada.",
-          "Solo la propiedad FirstName necesita ser implementada."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "89fe2938ab43739310017bf7",
-        "question": "Est\u00e1s tratando con m\u00faltiples assemblies en tu programa, pero est\u00e1s preocupado por la asignaci\u00f3n de memoria. \u00bfEn qu\u00e9 punto del ciclo de vida del programa se cargan los assemblies en memoria?",
-        "answer": "solo cuando se requieren",
-        "explanation": "1. [Documentaci\u00f3n oficial: Carga de Assemblies](https://docs.microsoft.com/en-us/dotnet/framework/deployment/best-practices-for-assembly-loading)\n2. [Stackoverflow: \u00bfCu\u00e1ndo exactamente se cargan los assemblies?](https://stackoverflow.com/questions/21914692/when-exactly-are-assemblies-loaded)",
-        "hint": null,
-        "correctAnswer": [
-          "solo cuando se requieren"
-        ],
-        "options": [
-          "en tiempo de ejecuci\u00f3n",
-          "en tiempo de compilaci\u00f3n",
-          "solo cuando se requieren",
-          "solo cuando se cargan program\u00e1ticamente"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6e3ddaa64d9279b7a70712ee",
-        "question": "\u00bfCu\u00e1l es la descripci\u00f3n m\u00e1s precisa de una expresi\u00f3n regular?",
-        "answer": "Una expresi\u00f3n regular es una cadena de texto especial para describir un patr\u00f3n de b\u00fasqueda.",
-        "explanation": "1. [Documentaci\u00f3n oficial: Referencia R\u00e1pida del Lenguaje de Expresi\u00f3n Regular](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)\n2. [Documentaci\u00f3n oficial: Expresiones regulares .NET](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions)",
-        "hint": null,
-        "correctAnswer": [
-          "Una expresi\u00f3n regular es una cadena de texto especial para describir un patr\u00f3n de b\u00fasqueda."
-        ],
-        "options": [
-          "Una expresi\u00f3n regular es una herramienta de C# usada para parsear HTML",
-          "Una expresi\u00f3n regular es una cadena de texto especial para describir un patr\u00f3n de b\u00fasqueda.",
-          "Una expresi\u00f3n regular permite que una variable sea pasada por referencia.",
-          "Una expresi\u00f3n regular permite que una clase se conforme al protocolo Equatable."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "379c7942b5ea85f5ba64bd5a",
-        "question": "\u00bfPor qu\u00e9 usar\u00edas un campo de clase en C#?",
-        "answer": "Para mantener informaci\u00f3n y datos contenidos en el objeto de clase",
-        "explanation": "[Documentaci\u00f3n oficial: Introducci\u00f3n a clases](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes)",
-        "hint": null,
-        "correctAnswer": [
-          "Para mantener informaci\u00f3n y datos contenidos en el objeto de clase"
-        ],
-        "options": [
-          "Para definir los comportamientos de la clase",
-          "Para mantener informaci\u00f3n y datos contenidos en el objeto de clase",
-          "Para comunicar entre clases y objetos",
-          "Para almacenar el valor de definici\u00f3n de la clase"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c6ff37bd18ab30e05543ba7a",
-        "question": "\u00bfCu\u00e1ndo usar\u00edas gen\u00e9ricos en tu c\u00f3digo?",
-        "answer": "todas estas respuestas",
-        "explanation": "[Documentaci\u00f3n oficial: Clases y m\u00e9todos gen\u00e9ricos](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics)",
-        "hint": null,
-        "correctAnswer": [
-          "todas estas respuestas"
-        ],
-        "options": [
-          "para aumentar el rendimiento del c\u00f3digo",
-          "todas estas respuestas",
-          "cuando la reutilizaci\u00f3n de c\u00f3digo es una prioridad",
-          "cuando la seguridad de tipos es importante"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d8cb259d3f1844c153bad3a1",
-        "question": "\u00bfQu\u00e9 se imprime en la consola cuando este c\u00f3digo es ejecutado?\n```cs\npublic delegate void AuthCallback(bool validUser);\npublic static AuthCallback loginCallback = Login;\npublic static void Login()\n{\n    Console.WriteLine(\"Valid user!\");\n}\npublic static void Main(string[] args)\n{\n    loginCallback(true);\n}\n```",
-        "answer": "un error, porque la firma del m\u00e9todo Login no coincide con el delegate",
-        "explanation": "1. [Documentaci\u00f3n oficial: Introducci\u00f3n a Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/delegates-overview)\n2. [Documentaci\u00f3n oficial: Introducci\u00f3n a Eventos](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)",
-        "hint": null,
-        "correctAnswer": [
-          "un error, porque la firma del m\u00e9todo Login no coincide con el delegate"
-        ],
-        "options": [
-          "Login successful...",
-          "Valid user!",
-          "un error, porque la firma del m\u00e9todo Login no coincide con el delegate",
-          "Login successful... Valid user!"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a2c83555ddaa010f69a6e0ca",
-        "question": "\u00bfC\u00f3mo declarar\u00edas una clase sellada llamada User?",
-        "answer": "sealed class User {}",
-        "explanation": "[Documentaci\u00f3n oficial: Clases Abstractas y Selladas y Miembros de Clase](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members)",
-        "hint": null,
-        "correctAnswer": [
-          "sealed class User {}"
-        ],
-        "options": [
-          "public class User {}",
-          "abstract User {}",
-          "sealed class User {}",
-          "private sealed class User {}"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5288c9fc6436e3494febf8cd",
-        "question": "\u00bfCu\u00e1l es la diferencia entre clases no est\u00e1ticas y est\u00e1ticas?",
-        "answer": "las clases no est\u00e1ticas necesitan ser inicializadas antes del uso, mientras que las clases est\u00e1ticas no",
-        "explanation": "1. [stackoverflow](https://stackoverflow.com/questions/20451554/whats-the-function-of-a-static-constructor-in-a-non-static-class)\n2. [Documentaci\u00f3n oficial: Constructores Est\u00e1ticos](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-constructors)",
-        "hint": null,
-        "correctAnswer": [
-          "las clases no est\u00e1ticas necesitan ser inicializadas antes del uso, mientras que las clases est\u00e1ticas no"
-        ],
-        "options": [
-          "las clases no est\u00e1ticas necesitan ser inicializadas antes del uso, mientras que las clases est\u00e1ticas no",
-          "las clases no est\u00e1ticas son accesibles solo desde una interface mientras que las clases est\u00e1ticas son accesibles desde cualquier lugar",
-          "las clases no est\u00e1ticas necesitan inicializar todos los miembros de clase en tiempo de ejecuci\u00f3n, mientras que las clases est\u00e1ticas no",
-          "las clases no est\u00e1ticas no necesitan ser inicializadas mientras que las clases est\u00e1ticas s\u00ed"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "46ad416fbd9de9f9e9d966a6",
-        "question": "\u00bfQu\u00e9 caracter\u00edstica previene que este c\u00f3digo compile?\n`public int age=\"28\"`",
-        "answer": "seguridad de tipos",
-        "explanation": "[c-sharpcorner: Seguridad de Tipos en .NET](https://www.c-sharpcorner.com/UploadFile/vikie4u/type-safety-in-net/)",
-        "hint": null,
-        "correctAnswer": [
-          "seguridad de tipos"
-        ],
-        "options": [
-          "seguridad de tipos",
-          "herencia simple",
-          "inyecci\u00f3n de dependencias",
-          "herencia m\u00faltiple"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a6b26878aa1dee88ee4eb757",
-        "question": "\u00bfC\u00f3mo serializar\u00edas esta clase?\n`public class User {}`",
-        "answer": "Marca la clase User con el atributo `SerializableAttribute`.",
-        "explanation": "[Documentaci\u00f3n oficial: Clase SerializableAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=net-5.0)",
-        "hint": null,
-        "correctAnswer": [
-          "Marca la clase User con el atributo `SerializableAttribute`."
-        ],
-        "options": [
-          "Marca la clase User con el `DeserializableAttribute`.",
-          "Declara la clase como `public serializable class User {}`.",
-          "Marca la clase User con el atributo `SerializableAttribute`.",
-          "Declara la clase como `private serializable class User {}`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f70daa1b65494c9122838062",
-        "question": "\u00bfC\u00f3mo escribir\u00edas un delegate llamado ResultCallback con un par\u00e1metro int llamado responseCode?",
-        "answer": "public delegate void ResultCallback(int responseCode);",
-        "explanation": "[Documentaci\u00f3n oficial: Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)",
-        "hint": null,
-        "correctAnswer": [
-          "public delegate void ResultCallback(int responseCode);"
-        ],
-        "options": [
-          "public delegate ResultCallback(int responseCode);",
-          "public delegate void ResultCallback<(int) responseCode>;",
-          "public void delegate ResultCallback\\<int responseCode\\>;",
-          "public delegate void ResultCallback(int responseCode);"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8661f8dba5975fddb5defa56",
-        "question": "\u00bfCu\u00e1l es la diferencia entre un m\u00e9todo est\u00e1tico y no est\u00e1tico?",
-        "answer": "los m\u00e9todos est\u00e1ticos no tienen que instanciar una instancia de la clase para llamar al m\u00e9todo",
-        "explanation": "[Documentaci\u00f3n oficial: Miembros Est\u00e1ticos](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members#static-members)",
-        "hint": null,
-        "correctAnswer": [
-          "los m\u00e9todos est\u00e1ticos no tienen que instanciar una instancia de la clase para llamar al m\u00e9todo"
-        ],
-        "options": [
-          "los m\u00e9todos no est\u00e1ticos siempre necesitan tener un tipo de retorno void",
-          "los m\u00e9todos no est\u00e1ticos no tienen acceso a variables miembro est\u00e1ticas",
-          "los m\u00e9todos est\u00e1ticos no tienen que instanciar una instancia de la clase para llamar al m\u00e9todo",
-          "los m\u00e9todos est\u00e1ticos siempre tienen que ser p\u00fablicos"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "236a0fd64be46a1877533bac",
-        "question": "\u00bfCu\u00e1l es la forma correcta de escribir un evento llamado apiResult basado en un delegate llamado ResultCallback?",
-        "answer": "public event ResultCallback apiResult;",
-        "explanation": "[Documentaci\u00f3n oficial: Introducci\u00f3n a eventos](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)",
-        "hint": null,
-        "correctAnswer": [
-          "public event ResultCallback apiResult;"
-        ],
-        "options": [
-          "public void event ResultCallback apiResult;",
-          "public event ResultCallback(() -> apiResult);",
-          "public event void ResultCallback",
-          "public event ResultCallback apiResult;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "36644f072849f13dea452e2e",
-        "question": "\u00bfCu\u00e1ndo se ejecutar\u00e1 el c\u00f3digo dentro del bloque finally en una declaraci\u00f3n try-catch?",
-        "answer": "despu\u00e9s de los bloques try y catch",
-        "explanation": "[Documentaci\u00f3n oficial: try-catch](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch)",
-        "hint": null,
-        "correctAnswer": [
-          "despu\u00e9s de los bloques try y catch"
-        ],
-        "options": [
-          "si hay un error, no se ejecutar\u00e1 en absoluto",
-          "entre los bloques try y catch",
-          "despu\u00e9s de los bloques try y catch",
-          "cuando el bloque finally anula el bloque catch y se ejecuta en su lugar"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bdf05622538dc8ed0ece589b",
-        "question": "\u00bfQu\u00e9 m\u00e9todo extiende correctamente la clase string?",
-        "answer": "public static string IsvalidName(this string i, string value) {}",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "public static string IsvalidName(this string i, string value) {}"
-        ],
-        "options": [
-          "public static string IsvalidName(this string i, string value) {}",
-          "public static void IsvalidName(this string i, string value) {}",
-          "public string IsvalidName(this string i, string value) {}",
-          "public void IsvalidName(this string i, string value) {}"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f58e484a6e250b6e91c94294",
-        "question": "\u00bfC\u00f3mo est\u00e1n limitadas las clases de C#?",
-        "answer": "No soportan herencia m\u00faltiple.",
-        "explanation": "[Documentaci\u00f3n oficial: Herencia de clases](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes#class-inheritance)",
-        "hint": null,
-        "correctAnswer": [
-          "No soportan herencia m\u00faltiple."
-        ],
-        "options": [
-          "No soportan herencia m\u00faltiple.",
-          "Soportan herencia m\u00faltiple.",
-          "Solo pueden tener un n\u00famero establecido de propiedades.",
-          "Solo pueden tener un n\u00famero establecido de m\u00e9todos."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "343526c9eb35b02e9bb83b91",
-        "question": "\u00bfQu\u00e9 funci\u00f3n realizan los namespaces?",
-        "answer": "Los namespaces separan c\u00f3digo en agrupaciones, controlan el acceso y evitan colisiones de nombres.",
-        "explanation": "[Documentaci\u00f3n oficial: namespace](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/namespace)",
-        "hint": null,
-        "correctAnswer": [
-          "Los namespaces separan c\u00f3digo en agrupaciones, controlan el acceso y evitan colisiones de nombres."
-        ],
-        "options": [
-          "Los namespaces calculan la cobertura de c\u00f3digo en tiempo de ejecuci\u00f3n.",
-          "Los namespaces compilan el c\u00f3digo de aplicaci\u00f3n juntos en tiempo de compilaci\u00f3n.",
-          "Los namespaces agrupan c\u00f3digo juntos en un solo repositorio.",
-          "Los namespaces separan c\u00f3digo en agrupaciones, controlan el acceso y evitan colisiones de nombres."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "86d50f16a767e7a7b8742a3f",
-        "question": "\u00bfCu\u00e1l es la forma correcta de escribir una propiedad p\u00fablica con un campo de respaldo privado?",
-        "answer": "D",
-        "explanation": "```cs\nprivate int _password;\npubic int Password = { get; set; }\n```\n```cs\nprivate int _password;\npublic int Password = _password;\n```\n```cs\nprivate int _password;\npublic int Password\n{\nget -> _password;\nset-> _password = value;\n}\n```\n```cs\nprivate int _password;\npublic int Password\n{\nget { return _password; }\nset { _password = value; }\n}\n```\n[Documentaci\u00f3n oficial: Usando Propiedades](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties)",
-        "hint": null,
-        "correctAnswer": [
-          "D"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9026b9373b796ed9aa7d6027",
-        "question": "\u00bfQu\u00e9 es un thread pool?",
-        "answer": "una colecci\u00f3n de hilos creados durante la inicializaci\u00f3n que pueden ser reutilizados",
-        "explanation": "[Documentaci\u00f3n oficial: Clase ThreadPool](https://docs.microsoft.com/en-us/dotnet/api/system.threading.threadpool?view=net-5.0)",
-        "hint": null,
-        "correctAnswer": [
-          "una colecci\u00f3n de hilos creados durante la inicializaci\u00f3n que pueden ser reutilizados"
-        ],
-        "options": [
-          "una colecci\u00f3n de m\u00e9todos s\u00edncronos creados durante la inicializaci\u00f3n que no pueden ser reutilizados",
-          "una colecci\u00f3n de hilos creados durante la inicializaci\u00f3n que pueden ser reutilizados",
-          "una colecci\u00f3n de hilos solo reconocidos en tiempo de compilaci\u00f3n que pueden ser reutilizados",
-          "una colecci\u00f3n de m\u00e9todos as\u00edncronos creados en tiempo de compilaci\u00f3n que no pueden ser reutilizados"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5b3920420d57c2bf6adad5c3",
-        "question": "Cuando un objeto en C# es serializado, \u00bfen qu\u00e9 se convierte?",
-        "answer": "flujo de bytes",
-        "explanation": "[Documentaci\u00f3n oficial: Serializaci\u00f3n](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/)",
-        "hint": null,
-        "correctAnswer": [
-          "flujo de bytes"
-        ],
-        "options": [
-          "XML",
-          "JSON",
-          "flujo de bytes",
-          "flujo de valores"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f9babfc2933ae884903300f4",
-        "question": "\u00bfQu\u00e9 es un delegate?",
-        "answer": "un tipo que mantiene una referencia a un m\u00e9todo con una lista de par\u00e1metros particular y tipo de retorno",
-        "explanation": "[Documentaci\u00f3n oficial: Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)",
-        "hint": null,
-        "correctAnswer": [
-          "un tipo que mantiene una referencia a un m\u00e9todo con una lista de par\u00e1metros particular y tipo de retorno"
-        ],
-        "options": [
-          "una variable que mantiene una referencia a un tipo de valor y su contenido",
-          "un tipo de valor espec\u00edfico que solo puede ser usado en m\u00e9todos callback",
-          "un tipo que mantiene una referencia a un m\u00e9todo con una lista de par\u00e1metros particular y tipo de retorno",
-          "un tipo de variable personalizado que puede ser usado en clases abstractas"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2fbd3e8235409413c55a9e9b",
-        "question": "\u00bfCu\u00e1les son las cuatro palabras clave asociadas con el manejo de excepciones en C#?",
-        "answer": "try, catch, finally, throw",
-        "explanation": "[Tutorial Point](https://www.tutorialspoint.com/csharp/csharp_exception_handling.htm#:~:text=Exceptions%20provide%20a%20way%20to,catch%2C%20finally%2C%20and%20throw.)",
-        "hint": null,
-        "correctAnswer": [
-          "try, catch, finally, throw"
-        ],
-        "options": [
-          "try, catch, valid, invalid",
-          "try, valid, finally, throw",
-          "try, catch, finally, throw",
-          "finally, throw, valid, invalid"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4dfedcb18c83f3d80ffcef03",
-        "question": "\u00bfCu\u00e1l es la diferencia principal entre los operadores is y as?",
-        "answer": "El operador is verifica el tipo de objeto, mientras que el operador as intenta hacer cast de un objeto a un tipo espec\u00edfico.",
-        "explanation": "[Gu\u00eda Pluralsight](https://www.pluralsight.com/guides/csharp-is-as-operators-is-expressions)",
-        "hint": null,
-        "correctAnswer": [
-          "El operador is verifica el tipo de objeto, mientras que el operador as intenta hacer cast de un objeto a un tipo espec\u00edfico."
-        ],
-        "options": [
-          "El operador is verifica tipos de instancia, mientras que el operador as verifica el tipo heredado.",
-          "El operador is verifica tipos de datos primitivos, mientras que el operador as verifica el tipo de objeto.",
-          "El operador as verifica el tipo de objeto, mientras que el operador is intenta hacer cast de un objeto a un tipo espec\u00edfico.",
-          "El operador is verifica el tipo de objeto, mientras que el operador as intenta hacer cast de un objeto a un tipo espec\u00edfico."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "761b67f89c8e37f12db59fda",
-        "question": "\u00bfCu\u00e1l es la diferencia entre los bloques finally y finalize?",
-        "answer": "El bloque finally es llamado despu\u00e9s de la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finalize es llamado justo antes de la recolecci\u00f3n de basura.",
-        "explanation": "[C-sharpcorner](https://www.c-sharpcorner.com/forums/final-finally-and-finalize)",
-        "hint": null,
-        "correctAnswer": [
-          "El bloque finally es llamado despu\u00e9s de la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finalize es llamado justo antes de la recolecci\u00f3n de basura."
-        ],
-        "options": [
-          "El bloque finally es llamado durante la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finalize es llamado despu\u00e9s de la recolecci\u00f3n de basura.",
-          "El bloque finally es llamado despu\u00e9s de la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finalize es llamado justo antes de la recolecci\u00f3n de basura.",
-          "El bloque finalize es llamado antes de la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finally es llamado justo antes de la recolecci\u00f3n de basura.",
-          "El bloque finalize es llamado durante la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finally es llamado despu\u00e9s de la recolecci\u00f3n de basura."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "91c0b09ab81d137314239f2a",
-        "question": "Tu aplicaci\u00f3n tiene un tipo de valor llamado username que necesita poder aceptar valores null, pero esto est\u00e1 generando errores de tiempo de compilaci\u00f3n. \u00bfC\u00f3mo arreglar\u00edas esto en c\u00f3digo?",
-        "answer": "string? username = null;",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "string? username = null;"
-        ],
-        "options": [
-          "Null<string> username = null;",
-          "string? username = null;",
-          "Type<string>? username = null;",
-          "Optional<string> username = null;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "82cc11df69193c1f216b854c",
-        "question": "\u00bfQu\u00e9 fragmento de c\u00f3digo declara correctamente una excepci\u00f3n personalizada llamada InvalidResponse?",
-        "answer": "class InvalidResponse: Exception {}",
-        "explanation": "[Documentaci\u00f3n oficial: Excepciones](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/how-to-create-user-defined-exceptions)",
-        "hint": null,
-        "correctAnswer": [
-          "class InvalidResponse: Exception {}"
-        ],
-        "options": [
-          "struct InvalidResponse: Exception {}",
-          "class InvalidResponse: Exception {}",
-          "public Exception InvalidResponse = new Exception ();",
-          "public Exception InvalidResponse () -> Exception;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ad1f2de4c33ff58beb149f21",
-        "question": "\u00bfC\u00f3mo escribir\u00edas una variable enum llamada AppState con valores para Offline, Loading, y Ready?",
-        "answer": "enum AppState {Offline, Loading, Ready}",
-        "explanation": "[Documentaci\u00f3n oficial: Enum](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum)",
-        "hint": null,
-        "correctAnswer": [
-          "enum AppState {Offline, Loading, Ready}"
-        ],
-        "options": [
-          "enum AppState = [Offline, Loading, Ready]",
-          "enum AppState {\"Offline\", \"Loading\", \"Ready\"}",
-          "enum AppState = {Offline, Loading, Ready}",
-          "enum AppState {Offline, Loading, Ready}"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "812b54133d41e9cece476bdd",
-        "question": "\u00bfCu\u00e1l es la diferencia principal entre un tipo de valor y un tipo de referencia?",
-        "answer": "Un tipo de valor almacena un valor real, mientras que un tipo de referencia es un puntero a un valor.",
-        "explanation": "1. [Documentaci\u00f3n oficial: Tipos de valor](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types)\n2. [Documentaci\u00f3n oficial: Tipos de referencia](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types)",
-        "hint": null,
-        "correctAnswer": [
-          "Un tipo de valor almacena un valor real, mientras que un tipo de referencia es un puntero a un valor."
-        ],
-        "options": [
-          "Un tipo de valor puede ser cualquier tipo primitivo, mientras que los tipos de referencia deben ser independientes del tipo.",
-          "Un tipo de valor se refiere a otro valor, mientras que un tipo de referencia se refiere a un valor en memoria.",
-          "Un tipo de valor almacena un valor real, mientras que un tipo de referencia es un puntero a un valor.",
-          "Un tipo de valor est\u00e1 disponible solo en tiempo de ejecuci\u00f3n, mientras que un tipo de referencia est\u00e1 disponible solo en tiempo de compilaci\u00f3n."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "970581365511799e41da9bd5",
-        "question": "\u00bfCu\u00e1l es la diferencia entre las palabras clave `break` y `continue`?",
-        "answer": "La palabra clave `break` literalmente sale de una declaraci\u00f3n de flujo de control, mientras que `continue` ignora el resto de la declaraci\u00f3n de control o iteraci\u00f3n y comienza la siguiente.",
-        "explanation": "[Documentaci\u00f3n oficial: Declaraciones de salto](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements)",
-        "hint": null,
-        "correctAnswer": [
-          "La palabra clave `break` literalmente sale de una declaraci\u00f3n de flujo de control, mientras que `continue` ignora el resto de la declaraci\u00f3n de control o iteraci\u00f3n y comienza la siguiente."
-        ],
-        "options": [
-          "La palabra clave `break` se usa para salir de m\u00faltiples declaraciones de iteraci\u00f3n, mientras que `continue` solo puede salir de bloques de c\u00f3digo que tienen iteraciones \u00fanicas.",
-          "La palabra clave `break` literalmente sale de una declaraci\u00f3n de flujo de control, mientras que `continue` ignora el resto de la declaraci\u00f3n de control o iteraci\u00f3n y comienza la siguiente.",
-          "La palabra clave `break` literalmente sale del c\u00f3digo de flujo de control actual y lo detiene completamente, mientras que `continue` sigue ejecutando el c\u00f3digo despu\u00e9s de que se lanza una excepci\u00f3n.",
-          "La palabra clave `break` salta de una iteraci\u00f3n y luego procede con el resto del c\u00f3digo de flujo de control, mientras que `continue` detiene el c\u00f3digo ejecut\u00e1ndose completamente."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f1d58960a355fad325a49c8d",
-        "question": "\u00bfQu\u00e9 fragmento de c\u00f3digo declara correctamente una variable llamada userId con un `get` p\u00fablico y `set` privado?",
-        "answer": "`public int userID { get; private set; }`",
-        "explanation": "[Documentaci\u00f3n oficial: Propiedades](https://docs.microsoft.com/en-us/dotnet/csharp/properties)",
-        "hint": null,
-        "correctAnswer": [
-          "`public int userID { get; private set; }`"
-        ],
-        "options": [
-          "`public int userID <get, set>;`",
-          "`public int userID [get, private set];`",
-          "`public int userID { get; private set; }`",
-          "`public int userID = { public get, private set };`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a6c9494ad26db101133ba310",
-        "question": "\u00bfQu\u00e9 es verdadero sobre los m\u00e9todos virtuales?",
-        "answer": "`Los m\u00e9todos virtuales siempre necesitan una implementaci\u00f3n por defecto.`",
-        "explanation": "1. [Documentaci\u00f3n oficial: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)\n2. [c-sharpcorner: M\u00e9todo Virtual en C#](https://www.c-sharpcorner.com/UploadFile/3d39b4/virtual-method-in-C-Sharp/)",
-        "hint": null,
-        "correctAnswer": [
-          "`Los m\u00e9todos virtuales siempre necesitan una implementaci\u00f3n por defecto.`"
-        ],
-        "options": [
-          "`Sobrescribir m\u00e9todos virtuales en una clase derivada es obligatorio.`",
-          "`Sobrescribir m\u00e9todos virtuales en una clase derivada no es posible.`",
-          "`Los m\u00e9todos virtuales siempre necesitan una implementaci\u00f3n por defecto.`",
-          "`Los m\u00e9todos virtuales no pueden tener una implementaci\u00f3n por defecto.`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5c5f2f11585af7d2c4ddf0aa",
-        "question": "\u00bfQu\u00e9 es probable que pase si tienes m\u00faltiples hilos accediendo al mismo recurso en tu programa?",
-        "answer": "`deadlock y condiciones de carrera`",
-        "explanation": "[Documentaci\u00f3n oficial: condiciones de carrera](https://docs.microsoft.com/en-us/archive/msdn-magazine/2008/october/concurrency-hazards-solving-problems-in-your-multithreaded-code)",
-        "hint": null,
-        "correctAnswer": [
-          "`deadlock y condiciones de carrera`"
-        ],
-        "options": [
-          "`sobrecarga de recursos`",
-          "`salto de hilos`",
-          "`deadlock y condiciones de carrera`",
-          "`nada, ya que esto es para lo que sirve el threading`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0b5cd14443ceb7a7fecf5075",
-        "question": "\u00bfC\u00f3mo indicas que una cadena puede ser null?",
-        "answer": "`string? myVariable`",
-        "explanation": "[Documentaci\u00f3n oficial: tipos de valor nullable](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types#declaration-and-assignment)",
-        "hint": null,
-        "correctAnswer": [
-          "`string? myVariable`"
-        ],
-        "options": [
-          "`Una cadena no puede ser nullable.`",
-          "`string? myVariable`",
-          "`string myVariable = null`",
-          "`string(null) myVariable`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7120a42023c05839ec5582ca",
-        "question": "\u00bfNecesitas declarar una variable out antes de usarla?",
-        "answer": "`No, puedes declarar un out en la lista de par\u00e1metros.`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`No, puedes declarar un out en la lista de par\u00e1metros.`"
-        ],
-        "options": [
-          "`No, puedes declarar un out en la lista de par\u00e1metros.`",
-          "`No, las variables Out ya no son parte de C#.`",
-          "`Debes declararla si es un tipo primitivo.`",
-          "`S\u00ed.`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b5164e87e44246f01e567b98",
-        "question": "\u00bfC\u00f3mo acceder\u00edas a las \u00faltimas dos personas en un array llamado People?",
-        "answer": "`People[..^2]`",
-        "explanation": "Explicaci\u00f3n: **Puedes** hacer esto en C#. Sin embargo, ninguna de las respuestas anteriores es correcta. Puedes acceder a los \u00faltimos dos elementos usando `People[^2..]`. Por favor, consulta [issue #3354](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/issues/3354) para m\u00e1s informaci\u00f3n.\nVer tambi\u00e9n: [Documentaci\u00f3n Oficial: Rangos](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/ranges)",
-        "hint": null,
-        "correctAnswer": [
-          "`People[..^2]`"
-        ],
-        "options": [
-          "`People[..^2]`",
-          "`No puedes hacer esto en C#.`",
-          "`People[..^3]`",
-          "`People[^2]`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "18329ebd65f4130521006e7c",
-        "question": "\u00bfCu\u00e1ndo se pueden crear tipos an\u00f3nimos?",
-        "answer": "`en tiempo de compilaci\u00f3n`",
-        "explanation": "[C-sharpcorner: Tipos An\u00f3nimos](https://www.c-sharpcorner.com/UploadFile/ff2f08/anonymous-types-in-C-Sharp/)",
-        "hint": null,
-        "correctAnswer": [
-          "`en tiempo de compilaci\u00f3n`"
-        ],
-        "options": [
-          "`en tiempo de compilaci\u00f3n`",
-          "`despu\u00e9s del tiempo de ejecuci\u00f3n`",
-          "`en tiempo de ejecuci\u00f3n`",
-          "`despu\u00e9s del tiempo de compilaci\u00f3n`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f5802dab4d766f8d109ed079",
-        "question": "\u00bfQu\u00e9 es verdadero sobre la multitarea de hilos?",
-        "answer": "`La multitarea de hilos permite que el c\u00f3digo se ejecute concurrentemente`",
-        "explanation": "[Documentaci\u00f3n Oficial: Hilos](https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading)",
-        "hint": null,
-        "correctAnswer": [
-          "`La multitarea de hilos permite que el c\u00f3digo se ejecute concurrentemente`"
-        ],
-        "options": [
-          "`La multitarea de hilos permite que el c\u00f3digo se ejecute concurrentemente`",
-          "`La multitarea de hilos permite que el c\u00f3digo se ejecute solo cuando se maneja un evento de usuario.`",
-          "`La multitarea de hilos bloquea el c\u00f3digo para que no se ejecute simult\u00e1neamente para proteger la memoria.`",
-          "`La multitarea de hilos suma bloques de c\u00f3digo de un solo hilo.`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "70a31870a93b012dd0569b6b",
-        "question": "\u00bfQu\u00e9 nivel de accesibilidad tiene este campo de clase?\n`private string LastName;`",
-        "answer": "Puede ser usado por otro c\u00f3digo solo en la misma clase o struct.",
-        "explanation": "[Documentaci\u00f3n Oficial: Niveles de Accesibilidad](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/accessibility-levels)",
-        "hint": null,
-        "correctAnswer": [
-          "Puede ser usado por otro c\u00f3digo solo en la misma clase o struct."
-        ],
-        "options": [
-          "Puede ser usado por otro c\u00f3digo solo en la misma clase o struct.",
-          "Puede ser usado por otro c\u00f3digo en un ensamblado referenciado.",
-          "Puede ser usado solo por c\u00f3digo contenido en una clase derivada.",
-          "Puede ser usado por otro c\u00f3digo en el mismo ensamblado."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d9eb78ebf994606117b2a129",
-        "question": "\u00bfC\u00f3mo declarar\u00edas correctamente un array dentado llamado 'partyInvites' con 10 elementos vac\u00edos?",
-        "answer": "`string[][] partyInvites = new string[10][];`",
-        "explanation": "[Documentaci\u00f3n Oficial: Arrays Dentados](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/jagged-arrays)",
-        "hint": null,
-        "correctAnswer": [
-          "`string[][] partyInvites = new string[10][];`"
-        ],
-        "options": [
-          "`string[] partyInvites = new string[10];`",
-          "`string[][] partyInvites = new string[10][];`",
-          "`string[][] partyInvites = new string[10]();`",
-          "`string <[]> partyInvites = new string <[10]>;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2a462d24f8c6eb1f4cc7449b",
-        "question": "\u00bfC\u00f3mo podr\u00edas pausar un hilo por tres segundos?",
-        "answer": "Thread.Sleep(3000);",
-        "explanation": "[Referencia](https://docs.microsoft.com/en-us/dotnet/api/system.threading.thread.sleep?view=net-6.0)",
-        "hint": null,
-        "correctAnswer": [
-          "Thread.Sleep(3000);"
-        ],
-        "options": [
-          "Thread.Pause(3000);",
-          "Thread.Resume(-3000);",
-          "Thread.Suspend(3000);",
-          "Thread.Sleep(3000);"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "79d3a07bf81572fc9fb14afb",
-        "question": "\u00bfQu\u00e9 est\u00e1 mal con este c\u00f3digo?\n```cs\nvoid MyFunction()\n{\n    {\n        int a = 10;\n        int b = 20;\n        int c = a + b;\n    }\n    Console.WriteLine(c);\n}\n```",
-        "answer": "La variable c ya no existe fuera del bloque.",
-        "explanation": "[Referencia](https://stackoverflow.com/a/6136865)",
-        "hint": null,
-        "correctAnswer": [
-          "La variable c ya no existe fuera del bloque."
-        ],
-        "options": [
-          "La variable c nunca se usa; mostrarla en la consola no cuenta como uso.",
-          "Las variables a y b nunca se usan.",
-          "No puedes colocar c\u00f3digo dentro de corchetes dentro de otro bloque.",
-          "La variable c ya no existe fuera del bloque."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "73ada708933e3a430d211990",
-        "question": "\u00bfCu\u00e1l declaraci\u00f3n es verdadera?",
-        "answer": "string es un alias para String",
-        "explanation": "[Referencia](https://stackoverflow.com/q/7074)",
-        "hint": null,
-        "correctAnswer": [
-          "string es un alias para String"
-        ],
-        "options": [
-          "Todas son verdaderas.",
-          "Ninguna es verdadera.",
-          "string es un tipo de valor.",
-          "string es un alias para String"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7f73bf452cf1a3b781ea7a33",
-        "question": "\u00bfC\u00f3mo devolver\u00edas m\u00e1s de un valor desde un m\u00e9todo?",
-        "answer": "Usa una tupla o una variable out.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Usa una tupla o una variable out."
-        ],
-        "options": [
-          "Usa una tupla o una variable out.",
-          "La \u00fanica forma es usar una variable out.",
-          "La \u00fanica forma es usar una tupla.",
-          "Esto no se puede hacer"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "514db8088ffa9937c894d418",
-        "question": "\u00bfCu\u00e1l es un ejemplo v\u00e1lido de una clase derivada?",
-        "answer": "`public class PremiumUser: User {}`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`public class PremiumUser: User {}`"
-        ],
-        "options": [
-          "`public class PremiumUser sub User {}`",
-          "`public class PremiumUser: User {}`",
-          "`public class PremiumUser -> sub User {}`",
-          "`public class User: PremiumUser {}`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a55aa73cdf556bee63145b40",
-        "question": "\u00bfCu\u00e1l es la forma correcta de llamar a un m\u00e9todo est\u00e1tico llamado DebugString desde una clase est\u00e1tica llamada InputManager?",
-        "answer": "`InputManager.DebugString();`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`InputManager.DebugString();`"
-        ],
-        "options": [
-          "`static InputManager.DebugString();`",
-          "`InputManager().DebugString;`",
-          "`new InputManager().DebugString();`",
-          "`InputManager.DebugString();`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bb7baf11c3e6dde591e3f217",
-        "question": "\u00bfQu\u00e9 valores se pueden asignar a esta variable?\n```cs\npublic string? nickname\n```",
-        "answer": "Valores String o null",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Valores String o null"
-        ],
-        "options": [
-          "null",
-          "Valores String",
-          "Valores String o null",
-          "Valores String con m\u00e1s de un car\u00e1cter"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c8a74ef122866c6369dd47fc",
-        "question": "\u00bfQu\u00e9 es un destructor?",
-        "answer": "`un m\u00e9todo especial llamado autom\u00e1ticamente cada vez que se elimina o destruye un objeto`",
-        "explanation": "[Referencia](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors)",
-        "hint": null,
-        "correctAnswer": [
-          "`un m\u00e9todo especial llamado autom\u00e1ticamente cada vez que se elimina o destruye un objeto`"
-        ],
-        "options": [
-          "`un m\u00e9todo especial llamado autom\u00e1ticamente cada vez que se crea o actualiza un objeto`",
-          "`un m\u00e9todo impl\u00edcito llamado autom\u00e1ticamente cuando se procesan grupos de hilos concurrentemente`",
-          "`un m\u00e9todo expl\u00edcito llamado autom\u00e1ticamente cuando el compilador comienza a ejecutarse`",
-          "`un m\u00e9todo especial llamado autom\u00e1ticamente cada vez que se elimina o destruye un objeto`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6a3f1500331e0d8cc5531604",
-        "question": "\u00bfQu\u00e9 fragmento de c\u00f3digo declara correctamente un alias de tipo CustomInt de tipo Int32?",
-        "answer": "`using CustomInt = System.Int32;`",
-        "explanation": "[Referencia](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive)",
-        "hint": null,
-        "correctAnswer": [
-          "`using CustomInt = System.Int32;`"
-        ],
-        "options": [
-          "`typealias CustomInt = System.Int32;`",
-          "`var<T> CustomInt = Int32;`",
-          "`using CustomInt = System.Int32;`",
-          "`type CustomInt = System<Int32>;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e96dab3a945f43caf32e4004",
-        "question": "\u00bfQu\u00e9 es un tipo de enumeraci\u00f3n?",
-        "answer": "`conjunto de constantes integrales con nombre`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`conjunto de constantes integrales con nombre`"
-        ],
-        "options": [
-          "`un objeto de tipo de paso por referencia`",
-          "`un tipo de valor que no puede contener constantes`",
-          "`conjunto de constantes integrales con nombre`",
-          "`un objeto de tipo de paso por valor`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a47c201147297970042cc082",
-        "question": "\u00bfPara qu\u00e9 se usa la palabra clave readonly en las declaraciones de campo?",
-        "answer": "`para declarar un campo cuyo valor se puede asignar solo antes de que salga el constructor`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`para declarar un campo cuyo valor se puede asignar solo antes de que salga el constructor`"
-        ],
-        "options": [
-          "`para declarar una variable miembro que no se puede calcular en tiempo de ejecuci\u00f3n`",
-          "`para declarar un campo cuyo valor se puede asignar solo antes de que salga el constructor`",
-          "`para declarar una variable est\u00e1tica que debe establecerse en tiempo de compilaci\u00f3n`",
-          "`para declarar una variable est\u00e1tica que debe establecerse en tiempo de ejecuci\u00f3n`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "542fddd84ad13157fc473ac5",
-        "question": "\u00bfCu\u00e1l declaraci\u00f3n es verdadera sobre los m\u00e9todos de C#?",
-        "answer": "`Los m\u00e9todos son acciones que un objeto puede realizar`",
-        "explanation": "[Documentaci\u00f3n oficial: M\u00e9todos (Gu\u00eda de Programaci\u00f3n C#)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods)",
-        "hint": null,
-        "correctAnswer": [
-          "`Los m\u00e9todos son acciones que un objeto puede realizar`"
-        ],
-        "options": [
-          "`Los m\u00e9todos almacenan variables.`",
-          "`Los m\u00e9todos son acciones que un objeto puede realizar`",
-          "`Un m\u00e9todo se puede usar solo una vez por archivo C#.`",
-          "`Un m\u00e9todo determina el estado de una propiedad dada.`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ecca7127aaa0b6bb2c75e64f",
-        "question": "\u00bfCu\u00e1l es una clase de Excepci\u00f3n integrada v\u00e1lida de C#?",
-        "answer": "`ArgumentNullException`",
-        "explanation": "[Documentaci\u00f3n oficial: Clase ArgumentNullException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception?view=net-5.0)",
-        "hint": null,
-        "correctAnswer": [
-          "`ArgumentNullException`"
-        ],
-        "options": [
-          "`ArgumentNullValue`",
-          "`InvalidFormatFoundException`",
-          "`IndexOutOfPocket`",
-          "`ArgumentNullException`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "17c16b8ffe4a82408a57f8b0",
-        "question": "\u00bfCu\u00e1l es el prop\u00f3sito de una interfaz en C#?",
-        "answer": "Las interfaces definen un contrato que las clases deben cumplir, especificando un conjunto de m\u00e9todos y propiedades que las clases implementadoras deben proporcionar.",
-        "explanation": "[Documentaci\u00f3n Oficial: Interfaces (Gu\u00eda de Programaci\u00f3n C#)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/)",
-        "hint": null,
-        "correctAnswer": [
-          "Las interfaces definen un contrato que las clases deben cumplir, especificando un conjunto de m\u00e9todos y propiedades que las clases implementadoras deben proporcionar."
-        ],
-        "options": [
-          "Las interfaces se usan para almacenar datos.",
-          "Las interfaces definen un contrato que las clases deben cumplir, especificando un conjunto de m\u00e9todos y propiedades que las clases implementadoras deben proporcionar.",
-          "Las interfaces se usan para crear instancias de clases.",
-          "Las interfaces se usan para organizaci\u00f3n de c\u00f3digo."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "386e4c9377d9e977be3162d7",
-        "question": "\u00bfCu\u00e1l es el prop\u00f3sito principal del bloque `finally` en una declaraci\u00f3n try-catch-finally de C#?",
-        "answer": "El bloque `finally` se usa para asegurar que cierto c\u00f3digo se ejecute independientemente de si ocurre una excepci\u00f3n.",
-        "explanation": "[Documentaci\u00f3n Oficial: try-catch (Referencia C#)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch)",
-        "hint": null,
-        "correctAnswer": [
-          "El bloque `finally` se usa para asegurar que cierto c\u00f3digo se ejecute independientemente de si ocurre una excepci\u00f3n."
-        ],
-        "options": [
-          "El bloque `finally` se usa para manejar excepciones.",
-          "El bloque `finally` se usa para definir la l\u00f3gica principal de la declaraci\u00f3n try-catch.",
-          "El bloque `finally` es opcional y no es requerido en las declaraciones try-catch.",
-          "El bloque `finally` se usa para asegurar que cierto c\u00f3digo se ejecute independientemente de si ocurre una excepci\u00f3n."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2eb0f1d2309b7d8cbe56524e",
-        "question": "\u00bfQu\u00e9 estructura de datos en C# te permite almacenar pares clave-valor y se usa frecuentemente para recuperaci\u00f3n r\u00e1pida de datos?",
-        "answer": "Dictionary",
-        "explanation": "[Documentaci\u00f3n Oficial: Clase Dictionary<TKey, TValue>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)",
-        "hint": null,
-        "correctAnswer": [
-          "Dictionary"
-        ],
-        "options": [
-          "ArrayList",
-          "List",
-          "Array",
-          "Dictionary"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8fedc6674fc62e508f06d89e",
-        "question": "\u00bfLa ejecuci\u00f3n del programa comienza con?",
-        "answer": "Main()",
-        "explanation": "[Referencia]: https://www.gkseries.com/c-sharp-programming/multiple-choice-questions-and-answers",
-        "hint": null,
-        "correctAnswer": [
-          "Main()"
-        ],
-        "options": [
-          "Main()",
-          "Get()",
-          "Class()",
-          "Display()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1657c962d2c53f20644deb77",
-        "question": "En C# 'using' es un?",
-        "answer": "Directiva",
-        "explanation": "[Referencia]: https://www.gkseries.com/c-sharp-programming/multiple-choice-questions-and-answers",
-        "hint": null,
-        "correctAnswer": [
-          "Directiva"
-        ],
-        "options": [
-          "Clase",
-          "Directiva",
-          "Funci\u00f3n",
-          "Palabra clave"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
+    "slug": "c-sharp",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
+      {
+        "id": "6993bc13516b9e74996a3a3e",
+        "language": "es",
+        "title": "C#",
+        "description": "Seeded from c-sharp/c-sharp-quiz-es.md",
+        "questions": [
+          {
+            "id": "413f1fb13f4221a415b8c350",
+            "question": "\u00bfEn cu\u00e1l de estas situaciones son las interfaces mejores que las clases abstractas?",
+            "answer": "Cuando necesitas una lista de capacidades y datos que son independientes de las clases, usa una interface. Cuando necesitas que un cierto tipo de objeto comparta caracter\u00edsticas, usa una clase abstracta.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Cuando necesitas una lista de capacidades y datos que son independientes de las clases, usa una interface. Cuando necesitas que un cierto tipo de objeto comparta caracter\u00edsticas, usa una clase abstracta."
+            ],
+            "options": [
+              "Cuando necesitas definir las caracter\u00edsticas de un tipo de objeto, usa una interface. Cuando necesitas definir las capacidades de un tipo de objeto, usa una clase abstracta.",
+              "Las interfaces son un legado de versiones anteriores de C#, y son intercambiables con la caracter\u00edstica m\u00e1s nueva de clase abstracta.",
+              "Cuando necesitas una lista de capacidades y datos que son independientes de las clases, usa una interface. Cuando necesitas que un cierto tipo de objeto comparta caracter\u00edsticas, usa una clase abstracta.",
+              "Deber\u00edas usar tanto una interface como una clase abstracta al definir cualquier objeto complejo."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "3d41beb67cef0ec310572331",
+            "question": "\u00bfCu\u00e1l afirmaci\u00f3n es verdadera sobre los delegates?",
+            "answer": "Pueden ser encadenados juntos.",
+            "explanation": "[Documentaci\u00f3n oficial: Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/#delegates-overview)",
+            "hint": null,
+            "correctAnswer": [
+              "Pueden ser encadenados juntos."
+            ],
+            "options": [
+              "Los delegates no est\u00e1n soportados en la versi\u00f3n actual de C#",
+              "No pueden ser usados como callbacks.",
+              "Solo las variables pueden ser pasadas a los delegates como par\u00e1metros.",
+              "Pueden ser encadenados juntos."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "c5fb8291372e2575516f865f",
+            "question": "\u00bfCu\u00e1l opci\u00f3n define mejor el modelo de programaci\u00f3n as\u00edncrona de C#?",
+            "answer": "basado en tareas",
+            "explanation": "[Documentaci\u00f3n oficial: Modelo de programaci\u00f3n as\u00edncrona basado en tareas](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model) respuesta correta --> var contacts = new List<string>();",
+            "hint": null,
+            "correctAnswer": [
+              "basado en tareas"
+            ],
+            "options": [
+              "reactivo",
+              "callback heredado",
+              "basado en tareas",
+              "basado en callbacks"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "5b783ebe55b5dca265448210",
+            "question": "\u00bfC\u00f3mo determinar\u00edas si una clase tiene un atributo particular?",
+            "answer": ".",
+            "explanation": "```cs\nvar type = typeof(SomeType);\nvar attribute = type.GetCustomAttribute<SomeAttribute>();\n```\n```cs\nvar typeof(MyPresentationModel).Should().BeDecoratedWith<SomeAttribute>();\n```\n```cs\nAttribute.GetCustomAttribute, typeof(SubControllerActionToViewDataAttribute)\n```\n```cs\nAttribute.GetCustomAttribute(typeof(ExampleController), typeof(SubControllerActionToViewDataAttribute))\n```\n1. [Documentaci\u00f3n oficial: Clase Attribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute?view=net-5.0)\n2. [Documentaci\u00f3n oficial: M\u00e9todo Attribute.GetCustomAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.attribute.getcustomattribute?view=net-5.0)",
+            "hint": null,
+            "correctAnswer": [
+              "."
+            ],
+            "options": [
+              ".",
+              ".",
+              ".",
+              "."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "3296f15adb44bcbbd3481cf8",
+            "question": "\u00bfCu\u00e1l es la diferencia entre las palabras clave ref y out?",
+            "answer": "Las variables pasadas a out pueden ser pasadas a una funci\u00f3n sin ser inicializadas, mientras que ref especifica que el valor es un valor de referencia que puede ser cambiado dentro del m\u00e9todo que llama.",
+            "explanation": "1. [Documentaci\u00f3n oficial: ref](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/ref)\n2. [Documentaci\u00f3n oficial: modificador de par\u00e1metro out](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/out-parameter-modifier)",
+            "hint": null,
+            "correctAnswer": [
+              "Las variables pasadas a out pueden ser pasadas a una funci\u00f3n sin ser inicializadas, mientras que ref especifica que el valor es un valor de referencia que puede ser cambiado dentro del m\u00e9todo que llama."
+            ],
+            "options": [
+              "Las variables pasadas a out especifican que el par\u00e1metro es un par\u00e1metro de salida, mientras que ref especifica que una variable puede ser pasada a una funci\u00f3n sin ser inicializada.",
+              "Las variables pasadas a ref pueden ser pasadas a una funci\u00f3n sin ser inicializadas, mientras que out especifica que el valor es un valor de referencia que puede ser cambiado dentro del m\u00e9todo que llama.",
+              "Las variables pasadas a out pueden ser pasadas a una funci\u00f3n sin ser inicializadas, mientras que ref especifica que el valor es un valor de referencia que puede ser cambiado dentro del m\u00e9todo que llama.",
+              "Las variables pasadas a ref especifican que el par\u00e1metro es un par\u00e1metro de salida, mientras que out especifica que una variable puede ser pasada a una funci\u00f3n sin ser inicializada."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "2f11e4fb2e948153a2912a64",
+            "question": "\u00bfC\u00f3mo podr\u00edas recuperar informaci\u00f3n sobre una clase, as\u00ed como crear una instancia en tiempo de ejecuci\u00f3n?",
+            "answer": "reflexi\u00f3n",
+            "explanation": "[Documentaci\u00f3n oficial: Reflexi\u00f3n](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/reflection)",
+            "hint": null,
+            "correctAnswer": [
+              "reflexi\u00f3n"
+            ],
+            "options": [
+              "reflexi\u00f3n",
+              "serializaci\u00f3n",
+              "abstracci\u00f3n",
+              "inyecci\u00f3n de dependencias"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "c21286f5a5d2b4386f4748e8",
+            "question": "\u00bfDe qu\u00e9 es un ejemplo este c\u00f3digo?\n```cs\n    private static object objA;\n    private static object objB;\n    private static void performTaskA()\n    {\n        lock (objB)\n        {\n            Thread.Sleep(1000);\n            lock (objA) { }\n        }\n    }\n    private static void PerformTaskB()\n    {\n        lock (objA)\n        {\n            lock (objB) { }\n        }\n    }\n```",
+            "answer": "un deadlock potencial",
+            "explanation": "[Documentaci\u00f3n oficial: Deadlocks y condiciones de carrera](https://docs.microsoft.com/en-us/dotnet/standard/threading/managed-threading-best-practices#deadlocks-and-race-conditions)",
+            "hint": null,
+            "correctAnswer": [
+              "un deadlock potencial"
+            ],
+            "options": [
+              "una clase privada que usa multithreading",
+              "codificaci\u00f3n multithread",
+              "mala gesti\u00f3n de hilos",
+              "un deadlock potencial"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "7b3196e27c357e75ada5ec54",
+            "question": "\u00bfCu\u00e1l es la diferencia entre un tipo an\u00f3nimo y un tipo de datos regular?",
+            "answer": "Los tipos an\u00f3nimos no tienen nombres de tipo",
+            "explanation": "[Documentaci\u00f3n oficial: Tipos An\u00f3nimos](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types)",
+            "hint": null,
+            "correctAnswer": [
+              "Los tipos an\u00f3nimos no tienen nombres de tipo"
+            ],
+            "options": [
+              "Los tipos an\u00f3nimos no tienen nombres de tipo",
+              "Los tipos an\u00f3nimos solo pueden ser est\u00e1ticos",
+              "Los tipos an\u00f3nimos solo pueden ser usados en structs",
+              "Los tipos an\u00f3nimos no funcionan con LINQ."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "538f6095c74437459f64f692",
+            "question": "\u00bfCu\u00e1ndo usar\u00edas un Dictionary en lugar de un tipo Array en tu aplicaci\u00f3n?",
+            "answer": "Cuando necesitas almacenar pares clave-valor en lugar de valores \u00fanicos",
+            "explanation": "[Documentaci\u00f3n oficial: Clase Dictionary<TKey,TValue>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-5.0)",
+            "hint": null,
+            "correctAnswer": [
+              "Cuando necesitas almacenar pares clave-valor en lugar de valores \u00fanicos"
+            ],
+            "options": [
+              "Cuando necesitas una estructura de colecci\u00f3n irregular",
+              "Cuando necesitas almacenar valores del mismo tipo",
+              "Cuando necesitas almacenar pares clave-valor en lugar de valores \u00fanicos",
+              "Cuando necesitas una lista ordenada y buscable"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "58d58781d6ffed9bc0b529fc",
+            "question": "\u00bfCu\u00e1l es la diferencia entre a.Equals(b) y a == b?",
+            "answer": "El m\u00e9todo .Equals compara contenidos mientras que `==` compara identidad de referencia.",
+            "explanation": "1. [Documentaci\u00f3n oficial: Object.Equals](https://docs.microsoft.com/en-us/dotnet/api/system.object.equals)\n2. [c-sharpcorner: Operador de Igualdad(==) vs .Equals()](https://www.c-sharpcorner.com/UploadFile/3d39b4/difference-between-operator-and-equals-method-in-C-Sharp)",
+            "hint": null,
+            "correctAnswer": [
+              "El m\u00e9todo .Equals compara contenidos mientras que `==` compara identidad de referencia."
+            ],
+            "options": [
+              "El m\u00e9todo .Equals compara identidades de referencia mientras que `==` compara contenidos.",
+              "El m\u00e9todo .Equals compara valores primitivos mientras que `==` compara todos los valores.",
+              "El m\u00e9todo .Equals compara contenidos mientras que `==` compara identidad de referencia.",
+              "El m\u00e9todo .Equals compara tipos de referencia mientras que `==` compara tipos de valor primitivos"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "3402e803e43f9621ae05c2ad",
+            "question": "\u00bfCu\u00e1l opci\u00f3n describe mejor una situaci\u00f3n de deadlock?",
+            "answer": "cuando instrucciones simult\u00e1neas est\u00e1n esperando unas a otras para terminar antes de ejecutarse",
+            "explanation": "[Documentaci\u00f3n oficial: Deadlocks y condiciones de carrera](https://docs.microsoft.com/en-us/dotnet/standard/threading/managed-threading-best-practices#deadlocks-and-race-conditions)",
+            "hint": null,
+            "correctAnswer": [
+              "cuando instrucciones simult\u00e1neas est\u00e1n esperando unas a otras para terminar antes de ejecutarse"
+            ],
+            "options": [
+              "cuando intentas instanciar dos objetos al mismo tiempo en la misma clase o struct",
+              "cuando est\u00e1s tratando de ejecutar una acci\u00f3n despu\u00e9s de que se registra un evento de usuario",
+              "cuando instrucciones simult\u00e1neas est\u00e1n esperando unas a otras para terminar antes de ejecutarse",
+              "cuando intentas ejecutar una serie de eventos simult\u00e1neamente en m\u00faltiples hilos"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "fafbd73733271b8531697c52",
+            "question": "\u00bfC\u00f3mo funciona la palabra clave async?",
+            "answer": "Permite que la palabra clave await sea usada en un m\u00e9todo",
+            "explanation": "[Documentaci\u00f3n oficial: async](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/async)",
+            "hint": null,
+            "correctAnswer": [
+              "Permite que la palabra clave await sea usada en un m\u00e9todo"
+            ],
+            "options": [
+              "Permite acceso a m\u00e9todos as\u00edncronos en la API de C#",
+              "Permite agrupaci\u00f3n de hilos y procesos s\u00edncronos en clases est\u00e1ticas.",
+              "Permite que la palabra clave await sea usada en un m\u00e9todo",
+              "Permite acceso a m\u00e9todos s\u00edncronos en la API de C#"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "41666b6272c9879dd72ddc0c",
+            "question": "\u00bfQu\u00e9 es un objeto en C#?",
+            "answer": "una instancia de una clase o struct que incluye campos, propiedades y/o m\u00e9todos",
+            "explanation": "[Documentaci\u00f3n oficial: Objetos](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/objects)",
+            "hint": null,
+            "correctAnswer": [
+              "una instancia de una clase o struct que incluye campos, propiedades y/o m\u00e9todos"
+            ],
+            "options": [
+              "una clase o struct, incluyendo sus variables y funciones",
+              "un tipo de datos primitivo que solo puede ser creado en tiempo de compilaci\u00f3n",
+              "un tipo de valor que solo puede ser usado con una clase abstracta",
+              "una instancia de una clase o struct que incluye campos, propiedades y/o m\u00e9todos"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "f4ec1325ce22171a1658a7d2",
+            "question": "\u00bfQu\u00e9 fragmento de c\u00f3digo declara un tipo an\u00f3nimo llamado userData?",
+            "answer": "`var userData = new { name = \"John\", age = 32 };`",
+            "explanation": "[Documentaci\u00f3n oficial: Tipos An\u00f3nimos](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/anonymous-types)",
+            "hint": null,
+            "correctAnswer": [
+              "`var userData = new { name = \"John\", age = 32 };`"
+            ],
+            "options": [
+              "`var<<!---->T> userData = new <<!---->T> { name = \"John\", age = 32 };`",
+              "`var userData = new { name = \"John\", age = 32 };`",
+              "`AType userData = new AType { name = \"John\", age = 32 };`",
+              "`Anonymous<T> userData = new Anonymous<T> { name = \"John\", age = 32 };`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "1c26e12915e56851dc53e213",
+            "question": "\u00bfQu\u00e9 ser\u00e1 retornado cuando este m\u00e9todo sea ejecutado?\n`public void userInput(string charParameters) { }`",
+            "answer": "Nada",
+            "explanation": "[Documentaci\u00f3n oficial: void](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/void)",
+            "hint": null,
+            "correctAnswer": [
+              "Nada"
+            ],
+            "options": [
+              "Nada",
+              "un Boolean",
+              "una variable string",
+              "un entero"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "3bdd062eb59974d516bcbbbb",
+            "question": "\u00bfEn qu\u00e9 orden ser\u00edan impresos los nombres de empleados en este ejemplo en la consola?\n```cs\nstring[] employees = { \"Joe\", \"Bob\", \"Carol\", \"Alice\", \"Will\" };\nIEnumerable<string> employeeQuery = from person in employees\n                                    orderby person\n                                    select person;\nforeach(string employee in employeeQuery)\n{\n    Console.WriteLine(employee);\n}\n```",
+            "answer": "ascendente",
+            "explanation": "[dotnetpattern: Operador LINQ OrderBy](http://dotnetpattern.com/linq-orderby-operator)",
+            "hint": null,
+            "correctAnswer": [
+              "ascendente"
+            ],
+            "options": [
+              "ascendente",
+              "desordenado",
+              "descendente",
+              "primero en entrar, primero en salir"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "da5667f4d65bd49be05a6f5b",
+            "question": "Las expresiones lambda son frecuentemente usadas en conjunto con cu\u00e1l de las siguientes?",
+            "answer": "LINQ",
+            "explanation": "[Documentaci\u00f3n oficial: Resumen de Language Integrated Query (LINQ)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/)",
+            "hint": null,
+            "correctAnswer": [
+              "LINQ"
+            ],
+            "options": [
+              "Namespaces",
+              "LINQ",
+              "Alias de Tipos",
+              "Assemblies"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "00666cd77a33371652960f9f",
+            "question": "\u00bfCu\u00e1l es el formato correcto para comentarios de una l\u00ednea y m\u00faltiples l\u00edneas?",
+            "answer": "`// Una L\u00ednea`",
+            "explanation": "`/_ - M\u00faltiples l\u00edneas`\n`/_ Una L\u00ednea _/`\n`/ Una L\u00ednea`\n`/* M\u00faltiples l\u00edneas */`\n[w3schools: Comentarios C#](https://www.w3schools.com/cs/cs_comments.php)",
+            "hint": null,
+            "correctAnswer": [
+              "`// Una L\u00ednea`"
+            ],
+            "options": [
+              "`/_/ - Una L\u00ednea`",
+              "`// M\u00faltiples l\u00edneas`",
+              "`//\\* M\u00faltiples l\u00edneas`",
+              "`// Una L\u00ednea`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "d4ca88673bb3b1669841859f",
+            "question": "\u00bfC\u00f3mo haces que un m\u00e9todo en una clase abstracta sea sobrescribible?",
+            "answer": "Hazlo virtual",
+            "explanation": "1. [Documentaci\u00f3n oficial: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)\n2. [Documentaci\u00f3n oficial: abstract](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)",
+            "hint": null,
+            "correctAnswer": [
+              "Hazlo virtual"
+            ],
+            "options": [
+              "Hazlo p\u00fablico",
+              "Hazlo est\u00e1tico",
+              "Hazlo privado",
+              "Hazlo virtual"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "abdade12d3262edb634461ff",
+            "question": "\u00bfC\u00f3mo escribir\u00edas c\u00f3digo para una propiedad entera llamada Age con un getter y setter?",
+            "answer": "public int Age { get; set; }",
+            "explanation": "[Documentaci\u00f3n oficial: Usando Propiedades](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties)",
+            "hint": null,
+            "correctAnswer": [
+              "public int Age { get; set; }"
+            ],
+            "options": [
+              "public int Age { get - set }",
+              "public int Age: get set;",
+              "public int Age (get, set );",
+              "public int Age { get; set; }"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "4152bcb1d8e2e107ddfe6ec7",
+            "question": "\u00bfQu\u00e9 es una clase abstracta?",
+            "answer": "una clase que solo puede ser usada como una clase base",
+            "explanation": "[Documentaci\u00f3n oficial: Clases Abstractas y Selladas y Miembros de Clase](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members)",
+            "hint": null,
+            "correctAnswer": [
+              "una clase que solo puede ser usada como una clase base"
+            ],
+            "options": [
+              "una clase que est\u00e1 denotada por la palabra clave class (puede ser vista y usada por cualquier otra clase en el sistema--por lo tanto es p\u00fablica por defecto)",
+              "algo denotado por la palabra clave abstract y usado en todo el sistema; si quieres que cualquier programa cree un objeto de una clase usas la clase abstracta",
+              "una clase que est\u00e1 denotada por la palabra clave virtual",
+              "una clase que solo puede ser usada como una clase base"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "f6601f40e91eab9a87e86631",
+            "question": "\u00bfQu\u00e9 pasa con un hilo dado despu\u00e9s de que termina su tarea cuando usas un thread pool?",
+            "answer": "El hilo regresa al pool para reutilizaci\u00f3n.",
+            "explanation": "[Documentaci\u00f3n oficial: Caracter\u00edsticas del thread pool](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool#thread-pool-characteristics)",
+            "hint": null,
+            "correctAnswer": [
+              "El hilo regresa al pool para reutilizaci\u00f3n."
+            ],
+            "options": [
+              "El hilo es destruido y la memoria es liberada.",
+              "El hilo corre en un bucle hasta la siguiente asignaci\u00f3n.",
+              "El hilo se vuelve inactivo en el fondo y espera la recolecci\u00f3n de basura.",
+              "El hilo regresa al pool para reutilizaci\u00f3n."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "a08f60f2a11ff68d92bb9f1e",
+            "question": "\u00bfCu\u00e1l opci\u00f3n representa una clase que hereda comportamiento de una clase base?",
+            "answer": "una clase derivada",
+            "explanation": "[Documentaci\u00f3n oficial: Herencia](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/object-oriented/inheritance)",
+            "hint": null,
+            "correctAnswer": [
+              "una clase derivada"
+            ],
+            "options": [
+              "una segunda clase base",
+              "una clase revisada",
+              "una clase derivada",
+              "una clase padre"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "b34eef03e0278a4b2cd2e523",
+            "question": "\u00bfQu\u00e9 te permite hacer la sobrecarga de operadores?",
+            "answer": "definir funcionalidad personalizada para operadores comunes como suma e igualdad",
+            "explanation": "[Documentaci\u00f3n oficial: Sobrecarga de operadores](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading)",
+            "hint": null,
+            "correctAnswer": [
+              "definir funcionalidad personalizada para operadores comunes como suma e igualdad"
+            ],
+            "options": [
+              "ocultar operadores integrados cuando sea necesario",
+              "agregar m\u00e9todos para ser interpretados por el compilador en tiempo de ejecuci\u00f3n",
+              "definir c\u00f3mo funcionan los enums y otros tipos de valor primitivos dentro del resto de la aplicaci\u00f3n",
+              "definir funcionalidad personalizada para operadores comunes como suma e igualdad"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "73e05fc552f0356fd2795379",
+            "question": "\u00bfCu\u00e1l es el prop\u00f3sito principal de LINQ?",
+            "answer": "para consultar y transformar datos",
+            "explanation": "[Documentaci\u00f3n oficial: Resumen de Language Integrated Query (LINQ)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/#query-expression-overview)",
+            "hint": null,
+            "correctAnswer": [
+              "para consultar y transformar datos"
+            ],
+            "options": [
+              "para eliminar datos duplicados",
+              "para vincular namespaces y assemblies",
+              "para consultar y transformar datos",
+              "para conectar assemblies"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "8018a767639103368523f861",
+            "question": "\u00bfCu\u00e1l es la sintaxis correcta para una nueva lista gen\u00e9rica de strings llamada contacts?",
+            "answer": "var contacts = new List<string>();",
+            "explanation": "[Documentaci\u00f3n oficial: Clase List<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=net-5.0)",
+            "hint": null,
+            "correctAnswer": [
+              "var contacts = new List<string>();"
+            ],
+            "options": [
+              "public List<string names> contacts = new List<string names>();",
+              "public List(string names) contacts = new List(string names)();",
+              "var contacts = new List<string>();",
+              "var contacts = new List(string);"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "9ebf65a581ef54dcf91c3b4a",
+            "question": "\u00bfCu\u00e1l es la diferencia entre throw exceptions y throw clauses?",
+            "answer": "Las throw exceptions sobrescriben el stack trace, mientras que las throw clauses retienen la informaci\u00f3n del stack.",
+            "explanation": "1. [Documentaci\u00f3n oficial: throw](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/throw)\n2. [c-sharpcorner: Diferencia Entre Throw Exception y Throw Clause](https://www.c-sharpcorner.com/UploadFile/akkiraju/difference-between-throw-exception-and-throw-clause/)",
+            "hint": null,
+            "correctAnswer": [
+              "Las throw exceptions sobrescriben el stack trace, mientras que las throw clauses retienen la informaci\u00f3n del stack."
+            ],
+            "options": [
+              "Las throw clauses se disparan solo en tiempo de ejecuci\u00f3n, mientras que las throw exceptions pueden dispararse en cualquier momento.",
+              "Las throw exceptions sobrescriben el stack trace, mientras que las throw clauses retienen la informaci\u00f3n del stack.",
+              "Las throw clauses sobrescriben el stack trace, mientras que las throw exceptions retienen la informaci\u00f3n del stack.",
+              "Las throw exceptions se disparan solo en tiempo de ejecuci\u00f3n, mientras que las throw clauses pueden dispararse durante el tiempo de compilaci\u00f3n."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "5eb1c3fb5455f990e3b12e7a",
+            "question": "Cuando un m\u00e9todo as\u00edncrono es ejecutado, el c\u00f3digo corre pero no pasa nada m\u00e1s que una advertencia del compilador. \u00bfQu\u00e9 es lo m\u00e1s probable que est\u00e9 causando que el m\u00e9todo no retorne nada?",
+            "answer": "El m\u00e9todo est\u00e1 faltando una palabra clave await en su cuerpo.",
+            "explanation": "[Documentaci\u00f3n oficial: Iniciando tareas concurrentemente](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/#start-tasks-concurrently)",
+            "hint": null,
+            "correctAnswer": [
+              "El m\u00e9todo est\u00e1 faltando una palabra clave await en su cuerpo."
+            ],
+            "options": [
+              "Falta la declaraci\u00f3n return yield al final del m\u00e9todo.",
+              "El m\u00e9todo est\u00e1 faltando una palabra clave await en su cuerpo.",
+              "Falta la palabra clave wait al final del m\u00e9todo.",
+              "Falta la palabra clave yield en el m\u00e9todo."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "9c1c7c894b342e981194ede1",
+            "question": "\u00bfQu\u00e9 son los eventos de C#?",
+            "answer": "acciones que generan notificaciones, que son enviadas a sus listeners registrados",
+            "explanation": "[Documentaci\u00f3n oficial: Introducci\u00f3n a eventos](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)",
+            "hint": null,
+            "correctAnswer": [
+              "acciones que generan notificaciones, que son enviadas a sus listeners registrados"
+            ],
+            "options": [
+              "acciones del sistema que se comunican directamente con el compilador en tiempo de ejecuci\u00f3n",
+              "acciones que se ejecutan cuando el c\u00f3digo compila, generando logs y salida de prueba",
+              "acciones que generan notificaciones, que son enviadas a sus listeners registrados",
+              "m\u00e9todos solo de usuario que env\u00edan datos al backend de la aplicaci\u00f3n"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "7a43285cdb9359689230c695",
+            "question": "\u00bfQu\u00e9 tipo de valores pueden almacenar los arrays?",
+            "answer": "m\u00faltiples variables, o colecciones, del mismo tipo",
+            "explanation": "[Documentaci\u00f3n oficial: Arrays](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/)",
+            "hint": null,
+            "correctAnswer": [
+              "m\u00faltiples variables, o colecciones, del mismo tipo"
+            ],
+            "options": [
+              "colecciones desordenadas de valores num\u00e9ricos",
+              "pares clave-valor de cualquier tipo soportado por C#",
+              "instancias de clase y struct",
+              "m\u00faltiples variables, o colecciones, del mismo tipo"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "b048330493398f286bfc70f7",
+            "question": "Dada esta enumeraci\u00f3n, \u00bfc\u00f3mo acceder\u00edas al valor de tipo entero de 'AppState.Loading'?\n`enum AppState { OffLine, Loading, Ready }`",
+            "answer": "int currentState = (int)AppState.Loading;",
+            "explanation": "[Documentaci\u00f3n oficial: Tipos de enumeraci\u00f3n](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum#conversions)",
+            "hint": null,
+            "correctAnswer": [
+              "int currentState = (int)AppState.Loading;"
+            ],
+            "options": [
+              "string currentState = (string)AppState.Loading;",
+              "string currentState = AppState.Loading.integralVal;",
+              "int currentState = AppState.Loading.rawValue;",
+              "int currentState = (int)AppState.Loading;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "9a09b3148a077a0f78bf55aa",
+            "question": "\u00bfQu\u00e9 car\u00e1cter usar\u00edas para iniciar un patr\u00f3n de expresi\u00f3n regular en un l\u00edmite de palabra?",
+            "answer": "\\b",
+            "explanation": "1. [regular-expressions: L\u00edmites de Palabra](https://www.regular-expressions.info/wordboundaries.html)\n2. [Documentaci\u00f3n oficial: Referencia R\u00e1pida del Lenguaje de Expresi\u00f3n Regular](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)",
+            "hint": null,
+            "correctAnswer": [
+              "\\b"
+            ],
+            "options": [
+              "d",
+              "\\a",
+              "\\b",
+              "\\w"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "70dd6e79ef07af80fd2d6489",
+            "question": "Para conformar a la siguiente interface, \u00bfcu\u00e1les de sus miembros necesitan ser implementados?\n```cs\npublic interface INameable\n{\n    string FirstName { get; set; }\n    string LastName { get; }\n}\n```",
+            "answer": "Ambas propiedades FirstName y LastName necesitan ser implementadas.",
+            "explanation": "[Documentaci\u00f3n oficial: interface](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface)",
+            "hint": null,
+            "correctAnswer": [
+              "Ambas propiedades FirstName y LastName necesitan ser implementadas."
+            ],
+            "options": [
+              "Ambas propiedades FirstName y LastName necesitan ser implementadas.",
+              "Ninguna, ambas son opcionales.",
+              "Solo la propiedad LastName necesita ser implementada.",
+              "Solo la propiedad FirstName necesita ser implementada."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "89fe2938ab43739310017bf7",
+            "question": "Est\u00e1s tratando con m\u00faltiples assemblies en tu programa, pero est\u00e1s preocupado por la asignaci\u00f3n de memoria. \u00bfEn qu\u00e9 punto del ciclo de vida del programa se cargan los assemblies en memoria?",
+            "answer": "solo cuando se requieren",
+            "explanation": "1. [Documentaci\u00f3n oficial: Carga de Assemblies](https://docs.microsoft.com/en-us/dotnet/framework/deployment/best-practices-for-assembly-loading)\n2. [Stackoverflow: \u00bfCu\u00e1ndo exactamente se cargan los assemblies?](https://stackoverflow.com/questions/21914692/when-exactly-are-assemblies-loaded)",
+            "hint": null,
+            "correctAnswer": [
+              "solo cuando se requieren"
+            ],
+            "options": [
+              "en tiempo de ejecuci\u00f3n",
+              "en tiempo de compilaci\u00f3n",
+              "solo cuando se requieren",
+              "solo cuando se cargan program\u00e1ticamente"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "6e3ddaa64d9279b7a70712ee",
+            "question": "\u00bfCu\u00e1l es la descripci\u00f3n m\u00e1s precisa de una expresi\u00f3n regular?",
+            "answer": "Una expresi\u00f3n regular es una cadena de texto especial para describir un patr\u00f3n de b\u00fasqueda.",
+            "explanation": "1. [Documentaci\u00f3n oficial: Referencia R\u00e1pida del Lenguaje de Expresi\u00f3n Regular](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference)\n2. [Documentaci\u00f3n oficial: Expresiones regulares .NET](https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expressions)",
+            "hint": null,
+            "correctAnswer": [
+              "Una expresi\u00f3n regular es una cadena de texto especial para describir un patr\u00f3n de b\u00fasqueda."
+            ],
+            "options": [
+              "Una expresi\u00f3n regular es una herramienta de C# usada para parsear HTML",
+              "Una expresi\u00f3n regular es una cadena de texto especial para describir un patr\u00f3n de b\u00fasqueda.",
+              "Una expresi\u00f3n regular permite que una variable sea pasada por referencia.",
+              "Una expresi\u00f3n regular permite que una clase se conforme al protocolo Equatable."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "379c7942b5ea85f5ba64bd5a",
+            "question": "\u00bfPor qu\u00e9 usar\u00edas un campo de clase en C#?",
+            "answer": "Para mantener informaci\u00f3n y datos contenidos en el objeto de clase",
+            "explanation": "[Documentaci\u00f3n oficial: Introducci\u00f3n a clases](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes)",
+            "hint": null,
+            "correctAnswer": [
+              "Para mantener informaci\u00f3n y datos contenidos en el objeto de clase"
+            ],
+            "options": [
+              "Para definir los comportamientos de la clase",
+              "Para mantener informaci\u00f3n y datos contenidos en el objeto de clase",
+              "Para comunicar entre clases y objetos",
+              "Para almacenar el valor de definici\u00f3n de la clase"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "c6ff37bd18ab30e05543ba7a",
+            "question": "\u00bfCu\u00e1ndo usar\u00edas gen\u00e9ricos en tu c\u00f3digo?",
+            "answer": "todas estas respuestas",
+            "explanation": "[Documentaci\u00f3n oficial: Clases y m\u00e9todos gen\u00e9ricos](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics)",
+            "hint": null,
+            "correctAnswer": [
+              "todas estas respuestas"
+            ],
+            "options": [
+              "para aumentar el rendimiento del c\u00f3digo",
+              "todas estas respuestas",
+              "cuando la reutilizaci\u00f3n de c\u00f3digo es una prioridad",
+              "cuando la seguridad de tipos es importante"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "d8cb259d3f1844c153bad3a1",
+            "question": "\u00bfQu\u00e9 se imprime en la consola cuando este c\u00f3digo es ejecutado?\n```cs\npublic delegate void AuthCallback(bool validUser);\npublic static AuthCallback loginCallback = Login;\npublic static void Login()\n{\n    Console.WriteLine(\"Valid user!\");\n}\npublic static void Main(string[] args)\n{\n    loginCallback(true);\n}\n```",
+            "answer": "un error, porque la firma del m\u00e9todo Login no coincide con el delegate",
+            "explanation": "1. [Documentaci\u00f3n oficial: Introducci\u00f3n a Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/delegates-overview)\n2. [Documentaci\u00f3n oficial: Introducci\u00f3n a Eventos](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)",
+            "hint": null,
+            "correctAnswer": [
+              "un error, porque la firma del m\u00e9todo Login no coincide con el delegate"
+            ],
+            "options": [
+              "Login successful...",
+              "Valid user!",
+              "un error, porque la firma del m\u00e9todo Login no coincide con el delegate",
+              "Login successful... Valid user!"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "a2c83555ddaa010f69a6e0ca",
+            "question": "\u00bfC\u00f3mo declarar\u00edas una clase sellada llamada User?",
+            "answer": "sealed class User {}",
+            "explanation": "[Documentaci\u00f3n oficial: Clases Abstractas y Selladas y Miembros de Clase](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members)",
+            "hint": null,
+            "correctAnswer": [
+              "sealed class User {}"
+            ],
+            "options": [
+              "public class User {}",
+              "abstract User {}",
+              "sealed class User {}",
+              "private sealed class User {}"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "5288c9fc6436e3494febf8cd",
+            "question": "\u00bfCu\u00e1l es la diferencia entre clases no est\u00e1ticas y est\u00e1ticas?",
+            "answer": "las clases no est\u00e1ticas necesitan ser inicializadas antes del uso, mientras que las clases est\u00e1ticas no",
+            "explanation": "1. [stackoverflow](https://stackoverflow.com/questions/20451554/whats-the-function-of-a-static-constructor-in-a-non-static-class)\n2. [Documentaci\u00f3n oficial: Constructores Est\u00e1ticos](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-constructors)",
+            "hint": null,
+            "correctAnswer": [
+              "las clases no est\u00e1ticas necesitan ser inicializadas antes del uso, mientras que las clases est\u00e1ticas no"
+            ],
+            "options": [
+              "las clases no est\u00e1ticas necesitan ser inicializadas antes del uso, mientras que las clases est\u00e1ticas no",
+              "las clases no est\u00e1ticas son accesibles solo desde una interface mientras que las clases est\u00e1ticas son accesibles desde cualquier lugar",
+              "las clases no est\u00e1ticas necesitan inicializar todos los miembros de clase en tiempo de ejecuci\u00f3n, mientras que las clases est\u00e1ticas no",
+              "las clases no est\u00e1ticas no necesitan ser inicializadas mientras que las clases est\u00e1ticas s\u00ed"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "46ad416fbd9de9f9e9d966a6",
+            "question": "\u00bfQu\u00e9 caracter\u00edstica previene que este c\u00f3digo compile?\n`public int age=\"28\"`",
+            "answer": "seguridad de tipos",
+            "explanation": "[c-sharpcorner: Seguridad de Tipos en .NET](https://www.c-sharpcorner.com/UploadFile/vikie4u/type-safety-in-net/)",
+            "hint": null,
+            "correctAnswer": [
+              "seguridad de tipos"
+            ],
+            "options": [
+              "seguridad de tipos",
+              "herencia simple",
+              "inyecci\u00f3n de dependencias",
+              "herencia m\u00faltiple"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "a6b26878aa1dee88ee4eb757",
+            "question": "\u00bfC\u00f3mo serializar\u00edas esta clase?\n`public class User {}`",
+            "answer": "Marca la clase User con el atributo `SerializableAttribute`.",
+            "explanation": "[Documentaci\u00f3n oficial: Clase SerializableAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.serializableattribute?view=net-5.0)",
+            "hint": null,
+            "correctAnswer": [
+              "Marca la clase User con el atributo `SerializableAttribute`."
+            ],
+            "options": [
+              "Marca la clase User con el `DeserializableAttribute`.",
+              "Declara la clase como `public serializable class User {}`.",
+              "Marca la clase User con el atributo `SerializableAttribute`.",
+              "Declara la clase como `private serializable class User {}`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "f70daa1b65494c9122838062",
+            "question": "\u00bfC\u00f3mo escribir\u00edas un delegate llamado ResultCallback con un par\u00e1metro int llamado responseCode?",
+            "answer": "public delegate void ResultCallback(int responseCode);",
+            "explanation": "[Documentaci\u00f3n oficial: Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)",
+            "hint": null,
+            "correctAnswer": [
+              "public delegate void ResultCallback(int responseCode);"
+            ],
+            "options": [
+              "public delegate ResultCallback(int responseCode);",
+              "public delegate void ResultCallback<(int) responseCode>;",
+              "public void delegate ResultCallback\\<int responseCode\\>;",
+              "public delegate void ResultCallback(int responseCode);"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "8661f8dba5975fddb5defa56",
+            "question": "\u00bfCu\u00e1l es la diferencia entre un m\u00e9todo est\u00e1tico y no est\u00e1tico?",
+            "answer": "los m\u00e9todos est\u00e1ticos no tienen que instanciar una instancia de la clase para llamar al m\u00e9todo",
+            "explanation": "[Documentaci\u00f3n oficial: Miembros Est\u00e1ticos](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members#static-members)",
+            "hint": null,
+            "correctAnswer": [
+              "los m\u00e9todos est\u00e1ticos no tienen que instanciar una instancia de la clase para llamar al m\u00e9todo"
+            ],
+            "options": [
+              "los m\u00e9todos no est\u00e1ticos siempre necesitan tener un tipo de retorno void",
+              "los m\u00e9todos no est\u00e1ticos no tienen acceso a variables miembro est\u00e1ticas",
+              "los m\u00e9todos est\u00e1ticos no tienen que instanciar una instancia de la clase para llamar al m\u00e9todo",
+              "los m\u00e9todos est\u00e1ticos siempre tienen que ser p\u00fablicos"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "236a0fd64be46a1877533bac",
+            "question": "\u00bfCu\u00e1l es la forma correcta de escribir un evento llamado apiResult basado en un delegate llamado ResultCallback?",
+            "answer": "public event ResultCallback apiResult;",
+            "explanation": "[Documentaci\u00f3n oficial: Introducci\u00f3n a eventos](https://docs.microsoft.com/en-us/dotnet/csharp/events-overview)",
+            "hint": null,
+            "correctAnswer": [
+              "public event ResultCallback apiResult;"
+            ],
+            "options": [
+              "public void event ResultCallback apiResult;",
+              "public event ResultCallback(() -> apiResult);",
+              "public event void ResultCallback",
+              "public event ResultCallback apiResult;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "36644f072849f13dea452e2e",
+            "question": "\u00bfCu\u00e1ndo se ejecutar\u00e1 el c\u00f3digo dentro del bloque finally en una declaraci\u00f3n try-catch?",
+            "answer": "despu\u00e9s de los bloques try y catch",
+            "explanation": "[Documentaci\u00f3n oficial: try-catch](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch)",
+            "hint": null,
+            "correctAnswer": [
+              "despu\u00e9s de los bloques try y catch"
+            ],
+            "options": [
+              "si hay un error, no se ejecutar\u00e1 en absoluto",
+              "entre los bloques try y catch",
+              "despu\u00e9s de los bloques try y catch",
+              "cuando el bloque finally anula el bloque catch y se ejecuta en su lugar"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "bdf05622538dc8ed0ece589b",
+            "question": "\u00bfQu\u00e9 m\u00e9todo extiende correctamente la clase string?",
+            "answer": "public static string IsvalidName(this string i, string value) {}",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "public static string IsvalidName(this string i, string value) {}"
+            ],
+            "options": [
+              "public static string IsvalidName(this string i, string value) {}",
+              "public static void IsvalidName(this string i, string value) {}",
+              "public string IsvalidName(this string i, string value) {}",
+              "public void IsvalidName(this string i, string value) {}"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "f58e484a6e250b6e91c94294",
+            "question": "\u00bfC\u00f3mo est\u00e1n limitadas las clases de C#?",
+            "answer": "No soportan herencia m\u00faltiple.",
+            "explanation": "[Documentaci\u00f3n oficial: Herencia de clases](https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/types/classes#class-inheritance)",
+            "hint": null,
+            "correctAnswer": [
+              "No soportan herencia m\u00faltiple."
+            ],
+            "options": [
+              "No soportan herencia m\u00faltiple.",
+              "Soportan herencia m\u00faltiple.",
+              "Solo pueden tener un n\u00famero establecido de propiedades.",
+              "Solo pueden tener un n\u00famero establecido de m\u00e9todos."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "343526c9eb35b02e9bb83b91",
+            "question": "\u00bfQu\u00e9 funci\u00f3n realizan los namespaces?",
+            "answer": "Los namespaces separan c\u00f3digo en agrupaciones, controlan el acceso y evitan colisiones de nombres.",
+            "explanation": "[Documentaci\u00f3n oficial: namespace](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/namespace)",
+            "hint": null,
+            "correctAnswer": [
+              "Los namespaces separan c\u00f3digo en agrupaciones, controlan el acceso y evitan colisiones de nombres."
+            ],
+            "options": [
+              "Los namespaces calculan la cobertura de c\u00f3digo en tiempo de ejecuci\u00f3n.",
+              "Los namespaces compilan el c\u00f3digo de aplicaci\u00f3n juntos en tiempo de compilaci\u00f3n.",
+              "Los namespaces agrupan c\u00f3digo juntos en un solo repositorio.",
+              "Los namespaces separan c\u00f3digo en agrupaciones, controlan el acceso y evitan colisiones de nombres."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "86d50f16a767e7a7b8742a3f",
+            "question": "\u00bfCu\u00e1l es la forma correcta de escribir una propiedad p\u00fablica con un campo de respaldo privado?",
+            "answer": "D",
+            "explanation": "```cs\nprivate int _password;\npubic int Password = { get; set; }\n```\n```cs\nprivate int _password;\npublic int Password = _password;\n```\n```cs\nprivate int _password;\npublic int Password\n{\nget -> _password;\nset-> _password = value;\n}\n```\n```cs\nprivate int _password;\npublic int Password\n{\nget { return _password; }\nset { _password = value; }\n}\n```\n[Documentaci\u00f3n oficial: Usando Propiedades](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/using-properties)",
+            "hint": null,
+            "correctAnswer": [
+              "D"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "9026b9373b796ed9aa7d6027",
+            "question": "\u00bfQu\u00e9 es un thread pool?",
+            "answer": "una colecci\u00f3n de hilos creados durante la inicializaci\u00f3n que pueden ser reutilizados",
+            "explanation": "[Documentaci\u00f3n oficial: Clase ThreadPool](https://docs.microsoft.com/en-us/dotnet/api/system.threading.threadpool?view=net-5.0)",
+            "hint": null,
+            "correctAnswer": [
+              "una colecci\u00f3n de hilos creados durante la inicializaci\u00f3n que pueden ser reutilizados"
+            ],
+            "options": [
+              "una colecci\u00f3n de m\u00e9todos s\u00edncronos creados durante la inicializaci\u00f3n que no pueden ser reutilizados",
+              "una colecci\u00f3n de hilos creados durante la inicializaci\u00f3n que pueden ser reutilizados",
+              "una colecci\u00f3n de hilos solo reconocidos en tiempo de compilaci\u00f3n que pueden ser reutilizados",
+              "una colecci\u00f3n de m\u00e9todos as\u00edncronos creados en tiempo de compilaci\u00f3n que no pueden ser reutilizados"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "5b3920420d57c2bf6adad5c3",
+            "question": "Cuando un objeto en C# es serializado, \u00bfen qu\u00e9 se convierte?",
+            "answer": "flujo de bytes",
+            "explanation": "[Documentaci\u00f3n oficial: Serializaci\u00f3n](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/)",
+            "hint": null,
+            "correctAnswer": [
+              "flujo de bytes"
+            ],
+            "options": [
+              "XML",
+              "JSON",
+              "flujo de bytes",
+              "flujo de valores"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "f9babfc2933ae884903300f4",
+            "question": "\u00bfQu\u00e9 es un delegate?",
+            "answer": "un tipo que mantiene una referencia a un m\u00e9todo con una lista de par\u00e1metros particular y tipo de retorno",
+            "explanation": "[Documentaci\u00f3n oficial: Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)",
+            "hint": null,
+            "correctAnswer": [
+              "un tipo que mantiene una referencia a un m\u00e9todo con una lista de par\u00e1metros particular y tipo de retorno"
+            ],
+            "options": [
+              "una variable que mantiene una referencia a un tipo de valor y su contenido",
+              "un tipo de valor espec\u00edfico que solo puede ser usado en m\u00e9todos callback",
+              "un tipo que mantiene una referencia a un m\u00e9todo con una lista de par\u00e1metros particular y tipo de retorno",
+              "un tipo de variable personalizado que puede ser usado en clases abstractas"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "2fbd3e8235409413c55a9e9b",
+            "question": "\u00bfCu\u00e1les son las cuatro palabras clave asociadas con el manejo de excepciones en C#?",
+            "answer": "try, catch, finally, throw",
+            "explanation": "[Tutorial Point](https://www.tutorialspoint.com/csharp/csharp_exception_handling.htm#:~:text=Exceptions%20provide%20a%20way%20to,catch%2C%20finally%2C%20and%20throw.)",
+            "hint": null,
+            "correctAnswer": [
+              "try, catch, finally, throw"
+            ],
+            "options": [
+              "try, catch, valid, invalid",
+              "try, valid, finally, throw",
+              "try, catch, finally, throw",
+              "finally, throw, valid, invalid"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "4dfedcb18c83f3d80ffcef03",
+            "question": "\u00bfCu\u00e1l es la diferencia principal entre los operadores is y as?",
+            "answer": "El operador is verifica el tipo de objeto, mientras que el operador as intenta hacer cast de un objeto a un tipo espec\u00edfico.",
+            "explanation": "[Gu\u00eda Pluralsight](https://www.pluralsight.com/guides/csharp-is-as-operators-is-expressions)",
+            "hint": null,
+            "correctAnswer": [
+              "El operador is verifica el tipo de objeto, mientras que el operador as intenta hacer cast de un objeto a un tipo espec\u00edfico."
+            ],
+            "options": [
+              "El operador is verifica tipos de instancia, mientras que el operador as verifica el tipo heredado.",
+              "El operador is verifica tipos de datos primitivos, mientras que el operador as verifica el tipo de objeto.",
+              "El operador as verifica el tipo de objeto, mientras que el operador is intenta hacer cast de un objeto a un tipo espec\u00edfico.",
+              "El operador is verifica el tipo de objeto, mientras que el operador as intenta hacer cast de un objeto a un tipo espec\u00edfico."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "761b67f89c8e37f12db59fda",
+            "question": "\u00bfCu\u00e1l es la diferencia entre los bloques finally y finalize?",
+            "answer": "El bloque finally es llamado despu\u00e9s de la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finalize es llamado justo antes de la recolecci\u00f3n de basura.",
+            "explanation": "[C-sharpcorner](https://www.c-sharpcorner.com/forums/final-finally-and-finalize)",
+            "hint": null,
+            "correctAnswer": [
+              "El bloque finally es llamado despu\u00e9s de la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finalize es llamado justo antes de la recolecci\u00f3n de basura."
+            ],
+            "options": [
+              "El bloque finally es llamado durante la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finalize es llamado despu\u00e9s de la recolecci\u00f3n de basura.",
+              "El bloque finally es llamado despu\u00e9s de la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finalize es llamado justo antes de la recolecci\u00f3n de basura.",
+              "El bloque finalize es llamado antes de la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finally es llamado justo antes de la recolecci\u00f3n de basura.",
+              "El bloque finalize es llamado durante la ejecuci\u00f3n de un bloque try y catch, mientras que el m\u00e9todo finally es llamado despu\u00e9s de la recolecci\u00f3n de basura."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "91c0b09ab81d137314239f2a",
+            "question": "Tu aplicaci\u00f3n tiene un tipo de valor llamado username que necesita poder aceptar valores null, pero esto est\u00e1 generando errores de tiempo de compilaci\u00f3n. \u00bfC\u00f3mo arreglar\u00edas esto en c\u00f3digo?",
+            "answer": "string? username = null;",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "string? username = null;"
+            ],
+            "options": [
+              "Null<string> username = null;",
+              "string? username = null;",
+              "Type<string>? username = null;",
+              "Optional<string> username = null;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "82cc11df69193c1f216b854c",
+            "question": "\u00bfQu\u00e9 fragmento de c\u00f3digo declara correctamente una excepci\u00f3n personalizada llamada InvalidResponse?",
+            "answer": "class InvalidResponse: Exception {}",
+            "explanation": "[Documentaci\u00f3n oficial: Excepciones](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/how-to-create-user-defined-exceptions)",
+            "hint": null,
+            "correctAnswer": [
+              "class InvalidResponse: Exception {}"
+            ],
+            "options": [
+              "struct InvalidResponse: Exception {}",
+              "class InvalidResponse: Exception {}",
+              "public Exception InvalidResponse = new Exception ();",
+              "public Exception InvalidResponse () -> Exception;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "ad1f2de4c33ff58beb149f21",
+            "question": "\u00bfC\u00f3mo escribir\u00edas una variable enum llamada AppState con valores para Offline, Loading, y Ready?",
+            "answer": "enum AppState {Offline, Loading, Ready}",
+            "explanation": "[Documentaci\u00f3n oficial: Enum](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/enum)",
+            "hint": null,
+            "correctAnswer": [
+              "enum AppState {Offline, Loading, Ready}"
+            ],
+            "options": [
+              "enum AppState = [Offline, Loading, Ready]",
+              "enum AppState {\"Offline\", \"Loading\", \"Ready\"}",
+              "enum AppState = {Offline, Loading, Ready}",
+              "enum AppState {Offline, Loading, Ready}"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "812b54133d41e9cece476bdd",
+            "question": "\u00bfCu\u00e1l es la diferencia principal entre un tipo de valor y un tipo de referencia?",
+            "answer": "Un tipo de valor almacena un valor real, mientras que un tipo de referencia es un puntero a un valor.",
+            "explanation": "1. [Documentaci\u00f3n oficial: Tipos de valor](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types)\n2. [Documentaci\u00f3n oficial: Tipos de referencia](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types)",
+            "hint": null,
+            "correctAnswer": [
+              "Un tipo de valor almacena un valor real, mientras que un tipo de referencia es un puntero a un valor."
+            ],
+            "options": [
+              "Un tipo de valor puede ser cualquier tipo primitivo, mientras que los tipos de referencia deben ser independientes del tipo.",
+              "Un tipo de valor se refiere a otro valor, mientras que un tipo de referencia se refiere a un valor en memoria.",
+              "Un tipo de valor almacena un valor real, mientras que un tipo de referencia es un puntero a un valor.",
+              "Un tipo de valor est\u00e1 disponible solo en tiempo de ejecuci\u00f3n, mientras que un tipo de referencia est\u00e1 disponible solo en tiempo de compilaci\u00f3n."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "970581365511799e41da9bd5",
+            "question": "\u00bfCu\u00e1l es la diferencia entre las palabras clave `break` y `continue`?",
+            "answer": "La palabra clave `break` literalmente sale de una declaraci\u00f3n de flujo de control, mientras que `continue` ignora el resto de la declaraci\u00f3n de control o iteraci\u00f3n y comienza la siguiente.",
+            "explanation": "[Documentaci\u00f3n oficial: Declaraciones de salto](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/statements/jump-statements)",
+            "hint": null,
+            "correctAnswer": [
+              "La palabra clave `break` literalmente sale de una declaraci\u00f3n de flujo de control, mientras que `continue` ignora el resto de la declaraci\u00f3n de control o iteraci\u00f3n y comienza la siguiente."
+            ],
+            "options": [
+              "La palabra clave `break` se usa para salir de m\u00faltiples declaraciones de iteraci\u00f3n, mientras que `continue` solo puede salir de bloques de c\u00f3digo que tienen iteraciones \u00fanicas.",
+              "La palabra clave `break` literalmente sale de una declaraci\u00f3n de flujo de control, mientras que `continue` ignora el resto de la declaraci\u00f3n de control o iteraci\u00f3n y comienza la siguiente.",
+              "La palabra clave `break` literalmente sale del c\u00f3digo de flujo de control actual y lo detiene completamente, mientras que `continue` sigue ejecutando el c\u00f3digo despu\u00e9s de que se lanza una excepci\u00f3n.",
+              "La palabra clave `break` salta de una iteraci\u00f3n y luego procede con el resto del c\u00f3digo de flujo de control, mientras que `continue` detiene el c\u00f3digo ejecut\u00e1ndose completamente."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "f1d58960a355fad325a49c8d",
+            "question": "\u00bfQu\u00e9 fragmento de c\u00f3digo declara correctamente una variable llamada userId con un `get` p\u00fablico y `set` privado?",
+            "answer": "`public int userID { get; private set; }`",
+            "explanation": "[Documentaci\u00f3n oficial: Propiedades](https://docs.microsoft.com/en-us/dotnet/csharp/properties)",
+            "hint": null,
+            "correctAnswer": [
+              "`public int userID { get; private set; }`"
+            ],
+            "options": [
+              "`public int userID <get, set>;`",
+              "`public int userID [get, private set];`",
+              "`public int userID { get; private set; }`",
+              "`public int userID = { public get, private set };`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "a6c9494ad26db101133ba310",
+            "question": "\u00bfQu\u00e9 es verdadero sobre los m\u00e9todos virtuales?",
+            "answer": "`Los m\u00e9todos virtuales siempre necesitan una implementaci\u00f3n por defecto.`",
+            "explanation": "1. [Documentaci\u00f3n oficial: virtual](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/virtual)\n2. [c-sharpcorner: M\u00e9todo Virtual en C#](https://www.c-sharpcorner.com/UploadFile/3d39b4/virtual-method-in-C-Sharp/)",
+            "hint": null,
+            "correctAnswer": [
+              "`Los m\u00e9todos virtuales siempre necesitan una implementaci\u00f3n por defecto.`"
+            ],
+            "options": [
+              "`Sobrescribir m\u00e9todos virtuales en una clase derivada es obligatorio.`",
+              "`Sobrescribir m\u00e9todos virtuales en una clase derivada no es posible.`",
+              "`Los m\u00e9todos virtuales siempre necesitan una implementaci\u00f3n por defecto.`",
+              "`Los m\u00e9todos virtuales no pueden tener una implementaci\u00f3n por defecto.`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "5c5f2f11585af7d2c4ddf0aa",
+            "question": "\u00bfQu\u00e9 es probable que pase si tienes m\u00faltiples hilos accediendo al mismo recurso en tu programa?",
+            "answer": "`deadlock y condiciones de carrera`",
+            "explanation": "[Documentaci\u00f3n oficial: condiciones de carrera](https://docs.microsoft.com/en-us/archive/msdn-magazine/2008/october/concurrency-hazards-solving-problems-in-your-multithreaded-code)",
+            "hint": null,
+            "correctAnswer": [
+              "`deadlock y condiciones de carrera`"
+            ],
+            "options": [
+              "`sobrecarga de recursos`",
+              "`salto de hilos`",
+              "`deadlock y condiciones de carrera`",
+              "`nada, ya que esto es para lo que sirve el threading`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "0b5cd14443ceb7a7fecf5075",
+            "question": "\u00bfC\u00f3mo indicas que una cadena puede ser null?",
+            "answer": "`string? myVariable`",
+            "explanation": "[Documentaci\u00f3n oficial: tipos de valor nullable](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types#declaration-and-assignment)",
+            "hint": null,
+            "correctAnswer": [
+              "`string? myVariable`"
+            ],
+            "options": [
+              "`Una cadena no puede ser nullable.`",
+              "`string? myVariable`",
+              "`string myVariable = null`",
+              "`string(null) myVariable`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "7120a42023c05839ec5582ca",
+            "question": "\u00bfNecesitas declarar una variable out antes de usarla?",
+            "answer": "`No, puedes declarar un out en la lista de par\u00e1metros.`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`No, puedes declarar un out en la lista de par\u00e1metros.`"
+            ],
+            "options": [
+              "`No, puedes declarar un out en la lista de par\u00e1metros.`",
+              "`No, las variables Out ya no son parte de C#.`",
+              "`Debes declararla si es un tipo primitivo.`",
+              "`S\u00ed.`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "b5164e87e44246f01e567b98",
+            "question": "\u00bfC\u00f3mo acceder\u00edas a las \u00faltimas dos personas en un array llamado People?",
+            "answer": "`People[..^2]`",
+            "explanation": "Explicaci\u00f3n: **Puedes** hacer esto en C#. Sin embargo, ninguna de las respuestas anteriores es correcta. Puedes acceder a los \u00faltimos dos elementos usando `People[^2..]`. Por favor, consulta [issue #3354](https://github.com/Ebazhanov/linkedin-skill-assessments-quizzes/issues/3354) para m\u00e1s informaci\u00f3n.\nVer tambi\u00e9n: [Documentaci\u00f3n Oficial: Rangos](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/proposals/csharp-8.0/ranges)",
+            "hint": null,
+            "correctAnswer": [
+              "`People[..^2]`"
+            ],
+            "options": [
+              "`People[..^2]`",
+              "`No puedes hacer esto en C#.`",
+              "`People[..^3]`",
+              "`People[^2]`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "18329ebd65f4130521006e7c",
+            "question": "\u00bfCu\u00e1ndo se pueden crear tipos an\u00f3nimos?",
+            "answer": "`en tiempo de compilaci\u00f3n`",
+            "explanation": "[C-sharpcorner: Tipos An\u00f3nimos](https://www.c-sharpcorner.com/UploadFile/ff2f08/anonymous-types-in-C-Sharp/)",
+            "hint": null,
+            "correctAnswer": [
+              "`en tiempo de compilaci\u00f3n`"
+            ],
+            "options": [
+              "`en tiempo de compilaci\u00f3n`",
+              "`despu\u00e9s del tiempo de ejecuci\u00f3n`",
+              "`en tiempo de ejecuci\u00f3n`",
+              "`despu\u00e9s del tiempo de compilaci\u00f3n`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "f5802dab4d766f8d109ed079",
+            "question": "\u00bfQu\u00e9 es verdadero sobre la multitarea de hilos?",
+            "answer": "`La multitarea de hilos permite que el c\u00f3digo se ejecute concurrentemente`",
+            "explanation": "[Documentaci\u00f3n Oficial: Hilos](https://docs.microsoft.com/en-us/dotnet/standard/threading/threads-and-threading)",
+            "hint": null,
+            "correctAnswer": [
+              "`La multitarea de hilos permite que el c\u00f3digo se ejecute concurrentemente`"
+            ],
+            "options": [
+              "`La multitarea de hilos permite que el c\u00f3digo se ejecute concurrentemente`",
+              "`La multitarea de hilos permite que el c\u00f3digo se ejecute solo cuando se maneja un evento de usuario.`",
+              "`La multitarea de hilos bloquea el c\u00f3digo para que no se ejecute simult\u00e1neamente para proteger la memoria.`",
+              "`La multitarea de hilos suma bloques de c\u00f3digo de un solo hilo.`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "70a31870a93b012dd0569b6b",
+            "question": "\u00bfQu\u00e9 nivel de accesibilidad tiene este campo de clase?\n`private string LastName;`",
+            "answer": "Puede ser usado por otro c\u00f3digo solo en la misma clase o struct.",
+            "explanation": "[Documentaci\u00f3n Oficial: Niveles de Accesibilidad](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/accessibility-levels)",
+            "hint": null,
+            "correctAnswer": [
+              "Puede ser usado por otro c\u00f3digo solo en la misma clase o struct."
+            ],
+            "options": [
+              "Puede ser usado por otro c\u00f3digo solo en la misma clase o struct.",
+              "Puede ser usado por otro c\u00f3digo en un ensamblado referenciado.",
+              "Puede ser usado solo por c\u00f3digo contenido en una clase derivada.",
+              "Puede ser usado por otro c\u00f3digo en el mismo ensamblado."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "d9eb78ebf994606117b2a129",
+            "question": "\u00bfC\u00f3mo declarar\u00edas correctamente un array dentado llamado 'partyInvites' con 10 elementos vac\u00edos?",
+            "answer": "`string[][] partyInvites = new string[10][];`",
+            "explanation": "[Documentaci\u00f3n Oficial: Arrays Dentados](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/jagged-arrays)",
+            "hint": null,
+            "correctAnswer": [
+              "`string[][] partyInvites = new string[10][];`"
+            ],
+            "options": [
+              "`string[] partyInvites = new string[10];`",
+              "`string[][] partyInvites = new string[10][];`",
+              "`string[][] partyInvites = new string[10]();`",
+              "`string <[]> partyInvites = new string <[10]>;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "2a462d24f8c6eb1f4cc7449b",
+            "question": "\u00bfC\u00f3mo podr\u00edas pausar un hilo por tres segundos?",
+            "answer": "Thread.Sleep(3000);",
+            "explanation": "[Referencia](https://docs.microsoft.com/en-us/dotnet/api/system.threading.thread.sleep?view=net-6.0)",
+            "hint": null,
+            "correctAnswer": [
+              "Thread.Sleep(3000);"
+            ],
+            "options": [
+              "Thread.Pause(3000);",
+              "Thread.Resume(-3000);",
+              "Thread.Suspend(3000);",
+              "Thread.Sleep(3000);"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "79d3a07bf81572fc9fb14afb",
+            "question": "\u00bfQu\u00e9 est\u00e1 mal con este c\u00f3digo?\n```cs\nvoid MyFunction()\n{\n    {\n        int a = 10;\n        int b = 20;\n        int c = a + b;\n    }\n    Console.WriteLine(c);\n}\n```",
+            "answer": "La variable c ya no existe fuera del bloque.",
+            "explanation": "[Referencia](https://stackoverflow.com/a/6136865)",
+            "hint": null,
+            "correctAnswer": [
+              "La variable c ya no existe fuera del bloque."
+            ],
+            "options": [
+              "La variable c nunca se usa; mostrarla en la consola no cuenta como uso.",
+              "Las variables a y b nunca se usan.",
+              "No puedes colocar c\u00f3digo dentro de corchetes dentro de otro bloque.",
+              "La variable c ya no existe fuera del bloque."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "73ada708933e3a430d211990",
+            "question": "\u00bfCu\u00e1l declaraci\u00f3n es verdadera?",
+            "answer": "string es un alias para String",
+            "explanation": "[Referencia](https://stackoverflow.com/q/7074)",
+            "hint": null,
+            "correctAnswer": [
+              "string es un alias para String"
+            ],
+            "options": [
+              "Todas son verdaderas.",
+              "Ninguna es verdadera.",
+              "string es un tipo de valor.",
+              "string es un alias para String"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "7f73bf452cf1a3b781ea7a33",
+            "question": "\u00bfC\u00f3mo devolver\u00edas m\u00e1s de un valor desde un m\u00e9todo?",
+            "answer": "Usa una tupla o una variable out.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Usa una tupla o una variable out."
+            ],
+            "options": [
+              "Usa una tupla o una variable out.",
+              "La \u00fanica forma es usar una variable out.",
+              "La \u00fanica forma es usar una tupla.",
+              "Esto no se puede hacer"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "514db8088ffa9937c894d418",
+            "question": "\u00bfCu\u00e1l es un ejemplo v\u00e1lido de una clase derivada?",
+            "answer": "`public class PremiumUser: User {}`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`public class PremiumUser: User {}`"
+            ],
+            "options": [
+              "`public class PremiumUser sub User {}`",
+              "`public class PremiumUser: User {}`",
+              "`public class PremiumUser -> sub User {}`",
+              "`public class User: PremiumUser {}`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "a55aa73cdf556bee63145b40",
+            "question": "\u00bfCu\u00e1l es la forma correcta de llamar a un m\u00e9todo est\u00e1tico llamado DebugString desde una clase est\u00e1tica llamada InputManager?",
+            "answer": "`InputManager.DebugString();`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`InputManager.DebugString();`"
+            ],
+            "options": [
+              "`static InputManager.DebugString();`",
+              "`InputManager().DebugString;`",
+              "`new InputManager().DebugString();`",
+              "`InputManager.DebugString();`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "bb7baf11c3e6dde591e3f217",
+            "question": "\u00bfQu\u00e9 valores se pueden asignar a esta variable?\n```cs\npublic string? nickname\n```",
+            "answer": "Valores String o null",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Valores String o null"
+            ],
+            "options": [
+              "null",
+              "Valores String",
+              "Valores String o null",
+              "Valores String con m\u00e1s de un car\u00e1cter"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "c8a74ef122866c6369dd47fc",
+            "question": "\u00bfQu\u00e9 es un destructor?",
+            "answer": "`un m\u00e9todo especial llamado autom\u00e1ticamente cada vez que se elimina o destruye un objeto`",
+            "explanation": "[Referencia](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/destructors)",
+            "hint": null,
+            "correctAnswer": [
+              "`un m\u00e9todo especial llamado autom\u00e1ticamente cada vez que se elimina o destruye un objeto`"
+            ],
+            "options": [
+              "`un m\u00e9todo especial llamado autom\u00e1ticamente cada vez que se crea o actualiza un objeto`",
+              "`un m\u00e9todo impl\u00edcito llamado autom\u00e1ticamente cuando se procesan grupos de hilos concurrentemente`",
+              "`un m\u00e9todo expl\u00edcito llamado autom\u00e1ticamente cuando el compilador comienza a ejecutarse`",
+              "`un m\u00e9todo especial llamado autom\u00e1ticamente cada vez que se elimina o destruye un objeto`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "6a3f1500331e0d8cc5531604",
+            "question": "\u00bfQu\u00e9 fragmento de c\u00f3digo declara correctamente un alias de tipo CustomInt de tipo Int32?",
+            "answer": "`using CustomInt = System.Int32;`",
+            "explanation": "[Referencia](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-directive)",
+            "hint": null,
+            "correctAnswer": [
+              "`using CustomInt = System.Int32;`"
+            ],
+            "options": [
+              "`typealias CustomInt = System.Int32;`",
+              "`var<T> CustomInt = Int32;`",
+              "`using CustomInt = System.Int32;`",
+              "`type CustomInt = System<Int32>;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "e96dab3a945f43caf32e4004",
+            "question": "\u00bfQu\u00e9 es un tipo de enumeraci\u00f3n?",
+            "answer": "`conjunto de constantes integrales con nombre`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`conjunto de constantes integrales con nombre`"
+            ],
+            "options": [
+              "`un objeto de tipo de paso por referencia`",
+              "`un tipo de valor que no puede contener constantes`",
+              "`conjunto de constantes integrales con nombre`",
+              "`un objeto de tipo de paso por valor`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "a47c201147297970042cc082",
+            "question": "\u00bfPara qu\u00e9 se usa la palabra clave readonly en las declaraciones de campo?",
+            "answer": "`para declarar un campo cuyo valor se puede asignar solo antes de que salga el constructor`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`para declarar un campo cuyo valor se puede asignar solo antes de que salga el constructor`"
+            ],
+            "options": [
+              "`para declarar una variable miembro que no se puede calcular en tiempo de ejecuci\u00f3n`",
+              "`para declarar un campo cuyo valor se puede asignar solo antes de que salga el constructor`",
+              "`para declarar una variable est\u00e1tica que debe establecerse en tiempo de compilaci\u00f3n`",
+              "`para declarar una variable est\u00e1tica que debe establecerse en tiempo de ejecuci\u00f3n`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "542fddd84ad13157fc473ac5",
+            "question": "\u00bfCu\u00e1l declaraci\u00f3n es verdadera sobre los m\u00e9todos de C#?",
+            "answer": "`Los m\u00e9todos son acciones que un objeto puede realizar`",
+            "explanation": "[Documentaci\u00f3n oficial: M\u00e9todos (Gu\u00eda de Programaci\u00f3n C#)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/methods)",
+            "hint": null,
+            "correctAnswer": [
+              "`Los m\u00e9todos son acciones que un objeto puede realizar`"
+            ],
+            "options": [
+              "`Los m\u00e9todos almacenan variables.`",
+              "`Los m\u00e9todos son acciones que un objeto puede realizar`",
+              "`Un m\u00e9todo se puede usar solo una vez por archivo C#.`",
+              "`Un m\u00e9todo determina el estado de una propiedad dada.`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "ecca7127aaa0b6bb2c75e64f",
+            "question": "\u00bfCu\u00e1l es una clase de Excepci\u00f3n integrada v\u00e1lida de C#?",
+            "answer": "`ArgumentNullException`",
+            "explanation": "[Documentaci\u00f3n oficial: Clase ArgumentNullException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception?view=net-5.0)",
+            "hint": null,
+            "correctAnswer": [
+              "`ArgumentNullException`"
+            ],
+            "options": [
+              "`ArgumentNullValue`",
+              "`InvalidFormatFoundException`",
+              "`IndexOutOfPocket`",
+              "`ArgumentNullException`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "17c16b8ffe4a82408a57f8b0",
+            "question": "\u00bfCu\u00e1l es el prop\u00f3sito de una interfaz en C#?",
+            "answer": "Las interfaces definen un contrato que las clases deben cumplir, especificando un conjunto de m\u00e9todos y propiedades que las clases implementadoras deben proporcionar.",
+            "explanation": "[Documentaci\u00f3n Oficial: Interfaces (Gu\u00eda de Programaci\u00f3n C#)](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/)",
+            "hint": null,
+            "correctAnswer": [
+              "Las interfaces definen un contrato que las clases deben cumplir, especificando un conjunto de m\u00e9todos y propiedades que las clases implementadoras deben proporcionar."
+            ],
+            "options": [
+              "Las interfaces se usan para almacenar datos.",
+              "Las interfaces definen un contrato que las clases deben cumplir, especificando un conjunto de m\u00e9todos y propiedades que las clases implementadoras deben proporcionar.",
+              "Las interfaces se usan para crear instancias de clases.",
+              "Las interfaces se usan para organizaci\u00f3n de c\u00f3digo."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "386e4c9377d9e977be3162d7",
+            "question": "\u00bfCu\u00e1l es el prop\u00f3sito principal del bloque `finally` en una declaraci\u00f3n try-catch-finally de C#?",
+            "answer": "El bloque `finally` se usa para asegurar que cierto c\u00f3digo se ejecute independientemente de si ocurre una excepci\u00f3n.",
+            "explanation": "[Documentaci\u00f3n Oficial: try-catch (Referencia C#)](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/try-catch)",
+            "hint": null,
+            "correctAnswer": [
+              "El bloque `finally` se usa para asegurar que cierto c\u00f3digo se ejecute independientemente de si ocurre una excepci\u00f3n."
+            ],
+            "options": [
+              "El bloque `finally` se usa para manejar excepciones.",
+              "El bloque `finally` se usa para definir la l\u00f3gica principal de la declaraci\u00f3n try-catch.",
+              "El bloque `finally` es opcional y no es requerido en las declaraciones try-catch.",
+              "El bloque `finally` se usa para asegurar que cierto c\u00f3digo se ejecute independientemente de si ocurre una excepci\u00f3n."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "2eb0f1d2309b7d8cbe56524e",
+            "question": "\u00bfQu\u00e9 estructura de datos en C# te permite almacenar pares clave-valor y se usa frecuentemente para recuperaci\u00f3n r\u00e1pida de datos?",
+            "answer": "Dictionary",
+            "explanation": "[Documentaci\u00f3n Oficial: Clase Dictionary<TKey, TValue>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2)",
+            "hint": null,
+            "correctAnswer": [
+              "Dictionary"
+            ],
+            "options": [
+              "ArrayList",
+              "List",
+              "Array",
+              "Dictionary"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "8fedc6674fc62e508f06d89e",
+            "question": "\u00bfLa ejecuci\u00f3n del programa comienza con?",
+            "answer": "Main()",
+            "explanation": "[Referencia]: https://www.gkseries.com/c-sharp-programming/multiple-choice-questions-and-answers",
+            "hint": null,
+            "correctAnswer": [
+              "Main()"
+            ],
+            "options": [
+              "Main()",
+              "Get()",
+              "Class()",
+              "Display()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          },
+          {
+            "id": "1657c962d2c53f20644deb77",
+            "question": "En C# 'using' es un?",
+            "answer": "Directiva",
+            "explanation": "[Referencia]: https://www.gkseries.com/c-sharp-programming/multiple-choice-questions-and-answers",
+            "hint": null,
+            "correctAnswer": [
+              "Directiva"
+            ],
+            "options": [
+              "Clase",
+              "Directiva",
+              "Funci\u00f3n",
+              "Palabra clave"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "6993bc13516b9e74996a3a3e",
+            "quizzId": "25be9df094d4d2a776b4c250"
+          }
+        ]
       }
     ]
   },
   "meta": {
     "source": "c-sharp/c-sharp-quiz-es.md",
-    "language": "es",
-    "generatedAt": "2025-12-09T14:56:14.143933+00:00",
+    "languages": [
+      "es"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.165424+00:00",
     "warnings": []
   }
 }

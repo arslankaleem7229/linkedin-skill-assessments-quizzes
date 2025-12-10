@@ -1,1591 +1,1776 @@
 {
   "quizz": {
     "id": "a491c7c517642a7c40a0b8fd",
-    "title": "C (Lenguaje de Programaci\u00f3n)",
-    "description": "Seeded from c-(programming-language)/c-(programming-language)-quiz-es.md",
-    "createdById": "seed-user",
-    "questions": [
-      {
-        "id": "8907887d172a4672cd27a1a6",
-        "question": "\u00bfQu\u00e9 ejemplo de c\u00f3digo eventualmente provocar\u00e1 que la computadora se quede sin memoria?",
-        "answer": ":",
-        "explanation": "```c\nwhile(1)\n{\nchar *smallString = (char *) malloc(10);\n}\n```\n```c\nlong long number = 1;\nwhile(1)\nnumber *= 2;\n```\n```c\nwhile(1)\n{\nchar hugeString[1000000L];\nmemset(hugeString, 0, 1000000L);\n}\n```\n```c\nwhile(1)\n{\nlong *bigArray = (long *) malloc(sizeof(long) * 1000);\nmemset(bigArray, 1000000, 1000);\n(bigArray);\n}\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a35bb4f91af039d30ecc351a",
-        "question": "\u00bfCu\u00e1l ser\u00e1 el resultado del c\u00f3digo siguiente?\n```c\nint f1 (int a, int b)\n{\n    if (a > b)\n    {\n        printf(\"A is greater than B\\n\");\n        return 1;\n    }\n    else\n    {\n        printf(\"B is greater than A\");\n        return 0;\n    }\n}\nmain()\n{\n    if (f1(20,10) || f1(10,20))\n        printf(\"C is fun!\\n\");\n}\n```",
-        "answer": ":",
-        "explanation": "```\nA is greater than B\nC is fun!\n```\n```\nA is greater than B\nB is greater than A\nC is fun!\n```\n```\nA is greater than B\nB is greater than A\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          "Nothing is printed on Screen"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "23a8917fcf09319b0e73dfcc",
-        "question": "\u00bfC\u00f3mo se llama una funci\u00f3n dentro de la misma funci\u00f3n?",
-        "answer": "recursividad",
-        "explanation": "[Reference](https://www.cprogramming.com/tutorial/c/lesson16.html)",
-        "hint": null,
-        "correctAnswer": [
-          "recursividad"
-        ],
-        "options": [
-          "recursividad",
-          "subfunci\u00f3n",
-          "llamada interna",
-          "bucle infinito"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a4fcb08412477815528763ea",
-        "question": "\u00bfQu\u00e9 demuestra la declaraci\u00f3n de la variable c2?\n```c\nmain(){\n    char c1 ='a';\n    char c2 = c1+10;\n}\n```",
-        "answer": "aritm\u00e9tica de caracteres",
-        "explanation": "[Reference](https://tutorialspoint.dev/language/c/character-arithmetic-c-c)",
-        "hint": null,
-        "correctAnswer": [
-          "aritm\u00e9tica de caracteres"
-        ],
-        "options": [
-          "aritm\u00e9tica de caracteres",
-          "asignaci\u00f3n indefinida",
-          "conversi\u00f3n de tipo",
-          "declaraci\u00f3n inv\u00e1lida"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1b8c1bb9f5b11af9fa0a435d",
-        "question": "\u00bfDe qu\u00e9 es un ejemplo esta declaraci\u00f3n?\n```c\nstruct s {\n    int i;\n    struct s *s1;\n    struct s *s2;\n};\n```",
-        "answer": "un nodo",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "un nodo"
-        ],
-        "options": [
-          "un nodo",
-          "una linked list",
-          "una stack",
-          "un binary tree"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "57a1478e6c6ae30a28ee9cd6",
-        "question": "Los archivos header se listan usando la directiva de preprocesamiento #include, y pueden tener uno de los siguientes formatos: #include &lt;fileA&gt; o #include \"fileB\". \u00bfCu\u00e1l es la diferencia entre estos dos formatos?",
-        "answer": "El preprocesador intentar\u00e1 localizar fileA en una ruta de directorio predeterminada. Intentar\u00e1 localizar fileB en el mismo directorio que el archivo fuente junto con una ruta de directorio personalizada.",
-        "explanation": "[Reference](https://www.geeksforgeeks.org/difference-between-include-and-include-in-c-c-with-examples/#:~:text=The%20difference%20between%20the%20two,be%20included%20in%20the%20code.&text=%23include%20is%20for%20pre%2Ddefined%20header%20files.)",
-        "hint": null,
-        "correctAnswer": [
-          "El preprocesador intentar\u00e1 localizar fileA en una ruta de directorio predeterminada. Intentar\u00e1 localizar fileB en el mismo directorio que el archivo fuente junto con una ruta de directorio personalizada."
-        ],
-        "options": [
-          "El preprocesador intentar\u00e1 localizar fileA en el mismo directorio que el archivo fuente, y fileB en una ruta de directorio predeterminada.",
-          "El preprocesador intentar\u00e1 localizar fileA en el directorio del sistema fijo. Intentar\u00e1 localizar fileB en la ruta del directorio designada por la opci\u00f3n -I agregada a la l\u00ednea de comandos al compilar el c\u00f3digo fuente.",
-          "El archivo que usa la sintaxis fileA debe ser archivos del sistema, de n\u00famero ilimitado; fileB debe ser un archivo de usuario con un m\u00e1ximo de uno por archivo fuente.",
-          "El preprocesador intentar\u00e1 localizar fileA en una ruta de directorio predeterminada. Intentar\u00e1 localizar fileB en el mismo directorio que el archivo fuente junto con una ruta de directorio personalizada."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "897f2390f3fd2c64b6c8eee5",
-        "question": "Usando un for loop, \u00bfc\u00f3mo podr\u00edas escribir c\u00f3digo en C para contar hacia atr\u00e1s desde 10 hasta 1 y mostrar cada n\u00famero en su propia l\u00ednea?",
-        "answer": ":",
-        "explanation": "```c\nfor (int i = 0; i>=0, i--){\nprintf(\"%d\\n\", i);\n}//end of loop\n```\n```c\nint i;\nfor (i=1; i<=10; i++){\nprintf(\"%d\", i);\n}\n```\n```c\nint i = 10;\nwhile (i>0){\nprintf(\"%d\\n\", i);\ni--;\n}\n```\n```c\nint i;\nfor (i= 10; i>0; i--){\nprintf(\"%d\\n\", i);\n}// end of loop\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e536be4fa30ef726ad844c03",
-        "question": "\u00bfCu\u00e1l no es una de las palabras reservadas en C est\u00e1ndar?",
-        "answer": "typeof",
-        "explanation": "[Reference](https://www.ibm.com/docs/en/adfz/developer-for-zos/14.2.0?topic=programs-c-reserved-keywords)",
-        "hint": null,
-        "correctAnswer": [
-          "typeof"
-        ],
-        "options": [
-          "volatile",
-          "typeof",
-          "register",
-          "typedef"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d0274d874e3cc23b9404cd66",
-        "question": "\u00bfQu\u00e9 devuelve el programa mostrado a continuaci\u00f3n?\n```c\nint main(){\n    int a=1, b=2, c=3, d=4;\n    int x = a;\n    if (a>b)\n    if (b<c) x=b;\n    else x=c;\n    return(x);\n}\n```",
-        "answer": "1",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "1"
-        ],
-        "options": [
-          "1",
-          "3",
-          "2",
-          "0"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "36a537ff70e69c8d179ee373",
-        "question": "Usando la declaraci\u00f3n Union a continuaci\u00f3n, \u00bfcu\u00e1ntos bytes de espacio de memoria ocupar\u00e1n los datos de este tipo?\n```c\nunion Cars {\n    char make[20];\n    char model[30];\n    short year;\n} car;\n```",
-        "answer": "30",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "30"
-        ],
-        "options": [
-          "32",
-          "54",
-          "30",
-          "52"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "888002767c58c5b6d9a1fb81",
-        "question": "En esta muestra de c\u00f3digo, \u00bfqu\u00e9 no es un problema para el compilador de C?\n```c\nmain(){\n    constant int PI = 3.14;\n    printf(\"%f\\n\", pi);\n}\n```",
-        "answer": "El valor de PI debe establecerse en 3.141593, no 3.14",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "El valor de PI debe establecerse en 3.141593, no 3.14"
-        ],
-        "options": [
-          "El valor de PI debe establecerse en 3.141593, no 3.14",
-          "La declaraci\u00f3n de PI debe decir const, no constant.",
-          "El tipo de datos de PI debe ser float, no int.",
-          "La declaraci\u00f3n printf debe usar PI, no pi."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f87f4cd15d3b536807fd02ab",
-        "question": "\u00bfCu\u00e1l es el programa m\u00e1s peque\u00f1o para compilar y ejecutar sin errores?",
-        "answer": "int main() {return 0;}",
-        "explanation": "[Reference](https://www.beningo.com/150-the-wolrds-shortest-c-program/)",
-        "hint": null,
-        "correctAnswer": [
-          "int main() {return 0;}"
-        ],
-        "options": [
-          "main()",
-          "int main() {return 0;}",
-          "main() { }",
-          "main() { ; }"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1300c7dcb8ca2a0b822bad86",
-        "question": "\u00bfQu\u00e9 es opcional en una declaraci\u00f3n de funci\u00f3n?",
-        "answer": "nombres de los par\u00e1metros",
-        "explanation": "> **Explicaci\u00f3n:**\n> En todos los est\u00e1ndares modernos de C, los nombres de los par\u00e1metros en una declaraci\u00f3n de funci\u00f3n son opcionales.\n> Sin embargo, el significado de una lista de par\u00e1metros vac\u00eda (`int f();`) difiere seg\u00fan el est\u00e1ndar:\n>\n> - **Antes de C23:** Declara una funci\u00f3n con un n\u00famero no especificado de par\u00e1metros (no es un prototipo).\n> - **En C23:** Equivalente a `int f(void);` \u2014 declara una funci\u00f3n que no toma par\u00e1metros.\n>\n> [Reference](https://en.cppreference.com/w/c/language/function_declaration)",
-        "hint": null,
-        "correctAnswer": [
-          "nombres de los par\u00e1metros"
-        ],
-        "options": [
-          "tipo de datos de los par\u00e1metros",
-          "tipo de retorno de la funci\u00f3n",
-          "nombres de los par\u00e1metros",
-          "n\u00famero de par\u00e1metros"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2dc55d7f916bd5e9088eea40",
-        "question": "C trata todos los dispositivos, como la pantalla y el teclado, como archivos. \u00bfQu\u00e9 archivo se abre autom\u00e1ticamente cuando se ejecuta un programa?",
-        "answer": "stdout",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "stdout"
-        ],
-        "options": [
-          "stdout",
-          "stdio.h",
-          "default.h",
-          "string.h"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2abb90af58f4c435b04c57f6",
-        "question": "\u00bfEn qu\u00e9 segmento ocurre la asignaci\u00f3n din\u00e1mica de memoria?",
-        "answer": "heap",
-        "explanation": "[Reference](http://www.it.uc3m.es/pbasanta/asng/course_notes/dynamic_memory_heap_en.html#:~:text=The%20dynamic%20memory%20that%20is,reads%20a%20set%20of%20words.)",
-        "hint": null,
-        "correctAnswer": [
-          "heap"
-        ],
-        "options": [
-          "BSS Segment",
-          "stack",
-          "heap",
-          "data segment"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "de09f99173182b9f3c69a0ef",
-        "question": "\u00bfQu\u00e9 funci\u00f3n usas para desasignar memoria?",
-        "answer": "free()",
-        "explanation": "[Reference](https://devdocs.io/c/memory/free)\n[Reference](https://www.tutorialspoint.com/c_standard_library/c_function_free.htm)",
-        "hint": null,
-        "correctAnswer": [
-          "free()"
-        ],
-        "options": [
-          "dalloc()",
-          "dealloc()",
-          "release()",
-          "free()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d295f58ab14b85a60101716f",
-        "question": "En el lenguaje C, \u00bfcu\u00e1les son los bloques de construcci\u00f3n b\u00e1sicos que se construyen juntos para escribir un programa?",
-        "answer": "tokens",
-        "explanation": "[Reference](https://fresh2refresh.com/c-programming/c-tokens-identifiers-keywords/#:~:text=C%20tokens%20are%20the%20basic,are%20known%20as%20C%20tokens.)",
-        "hint": null,
-        "correctAnswer": [
-          "tokens"
-        ],
-        "options": [
-          "keywords",
-          "identificadores",
-          "tokens",
-          "funciones"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f18dab4a750e999a46d349e6",
-        "question": "\u00bfCu\u00e1ndo se asigna memoria para una variable?",
-        "answer": "durante la declaraci\u00f3n de la variable",
-        "explanation": "[Reference](https://www.codingame.com/playgrounds/14589/how-to-play-with-pointers-in-c/dynamic-memory-allocation#:~:text=When%20a%20variable%20is%20declared,allocation%20or%20dynamic%20memory%20allocation.)",
-        "hint": null,
-        "correctAnswer": [
-          "durante la declaraci\u00f3n de la variable"
-        ],
-        "options": [
-          "durante la asignaci\u00f3n de la variable",
-          "durante la inicializaci\u00f3n de la variable",
-          "durante la declaraci\u00f3n de la variable",
-          "durante la definici\u00f3n de la variable"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1ca6e26ad251dec15eff8fa0",
-        "question": "C usa el m\u00e9todo call by value para pasar argumentos a las funciones. \u00bfC\u00f3mo puedes invocar el m\u00e9todo call by reference?",
-        "answer": "usando pointers",
-        "explanation": "[Reference](https://www.javatpoint.com/call-by-value-and-call-by-reference-in-c)",
-        "hint": null,
-        "correctAnswer": [
-          "usando pointers"
-        ],
-        "options": [
-          "usando pointers",
-          "declarando funciones separadamente de definirlas",
-          "usando funciones recursivas",
-          "usando variables globales"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b9df2063514dd7fcc0e01dac",
-        "question": "Un union te permite almacenar diferentes `___` en el mismo `___`.",
-        "answer": "Tipos de datos; Espacio de memoria",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Tipos de datos; Espacio de memoria"
-        ],
-        "options": [
-          "Objetos; Structure",
-          "Variables; Declaraci\u00f3n",
-          "Tipos de datos; Espacio de memoria",
-          "Arrays; Archivo header"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9ff8805ede1e97d3f5578b3e",
-        "question": "\u00bfCu\u00e1l es la salida de este programa?\n```c\nmain() {\n    char c1='a' , c2='A';\n    int i=c2-c1;\n    printf(\"%d\", i);\n}\n```",
-        "answer": "-32",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "-32"
-        ],
-        "options": [
-          "32",
-          "Error en tiempo de ejecuci\u00f3n",
-          "-32",
-          "0"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b4c55bb2e2a09124229a609e",
-        "question": "\u00bfCu\u00e1l es la diferencia entre las funciones scanf() y sscanf()?",
-        "answer": "La funci\u00f3n scanf() lee datos formateados del teclado; La funci\u00f3n sscanf() lee entrada formateada de una cadena.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "La funci\u00f3n scanf() lee datos formateados del teclado; La funci\u00f3n sscanf() lee entrada formateada de una cadena."
-        ],
-        "options": [
-          "La funci\u00f3n scanf() lee datos formateados como una cadena; La funci\u00f3n sscanf() lee entrada de cadena de la pantalla.",
-          "La funci\u00f3n scanf() lee datos formateados del teclado; La funci\u00f3n sscanf() lee entrada formateada de una cadena.",
-          "La funci\u00f3n scanf() lee datos de cadena del teclado; La funci\u00f3n sscanf() lee datos de cadena de una cadena.",
-          "La funci\u00f3n scanf() lee datos formateados de un archivo; La funci\u00f3n sscanf() lee entrada de una cadena seleccionada"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9ae6671d2d5d149009454bae",
-        "question": "\u00bfCu\u00e1l no es un comando v\u00e1lido con esta declaraci\u00f3n?\n```c\nchar *string[20] = { \"one\", \"two\", \"three\"};\n```",
-        "answer": "`printf(\"%s\", string[1][2]);`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`printf(\"%s\", string[1][2]);`"
-        ],
-        "options": [
-          "`printf(\"%c\", string[1][2]);`",
-          "`printf(\"%s\", string[1][2]);`",
-          "`printf(\"%s\", string[1]);`",
-          "`printf(string[1]);`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "38fc7e09a8fd102032ce680c",
-        "question": "\u00bfA qu\u00e9 es equivalente la expresi\u00f3n player->name?",
-        "answer": "`(*player).name`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`(*player).name`"
-        ],
-        "options": [
-          "`player.name`",
-          "`(*player).name`",
-          "`*player.name`",
-          "`player.*name`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "00ef1b95865a55fad764819a",
-        "question": "\u00bfQu\u00e9 programa compilar\u00e1 y ejecutar\u00e1 sin errores?",
-        "answer": ":",
-        "explanation": "```c\nmain() {\nfor(i=0; i<10; i++) ;\n}\n```\n```c\nmain() {\nint i=0;\nfor(; i<10; i++) ;\n}\n```\n```c\nmain() {\nint i;\nfor(i=0; i<j; i++) ;\n}\n```\n```c\nmain() {\nint i;\nfor (i= 10; i<10; i++)\n}\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "10025fd6954535f3cafd4e81",
-        "question": "\u00bfQu\u00e9 devuelve esta llamada de funci\u00f3n?\n```c\n1 main() { float x = f1(10, 5); }\n2 float f1(int a, int b) { return (a/b); }\n```",
-        "answer": "un error del compilador",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "un error del compilador"
-        ],
-        "options": [
-          "2",
-          "2.000000",
-          "un error en tiempo de ejecuci\u00f3n",
-          "un error del compilador"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "810db178eee9f157eabe114b",
-        "question": "\u00bfQu\u00e9 crea este programa?\n```c\n#include <stdio.h>\nint main() {\n    int *p = NULL;\n    return 0;\n}\n```",
-        "answer": "un NULL pointer",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "un NULL pointer"
-        ],
-        "options": [
-          "un error en tiempo de ejecuci\u00f3n",
-          "un NULL pointer",
-          "un error de compilaci\u00f3n",
-          "un void pointer"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2b7e646ccf3b75026ca5ce09",
-        "question": "\u00bfCu\u00e1l es una forma alternativa de escribir la expresi\u00f3n (\\*x).y?",
-        "answer": "x->y",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "x->y"
-        ],
-        "options": [
-          "No hay equivalente.",
-          "x->y",
-          "\\*x->y",
-          "y->x"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "166dbcad5e0729dd3044e8ae",
-        "question": "Los errores en tiempo de compilaci\u00f3n son errores est\u00e1ticos que se pueden encontrar en el c\u00f3digo.",
-        "answer": "en declaraciones y definiciones",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "en declaraciones y definiciones"
-        ],
-        "options": [
-          "en declaraciones y definiciones",
-          "en funciones y expresiones",
-          "en sintaxis y sem\u00e1ntica",
-          "en objetos y declaraciones"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1a4210aa0281f7a8aa6f9d1c",
-        "question": "La entrada y salida de archivos (I/O) en C est\u00e1 fuertemente basada en la forma en que se hace `___`?",
-        "answer": "in Unix",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "in Unix"
-        ],
-        "options": [
-          "in Unix",
-          "in C++",
-          "in C#",
-          "in DOS"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e7e79f6553df25f16515d468",
-        "question": "\u00bfQu\u00e9 devuelve la funci\u00f3n strcmp(str1, str2)?",
-        "answer": "0 si str1 y str2 son iguales, un n\u00famero negativo si str1 es menor que str2, un n\u00famero positivo si str1 es mayor que str2",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "0 si str1 y str2 son iguales, un n\u00famero negativo si str1 es menor que str2, un n\u00famero positivo si str1 es mayor que str2"
-        ],
-        "options": [
-          "0 si str1 y str2 son iguales, un n\u00famero negativo si str1 es menor que str2, un n\u00famero positivo si str1 es mayor que str2",
-          "true (1) si str1 y str2 son iguales, false (0) si str1 y str2 no son iguales",
-          "true (1) si str1 y str2 son iguales, NULL si str1 y str2 no son iguales",
-          "0 si str1 y str2 son iguales, un n\u00famero negativo si str2 es menor que str1, un n\u00famero positivo si str2 es mayor que str1"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8d81070816142f3af70973dc",
-        "question": "\u00bfCu\u00e1l es la salida de este programa?\n```c\nint a=10, b=20;\nint f1(a) { return(a*b); }\nmain() {\nprintf(\"%d\", f1(5));\n}\n```",
-        "answer": "100",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "100"
-        ],
-        "options": [
-          "100",
-          "200",
-          "5",
-          "50"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d31b90646998ae45a8a90d8e",
-        "question": "\u00bfCu\u00e1l _no_ es una forma correcta de declarar una variable string?",
-        "answer": "`char string = \"Hello World\";`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`char string = \"Hello World\";`"
-        ],
-        "options": [
-          "`char *string = \"Hello World\";`",
-          "`char string = \"Hello World\";`",
-          "`char string[20] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'};`",
-          "`char string[] = \"Hello World\";`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c3f2438772f287e2f854efc2",
-        "question": "\u00bfCu\u00e1l opci\u00f3n es un include guard para el archivo header mylib.h?",
-        "answer": ":",
-        "explanation": "```c\n#ifdef MYLIB_H\n#undef MYLIB_H\n// mylib.h content\n#endif /* MYLIB_H */\n```\n```c\n#ifndef MYLIB_H\n#define MYLIB_H\n// mylib.h content\n#endif /* MYLIB_H */\n```\n```c\n#define MYLIB_H\n#include \"mylib.h\"\n#undef MYLIB_H\n```\n```c\n#ifdef MYLIB_H\n#define MYLIB_H\n// mylib.h content\n#endif /* MYLIB_H */\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b4b7a4e18d4e8c3fc7a1ce8b",
-        "question": "\u00bfCu\u00e1ntas veces se ejecuta el c\u00f3digo dentro del while loop en este programa?\n```c\nmain(){\n int x=1;\n while(x++<100){\n    x*=x;\n    if(x<10) continue;\n    if(x>50) break;\n }\n}\n```",
-        "answer": "3",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "3"
-        ],
-        "options": [
-          "100",
-          "3",
-          "5",
-          "50"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4a86380278a99128d49e6325",
-        "question": "\u00bfA trav\u00e9s de qu\u00e9 se hace la entrada y salida de archivos (I/O) en C?",
-        "answer": "llamadas de funci\u00f3n",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "llamadas de funci\u00f3n"
-        ],
-        "options": [
-          "componentes controlados por sintaxis",
-          "interfaces nativas",
-          "objetos del sistema",
-          "llamadas de funci\u00f3n"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3dc3c871723b28c2ffb5d650",
-        "question": "\u00bfLas directivas son traducidas por el?",
-        "answer": "Pre-procesador",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pre-procesador"
-        ],
-        "options": [
-          "Pre-procesador",
-          "Compilador",
-          "Enlazador",
-          "Editor"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "128f65fd95b23fcf06e22c7f",
-        "question": "Las estructuras de loop principales en la programaci\u00f3n en C son el for loop, el while loop, \u00bfy cu\u00e1l otro loop?",
-        "answer": "do...while",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "do...while"
-        ],
-        "options": [
-          "do...while",
-          "for...in",
-          "repeat...until",
-          "do...until"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c79066cbb3adac5d4b0b12cd",
-        "question": "Por defecto, \u00bflas funciones en C son qu\u00e9 tipo de funciones?",
-        "answer": "static",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "static"
-        ],
-        "options": [
-          "global",
-          "static",
-          "library",
-          "system"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "93bd8058fe5a9c0fb9f4c620",
-        "question": "Has escrito una funci\u00f3n que quieres incluir como miembro de la estructura 'a'. \u00bfC\u00f3mo se define tal miembro de estructura?",
-        "answer": ":",
-        "explanation": "```c\nstruct a {\nvoid *f1;\n};\n```\n```c\nstruct a {\nvoid (*f1)();\n};\n```\n```c\nstruct a {\n*(void *f1)();\n};\n```\n```c\nstruct a {\nvoid *f1();\n};\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "91ae80ea8300c24cbbef772d",
-        "question": "Una estructura de datos Stack permite todas las operaciones de datos en un extremo solamente, haci\u00e9ndola qu\u00e9 tipo de implementaci\u00f3n?",
-        "answer": "LIFO",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "LIFO"
-        ],
-        "options": [
-          "FIFO",
-          "LIFO",
-          "LILO",
-          "LOLI"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8f56e0551ab5f5e67067237b",
-        "question": "\u00bfQu\u00e9 muestra este programa?\n```c\nmain(){\n    char *p = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\n    int i;\n    for (i=0;i<5;i++) *p++; *p++;\n    printf(\"%c\",*p++);\n}\n```",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a2609fe81d859c30eaeca470",
-        "question": "Describe la relaci\u00f3n entre lvalue y rvalue.",
-        "answer": "Un lvalue puede aparecer en el lado izquierdo o derecho de una asignaci\u00f3n; un rvalue puede aparecer solo en el lado derecho.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Un lvalue puede aparecer en el lado izquierdo o derecho de una asignaci\u00f3n; un rvalue puede aparecer solo en el lado derecho."
-        ],
-        "options": [
-          "Un lvalue puede aparecer solo en el lado izquierdo de una asignaci\u00f3n; un rvalue puede aparecer solo en el lado derecho.",
-          "Un lvalue puede aparecer solo en el lado izquierdo de una asignaci\u00f3n; un rvalue puede aparecer en el lado izquierdo o derecho.",
-          "Un lvalue y un rvalue pueden aparecer en el lado izquierdo o derecho de una asignaci\u00f3n.",
-          "Un lvalue puede aparecer en el lado izquierdo o derecho de una asignaci\u00f3n; un rvalue puede aparecer solo en el lado derecho."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e9a203367760a7dce54a4505",
-        "question": "\u00bfQu\u00e9 operador se usa para acceder a la direcci\u00f3n de una variable?",
-        "answer": "`&`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`&`"
-        ],
-        "options": [
-          "`%`",
-          "`**`",
-          "`*`",
-          "`&`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b8697f1f5541afcbf9d1228d",
-        "question": "\u00bfQu\u00e9 funci\u00f3n add devuelve correctamente el valor actualizado del resultado?",
-        "answer": ":",
-        "explanation": "```c\nvoid add (int a, int b, int *result)\n{\n*result = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(a,b,&result);\n}\n```\n```c\nvoid add (int a, int b, int result)\n{\nresult = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(a,b,result);\n}\n```\n```c\nvoid add (int a, int b, int *result)\n{\nresult = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(a,b,result);\n}\n```\n```c\nvoid add (int *a, int *b, int *result)\n{\nresult = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(*a,*b,*result);\n}\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3ee2761f82a2a78e27ddf836",
-        "question": "Considera los n\u00fameros de la serie Fibonacci menores a 100: 0,1,1,2,3,5,8,13,21,34,55,89. \u00bfQu\u00e9 fragmento de c\u00f3digo genera la secuencia?",
-        "answer": ":",
-        "explanation": "```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", a);\nfibonacci(a,b);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```\n```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", b);\nfibonacci(a,c);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```\n```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", a);\nfibonacci(b,c);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```\n```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", c);\nfibonacci(b,c);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b379e8c4dcd64f09f7d8c326",
-        "question": "\u00bfCu\u00e1l _no_ es un especificador de storage class?",
-        "answer": "`intern`",
-        "explanation": "[Reference](https://en.cppreference.com/w/cpp/language/storage_duration)",
-        "hint": null,
-        "correctAnswer": [
-          "`intern`"
-        ],
-        "options": [
-          "`intern`",
-          "`extern`",
-          "`register`",
-          "`static`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8f87a80890615d20845bbf84",
-        "question": "\u00bfQu\u00e9 l\u00ednea de c\u00f3digo, despu\u00e9s de la ejecuci\u00f3n, resulta en que `i` tenga el valor de 1?",
-        "answer": "`for(i=1; i==10; i++);`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`for(i=1; i==10; i++);`"
-        ],
-        "options": [
-          "`for(i=1; i<=1; i++);`",
-          "`for(i=1; i=10; i++);`",
-          "`for(i=1; i==10; i++);`",
-          "`for(i=10; i>=1; i--);`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3cd1101099ee71a457077fa4",
-        "question": "\u00bfCu\u00e1l es el valor de la variable c al final de este programa?\n```\n1 main() {\n2   int a, b, c;\n3   a=10; b=50;\n4   c=a * b % a;\n5 }\n```",
-        "answer": "0",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "0"
-        ],
-        "options": [
-          "50",
-          "5",
-          "0",
-          "500"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a5601c5de346cce4025d0e08",
-        "question": "\u00bfCu\u00e1l _no_ es uno de los tipos de datos b\u00e1sicos en C?",
-        "answer": "array",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "array"
-        ],
-        "options": [
-          "long double",
-          "unsigned char",
-          "array",
-          "float"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1fb27667f6a262637c9c8db8",
-        "question": "\u00bfCu\u00e1l es el operador de acceso a miembros para una estructura?",
-        "answer": ".",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "."
-        ],
-        "options": [
-          ",",
-          "[]",
-          ".",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ec9e472de03804d0ad949548",
-        "question": "\u00bfQu\u00e9 tipo de datos est\u00e1ndar proporciona el tama\u00f1o de almacenamiento m\u00e1s peque\u00f1o y se puede usar en c\u00e1lculos?",
-        "answer": "char",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "char"
-        ],
-        "options": [
-          "char",
-          "float",
-          "int",
-          "short"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f1496f333054e3877b199c43",
-        "question": "\u00bfQu\u00e9 hace la funci\u00f3n ctype tolower()?",
-        "answer": "It converts an uppercase letter of the alphabet to lowercase.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "It converts an uppercase letter of the alphabet to lowercase."
-        ],
-        "options": [
-          "It returns TRUE for lowercase letters of the alphabet.",
-          "It ensures that text output uses only ASCII values (0 through 127).",
-          "It returns FALSE for lowercase letters of the alphabet.",
-          "It converts an uppercase letter of the alphabet to lowercase."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e733421e7283f8bc259cba19",
-        "question": "El void pointer _vptr_ se asigna a la direcci\u00f3n de la variable float _g_. \u00bfCu\u00e1l es una forma v\u00e1lida de desreferenciar _vptr_ para asignar su valor apuntado a una variable float llamada _f_ m\u00e1s adelante en el programa?\n```c\nfloat g;\nvoid *vptr=&g;\n```",
-        "answer": "`f=*(float *)vptr;`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`f=*(float *)vptr;`"
-        ],
-        "options": [
-          "`f=(float *)vptr;`",
-          "`f=*(float *)vptr;`",
-          "`f=*(float)vptr;`",
-          "`f=(float)*vptr;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "37db7f8adacbbf1be598ce72",
-        "question": "\u00bfLas funciones de asignaci\u00f3n din\u00e1mica de memoria est\u00e1n definidas en qu\u00e9 archivo header del sistema?",
-        "answer": "stdlib.h",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "stdlib.h"
-        ],
-        "options": [
-          "stdio.h",
-          "stdlib.h",
-          "limits.h",
-          "stddef.h"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7fbc6e7c42ee64bde4e07b79",
-        "question": "Una funci\u00f3n es un conjunto de **\\_**.",
-        "answer": "sentencias",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "sentencias"
-        ],
-        "options": [
-          "declaraciones",
-          "sentencias",
-          "variables",
-          "objetos"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b3515d0422e28afbb2c97043",
-        "question": "\u00bfC\u00f3mo son diferentes las funciones static de las funciones globales?",
-        "answer": "Las funciones static solo pueden ser accedidas en el archivo donde se declaran.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Las funciones static solo pueden ser accedidas en el archivo donde se declaran."
-        ],
-        "options": [
-          "Las funciones static deben declararse antes de ser definidas.",
-          "Las funciones static deben declararse en un archivo header separado.",
-          "Las funciones static siempre devuelven el mismo valor.",
-          "Las funciones static solo pueden ser accedidas en el archivo donde se declaran."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5ac72462914b38f0e265a709",
-        "question": "\u00bfQu\u00e9 ejemplo de c\u00f3digo crea la cadena \"Hello Mars\" en el buffer de almacenamiento `hello`?",
-        "answer": ":",
-        "explanation": "```c\nchar hello[25];\nstrcpy(hello, \"Hello \");\nstrcpy(hello, \"Mars\");\n```\n```c\nchar hello[25];\nchar *p;\nstrcpy(hello, \"Hello World\");\np = hello;\np +=6;\nstrcpy(p, \"Mars\");\n```\n```c\nchar *hello;\nstrcpy(hello, \"Hello World\");\nhello+=6;\nstrcpy(hello, \"Mars\");\n```\n```c\nchar hello[25];\nstrcpy(hello, \"Hello World\");\nstrcpy(*hello[6], \"Mars\");\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "327dd3b9fc307befb00f3fec",
-        "question": "Si usas la funci\u00f3n fopen() con el modo \"a\", \u00bfqu\u00e9 sucede si el archivo nombrado no existe?",
-        "answer": "El archivo se crea y se abre para escritura.",
-        "explanation": "[Reference](https://www.tutorialspoint.com/c_standard_library/c_function_fopen.htm)",
-        "hint": null,
-        "correctAnswer": [
-          "El archivo se crea y se abre para escritura."
-        ],
-        "options": [
-          "El archivo se crea y se abre para lectura.",
-          "El archivo se crea y se abre para escritura.",
-          "La funci\u00f3n fopen() devuelve NULL indicando que la operaci\u00f3n ha fallado.",
-          "El archivo se crea y se abre tanto para escritura como para lectura"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f10a63c405ab175b099a04f5",
-        "question": "\u00bfQu\u00e9 devuelve esta funci\u00f3n?\n```c\nint fl(int a, int b) { return(a>b?a:b); }\n```",
-        "answer": "el valor mayor de los dos par\u00e1metros pasados",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "el valor mayor de los dos par\u00e1metros pasados"
-        ],
-        "options": [
-          "error del compilador",
-          "el valor menor de los dos par\u00e1metros pasados",
-          "error en tiempo de ejecuci\u00f3n",
-          "el valor mayor de los dos par\u00e1metros pasados"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "89a6dac2c0806d41c778a60c",
-        "question": "\u00bfCu\u00e1l opci\u00f3n es un nombre de funci\u00f3n v\u00e1lido?",
-        "answer": "draw_star()",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "draw_star()"
-        ],
-        "options": [
-          "draw_star()",
-          "5times()",
-          "upper-limit()",
-          "auto()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d9927957142667834f026a76",
-        "question": "\u00bfCu\u00e1l no es una definici\u00f3n de tipo v\u00e1lida de una estructura que contiene coordenadas x e y como enteros, y que puede usarse como se muestra para la variable llamada point?\n```c\ncoord point;\npoint.x = 9;\npoint.y = 3;\n```",
-        "answer": ":",
-        "explanation": "```c\nstruct coord{\nint x;\nint y;\n};\ntypedef struct coord coord;\n```\n```c\ntypedef struct coord{\nint x;\nint y;\n};\n```\n```c\ntypedef struct coord{\nint x;\nint y;\n} coord;\n```\n```c\ntypedef struct{\nint x;\nint y;\n} coord;\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f78e8fd8e3ea28850a6b11f6",
-        "question": "\u00bfCu\u00e1l es la salida del programa siguiente?\n```c\n#include <stdio.h>\n#if X == 3\n    #define Y 3\n#else\n    #define Y 5\n#endif\nint main()\n{\n    printf(\"%d\", Y);\n    return 0;\n}\n```",
-        "answer": "5",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "5"
-        ],
-        "options": [
-          "3",
-          "5",
-          "3 o 5 dependiendo de la entrada",
-          "Error en tiempo de compilaci\u00f3n"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d5a94aac2ff23db31b21971a",
-        "question": "\u00bfQu\u00e9 asignan las funciones malloc() y calloc()?",
-        "answer": "memoria din\u00e1mica",
-        "explanation": "[Calloc](https://devdocs.io/c/memory/calloc)\n[Malloc](https://devdocs.io/c/memory/malloc)",
-        "hint": null,
-        "correctAnswer": [
-          "memoria din\u00e1mica"
-        ],
-        "options": [
-          "memoria reasignada",
-          "memoria est\u00e1tica",
-          "memoria din\u00e1mica",
-          "memoria fragmentada"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "59e83bb8562955eab2a1749c",
-        "question": "Necesitas determinar si una variable string es una subcadena de otra cadena. \u00bfQu\u00e9 funci\u00f3n de la biblioteca est\u00e1ndar de C usas?",
-        "answer": "strstr(str1, str2);",
-        "explanation": "[Reference](https://devdocs.io/c/string/byte/strstr)",
-        "hint": null,
-        "correctAnswer": [
-          "strstr(str1, str2);"
-        ],
-        "options": [
-          "substr(str1, str2);",
-          "strstr(str1, str2);",
-          "substring(str1, str2);",
-          "strspn(str1, str2);"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7f2e325b4a3e39b0fa9c4344",
-        "question": "Encuentra la salida del programa.\n```c\n#include <stdio.h>\n#define L 10\nint main(){\n    int a =10;\n    switch (a,a<<2){\n        case L:printf(\"a==L\");     break;\n        case L*2 : printf(\"a = L* 2\\n\");     break;\n        case L*4 : printf(\"a = L* 4\\n\");    break;\n        default: printf(\"Error\\n\");\n    }\n}\n```",
-        "answer": "`a=L*4`",
-        "explanation": "[Reference](https://www.geeksforgeeks.org/left-shift-right-shift-operators-c-cpp/)",
-        "hint": null,
-        "correctAnswer": [
-          "`a=L*4`"
-        ],
-        "options": [
-          "`a=L*2`",
-          "`a=L`",
-          "`Error`",
-          "`a=L*4`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "104bdf69004ad7365eee6dd0",
-        "question": "Predice la salida del siguiente c\u00f3digo cuando las variables **enteras** x se inicializa a 10, y a 2, y z a 0.\n```c\nz = x + y * x + 10 / 2 * x;\nprintf(\"value is =%d\",z);\n```",
-        "answer": "80",
-        "explanation": "[Reference](https://www.informit.com/articles/article.aspx?p=2062174&seqNum=4)",
-        "hint": null,
-        "correctAnswer": [
-          "80"
-        ],
-        "options": [
-          "80",
-          "170",
-          "31.5",
-          "6"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9bfafc59f08f78a6699cf519",
-        "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente fragmento de c\u00f3digo?\n```c\n#include <stdio.h>\nvoid solve() {\n    int x = 2;\n    printf(\"%d\", (x << 1) + (x >> 1));\n}\nint main() {\n    solve();\n\treturn 0;\n}\n```",
-        "answer": "5",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "5"
-        ],
-        "options": [
-          "5",
-          "4",
-          "2",
-          "1"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0c98a745a1e56d6077635b72",
-        "question": "\u00bfCu\u00e1l es la salida de este programa?\n```c\nint a=20, b=10;\nint f1(a) {\n    return(a*b);\n}\nmain() {\n    printf(\"%d\", f1(5));\n}\n```",
-        "answer": "50",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "50"
-        ],
-        "options": [
-          "100",
-          "200",
-          "5",
-          "50"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "09daa7ea841465fd8a4a7b15",
-        "question": "\u00bfQu\u00e9 es el car\u00e1cter \\0?",
-        "answer": "Car\u00e1cter NULL",
-        "explanation": "[Reference](<https://www.youth4work.com/Talent/C-Language/Forum/117150-what-is-the-use-of-a-0-character-in-c-language#:~:text=by%20using%20of%20null%20character(%27%5C0%27)%20it%20terminates%20the%20string%20untill%20the%20null%20character%20hit...%20which%20means%20comes%20out%20of%20the%20loop...%20In%20strings%20by%20default%20takes%20the%20null%20charater>)",
-        "hint": null,
-        "correctAnswer": [
-          "Car\u00e1cter NULL"
-        ],
-        "options": [
-          "Cadena",
-          "Car\u00e1cter NULL",
-          "CERO",
-          "Variable"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5b9d433c5aca7e4e26272709",
-        "question": "\u00bfCu\u00e1l es la salida correcta para el siguiente c\u00f3digo?\n```c\n#include&lt;stdio.h&gt;\n#include&lt;conio.h&gt;\nmain()\n{\n     int a=10, b=20;\n     clrscr();\n     printf(\"Before swapping a=%d b=%d\",a,b);\n     a=a+b;\n     b=a-b;\n     a=a-b;\n     printf(\"nAfter swapping a=%d b=%d\",a,b);\n     getch();\n}\n```",
-        "answer": "Before a=10 b=20 , After a=20 b=10",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Before a=10 b=20 , After a=20 b=10"
-        ],
-        "options": [
-          "Before a=10 b=20 , After a=10 b=10",
-          "Before a=10 b=10 , After a=20 b=10",
-          "Before a=10 b=20 , After a=20 b=20",
-          "Before a=10 b=20 , After a=20 b=10"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "af95acf133a8ea0b4885989d",
-        "question": "\u00bfCu\u00e1l es la opci\u00f3n incorrecta que explica la directiva #pragma?",
-        "answer": "#pragma startup no nos permite especificar funciones llamadas al iniciar el programa.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "#pragma startup no nos permite especificar funciones llamadas al iniciar el programa."
-        ],
-        "options": [
-          "#pragma exit nos permite especificar funciones llamadas al salir del programa.",
-          "Esta es una directiva del preprocesador que se puede usar para activar o desactivar ciertas caracter\u00edsticas.",
-          "#pragma startup no nos permite especificar funciones llamadas al iniciar el programa.",
-          "Es de dos tipos #pragma startup, #pragma exit y pragma warn."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "43c86fcf4041a5ccf3a75270",
-        "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente fragmento de c\u00f3digo?\n```c\n#include <stdio.h>\nunion School {\n    int age, rollNo;\n    double marks;\n};\nvoid solve() {\n    union School sc;\n    sc.age = 19;\n    sc.rollNo = 82;\n    sc.marks = 19.04;\n    printf(\"%d\", (int)sizeof(sc));\n}\nint main() {\n    solve();\n\treturn 0;\n}\n```",
-        "answer": "8",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "8"
-        ],
-        "options": [
-          "2",
-          "4",
-          "8",
-          "10"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "82e3e15d70cc4200d99bac50",
-        "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente fragmento de c\u00f3digo?\n```c\n#include <stdio.h>\nstruct School {\n    int age, rollNo;\n};\nvoid solve() {\n    struct School sc;\n    sc.age = 19;\n    sc.rollNo = 82;\n    printf(\"%d %d\", sc.age, sc.rollNo);\n}\nint main() {\n    solve();\n\treturn 0;\n}\n```",
-        "answer": "19 82",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "19 82"
-        ],
-        "options": [
-          "19 82",
-          "Error de compilaci\u00f3n",
-          "82 19",
-          "Ninguna de estas"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "24fcc370b4c321ccd0d6296b",
-        "question": "\u00bfCu\u00e1l es la salida del siguiente fragmento de c\u00f3digo?\n```c\nint main() {\n\tint sum = 2 + 4 / 2 + 6 * 2;\n\tprintf(\"%d\", sum);\n\treturn 0;\n}\n```",
-        "answer": "16",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "16"
-        ],
-        "options": [
-          "2",
-          "15",
-          "16",
-          "18"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6bd383863927c777332336b2",
-        "question": "\u00bfQu\u00e9 significa la siguiente declaraci\u00f3n?\n```\nint (*ptr)[10];\n```",
-        "answer": "ptr es un pointer a un array de 10 enteros",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "ptr es un pointer a un array de 10 enteros"
-        ],
-        "options": [
-          "ptr es un array de pointers a 10 enteros",
-          "ptr es un pointer a un array de 10 enteros",
-          "ptr es un array de 10 enteros",
-          "ptr es un pointer a un array"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3c4731c1eaff8911c2ac5ed6",
-        "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente fragmento de c\u00f3digo?\n```c\n#include <stdio.h>\nvoid change(int,int);\nint main()\n{\n   int a=10,b=20;\n   change(a,b); //calling a function by passing the values of variables.\n   printf(\"Value of a is: %d\",a);\n   printf(\"\\n\");\n   printf(\"Value of b is: %d\",b);\n   return 0;\n}\nvoid change(int x,int y)\n{\n   x=13;\n   y=17;\n}\n```",
-        "answer": "10,20",
-        "explanation": "**Explicaci\u00f3n:** La funci\u00f3n \"change\" cambiar\u00e1 el valor de x e y solo dentro de su propio alcance, por lo que a y b no se ven afectados.",
-        "hint": null,
-        "correctAnswer": [
-          "10,20"
-        ],
-        "options": [
-          "10,20",
-          "10,10",
-          "20,20",
-          "20,10"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cefd1d0865bef43b523e519c",
-        "question": "Elige verdadero o falso. Cuando se crea una variable en C, se asigna una direcci\u00f3n de memoria a la variable.",
-        "answer": "Verdadero",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Verdadero"
-        ],
-        "options": [
-          "Verdadero",
-          "Falso"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "666e6961cd6307fde6704547",
-        "question": "\u00bfQu\u00e9 imprime el siguiente fragmento de programa en C?\n```c\n#include <stdio.h>\nint main()\n{\n    char c[] = \"GATE2011\";\n    char *p = c;\n    printf(\"%s\", p + p[3] -p[1]);\n    return 0;\n}\n```",
-        "answer": "2011",
-        "explanation": "**Explicaci\u00f3n:** char c[ ] = \"GATE2011\"; dado que char \\*p =c significa que p representa la direcci\u00f3n base de la cadena \"GATE2011\", entonces p[3] es 'E' y p[1] es 'A'. El valor de la subexpresi\u00f3n p[3] \u2013 p[1] = valor ASCII de 'E' \u2013 valor ASCII de 'A' = 4. Por lo tanto, la expresi\u00f3n p + p[3] \u2013 p[1] se convierte en ( p + 4) y (p+4) representa la direcci\u00f3n base de la cadena \"2011\" printf(\"%s\", p + p[3] \u2013 p[1]); Por lo tanto, imprimir\u00e1 2011",
-        "hint": null,
-        "correctAnswer": [
-          "2011"
-        ],
-        "options": [
-          "GATE 2011",
-          "E2011",
-          "2011",
-          "01"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "72a15da1330debc4559a52cc",
-        "question": "\u00bfCu\u00e1l es la salida del siguiente fragmento de c\u00f3digo?\n```c\nint main() {\n\tint a = 5, b = 6, c;\n\tc = a++ + ++b;\n\tprintf(\"%d %d %d\", a, b, c);\n\treturn 0;\n}\n```",
-        "answer": "6 7 12",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "6 7 12"
-        ],
-        "options": [
-          "5 6 11",
-          "6 7 12",
-          "5 6 12",
-          "6 6 12"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1ea944443772f676cab0b547",
-        "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente segmento de programa en C?\n```c\nchar inchar = 'A';\nswitch (inchar)\n{\ncase 'A' :\n\tprintf (\"choice A \\n\") ;\ncase 'B' :\n\tprintf (\"choice B \") ;\ncase 'C' :\ncase 'D' :\ncase 'E' :\ndefault:\n\tprintf (\"No Choice\") ;\n}\n```",
-        "answer": "Choice A",
-        "explanation": "Choice B No choice",
-        "hint": null,
-        "correctAnswer": [
-          "Choice A"
-        ],
-        "options": [
-          "No choice",
-          "Choice A",
-          "Choice A",
-          "El programa no da salida ya que es err\u00f3neo"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0ce69d6271af7ab0e487956f",
-        "question": "La variable string str1 tiene el valor de \"abc\", y la variable string str2 tiene el valor \"xyz\". \u00bfCu\u00e1les son los valores de str1 y str2 despu\u00e9s de que se ejecute esta declaraci\u00f3n?\n```c\nstrcpy(str1, str2);\n```",
-        "answer": "str1: \"xyz\" ; str2: \"xyz\"",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "str1: \"xyz\" ; str2: \"xyz\""
-        ],
-        "options": [
-          "str1: \"xyz\" ; str2: \"xyz\"",
-          "str1: \"abc\" ; str2: \"xyz\"",
-          "str1: \"xyz\" ; str2: \"abc\"",
-          "str1: \"abc\" ; str2: \"abc\""
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f314d0f57dabe336ba7fa513",
-        "question": "\u00bfCu\u00e1l no es uno de los tipos de datos b\u00e1sicos en C?",
-        "answer": "array",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "array"
-        ],
-        "options": [
-          "array",
-          "float",
-          "long double",
-          "unsigned char"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8a5d8d2176c9fc69b9eed42d",
-        "question": "Has escrito una funci\u00f3n que quieres incluir como miembro de la estructura a. \u00bfC\u00f3mo se define tal miembro de estructura?",
-        "answer": ":",
-        "explanation": "```c\nstruct a {\nvoid *f1;\n};\n```\n```c\nstruct a {\nvoid (*f1)();\n};\n```\n```c\nstruct a {\n*(void *f1)();\n};\n```\n```c\nstruct a {\nvoid *f1();\n};\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "47d25042c9b0100599b7dab2",
-        "question": "Necesitas determinar si una variable string es una subcadena de otra cadena. \u00bfQu\u00e9 funci\u00f3n de la biblioteca est\u00e1ndar de C usas?",
-        "answer": "strstr(str1, str2);",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "strstr(str1, str2);"
-        ],
-        "options": [
-          "substr(str1, str2);",
-          "strstr(str1, str2);",
-          "substring(str1, str2);",
-          "strspn(str1, str2);"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d056fa82a6c27f36c8254c68",
-        "question": "\u00bfC\u00f3mo son diferentes las funciones static de las funciones globales?",
-        "answer": "Las funciones static solo pueden ser accedidas en el archivo donde se declaran.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Las funciones static solo pueden ser accedidas en el archivo donde se declaran."
-        ],
-        "options": [
-          "Las funciones static deben declararse antes de ser definidas.",
-          "Las funciones static deben declararse en un archivo header separado.",
-          "Las funciones static siempre devuelven el mismo valor.",
-          "Las funciones static solo pueden ser accedidas en el archivo donde se declaran."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "df5ecfd7c021afcb20d1f6ac",
-        "question": "\u00bfQu\u00e9 muestra este programa?\n```c\nmain(){\n    char *p = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\n    int i;\n    for (i=0;i<5;i++) *p++; *p++;\n    printf(\"%c\",*p++);\n}\n```",
-        "answer": "G",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "G"
-        ],
-        "options": [
-          "K",
-          "M",
-          "H",
-          "G"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "194693f8dc9fd99ef1fd3484",
-        "question": "\u00bfCu\u00e1l no es un comando v\u00e1lido con esta declaraci\u00f3n?\n```c\nchar *string[20] = { \"one\", \"two\", \"three\"};\n```",
-        "answer": "`printf(\"%s\", string[1][2]);`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`printf(\"%s\", string[1][2]);`"
-        ],
-        "options": [
-          "`printf(\"%c\", string[1][2]);`",
-          "`printf(\"%s\", string[1][2]);`",
-          "`printf(\"%s\", string[1]);`",
-          "`printf(string[1]);`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
+    "slug": "c-lenguaje-de-programaci-n",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
+      {
+        "id": "105801c854fb6e2aed3f81f8",
+        "language": "es",
+        "title": "C (Lenguaje de Programaci\u00f3n)",
+        "description": "Seeded from c-(programming-language)/c-(programming-language)-quiz-es.md",
+        "questions": [
+          {
+            "id": "8907887d172a4672cd27a1a6",
+            "question": "\u00bfQu\u00e9 ejemplo de c\u00f3digo eventualmente provocar\u00e1 que la computadora se quede sin memoria?",
+            "answer": ":",
+            "explanation": "```c\nwhile(1)\n{\nchar *smallString = (char *) malloc(10);\n}\n```\n```c\nlong long number = 1;\nwhile(1)\nnumber *= 2;\n```\n```c\nwhile(1)\n{\nchar hugeString[1000000L];\nmemset(hugeString, 0, 1000000L);\n}\n```\n```c\nwhile(1)\n{\nlong *bigArray = (long *) malloc(sizeof(long) * 1000);\nmemset(bigArray, 1000000, 1000);\n(bigArray);\n}\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "a35bb4f91af039d30ecc351a",
+            "question": "\u00bfCu\u00e1l ser\u00e1 el resultado del c\u00f3digo siguiente?\n```c\nint f1 (int a, int b)\n{\n    if (a > b)\n    {\n        printf(\"A is greater than B\\n\");\n        return 1;\n    }\n    else\n    {\n        printf(\"B is greater than A\");\n        return 0;\n    }\n}\nmain()\n{\n    if (f1(20,10) || f1(10,20))\n        printf(\"C is fun!\\n\");\n}\n```",
+            "answer": ":",
+            "explanation": "```\nA is greater than B\nC is fun!\n```\n```\nA is greater than B\nB is greater than A\nC is fun!\n```\n```\nA is greater than B\nB is greater than A\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              "Nothing is printed on Screen"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "23a8917fcf09319b0e73dfcc",
+            "question": "\u00bfC\u00f3mo se llama una funci\u00f3n dentro de la misma funci\u00f3n?",
+            "answer": "recursividad",
+            "explanation": "[Reference](https://www.cprogramming.com/tutorial/c/lesson16.html)",
+            "hint": null,
+            "correctAnswer": [
+              "recursividad"
+            ],
+            "options": [
+              "recursividad",
+              "subfunci\u00f3n",
+              "llamada interna",
+              "bucle infinito"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "a4fcb08412477815528763ea",
+            "question": "\u00bfQu\u00e9 demuestra la declaraci\u00f3n de la variable c2?\n```c\nmain(){\n    char c1 ='a';\n    char c2 = c1+10;\n}\n```",
+            "answer": "aritm\u00e9tica de caracteres",
+            "explanation": "[Reference](https://tutorialspoint.dev/language/c/character-arithmetic-c-c)",
+            "hint": null,
+            "correctAnswer": [
+              "aritm\u00e9tica de caracteres"
+            ],
+            "options": [
+              "aritm\u00e9tica de caracteres",
+              "asignaci\u00f3n indefinida",
+              "conversi\u00f3n de tipo",
+              "declaraci\u00f3n inv\u00e1lida"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "1b8c1bb9f5b11af9fa0a435d",
+            "question": "\u00bfDe qu\u00e9 es un ejemplo esta declaraci\u00f3n?\n```c\nstruct s {\n    int i;\n    struct s *s1;\n    struct s *s2;\n};\n```",
+            "answer": "un nodo",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "un nodo"
+            ],
+            "options": [
+              "un nodo",
+              "una linked list",
+              "una stack",
+              "un binary tree"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "57a1478e6c6ae30a28ee9cd6",
+            "question": "Los archivos header se listan usando la directiva de preprocesamiento #include, y pueden tener uno de los siguientes formatos: #include &lt;fileA&gt; o #include \"fileB\". \u00bfCu\u00e1l es la diferencia entre estos dos formatos?",
+            "answer": "El preprocesador intentar\u00e1 localizar fileA en una ruta de directorio predeterminada. Intentar\u00e1 localizar fileB en el mismo directorio que el archivo fuente junto con una ruta de directorio personalizada.",
+            "explanation": "[Reference](https://www.geeksforgeeks.org/difference-between-include-and-include-in-c-c-with-examples/#:~:text=The%20difference%20between%20the%20two,be%20included%20in%20the%20code.&text=%23include%20is%20for%20pre%2Ddefined%20header%20files.)",
+            "hint": null,
+            "correctAnswer": [
+              "El preprocesador intentar\u00e1 localizar fileA en una ruta de directorio predeterminada. Intentar\u00e1 localizar fileB en el mismo directorio que el archivo fuente junto con una ruta de directorio personalizada."
+            ],
+            "options": [
+              "El preprocesador intentar\u00e1 localizar fileA en el mismo directorio que el archivo fuente, y fileB en una ruta de directorio predeterminada.",
+              "El preprocesador intentar\u00e1 localizar fileA en el directorio del sistema fijo. Intentar\u00e1 localizar fileB en la ruta del directorio designada por la opci\u00f3n -I agregada a la l\u00ednea de comandos al compilar el c\u00f3digo fuente.",
+              "El archivo que usa la sintaxis fileA debe ser archivos del sistema, de n\u00famero ilimitado; fileB debe ser un archivo de usuario con un m\u00e1ximo de uno por archivo fuente.",
+              "El preprocesador intentar\u00e1 localizar fileA en una ruta de directorio predeterminada. Intentar\u00e1 localizar fileB en el mismo directorio que el archivo fuente junto con una ruta de directorio personalizada."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "897f2390f3fd2c64b6c8eee5",
+            "question": "Usando un for loop, \u00bfc\u00f3mo podr\u00edas escribir c\u00f3digo en C para contar hacia atr\u00e1s desde 10 hasta 1 y mostrar cada n\u00famero en su propia l\u00ednea?",
+            "answer": ":",
+            "explanation": "```c\nfor (int i = 0; i>=0, i--){\nprintf(\"%d\\n\", i);\n}//end of loop\n```\n```c\nint i;\nfor (i=1; i<=10; i++){\nprintf(\"%d\", i);\n}\n```\n```c\nint i = 10;\nwhile (i>0){\nprintf(\"%d\\n\", i);\ni--;\n}\n```\n```c\nint i;\nfor (i= 10; i>0; i--){\nprintf(\"%d\\n\", i);\n}// end of loop\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "e536be4fa30ef726ad844c03",
+            "question": "\u00bfCu\u00e1l no es una de las palabras reservadas en C est\u00e1ndar?",
+            "answer": "typeof",
+            "explanation": "[Reference](https://www.ibm.com/docs/en/adfz/developer-for-zos/14.2.0?topic=programs-c-reserved-keywords)",
+            "hint": null,
+            "correctAnswer": [
+              "typeof"
+            ],
+            "options": [
+              "volatile",
+              "typeof",
+              "register",
+              "typedef"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "d0274d874e3cc23b9404cd66",
+            "question": "\u00bfQu\u00e9 devuelve el programa mostrado a continuaci\u00f3n?\n```c\nint main(){\n    int a=1, b=2, c=3, d=4;\n    int x = a;\n    if (a>b)\n    if (b<c) x=b;\n    else x=c;\n    return(x);\n}\n```",
+            "answer": "1",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "1"
+            ],
+            "options": [
+              "1",
+              "3",
+              "2",
+              "0"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "36a537ff70e69c8d179ee373",
+            "question": "Usando la declaraci\u00f3n Union a continuaci\u00f3n, \u00bfcu\u00e1ntos bytes de espacio de memoria ocupar\u00e1n los datos de este tipo?\n```c\nunion Cars {\n    char make[20];\n    char model[30];\n    short year;\n} car;\n```",
+            "answer": "30",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "30"
+            ],
+            "options": [
+              "32",
+              "54",
+              "30",
+              "52"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "888002767c58c5b6d9a1fb81",
+            "question": "En esta muestra de c\u00f3digo, \u00bfqu\u00e9 no es un problema para el compilador de C?\n```c\nmain(){\n    constant int PI = 3.14;\n    printf(\"%f\\n\", pi);\n}\n```",
+            "answer": "El valor de PI debe establecerse en 3.141593, no 3.14",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "El valor de PI debe establecerse en 3.141593, no 3.14"
+            ],
+            "options": [
+              "El valor de PI debe establecerse en 3.141593, no 3.14",
+              "La declaraci\u00f3n de PI debe decir const, no constant.",
+              "El tipo de datos de PI debe ser float, no int.",
+              "La declaraci\u00f3n printf debe usar PI, no pi."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "f87f4cd15d3b536807fd02ab",
+            "question": "\u00bfCu\u00e1l es el programa m\u00e1s peque\u00f1o para compilar y ejecutar sin errores?",
+            "answer": "int main() {return 0;}",
+            "explanation": "[Reference](https://www.beningo.com/150-the-wolrds-shortest-c-program/)",
+            "hint": null,
+            "correctAnswer": [
+              "int main() {return 0;}"
+            ],
+            "options": [
+              "main()",
+              "int main() {return 0;}",
+              "main() { }",
+              "main() { ; }"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "1300c7dcb8ca2a0b822bad86",
+            "question": "\u00bfQu\u00e9 es opcional en una declaraci\u00f3n de funci\u00f3n?",
+            "answer": "nombres de los par\u00e1metros",
+            "explanation": "> **Explicaci\u00f3n:**\n> En todos los est\u00e1ndares modernos de C, los nombres de los par\u00e1metros en una declaraci\u00f3n de funci\u00f3n son opcionales.\n> Sin embargo, el significado de una lista de par\u00e1metros vac\u00eda (`int f();`) difiere seg\u00fan el est\u00e1ndar:\n>\n> - **Antes de C23:** Declara una funci\u00f3n con un n\u00famero no especificado de par\u00e1metros (no es un prototipo).\n> - **En C23:** Equivalente a `int f(void);` \u2014 declara una funci\u00f3n que no toma par\u00e1metros.\n>\n> [Reference](https://en.cppreference.com/w/c/language/function_declaration)",
+            "hint": null,
+            "correctAnswer": [
+              "nombres de los par\u00e1metros"
+            ],
+            "options": [
+              "tipo de datos de los par\u00e1metros",
+              "tipo de retorno de la funci\u00f3n",
+              "nombres de los par\u00e1metros",
+              "n\u00famero de par\u00e1metros"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "2dc55d7f916bd5e9088eea40",
+            "question": "C trata todos los dispositivos, como la pantalla y el teclado, como archivos. \u00bfQu\u00e9 archivo se abre autom\u00e1ticamente cuando se ejecuta un programa?",
+            "answer": "stdout",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "stdout"
+            ],
+            "options": [
+              "stdout",
+              "stdio.h",
+              "default.h",
+              "string.h"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "2abb90af58f4c435b04c57f6",
+            "question": "\u00bfEn qu\u00e9 segmento ocurre la asignaci\u00f3n din\u00e1mica de memoria?",
+            "answer": "heap",
+            "explanation": "[Reference](http://www.it.uc3m.es/pbasanta/asng/course_notes/dynamic_memory_heap_en.html#:~:text=The%20dynamic%20memory%20that%20is,reads%20a%20set%20of%20words.)",
+            "hint": null,
+            "correctAnswer": [
+              "heap"
+            ],
+            "options": [
+              "BSS Segment",
+              "stack",
+              "heap",
+              "data segment"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "de09f99173182b9f3c69a0ef",
+            "question": "\u00bfQu\u00e9 funci\u00f3n usas para desasignar memoria?",
+            "answer": "free()",
+            "explanation": "[Reference](https://devdocs.io/c/memory/free)\n[Reference](https://www.tutorialspoint.com/c_standard_library/c_function_free.htm)",
+            "hint": null,
+            "correctAnswer": [
+              "free()"
+            ],
+            "options": [
+              "dalloc()",
+              "dealloc()",
+              "release()",
+              "free()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "d295f58ab14b85a60101716f",
+            "question": "En el lenguaje C, \u00bfcu\u00e1les son los bloques de construcci\u00f3n b\u00e1sicos que se construyen juntos para escribir un programa?",
+            "answer": "tokens",
+            "explanation": "[Reference](https://fresh2refresh.com/c-programming/c-tokens-identifiers-keywords/#:~:text=C%20tokens%20are%20the%20basic,are%20known%20as%20C%20tokens.)",
+            "hint": null,
+            "correctAnswer": [
+              "tokens"
+            ],
+            "options": [
+              "keywords",
+              "identificadores",
+              "tokens",
+              "funciones"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "f18dab4a750e999a46d349e6",
+            "question": "\u00bfCu\u00e1ndo se asigna memoria para una variable?",
+            "answer": "durante la declaraci\u00f3n de la variable",
+            "explanation": "[Reference](https://www.codingame.com/playgrounds/14589/how-to-play-with-pointers-in-c/dynamic-memory-allocation#:~:text=When%20a%20variable%20is%20declared,allocation%20or%20dynamic%20memory%20allocation.)",
+            "hint": null,
+            "correctAnswer": [
+              "durante la declaraci\u00f3n de la variable"
+            ],
+            "options": [
+              "durante la asignaci\u00f3n de la variable",
+              "durante la inicializaci\u00f3n de la variable",
+              "durante la declaraci\u00f3n de la variable",
+              "durante la definici\u00f3n de la variable"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "1ca6e26ad251dec15eff8fa0",
+            "question": "C usa el m\u00e9todo call by value para pasar argumentos a las funciones. \u00bfC\u00f3mo puedes invocar el m\u00e9todo call by reference?",
+            "answer": "usando pointers",
+            "explanation": "[Reference](https://www.javatpoint.com/call-by-value-and-call-by-reference-in-c)",
+            "hint": null,
+            "correctAnswer": [
+              "usando pointers"
+            ],
+            "options": [
+              "usando pointers",
+              "declarando funciones separadamente de definirlas",
+              "usando funciones recursivas",
+              "usando variables globales"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "b9df2063514dd7fcc0e01dac",
+            "question": "Un union te permite almacenar diferentes `___` en el mismo `___`.",
+            "answer": "Tipos de datos; Espacio de memoria",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Tipos de datos; Espacio de memoria"
+            ],
+            "options": [
+              "Objetos; Structure",
+              "Variables; Declaraci\u00f3n",
+              "Tipos de datos; Espacio de memoria",
+              "Arrays; Archivo header"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "9ff8805ede1e97d3f5578b3e",
+            "question": "\u00bfCu\u00e1l es la salida de este programa?\n```c\nmain() {\n    char c1='a' , c2='A';\n    int i=c2-c1;\n    printf(\"%d\", i);\n}\n```",
+            "answer": "-32",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "-32"
+            ],
+            "options": [
+              "32",
+              "Error en tiempo de ejecuci\u00f3n",
+              "-32",
+              "0"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "b4c55bb2e2a09124229a609e",
+            "question": "\u00bfCu\u00e1l es la diferencia entre las funciones scanf() y sscanf()?",
+            "answer": "La funci\u00f3n scanf() lee datos formateados del teclado; La funci\u00f3n sscanf() lee entrada formateada de una cadena.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "La funci\u00f3n scanf() lee datos formateados del teclado; La funci\u00f3n sscanf() lee entrada formateada de una cadena."
+            ],
+            "options": [
+              "La funci\u00f3n scanf() lee datos formateados como una cadena; La funci\u00f3n sscanf() lee entrada de cadena de la pantalla.",
+              "La funci\u00f3n scanf() lee datos formateados del teclado; La funci\u00f3n sscanf() lee entrada formateada de una cadena.",
+              "La funci\u00f3n scanf() lee datos de cadena del teclado; La funci\u00f3n sscanf() lee datos de cadena de una cadena.",
+              "La funci\u00f3n scanf() lee datos formateados de un archivo; La funci\u00f3n sscanf() lee entrada de una cadena seleccionada"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "9ae6671d2d5d149009454bae",
+            "question": "\u00bfCu\u00e1l no es un comando v\u00e1lido con esta declaraci\u00f3n?\n```c\nchar *string[20] = { \"one\", \"two\", \"three\"};\n```",
+            "answer": "`printf(\"%s\", string[1][2]);`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`printf(\"%s\", string[1][2]);`"
+            ],
+            "options": [
+              "`printf(\"%c\", string[1][2]);`",
+              "`printf(\"%s\", string[1][2]);`",
+              "`printf(\"%s\", string[1]);`",
+              "`printf(string[1]);`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "38fc7e09a8fd102032ce680c",
+            "question": "\u00bfA qu\u00e9 es equivalente la expresi\u00f3n player->name?",
+            "answer": "`(*player).name`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`(*player).name`"
+            ],
+            "options": [
+              "`player.name`",
+              "`(*player).name`",
+              "`*player.name`",
+              "`player.*name`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "00ef1b95865a55fad764819a",
+            "question": "\u00bfQu\u00e9 programa compilar\u00e1 y ejecutar\u00e1 sin errores?",
+            "answer": ":",
+            "explanation": "```c\nmain() {\nfor(i=0; i<10; i++) ;\n}\n```\n```c\nmain() {\nint i=0;\nfor(; i<10; i++) ;\n}\n```\n```c\nmain() {\nint i;\nfor(i=0; i<j; i++) ;\n}\n```\n```c\nmain() {\nint i;\nfor (i= 10; i<10; i++)\n}\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "10025fd6954535f3cafd4e81",
+            "question": "\u00bfQu\u00e9 devuelve esta llamada de funci\u00f3n?\n```c\n1 main() { float x = f1(10, 5); }\n2 float f1(int a, int b) { return (a/b); }\n```",
+            "answer": "un error del compilador",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "un error del compilador"
+            ],
+            "options": [
+              "2",
+              "2.000000",
+              "un error en tiempo de ejecuci\u00f3n",
+              "un error del compilador"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "810db178eee9f157eabe114b",
+            "question": "\u00bfQu\u00e9 crea este programa?\n```c\n#include <stdio.h>\nint main() {\n    int *p = NULL;\n    return 0;\n}\n```",
+            "answer": "un NULL pointer",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "un NULL pointer"
+            ],
+            "options": [
+              "un error en tiempo de ejecuci\u00f3n",
+              "un NULL pointer",
+              "un error de compilaci\u00f3n",
+              "un void pointer"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "2b7e646ccf3b75026ca5ce09",
+            "question": "\u00bfCu\u00e1l es una forma alternativa de escribir la expresi\u00f3n (\\*x).y?",
+            "answer": "x->y",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "x->y"
+            ],
+            "options": [
+              "No hay equivalente.",
+              "x->y",
+              "\\*x->y",
+              "y->x"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "166dbcad5e0729dd3044e8ae",
+            "question": "Los errores en tiempo de compilaci\u00f3n son errores est\u00e1ticos que se pueden encontrar en el c\u00f3digo.",
+            "answer": "en declaraciones y definiciones",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "en declaraciones y definiciones"
+            ],
+            "options": [
+              "en declaraciones y definiciones",
+              "en funciones y expresiones",
+              "en sintaxis y sem\u00e1ntica",
+              "en objetos y declaraciones"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "1a4210aa0281f7a8aa6f9d1c",
+            "question": "La entrada y salida de archivos (I/O) en C est\u00e1 fuertemente basada en la forma en que se hace `___`?",
+            "answer": "in Unix",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "in Unix"
+            ],
+            "options": [
+              "in Unix",
+              "in C++",
+              "in C#",
+              "in DOS"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "e7e79f6553df25f16515d468",
+            "question": "\u00bfQu\u00e9 devuelve la funci\u00f3n strcmp(str1, str2)?",
+            "answer": "0 si str1 y str2 son iguales, un n\u00famero negativo si str1 es menor que str2, un n\u00famero positivo si str1 es mayor que str2",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "0 si str1 y str2 son iguales, un n\u00famero negativo si str1 es menor que str2, un n\u00famero positivo si str1 es mayor que str2"
+            ],
+            "options": [
+              "0 si str1 y str2 son iguales, un n\u00famero negativo si str1 es menor que str2, un n\u00famero positivo si str1 es mayor que str2",
+              "true (1) si str1 y str2 son iguales, false (0) si str1 y str2 no son iguales",
+              "true (1) si str1 y str2 son iguales, NULL si str1 y str2 no son iguales",
+              "0 si str1 y str2 son iguales, un n\u00famero negativo si str2 es menor que str1, un n\u00famero positivo si str2 es mayor que str1"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "8d81070816142f3af70973dc",
+            "question": "\u00bfCu\u00e1l es la salida de este programa?\n```c\nint a=10, b=20;\nint f1(a) { return(a*b); }\nmain() {\nprintf(\"%d\", f1(5));\n}\n```",
+            "answer": "100",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "100"
+            ],
+            "options": [
+              "100",
+              "200",
+              "5",
+              "50"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "d31b90646998ae45a8a90d8e",
+            "question": "\u00bfCu\u00e1l _no_ es una forma correcta de declarar una variable string?",
+            "answer": "`char string = \"Hello World\";`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`char string = \"Hello World\";`"
+            ],
+            "options": [
+              "`char *string = \"Hello World\";`",
+              "`char string = \"Hello World\";`",
+              "`char string[20] = {'H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd'};`",
+              "`char string[] = \"Hello World\";`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "c3f2438772f287e2f854efc2",
+            "question": "\u00bfCu\u00e1l opci\u00f3n es un include guard para el archivo header mylib.h?",
+            "answer": ":",
+            "explanation": "```c\n#ifdef MYLIB_H\n#undef MYLIB_H\n// mylib.h content\n#endif /* MYLIB_H */\n```\n```c\n#ifndef MYLIB_H\n#define MYLIB_H\n// mylib.h content\n#endif /* MYLIB_H */\n```\n```c\n#define MYLIB_H\n#include \"mylib.h\"\n#undef MYLIB_H\n```\n```c\n#ifdef MYLIB_H\n#define MYLIB_H\n// mylib.h content\n#endif /* MYLIB_H */\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "b4b7a4e18d4e8c3fc7a1ce8b",
+            "question": "\u00bfCu\u00e1ntas veces se ejecuta el c\u00f3digo dentro del while loop en este programa?\n```c\nmain(){\n int x=1;\n while(x++<100){\n    x*=x;\n    if(x<10) continue;\n    if(x>50) break;\n }\n}\n```",
+            "answer": "3",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "3"
+            ],
+            "options": [
+              "100",
+              "3",
+              "5",
+              "50"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "4a86380278a99128d49e6325",
+            "question": "\u00bfA trav\u00e9s de qu\u00e9 se hace la entrada y salida de archivos (I/O) en C?",
+            "answer": "llamadas de funci\u00f3n",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "llamadas de funci\u00f3n"
+            ],
+            "options": [
+              "componentes controlados por sintaxis",
+              "interfaces nativas",
+              "objetos del sistema",
+              "llamadas de funci\u00f3n"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "3dc3c871723b28c2ffb5d650",
+            "question": "\u00bfLas directivas son traducidas por el?",
+            "answer": "Pre-procesador",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pre-procesador"
+            ],
+            "options": [
+              "Pre-procesador",
+              "Compilador",
+              "Enlazador",
+              "Editor"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "128f65fd95b23fcf06e22c7f",
+            "question": "Las estructuras de loop principales en la programaci\u00f3n en C son el for loop, el while loop, \u00bfy cu\u00e1l otro loop?",
+            "answer": "do...while",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "do...while"
+            ],
+            "options": [
+              "do...while",
+              "for...in",
+              "repeat...until",
+              "do...until"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "c79066cbb3adac5d4b0b12cd",
+            "question": "Por defecto, \u00bflas funciones en C son qu\u00e9 tipo de funciones?",
+            "answer": "static",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "static"
+            ],
+            "options": [
+              "global",
+              "static",
+              "library",
+              "system"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "93bd8058fe5a9c0fb9f4c620",
+            "question": "Has escrito una funci\u00f3n que quieres incluir como miembro de la estructura 'a'. \u00bfC\u00f3mo se define tal miembro de estructura?",
+            "answer": ":",
+            "explanation": "```c\nstruct a {\nvoid *f1;\n};\n```\n```c\nstruct a {\nvoid (*f1)();\n};\n```\n```c\nstruct a {\n*(void *f1)();\n};\n```\n```c\nstruct a {\nvoid *f1();\n};\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "91ae80ea8300c24cbbef772d",
+            "question": "Una estructura de datos Stack permite todas las operaciones de datos en un extremo solamente, haci\u00e9ndola qu\u00e9 tipo de implementaci\u00f3n?",
+            "answer": "LIFO",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "LIFO"
+            ],
+            "options": [
+              "FIFO",
+              "LIFO",
+              "LILO",
+              "LOLI"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "8f56e0551ab5f5e67067237b",
+            "question": "\u00bfQu\u00e9 muestra este programa?\n```c\nmain(){\n    char *p = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\n    int i;\n    for (i=0;i<5;i++) *p++; *p++;\n    printf(\"%c\",*p++);\n}\n```",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "a2609fe81d859c30eaeca470",
+            "question": "Describe la relaci\u00f3n entre lvalue y rvalue.",
+            "answer": "Un lvalue puede aparecer en el lado izquierdo o derecho de una asignaci\u00f3n; un rvalue puede aparecer solo en el lado derecho.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Un lvalue puede aparecer en el lado izquierdo o derecho de una asignaci\u00f3n; un rvalue puede aparecer solo en el lado derecho."
+            ],
+            "options": [
+              "Un lvalue puede aparecer solo en el lado izquierdo de una asignaci\u00f3n; un rvalue puede aparecer solo en el lado derecho.",
+              "Un lvalue puede aparecer solo en el lado izquierdo de una asignaci\u00f3n; un rvalue puede aparecer en el lado izquierdo o derecho.",
+              "Un lvalue y un rvalue pueden aparecer en el lado izquierdo o derecho de una asignaci\u00f3n.",
+              "Un lvalue puede aparecer en el lado izquierdo o derecho de una asignaci\u00f3n; un rvalue puede aparecer solo en el lado derecho."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "e9a203367760a7dce54a4505",
+            "question": "\u00bfQu\u00e9 operador se usa para acceder a la direcci\u00f3n de una variable?",
+            "answer": "`&`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`&`"
+            ],
+            "options": [
+              "`%`",
+              "`**`",
+              "`*`",
+              "`&`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "b8697f1f5541afcbf9d1228d",
+            "question": "\u00bfQu\u00e9 funci\u00f3n add devuelve correctamente el valor actualizado del resultado?",
+            "answer": ":",
+            "explanation": "```c\nvoid add (int a, int b, int *result)\n{\n*result = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(a,b,&result);\n}\n```\n```c\nvoid add (int a, int b, int result)\n{\nresult = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(a,b,result);\n}\n```\n```c\nvoid add (int a, int b, int *result)\n{\nresult = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(a,b,result);\n}\n```\n```c\nvoid add (int *a, int *b, int *result)\n{\nresult = a+b;\n}\nmain()\n{\nint a = 10;\nint b = 20;\nint result = 0;\nadd(*a,*b,*result);\n}\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "3ee2761f82a2a78e27ddf836",
+            "question": "Considera los n\u00fameros de la serie Fibonacci menores a 100: 0,1,1,2,3,5,8,13,21,34,55,89. \u00bfQu\u00e9 fragmento de c\u00f3digo genera la secuencia?",
+            "answer": ":",
+            "explanation": "```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", a);\nfibonacci(a,b);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```\n```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", b);\nfibonacci(a,c);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```\n```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", a);\nfibonacci(b,c);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```\n```c\nvoid fibonacci(int a, int b)\n{\nint c = a+b;\nif(a>100)\nreturn;\nprintf(\"%d\", c);\nfibonacci(b,c);\n}\nint main()\n{\nfibonacci(0,1);\n}\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "b379e8c4dcd64f09f7d8c326",
+            "question": "\u00bfCu\u00e1l _no_ es un especificador de storage class?",
+            "answer": "`intern`",
+            "explanation": "[Reference](https://en.cppreference.com/w/cpp/language/storage_duration)",
+            "hint": null,
+            "correctAnswer": [
+              "`intern`"
+            ],
+            "options": [
+              "`intern`",
+              "`extern`",
+              "`register`",
+              "`static`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "8f87a80890615d20845bbf84",
+            "question": "\u00bfQu\u00e9 l\u00ednea de c\u00f3digo, despu\u00e9s de la ejecuci\u00f3n, resulta en que `i` tenga el valor de 1?",
+            "answer": "`for(i=1; i==10; i++);`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`for(i=1; i==10; i++);`"
+            ],
+            "options": [
+              "`for(i=1; i<=1; i++);`",
+              "`for(i=1; i=10; i++);`",
+              "`for(i=1; i==10; i++);`",
+              "`for(i=10; i>=1; i--);`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "3cd1101099ee71a457077fa4",
+            "question": "\u00bfCu\u00e1l es el valor de la variable c al final de este programa?\n```\n1 main() {\n2   int a, b, c;\n3   a=10; b=50;\n4   c=a * b % a;\n5 }\n```",
+            "answer": "0",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "0"
+            ],
+            "options": [
+              "50",
+              "5",
+              "0",
+              "500"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "a5601c5de346cce4025d0e08",
+            "question": "\u00bfCu\u00e1l _no_ es uno de los tipos de datos b\u00e1sicos en C?",
+            "answer": "array",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "array"
+            ],
+            "options": [
+              "long double",
+              "unsigned char",
+              "array",
+              "float"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "1fb27667f6a262637c9c8db8",
+            "question": "\u00bfCu\u00e1l es el operador de acceso a miembros para una estructura?",
+            "answer": ".",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "."
+            ],
+            "options": [
+              ",",
+              "[]",
+              ".",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "ec9e472de03804d0ad949548",
+            "question": "\u00bfQu\u00e9 tipo de datos est\u00e1ndar proporciona el tama\u00f1o de almacenamiento m\u00e1s peque\u00f1o y se puede usar en c\u00e1lculos?",
+            "answer": "char",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "char"
+            ],
+            "options": [
+              "char",
+              "float",
+              "int",
+              "short"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "f1496f333054e3877b199c43",
+            "question": "\u00bfQu\u00e9 hace la funci\u00f3n ctype tolower()?",
+            "answer": "It converts an uppercase letter of the alphabet to lowercase.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It converts an uppercase letter of the alphabet to lowercase."
+            ],
+            "options": [
+              "It returns TRUE for lowercase letters of the alphabet.",
+              "It ensures that text output uses only ASCII values (0 through 127).",
+              "It returns FALSE for lowercase letters of the alphabet.",
+              "It converts an uppercase letter of the alphabet to lowercase."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "e733421e7283f8bc259cba19",
+            "question": "El void pointer _vptr_ se asigna a la direcci\u00f3n de la variable float _g_. \u00bfCu\u00e1l es una forma v\u00e1lida de desreferenciar _vptr_ para asignar su valor apuntado a una variable float llamada _f_ m\u00e1s adelante en el programa?\n```c\nfloat g;\nvoid *vptr=&g;\n```",
+            "answer": "`f=*(float *)vptr;`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`f=*(float *)vptr;`"
+            ],
+            "options": [
+              "`f=(float *)vptr;`",
+              "`f=*(float *)vptr;`",
+              "`f=*(float)vptr;`",
+              "`f=(float)*vptr;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "37db7f8adacbbf1be598ce72",
+            "question": "\u00bfLas funciones de asignaci\u00f3n din\u00e1mica de memoria est\u00e1n definidas en qu\u00e9 archivo header del sistema?",
+            "answer": "stdlib.h",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "stdlib.h"
+            ],
+            "options": [
+              "stdio.h",
+              "stdlib.h",
+              "limits.h",
+              "stddef.h"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "7fbc6e7c42ee64bde4e07b79",
+            "question": "Una funci\u00f3n es un conjunto de **\\_**.",
+            "answer": "sentencias",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "sentencias"
+            ],
+            "options": [
+              "declaraciones",
+              "sentencias",
+              "variables",
+              "objetos"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "b3515d0422e28afbb2c97043",
+            "question": "\u00bfC\u00f3mo son diferentes las funciones static de las funciones globales?",
+            "answer": "Las funciones static solo pueden ser accedidas en el archivo donde se declaran.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Las funciones static solo pueden ser accedidas en el archivo donde se declaran."
+            ],
+            "options": [
+              "Las funciones static deben declararse antes de ser definidas.",
+              "Las funciones static deben declararse en un archivo header separado.",
+              "Las funciones static siempre devuelven el mismo valor.",
+              "Las funciones static solo pueden ser accedidas en el archivo donde se declaran."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "5ac72462914b38f0e265a709",
+            "question": "\u00bfQu\u00e9 ejemplo de c\u00f3digo crea la cadena \"Hello Mars\" en el buffer de almacenamiento `hello`?",
+            "answer": ":",
+            "explanation": "```c\nchar hello[25];\nstrcpy(hello, \"Hello \");\nstrcpy(hello, \"Mars\");\n```\n```c\nchar hello[25];\nchar *p;\nstrcpy(hello, \"Hello World\");\np = hello;\np +=6;\nstrcpy(p, \"Mars\");\n```\n```c\nchar *hello;\nstrcpy(hello, \"Hello World\");\nhello+=6;\nstrcpy(hello, \"Mars\");\n```\n```c\nchar hello[25];\nstrcpy(hello, \"Hello World\");\nstrcpy(*hello[6], \"Mars\");\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "327dd3b9fc307befb00f3fec",
+            "question": "Si usas la funci\u00f3n fopen() con el modo \"a\", \u00bfqu\u00e9 sucede si el archivo nombrado no existe?",
+            "answer": "El archivo se crea y se abre para escritura.",
+            "explanation": "[Reference](https://www.tutorialspoint.com/c_standard_library/c_function_fopen.htm)",
+            "hint": null,
+            "correctAnswer": [
+              "El archivo se crea y se abre para escritura."
+            ],
+            "options": [
+              "El archivo se crea y se abre para lectura.",
+              "El archivo se crea y se abre para escritura.",
+              "La funci\u00f3n fopen() devuelve NULL indicando que la operaci\u00f3n ha fallado.",
+              "El archivo se crea y se abre tanto para escritura como para lectura"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "f10a63c405ab175b099a04f5",
+            "question": "\u00bfQu\u00e9 devuelve esta funci\u00f3n?\n```c\nint fl(int a, int b) { return(a>b?a:b); }\n```",
+            "answer": "el valor mayor de los dos par\u00e1metros pasados",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "el valor mayor de los dos par\u00e1metros pasados"
+            ],
+            "options": [
+              "error del compilador",
+              "el valor menor de los dos par\u00e1metros pasados",
+              "error en tiempo de ejecuci\u00f3n",
+              "el valor mayor de los dos par\u00e1metros pasados"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "89a6dac2c0806d41c778a60c",
+            "question": "\u00bfCu\u00e1l opci\u00f3n es un nombre de funci\u00f3n v\u00e1lido?",
+            "answer": "draw_star()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "draw_star()"
+            ],
+            "options": [
+              "draw_star()",
+              "5times()",
+              "upper-limit()",
+              "auto()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "d9927957142667834f026a76",
+            "question": "\u00bfCu\u00e1l no es una definici\u00f3n de tipo v\u00e1lida de una estructura que contiene coordenadas x e y como enteros, y que puede usarse como se muestra para la variable llamada point?\n```c\ncoord point;\npoint.x = 9;\npoint.y = 3;\n```",
+            "answer": ":",
+            "explanation": "```c\nstruct coord{\nint x;\nint y;\n};\ntypedef struct coord coord;\n```\n```c\ntypedef struct coord{\nint x;\nint y;\n};\n```\n```c\ntypedef struct coord{\nint x;\nint y;\n} coord;\n```\n```c\ntypedef struct{\nint x;\nint y;\n} coord;\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "f78e8fd8e3ea28850a6b11f6",
+            "question": "\u00bfCu\u00e1l es la salida del programa siguiente?\n```c\n#include <stdio.h>\n#if X == 3\n    #define Y 3\n#else\n    #define Y 5\n#endif\nint main()\n{\n    printf(\"%d\", Y);\n    return 0;\n}\n```",
+            "answer": "5",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "5"
+            ],
+            "options": [
+              "3",
+              "5",
+              "3 o 5 dependiendo de la entrada",
+              "Error en tiempo de compilaci\u00f3n"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "d5a94aac2ff23db31b21971a",
+            "question": "\u00bfQu\u00e9 asignan las funciones malloc() y calloc()?",
+            "answer": "memoria din\u00e1mica",
+            "explanation": "[Calloc](https://devdocs.io/c/memory/calloc)\n[Malloc](https://devdocs.io/c/memory/malloc)",
+            "hint": null,
+            "correctAnswer": [
+              "memoria din\u00e1mica"
+            ],
+            "options": [
+              "memoria reasignada",
+              "memoria est\u00e1tica",
+              "memoria din\u00e1mica",
+              "memoria fragmentada"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "59e83bb8562955eab2a1749c",
+            "question": "Necesitas determinar si una variable string es una subcadena de otra cadena. \u00bfQu\u00e9 funci\u00f3n de la biblioteca est\u00e1ndar de C usas?",
+            "answer": "strstr(str1, str2);",
+            "explanation": "[Reference](https://devdocs.io/c/string/byte/strstr)",
+            "hint": null,
+            "correctAnswer": [
+              "strstr(str1, str2);"
+            ],
+            "options": [
+              "substr(str1, str2);",
+              "strstr(str1, str2);",
+              "substring(str1, str2);",
+              "strspn(str1, str2);"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "7f2e325b4a3e39b0fa9c4344",
+            "question": "Encuentra la salida del programa.\n```c\n#include <stdio.h>\n#define L 10\nint main(){\n    int a =10;\n    switch (a,a<<2){\n        case L:printf(\"a==L\");     break;\n        case L*2 : printf(\"a = L* 2\\n\");     break;\n        case L*4 : printf(\"a = L* 4\\n\");    break;\n        default: printf(\"Error\\n\");\n    }\n}\n```",
+            "answer": "`a=L*4`",
+            "explanation": "[Reference](https://www.geeksforgeeks.org/left-shift-right-shift-operators-c-cpp/)",
+            "hint": null,
+            "correctAnswer": [
+              "`a=L*4`"
+            ],
+            "options": [
+              "`a=L*2`",
+              "`a=L`",
+              "`Error`",
+              "`a=L*4`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "104bdf69004ad7365eee6dd0",
+            "question": "Predice la salida del siguiente c\u00f3digo cuando las variables **enteras** x se inicializa a 10, y a 2, y z a 0.\n```c\nz = x + y * x + 10 / 2 * x;\nprintf(\"value is =%d\",z);\n```",
+            "answer": "80",
+            "explanation": "[Reference](https://www.informit.com/articles/article.aspx?p=2062174&seqNum=4)",
+            "hint": null,
+            "correctAnswer": [
+              "80"
+            ],
+            "options": [
+              "80",
+              "170",
+              "31.5",
+              "6"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "9bfafc59f08f78a6699cf519",
+            "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente fragmento de c\u00f3digo?\n```c\n#include <stdio.h>\nvoid solve() {\n    int x = 2;\n    printf(\"%d\", (x << 1) + (x >> 1));\n}\nint main() {\n    solve();\n\treturn 0;\n}\n```",
+            "answer": "5",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "5"
+            ],
+            "options": [
+              "5",
+              "4",
+              "2",
+              "1"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "0c98a745a1e56d6077635b72",
+            "question": "\u00bfCu\u00e1l es la salida de este programa?\n```c\nint a=20, b=10;\nint f1(a) {\n    return(a*b);\n}\nmain() {\n    printf(\"%d\", f1(5));\n}\n```",
+            "answer": "50",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "50"
+            ],
+            "options": [
+              "100",
+              "200",
+              "5",
+              "50"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "09daa7ea841465fd8a4a7b15",
+            "question": "\u00bfQu\u00e9 es el car\u00e1cter \\0?",
+            "answer": "Car\u00e1cter NULL",
+            "explanation": "[Reference](<https://www.youth4work.com/Talent/C-Language/Forum/117150-what-is-the-use-of-a-0-character-in-c-language#:~:text=by%20using%20of%20null%20character(%27%5C0%27)%20it%20terminates%20the%20string%20untill%20the%20null%20character%20hit...%20which%20means%20comes%20out%20of%20the%20loop...%20In%20strings%20by%20default%20takes%20the%20null%20charater>)",
+            "hint": null,
+            "correctAnswer": [
+              "Car\u00e1cter NULL"
+            ],
+            "options": [
+              "Cadena",
+              "Car\u00e1cter NULL",
+              "CERO",
+              "Variable"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "5b9d433c5aca7e4e26272709",
+            "question": "\u00bfCu\u00e1l es la salida correcta para el siguiente c\u00f3digo?\n```c\n#include&lt;stdio.h&gt;\n#include&lt;conio.h&gt;\nmain()\n{\n     int a=10, b=20;\n     clrscr();\n     printf(\"Before swapping a=%d b=%d\",a,b);\n     a=a+b;\n     b=a-b;\n     a=a-b;\n     printf(\"nAfter swapping a=%d b=%d\",a,b);\n     getch();\n}\n```",
+            "answer": "Before a=10 b=20 , After a=20 b=10",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Before a=10 b=20 , After a=20 b=10"
+            ],
+            "options": [
+              "Before a=10 b=20 , After a=10 b=10",
+              "Before a=10 b=10 , After a=20 b=10",
+              "Before a=10 b=20 , After a=20 b=20",
+              "Before a=10 b=20 , After a=20 b=10"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "af95acf133a8ea0b4885989d",
+            "question": "\u00bfCu\u00e1l es la opci\u00f3n incorrecta que explica la directiva #pragma?",
+            "answer": "#pragma startup no nos permite especificar funciones llamadas al iniciar el programa.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "#pragma startup no nos permite especificar funciones llamadas al iniciar el programa."
+            ],
+            "options": [
+              "#pragma exit nos permite especificar funciones llamadas al salir del programa.",
+              "Esta es una directiva del preprocesador que se puede usar para activar o desactivar ciertas caracter\u00edsticas.",
+              "#pragma startup no nos permite especificar funciones llamadas al iniciar el programa.",
+              "Es de dos tipos #pragma startup, #pragma exit y pragma warn."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "43c86fcf4041a5ccf3a75270",
+            "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente fragmento de c\u00f3digo?\n```c\n#include <stdio.h>\nunion School {\n    int age, rollNo;\n    double marks;\n};\nvoid solve() {\n    union School sc;\n    sc.age = 19;\n    sc.rollNo = 82;\n    sc.marks = 19.04;\n    printf(\"%d\", (int)sizeof(sc));\n}\nint main() {\n    solve();\n\treturn 0;\n}\n```",
+            "answer": "8",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "8"
+            ],
+            "options": [
+              "2",
+              "4",
+              "8",
+              "10"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "82e3e15d70cc4200d99bac50",
+            "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente fragmento de c\u00f3digo?\n```c\n#include <stdio.h>\nstruct School {\n    int age, rollNo;\n};\nvoid solve() {\n    struct School sc;\n    sc.age = 19;\n    sc.rollNo = 82;\n    printf(\"%d %d\", sc.age, sc.rollNo);\n}\nint main() {\n    solve();\n\treturn 0;\n}\n```",
+            "answer": "19 82",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "19 82"
+            ],
+            "options": [
+              "19 82",
+              "Error de compilaci\u00f3n",
+              "82 19",
+              "Ninguna de estas"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "24fcc370b4c321ccd0d6296b",
+            "question": "\u00bfCu\u00e1l es la salida del siguiente fragmento de c\u00f3digo?\n```c\nint main() {\n\tint sum = 2 + 4 / 2 + 6 * 2;\n\tprintf(\"%d\", sum);\n\treturn 0;\n}\n```",
+            "answer": "16",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "16"
+            ],
+            "options": [
+              "2",
+              "15",
+              "16",
+              "18"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "6bd383863927c777332336b2",
+            "question": "\u00bfQu\u00e9 significa la siguiente declaraci\u00f3n?\n```\nint (*ptr)[10];\n```",
+            "answer": "ptr es un pointer a un array de 10 enteros",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "ptr es un pointer a un array de 10 enteros"
+            ],
+            "options": [
+              "ptr es un array de pointers a 10 enteros",
+              "ptr es un pointer a un array de 10 enteros",
+              "ptr es un array de 10 enteros",
+              "ptr es un pointer a un array"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "3c4731c1eaff8911c2ac5ed6",
+            "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente fragmento de c\u00f3digo?\n```c\n#include <stdio.h>\nvoid change(int,int);\nint main()\n{\n   int a=10,b=20;\n   change(a,b); //calling a function by passing the values of variables.\n   printf(\"Value of a is: %d\",a);\n   printf(\"\\n\");\n   printf(\"Value of b is: %d\",b);\n   return 0;\n}\nvoid change(int x,int y)\n{\n   x=13;\n   y=17;\n}\n```",
+            "answer": "10,20",
+            "explanation": "**Explicaci\u00f3n:** La funci\u00f3n \"change\" cambiar\u00e1 el valor de x e y solo dentro de su propio alcance, por lo que a y b no se ven afectados.",
+            "hint": null,
+            "correctAnswer": [
+              "10,20"
+            ],
+            "options": [
+              "10,20",
+              "10,10",
+              "20,20",
+              "20,10"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "cefd1d0865bef43b523e519c",
+            "question": "Elige verdadero o falso. Cuando se crea una variable en C, se asigna una direcci\u00f3n de memoria a la variable.",
+            "answer": "Verdadero",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Verdadero"
+            ],
+            "options": [
+              "Verdadero",
+              "Falso"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "666e6961cd6307fde6704547",
+            "question": "\u00bfQu\u00e9 imprime el siguiente fragmento de programa en C?\n```c\n#include <stdio.h>\nint main()\n{\n    char c[] = \"GATE2011\";\n    char *p = c;\n    printf(\"%s\", p + p[3] -p[1]);\n    return 0;\n}\n```",
+            "answer": "2011",
+            "explanation": "**Explicaci\u00f3n:** char c[ ] = \"GATE2011\"; dado que char \\*p =c significa que p representa la direcci\u00f3n base de la cadena \"GATE2011\", entonces p[3] es 'E' y p[1] es 'A'. El valor de la subexpresi\u00f3n p[3] \u2013 p[1] = valor ASCII de 'E' \u2013 valor ASCII de 'A' = 4. Por lo tanto, la expresi\u00f3n p + p[3] \u2013 p[1] se convierte en ( p + 4) y (p+4) representa la direcci\u00f3n base de la cadena \"2011\" printf(\"%s\", p + p[3] \u2013 p[1]); Por lo tanto, imprimir\u00e1 2011",
+            "hint": null,
+            "correctAnswer": [
+              "2011"
+            ],
+            "options": [
+              "GATE 2011",
+              "E2011",
+              "2011",
+              "01"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "72a15da1330debc4559a52cc",
+            "question": "\u00bfCu\u00e1l es la salida del siguiente fragmento de c\u00f3digo?\n```c\nint main() {\n\tint a = 5, b = 6, c;\n\tc = a++ + ++b;\n\tprintf(\"%d %d %d\", a, b, c);\n\treturn 0;\n}\n```",
+            "answer": "6 7 12",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "6 7 12"
+            ],
+            "options": [
+              "5 6 11",
+              "6 7 12",
+              "5 6 12",
+              "6 6 12"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "1ea944443772f676cab0b547",
+            "question": "\u00bfCu\u00e1l ser\u00e1 la salida del siguiente segmento de programa en C?\n```c\nchar inchar = 'A';\nswitch (inchar)\n{\ncase 'A' :\n\tprintf (\"choice A \\n\") ;\ncase 'B' :\n\tprintf (\"choice B \") ;\ncase 'C' :\ncase 'D' :\ncase 'E' :\ndefault:\n\tprintf (\"No Choice\") ;\n}\n```",
+            "answer": "Choice A",
+            "explanation": "Choice B No choice",
+            "hint": null,
+            "correctAnswer": [
+              "Choice A"
+            ],
+            "options": [
+              "No choice",
+              "Choice A",
+              "Choice A",
+              "El programa no da salida ya que es err\u00f3neo"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "0ce69d6271af7ab0e487956f",
+            "question": "La variable string str1 tiene el valor de \"abc\", y la variable string str2 tiene el valor \"xyz\". \u00bfCu\u00e1les son los valores de str1 y str2 despu\u00e9s de que se ejecute esta declaraci\u00f3n?\n```c\nstrcpy(str1, str2);\n```",
+            "answer": "str1: \"xyz\" ; str2: \"xyz\"",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "str1: \"xyz\" ; str2: \"xyz\""
+            ],
+            "options": [
+              "str1: \"xyz\" ; str2: \"xyz\"",
+              "str1: \"abc\" ; str2: \"xyz\"",
+              "str1: \"xyz\" ; str2: \"abc\"",
+              "str1: \"abc\" ; str2: \"abc\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "f314d0f57dabe336ba7fa513",
+            "question": "\u00bfCu\u00e1l no es uno de los tipos de datos b\u00e1sicos en C?",
+            "answer": "array",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "array"
+            ],
+            "options": [
+              "array",
+              "float",
+              "long double",
+              "unsigned char"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "8a5d8d2176c9fc69b9eed42d",
+            "question": "Has escrito una funci\u00f3n que quieres incluir como miembro de la estructura a. \u00bfC\u00f3mo se define tal miembro de estructura?",
+            "answer": ":",
+            "explanation": "```c\nstruct a {\nvoid *f1;\n};\n```\n```c\nstruct a {\nvoid (*f1)();\n};\n```\n```c\nstruct a {\n*(void *f1)();\n};\n```\n```c\nstruct a {\nvoid *f1();\n};\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "47d25042c9b0100599b7dab2",
+            "question": "Necesitas determinar si una variable string es una subcadena de otra cadena. \u00bfQu\u00e9 funci\u00f3n de la biblioteca est\u00e1ndar de C usas?",
+            "answer": "strstr(str1, str2);",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "strstr(str1, str2);"
+            ],
+            "options": [
+              "substr(str1, str2);",
+              "strstr(str1, str2);",
+              "substring(str1, str2);",
+              "strspn(str1, str2);"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "d056fa82a6c27f36c8254c68",
+            "question": "\u00bfC\u00f3mo son diferentes las funciones static de las funciones globales?",
+            "answer": "Las funciones static solo pueden ser accedidas en el archivo donde se declaran.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Las funciones static solo pueden ser accedidas en el archivo donde se declaran."
+            ],
+            "options": [
+              "Las funciones static deben declararse antes de ser definidas.",
+              "Las funciones static deben declararse en un archivo header separado.",
+              "Las funciones static siempre devuelven el mismo valor.",
+              "Las funciones static solo pueden ser accedidas en el archivo donde se declaran."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "df5ecfd7c021afcb20d1f6ac",
+            "question": "\u00bfQu\u00e9 muestra este programa?\n```c\nmain(){\n    char *p = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\";\n    int i;\n    for (i=0;i<5;i++) *p++; *p++;\n    printf(\"%c\",*p++);\n}\n```",
+            "answer": "G",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "G"
+            ],
+            "options": [
+              "K",
+              "M",
+              "H",
+              "G"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          },
+          {
+            "id": "194693f8dc9fd99ef1fd3484",
+            "question": "\u00bfCu\u00e1l no es un comando v\u00e1lido con esta declaraci\u00f3n?\n```c\nchar *string[20] = { \"one\", \"two\", \"three\"};\n```",
+            "answer": "`printf(\"%s\", string[1][2]);`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`printf(\"%s\", string[1][2]);`"
+            ],
+            "options": [
+              "`printf(\"%c\", string[1][2]);`",
+              "`printf(\"%s\", string[1][2]);`",
+              "`printf(\"%s\", string[1]);`",
+              "`printf(string[1]);`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "105801c854fb6e2aed3f81f8",
+            "quizzId": "a491c7c517642a7c40a0b8fd"
+          }
+        ]
       }
     ]
   },
   "meta": {
     "source": "c-(programming-language)/c-(programming-language)-quiz-es.md",
-    "language": "es",
-    "generatedAt": "2025-12-09T14:56:14.127322+00:00",
+    "languages": [
+      "es"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.146420+00:00",
     "warnings": [
       "Question 42 has no marked correct answers",
       "Question 42 has no options"

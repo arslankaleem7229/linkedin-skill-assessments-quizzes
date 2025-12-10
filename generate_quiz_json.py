@@ -25,7 +25,8 @@ def main() -> None:
     args = parse_args()
     root = Path(args.root).resolve()
     output_root = Path(args.output or root).resolve()
-    created_by_id = args.created_by or os.getenv("SEED_USER_ID", "seed-user")
+    created_by_id = args.created_by or os.getenv(
+        "SEED_USER_ID", "cmiz68drf00004eqsc3izonqy")
 
     quiz_files = find_quiz_files(root, args.match)
     if not quiz_files:
@@ -102,7 +103,7 @@ def parse_args() -> argparse.Namespace:
         "--created-by",
         dest="created_by",
         default=None,
-        help="createdById to set on quizzes (default: SEED_USER_ID or 'seed-user').",
+        help="createdById to set on quizzes (default: SEED_USER_ID or 'cmiz68drf00004eqsc3izonqy').",
     )
     return parser.parse_args()
 

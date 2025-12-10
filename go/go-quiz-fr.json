@@ -1,1345 +1,1500 @@
 {
   "quizz": {
     "id": "1e676f7cd2691018e838d940",
-    "title": "Go (langage de programmation)",
-    "description": "Seeded from go/go-quiz-fr.md",
-    "createdById": "seed-user",
-    "questions": [
-      {
-        "id": "4aecdba06493dffd5314daae",
-        "question": "De quoi avez-vous besoin pour que deux fonctions soient du m\u00eame type ?",
-        "answer": "Elles doivent avoir les m\u00eames signatures, y compris les types de param\u00e8tres et les types de retour.",
-        "explanation": "[User defined function types in Go (Golang)](https://golangbyexample.com/user-defined-function-type-go/)",
-        "hint": null,
-        "correctAnswer": [
-          "Elles doivent avoir les m\u00eames signatures, y compris les types de param\u00e8tres et les types de retour."
-        ],
-        "options": [
-          "Elles doivent avoir les m\u00eames signatures, y compris les types de param\u00e8tres et les types de retour.",
-          "Elles doivent avoir les m\u00eames types de param\u00e8tres mais peuvent retourner des types diff\u00e9rents.",
-          "Toutes les fonctions doivent \u00eatre du m\u00eame type.",
-          "Les fonctions ne doivent pas \u00eatre de premier ordre."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a9a057ef04fd26d04a78485c",
-        "question": "Que retourne la fonction `len()` si on lui passe une cha\u00eene encod\u00e9e en UTF-8 ?",
-        "answer": "le nombre d\u2019octets",
-        "explanation": "[Length of string in Go (Golang)](https://golangbyexample.com/length-of-string-golang/).",
-        "hint": null,
-        "correctAnswer": [
-          "le nombre d\u2019octets"
-        ],
-        "options": [
-          "le nombre de caract\u00e8res",
-          "le nombre d\u2019octets",
-          "Elle n\u2019accepte pas les types string.",
-          "le nombre de points de code"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e4bfe5b19ab65311599c85f8",
-        "question": "Lequel n\u2019est pas un construit de boucle valide en Go ?",
-        "answer": "&shy;",
-        "explanation": "```go\ndo { ... } while i < 5\n```\n```go\nfor _,c := range \"hello\" { ... }\n```\n```go\nfor i := 1; i < 5; i++ { ... }\n```\n```go\nfor i < 5 { ... }\n```\n**Explication :** Go ne poss\u00e8de que des boucles `for`.",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c9d3d56e787217ce03a2d45d",
-        "question": "Comment ajouterez-vous le nombre 3 \u00e0 la fin (\u00e0 droite) ?\n```go\nvalues := []int{1, 1, 2}\n```",
-        "answer": "&shy;",
-        "explanation": "```go\nvalues.append(3)\n```\n```go\nvalues.insert(3, 3)\n```\n```go\nappend(values, 3)\n```\n```go\nvalues = append(values, 3)\n```\n**Explication :** les slices en Go sont immuables, donc appeler `append` ne modifie pas la slice en place.",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "482f69c15877928f343235a2",
-        "question": "Quelle est la valeur de `Read` ?\n```go\nconst (\n  Write = iota\n  Read\n  Execute\n)\n```",
-        "answer": "1",
-        "explanation": "[IOTA in Go (Golang)](https://golangbyexample.com/iota-in-golang/)",
-        "hint": null,
-        "correctAnswer": [
-          "1"
-        ],
-        "options": [
-          "0",
-          "1",
-          "2",
-          "une valeur al\u00e9atoire"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "20392462d24e38204c2f61a7",
-        "question": "Quelle est la seule instruction `import` valide en Go ?",
-        "answer": "&shy;",
-        "explanation": "```go\nimport \"github/gin-gonic/gin\"\n```\n```go\nimport \"https://github.com/gin-gonic/gin\"\n```\n```go\nimport \"../template\"\n```\n```go\nimport \"github.com/gin-gonic/gin\"\n```\n[Import in GoLang](https://golangdocs.com/import-in-golang)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "14b3e686cdb7c6e81c3b38ec",
-        "question": "Que se passerait-il si vous tentiez de compiler et d\u2019ex\u00e9cuter ce programme Go ?\n```go\npackage main\nvar GlobalFlag string\nfunc main() {\n  print(\"[\"+GlobalFlag+\"]\")\n}\n```",
-        "answer": "Il compilerait et afficherait `[]`.",
-        "explanation": "1. Les [variables](https://golangbyexample.com/variables-in-golang-complete-guide/) en Go ont des valeurs initiales. Pour `string`, c\u2019est la cha\u00eene vide.\n2. [Go Playground](https://play.golang.org/p/TaRIzuD-nxC)",
-        "hint": null,
-        "correctAnswer": [
-          "Il compilerait et afficherait `[]`."
-        ],
-        "options": [
-          "Il ne compilerait pas car `GlobalFlag` n\u2019a jamais \u00e9t\u00e9 initialis\u00e9.",
-          "Il compilerait et afficherait `[]`.",
-          "Il compilerait et n\u2019afficherait rien car `\"[\" +nil+\"]\"` est aussi `nil`.",
-          "Il compilerait mais panique ensuite car `GlobalFlag` n\u2019a jamais \u00e9t\u00e9 initialis\u00e9."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ccab19e29f28c2bd548529a7",
-        "question": "O\u00f9 la variable `myVar` est-elle accessible si elle est d\u00e9clar\u00e9e en dehors de toute fonction dans un fichier du paquet `myPackage` situ\u00e9 dans le module `myModule` ?",
-        "answer": "Elle est accessible partout dans `myPackage`, pas dans le reste de `myModule`.",
-        "explanation": "**Explication :** pour rendre la variable disponible en dehors de `myPackage`, changez son nom en `MyVar`.\nVoir aussi un exemple de [noms export\u00e9s](https://tour.golang.org/basics/3) dans le Tour of Go.",
-        "hint": null,
-        "correctAnswer": [
-          "Elle est accessible partout dans `myPackage`, pas dans le reste de `myModule`."
-        ],
-        "options": [
-          "Elle est accessible partout dans `myPackage`, pas dans le reste de `myModule`.",
-          "Elle est accessible par toute application important `myModule`.",
-          "Elle est accessible depuis n\u2019importe o\u00f9 dans `myModule`.",
-          "Elle est accessible par d\u2019autres paquets de `myModule` tant qu\u2019ils importent `myPackage`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "988d7689b6558297f3e9c302",
-        "question": "Comment demander \u00e0 `go test` d\u2019afficher les tests qu\u2019il ex\u00e9cute ?",
-        "answer": "`go test -v`",
-        "explanation": "[test package](https://pkg.go.dev/cmd/go/internal/test)",
-        "hint": null,
-        "correctAnswer": [
-          "`go test -v`"
-        ],
-        "options": [
-          "`go test`",
-          "`go test -x`",
-          "`go test --verbose`",
-          "`go test -v`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "89ac2fd9ff9628cc5af52d03",
-        "question": "Ce code a affich\u00e9 `{0, 0}`. Comment le corriger ?\n```go\ntype Point struct {\n  x int\n  y int\n}\nfunc main() {\n  data := []byte(`{\"x\":1, \"y\": 2}`)\n  var p Point\n  if err := json.Unmarshal(data, &p); err != nil {\n    fmt.Println(\"error: \", err)\n  } else {\n    fmt.Println(p)\n  }\n}\n```",
-        "answer": "Rendre `X` et `Y` export\u00e9s (majuscules)",
-        "explanation": "1. [How to Parse JSON in Golang?](https://www.geeksforgeeks.org/how-to-parse-json-in-golang/)\n2. [Go Playground](https://play.golang.org/p/RdL6y3Zv8ke)",
-        "hint": null,
-        "correctAnswer": [
-          "Rendre `X` et `Y` export\u00e9s (majuscules)"
-        ],
-        "options": [
-          "utiliser `json.Decoder`",
-          "Passer un pointeur vers `data`",
-          "Rendre `X` et `Y` export\u00e9s (majuscules)",
-          "Utiliser des tags de champ"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "91c113ba4a970cbb8cd57671",
-        "question": "Qu\u2019est-ce qu\u2019un `sync.Mutex` bloque pendant qu\u2019il est verrouill\u00e9 ?",
-        "answer": "toute lecture ou \u00e9criture de la variable qu\u2019il verrouille",
-        "explanation": "1. [Mutex in GoLang](https://golangdocs.com/mutex-in-golang), `sync.Mutex` verrouille pour qu\u2019une seule goroutine \u00e0 la fois acc\u00e8de \u00e0 la variable prot\u00e9g\u00e9e.\n2. [sync.Mutex](https://go.dev/tour/concurrency/9)",
-        "hint": null,
-        "correctAnswer": [
-          "toute lecture ou \u00e9criture de la variable qu\u2019il verrouille"
-        ],
-        "options": [
-          "toutes les goroutines",
-          "tout autre appel pour verrouiller ce `Mutex`",
-          "toute lecture ou \u00e9criture de la variable qu\u2019il verrouille",
-          "toute \u00e9criture de la variable qu\u2019il verrouille"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a94931e641740ba2ee97bf07",
-        "question": "Quelle est la mani\u00e8re idiomatique de suspendre l\u2019ex\u00e9cution de la port\u00e9e courante jusqu\u2019\u00e0 ce qu\u2019un nombre arbitraire de goroutines aient termin\u00e9 ?",
-        "answer": "`sync.WaitGroup`",
-        "explanation": "**Explication :** c\u2019est exactement l\u2019usage de `sync.WaitGroup` - [Use sync.WaitGroup in Golang](https://nanxiao.me/en/use-sync-waitgroup-in-golang/)",
-        "hint": null,
-        "correctAnswer": [
-          "`sync.WaitGroup`"
-        ],
-        "options": [
-          "Passer un `int` et un `Mutex` \u00e0 chacune et compter \u00e0 leur retour.",
-          "Boucler via un `select`.",
-          "Dormir une dur\u00e9e \u00ab s\u00fbre \u00bb.",
-          "`sync.WaitGroup`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f45e8f7bd6e7dbb6fc77588c",
-        "question": "Quel est l\u2019effet secondaire d\u2019utiliser `time.After` dans une instruction `select` ?",
-        "answer": "La goroutine ne se termine pas avant que le temps ne soit \u00e9coul\u00e9.",
-        "explanation": "> Remarque : cela ne bloque pas `select` et ne bloque pas les autres canaux.\n1. [time.After() Function in Golang With Examples](https://www.geeksforgeeks.org/time-after-function-in-golang-with-examples/)\n2. [How can I use 'time.After' and 'default' in Golang?](https://stackoverflow.com/questions/39212333/how-can-i-use-time-after-and-default-in-golang)\n3. [Go Playground example](https://go.dev/play/p/WojTrG1ywRK)",
-        "hint": null,
-        "correctAnswer": [
-          "La goroutine ne se termine pas avant que le temps ne soit \u00e9coul\u00e9."
-        ],
-        "options": [
-          "Cela bloque les autres canaux.",
-          "Il est con\u00e7u pour \u00eatre utilis\u00e9 dans `select` sans effets secondaires.",
-          "Cela bloque le `select` jusqu\u2019\u00e0 ce que le temps soit \u00e9coul\u00e9.",
-          "La goroutine ne se termine pas avant que le temps ne soit \u00e9coul\u00e9."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f4ca3f64fdfd500be5d54c42",
-        "question": "\u00c0 quoi sert l\u2019instruction `select` ?",
-        "answer": "ex\u00e9cuter un cas diff\u00e9rent selon le canal qui r\u00e9pond en premier",
-        "explanation": "[Select statement in GoLang](https://golangdocs.com/select-statement-in-golang)",
-        "hint": null,
-        "correctAnswer": [
-          "ex\u00e9cuter un cas diff\u00e9rent selon le canal qui r\u00e9pond en premier"
-        ],
-        "options": [
-          "ex\u00e9cuter une fonction en concurrence",
-          "ex\u00e9cuter un cas diff\u00e9rent selon le type d\u2019une variable",
-          "ex\u00e9cuter un cas diff\u00e9rent selon la valeur d\u2019une variable",
-          "ex\u00e9cuter un cas diff\u00e9rent selon le canal qui r\u00e9pond en premier"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5f2974f421fa104f4c6d644a",
-        "question": "Selon le standard de documentation Go, comment devriez-vous documenter cette fonction ?\n```go\nfunc Add(a, b int) int {\n        return a + b\n}\n```",
-        "answer": "C",
-        "explanation": "```go\n// Calcule a + b\n// - a: int\n// - b: int\n// - retourne: int\nfunc Add(a, b int) int {\nreturn a + b\n}\n```\n```go\n// Fait a + b\nfunc Add(a, b int)  int {\nreturn a + b\n}\n```\n```go\n// Add returns the sum of a and b\nfunc Add(a, b int) int {\nreturn a + b\n}\n```\n```go\n// returns the sum of a and b\nfunc Add(a, b int) int {\nreturn a + b\n}\n```\n**Explication :** le bloc de documentation doit commencer par le nom de la fonction.\n[Comments in Go](https://exercism.org/tracks/go/concepts/comments)",
-        "hint": null,
-        "correctAnswer": [
-          "C"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "299da3891f58198dc18bdeb9",
-        "question": "Quelle contrainte s\u2019applique au type de `myVal` pour compiler `i := myVal.(int)` ?",
-        "answer": "`myVal` doit \u00eatre une interface.",
-        "explanation": "**Explication :** ce type d\u2019assertion de type (via `.(type)`) s\u2019utilise uniquement sur des interfaces.\n1. [this example](https://tutorialedge.net/golang/snippets/type-casting-interface-to-string-go/)\n2. [Primitive types are type-casted differently](https://golangdocs.com/type-casting-in-golang)\n3. [Go Playground](https://play.golang.org/p/TXF_JBvThp6)\n4. [Type assertions](https://go.dev/tour/methods/15)",
-        "hint": null,
-        "correctAnswer": [
-          "`myVal` doit \u00eatre une interface."
-        ],
-        "options": [
-          "`myVal` doit \u00eatre un type entier, tel que `int`, `int64`, `int32`, etc.",
-          "`myVal` doit pouvoir \u00eatre assert\u00e9 comme un `int`.",
-          "`myVal` doit \u00eatre une interface.",
-          "`myVal` doit \u00eatre un type num\u00e9rique, tel que `float64` ou `int64`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2250b1ad810e52280b1330b5",
-        "question": "Qu\u2019est-ce qu\u2019un canal (`channel`) ?",
-        "answer": "un moyen d\u2019envoyer des valeurs entre des goroutines",
-        "explanation": "[Channels](https://tour.golang.org/concurrency/2)",
-        "hint": null,
-        "correctAnswer": [
-          "un moyen d\u2019envoyer des valeurs entre des goroutines"
-        ],
-        "options": [
-          "une variable globale",
-          "un moyen d\u2019envoyer des valeurs entre des goroutines",
-          "un tableau dynamique de valeurs",
-          "un thread l\u00e9ger pour la programmation concurrente"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "811ae7ad3865c07e0010d6d8",
-        "question": "Comment faire en sorte qu\u2019un fichier ne se compile que sur Windows ?",
-        "answer": "Ajouter un commentaire `// +build windows` en haut du fichier.",
-        "explanation": "1. [How to use conditional compilation with the go build tool, Oct 2013](https://dave.cheney.net/2013/10/12/how-to-use-conditional-compilation-with-the-go-build-tool)\n2. [go commands Build constraints](https://pkg.go.dev/cmd/go#hdr-Build_constraints)\n> `//go:build windows`\n> \u00ab Les versions de Go 1.16 et ant\u00e9rieures utilisaient une syntaxe diff\u00e9rente pour les contraintes de build, avec le pr\u00e9fixe `// +build`. La commande gofmt ajoutera une contrainte `//go:build` \u00e9quivalente en rencontrant l\u2019ancienne syntaxe. \u00bb",
-        "hint": null,
-        "correctAnswer": [
-          "Ajouter un commentaire `// +build windows` en haut du fichier."
-        ],
-        "options": [
-          "V\u00e9rifier `runtime.GOOS`.",
-          "Ajouter un commentaire `// +build windows` n\u2019importe o\u00f9 dans le fichier.",
-          "Ajouter un pr\u00e9fixe `_` au nom du fichier.",
-          "Ajouter un commentaire `// +build windows` en haut du fichier."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8231dfab2049d39d53943033",
-        "question": "Quelle est la bonne mani\u00e8re de passer ceci comme corps d\u2019une requ\u00eate HTTP POST ?\n```go\ndata := \"A group of Owls is called a parliament\"\n```",
-        "answer": "&shy;",
-        "explanation": "```go\nresp, err := http.Post(\"https://httpbin.org/post\", \"text/plain\", []byte(data))\n```\n```go\nresp, err := http.Post(\"https://httpbin.org/post\", \"text/plain\", data)\n```\n```go\nresp, err := http.Post(\"https://httpbin.org/post\", \"text/plain\", strings.NewReader(data))\n```\n```go\nresp, err := http.Post(\"https://httpbin.org/post\", \"text/plain\", &data)\n```\n1. [net/http#Client.Post](https://pkg.go.dev/net/http#Client.Post)\n2. [http.Post Golang example](https://dev.to/ramu_mangalarapu/httppost-golang-example-5jp)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d534199e01298717e316bc53",
-        "question": "Quel devrait \u00eatre le nom idiomatique d\u2019une interface avec une seule m\u00e9thode ayant la signature `Save() error` ?",
-        "answer": "Saver",
-        "explanation": "[Effective Go, Interface names](https://golang.org/doc/effective_go#interface-names)",
-        "hint": null,
-        "correctAnswer": [
-          "Saver"
-        ],
-        "options": [
-          "Saveable",
-          "SaveInterface",
-          "ISave",
-          "Saver"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "feca30364a55b017b528fcbb",
-        "question": "Une instruction `switch` **\\_** son propre bloc lexical. Chaque instruction `case` **\\_** un bloc lexical suppl\u00e9mentaire",
-        "answer": "cr\u00e9e ; cr\u00e9e",
-        "explanation": "[Go Language Core technology (Volume one) 1.5-scope](https://topic.alibabacloud.com/a/go-language-core-technology-volume-one-15-font-colorredscopefont_1_38_30923325.html)\nExtrait pertinent de l\u2019article :\n> Le second `if` est imbriqu\u00e9 dans le premier, donc une variable d\u00e9clar\u00e9e dans le premier `if` est visible dans le second. Il y a des r\u00e8gles similaires dans `switch` : chaque `case` poss\u00e8de son propre bloc lexical en plus du bloc conditionnel.",
-        "hint": null,
-        "correctAnswer": [
-          "cr\u00e9e ; cr\u00e9e"
-        ],
-        "options": [
-          "ne cr\u00e9e pas ; cr\u00e9e",
-          "ne cr\u00e9e pas ; ne cr\u00e9e pas",
-          "cr\u00e9e ; cr\u00e9e",
-          "cr\u00e9e ; ne cr\u00e9e pas"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "164403c7bff00a540426edb0",
-        "question": "Quelle est la sensibilit\u00e9 \u00e0 la casse par d\u00e9faut de la fonction JSON `Unmarshal` ?",
-        "answer": "Le comportement par d\u00e9faut est insensible \u00e0 la casse, mais il peut \u00eatre red\u00e9fini.",
-        "explanation": "[encoding/json#Unmarshal](https://pkg.go.dev/encoding/json#Unmarshal)\nExtrait pertinent :\n> To unmarshal JSON into a struct, Unmarshal matches incoming object keys to the keys used by Marshal (either the struct field name or its tag), preferring an exact match but also accepting a case-insensitive match. By default, object keys which don't have a corresponding struct field are ignored (see Decoder.DisallowUnknownFields for an alternative).",
-        "hint": null,
-        "correctAnswer": [
-          "Le comportement par d\u00e9faut est insensible \u00e0 la casse, mais il peut \u00eatre red\u00e9fini."
-        ],
-        "options": [
-          "Le comportement par d\u00e9faut est insensible \u00e0 la casse, mais il peut \u00eatre red\u00e9fini.",
-          "Les champs sont pris en compte en respectant la casse.",
-          "Les champs sont pris en compte sans tenir compte de la casse.",
-          "Le comportement par d\u00e9faut est sensible \u00e0 la casse, mais il peut \u00eatre red\u00e9fini."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e368b56185883b6c4a5c640e",
-        "question": "Quelle est la diff\u00e9rence entre les m\u00e9thodes `Time.Sub()` et `Time.Add()` du paquet `time` ?",
-        "answer": "`Time.Add()` accepte un param\u00e8tre `Duration` et retourne un `Time` tandis que `Time.Sub()` accepte un `Time` et retourne une `Duration`.",
-        "explanation": "1. [time#Time.Add](https://pkg.go.dev/time#Time.Add)\n2. [time#Time.Sub](https://pkg.go.dev/time#Time.Sub)",
-        "hint": null,
-        "correctAnswer": [
-          "`Time.Add()` accepte un param\u00e8tre `Duration` et retourne un `Time` tandis que `Time.Sub()` accepte un `Time` et retourne une `Duration`."
-        ],
-        "options": [
-          "`Time.Add()` sert \u00e0 faire des additions tandis que `Time.Sub()` sert \u00e0 imbriquer des timestamps.",
-          "`Time.Add()` retourne toujours un temps plus tard tandis que `Time.Sub()` retourne toujours un temps plus t\u00f4t.",
-          "Elles sont oppos\u00e9es. `Time.Add(x)` \u00e9quivaut \u00e0 `Time.Sub(-x)`.",
-          "`Time.Add()` accepte un param\u00e8tre `Duration` et retourne un `Time` tandis que `Time.Sub()` accepte un `Time` et retourne une `Duration`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "68a453084cce5caa2c826a15",
-        "question": "Quel est le risque d\u2019utiliser plusieurs tags de champ dans une m\u00eame struct ?",
-        "answer": "Cela couple fortement diff\u00e9rentes couches de votre application.",
-        "explanation": "1. [Example Code / b29r0fUD1cp](https://play.golang.org/p/b29r0fUD1cp)\n2. [How To Use Struct Tags in Go](https://www.digitalocean.com/community/tutorials/how-to-use-struct-tags-in-go)",
-        "hint": null,
-        "correctAnswer": [
-          "Cela couple fortement diff\u00e9rentes couches de votre application."
-        ],
-        "options": [
-          "Chaque champ doit avoir tous les tags pour compiler.",
-          "Cela couple fortement diff\u00e9rentes couches de votre application.",
-          "Tous les tags apr\u00e8s le premier sont ignor\u00e9s.",
-          "Des tags manquants provoquent un panic \u00e0 l\u2019ex\u00e9cution."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3865b4d2ad9904e0b3fd1a0c",
-        "question": "O\u00f9 la m\u00e9thode int\u00e9gr\u00e9e `recover` est-elle utile ?",
-        "answer": "\u00e0 l\u2019int\u00e9rieur d\u2019une fonction diff\u00e9r\u00e9e (`deferred`)",
-        "explanation": "[Example of Recover Function in Go (Golang)](https://golangbot.com/panic-and-recover/#recoveringfromapanic)\nExtrait pertinent :\n> Recover is useful only when called inside deferred functions. Executing a call to recover inside a deferred function stops the panicking sequence by restoring normal execution and retrieves the error message passed to the panic function call. If recover is called outside the deferred function, it will not stop a panicking sequence.",
-        "hint": null,
-        "correctAnswer": [
-          "\u00e0 l\u2019int\u00e9rieur d\u2019une fonction diff\u00e9r\u00e9e (`deferred`)"
-        ],
-        "options": [
-          "dans la fonction `main`",
-          "imm\u00e9diatement apr\u00e8s une ligne susceptible de paniquer",
-          "\u00e0 l\u2019int\u00e9rieur d\u2019une fonction diff\u00e9r\u00e9e (`deferred`)",
-          "au d\u00e9but d\u2019une fonction susceptible de paniquer"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "80dd4f4331cb4f3372894b2b",
-        "question": "Lequel des choix ne renvoie pas de sortie sur la sortie d\u2019erreur standard ?",
-        "answer": "`fmt.Errorf(\"%s\\n\", message)`",
-        "explanation": "1. [func println](https://pkg.go.dev/builtin#println) : \u00e9crit le r\u00e9sultat sur l\u2019erreur standard.\n2. [func New](https://pkg.go.dev/log#New) : `func New(out io.Writer, prefix string, flag int) *Logger`; le param\u00e8tre `out` d\u00e9finit la destination d\u2019\u00e9criture des logs.\n3. [func Errorf](https://pkg.go.dev/fmt#Errorf) : `Errorf` formate selon un sp\u00e9cificateur et retourne la cha\u00eene comme valeur.\n4. [func Fprintln](https://pkg.go.dev/fmt#Fprintln) : \u00e9crit dans `w`.",
-        "hint": null,
-        "correctAnswer": [
-          "`fmt.Errorf(\"%s\\n\", message)`"
-        ],
-        "options": [
-          "`println(message)`",
-          "`log.New(os.Stderr, \"\", 0).Println(message)`",
-          "`fmt.Errorf(\"%s\\n\", message)`",
-          "`fmt.Fprintln(os.Stderr, message)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7bb1f11ed563cc008b24b405",
-        "question": "Comment indiquer \u00e0 Go d\u2019importer un paquet depuis un autre emplacement ?",
-        "answer": "Utiliser une directive `replace` dans `go.mod`.",
-        "explanation": "1. [Call your code from another module](https://go.dev/doc/tutorial/call-module-code) : chapitre 5., `go mod edit -replace example.com/greetings=../greetings`.\n2. [go.mod replace directive](https://go.dev/doc/modules/gomod-ref#replace)",
-        "hint": null,
-        "correctAnswer": [
-          "Utiliser une directive `replace` dans `go.mod`."
-        ],
-        "options": [
-          "Utiliser un proxy.",
-          "Changer le chemin d\u2019import.",
-          "Utiliser une directive `replace` dans `go.mod`.",
-          "Utiliser un r\u00e9pertoire `replace`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4babf79eafcb44943522d0cd",
-        "question": "Si votre r\u00e9pertoire de travail actuel est la racine de votre projet, quelle commande ex\u00e9cutera tous ses paquets de test ?",
-        "answer": "`go test ./...`",
-        "explanation": "1. [Example of testing in Go (Golang)](https://pkg.go.dev/testing)\n2. [Example of cmd in Go (Golang)](https://pkg.go.dev/cmd/go)\nExtrait pertinent :\n> Relative patterns are also allowed, like \"go test ./...\" to test all subdirectories.",
-        "hint": null,
-        "correctAnswer": [
-          "`go test ./...`"
-        ],
-        "options": [
-          "`go test all`",
-          "`go run --all`",
-          "`go test .`",
-          "`go test ./...`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "77619dd79ae7126c58b313a5",
-        "question": "Quelles encodages pouvez-vous mettre dans une cha\u00eene ?",
-        "answer": "UTF-8",
-        "explanation": "1. [Strings, bytes, runes and characters in Go](https://go.dev/blog/strings)\nExtrait pertinent :\n> In short, Go source code is UTF-8, so the source code for the string literal is UTF-8 text.\n2. [Example of encoding in Go (Golang)](https://pkg.go.dev/golang.org/x/text/encoding)\nExtrait pertinent :\n> Package encoding defines an interface for character encodings, such as Shift JIS and Windows 1252, that can convert to and from UTF-8.",
-        "hint": null,
-        "correctAnswer": [
-          "UTF-8"
-        ],
-        "options": [
-          "n\u2019importe lequel, elle accepte des octets arbitraires",
-          "n\u2019importe quel format Unicode",
-          "UTF-8 ou ASCII",
-          "UTF-8"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "284ac8e7a319e5ff0c1d23d0",
-        "question": "En quoi le comportement de `t.Fatal` diff\u00e8re-t-il \u00e0 l\u2019int\u00e9rieur d\u2019un `t.Run` ?",
-        "answer": "`t.Fatal` arr\u00eate l\u2019ex\u00e9cution du sous-test et continue avec les autres cas de test.",
-        "explanation": "1. [Reference:](https://go.dev/play/p/gtne3iRL9AX)\n2. [testing package in Go](https://pkg.go.dev/testing), extrait pertinent :\n> `Fatal` is equivalent to `Log` followed by `FailNow`.\n> `Log` formats its arguments using default formatting, analogous to `Println`, and records the text in the error log.\n> `FailNow` marks the function as having failed and stops its execution by calling `runtime.Goexit` (which then runs all deferred calls in the current goroutine). Execution will continue at the next test or benchmark. `FailNow` must be called from the goroutine running the test or benchmark function, not from other goroutines created during the test. Calling `FailNow` does not stop those other goroutines.\n> `Run` runs `f` as a subtest of `t` called name. It runs `f` in a separate goroutine and blocks until `f` returns or calls `t.Parallel` to become a parallel test. Run reports whether `f` succeeded (or at least did not fail before calling `t.Parallel`).\n> Run may be called simultaneously from multiple goroutines, but all such calls must return before the outer test function for t returns.",
-        "hint": null,
-        "correctAnswer": [
-          "`t.Fatal` arr\u00eate l\u2019ex\u00e9cution du sous-test et continue avec les autres cas de test."
-        ],
-        "options": [
-          "Il n\u2019y a aucune diff\u00e9rence.",
-          "`t.Fatal` ne fait pas planter le banc de test, pr\u00e9servant les messages.",
-          "`t.Fatal` arr\u00eate l\u2019ex\u00e9cution du sous-test et continue avec les autres cas de test.",
-          "`t.Fatal` arr\u00eate tous les tests et contient des informations suppl\u00e9mentaires sur le sous-test \u00e9chou\u00e9."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b7eb427bc077cb83c1350dc3",
-        "question": "Que fait `log.Fatal` ?",
-        "answer": "Il affiche le log puis quitte le programme en toute s\u00e9curit\u00e9.",
-        "explanation": "[Example of func Fatal in Go (Golang)](https://pkg.go.dev/log#Fatal)\nExtrait pertinent :\n> `Fatal` is equivalent to `Print()` followed by a call to `os.Exit(1)`.",
-        "hint": null,
-        "correctAnswer": [
-          "Il affiche le log puis quitte le programme en toute s\u00e9curit\u00e9."
-        ],
-        "options": [
-          "Il d\u00e9clenche un panic.",
-          "Il affiche le log puis d\u00e9clenche un panic.",
-          "Il affiche le log puis quitte le programme en toute s\u00e9curit\u00e9.",
-          "Il quitte le programme."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "91e9b29a9bd4b2f1cfdde97d",
-        "question": "Lequel est un litt\u00e9ral de format d\u2019heure valide en Go ?",
-        "answer": "\"2006-01-02\"",
-        "explanation": "[func Time in Go](https://pkg.go.dev/time#pkg-constants)\nExtrait pertinent :\n```text\nYear: \"2006\" \"06\"\nMonth: \"Jan\" \"January\" \"01\" \"1\"\nDay of the week: \"Mon\" \"Monday\"\nDay of the month: \"2\" \"_2\" \"02\"\nDay of the year: \"__2\" \"002\"\nHour: \"15\" \"3\" \"03\" (PM or AM)\nMinute: \"4\" \"04\"\nSecond: \"5\" \"05\"\nAM/PM mark: \"PM\"\n```",
-        "hint": null,
-        "correctAnswer": [
-          "\"2006-01-02\""
-        ],
-        "options": [
-          "\"2006-01-02\"",
-          "\"YYYY-mm-dd\"",
-          "\"y-mo-d\"",
-          "\"year-month-day\""
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1a1cb662dfba78a051012381",
-        "question": "Comment devriez-vous journaliser une erreur (`err`) ?",
-        "answer": "`log.Printf(\"error: %v\", err)`",
-        "explanation": "**Explication :** Il n\u2019y a ni `log.ERROR`, ni `log.Error()` dans le [paquet log en Go](https://pkg.go.dev/log) ; les arguments de `log.Print()` sont g\u00e9r\u00e9s comme `fmt.Print()` ; ceux de `log.Printf()` comme `fmt.Printf()`.",
-        "hint": null,
-        "correctAnswer": [
-          "`log.Printf(\"error: %v\", err)`"
-        ],
-        "options": [
-          "`log.Error(err)`",
-          "`log.Printf(\"error: %v\", err)`",
-          "`log.Printf(log.ERROR, err)`",
-          "`log.Print(\"error: %v\", err)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7aee8cdfd72b908d317baf93",
-        "question": "Quels noms de fichiers la commande `go test` reconna\u00eet-elle comme fichiers de test ?",
-        "answer": "tout fichier se terminant par `_test.go`",
-        "explanation": "1. [Test packages in go command in Go](https://pkg.go.dev/cmd/go#hdr-Test_packages) : \u00ab 'Go test' recompile chaque paquet avec tous les fichiers dont le nom matche le motif `*_test.go`. \u00bb\n2. [Add a test in Go](https://go.dev/doc/tutorial/add-a-test)",
-        "hint": null,
-        "correctAnswer": [
-          "tout fichier se terminant par `_test.go`"
-        ],
-        "options": [
-          "tout fichier commen\u00e7ant par `test`",
-          "tout fichier contenant le mot `test`",
-          "uniquement les fichiers \u00e0 la racine se terminant par `_test.go`",
-          "tout fichier se terminant par `_test.go`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "65f74c6cc72d3547c3e0fe4d",
-        "question": "Quelle sera la sortie de ce code ?\n```go\nch := make(chan int)\nch <- 7\nval := <-ch\nfmt.Println(val)\n```",
-        "answer": "Il y aura un deadlock",
-        "explanation": "[Go Playground share](https://go.dev/play/p/SQlfg8YSEOz), sortie :\n```text\nfatal error: all goroutines are asleep - deadlock!\ngoroutine 1 [chan send]:\nmain.main()\n/tmp/sandbox2282523250/prog.go:7 +0x37\nProgram exited.\n```",
-        "hint": null,
-        "correctAnswer": [
-          "Il y aura un deadlock"
-        ],
-        "options": [
-          "0",
-          "Il y aura un deadlock",
-          "Cela ne compilera pas",
-          "2.718"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8cca6f6f7d88c20771f02520",
-        "question": "Quelle sera la sortie de ce programme ?\n```go\nch := make(chan int)\nclose(ch)\nval := <-ch\nfmt.Println(val)\n```",
-        "answer": "0",
-        "explanation": "1. [The Go Programming Language Specification \"Receive operator\"](https://go.dev/ref/spec#Receive_operator), extrait pertinent :\n> A receive operation on a closed channel can always proceed immediately, yielding the element type's zero value after any previously sent values have been received.\n2. [Go Playground share](https://go.dev/play/p/DjXq9wzJm5M), sortie :\n```text\n0\nProgram exited.\n```",
-        "hint": null,
-        "correctAnswer": [
-          "0"
-        ],
-        "options": [
-          "Deadlock",
-          "Panic",
-          "0",
-          "NaN"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a60d60c8e7230a3626af08e0",
-        "question": "Qu\u2019est-ce qui sera affich\u00e9 par ce code ?\n```go\nvar stocks map[string]float64 // stock -> price\nprice := stocks[\"MSFT\"]\nfmt.Printf(\"%f\\n\", price)\n```",
-        "answer": "0.000000",
-        "explanation": "[Go Playground share](https://go.dev/play/p/CjdHskV1xq1), sortie :\n```text\n0.000000\nProgram exited.\n```",
-        "hint": null,
-        "correctAnswer": [
-          "0.000000"
-        ],
-        "options": [
-          "0",
-          "0.000000",
-          "Le code va paniquer",
-          "NaN"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "de60f979dd7eb8c3408e286d",
-        "question": "Quelle est la mani\u00e8re courante d\u2019avoir plusieurs ex\u00e9cutables dans votre projet ?",
-        "answer": "Avoir un r\u00e9pertoire `cmd` et un sous-r\u00e9pertoire par ex\u00e9cutable.",
-        "explanation": "1. [stackoverflow](https://stackoverflow.com/questions/9985559/organizing-a-multiple-file-go-project/51942843#51942843)\n2. [medium](https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091)\n3. [medium](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2)",
-        "hint": null,
-        "correctAnswer": [
-          "Avoir un r\u00e9pertoire `cmd` et un sous-r\u00e9pertoire par ex\u00e9cutable."
-        ],
-        "options": [
-          "Avoir un r\u00e9pertoire `cmd` et un sous-r\u00e9pertoire par ex\u00e9cutable.",
-          "Commenter `main`.",
-          "Utiliser des build tags.",
-          "Avoir un r\u00e9pertoire `pkg` et un sous-r\u00e9pertoire par ex\u00e9cutable."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "040c9ef910dda61013e5f86c",
-        "question": "Comment compiler `main.go` en un ex\u00e9cutable qui fonctionnera sur OSX arm64 ?",
-        "answer": "D\u00e9finir GOOS sur **darwin** et GOARCH sur **arm64**.",
-        "explanation": "[documentation](https://pkg.go.dev/cmd/go#hdr-Build_constraints)",
-        "hint": null,
-        "correctAnswer": [
-          "D\u00e9finir GOOS sur **darwin** et GOARCH sur **arm64**."
-        ],
-        "options": [
-          "D\u00e9finir GOOS sur **arm64** et GOARCH sur **darwin**.",
-          "D\u00e9finir GOOS sur **osx** et GOARCH sur **arm64**.",
-          "D\u00e9finir GOOS sur **arm64** et GOARCH sur **osx**.",
-          "D\u00e9finir GOOS sur **darwin** et GOARCH sur **arm64**."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5bcdd286420442d11ceb3b2f",
-        "question": "Quelle est la syntaxe correcte pour d\u00e9marrer une goroutine qui va `print Hello Gopher!` ?",
-        "answer": "`go fmt.Println(\"Hello Gopher!\")`",
-        "explanation": "[Example of start a goroutine](https://go.dev/play/p/KGgnAWpZMrS)",
-        "hint": null,
-        "correctAnswer": [
-          "`go fmt.Println(\"Hello Gopher!\")`"
-        ],
-        "options": [
-          "`go(fmt.Println(\"Hello Gopher!\"))`",
-          "`go func() { fmt.Println(\"Hello Gopher!\") }`",
-          "`go fmt.Println(\"Hello Gopher!\")`",
-          "`Go fmt.Println(\"Hello Gopher!\")`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "88b58ff9320034d488f1ac03",
-        "question": "Si vous it\u00e9rez sur une map dans une boucle `for range`, dans quel ordre les paires cl\u00e9:valeur seront-elles acc\u00e9d\u00e9es ?",
-        "answer": "dans un ordre pseudo-al\u00e9atoire impr\u00e9visible",
-        "explanation": "[Reference](https://go.dev/ref/spec#:~:text=The%20iteration%20order%20over%20maps%20is%20not%20specified)",
-        "hint": null,
-        "correctAnswer": [
-          "dans un ordre pseudo-al\u00e9atoire impr\u00e9visible"
-        ],
-        "options": [
-          "dans un ordre pseudo-al\u00e9atoire impr\u00e9visible",
-          "dans l\u2019ordre inverse d\u2019insertion (dernier entr\u00e9, premier sorti)",
-          "tri\u00e9es par cl\u00e9 par ordre croissant",
-          "dans l\u2019ordre d\u2019insertion (premier entr\u00e9, premier sorti)"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8ac93fed5538c7ad25a00ce3",
-        "question": "Quelle est la mani\u00e8re idiomatique de personnaliser la repr\u00e9sentation d\u2019une struct personnalis\u00e9e dans une cha\u00eene format\u00e9e ?",
-        "answer": "Impl\u00e9menter une m\u00e9thode `String() string`",
-        "explanation": "[Reference](https://go.dev/doc/effective_go#printing)",
-        "hint": null,
-        "correctAnswer": [
-          "Impl\u00e9menter une m\u00e9thode `String() string`"
-        ],
-        "options": [
-          "Il n\u2019y a pas de personnalisation de la repr\u00e9sentation string d\u2019un type.",
-          "La construire en morceaux \u00e0 chaque fois via les champs individuels.",
-          "Impl\u00e9menter une m\u00e9thode `String() string`",
-          "Cr\u00e9er une fonction wrapper qui accepte votre type et retourne une cha\u00eene."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fc11ef4f4c0266be61c7b3bd",
-        "question": "Comment \u00e9viter une fuite de goroutine dans ce code ?\n```go\nfunc findUser(ctx context.Context, login string) (*User, error) {\n    ch := make(chan *User)\n    go func() {\n            ch <- findUserInDB(login)\n    }()\n    select {\n    case user := <-ch:\n            return user, nil\n    case <-ctx.Done():\n            return nil, fmt.Errorf(\"timeout\")\n    }\n}\n```",
-        "answer": "Rendre `ch` tamponn\u00e9 (buffered).",
-        "explanation": "[Reference](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)\nExtrait pertinent :\n> The simplest way to resolve this leak is to change the channel from an unbuffered channel to a buffered channel with a capacity of 1. Now in the timeout case, after the receiver has moved on, the Goroutine will complete its send by placing the \\*User value in the channel then it will return.",
-        "hint": null,
-        "correctAnswer": [
-          "Rendre `ch` tamponn\u00e9 (buffered)."
-        ],
-        "options": [
-          "Utiliser un `sync.WaitGroup`.",
-          "Rendre `ch` tamponn\u00e9 (buffered).",
-          "Ajouter un `default` au `select`.",
-          "Utiliser `runtime.SetFinalizer`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8b953f18b0f7ff2adbdb7f56",
-        "question": "Qu\u2019est-ce que ce code va afficher ?\n```go\nvar i int8 = 120\ni += 10\nfmt.Println(i)\n```",
-        "answer": "-126",
-        "explanation": "[Go Playground example](https://go.dev/play/p/T31_JuFioaC), sortie :\n```text\n-126\nProgram exited.\n```",
-        "hint": null,
-        "correctAnswer": [
-          "-126"
-        ],
-        "options": [
-          "-126",
-          "0",
-          "NaN",
-          "130"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4b76015c1366a838ccf7711e",
-        "question": "\u00c9tant donn\u00e9 la d\u00e9finition de `worker` ci-dessous, quelle est la bonne syntaxe pour d\u00e9marrer une goroutine qui appellera `worker` et enverra le r\u00e9sultat dans un canal nomm\u00e9 `ch` ?\n```go\nfunc worker(m Message) Result\n```",
-        "answer": "&shy;",
-        "explanation": "```go\ngo func() {\nr := worker(m)\nch <- r\n}\n```\n```go\ngo func() {\nr := worker(m)\nr -> ch\n} ()\n```\n```go\ngo func() {\nr := worker(m)\nch <- r\n} ()\n```\n```go\ngo ch <- worker(m)\n```\n[Go Playground example](https://go.dev/play/p/96j7tuQKF50)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f4b6e4e12626330e590e470a",
-        "question": "Dans ce code, quels noms sont export\u00e9s ?\n```go\npackage os\ntype FilePermission int\ntype userID int\n```",
-        "answer": "FilePermission",
-        "explanation": "[Reference 1](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)\n[Reference 2](https://go.dev/tour/basics/3)",
-        "hint": null,
-        "correctAnswer": [
-          "FilePermission"
-        ],
-        "options": [
-          "FilePermission",
-          "aucune de ces r\u00e9ponses",
-          "FilePermission et userID",
-          "userID"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "12149f37093cf8007a4db4de",
-        "question": "Laquelle des affirmations suivantes est correcte \u00e0 propos des structures en Go ?",
-        "answer": "Toutes les r\u00e9ponses ci-dessus",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Toutes les r\u00e9ponses ci-dessus"
-        ],
-        "options": [
-          "Une structure est un autre type de donn\u00e9es d\u00e9fini par l\u2019utilisateur en Go, qui vous permet de combiner des \u00e9l\u00e9ments de donn\u00e9es de diff\u00e9rents types.",
-          "Les structures sont utilis\u00e9es pour repr\u00e9senter un enregistrement.",
-          "Pour d\u00e9finir une structure, vous devez utiliser les instructions `type` et `struct`.",
-          "Toutes les r\u00e9ponses ci-dessus"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8e47c9931e35e9ca3cae3a26",
-        "question": "Que fait la commande int\u00e9gr\u00e9e `generate` du compilateur Go ?",
-        "answer": "Elle scanne le code source du projet \u00e0 la recherche de commentaires `//go:generate` et ex\u00e9cute pour chacun la commande terminal sp\u00e9cifi\u00e9e.",
-        "explanation": "[Generate Go files by processing source](https://pkg.go.dev/cmd/go#hdr-Generate_Go_files_by_processing_source)",
-        "hint": null,
-        "correctAnswer": [
-          "Elle scanne le code source du projet \u00e0 la recherche de commentaires `//go:generate` et ex\u00e9cute pour chacun la commande terminal sp\u00e9cifi\u00e9e."
-        ],
-        "options": [
-          "Elle fournit les sous-commandes `sql`, `json`, `yaml`, et les options `--schema` et `--objects` pour g\u00e9n\u00e9rer le code appropri\u00e9.",
-          "Elle recherche les fichiers dont le nom se termine par `_generate.go`, puis compile et ex\u00e9cute chacun individuellement.",
-          "Elle scanne le code source du projet \u00e0 la recherche de commentaires `//go:generate` et ex\u00e9cute pour chacun la commande terminal sp\u00e9cifi\u00e9e.",
-          "Elle dispose des sous-commandes `mocks` et `tests` pour g\u00e9n\u00e9rer les fichiers `.go` correspondants."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d752c47a96afd73e1e4d0872",
-        "question": "En utilisant le paquet `time`, comment obtenir l\u2019heure dans 90 minutes ?",
-        "answer": "`time.Now().Add(90 * time.Minute)`",
-        "explanation": "[func (Time) Add example](https://pkg.go.dev/time#example-Time.Add)",
-        "hint": null,
-        "correctAnswer": [
-          "`time.Now().Add(90 * time.Minute)`"
-        ],
-        "options": [
-          "`time.Now().Add(90)`",
-          "`time.Now() + (90 * time.Minute)`",
-          "`time.Now() + 90`",
-          "`time.Now().Add(90 * time.Minute)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "376c57155fa548c599192229",
-        "question": "Un programme utilise un canal pour imprimer cinq entiers dans une goroutine tout en alimentant le canal depuis la routine principale, mais cela ne fonctionne pas tel quel. Que faut-il changer pour le faire fonctionner ?",
-        "answer": "Ajouter un second param\u00e8tre \u00e0 `make(chan, int)`, par ex. `make(chan int, 5)`.",
-        "explanation": "[Reference](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)\nExtrait pertinent :\n> The simplest way to resolve this leak is to change the channel from an unbuffered channel to a buffered channel with a capacity of 1. Now in the timeout case, after the receiver has moved on, the Goroutine will complete its send by placing the \\*User value in the channel then it will return.",
-        "hint": null,
-        "correctAnswer": [
-          "Ajouter un second param\u00e8tre \u00e0 `make(chan, int)`, par ex. `make(chan int, 5)`."
-        ],
-        "options": [
-          "Ajouter un `close(ch)` imm\u00e9diatement apr\u00e8s `wg.Wait()`.",
-          "Ajouter un second param\u00e8tre \u00e0 `make(chan, int)`, par ex. `make(chan int, 5)`.",
-          "Supprimer l\u2019utilisation inutile de `WaitGroup`, par ex. toutes les lignes commen\u00e7ant par `wg`.",
-          "D\u00e9placer la goroutine de 7 lignes imm\u00e9diatement avant `wg.Wait()`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "06d24f81bdc6ed82e75e53fd",
-        "question": "Apr\u00e8s avoir import\u00e9 `encoding/json`, comment acc\u00e9deriez-vous \u00e0 la fonction `Marshal` ?",
-        "answer": "`json.Marshal`",
-        "explanation": "[encoding/json#Marshal example](https://pkg.go.dev/encoding/json#example-Marshal)",
-        "hint": null,
-        "correctAnswer": [
-          "`json.Marshal`"
-        ],
-        "options": [
-          "`encoding.json.Marshal`",
-          "`encoding/json.Marshal`",
-          "`Marshal`",
-          "`json.Marshal`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "daedb46d0efbb9da19e2e69b",
-        "question": "Quels sont les deux segments de code manquants pour compl\u00e9ter l\u2019utilisation de `context.Context` afin d\u2019impl\u00e9menter un timeout de trois secondes pour ce client HTTP effectuant une requ\u00eate GET ?\n```go\npackage main\nimport (\n        \"context\"\n        \"fmt\"\n        \"net/http\"\n)\nfunc main() {\n        var cancel context.CancelFunc\n        ctx := context.Background()\n        // #1: <=== What should go here?\n        req, _ := http.NewRequest(http.MethodGet,\n                \"https://linkedin.com\",\n                nil)\n        // #2: <=== What should go here?\n        client := &http.Client{}\n        res, err := client.Do(req)\n        if err != nil {\n                fmt.Println(\"Request failed:\", err)\n                return\n        }\n        fmt.Println(\"Response received, status code:\",\n                res.StatusCode)\n}\n```",
-        "answer": "&shy;",
-        "explanation": "```go\nctx.SetTimeout(3*time.Second)\nreq.AttachContext(ctx)\n```\n```go\nctx, cancel = context.WithTimeout(ctx, 3*time.Second); defer cancel()\nreq = req.WithContext(ctx)\n```\n```go\nctx, cancel = context.WithTimeout(ctx, 3*time.Second); defer cancel() #2: req.AttachContext(ctx)\n```\n```go\nctx.SetTimeout(3*time.Second)\nreq = req.WithContext(ctx)\n```\n1. [context#WithTimeout](https://pkg.go.dev/context#WithTimeout)\n2. [net/http#Request.WithContext](https://pkg.go.dev/net/http#Request.WithContext)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "706aed0c5c8fef07fc87ee9d",
-        "question": "Si vous avez une struct nomm\u00e9e `Client` d\u00e9finie dans le m\u00eame fichier `.go` que l\u2019instruction, comment exporter une variable avec une valeur par d\u00e9faut pour qu\u2019elle soit accessible par d\u2019autres paquets ?",
-        "answer": "&shy;",
-        "explanation": "```go\nlet Default := new Client()\n```\n```go\npublic default = &Client()\n```\n```go\nvar Default = &Client{}\n```\n```go\nexport default := new Client{}\n```",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f0b19450079d771a432c4e51",
-        "question": "Ce programme affiche `{Master Chief Spartan Protagonist Halo}`. Comment faire pour qu\u2019il affiche `Master Chief - a Spartan - is the Protagonist of Halo` \u00e0 la place ?\n```go\npackage main\nimport \"fmt\"\ntype Character struct{\n        Name  string\n        Class string\n        Role  string\n        Game  string\n}\nfunc main() {\n        mc := Character{\n                Name: \"Master Chief\",\n                Class: \"Spartan\",\n                Role: \"Protagonist\",\n                Game: \"Halo\",\n        }\n        fmt.Println(mc)\n}\n```",
-        "answer": "C",
-        "explanation": "```go\n// Remplacez\n// fmt.Println(mc)\n// par :\nfmt.Printf(\"(?P<Name>) - a (?P<Class>) - is the (?P<Role>) of (?P<Game>)\", mc)\n```\n```go\n// Remplacez\n// fmt.Println(mc)\n// par :\nfmt.Println(mc, func(c Character) string {\nreturn c. Name + \" - a \" + c.Class + \" - is the \" + c.Role + \" of \" + c.Game\n})\n```\n```go\n// ajoutez ceci au package `main`\nfunc (c Character) String() string {\nreturn fmt.Sprintf(\"%s - a %s - is the %s of %s\", c.Name, c.Class, c.Role,c.Game)\n}\n```\n```go\n// ajoutez ceci au package `main`\nfunc (c Character) OnPrint() {\nfmt.Println(\"{{c.Name}} - a {{c.Class}} - is the {{c.Role}} of {{c.Game}}\")\n}\n```\n1. [fmt#Stringer](https://pkg.go.dev/fmt#Stringer)",
-        "hint": null,
-        "correctAnswer": [
-          "C"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8dd6a11b44735e020c091a80",
-        "question": "Comment impl\u00e9menter une m\u00e9thode `Append()` fonctionnelle pour `Clients` ?\n```go\npackage main\ntype Client struct {\n  Name string\n}\ntype Clients struct {\n  clients []*Client\n}\nfunc main() {\n  c:= &Clients{clients.make([]*Client,0)}\n  c.Append(&Client{Name: \"LinkedIn API})\n}\n```",
-        "answer": "A",
-        "explanation": "```go\nfunc (cc *Clients) Append(c *Client) {\ncc.clients = append(cc.clients, c)\n}\n```\n```go\nfunc (cc *Clients) Append(c *Client) {\ncc.append(c)\n}\n```\n```go\nfunc (cc Clients) Append(c Client) {\ncc.clients = append(cc.clients, c)\n}\n```\n```go\nfunc (cc *Clients) Append(c Client) {\ncc.clients.append(c)\n}\n```",
-        "hint": null,
-        "correctAnswer": [
-          "A"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f251d0fbba1b6b4f14544e20",
-        "question": "Comment r\u00e9cup\u00e9rer d\u2019un `panic()` d\u00e9clench\u00e9 par une fonction appel\u00e9e sans laisser votre programme \u00e9chouer, en supposant que votre r\u00e9ponse s\u2019ex\u00e9cute dans la m\u00eame port\u00e9e o\u00f9 l\u2019appel de fonction provoquera le panic ?",
-        "answer": "Utiliser `defer func { ... }()` avant l\u2019appel probl\u00e9matique puis g\u00e9rer le panic dans la fonction anonyme.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Utiliser `defer func { ... }()` avant l\u2019appel probl\u00e9matique puis g\u00e9rer le panic dans la fonction anonyme."
-        ],
-        "options": [
-          "Enveloppant l\u2019appel dans une fonction anonyme avec un type de retour `panic`, en n\u2019oubliant pas de l\u2019invoquer avec `()` puis en introspectant l\u2019instance retourn\u00e9e pour g\u00e9rer l\u2019erreur.",
-          "Utiliser `try{ ... }` pour envelopper le code et g\u00e9rer l\u2019erreur dans `catch{ ... }`.",
-          "Utiliser `defer func { ... }()` avant l\u2019appel probl\u00e9matique puis g\u00e9rer le panic dans la fonction anonyme.",
-          "Pr\u00e9fixer l\u2019appel de fonction avec `@` pour forcer le retour d\u2019un `error` puis le g\u00e9rer comme d\u2019habitude."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "06517f7743dcecbab1e77c2b",
-        "question": "Qu\u2019est-ce que ce code va afficher ?\n```go\nvar n int\nfmt.Println (n)\n```",
-        "answer": "0",
-        "explanation": "> En Go, lorsqu\u2019une variable est d\u00e9clar\u00e9e sans initialisation explicite, elle re\u00e7oit sa [valeur z\u00e9ro](https://go.dev/tour/basics/12) selon son type. Pour les entiers comme `n`, la valeur z\u00e9ro est 0.",
-        "hint": null,
-        "correctAnswer": [
-          "0"
-        ],
-        "options": [
-          "0",
-          "nil",
-          "une valeur al\u00e9atoire",
-          "1"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d17615abb579577cd12e6aa2",
-        "question": "Lors de la cr\u00e9ation d\u2019une cha\u00eene format\u00e9e, quel verbe devez-vous utiliser pour appeler la m\u00e9thode `String() string` d\u2019un type personnalis\u00e9 ?",
-        "answer": "%s",
-        "explanation": "> En Go, le verbe %s est utilis\u00e9 pour formater une cha\u00eene. Lorsqu\u2019il est utilis\u00e9 avec un type personnalis\u00e9 ayant une m\u00e9thode `String()`, celle-ci est appel\u00e9e automatiquement et sa valeur de retour est utilis\u00e9e dans la cha\u00eene format\u00e9e.",
-        "hint": null,
-        "correctAnswer": [
-          "%s"
-        ],
-        "options": [
-          "%s",
-          "%b",
-          "%v",
-          "%string"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "711b4347fb81b9f9ebae4fb6",
-        "question": "Lequel n\u2019est pas une valeur valide pour `layout` lors de l\u2019appel de `time.Now().Format(layout)` ?",
-        "answer": "\"1970-01-01\"",
-        "explanation": "[time#Time.Format](https://pkg.go.dev/time#Time.Format)\nSelon la documentation, la valeur 1 et 01 repr\u00e9sentent le mois courant.\n```text\neach layout string is a representation of the time stamp,\nJan 2 15:04:05 2006 MST\nAn easy way to remember this value is that it holds, when presented in this order, the values (lined up with the elements above):\n1 2  3  4  5    6  -7\n```",
-        "hint": null,
-        "correctAnswer": [
-          "\"1970-01-01\""
-        ],
-        "options": [
-          "time.REC3339",
-          "\"1970-01-01\"",
-          "\"Jan 2nd 2006\"",
-          "time.Kitchen"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8386ff07b794e1e54643097d",
-        "question": "Comment signaler au compilateur Go que la struct `Namespace` doit impl\u00e9menter l\u2019interface `JSONConverter` ? Cette question suppose que la r\u00e9ponse sera incluse dans le m\u00eame package o\u00f9 `Namespace` est d\u00e9clar\u00e9e.",
-        "answer": "`var _ JSONConverter = (*Namespace)(nil)`",
-        "explanation": "type Namespace struct {\nimplements JSONConverter\n}\n```\n````\n`````\n``````\n```````\n````````\n`````````\n``````````\n```````````\n````````````\n`````````````\n``````````````\ntype Namespace struct {\nJSONConverter\n}\n```\n````\n`````\n``````\n```````\n````````\n`````````\n``````````\n```````````\n````````````\n`````````````\n``````````````\n> Cette syntaxe cr\u00e9e une variable `_` de type `JSONConverter` et lui assigne la valeur `(*Namespace)(nil)`. Cela v\u00e9rifie que `Namespace` satisfait l\u2019interface `JSONConverter` en s\u2019assurant qu\u2019elle peut \u00eatre affect\u00e9e \u00e0 une variable de type `JSONConverter`.",
-        "hint": null,
-        "correctAnswer": [
-          "`var _ JSONConverter = (*Namespace)(nil)`"
-        ],
-        "options": [
-          "`var _ JSONConverter = nil.(*Namespace)`",
-          "`var _ JSONConverter = (*Namespace)(nil)`",
-          "``````````````go",
-          "``````````````go"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "83724752ee198ad430951bd3",
-        "question": "Quelle affirmation \u00e0 propos du typage et des interfaces est fausse ?",
-        "answer": "Une struct doit d\u00e9clarer explicitement via le mot-cl\u00e9 `implements` que ses instances peuvent \u00eatre utilis\u00e9es partout o\u00f9 une variable, un param\u00e8tre et/ou une valeur de retour est typ\u00e9e pour l\u2019interface d\u00e9clar\u00e9e.",
-        "explanation": "> En Go, un type satisfait automatiquement une interface s\u2019il impl\u00e9mente toutes ses m\u00e9thodes. Il n\u2019y a pas besoin de d\u00e9clarer explicitement qu\u2019une struct impl\u00e9mente une interface via un mot-cl\u00e9 sp\u00e9cifique.",
-        "hint": null,
-        "correctAnswer": [
-          "Une struct doit d\u00e9clarer explicitement via le mot-cl\u00e9 `implements` que ses instances peuvent \u00eatre utilis\u00e9es partout o\u00f9 une variable, un param\u00e8tre et/ou une valeur de retour est typ\u00e9e pour l\u2019interface d\u00e9clar\u00e9e."
-        ],
-        "options": [
-          "Une signature de m\u00e9thode est la combinaison d\u2019un nom de m\u00e9thode et des types de ses param\u00e8tres et valeurs de retour d\u00e9clar\u00e9s.",
-          "Une struct doit d\u00e9clarer explicitement via le mot-cl\u00e9 `implements` que ses instances peuvent \u00eatre utilis\u00e9es partout o\u00f9 une variable, un param\u00e8tre et/ou une valeur de retour est typ\u00e9e pour l\u2019interface d\u00e9clar\u00e9e.",
-          "Une interface d\u00e9clare une liste de m\u00e9thodes et leurs signatures qu\u2019un type doit impl\u00e9menter pour \u00eatre compatible avec les valeurs typ\u00e9es pour cette interface.",
-          "Les variables, param\u00e8tres et valeurs de retour doivent \u00eatre \u00ab typ\u00e9s \u00bb comme l\u2019un de 1) un type int\u00e9gr\u00e9, 2) un alias de type, 3) un type d\u00e9riv\u00e9, 4) un type composite, ou 5) une interface."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "768bda5a066ef3f9655f9fc4",
-        "question": "Comment compl\u00e9ter ce programme pour g\u00e9n\u00e9rer la sortie indiqu\u00e9e, en supposant la table SQL ?\n```go\n===[Output]================\n1: &{GameId:1 Title:Wolfenstein YearReleased:1992}\n2: &{GameId:2 Title:Doom YearReleased:1993}\n3: &{GameId:3 Title:Quake YearReleased:1996}\n===[main.go]================\npackage main\nimport (\n        \"database/sql\"\n        \"fmt\"\n        _ \"github.com/go-sql-driver/mysql\"\n        \"log\"\n)\ntype Game struct {\n        GameId       int\n        Title        string\n        YearReleased int\n}\nfunc main() {\n        conn, err := sql.Open(\"mysql\",\n                \"john_carmack:agiftw!@tcp(localhost:3306)/idsoftware\")\n        if err != nil {\n                panic(err)\n        }\n        defer func() { _ = conn.Close() }()\n        results, err := conn.Query(\"SELECT game_id,title,year_released FROM games;\")\n        if err != nil {\n                panic(err)\n        }\n        defer func() { _ = results.Close() }()\n        // #1 <=== What goes here?\n        for results.Next() {\n                var g Game\n                // #2 <=== What goes here?\n                if err != nil {\n                        panic(err)\n                }\n                // #3 <=== What goes here?\n        }\n        for i, g := range games {\n                fmt.Printf(\"%d: %+v\\n\", i, g)\n        }\n}\n```",
-        "answer": "&shy;",
-        "explanation": "```go\n#1: games := make([]*Game, results.RowsAffected())\n#2: g, err = results.Fetch()\n#3: games[results.Index()] = &g\n```\n```go\n#1: games := []Game{}\n#2: g, err = results.Fetch()\n#3: games = append(games,g)\n```\n```go\n#1: games := map[int]Game{}\n#2: err = results.Scan(&g)\n#3: games[g.GameId] = g\n```\n```go\n#1: games := make(map[int]*Game, 0)\n#2: err = results.Scan(&g.GameId, &g.Title, &g.YearReleased)\n#3: games[g.GameId] = &g\n```",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "37660098fa7569cfc64c52c1",
-        "question": "Compl\u00e9tez les blancs\n1.  Les fichiers de test en Go doivent **\\_**.\n2.  Les tests individuels sont identifi\u00e9s par **\\_**.\n3.  Vous pouvez ex\u00e9cuter des sous-tests en **\\_**.\n4.  Vous journalisez l\u2019erreur et marquez le test comme \u00e9chou\u00e9 en **\\_**.",
-        "answer": "se terminer par `_test.go`<br/>noms de fonctions correspondant \u00e0 `^Test[A-Z]`<br/>appeler `t.Run()`<br/>appeler `t.Errorf()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "se terminer par `_test.go`<br/>noms de fonctions correspondant \u00e0 `^Test[A-Z]`<br/>appeler `t.Run()`<br/>appeler `t.Errorf()`"
-        ],
-        "options": [
-          "\u00eatre stock\u00e9s dans un sous-r\u00e9pertoire `/test/` de ce paquet<br/>fonctions acceptant un param\u00e8tre `testing.Tester`<br/>\u00e9crire des fonctions dont le nom matche `^Subtest`<br/>appeler `testing.AssertionFailed`",
-          "se terminer par `_test.go`<br/>noms de fonctions correspondant \u00e0 `^Test[A-Z]`<br/>appeler `t.Run()`<br/>appeler `t.Errorf()`",
-          "commencer par `test_`<br/>fonctions correspondant \u00e0 `[a-z]Test$`<br/>appeler `testing.Subtest()`<br/>laisser `testing.Assert()` \u00e9chouer son assertion",
-          "\u00eatre stock\u00e9s dans le sous-dossier `/test/` \u00e0 la racine du projet<br/>fonctions acceptant un param\u00e8tre `testing.Test`<br/>passer des closures \u00e0 `testing.AddSubtest()`<br/>retourner une `error` depuis la fonction"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d4be64e7343deca9eca6ecfb",
-        "question": "Pour quel type `rune` est-il un alias ?",
-        "answer": "int32",
-        "explanation": "1. [Strings, bytes, runes and characters in Go](https://go.dev/blog/strings)\nExtrait pertinent :\n> The Go language defines the word rune as an alias for the type int32, so programs can be clear when an integer value represents a code point.",
-        "hint": null,
-        "correctAnswer": [
-          "int32"
-        ],
-        "options": [
-          "char",
-          "byte",
-          "int32",
-          "string"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4efb2866f45f90883279d2c4",
-        "question": "Quand pouvez-vous utiliser la syntaxe `:=` pour affecter \u00e0 plusieurs variables ? Par exemple :\n```go\nx, err := myFunc()\n```",
-        "answer": "si au moins l\u2019une d\u2019elles n\u2019a pas \u00e9t\u00e9 d\u00e9clar\u00e9e dans ce bloc lexical",
-        "explanation": "1. [Short variable declarations](https://go.dev/ref/spec#Short_variable_declarations)",
-        "hint": null,
-        "correctAnswer": [
-          "si au moins l\u2019une d\u2019elles n\u2019a pas \u00e9t\u00e9 d\u00e9clar\u00e9e dans ce bloc lexical"
-        ],
-        "options": [
-          "si au moins l\u2019une d\u2019elles n\u2019a pas \u00e9t\u00e9 d\u00e9clar\u00e9e dans ce bloc lexical",
-          "tout le temps, cela \u00e9crasera les variables existantes",
-          "si aucune variable de ces noms n\u2019est accessible",
-          "si aucune de ces variables n\u2019existe dans ce bloc lexical"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "639e9ec922206b71374eaeea",
-        "question": "Comment afficher la sortie du profileur dans `cpu.pprof` dans le navigateur ?",
-        "answer": "`go tool pprof -http=:8080 cpu.pprof`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`go tool pprof -http=:8080 cpu.pprof`"
-        ],
-        "options": [
-          "`go pprof -to SVG cpu.prof`",
-          "`go tool pprof -http=:8080 cpu.pprof`",
-          "`go tool pprof cpu.pprof`",
-          "`go tool trace cpu.pprof`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4d45455e302a47d13a988f57",
-        "question": "Quand une variable de type `interface{}` est-elle \u00e9valu\u00e9e \u00e0 `nil` ?",
-        "answer": "Lorsqu\u2019on lui a assign\u00e9 un type dynamique dont la valeur est `nil`.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Lorsqu\u2019on lui a assign\u00e9 un type dynamique dont la valeur est `nil`."
-        ],
-        "options": [
-          "Lorsqu\u2019on lui a assign\u00e9 un type dynamique dont la valeur est `nil`.",
-          "Lorsqu\u2019elle a \u00e9t\u00e9 explicitement d\u00e9finie \u00e0 `nil`.",
-          "Lorsqu\u2019aucun type dynamique ne lui a \u00e9t\u00e9 assign\u00e9.",
-          "Elle ne peut pas \u00eatre \u00e9valu\u00e9e \u00e0 `nil`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "012110e0263096ceda7f59d0",
-        "question": "Quelle valeur une variable `string` contient-elle si elle a \u00e9t\u00e9 allou\u00e9e mais non affect\u00e9e ?",
-        "answer": "\"\"",
-        "explanation": "> Si une variable string a \u00e9t\u00e9 allou\u00e9e mais non affect\u00e9e, sa valeur par d\u00e9faut est une cha\u00eene vide \"\". En Go, les variables non initialis\u00e9es re\u00e7oivent la valeur z\u00e9ro de leur type, pour les cha\u00eenes c\u2019est \"\".",
-        "hint": null,
-        "correctAnswer": [
-          "\"\""
-        ],
-        "options": [
-          "nil",
-          "undefined",
-          "null",
-          "\"\""
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e250bf42bc7afa26c68d0a3d",
-        "question": "Quelle fonction int\u00e9gr\u00e9e est utilis\u00e9e pour arr\u00eater la poursuite d\u2019un programme ?",
-        "answer": "`panic`",
-        "explanation": "> La fonction int\u00e9gr\u00e9e utilis\u00e9e pour arr\u00eater un programme est `panic()`. Lorsqu\u2019elle est appel\u00e9e, elle d\u00e9clenche une panique qui interrompt le flot normal du programme. Si elle n\u2019est pas r\u00e9cup\u00e9r\u00e9e, le programme se termine.",
-        "hint": null,
-        "correctAnswer": [
-          "`panic`"
-        ],
-        "options": [
-          "`panic`",
-          "Il n\u2019existe pas une telle fonction.",
-          "`raiseException`",
-          "`exit`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6fbb40545db38dddfda4f2f9",
-        "question": "Quelle sera la sortie ?\n```go\na,b := 1, 2\nb,c:= 3, 4\nfmt.Println(a, b, c)\n```",
-        "answer": "1 3 4; &&; Une fonction sans nom.; `func()`",
-        "explanation": "[Go Playground Example](https://go.dev/play/p/qUI50GNGWTq)\n### Q71. Quel est l\u2019op\u00e9rateur pour une condition ET logique ?\n### Q72. Qu\u2019est-ce qu\u2019une fonction anonyme en Go ?\n### Q73. Quel mot-cl\u00e9 est utilis\u00e9 pour d\u00e9clarer une fonction anonyme en Go ?",
-        "hint": null,
-        "correctAnswer": [
-          "1 3 4",
-          "&&",
-          "Une fonction sans nom.",
-          "`func()`"
-        ],
-        "options": [
-          "1 3 4",
-          "1 2 3",
-          "1 2 4",
-          "Cela ne compilera pas.",
-          "-",
-          "and",
-          "&&",
-          "||",
-          "Une fonction sans type de retour.",
-          "Une fonction sans param\u00e8tres.",
-          "Une fonction sans nom.",
-          "Une fonction d\u00e9clar\u00e9e \u00e0 l\u2019int\u00e9rieur d\u2019une autre fonction.",
-          "`func`",
-          "`lambda`",
-          "`func()`",
-          "`anonymous`"
-        ],
-        "nature": "ChooseMany",
-        "attachments": []
-      },
-      {
-        "id": "7d91b15bc4f805fab8988e1a",
-        "question": "Quel est l\u2019avantage principal d\u2019utiliser des fonctions anonymes en Go ?",
-        "answer": "Elles peuvent \u00eatre d\u00e9finies en ligne l\u00e0 o\u00f9 elles sont utilis\u00e9es.",
-        "explanation": "Explication : elles peuvent \u00eatre d\u00e9finies en ligne l\u00e0 o\u00f9 elles sont utilis\u00e9es, offrant plus de flexibilit\u00e9 d\u2019organisation du code.",
-        "hint": null,
-        "correctAnswer": [
-          "Elles peuvent \u00eatre d\u00e9finies en ligne l\u00e0 o\u00f9 elles sont utilis\u00e9es."
-        ],
-        "options": [
-          "Elles ont toujours de meilleures performances que les fonctions nomm\u00e9es.",
-          "Elles peuvent avoir plusieurs valeurs de retour.",
-          "Elles peuvent \u00eatre d\u00e9finies en ligne l\u00e0 o\u00f9 elles sont utilis\u00e9es.",
-          "Elles ont une syntaxe plus courte que les fonctions nomm\u00e9es."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "770ebf8173f403cabe34d7ba",
-        "question": "Quelle est la syntaxe pour appeler imm\u00e9diatement une fonction anonyme apr\u00e8s sa d\u00e9claration en Go ?",
-        "answer": "`func(){}()`",
-        "explanation": "[reference](https://stackoverflow.com/questions/6719089/javascript-anonymous-function-immediate-invocation-execution-expression-vs-dec)",
-        "hint": null,
-        "correctAnswer": [
-          "`func(){}()`"
-        ],
-        "options": [
-          "`functionName(){}`",
-          "`call functionName(){}`",
-          "`func(){}()`",
-          "`execute func(){}`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4fb5012271440a5b7e87e0a3",
-        "question": "Pour quels types les d\u00e9veloppeurs Go peuvent-ils d\u00e9finir des m\u00e9thodes ?",
-        "answer": "tous les types nomm\u00e9s non int\u00e9gr\u00e9s \u00e0 Go, tels que `type Example int` mais pas `int`, `type Example struct{...}` mais pas `struct`, etc.",
-        "explanation": "> Les m\u00e9thodes peuvent \u00eatre d\u00e9finies pour tout type nomm\u00e9 qui n\u2019est pas un type int\u00e9gr\u00e9. Lorsqu\u2019on cr\u00e9e un nouveau type via une d\u00e9claration `type`, il devient un type nomm\u00e9, et on peut d\u00e9finir des m\u00e9thodes sp\u00e9cifiques \u00e0 ce type. Les m\u00e9thodes ne peuvent pas \u00eatre attach\u00e9es directement aux types int\u00e9gr\u00e9s comme `int`, `string`, etc. [reference](https://go.dev/ref/spec#Method_declarations)",
-        "hint": null,
-        "correctAnswer": [
-          "tous les types nomm\u00e9s non int\u00e9gr\u00e9s \u00e0 Go, tels que `type Example int` mais pas `int`, `type Example struct{...}` mais pas `struct`, etc."
-        ],
-        "options": [
-          "tous les types nomm\u00e9s non int\u00e9gr\u00e9s \u00e0 Go, tels que `type Example int` mais pas `int`, `type Example struct{...}` mais pas `struct`, etc.",
-          "uniquement les types nomm\u00e9s `struct`, `map` et `slice`, tels que `type Example struct{\u2026}`",
-          "uniquement les types nomm\u00e9s `struct`, tels que `type Example struct{...}`",
-          "tous les types"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
+    "slug": "go-langage-de-programmation",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
+      {
+        "id": "89aa0c746478fca35b3d90a0",
+        "language": "fr",
+        "title": "Go (langage de programmation)",
+        "description": "Seeded from go/go-quiz-fr.md",
+        "questions": [
+          {
+            "id": "4aecdba06493dffd5314daae",
+            "question": "De quoi avez-vous besoin pour que deux fonctions soient du m\u00eame type ?",
+            "answer": "Elles doivent avoir les m\u00eames signatures, y compris les types de param\u00e8tres et les types de retour.",
+            "explanation": "[User defined function types in Go (Golang)](https://golangbyexample.com/user-defined-function-type-go/)",
+            "hint": null,
+            "correctAnswer": [
+              "Elles doivent avoir les m\u00eames signatures, y compris les types de param\u00e8tres et les types de retour."
+            ],
+            "options": [
+              "Elles doivent avoir les m\u00eames signatures, y compris les types de param\u00e8tres et les types de retour.",
+              "Elles doivent avoir les m\u00eames types de param\u00e8tres mais peuvent retourner des types diff\u00e9rents.",
+              "Toutes les fonctions doivent \u00eatre du m\u00eame type.",
+              "Les fonctions ne doivent pas \u00eatre de premier ordre."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "a9a057ef04fd26d04a78485c",
+            "question": "Que retourne la fonction `len()` si on lui passe une cha\u00eene encod\u00e9e en UTF-8 ?",
+            "answer": "le nombre d\u2019octets",
+            "explanation": "[Length of string in Go (Golang)](https://golangbyexample.com/length-of-string-golang/).",
+            "hint": null,
+            "correctAnswer": [
+              "le nombre d\u2019octets"
+            ],
+            "options": [
+              "le nombre de caract\u00e8res",
+              "le nombre d\u2019octets",
+              "Elle n\u2019accepte pas les types string.",
+              "le nombre de points de code"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "e4bfe5b19ab65311599c85f8",
+            "question": "Lequel n\u2019est pas un construit de boucle valide en Go ?",
+            "answer": "&shy;",
+            "explanation": "```go\ndo { ... } while i < 5\n```\n```go\nfor _,c := range \"hello\" { ... }\n```\n```go\nfor i := 1; i < 5; i++ { ... }\n```\n```go\nfor i < 5 { ... }\n```\n**Explication :** Go ne poss\u00e8de que des boucles `for`.",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "c9d3d56e787217ce03a2d45d",
+            "question": "Comment ajouterez-vous le nombre 3 \u00e0 la fin (\u00e0 droite) ?\n```go\nvalues := []int{1, 1, 2}\n```",
+            "answer": "&shy;",
+            "explanation": "```go\nvalues.append(3)\n```\n```go\nvalues.insert(3, 3)\n```\n```go\nappend(values, 3)\n```\n```go\nvalues = append(values, 3)\n```\n**Explication :** les slices en Go sont immuables, donc appeler `append` ne modifie pas la slice en place.",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "482f69c15877928f343235a2",
+            "question": "Quelle est la valeur de `Read` ?\n```go\nconst (\n  Write = iota\n  Read\n  Execute\n)\n```",
+            "answer": "1",
+            "explanation": "[IOTA in Go (Golang)](https://golangbyexample.com/iota-in-golang/)",
+            "hint": null,
+            "correctAnswer": [
+              "1"
+            ],
+            "options": [
+              "0",
+              "1",
+              "2",
+              "une valeur al\u00e9atoire"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "20392462d24e38204c2f61a7",
+            "question": "Quelle est la seule instruction `import` valide en Go ?",
+            "answer": "&shy;",
+            "explanation": "```go\nimport \"github/gin-gonic/gin\"\n```\n```go\nimport \"https://github.com/gin-gonic/gin\"\n```\n```go\nimport \"../template\"\n```\n```go\nimport \"github.com/gin-gonic/gin\"\n```\n[Import in GoLang](https://golangdocs.com/import-in-golang)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "14b3e686cdb7c6e81c3b38ec",
+            "question": "Que se passerait-il si vous tentiez de compiler et d\u2019ex\u00e9cuter ce programme Go ?\n```go\npackage main\nvar GlobalFlag string\nfunc main() {\n  print(\"[\"+GlobalFlag+\"]\")\n}\n```",
+            "answer": "Il compilerait et afficherait `[]`.",
+            "explanation": "1. Les [variables](https://golangbyexample.com/variables-in-golang-complete-guide/) en Go ont des valeurs initiales. Pour `string`, c\u2019est la cha\u00eene vide.\n2. [Go Playground](https://play.golang.org/p/TaRIzuD-nxC)",
+            "hint": null,
+            "correctAnswer": [
+              "Il compilerait et afficherait `[]`."
+            ],
+            "options": [
+              "Il ne compilerait pas car `GlobalFlag` n\u2019a jamais \u00e9t\u00e9 initialis\u00e9.",
+              "Il compilerait et afficherait `[]`.",
+              "Il compilerait et n\u2019afficherait rien car `\"[\" +nil+\"]\"` est aussi `nil`.",
+              "Il compilerait mais panique ensuite car `GlobalFlag` n\u2019a jamais \u00e9t\u00e9 initialis\u00e9."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "ccab19e29f28c2bd548529a7",
+            "question": "O\u00f9 la variable `myVar` est-elle accessible si elle est d\u00e9clar\u00e9e en dehors de toute fonction dans un fichier du paquet `myPackage` situ\u00e9 dans le module `myModule` ?",
+            "answer": "Elle est accessible partout dans `myPackage`, pas dans le reste de `myModule`.",
+            "explanation": "**Explication :** pour rendre la variable disponible en dehors de `myPackage`, changez son nom en `MyVar`.\nVoir aussi un exemple de [noms export\u00e9s](https://tour.golang.org/basics/3) dans le Tour of Go.",
+            "hint": null,
+            "correctAnswer": [
+              "Elle est accessible partout dans `myPackage`, pas dans le reste de `myModule`."
+            ],
+            "options": [
+              "Elle est accessible partout dans `myPackage`, pas dans le reste de `myModule`.",
+              "Elle est accessible par toute application important `myModule`.",
+              "Elle est accessible depuis n\u2019importe o\u00f9 dans `myModule`.",
+              "Elle est accessible par d\u2019autres paquets de `myModule` tant qu\u2019ils importent `myPackage`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "988d7689b6558297f3e9c302",
+            "question": "Comment demander \u00e0 `go test` d\u2019afficher les tests qu\u2019il ex\u00e9cute ?",
+            "answer": "`go test -v`",
+            "explanation": "[test package](https://pkg.go.dev/cmd/go/internal/test)",
+            "hint": null,
+            "correctAnswer": [
+              "`go test -v`"
+            ],
+            "options": [
+              "`go test`",
+              "`go test -x`",
+              "`go test --verbose`",
+              "`go test -v`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "89ac2fd9ff9628cc5af52d03",
+            "question": "Ce code a affich\u00e9 `{0, 0}`. Comment le corriger ?\n```go\ntype Point struct {\n  x int\n  y int\n}\nfunc main() {\n  data := []byte(`{\"x\":1, \"y\": 2}`)\n  var p Point\n  if err := json.Unmarshal(data, &p); err != nil {\n    fmt.Println(\"error: \", err)\n  } else {\n    fmt.Println(p)\n  }\n}\n```",
+            "answer": "Rendre `X` et `Y` export\u00e9s (majuscules)",
+            "explanation": "1. [How to Parse JSON in Golang?](https://www.geeksforgeeks.org/how-to-parse-json-in-golang/)\n2. [Go Playground](https://play.golang.org/p/RdL6y3Zv8ke)",
+            "hint": null,
+            "correctAnswer": [
+              "Rendre `X` et `Y` export\u00e9s (majuscules)"
+            ],
+            "options": [
+              "utiliser `json.Decoder`",
+              "Passer un pointeur vers `data`",
+              "Rendre `X` et `Y` export\u00e9s (majuscules)",
+              "Utiliser des tags de champ"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "91c113ba4a970cbb8cd57671",
+            "question": "Qu\u2019est-ce qu\u2019un `sync.Mutex` bloque pendant qu\u2019il est verrouill\u00e9 ?",
+            "answer": "toute lecture ou \u00e9criture de la variable qu\u2019il verrouille",
+            "explanation": "1. [Mutex in GoLang](https://golangdocs.com/mutex-in-golang), `sync.Mutex` verrouille pour qu\u2019une seule goroutine \u00e0 la fois acc\u00e8de \u00e0 la variable prot\u00e9g\u00e9e.\n2. [sync.Mutex](https://go.dev/tour/concurrency/9)",
+            "hint": null,
+            "correctAnswer": [
+              "toute lecture ou \u00e9criture de la variable qu\u2019il verrouille"
+            ],
+            "options": [
+              "toutes les goroutines",
+              "tout autre appel pour verrouiller ce `Mutex`",
+              "toute lecture ou \u00e9criture de la variable qu\u2019il verrouille",
+              "toute \u00e9criture de la variable qu\u2019il verrouille"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "a94931e641740ba2ee97bf07",
+            "question": "Quelle est la mani\u00e8re idiomatique de suspendre l\u2019ex\u00e9cution de la port\u00e9e courante jusqu\u2019\u00e0 ce qu\u2019un nombre arbitraire de goroutines aient termin\u00e9 ?",
+            "answer": "`sync.WaitGroup`",
+            "explanation": "**Explication :** c\u2019est exactement l\u2019usage de `sync.WaitGroup` - [Use sync.WaitGroup in Golang](https://nanxiao.me/en/use-sync-waitgroup-in-golang/)",
+            "hint": null,
+            "correctAnswer": [
+              "`sync.WaitGroup`"
+            ],
+            "options": [
+              "Passer un `int` et un `Mutex` \u00e0 chacune et compter \u00e0 leur retour.",
+              "Boucler via un `select`.",
+              "Dormir une dur\u00e9e \u00ab s\u00fbre \u00bb.",
+              "`sync.WaitGroup`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "f45e8f7bd6e7dbb6fc77588c",
+            "question": "Quel est l\u2019effet secondaire d\u2019utiliser `time.After` dans une instruction `select` ?",
+            "answer": "La goroutine ne se termine pas avant que le temps ne soit \u00e9coul\u00e9.",
+            "explanation": "> Remarque : cela ne bloque pas `select` et ne bloque pas les autres canaux.\n1. [time.After() Function in Golang With Examples](https://www.geeksforgeeks.org/time-after-function-in-golang-with-examples/)\n2. [How can I use 'time.After' and 'default' in Golang?](https://stackoverflow.com/questions/39212333/how-can-i-use-time-after-and-default-in-golang)\n3. [Go Playground example](https://go.dev/play/p/WojTrG1ywRK)",
+            "hint": null,
+            "correctAnswer": [
+              "La goroutine ne se termine pas avant que le temps ne soit \u00e9coul\u00e9."
+            ],
+            "options": [
+              "Cela bloque les autres canaux.",
+              "Il est con\u00e7u pour \u00eatre utilis\u00e9 dans `select` sans effets secondaires.",
+              "Cela bloque le `select` jusqu\u2019\u00e0 ce que le temps soit \u00e9coul\u00e9.",
+              "La goroutine ne se termine pas avant que le temps ne soit \u00e9coul\u00e9."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "f4ca3f64fdfd500be5d54c42",
+            "question": "\u00c0 quoi sert l\u2019instruction `select` ?",
+            "answer": "ex\u00e9cuter un cas diff\u00e9rent selon le canal qui r\u00e9pond en premier",
+            "explanation": "[Select statement in GoLang](https://golangdocs.com/select-statement-in-golang)",
+            "hint": null,
+            "correctAnswer": [
+              "ex\u00e9cuter un cas diff\u00e9rent selon le canal qui r\u00e9pond en premier"
+            ],
+            "options": [
+              "ex\u00e9cuter une fonction en concurrence",
+              "ex\u00e9cuter un cas diff\u00e9rent selon le type d\u2019une variable",
+              "ex\u00e9cuter un cas diff\u00e9rent selon la valeur d\u2019une variable",
+              "ex\u00e9cuter un cas diff\u00e9rent selon le canal qui r\u00e9pond en premier"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "5f2974f421fa104f4c6d644a",
+            "question": "Selon le standard de documentation Go, comment devriez-vous documenter cette fonction ?\n```go\nfunc Add(a, b int) int {\n        return a + b\n}\n```",
+            "answer": "C",
+            "explanation": "```go\n// Calcule a + b\n// - a: int\n// - b: int\n// - retourne: int\nfunc Add(a, b int) int {\nreturn a + b\n}\n```\n```go\n// Fait a + b\nfunc Add(a, b int)  int {\nreturn a + b\n}\n```\n```go\n// Add returns the sum of a and b\nfunc Add(a, b int) int {\nreturn a + b\n}\n```\n```go\n// returns the sum of a and b\nfunc Add(a, b int) int {\nreturn a + b\n}\n```\n**Explication :** le bloc de documentation doit commencer par le nom de la fonction.\n[Comments in Go](https://exercism.org/tracks/go/concepts/comments)",
+            "hint": null,
+            "correctAnswer": [
+              "C"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "299da3891f58198dc18bdeb9",
+            "question": "Quelle contrainte s\u2019applique au type de `myVal` pour compiler `i := myVal.(int)` ?",
+            "answer": "`myVal` doit \u00eatre une interface.",
+            "explanation": "**Explication :** ce type d\u2019assertion de type (via `.(type)`) s\u2019utilise uniquement sur des interfaces.\n1. [this example](https://tutorialedge.net/golang/snippets/type-casting-interface-to-string-go/)\n2. [Primitive types are type-casted differently](https://golangdocs.com/type-casting-in-golang)\n3. [Go Playground](https://play.golang.org/p/TXF_JBvThp6)\n4. [Type assertions](https://go.dev/tour/methods/15)",
+            "hint": null,
+            "correctAnswer": [
+              "`myVal` doit \u00eatre une interface."
+            ],
+            "options": [
+              "`myVal` doit \u00eatre un type entier, tel que `int`, `int64`, `int32`, etc.",
+              "`myVal` doit pouvoir \u00eatre assert\u00e9 comme un `int`.",
+              "`myVal` doit \u00eatre une interface.",
+              "`myVal` doit \u00eatre un type num\u00e9rique, tel que `float64` ou `int64`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "2250b1ad810e52280b1330b5",
+            "question": "Qu\u2019est-ce qu\u2019un canal (`channel`) ?",
+            "answer": "un moyen d\u2019envoyer des valeurs entre des goroutines",
+            "explanation": "[Channels](https://tour.golang.org/concurrency/2)",
+            "hint": null,
+            "correctAnswer": [
+              "un moyen d\u2019envoyer des valeurs entre des goroutines"
+            ],
+            "options": [
+              "une variable globale",
+              "un moyen d\u2019envoyer des valeurs entre des goroutines",
+              "un tableau dynamique de valeurs",
+              "un thread l\u00e9ger pour la programmation concurrente"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "811ae7ad3865c07e0010d6d8",
+            "question": "Comment faire en sorte qu\u2019un fichier ne se compile que sur Windows ?",
+            "answer": "Ajouter un commentaire `// +build windows` en haut du fichier.",
+            "explanation": "1. [How to use conditional compilation with the go build tool, Oct 2013](https://dave.cheney.net/2013/10/12/how-to-use-conditional-compilation-with-the-go-build-tool)\n2. [go commands Build constraints](https://pkg.go.dev/cmd/go#hdr-Build_constraints)\n> `//go:build windows`\n> \u00ab Les versions de Go 1.16 et ant\u00e9rieures utilisaient une syntaxe diff\u00e9rente pour les contraintes de build, avec le pr\u00e9fixe `// +build`. La commande gofmt ajoutera une contrainte `//go:build` \u00e9quivalente en rencontrant l\u2019ancienne syntaxe. \u00bb",
+            "hint": null,
+            "correctAnswer": [
+              "Ajouter un commentaire `// +build windows` en haut du fichier."
+            ],
+            "options": [
+              "V\u00e9rifier `runtime.GOOS`.",
+              "Ajouter un commentaire `// +build windows` n\u2019importe o\u00f9 dans le fichier.",
+              "Ajouter un pr\u00e9fixe `_` au nom du fichier.",
+              "Ajouter un commentaire `// +build windows` en haut du fichier."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "8231dfab2049d39d53943033",
+            "question": "Quelle est la bonne mani\u00e8re de passer ceci comme corps d\u2019une requ\u00eate HTTP POST ?\n```go\ndata := \"A group of Owls is called a parliament\"\n```",
+            "answer": "&shy;",
+            "explanation": "```go\nresp, err := http.Post(\"https://httpbin.org/post\", \"text/plain\", []byte(data))\n```\n```go\nresp, err := http.Post(\"https://httpbin.org/post\", \"text/plain\", data)\n```\n```go\nresp, err := http.Post(\"https://httpbin.org/post\", \"text/plain\", strings.NewReader(data))\n```\n```go\nresp, err := http.Post(\"https://httpbin.org/post\", \"text/plain\", &data)\n```\n1. [net/http#Client.Post](https://pkg.go.dev/net/http#Client.Post)\n2. [http.Post Golang example](https://dev.to/ramu_mangalarapu/httppost-golang-example-5jp)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "d534199e01298717e316bc53",
+            "question": "Quel devrait \u00eatre le nom idiomatique d\u2019une interface avec une seule m\u00e9thode ayant la signature `Save() error` ?",
+            "answer": "Saver",
+            "explanation": "[Effective Go, Interface names](https://golang.org/doc/effective_go#interface-names)",
+            "hint": null,
+            "correctAnswer": [
+              "Saver"
+            ],
+            "options": [
+              "Saveable",
+              "SaveInterface",
+              "ISave",
+              "Saver"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "feca30364a55b017b528fcbb",
+            "question": "Une instruction `switch` **\\_** son propre bloc lexical. Chaque instruction `case` **\\_** un bloc lexical suppl\u00e9mentaire",
+            "answer": "cr\u00e9e ; cr\u00e9e",
+            "explanation": "[Go Language Core technology (Volume one) 1.5-scope](https://topic.alibabacloud.com/a/go-language-core-technology-volume-one-15-font-colorredscopefont_1_38_30923325.html)\nExtrait pertinent de l\u2019article :\n> Le second `if` est imbriqu\u00e9 dans le premier, donc une variable d\u00e9clar\u00e9e dans le premier `if` est visible dans le second. Il y a des r\u00e8gles similaires dans `switch` : chaque `case` poss\u00e8de son propre bloc lexical en plus du bloc conditionnel.",
+            "hint": null,
+            "correctAnswer": [
+              "cr\u00e9e ; cr\u00e9e"
+            ],
+            "options": [
+              "ne cr\u00e9e pas ; cr\u00e9e",
+              "ne cr\u00e9e pas ; ne cr\u00e9e pas",
+              "cr\u00e9e ; cr\u00e9e",
+              "cr\u00e9e ; ne cr\u00e9e pas"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "164403c7bff00a540426edb0",
+            "question": "Quelle est la sensibilit\u00e9 \u00e0 la casse par d\u00e9faut de la fonction JSON `Unmarshal` ?",
+            "answer": "Le comportement par d\u00e9faut est insensible \u00e0 la casse, mais il peut \u00eatre red\u00e9fini.",
+            "explanation": "[encoding/json#Unmarshal](https://pkg.go.dev/encoding/json#Unmarshal)\nExtrait pertinent :\n> To unmarshal JSON into a struct, Unmarshal matches incoming object keys to the keys used by Marshal (either the struct field name or its tag), preferring an exact match but also accepting a case-insensitive match. By default, object keys which don't have a corresponding struct field are ignored (see Decoder.DisallowUnknownFields for an alternative).",
+            "hint": null,
+            "correctAnswer": [
+              "Le comportement par d\u00e9faut est insensible \u00e0 la casse, mais il peut \u00eatre red\u00e9fini."
+            ],
+            "options": [
+              "Le comportement par d\u00e9faut est insensible \u00e0 la casse, mais il peut \u00eatre red\u00e9fini.",
+              "Les champs sont pris en compte en respectant la casse.",
+              "Les champs sont pris en compte sans tenir compte de la casse.",
+              "Le comportement par d\u00e9faut est sensible \u00e0 la casse, mais il peut \u00eatre red\u00e9fini."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "e368b56185883b6c4a5c640e",
+            "question": "Quelle est la diff\u00e9rence entre les m\u00e9thodes `Time.Sub()` et `Time.Add()` du paquet `time` ?",
+            "answer": "`Time.Add()` accepte un param\u00e8tre `Duration` et retourne un `Time` tandis que `Time.Sub()` accepte un `Time` et retourne une `Duration`.",
+            "explanation": "1. [time#Time.Add](https://pkg.go.dev/time#Time.Add)\n2. [time#Time.Sub](https://pkg.go.dev/time#Time.Sub)",
+            "hint": null,
+            "correctAnswer": [
+              "`Time.Add()` accepte un param\u00e8tre `Duration` et retourne un `Time` tandis que `Time.Sub()` accepte un `Time` et retourne une `Duration`."
+            ],
+            "options": [
+              "`Time.Add()` sert \u00e0 faire des additions tandis que `Time.Sub()` sert \u00e0 imbriquer des timestamps.",
+              "`Time.Add()` retourne toujours un temps plus tard tandis que `Time.Sub()` retourne toujours un temps plus t\u00f4t.",
+              "Elles sont oppos\u00e9es. `Time.Add(x)` \u00e9quivaut \u00e0 `Time.Sub(-x)`.",
+              "`Time.Add()` accepte un param\u00e8tre `Duration` et retourne un `Time` tandis que `Time.Sub()` accepte un `Time` et retourne une `Duration`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "68a453084cce5caa2c826a15",
+            "question": "Quel est le risque d\u2019utiliser plusieurs tags de champ dans une m\u00eame struct ?",
+            "answer": "Cela couple fortement diff\u00e9rentes couches de votre application.",
+            "explanation": "1. [Example Code / b29r0fUD1cp](https://play.golang.org/p/b29r0fUD1cp)\n2. [How To Use Struct Tags in Go](https://www.digitalocean.com/community/tutorials/how-to-use-struct-tags-in-go)",
+            "hint": null,
+            "correctAnswer": [
+              "Cela couple fortement diff\u00e9rentes couches de votre application."
+            ],
+            "options": [
+              "Chaque champ doit avoir tous les tags pour compiler.",
+              "Cela couple fortement diff\u00e9rentes couches de votre application.",
+              "Tous les tags apr\u00e8s le premier sont ignor\u00e9s.",
+              "Des tags manquants provoquent un panic \u00e0 l\u2019ex\u00e9cution."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "3865b4d2ad9904e0b3fd1a0c",
+            "question": "O\u00f9 la m\u00e9thode int\u00e9gr\u00e9e `recover` est-elle utile ?",
+            "answer": "\u00e0 l\u2019int\u00e9rieur d\u2019une fonction diff\u00e9r\u00e9e (`deferred`)",
+            "explanation": "[Example of Recover Function in Go (Golang)](https://golangbot.com/panic-and-recover/#recoveringfromapanic)\nExtrait pertinent :\n> Recover is useful only when called inside deferred functions. Executing a call to recover inside a deferred function stops the panicking sequence by restoring normal execution and retrieves the error message passed to the panic function call. If recover is called outside the deferred function, it will not stop a panicking sequence.",
+            "hint": null,
+            "correctAnswer": [
+              "\u00e0 l\u2019int\u00e9rieur d\u2019une fonction diff\u00e9r\u00e9e (`deferred`)"
+            ],
+            "options": [
+              "dans la fonction `main`",
+              "imm\u00e9diatement apr\u00e8s une ligne susceptible de paniquer",
+              "\u00e0 l\u2019int\u00e9rieur d\u2019une fonction diff\u00e9r\u00e9e (`deferred`)",
+              "au d\u00e9but d\u2019une fonction susceptible de paniquer"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "80dd4f4331cb4f3372894b2b",
+            "question": "Lequel des choix ne renvoie pas de sortie sur la sortie d\u2019erreur standard ?",
+            "answer": "`fmt.Errorf(\"%s\\n\", message)`",
+            "explanation": "1. [func println](https://pkg.go.dev/builtin#println) : \u00e9crit le r\u00e9sultat sur l\u2019erreur standard.\n2. [func New](https://pkg.go.dev/log#New) : `func New(out io.Writer, prefix string, flag int) *Logger`; le param\u00e8tre `out` d\u00e9finit la destination d\u2019\u00e9criture des logs.\n3. [func Errorf](https://pkg.go.dev/fmt#Errorf) : `Errorf` formate selon un sp\u00e9cificateur et retourne la cha\u00eene comme valeur.\n4. [func Fprintln](https://pkg.go.dev/fmt#Fprintln) : \u00e9crit dans `w`.",
+            "hint": null,
+            "correctAnswer": [
+              "`fmt.Errorf(\"%s\\n\", message)`"
+            ],
+            "options": [
+              "`println(message)`",
+              "`log.New(os.Stderr, \"\", 0).Println(message)`",
+              "`fmt.Errorf(\"%s\\n\", message)`",
+              "`fmt.Fprintln(os.Stderr, message)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "7bb1f11ed563cc008b24b405",
+            "question": "Comment indiquer \u00e0 Go d\u2019importer un paquet depuis un autre emplacement ?",
+            "answer": "Utiliser une directive `replace` dans `go.mod`.",
+            "explanation": "1. [Call your code from another module](https://go.dev/doc/tutorial/call-module-code) : chapitre 5., `go mod edit -replace example.com/greetings=../greetings`.\n2. [go.mod replace directive](https://go.dev/doc/modules/gomod-ref#replace)",
+            "hint": null,
+            "correctAnswer": [
+              "Utiliser une directive `replace` dans `go.mod`."
+            ],
+            "options": [
+              "Utiliser un proxy.",
+              "Changer le chemin d\u2019import.",
+              "Utiliser une directive `replace` dans `go.mod`.",
+              "Utiliser un r\u00e9pertoire `replace`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "4babf79eafcb44943522d0cd",
+            "question": "Si votre r\u00e9pertoire de travail actuel est la racine de votre projet, quelle commande ex\u00e9cutera tous ses paquets de test ?",
+            "answer": "`go test ./...`",
+            "explanation": "1. [Example of testing in Go (Golang)](https://pkg.go.dev/testing)\n2. [Example of cmd in Go (Golang)](https://pkg.go.dev/cmd/go)\nExtrait pertinent :\n> Relative patterns are also allowed, like \"go test ./...\" to test all subdirectories.",
+            "hint": null,
+            "correctAnswer": [
+              "`go test ./...`"
+            ],
+            "options": [
+              "`go test all`",
+              "`go run --all`",
+              "`go test .`",
+              "`go test ./...`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "77619dd79ae7126c58b313a5",
+            "question": "Quelles encodages pouvez-vous mettre dans une cha\u00eene ?",
+            "answer": "UTF-8",
+            "explanation": "1. [Strings, bytes, runes and characters in Go](https://go.dev/blog/strings)\nExtrait pertinent :\n> In short, Go source code is UTF-8, so the source code for the string literal is UTF-8 text.\n2. [Example of encoding in Go (Golang)](https://pkg.go.dev/golang.org/x/text/encoding)\nExtrait pertinent :\n> Package encoding defines an interface for character encodings, such as Shift JIS and Windows 1252, that can convert to and from UTF-8.",
+            "hint": null,
+            "correctAnswer": [
+              "UTF-8"
+            ],
+            "options": [
+              "n\u2019importe lequel, elle accepte des octets arbitraires",
+              "n\u2019importe quel format Unicode",
+              "UTF-8 ou ASCII",
+              "UTF-8"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "284ac8e7a319e5ff0c1d23d0",
+            "question": "En quoi le comportement de `t.Fatal` diff\u00e8re-t-il \u00e0 l\u2019int\u00e9rieur d\u2019un `t.Run` ?",
+            "answer": "`t.Fatal` arr\u00eate l\u2019ex\u00e9cution du sous-test et continue avec les autres cas de test.",
+            "explanation": "1. [Reference:](https://go.dev/play/p/gtne3iRL9AX)\n2. [testing package in Go](https://pkg.go.dev/testing), extrait pertinent :\n> `Fatal` is equivalent to `Log` followed by `FailNow`.\n> `Log` formats its arguments using default formatting, analogous to `Println`, and records the text in the error log.\n> `FailNow` marks the function as having failed and stops its execution by calling `runtime.Goexit` (which then runs all deferred calls in the current goroutine). Execution will continue at the next test or benchmark. `FailNow` must be called from the goroutine running the test or benchmark function, not from other goroutines created during the test. Calling `FailNow` does not stop those other goroutines.\n> `Run` runs `f` as a subtest of `t` called name. It runs `f` in a separate goroutine and blocks until `f` returns or calls `t.Parallel` to become a parallel test. Run reports whether `f` succeeded (or at least did not fail before calling `t.Parallel`).\n> Run may be called simultaneously from multiple goroutines, but all such calls must return before the outer test function for t returns.",
+            "hint": null,
+            "correctAnswer": [
+              "`t.Fatal` arr\u00eate l\u2019ex\u00e9cution du sous-test et continue avec les autres cas de test."
+            ],
+            "options": [
+              "Il n\u2019y a aucune diff\u00e9rence.",
+              "`t.Fatal` ne fait pas planter le banc de test, pr\u00e9servant les messages.",
+              "`t.Fatal` arr\u00eate l\u2019ex\u00e9cution du sous-test et continue avec les autres cas de test.",
+              "`t.Fatal` arr\u00eate tous les tests et contient des informations suppl\u00e9mentaires sur le sous-test \u00e9chou\u00e9."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "b7eb427bc077cb83c1350dc3",
+            "question": "Que fait `log.Fatal` ?",
+            "answer": "Il affiche le log puis quitte le programme en toute s\u00e9curit\u00e9.",
+            "explanation": "[Example of func Fatal in Go (Golang)](https://pkg.go.dev/log#Fatal)\nExtrait pertinent :\n> `Fatal` is equivalent to `Print()` followed by a call to `os.Exit(1)`.",
+            "hint": null,
+            "correctAnswer": [
+              "Il affiche le log puis quitte le programme en toute s\u00e9curit\u00e9."
+            ],
+            "options": [
+              "Il d\u00e9clenche un panic.",
+              "Il affiche le log puis d\u00e9clenche un panic.",
+              "Il affiche le log puis quitte le programme en toute s\u00e9curit\u00e9.",
+              "Il quitte le programme."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "91e9b29a9bd4b2f1cfdde97d",
+            "question": "Lequel est un litt\u00e9ral de format d\u2019heure valide en Go ?",
+            "answer": "\"2006-01-02\"",
+            "explanation": "[func Time in Go](https://pkg.go.dev/time#pkg-constants)\nExtrait pertinent :\n```text\nYear: \"2006\" \"06\"\nMonth: \"Jan\" \"January\" \"01\" \"1\"\nDay of the week: \"Mon\" \"Monday\"\nDay of the month: \"2\" \"_2\" \"02\"\nDay of the year: \"__2\" \"002\"\nHour: \"15\" \"3\" \"03\" (PM or AM)\nMinute: \"4\" \"04\"\nSecond: \"5\" \"05\"\nAM/PM mark: \"PM\"\n```",
+            "hint": null,
+            "correctAnswer": [
+              "\"2006-01-02\""
+            ],
+            "options": [
+              "\"2006-01-02\"",
+              "\"YYYY-mm-dd\"",
+              "\"y-mo-d\"",
+              "\"year-month-day\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "1a1cb662dfba78a051012381",
+            "question": "Comment devriez-vous journaliser une erreur (`err`) ?",
+            "answer": "`log.Printf(\"error: %v\", err)`",
+            "explanation": "**Explication :** Il n\u2019y a ni `log.ERROR`, ni `log.Error()` dans le [paquet log en Go](https://pkg.go.dev/log) ; les arguments de `log.Print()` sont g\u00e9r\u00e9s comme `fmt.Print()` ; ceux de `log.Printf()` comme `fmt.Printf()`.",
+            "hint": null,
+            "correctAnswer": [
+              "`log.Printf(\"error: %v\", err)`"
+            ],
+            "options": [
+              "`log.Error(err)`",
+              "`log.Printf(\"error: %v\", err)`",
+              "`log.Printf(log.ERROR, err)`",
+              "`log.Print(\"error: %v\", err)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "7aee8cdfd72b908d317baf93",
+            "question": "Quels noms de fichiers la commande `go test` reconna\u00eet-elle comme fichiers de test ?",
+            "answer": "tout fichier se terminant par `_test.go`",
+            "explanation": "1. [Test packages in go command in Go](https://pkg.go.dev/cmd/go#hdr-Test_packages) : \u00ab 'Go test' recompile chaque paquet avec tous les fichiers dont le nom matche le motif `*_test.go`. \u00bb\n2. [Add a test in Go](https://go.dev/doc/tutorial/add-a-test)",
+            "hint": null,
+            "correctAnswer": [
+              "tout fichier se terminant par `_test.go`"
+            ],
+            "options": [
+              "tout fichier commen\u00e7ant par `test`",
+              "tout fichier contenant le mot `test`",
+              "uniquement les fichiers \u00e0 la racine se terminant par `_test.go`",
+              "tout fichier se terminant par `_test.go`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "65f74c6cc72d3547c3e0fe4d",
+            "question": "Quelle sera la sortie de ce code ?\n```go\nch := make(chan int)\nch <- 7\nval := <-ch\nfmt.Println(val)\n```",
+            "answer": "Il y aura un deadlock",
+            "explanation": "[Go Playground share](https://go.dev/play/p/SQlfg8YSEOz), sortie :\n```text\nfatal error: all goroutines are asleep - deadlock!\ngoroutine 1 [chan send]:\nmain.main()\n/tmp/sandbox2282523250/prog.go:7 +0x37\nProgram exited.\n```",
+            "hint": null,
+            "correctAnswer": [
+              "Il y aura un deadlock"
+            ],
+            "options": [
+              "0",
+              "Il y aura un deadlock",
+              "Cela ne compilera pas",
+              "2.718"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "8cca6f6f7d88c20771f02520",
+            "question": "Quelle sera la sortie de ce programme ?\n```go\nch := make(chan int)\nclose(ch)\nval := <-ch\nfmt.Println(val)\n```",
+            "answer": "0",
+            "explanation": "1. [The Go Programming Language Specification \"Receive operator\"](https://go.dev/ref/spec#Receive_operator), extrait pertinent :\n> A receive operation on a closed channel can always proceed immediately, yielding the element type's zero value after any previously sent values have been received.\n2. [Go Playground share](https://go.dev/play/p/DjXq9wzJm5M), sortie :\n```text\n0\nProgram exited.\n```",
+            "hint": null,
+            "correctAnswer": [
+              "0"
+            ],
+            "options": [
+              "Deadlock",
+              "Panic",
+              "0",
+              "NaN"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "a60d60c8e7230a3626af08e0",
+            "question": "Qu\u2019est-ce qui sera affich\u00e9 par ce code ?\n```go\nvar stocks map[string]float64 // stock -> price\nprice := stocks[\"MSFT\"]\nfmt.Printf(\"%f\\n\", price)\n```",
+            "answer": "0.000000",
+            "explanation": "[Go Playground share](https://go.dev/play/p/CjdHskV1xq1), sortie :\n```text\n0.000000\nProgram exited.\n```",
+            "hint": null,
+            "correctAnswer": [
+              "0.000000"
+            ],
+            "options": [
+              "0",
+              "0.000000",
+              "Le code va paniquer",
+              "NaN"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "de60f979dd7eb8c3408e286d",
+            "question": "Quelle est la mani\u00e8re courante d\u2019avoir plusieurs ex\u00e9cutables dans votre projet ?",
+            "answer": "Avoir un r\u00e9pertoire `cmd` et un sous-r\u00e9pertoire par ex\u00e9cutable.",
+            "explanation": "1. [stackoverflow](https://stackoverflow.com/questions/9985559/organizing-a-multiple-file-go-project/51942843#51942843)\n2. [medium](https://medium.com/@benbjohnson/structuring-applications-in-go-3b04be4ff091)\n3. [medium](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2)",
+            "hint": null,
+            "correctAnswer": [
+              "Avoir un r\u00e9pertoire `cmd` et un sous-r\u00e9pertoire par ex\u00e9cutable."
+            ],
+            "options": [
+              "Avoir un r\u00e9pertoire `cmd` et un sous-r\u00e9pertoire par ex\u00e9cutable.",
+              "Commenter `main`.",
+              "Utiliser des build tags.",
+              "Avoir un r\u00e9pertoire `pkg` et un sous-r\u00e9pertoire par ex\u00e9cutable."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "040c9ef910dda61013e5f86c",
+            "question": "Comment compiler `main.go` en un ex\u00e9cutable qui fonctionnera sur OSX arm64 ?",
+            "answer": "D\u00e9finir GOOS sur **darwin** et GOARCH sur **arm64**.",
+            "explanation": "[documentation](https://pkg.go.dev/cmd/go#hdr-Build_constraints)",
+            "hint": null,
+            "correctAnswer": [
+              "D\u00e9finir GOOS sur **darwin** et GOARCH sur **arm64**."
+            ],
+            "options": [
+              "D\u00e9finir GOOS sur **arm64** et GOARCH sur **darwin**.",
+              "D\u00e9finir GOOS sur **osx** et GOARCH sur **arm64**.",
+              "D\u00e9finir GOOS sur **arm64** et GOARCH sur **osx**.",
+              "D\u00e9finir GOOS sur **darwin** et GOARCH sur **arm64**."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "5bcdd286420442d11ceb3b2f",
+            "question": "Quelle est la syntaxe correcte pour d\u00e9marrer une goroutine qui va `print Hello Gopher!` ?",
+            "answer": "`go fmt.Println(\"Hello Gopher!\")`",
+            "explanation": "[Example of start a goroutine](https://go.dev/play/p/KGgnAWpZMrS)",
+            "hint": null,
+            "correctAnswer": [
+              "`go fmt.Println(\"Hello Gopher!\")`"
+            ],
+            "options": [
+              "`go(fmt.Println(\"Hello Gopher!\"))`",
+              "`go func() { fmt.Println(\"Hello Gopher!\") }`",
+              "`go fmt.Println(\"Hello Gopher!\")`",
+              "`Go fmt.Println(\"Hello Gopher!\")`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "88b58ff9320034d488f1ac03",
+            "question": "Si vous it\u00e9rez sur une map dans une boucle `for range`, dans quel ordre les paires cl\u00e9:valeur seront-elles acc\u00e9d\u00e9es ?",
+            "answer": "dans un ordre pseudo-al\u00e9atoire impr\u00e9visible",
+            "explanation": "[Reference](https://go.dev/ref/spec#:~:text=The%20iteration%20order%20over%20maps%20is%20not%20specified)",
+            "hint": null,
+            "correctAnswer": [
+              "dans un ordre pseudo-al\u00e9atoire impr\u00e9visible"
+            ],
+            "options": [
+              "dans un ordre pseudo-al\u00e9atoire impr\u00e9visible",
+              "dans l\u2019ordre inverse d\u2019insertion (dernier entr\u00e9, premier sorti)",
+              "tri\u00e9es par cl\u00e9 par ordre croissant",
+              "dans l\u2019ordre d\u2019insertion (premier entr\u00e9, premier sorti)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "8ac93fed5538c7ad25a00ce3",
+            "question": "Quelle est la mani\u00e8re idiomatique de personnaliser la repr\u00e9sentation d\u2019une struct personnalis\u00e9e dans une cha\u00eene format\u00e9e ?",
+            "answer": "Impl\u00e9menter une m\u00e9thode `String() string`",
+            "explanation": "[Reference](https://go.dev/doc/effective_go#printing)",
+            "hint": null,
+            "correctAnswer": [
+              "Impl\u00e9menter une m\u00e9thode `String() string`"
+            ],
+            "options": [
+              "Il n\u2019y a pas de personnalisation de la repr\u00e9sentation string d\u2019un type.",
+              "La construire en morceaux \u00e0 chaque fois via les champs individuels.",
+              "Impl\u00e9menter une m\u00e9thode `String() string`",
+              "Cr\u00e9er une fonction wrapper qui accepte votre type et retourne une cha\u00eene."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "fc11ef4f4c0266be61c7b3bd",
+            "question": "Comment \u00e9viter une fuite de goroutine dans ce code ?\n```go\nfunc findUser(ctx context.Context, login string) (*User, error) {\n    ch := make(chan *User)\n    go func() {\n            ch <- findUserInDB(login)\n    }()\n    select {\n    case user := <-ch:\n            return user, nil\n    case <-ctx.Done():\n            return nil, fmt.Errorf(\"timeout\")\n    }\n}\n```",
+            "answer": "Rendre `ch` tamponn\u00e9 (buffered).",
+            "explanation": "[Reference](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)\nExtrait pertinent :\n> The simplest way to resolve this leak is to change the channel from an unbuffered channel to a buffered channel with a capacity of 1. Now in the timeout case, after the receiver has moved on, the Goroutine will complete its send by placing the \\*User value in the channel then it will return.",
+            "hint": null,
+            "correctAnswer": [
+              "Rendre `ch` tamponn\u00e9 (buffered)."
+            ],
+            "options": [
+              "Utiliser un `sync.WaitGroup`.",
+              "Rendre `ch` tamponn\u00e9 (buffered).",
+              "Ajouter un `default` au `select`.",
+              "Utiliser `runtime.SetFinalizer`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "8b953f18b0f7ff2adbdb7f56",
+            "question": "Qu\u2019est-ce que ce code va afficher ?\n```go\nvar i int8 = 120\ni += 10\nfmt.Println(i)\n```",
+            "answer": "-126",
+            "explanation": "[Go Playground example](https://go.dev/play/p/T31_JuFioaC), sortie :\n```text\n-126\nProgram exited.\n```",
+            "hint": null,
+            "correctAnswer": [
+              "-126"
+            ],
+            "options": [
+              "-126",
+              "0",
+              "NaN",
+              "130"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "4b76015c1366a838ccf7711e",
+            "question": "\u00c9tant donn\u00e9 la d\u00e9finition de `worker` ci-dessous, quelle est la bonne syntaxe pour d\u00e9marrer une goroutine qui appellera `worker` et enverra le r\u00e9sultat dans un canal nomm\u00e9 `ch` ?\n```go\nfunc worker(m Message) Result\n```",
+            "answer": "&shy;",
+            "explanation": "```go\ngo func() {\nr := worker(m)\nch <- r\n}\n```\n```go\ngo func() {\nr := worker(m)\nr -> ch\n} ()\n```\n```go\ngo func() {\nr := worker(m)\nch <- r\n} ()\n```\n```go\ngo ch <- worker(m)\n```\n[Go Playground example](https://go.dev/play/p/96j7tuQKF50)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "f4b6e4e12626330e590e470a",
+            "question": "Dans ce code, quels noms sont export\u00e9s ?\n```go\npackage os\ntype FilePermission int\ntype userID int\n```",
+            "answer": "FilePermission",
+            "explanation": "[Reference 1](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)\n[Reference 2](https://go.dev/tour/basics/3)",
+            "hint": null,
+            "correctAnswer": [
+              "FilePermission"
+            ],
+            "options": [
+              "FilePermission",
+              "aucune de ces r\u00e9ponses",
+              "FilePermission et userID",
+              "userID"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "12149f37093cf8007a4db4de",
+            "question": "Laquelle des affirmations suivantes est correcte \u00e0 propos des structures en Go ?",
+            "answer": "Toutes les r\u00e9ponses ci-dessus",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Toutes les r\u00e9ponses ci-dessus"
+            ],
+            "options": [
+              "Une structure est un autre type de donn\u00e9es d\u00e9fini par l\u2019utilisateur en Go, qui vous permet de combiner des \u00e9l\u00e9ments de donn\u00e9es de diff\u00e9rents types.",
+              "Les structures sont utilis\u00e9es pour repr\u00e9senter un enregistrement.",
+              "Pour d\u00e9finir une structure, vous devez utiliser les instructions `type` et `struct`.",
+              "Toutes les r\u00e9ponses ci-dessus"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "8e47c9931e35e9ca3cae3a26",
+            "question": "Que fait la commande int\u00e9gr\u00e9e `generate` du compilateur Go ?",
+            "answer": "Elle scanne le code source du projet \u00e0 la recherche de commentaires `//go:generate` et ex\u00e9cute pour chacun la commande terminal sp\u00e9cifi\u00e9e.",
+            "explanation": "[Generate Go files by processing source](https://pkg.go.dev/cmd/go#hdr-Generate_Go_files_by_processing_source)",
+            "hint": null,
+            "correctAnswer": [
+              "Elle scanne le code source du projet \u00e0 la recherche de commentaires `//go:generate` et ex\u00e9cute pour chacun la commande terminal sp\u00e9cifi\u00e9e."
+            ],
+            "options": [
+              "Elle fournit les sous-commandes `sql`, `json`, `yaml`, et les options `--schema` et `--objects` pour g\u00e9n\u00e9rer le code appropri\u00e9.",
+              "Elle recherche les fichiers dont le nom se termine par `_generate.go`, puis compile et ex\u00e9cute chacun individuellement.",
+              "Elle scanne le code source du projet \u00e0 la recherche de commentaires `//go:generate` et ex\u00e9cute pour chacun la commande terminal sp\u00e9cifi\u00e9e.",
+              "Elle dispose des sous-commandes `mocks` et `tests` pour g\u00e9n\u00e9rer les fichiers `.go` correspondants."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "d752c47a96afd73e1e4d0872",
+            "question": "En utilisant le paquet `time`, comment obtenir l\u2019heure dans 90 minutes ?",
+            "answer": "`time.Now().Add(90 * time.Minute)`",
+            "explanation": "[func (Time) Add example](https://pkg.go.dev/time#example-Time.Add)",
+            "hint": null,
+            "correctAnswer": [
+              "`time.Now().Add(90 * time.Minute)`"
+            ],
+            "options": [
+              "`time.Now().Add(90)`",
+              "`time.Now() + (90 * time.Minute)`",
+              "`time.Now() + 90`",
+              "`time.Now().Add(90 * time.Minute)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "376c57155fa548c599192229",
+            "question": "Un programme utilise un canal pour imprimer cinq entiers dans une goroutine tout en alimentant le canal depuis la routine principale, mais cela ne fonctionne pas tel quel. Que faut-il changer pour le faire fonctionner ?",
+            "answer": "Ajouter un second param\u00e8tre \u00e0 `make(chan, int)`, par ex. `make(chan int, 5)`.",
+            "explanation": "[Reference](https://www.ardanlabs.com/blog/2018/11/goroutine-leaks-the-forgotten-sender.html)\nExtrait pertinent :\n> The simplest way to resolve this leak is to change the channel from an unbuffered channel to a buffered channel with a capacity of 1. Now in the timeout case, after the receiver has moved on, the Goroutine will complete its send by placing the \\*User value in the channel then it will return.",
+            "hint": null,
+            "correctAnswer": [
+              "Ajouter un second param\u00e8tre \u00e0 `make(chan, int)`, par ex. `make(chan int, 5)`."
+            ],
+            "options": [
+              "Ajouter un `close(ch)` imm\u00e9diatement apr\u00e8s `wg.Wait()`.",
+              "Ajouter un second param\u00e8tre \u00e0 `make(chan, int)`, par ex. `make(chan int, 5)`.",
+              "Supprimer l\u2019utilisation inutile de `WaitGroup`, par ex. toutes les lignes commen\u00e7ant par `wg`.",
+              "D\u00e9placer la goroutine de 7 lignes imm\u00e9diatement avant `wg.Wait()`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "06d24f81bdc6ed82e75e53fd",
+            "question": "Apr\u00e8s avoir import\u00e9 `encoding/json`, comment acc\u00e9deriez-vous \u00e0 la fonction `Marshal` ?",
+            "answer": "`json.Marshal`",
+            "explanation": "[encoding/json#Marshal example](https://pkg.go.dev/encoding/json#example-Marshal)",
+            "hint": null,
+            "correctAnswer": [
+              "`json.Marshal`"
+            ],
+            "options": [
+              "`encoding.json.Marshal`",
+              "`encoding/json.Marshal`",
+              "`Marshal`",
+              "`json.Marshal`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "daedb46d0efbb9da19e2e69b",
+            "question": "Quels sont les deux segments de code manquants pour compl\u00e9ter l\u2019utilisation de `context.Context` afin d\u2019impl\u00e9menter un timeout de trois secondes pour ce client HTTP effectuant une requ\u00eate GET ?\n```go\npackage main\nimport (\n        \"context\"\n        \"fmt\"\n        \"net/http\"\n)\nfunc main() {\n        var cancel context.CancelFunc\n        ctx := context.Background()\n        // #1: <=== What should go here?\n        req, _ := http.NewRequest(http.MethodGet,\n                \"https://linkedin.com\",\n                nil)\n        // #2: <=== What should go here?\n        client := &http.Client{}\n        res, err := client.Do(req)\n        if err != nil {\n                fmt.Println(\"Request failed:\", err)\n                return\n        }\n        fmt.Println(\"Response received, status code:\",\n                res.StatusCode)\n}\n```",
+            "answer": "&shy;",
+            "explanation": "```go\nctx.SetTimeout(3*time.Second)\nreq.AttachContext(ctx)\n```\n```go\nctx, cancel = context.WithTimeout(ctx, 3*time.Second); defer cancel()\nreq = req.WithContext(ctx)\n```\n```go\nctx, cancel = context.WithTimeout(ctx, 3*time.Second); defer cancel() #2: req.AttachContext(ctx)\n```\n```go\nctx.SetTimeout(3*time.Second)\nreq = req.WithContext(ctx)\n```\n1. [context#WithTimeout](https://pkg.go.dev/context#WithTimeout)\n2. [net/http#Request.WithContext](https://pkg.go.dev/net/http#Request.WithContext)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "706aed0c5c8fef07fc87ee9d",
+            "question": "Si vous avez une struct nomm\u00e9e `Client` d\u00e9finie dans le m\u00eame fichier `.go` que l\u2019instruction, comment exporter une variable avec une valeur par d\u00e9faut pour qu\u2019elle soit accessible par d\u2019autres paquets ?",
+            "answer": "&shy;",
+            "explanation": "```go\nlet Default := new Client()\n```\n```go\npublic default = &Client()\n```\n```go\nvar Default = &Client{}\n```\n```go\nexport default := new Client{}\n```",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "f0b19450079d771a432c4e51",
+            "question": "Ce programme affiche `{Master Chief Spartan Protagonist Halo}`. Comment faire pour qu\u2019il affiche `Master Chief - a Spartan - is the Protagonist of Halo` \u00e0 la place ?\n```go\npackage main\nimport \"fmt\"\ntype Character struct{\n        Name  string\n        Class string\n        Role  string\n        Game  string\n}\nfunc main() {\n        mc := Character{\n                Name: \"Master Chief\",\n                Class: \"Spartan\",\n                Role: \"Protagonist\",\n                Game: \"Halo\",\n        }\n        fmt.Println(mc)\n}\n```",
+            "answer": "C",
+            "explanation": "```go\n// Remplacez\n// fmt.Println(mc)\n// par :\nfmt.Printf(\"(?P<Name>) - a (?P<Class>) - is the (?P<Role>) of (?P<Game>)\", mc)\n```\n```go\n// Remplacez\n// fmt.Println(mc)\n// par :\nfmt.Println(mc, func(c Character) string {\nreturn c. Name + \" - a \" + c.Class + \" - is the \" + c.Role + \" of \" + c.Game\n})\n```\n```go\n// ajoutez ceci au package `main`\nfunc (c Character) String() string {\nreturn fmt.Sprintf(\"%s - a %s - is the %s of %s\", c.Name, c.Class, c.Role,c.Game)\n}\n```\n```go\n// ajoutez ceci au package `main`\nfunc (c Character) OnPrint() {\nfmt.Println(\"{{c.Name}} - a {{c.Class}} - is the {{c.Role}} of {{c.Game}}\")\n}\n```\n1. [fmt#Stringer](https://pkg.go.dev/fmt#Stringer)",
+            "hint": null,
+            "correctAnswer": [
+              "C"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "8dd6a11b44735e020c091a80",
+            "question": "Comment impl\u00e9menter une m\u00e9thode `Append()` fonctionnelle pour `Clients` ?\n```go\npackage main\ntype Client struct {\n  Name string\n}\ntype Clients struct {\n  clients []*Client\n}\nfunc main() {\n  c:= &Clients{clients.make([]*Client,0)}\n  c.Append(&Client{Name: \"LinkedIn API})\n}\n```",
+            "answer": "A",
+            "explanation": "```go\nfunc (cc *Clients) Append(c *Client) {\ncc.clients = append(cc.clients, c)\n}\n```\n```go\nfunc (cc *Clients) Append(c *Client) {\ncc.append(c)\n}\n```\n```go\nfunc (cc Clients) Append(c Client) {\ncc.clients = append(cc.clients, c)\n}\n```\n```go\nfunc (cc *Clients) Append(c Client) {\ncc.clients.append(c)\n}\n```",
+            "hint": null,
+            "correctAnswer": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "f251d0fbba1b6b4f14544e20",
+            "question": "Comment r\u00e9cup\u00e9rer d\u2019un `panic()` d\u00e9clench\u00e9 par une fonction appel\u00e9e sans laisser votre programme \u00e9chouer, en supposant que votre r\u00e9ponse s\u2019ex\u00e9cute dans la m\u00eame port\u00e9e o\u00f9 l\u2019appel de fonction provoquera le panic ?",
+            "answer": "Utiliser `defer func { ... }()` avant l\u2019appel probl\u00e9matique puis g\u00e9rer le panic dans la fonction anonyme.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Utiliser `defer func { ... }()` avant l\u2019appel probl\u00e9matique puis g\u00e9rer le panic dans la fonction anonyme."
+            ],
+            "options": [
+              "Enveloppant l\u2019appel dans une fonction anonyme avec un type de retour `panic`, en n\u2019oubliant pas de l\u2019invoquer avec `()` puis en introspectant l\u2019instance retourn\u00e9e pour g\u00e9rer l\u2019erreur.",
+              "Utiliser `try{ ... }` pour envelopper le code et g\u00e9rer l\u2019erreur dans `catch{ ... }`.",
+              "Utiliser `defer func { ... }()` avant l\u2019appel probl\u00e9matique puis g\u00e9rer le panic dans la fonction anonyme.",
+              "Pr\u00e9fixer l\u2019appel de fonction avec `@` pour forcer le retour d\u2019un `error` puis le g\u00e9rer comme d\u2019habitude."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "06517f7743dcecbab1e77c2b",
+            "question": "Qu\u2019est-ce que ce code va afficher ?\n```go\nvar n int\nfmt.Println (n)\n```",
+            "answer": "0",
+            "explanation": "> En Go, lorsqu\u2019une variable est d\u00e9clar\u00e9e sans initialisation explicite, elle re\u00e7oit sa [valeur z\u00e9ro](https://go.dev/tour/basics/12) selon son type. Pour les entiers comme `n`, la valeur z\u00e9ro est 0.",
+            "hint": null,
+            "correctAnswer": [
+              "0"
+            ],
+            "options": [
+              "0",
+              "nil",
+              "une valeur al\u00e9atoire",
+              "1"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "d17615abb579577cd12e6aa2",
+            "question": "Lors de la cr\u00e9ation d\u2019une cha\u00eene format\u00e9e, quel verbe devez-vous utiliser pour appeler la m\u00e9thode `String() string` d\u2019un type personnalis\u00e9 ?",
+            "answer": "%s",
+            "explanation": "> En Go, le verbe %s est utilis\u00e9 pour formater une cha\u00eene. Lorsqu\u2019il est utilis\u00e9 avec un type personnalis\u00e9 ayant une m\u00e9thode `String()`, celle-ci est appel\u00e9e automatiquement et sa valeur de retour est utilis\u00e9e dans la cha\u00eene format\u00e9e.",
+            "hint": null,
+            "correctAnswer": [
+              "%s"
+            ],
+            "options": [
+              "%s",
+              "%b",
+              "%v",
+              "%string"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "711b4347fb81b9f9ebae4fb6",
+            "question": "Lequel n\u2019est pas une valeur valide pour `layout` lors de l\u2019appel de `time.Now().Format(layout)` ?",
+            "answer": "\"1970-01-01\"",
+            "explanation": "[time#Time.Format](https://pkg.go.dev/time#Time.Format)\nSelon la documentation, la valeur 1 et 01 repr\u00e9sentent le mois courant.\n```text\neach layout string is a representation of the time stamp,\nJan 2 15:04:05 2006 MST\nAn easy way to remember this value is that it holds, when presented in this order, the values (lined up with the elements above):\n1 2  3  4  5    6  -7\n```",
+            "hint": null,
+            "correctAnswer": [
+              "\"1970-01-01\""
+            ],
+            "options": [
+              "time.REC3339",
+              "\"1970-01-01\"",
+              "\"Jan 2nd 2006\"",
+              "time.Kitchen"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "8386ff07b794e1e54643097d",
+            "question": "Comment signaler au compilateur Go que la struct `Namespace` doit impl\u00e9menter l\u2019interface `JSONConverter` ? Cette question suppose que la r\u00e9ponse sera incluse dans le m\u00eame package o\u00f9 `Namespace` est d\u00e9clar\u00e9e.",
+            "answer": "`var _ JSONConverter = (*Namespace)(nil)`",
+            "explanation": "type Namespace struct {\nimplements JSONConverter\n}\n```\n````\n`````\n``````\n```````\n````````\n`````````\n``````````\n```````````\n````````````\n`````````````\n``````````````\ntype Namespace struct {\nJSONConverter\n}\n```\n````\n`````\n``````\n```````\n````````\n`````````\n``````````\n```````````\n````````````\n`````````````\n``````````````\n> Cette syntaxe cr\u00e9e une variable `_` de type `JSONConverter` et lui assigne la valeur `(*Namespace)(nil)`. Cela v\u00e9rifie que `Namespace` satisfait l\u2019interface `JSONConverter` en s\u2019assurant qu\u2019elle peut \u00eatre affect\u00e9e \u00e0 une variable de type `JSONConverter`.",
+            "hint": null,
+            "correctAnswer": [
+              "`var _ JSONConverter = (*Namespace)(nil)`"
+            ],
+            "options": [
+              "`var _ JSONConverter = nil.(*Namespace)`",
+              "`var _ JSONConverter = (*Namespace)(nil)`",
+              "``````````````go",
+              "``````````````go"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "83724752ee198ad430951bd3",
+            "question": "Quelle affirmation \u00e0 propos du typage et des interfaces est fausse ?",
+            "answer": "Une struct doit d\u00e9clarer explicitement via le mot-cl\u00e9 `implements` que ses instances peuvent \u00eatre utilis\u00e9es partout o\u00f9 une variable, un param\u00e8tre et/ou une valeur de retour est typ\u00e9e pour l\u2019interface d\u00e9clar\u00e9e.",
+            "explanation": "> En Go, un type satisfait automatiquement une interface s\u2019il impl\u00e9mente toutes ses m\u00e9thodes. Il n\u2019y a pas besoin de d\u00e9clarer explicitement qu\u2019une struct impl\u00e9mente une interface via un mot-cl\u00e9 sp\u00e9cifique.",
+            "hint": null,
+            "correctAnswer": [
+              "Une struct doit d\u00e9clarer explicitement via le mot-cl\u00e9 `implements` que ses instances peuvent \u00eatre utilis\u00e9es partout o\u00f9 une variable, un param\u00e8tre et/ou une valeur de retour est typ\u00e9e pour l\u2019interface d\u00e9clar\u00e9e."
+            ],
+            "options": [
+              "Une signature de m\u00e9thode est la combinaison d\u2019un nom de m\u00e9thode et des types de ses param\u00e8tres et valeurs de retour d\u00e9clar\u00e9s.",
+              "Une struct doit d\u00e9clarer explicitement via le mot-cl\u00e9 `implements` que ses instances peuvent \u00eatre utilis\u00e9es partout o\u00f9 une variable, un param\u00e8tre et/ou une valeur de retour est typ\u00e9e pour l\u2019interface d\u00e9clar\u00e9e.",
+              "Une interface d\u00e9clare une liste de m\u00e9thodes et leurs signatures qu\u2019un type doit impl\u00e9menter pour \u00eatre compatible avec les valeurs typ\u00e9es pour cette interface.",
+              "Les variables, param\u00e8tres et valeurs de retour doivent \u00eatre \u00ab typ\u00e9s \u00bb comme l\u2019un de 1) un type int\u00e9gr\u00e9, 2) un alias de type, 3) un type d\u00e9riv\u00e9, 4) un type composite, ou 5) une interface."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "768bda5a066ef3f9655f9fc4",
+            "question": "Comment compl\u00e9ter ce programme pour g\u00e9n\u00e9rer la sortie indiqu\u00e9e, en supposant la table SQL ?\n```go\n===[Output]================\n1: &{GameId:1 Title:Wolfenstein YearReleased:1992}\n2: &{GameId:2 Title:Doom YearReleased:1993}\n3: &{GameId:3 Title:Quake YearReleased:1996}\n===[main.go]================\npackage main\nimport (\n        \"database/sql\"\n        \"fmt\"\n        _ \"github.com/go-sql-driver/mysql\"\n        \"log\"\n)\ntype Game struct {\n        GameId       int\n        Title        string\n        YearReleased int\n}\nfunc main() {\n        conn, err := sql.Open(\"mysql\",\n                \"john_carmack:agiftw!@tcp(localhost:3306)/idsoftware\")\n        if err != nil {\n                panic(err)\n        }\n        defer func() { _ = conn.Close() }()\n        results, err := conn.Query(\"SELECT game_id,title,year_released FROM games;\")\n        if err != nil {\n                panic(err)\n        }\n        defer func() { _ = results.Close() }()\n        // #1 <=== What goes here?\n        for results.Next() {\n                var g Game\n                // #2 <=== What goes here?\n                if err != nil {\n                        panic(err)\n                }\n                // #3 <=== What goes here?\n        }\n        for i, g := range games {\n                fmt.Printf(\"%d: %+v\\n\", i, g)\n        }\n}\n```",
+            "answer": "&shy;",
+            "explanation": "```go\n#1: games := make([]*Game, results.RowsAffected())\n#2: g, err = results.Fetch()\n#3: games[results.Index()] = &g\n```\n```go\n#1: games := []Game{}\n#2: g, err = results.Fetch()\n#3: games = append(games,g)\n```\n```go\n#1: games := map[int]Game{}\n#2: err = results.Scan(&g)\n#3: games[g.GameId] = g\n```\n```go\n#1: games := make(map[int]*Game, 0)\n#2: err = results.Scan(&g.GameId, &g.Title, &g.YearReleased)\n#3: games[g.GameId] = &g\n```",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "37660098fa7569cfc64c52c1",
+            "question": "Compl\u00e9tez les blancs\n1.  Les fichiers de test en Go doivent **\\_**.\n2.  Les tests individuels sont identifi\u00e9s par **\\_**.\n3.  Vous pouvez ex\u00e9cuter des sous-tests en **\\_**.\n4.  Vous journalisez l\u2019erreur et marquez le test comme \u00e9chou\u00e9 en **\\_**.",
+            "answer": "se terminer par `_test.go`<br/>noms de fonctions correspondant \u00e0 `^Test[A-Z]`<br/>appeler `t.Run()`<br/>appeler `t.Errorf()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "se terminer par `_test.go`<br/>noms de fonctions correspondant \u00e0 `^Test[A-Z]`<br/>appeler `t.Run()`<br/>appeler `t.Errorf()`"
+            ],
+            "options": [
+              "\u00eatre stock\u00e9s dans un sous-r\u00e9pertoire `/test/` de ce paquet<br/>fonctions acceptant un param\u00e8tre `testing.Tester`<br/>\u00e9crire des fonctions dont le nom matche `^Subtest`<br/>appeler `testing.AssertionFailed`",
+              "se terminer par `_test.go`<br/>noms de fonctions correspondant \u00e0 `^Test[A-Z]`<br/>appeler `t.Run()`<br/>appeler `t.Errorf()`",
+              "commencer par `test_`<br/>fonctions correspondant \u00e0 `[a-z]Test$`<br/>appeler `testing.Subtest()`<br/>laisser `testing.Assert()` \u00e9chouer son assertion",
+              "\u00eatre stock\u00e9s dans le sous-dossier `/test/` \u00e0 la racine du projet<br/>fonctions acceptant un param\u00e8tre `testing.Test`<br/>passer des closures \u00e0 `testing.AddSubtest()`<br/>retourner une `error` depuis la fonction"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "d4be64e7343deca9eca6ecfb",
+            "question": "Pour quel type `rune` est-il un alias ?",
+            "answer": "int32",
+            "explanation": "1. [Strings, bytes, runes and characters in Go](https://go.dev/blog/strings)\nExtrait pertinent :\n> The Go language defines the word rune as an alias for the type int32, so programs can be clear when an integer value represents a code point.",
+            "hint": null,
+            "correctAnswer": [
+              "int32"
+            ],
+            "options": [
+              "char",
+              "byte",
+              "int32",
+              "string"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "4efb2866f45f90883279d2c4",
+            "question": "Quand pouvez-vous utiliser la syntaxe `:=` pour affecter \u00e0 plusieurs variables ? Par exemple :\n```go\nx, err := myFunc()\n```",
+            "answer": "si au moins l\u2019une d\u2019elles n\u2019a pas \u00e9t\u00e9 d\u00e9clar\u00e9e dans ce bloc lexical",
+            "explanation": "1. [Short variable declarations](https://go.dev/ref/spec#Short_variable_declarations)",
+            "hint": null,
+            "correctAnswer": [
+              "si au moins l\u2019une d\u2019elles n\u2019a pas \u00e9t\u00e9 d\u00e9clar\u00e9e dans ce bloc lexical"
+            ],
+            "options": [
+              "si au moins l\u2019une d\u2019elles n\u2019a pas \u00e9t\u00e9 d\u00e9clar\u00e9e dans ce bloc lexical",
+              "tout le temps, cela \u00e9crasera les variables existantes",
+              "si aucune variable de ces noms n\u2019est accessible",
+              "si aucune de ces variables n\u2019existe dans ce bloc lexical"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "639e9ec922206b71374eaeea",
+            "question": "Comment afficher la sortie du profileur dans `cpu.pprof` dans le navigateur ?",
+            "answer": "`go tool pprof -http=:8080 cpu.pprof`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`go tool pprof -http=:8080 cpu.pprof`"
+            ],
+            "options": [
+              "`go pprof -to SVG cpu.prof`",
+              "`go tool pprof -http=:8080 cpu.pprof`",
+              "`go tool pprof cpu.pprof`",
+              "`go tool trace cpu.pprof`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "4d45455e302a47d13a988f57",
+            "question": "Quand une variable de type `interface{}` est-elle \u00e9valu\u00e9e \u00e0 `nil` ?",
+            "answer": "Lorsqu\u2019on lui a assign\u00e9 un type dynamique dont la valeur est `nil`.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Lorsqu\u2019on lui a assign\u00e9 un type dynamique dont la valeur est `nil`."
+            ],
+            "options": [
+              "Lorsqu\u2019on lui a assign\u00e9 un type dynamique dont la valeur est `nil`.",
+              "Lorsqu\u2019elle a \u00e9t\u00e9 explicitement d\u00e9finie \u00e0 `nil`.",
+              "Lorsqu\u2019aucun type dynamique ne lui a \u00e9t\u00e9 assign\u00e9.",
+              "Elle ne peut pas \u00eatre \u00e9valu\u00e9e \u00e0 `nil`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "012110e0263096ceda7f59d0",
+            "question": "Quelle valeur une variable `string` contient-elle si elle a \u00e9t\u00e9 allou\u00e9e mais non affect\u00e9e ?",
+            "answer": "\"\"",
+            "explanation": "> Si une variable string a \u00e9t\u00e9 allou\u00e9e mais non affect\u00e9e, sa valeur par d\u00e9faut est une cha\u00eene vide \"\". En Go, les variables non initialis\u00e9es re\u00e7oivent la valeur z\u00e9ro de leur type, pour les cha\u00eenes c\u2019est \"\".",
+            "hint": null,
+            "correctAnswer": [
+              "\"\""
+            ],
+            "options": [
+              "nil",
+              "undefined",
+              "null",
+              "\"\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "e250bf42bc7afa26c68d0a3d",
+            "question": "Quelle fonction int\u00e9gr\u00e9e est utilis\u00e9e pour arr\u00eater la poursuite d\u2019un programme ?",
+            "answer": "`panic`",
+            "explanation": "> La fonction int\u00e9gr\u00e9e utilis\u00e9e pour arr\u00eater un programme est `panic()`. Lorsqu\u2019elle est appel\u00e9e, elle d\u00e9clenche une panique qui interrompt le flot normal du programme. Si elle n\u2019est pas r\u00e9cup\u00e9r\u00e9e, le programme se termine.",
+            "hint": null,
+            "correctAnswer": [
+              "`panic`"
+            ],
+            "options": [
+              "`panic`",
+              "Il n\u2019existe pas une telle fonction.",
+              "`raiseException`",
+              "`exit`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "6fbb40545db38dddfda4f2f9",
+            "question": "Quelle sera la sortie ?\n```go\na,b := 1, 2\nb,c:= 3, 4\nfmt.Println(a, b, c)\n```",
+            "answer": "1 3 4; &&; Une fonction sans nom.; `func()`",
+            "explanation": "[Go Playground Example](https://go.dev/play/p/qUI50GNGWTq)\n### Q71. Quel est l\u2019op\u00e9rateur pour une condition ET logique ?\n### Q72. Qu\u2019est-ce qu\u2019une fonction anonyme en Go ?\n### Q73. Quel mot-cl\u00e9 est utilis\u00e9 pour d\u00e9clarer une fonction anonyme en Go ?",
+            "hint": null,
+            "correctAnswer": [
+              "1 3 4",
+              "&&",
+              "Une fonction sans nom.",
+              "`func()`"
+            ],
+            "options": [
+              "1 3 4",
+              "1 2 3",
+              "1 2 4",
+              "Cela ne compilera pas.",
+              "-",
+              "and",
+              "&&",
+              "||",
+              "Une fonction sans type de retour.",
+              "Une fonction sans param\u00e8tres.",
+              "Une fonction sans nom.",
+              "Une fonction d\u00e9clar\u00e9e \u00e0 l\u2019int\u00e9rieur d\u2019une autre fonction.",
+              "`func`",
+              "`lambda`",
+              "`func()`",
+              "`anonymous`"
+            ],
+            "nature": "ChooseMany",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "7d91b15bc4f805fab8988e1a",
+            "question": "Quel est l\u2019avantage principal d\u2019utiliser des fonctions anonymes en Go ?",
+            "answer": "Elles peuvent \u00eatre d\u00e9finies en ligne l\u00e0 o\u00f9 elles sont utilis\u00e9es.",
+            "explanation": "Explication : elles peuvent \u00eatre d\u00e9finies en ligne l\u00e0 o\u00f9 elles sont utilis\u00e9es, offrant plus de flexibilit\u00e9 d\u2019organisation du code.",
+            "hint": null,
+            "correctAnswer": [
+              "Elles peuvent \u00eatre d\u00e9finies en ligne l\u00e0 o\u00f9 elles sont utilis\u00e9es."
+            ],
+            "options": [
+              "Elles ont toujours de meilleures performances que les fonctions nomm\u00e9es.",
+              "Elles peuvent avoir plusieurs valeurs de retour.",
+              "Elles peuvent \u00eatre d\u00e9finies en ligne l\u00e0 o\u00f9 elles sont utilis\u00e9es.",
+              "Elles ont une syntaxe plus courte que les fonctions nomm\u00e9es."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "770ebf8173f403cabe34d7ba",
+            "question": "Quelle est la syntaxe pour appeler imm\u00e9diatement une fonction anonyme apr\u00e8s sa d\u00e9claration en Go ?",
+            "answer": "`func(){}()`",
+            "explanation": "[reference](https://stackoverflow.com/questions/6719089/javascript-anonymous-function-immediate-invocation-execution-expression-vs-dec)",
+            "hint": null,
+            "correctAnswer": [
+              "`func(){}()`"
+            ],
+            "options": [
+              "`functionName(){}`",
+              "`call functionName(){}`",
+              "`func(){}()`",
+              "`execute func(){}`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          },
+          {
+            "id": "4fb5012271440a5b7e87e0a3",
+            "question": "Pour quels types les d\u00e9veloppeurs Go peuvent-ils d\u00e9finir des m\u00e9thodes ?",
+            "answer": "tous les types nomm\u00e9s non int\u00e9gr\u00e9s \u00e0 Go, tels que `type Example int` mais pas `int`, `type Example struct{...}` mais pas `struct`, etc.",
+            "explanation": "> Les m\u00e9thodes peuvent \u00eatre d\u00e9finies pour tout type nomm\u00e9 qui n\u2019est pas un type int\u00e9gr\u00e9. Lorsqu\u2019on cr\u00e9e un nouveau type via une d\u00e9claration `type`, il devient un type nomm\u00e9, et on peut d\u00e9finir des m\u00e9thodes sp\u00e9cifiques \u00e0 ce type. Les m\u00e9thodes ne peuvent pas \u00eatre attach\u00e9es directement aux types int\u00e9gr\u00e9s comme `int`, `string`, etc. [reference](https://go.dev/ref/spec#Method_declarations)",
+            "hint": null,
+            "correctAnswer": [
+              "tous les types nomm\u00e9s non int\u00e9gr\u00e9s \u00e0 Go, tels que `type Example int` mais pas `int`, `type Example struct{...}` mais pas `struct`, etc."
+            ],
+            "options": [
+              "tous les types nomm\u00e9s non int\u00e9gr\u00e9s \u00e0 Go, tels que `type Example int` mais pas `int`, `type Example struct{...}` mais pas `struct`, etc.",
+              "uniquement les types nomm\u00e9s `struct`, `map` et `slice`, tels que `type Example struct{\u2026}`",
+              "uniquement les types nomm\u00e9s `struct`, tels que `type Example struct{...}`",
+              "tous les types"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "89aa0c746478fca35b3d90a0",
+            "quizzId": "1e676f7cd2691018e838d940"
+          }
+        ]
       }
     ]
   },
   "meta": {
     "source": "go/go-quiz-fr.md",
-    "language": "fr",
-    "generatedAt": "2025-12-09T14:56:14.263237+00:00",
+    "languages": [
+      "fr"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.296436+00:00",
     "warnings": []
   }
 }

@@ -1,431 +1,494 @@
 {
   "quizz": {
     "id": "9ca981f69503c29ece55f342",
-    "title": "Rust (langage de programmation)",
-    "description": "Seeded from rust/rust-quiz-fr.md",
-    "createdById": "seed-user",
-    "questions": [
+    "slug": "rust-langage-de-programmation",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
       {
-        "id": "739d69ebc81b6fc26677bd10",
-        "question": "Quel type de conversion pr\u00e9serve la valeur math\u00e9matique dans tous les cas\u00a0?",
-        "answer": "i32 comme i64",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "i32 comme i64"
-        ],
-        "options": [
-          "i64 comme i32",
-          "utiliser comme u64",
-          "i32 comme i64",
-          "f64 comme f32"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cd70526befe0849b51e5d5f6",
-        "question": "Que repr\u00e9sentent les barres verticales ici ?\n```rouille\nstr::thread::spawn(|| {\n     println!(\"LinkedIn\");\n});\n```",
-        "answer": "une fermeture",
-        "explanation": "[r\u00e9f\u00e9rence](https://doc.rust-lang.org/book/ch13-01-closures.html#refactoring-with-closures-to-store-code)",
-        "hint": null,
-        "correctAnswer": [
-          "une fermeture"
-        ],
-        "options": [
-          "une fermeture",
-          "un fil",
-          "un futur",
-          "un bloc"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8a85e15e1736974d985b79d1",
-        "question": "Quel choix n\u2019est pas un type de donn\u00e9es scalaire\u00a0?",
-        "answer": "tuple",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "tuple"
-        ],
-        "options": [
-          "entier",
-          "flotter",
-          "bool\u00e9en",
-          "tuple"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d48e989f9515d759813782f3",
-        "question": "**\\_** ne peut pas \u00eatre d\u00e9structur\u00e9.",
-        "answer": "Caract\u00e9ristiques",
-        "explanation": "[r\u00e9f\u00e9rence](https://rust-lang.github.io/rfcs/2909-destructuring-assignment.html)",
-        "hint": null,
-        "correctAnswer": [
-          "Caract\u00e9ristiques"
-        ],
-        "options": [
-          "Caract\u00e9ristiques",
-          "Tuples",
-          "\u00c9num\u00e9rations",
-          "Structures"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0718a2c9689493df1a90f76c",
-        "question": "Quelle commande \u00ab cargo \u00bb v\u00e9rifie les erreurs d'un programme sans cr\u00e9er d'ex\u00e9cutable binaire ?",
-        "answer": "contr\u00f4le de fret",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "contr\u00f4le de fret"
-        ],
-        "options": [
-          "cargo --version",
-          "initialisation du fret",
-          "construction de marchandises",
-          "contr\u00f4le de fret"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3afc3fe3c5161c5fafdd436b",
-        "question": "Le terme _box_ et les expressions associ\u00e9es telles que _boxing a value_ sont souvent utilis\u00e9s en relation avec la disposition de la m\u00e9moire. \u00c0 quoi _box_ fait-il r\u00e9f\u00e9rence\u00a0?",
-        "answer": "Cela cr\u00e9e un pointeur sur la pile qui pointe vers une valeur sur le tas.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Cela cr\u00e9e un pointeur sur la pile qui pointe vers une valeur sur le tas."
-        ],
-        "options": [
-          "Cela cr\u00e9e un pointeur sur le tas qui pointe vers une valeur sur la pile.",
-          "Cela cr\u00e9e un pointeur sur la pile qui pointe vers une valeur sur le tas.",
-          "Cela cr\u00e9e une garde de m\u00e9moire autour des valeurs pour emp\u00eacher tout acc\u00e8s ill\u00e9gal.",
-          "C'est une abstraction qui fait r\u00e9f\u00e9rence \u00e0 la propri\u00e9t\u00e9. Les valeurs \u00ab encadr\u00e9es \u00bb sont clairement \u00e9tiquet\u00e9es."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "51132af703cefa564a8fcfec",
-        "question": "Quelle est une autre mani\u00e8re d'\u00e9crire \u00ab\u00a0slice\u00a0\u00bb qui produit le m\u00eame r\u00e9sultat\u00a0?\n```rouille\n...\nlet s = String::form(\"bonjour\");\nlaissez tranche = &s[0..2];\n```",
-        "answer": "let slice = &s[..2];",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "let slice = &s[..2];"
-        ],
-        "options": [
-          "let slice = &s[len + 2];",
-          "let slice = &s[len - 2];",
-          "let slice = &s.copy(0..2);",
-          "let slice = &s[..2];"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4160963f2c8e8c1a043f1c0e",
-        "question": "Utiliser l'op\u00e9rateur `?` \u00e0 la fin d'une expression \u00e9quivaut \u00e0 **\\_**.",
-        "answer": "un mod\u00e8le de correspondance pouvant entra\u00eener un retour anticip\u00e9",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "un mod\u00e8le de correspondance pouvant entra\u00eener un retour anticip\u00e9"
-        ],
-        "options": [
-          "un mod\u00e8le de correspondance qui se ramifie en Vrai ou Faux",
-          "appelant ok_error()",
-          "appelant \u00e0 la panique\u00a0!()",
-          "un mod\u00e8le de correspondance pouvant entra\u00eener un retour anticip\u00e9"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9115052deef1b3136af22d71",
-        "question": "Quelle est la syntaxe valide pour d\u00e9finir un tableau de valeurs i32\u00a0?",
-        "answer": "[i32; dix]",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "[i32; dix]"
-        ],
-        "options": [
-          "Tableau<i32>::with_capacity(10)",
-          "[i32]",
-          "Tableau<i32>::new(10)",
-          "[i32; dix]"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ecd4df2ffc6f8fd02770b95e",
-        "question": "Quelle syntaxe est requise pour prendre une r\u00e9f\u00e9rence mutable \u00e0 T, lorsqu'elle est utilis\u00e9e dans un argument de fonction\u00a0?\n```rouille\nincr\u00e9ment fn (i\u00a0: T) {\n     // corps \u00e9lid\u00e9\n}\n```",
-        "answer": "&mut T",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "&mut T"
-        ],
-        "options": [
-          "\\*mut T",
-          "mut r\u00e9f T",
-          "mut&T",
-          "&mut T"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "82fb75748875c8b0cca73383",
-        "question": "Les pointeurs intelligents Rc et Arc assurent le comptage de r\u00e9f\u00e9rences. Quelle est l'API permettant d'incr\u00e9menter un nombre de r\u00e9f\u00e9rences\u00a0?",
-        "answer": ".clone()",
-        "explanation": "[r\u00e9f\u00e9rence](https://doc.rust-lang.org/book/ch15-04-rc.html)",
-        "hint": null,
-        "correctAnswer": [
-          ".clone()"
-        ],
-        "options": [
-          ".ajouter()",
-          ".incr()",
-          ".clone()",
-          ".increment()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6307af3af0aa6c352d46ba1e",
-        "question": "Que se passe-t-il lorsqu'une erreur se produit et est g\u00e9r\u00e9e par l'op\u00e9rateur point d'interrogation (?)\u00a0?",
-        "answer": "Rust tente de convertir l'erreur en type d'erreur de la fonction locale et de la renvoyer sous la forme Result::Err. Si cela \u00e9choue, le programme panique.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Rust tente de convertir l'erreur en type d'erreur de la fonction locale et de la renvoyer sous la forme Result::Err. Si cela \u00e9choue, le programme panique."
-        ],
-        "options": [
-          "L'erreur est signal\u00e9e et l'ex\u00e9cution continue.",
-          "Une exception est lev\u00e9e. Le(s) effet(s) de l'exception sont d\u00e9finis par l'erreur\u00a0! macro.",
-          "Le programme panique imm\u00e9diatement.",
-          "Rust tente de convertir l'erreur en type d'erreur de la fonction locale et de la renvoyer sous la forme Result::Err. Si cela \u00e9choue, le programme panique."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "873fc4c0e2e91f28741522b7",
-        "question": "Quelle syntaxe de commentaire n'est pas l\u00e9gale\u00a0?",
-        "answer": "`#`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`#`"
-        ],
-        "options": [
-          "`/*`",
-          "`#`",
-          "`//!`",
-          "`//`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1335bbe65f650cfa323c36dc",
-        "question": "Dans les mod\u00e8les de correspondance, les valeurs sont ignor\u00e9es avec \\_.",
-        "answer": "..",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          ".."
-        ],
-        "options": [
-          "`.ignorer()`",
-          "`un trait de soulignement (_)`",
-          "..",
-          "sauter"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "71cb32d97209400c91d089e0",
-        "question": "D\u00e9finir un \\_ n\u00e9cessite un param\u00e8tre de dur\u00e9e de vie.",
-        "answer": "structure qui contient une r\u00e9f\u00e9rence \u00e0 une valeur",
-        "explanation": "[R\u00e9f\u00e9rence du livre Rust](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html#lifetime-annotations-in-struct-definitions)",
-        "hint": null,
-        "correctAnswer": [
-          "structure qui contient une r\u00e9f\u00e9rence \u00e0 une valeur"
-        ],
-        "options": [
-          "fonction qui met fin \u00e0 la dur\u00e9e de vie d'un de ses arguments",
-          "structure qui contient une r\u00e9f\u00e9rence \u00e0 une valeur",
-          "fonction avec un argument g\u00e9n\u00e9rique",
-          "structure qui contient une r\u00e9f\u00e9rence \u00e0 une valeur encadr\u00e9e"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "59e7c1f325cb55987d381266",
-        "question": "Quel exemple utilise correctement l'API d'entr\u00e9e de std::collections::HashMap pour renseigner les d\u00e9comptes\u00a0?\n```rouille\nutilisez std :: collections :: HashMap ;\nfn main() {\n     laissez mut counts = HashMap::new();\n     let text = \"LinkedIn Learning\";\n     pour c dans text.chars() {\n         // Compl\u00e9tez ce bloc\n     }\n     println!(\"{:?}\", compte);\n}\n```",
-        "answer": "&timide;",
-        "explanation": "```rouille\npour c dans text.chars() {\nsi let Some(count) = &mut counts.get(&c) {\ncounts.insert(c, *count + 1);\n} autre {\ncounts.insert(c, 1);\n}\u00a0;\n}\n```\n```rouille\npour c dans text.chars() {\nlet count = counts.entry(c).or_insert(0);\n*compte += 1\u00a0;\n}\n```\n```rouille\npour c dans text.chars() {\nlaissez count = counts.entry(c);\n*compte += 1\u00a0;\n}\n```\n```rouille\npour c dans text.chars() {\ncounts.entry(c).or_insert(0).map(|x| x + 1);\n}\n```\n[r\u00e9f\u00e9rence](https://doc.rust-lang.org/std/collections/hash_map/struct.HashMap.html#method.entry)",
-        "hint": null,
-        "correctAnswer": [
-          "&timide;"
-        ],
-        "options": [
-          "&timide;",
-          "&timide;",
-          "&timide;",
-          "&timide;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ea38e20f8369e4ce0f35c976",
-        "question": "Quel fragment n'entra\u00eene pas d'allocation de m\u00e9moire lors de l'\u00e9criture dans un \"fichier\" (repr\u00e9sent\u00e9 par un Vec<u8>)\u00a0?\n```rouille\nutilisez std :: collections :: HashMap ;\nfn main() -> R\u00e9sultat<(), Box<dyn std::error::Error>> {\n     soit mut v = Vec::<u8>::new();\n     laissez a = \"LinkedIn\"\u00a0;\n     soit b = 123 ;\n     soit c = '\ud83e\uddc0';\n     // remplace cette ligne\n     println!(\"{:?}\", v);\n     D'accord(())\n}\n```",
-        "answer": ":",
-        "explanation": "```rouille\n\u00e9crire!(&mut v, \"{}{}{}\", a, b, c) ?;\n```\n```rouille\nv.\u00e9crire(a) ?;\nv.write(b) ?;\nv.write(c) ?;\n```\n```rouille\n```",
-        "hint": null,
-        "correctAnswer": [
-          ":"
-        ],
-        "options": [
-          ":",
-          ":",
-          ":"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9708ba980484dc932d6588c6",
-        "question": ": Qu'est-ce que Rust ?\n[ ] Un langage de programmation bas\u00e9 sur C++\n[ ] Un langage de programmation bas\u00e9 sur Java\n[ ] Un langage de programmation bas\u00e9 sur Python\n[x] Un langage de programmation syst\u00e8me s\u00e9curis\u00e9 et performant",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6fdf00bd142dff1e9c7a8f7d",
-        "question": ": Quelle affirmation suivante est vraie \u00e0 propos de Rust ?\n[ ] Rust permet la gestion automatique de la m\u00e9moire.\n[ ] Rust est un langage interpr\u00e9t\u00e9.\n[ ] Rust n'est pas utilis\u00e9 pour la programmation syst\u00e8me.\n[x] Rust garantit la s\u00e9curit\u00e9 de la m\u00e9moire sans n\u00e9cessiter un ramasse-miettes (garbage collector).",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fcf0569133d18083feb4a3c9",
-        "question": ": \u00c0 quoi sert la notion de \"propri\u00e9t\u00e9\" (ownership) en Rust ?\n[ ] Pour g\u00e9rer les licences logicielles.\n[ ] Pour restreindre l'acc\u00e8s aux ressources r\u00e9seau.\n[ ] Pour contr\u00f4ler l'acc\u00e8s aux bases de donn\u00e9es.\n[x] Pour g\u00e9rer de mani\u00e8re s\u00e9curis\u00e9e l'allocation et la lib\u00e9ration de m\u00e9moire.",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5c08f8403f4c31b54588d1ad",
-        "question": ": Quel est le type de donn\u00e9es utilis\u00e9 pour les r\u00e9f\u00e9rences non mutables en Rust ?\n[ ] &mut\n[ ] const\n[ ] mutable\n[x] &",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fd44f72db574142154a68fa4",
-        "question": ": Quel concept en Rust permet d'\u00e9viter les probl\u00e8mes de concurrence et les courses de donn\u00e9es ?\n[ ] Mutex\n[ ] Condition\n[ ] Verrouillage de m\u00e9moire\n[x] Propri\u00e9t\u00e9 (ownership) et Emprunt (borrowing)",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "91c7f0483b6f080ae8195a1e",
-        "question": ": Qu'est-ce qu'un \"lifetime\" en Rust ?\n[ ] La dur\u00e9e d'ex\u00e9cution d'un programme Rust.\n[ ] Une mesure de la vitesse d'ex\u00e9cution d'un programme Rust.\n] Une \u00e9tiquette temporelle sur une variable sp\u00e9cifiant sa dur\u00e9e de vie.\n[x] Une marque temporelle d\u00e9finissant la dur\u00e9e de validit\u00e9 des r\u00e9f\u00e9rences.",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "048082c95d103cf2c5434d36",
-        "question": ": Quel est le syst\u00e8me de construction et de gestion de paquets le plus utilis\u00e9 en Rust ?\n[ ] CMake\n[ ] Gradle\n[ ] Maven\n[x] Cargo",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2f70d48f8c2599f6240e5b07",
-        "question": ": Quel type de programmation promeut Rust pour \u00e9viter les erreurs de programmation ?\n] Programmation lin\u00e9aire\n[ ] Programmation statique\n[ ] Programmation flexible\n[x] Programmation s\u00e9curis\u00e9e",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b3a968906fcde2b90d281cde",
-        "question": ": Que signifie l'acronyme \"MIR\" dans le contexte de Rust ?\n[ ] Mappeur d'Instructions de R\u00e9f\u00e9rence\n[ ] Mod\u00e8le d'Instructions et de Registres\n[ ] Mod\u00e8le d'Inf\u00e9rence de Rendement\n[x] Repr\u00e9sentation Interm\u00e9diaire de Rust",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f1897622ef12963f62e93db0",
-        "question": ": Quelle caract\u00e9ristique de Rust permet aux programmeurs d'\u00e9crire un code plus s\u00fbr et d'\u00e9viter les erreurs de concurrence ?\n[ ] Ramasse-miettes (garbage collector)\n[ ] Pointeurs nuls\n[ ] Utilisation excessive de commentaires\n[x] Propri\u00e9t\u00e9 (ownership), Emprunt (borrowing) et Dur\u00e9es de vie (lifetimes)",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [],
-        "nature": "ChooseOne",
-        "attachments": []
+        "id": "cdbaf70937b094ac6267fa2e",
+        "language": "fr",
+        "title": "Rust (langage de programmation)",
+        "description": "Seeded from rust/rust-quiz-fr.md",
+        "questions": [
+          {
+            "id": "739d69ebc81b6fc26677bd10",
+            "question": "Quel type de conversion pr\u00e9serve la valeur math\u00e9matique dans tous les cas\u00a0?",
+            "answer": "i32 comme i64",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "i32 comme i64"
+            ],
+            "options": [
+              "i64 comme i32",
+              "utiliser comme u64",
+              "i32 comme i64",
+              "f64 comme f32"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "cd70526befe0849b51e5d5f6",
+            "question": "Que repr\u00e9sentent les barres verticales ici ?\n```rouille\nstr::thread::spawn(|| {\n     println!(\"LinkedIn\");\n});\n```",
+            "answer": "une fermeture",
+            "explanation": "[r\u00e9f\u00e9rence](https://doc.rust-lang.org/book/ch13-01-closures.html#refactoring-with-closures-to-store-code)",
+            "hint": null,
+            "correctAnswer": [
+              "une fermeture"
+            ],
+            "options": [
+              "une fermeture",
+              "un fil",
+              "un futur",
+              "un bloc"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "8a85e15e1736974d985b79d1",
+            "question": "Quel choix n\u2019est pas un type de donn\u00e9es scalaire\u00a0?",
+            "answer": "tuple",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "tuple"
+            ],
+            "options": [
+              "entier",
+              "flotter",
+              "bool\u00e9en",
+              "tuple"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "d48e989f9515d759813782f3",
+            "question": "**\\_** ne peut pas \u00eatre d\u00e9structur\u00e9.",
+            "answer": "Caract\u00e9ristiques",
+            "explanation": "[r\u00e9f\u00e9rence](https://rust-lang.github.io/rfcs/2909-destructuring-assignment.html)",
+            "hint": null,
+            "correctAnswer": [
+              "Caract\u00e9ristiques"
+            ],
+            "options": [
+              "Caract\u00e9ristiques",
+              "Tuples",
+              "\u00c9num\u00e9rations",
+              "Structures"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "0718a2c9689493df1a90f76c",
+            "question": "Quelle commande \u00ab cargo \u00bb v\u00e9rifie les erreurs d'un programme sans cr\u00e9er d'ex\u00e9cutable binaire ?",
+            "answer": "contr\u00f4le de fret",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "contr\u00f4le de fret"
+            ],
+            "options": [
+              "cargo --version",
+              "initialisation du fret",
+              "construction de marchandises",
+              "contr\u00f4le de fret"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "3afc3fe3c5161c5fafdd436b",
+            "question": "Le terme _box_ et les expressions associ\u00e9es telles que _boxing a value_ sont souvent utilis\u00e9s en relation avec la disposition de la m\u00e9moire. \u00c0 quoi _box_ fait-il r\u00e9f\u00e9rence\u00a0?",
+            "answer": "Cela cr\u00e9e un pointeur sur la pile qui pointe vers une valeur sur le tas.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Cela cr\u00e9e un pointeur sur la pile qui pointe vers une valeur sur le tas."
+            ],
+            "options": [
+              "Cela cr\u00e9e un pointeur sur le tas qui pointe vers une valeur sur la pile.",
+              "Cela cr\u00e9e un pointeur sur la pile qui pointe vers une valeur sur le tas.",
+              "Cela cr\u00e9e une garde de m\u00e9moire autour des valeurs pour emp\u00eacher tout acc\u00e8s ill\u00e9gal.",
+              "C'est une abstraction qui fait r\u00e9f\u00e9rence \u00e0 la propri\u00e9t\u00e9. Les valeurs \u00ab encadr\u00e9es \u00bb sont clairement \u00e9tiquet\u00e9es."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "51132af703cefa564a8fcfec",
+            "question": "Quelle est une autre mani\u00e8re d'\u00e9crire \u00ab\u00a0slice\u00a0\u00bb qui produit le m\u00eame r\u00e9sultat\u00a0?\n```rouille\n...\nlet s = String::form(\"bonjour\");\nlaissez tranche = &s[0..2];\n```",
+            "answer": "let slice = &s[..2];",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "let slice = &s[..2];"
+            ],
+            "options": [
+              "let slice = &s[len + 2];",
+              "let slice = &s[len - 2];",
+              "let slice = &s.copy(0..2);",
+              "let slice = &s[..2];"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "4160963f2c8e8c1a043f1c0e",
+            "question": "Utiliser l'op\u00e9rateur `?` \u00e0 la fin d'une expression \u00e9quivaut \u00e0 **\\_**.",
+            "answer": "un mod\u00e8le de correspondance pouvant entra\u00eener un retour anticip\u00e9",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "un mod\u00e8le de correspondance pouvant entra\u00eener un retour anticip\u00e9"
+            ],
+            "options": [
+              "un mod\u00e8le de correspondance qui se ramifie en Vrai ou Faux",
+              "appelant ok_error()",
+              "appelant \u00e0 la panique\u00a0!()",
+              "un mod\u00e8le de correspondance pouvant entra\u00eener un retour anticip\u00e9"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "9115052deef1b3136af22d71",
+            "question": "Quelle est la syntaxe valide pour d\u00e9finir un tableau de valeurs i32\u00a0?",
+            "answer": "[i32; dix]",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "[i32; dix]"
+            ],
+            "options": [
+              "Tableau<i32>::with_capacity(10)",
+              "[i32]",
+              "Tableau<i32>::new(10)",
+              "[i32; dix]"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "ecd4df2ffc6f8fd02770b95e",
+            "question": "Quelle syntaxe est requise pour prendre une r\u00e9f\u00e9rence mutable \u00e0 T, lorsqu'elle est utilis\u00e9e dans un argument de fonction\u00a0?\n```rouille\nincr\u00e9ment fn (i\u00a0: T) {\n     // corps \u00e9lid\u00e9\n}\n```",
+            "answer": "&mut T",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "&mut T"
+            ],
+            "options": [
+              "\\*mut T",
+              "mut r\u00e9f T",
+              "mut&T",
+              "&mut T"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "82fb75748875c8b0cca73383",
+            "question": "Les pointeurs intelligents Rc et Arc assurent le comptage de r\u00e9f\u00e9rences. Quelle est l'API permettant d'incr\u00e9menter un nombre de r\u00e9f\u00e9rences\u00a0?",
+            "answer": ".clone()",
+            "explanation": "[r\u00e9f\u00e9rence](https://doc.rust-lang.org/book/ch15-04-rc.html)",
+            "hint": null,
+            "correctAnswer": [
+              ".clone()"
+            ],
+            "options": [
+              ".ajouter()",
+              ".incr()",
+              ".clone()",
+              ".increment()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "6307af3af0aa6c352d46ba1e",
+            "question": "Que se passe-t-il lorsqu'une erreur se produit et est g\u00e9r\u00e9e par l'op\u00e9rateur point d'interrogation (?)\u00a0?",
+            "answer": "Rust tente de convertir l'erreur en type d'erreur de la fonction locale et de la renvoyer sous la forme Result::Err. Si cela \u00e9choue, le programme panique.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Rust tente de convertir l'erreur en type d'erreur de la fonction locale et de la renvoyer sous la forme Result::Err. Si cela \u00e9choue, le programme panique."
+            ],
+            "options": [
+              "L'erreur est signal\u00e9e et l'ex\u00e9cution continue.",
+              "Une exception est lev\u00e9e. Le(s) effet(s) de l'exception sont d\u00e9finis par l'erreur\u00a0! macro.",
+              "Le programme panique imm\u00e9diatement.",
+              "Rust tente de convertir l'erreur en type d'erreur de la fonction locale et de la renvoyer sous la forme Result::Err. Si cela \u00e9choue, le programme panique."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "873fc4c0e2e91f28741522b7",
+            "question": "Quelle syntaxe de commentaire n'est pas l\u00e9gale\u00a0?",
+            "answer": "`#`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`#`"
+            ],
+            "options": [
+              "`/*`",
+              "`#`",
+              "`//!`",
+              "`//`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "1335bbe65f650cfa323c36dc",
+            "question": "Dans les mod\u00e8les de correspondance, les valeurs sont ignor\u00e9es avec \\_.",
+            "answer": "..",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              ".."
+            ],
+            "options": [
+              "`.ignorer()`",
+              "`un trait de soulignement (_)`",
+              "..",
+              "sauter"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "71cb32d97209400c91d089e0",
+            "question": "D\u00e9finir un \\_ n\u00e9cessite un param\u00e8tre de dur\u00e9e de vie.",
+            "answer": "structure qui contient une r\u00e9f\u00e9rence \u00e0 une valeur",
+            "explanation": "[R\u00e9f\u00e9rence du livre Rust](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html#lifetime-annotations-in-struct-definitions)",
+            "hint": null,
+            "correctAnswer": [
+              "structure qui contient une r\u00e9f\u00e9rence \u00e0 une valeur"
+            ],
+            "options": [
+              "fonction qui met fin \u00e0 la dur\u00e9e de vie d'un de ses arguments",
+              "structure qui contient une r\u00e9f\u00e9rence \u00e0 une valeur",
+              "fonction avec un argument g\u00e9n\u00e9rique",
+              "structure qui contient une r\u00e9f\u00e9rence \u00e0 une valeur encadr\u00e9e"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "59e7c1f325cb55987d381266",
+            "question": "Quel exemple utilise correctement l'API d'entr\u00e9e de std::collections::HashMap pour renseigner les d\u00e9comptes\u00a0?\n```rouille\nutilisez std :: collections :: HashMap ;\nfn main() {\n     laissez mut counts = HashMap::new();\n     let text = \"LinkedIn Learning\";\n     pour c dans text.chars() {\n         // Compl\u00e9tez ce bloc\n     }\n     println!(\"{:?}\", compte);\n}\n```",
+            "answer": "&timide;",
+            "explanation": "```rouille\npour c dans text.chars() {\nsi let Some(count) = &mut counts.get(&c) {\ncounts.insert(c, *count + 1);\n} autre {\ncounts.insert(c, 1);\n}\u00a0;\n}\n```\n```rouille\npour c dans text.chars() {\nlet count = counts.entry(c).or_insert(0);\n*compte += 1\u00a0;\n}\n```\n```rouille\npour c dans text.chars() {\nlaissez count = counts.entry(c);\n*compte += 1\u00a0;\n}\n```\n```rouille\npour c dans text.chars() {\ncounts.entry(c).or_insert(0).map(|x| x + 1);\n}\n```\n[r\u00e9f\u00e9rence](https://doc.rust-lang.org/std/collections/hash_map/struct.HashMap.html#method.entry)",
+            "hint": null,
+            "correctAnswer": [
+              "&timide;"
+            ],
+            "options": [
+              "&timide;",
+              "&timide;",
+              "&timide;",
+              "&timide;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "ea38e20f8369e4ce0f35c976",
+            "question": "Quel fragment n'entra\u00eene pas d'allocation de m\u00e9moire lors de l'\u00e9criture dans un \"fichier\" (repr\u00e9sent\u00e9 par un Vec<u8>)\u00a0?\n```rouille\nutilisez std :: collections :: HashMap ;\nfn main() -> R\u00e9sultat<(), Box<dyn std::error::Error>> {\n     soit mut v = Vec::<u8>::new();\n     laissez a = \"LinkedIn\"\u00a0;\n     soit b = 123 ;\n     soit c = '\ud83e\uddc0';\n     // remplace cette ligne\n     println!(\"{:?}\", v);\n     D'accord(())\n}\n```",
+            "answer": ":",
+            "explanation": "```rouille\n\u00e9crire!(&mut v, \"{}{}{}\", a, b, c) ?;\n```\n```rouille\nv.\u00e9crire(a) ?;\nv.write(b) ?;\nv.write(c) ?;\n```\n```rouille\n```",
+            "hint": null,
+            "correctAnswer": [
+              ":"
+            ],
+            "options": [
+              ":",
+              ":",
+              ":"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "9708ba980484dc932d6588c6",
+            "question": ": Qu'est-ce que Rust ?\n[ ] Un langage de programmation bas\u00e9 sur C++\n[ ] Un langage de programmation bas\u00e9 sur Java\n[ ] Un langage de programmation bas\u00e9 sur Python\n[x] Un langage de programmation syst\u00e8me s\u00e9curis\u00e9 et performant",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "6fdf00bd142dff1e9c7a8f7d",
+            "question": ": Quelle affirmation suivante est vraie \u00e0 propos de Rust ?\n[ ] Rust permet la gestion automatique de la m\u00e9moire.\n[ ] Rust est un langage interpr\u00e9t\u00e9.\n[ ] Rust n'est pas utilis\u00e9 pour la programmation syst\u00e8me.\n[x] Rust garantit la s\u00e9curit\u00e9 de la m\u00e9moire sans n\u00e9cessiter un ramasse-miettes (garbage collector).",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "fcf0569133d18083feb4a3c9",
+            "question": ": \u00c0 quoi sert la notion de \"propri\u00e9t\u00e9\" (ownership) en Rust ?\n[ ] Pour g\u00e9rer les licences logicielles.\n[ ] Pour restreindre l'acc\u00e8s aux ressources r\u00e9seau.\n[ ] Pour contr\u00f4ler l'acc\u00e8s aux bases de donn\u00e9es.\n[x] Pour g\u00e9rer de mani\u00e8re s\u00e9curis\u00e9e l'allocation et la lib\u00e9ration de m\u00e9moire.",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "5c08f8403f4c31b54588d1ad",
+            "question": ": Quel est le type de donn\u00e9es utilis\u00e9 pour les r\u00e9f\u00e9rences non mutables en Rust ?\n[ ] &mut\n[ ] const\n[ ] mutable\n[x] &",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "fd44f72db574142154a68fa4",
+            "question": ": Quel concept en Rust permet d'\u00e9viter les probl\u00e8mes de concurrence et les courses de donn\u00e9es ?\n[ ] Mutex\n[ ] Condition\n[ ] Verrouillage de m\u00e9moire\n[x] Propri\u00e9t\u00e9 (ownership) et Emprunt (borrowing)",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "91c7f0483b6f080ae8195a1e",
+            "question": ": Qu'est-ce qu'un \"lifetime\" en Rust ?\n[ ] La dur\u00e9e d'ex\u00e9cution d'un programme Rust.\n[ ] Une mesure de la vitesse d'ex\u00e9cution d'un programme Rust.\n] Une \u00e9tiquette temporelle sur une variable sp\u00e9cifiant sa dur\u00e9e de vie.\n[x] Une marque temporelle d\u00e9finissant la dur\u00e9e de validit\u00e9 des r\u00e9f\u00e9rences.",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "048082c95d103cf2c5434d36",
+            "question": ": Quel est le syst\u00e8me de construction et de gestion de paquets le plus utilis\u00e9 en Rust ?\n[ ] CMake\n[ ] Gradle\n[ ] Maven\n[x] Cargo",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "2f70d48f8c2599f6240e5b07",
+            "question": ": Quel type de programmation promeut Rust pour \u00e9viter les erreurs de programmation ?\n] Programmation lin\u00e9aire\n[ ] Programmation statique\n[ ] Programmation flexible\n[x] Programmation s\u00e9curis\u00e9e",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "b3a968906fcde2b90d281cde",
+            "question": ": Que signifie l'acronyme \"MIR\" dans le contexte de Rust ?\n[ ] Mappeur d'Instructions de R\u00e9f\u00e9rence\n[ ] Mod\u00e8le d'Instructions et de Registres\n[ ] Mod\u00e8le d'Inf\u00e9rence de Rendement\n[x] Repr\u00e9sentation Interm\u00e9diaire de Rust",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          },
+          {
+            "id": "f1897622ef12963f62e93db0",
+            "question": ": Quelle caract\u00e9ristique de Rust permet aux programmeurs d'\u00e9crire un code plus s\u00fbr et d'\u00e9viter les erreurs de concurrence ?\n[ ] Ramasse-miettes (garbage collector)\n[ ] Pointeurs nuls\n[ ] Utilisation excessive de commentaires\n[x] Propri\u00e9t\u00e9 (ownership), Emprunt (borrowing) et Dur\u00e9es de vie (lifetimes)",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cdbaf70937b094ac6267fa2e",
+            "quizzId": "9ca981f69503c29ece55f342"
+          }
+        ]
       }
     ]
   },
   "meta": {
     "source": "rust/rust-quiz-fr.md",
-    "language": "fr",
-    "generatedAt": "2025-12-09T14:56:14.451675+00:00",
+    "languages": [
+      "fr"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.502073+00:00",
     "warnings": [
       "Question 18 has no marked correct answers",
       "Question 18 has no options",

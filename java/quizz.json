@@ -1,0 +1,2780 @@
+{
+  "quizz": {
+    "id": "1890afc4d97fa8bd01e55619",
+    "slug": "java",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
+      {
+        "id": "1890afc4d97fa8bd01e55619-en",
+        "language": "en",
+        "title": "Java",
+        "description": "Seeded from java/java-quiz.md",
+        "questions": [
+          {
+            "id": "a85f42ac19fc3e5b2e01ab34",
+            "question": "Given the string \"strawberries\" saved in a variable called fruit, what would `fruit.substring(2, 5)` return?",
+            "answer": "raw",
+            "explanation": "**Reasoning:** The substring method accepts two arguments.\n- The first argument is the index to start(includes that char at 2)\n- and the second the index of the string to end the substring(excludes the char at 5).\n- Strings in Java are like arrays of chars.\n- Therefore, the method will return \"raw\" as those are the chars in indexes 2,3 and 4.\n- You can also take the ending index and subtract the beginning index from it, to determine how many chars will be included in the substring (5-2=3).",
+            "hint": null,
+            "correctAnswer": ["raw"],
+            "options": ["rawb", "raw", "awb", "traw"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c7718ec616d14496c9fe0581",
+            "question": "How can you achieve runtime polymorphism in Java?",
+            "answer": "method overriding",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["method overriding"],
+            "options": [
+              "method overloading",
+              "method overrunning",
+              "method overriding",
+              "method calling"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "20dc67533b44cafe112295c9",
+            "question": "Given the following definitions, which of these expressions will **NOT** evaluate to true?\n`boolean b1 = true, b2 = false; int i1 = 1, i2 = 2;`",
+            "answer": "`i2 && b1`",
+            "explanation": "**Reasoning:** i2 && b1 are not allowed between int and boolean.",
+            "hint": null,
+            "correctAnswer": ["`i2 && b1`"],
+            "options": ["`(i1 | i2) == 3`", "`i2 && b1`", "`b1 || !b2`", "`(i1 ^ i2) < 4`"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "ab17f8762e12ead0fc6abde5",
+            "question": "What is the output of this code?\n```java\nclass Main {\n  public static void main (String[] args) {\n    int array[] = {1, 2, 3, 4};\n    for (int i = 0; i < array.size(); i++) {\n       System.out.print(array[i]);\n    }\n  }\n}\n```",
+            "answer": "It will not compile because of line 4.",
+            "explanation": "**Reasoning:** array.size() is invalid, to get the size or length of the array array.length can be used.",
+            "hint": null,
+            "correctAnswer": ["It will not compile because of line 4."],
+            "options": [
+              "It will not compile because of line 4.",
+              "It will not compile because of line 3.",
+              "123",
+              "1234"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "1efa0d071c1c7e5c9c309ed3",
+            "question": "Which of the following can replace the CODE SNIPPET to make the code below print \"Hello World\"?\n```java\ninterface Interface1 {\n    static void print() {\n        System.out.print(\"Hello\");\n    }\n}\ninterface Interface2 {\n    static void print() {\n        System.out.print(\"World!\");\n    }\n}\n```",
+            "answer": "`Interface1.print(); Interface2.print();`",
+            "explanation": "[Reference](https://www.geeksforgeeks.org/static-method-in-interface-in-java/)",
+            "hint": null,
+            "correctAnswer": ["`Interface1.print(); Interface2.print();`"],
+            "options": [
+              "`super1.print(); super2.print();`",
+              "`this.print();`",
+              "`super.print();`",
+              "`Interface1.print(); Interface2.print();`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "f0a17fa8c2f4c4f5db9422e9",
+            "question": "What does the following code print?\n```java\nString str = \"abcde\";\nstr.trim();\nstr.toUpperCase();\nstr.substring(3, 4);\nSystem.out.println(str);\n```",
+            "answer": "\"abcde\"",
+            "explanation": "**Reasoning:** You should assign the result of trim back to the String variable. Otherwise, it is not going to work, because strings in Java are immutable.",
+            "hint": null,
+            "correctAnswer": ["\"abcde\""],
+            "options": ["CD", "CDE", "D", "\"abcde\""],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "f611fc3091a4bf214a36d2c3",
+            "question": "What is the result of this code?\n```java\nclass Main {\n    public static void main (String[] args){\n        System.out.println(print(1));\n    }\n    static Exception print(int i){\n        if (i>0) {\n            return new Exception();\n        } else {\n            throw new RuntimeException();\n        }\n    }\n}\n```",
+            "answer": "\"java.lang.Exception\"",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["\"java.lang.Exception\""],
+            "options": [
+              "It will show a stack trace with a runtime exception.",
+              "\"java.lang.Exception\"",
+              "It will run and throw an exception.",
+              "It will not compile."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "aad33ef082d647e36f862956",
+            "question": "Which class can compile given these declarations?\n```java\ninterface One {\n    default void method() {\n        System.out.println(\"One\");\n    }\n}\ninterface Two {\n    default void method () {\n        System.out.println(\"One\");\n    }\n}\n```",
+            "answer": "D",
+            "explanation": "```java\nclass Three implements One, Two {\npublic void method() {\nsuper.One.method();\n}\n}\n```\n```java\nclass Three implements One, Two {\npublic void method() {\nOne.method();\n}\n}\n```\n```java\nclass Three implements One, Two {\n}\n```\n```java\nclass Three implements One, Two {\npublic void method() {\nOne.super.method();\n}\n}\n```",
+            "hint": null,
+            "correctAnswer": ["D"],
+            "options": ["A", "B", "C", "D"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "97adf7f072343de09a4518e8",
+            "question": "What is the output of this code?\n```java\nclass Main {\n    public static void main (String[] args) {\n        List list = new ArrayList();\n        list.add(\"hello\");\n        list.add(2);\n        System.out.print(list.get(0) instanceof Object);\n        System.out.print(list.get(1) instanceof Integer);\n    }\n}\n```",
+            "answer": "truetrue",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["truetrue"],
+            "options": ["The code does not compile.", "truefalse", "truetrue", "falsetrue"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "56689ceaf2a374e4be7b6562",
+            "question": "Given the following two classes, what will be the output of the Main class?\n```java\npackage mypackage;\npublic class Math {\n    public static int abs(int num){\n        return num < 0 ? -num : num;\n    }\n}\npackage mypackage.elementary;\npublic class Math {\n    public static int abs (int num) {\n        return -num;\n    }\n}\n```\n```java\nimport mypackage.Math;\nimport mypackage.elementary.*;\nclass Main {\n    public static void main (String args[]){\n        System.out.println(Math.abs(123));\n    }\n}\n```",
+            "answer": "\"123\"",
+            "explanation": "**Explanation:** The answer is \"123\". The `abs()` method evaluates to the one inside mypackage.Math class, because the import statements of the form:\n`import packageName.subPackage.*`\nis [Type-Import-on-Demand Declarations](https://docs.oracle.com/javase/specs/jls/se7/html/jls-7.html#jls-7.5.2), which [never causes any other declaration to be shadowed](https://docs.oracle.com/javase/specs/jls/se7/html/jls-6.html#jls-6.4.1).",
+            "hint": null,
+            "correctAnswer": ["\"123\""],
+            "options": [
+              "Lines 1 and 2 generate compiler errors due to class name conflicts.",
+              "\"-123\"",
+              "It will throw an exception on line 5.",
+              "\"123\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "9012837f50cf5bf38edef8fc",
+            "question": "What is the result of this code?\n```java\nclass MainClass {\n    final String message() {\n        return \"Hello!\";\n    }\n}\nclass Main extends MainClass {\n    public static void main(String[] args) {\n        System.out.println(message());\n    }\n     String message() {\n         return \"World!\";\n     }\n }\n```",
+            "answer": "It will not compile because of line 10.",
+            "explanation": "**Explanation:** Compilation error at line 10 because of final methods cannot be overridden, and here message() is a final method, and also note that Non-static method message() cannot be referenced from a static context.",
+            "hint": null,
+            "correctAnswer": ["It will not compile because of line 10."],
+            "options": [
+              "It will not compile because of line 10.",
+              "\"Hello!\"",
+              "It will not compile because of line 2.",
+              "\"World!\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "ad317d8d6d41888d8e975414",
+            "question": "Given this code, which command will output \"2\"?\n```java\nclass Main {\n    public static void main(String[] args) {\n        System.out.println(args[2]);\n    }\n}\n```",
+            "answer": "`java Main 1 \"2\" \"2\" 5`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`java Main 1 \"2\" \"2\" 5`"],
+            "options": [
+              "`java Main 1 2 \"3 4\" 5`",
+              "`java Main 1 \"2\" \"2\" 5`",
+              "`java Main.class 1 \"2\" 2 5`",
+              "`java Main 1 \"2\" \"3 4\" 5`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "f9a9681be70fdb4cce3ebc25",
+            "question": "What is the output of this code?\n```java\nclass Main {\n    public static void main(String[] args){\n        int a = 123451234512345;\n        System.out.println(a);\n    }\n}\n```",
+            "answer": "Nothing - this will not compile.",
+            "explanation": "**Reasoning:** The int type in Java can be used to represent any whole number from -2147483648 to 2147483647. Therefore, this code will not compile as the number assigned to 'a' is larger than the int type can hold.",
+            "hint": null,
+            "correctAnswer": ["Nothing - this will not compile."],
+            "options": [
+              "\"123451234512345\"",
+              "Nothing - this will not compile.",
+              "a negative integer value",
+              "\"12345100000\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "f7f007bde3c265467d828e9e",
+            "question": "What is the output of this code?\n```java\nclass Main {\n    public static void main (String[] args) {\n        String message = \"Hello world!\";\n        String newMessage = message.substring(6, 12)\n            + message.substring(12, 6);\n        System.out.println(newMessage);\n    }\n}\n```",
+            "answer": "A runtime exception is thrown.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["A runtime exception is thrown."],
+            "options": [
+              "The code does not compile.",
+              "A runtime exception is thrown.",
+              "\"world!!world\"",
+              "\"world!world!\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "b2c39fc4c71a4137c3ddd63c",
+            "question": "How do you write a for-each loop that will iterate over ArrayList\\<Pencil\\>pencilCase?",
+            "answer": "`for (Pencil pencil : pencilCase) {}`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`for (Pencil pencil : pencilCase) {}`"],
+            "options": [
+              "`for (Pencil pencil : pencilCase) {}`",
+              "`for (pencilCase.next()) {}`",
+              "`for (Pencil pencil : pencilCase.iterator()) {}`",
+              "`for (pencil in pencilCase) {}`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "2a5e7097e3a1f0ff515e3597",
+            "question": "What does this code print?\n```java\nSystem.out.print(\"apple\".compareTo(\"banana\"));\n```",
+            "answer": "negative number",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["negative number"],
+            "options": ["`0`", "positive number", "negative number", "compilation error"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "7cd903f2b493de1e0975ce4c",
+            "question": "You have an ArrayList of names that you want to sort alphabetically. Which approach would **NOT** work?",
+            "answer": "`names.sort(List.DESCENDING)`",
+            "explanation": "[Reference](https://www.scaler.com/topics/java/arraylist-in-java/)",
+            "hint": null,
+            "correctAnswer": ["`names.sort(List.DESCENDING)`"],
+            "options": [
+              "`names.sort(Comparator.comparing(String::toString))`",
+              "`Collections.sort(names)`",
+              "`names.sort(List.DESCENDING)`",
+              "`names.stream().sorted((s1, s2) -> s1.compareTo(s2)).collect(Collectors.toList())`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "1a982b3b154dc5ff02d1834e",
+            "question": "By implementing encapsulation, you cannot directly access the class's \\_ properties unless you are writing code inside the class itself.",
+            "answer": "private",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["private"],
+            "options": ["private", "protected", "no-modifier", "public"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "021a80bd386c612e2deb31b2",
+            "question": "Which is the most up-to-date way to instantiate the current date?",
+            "answer": "`LocalDate.now()`",
+            "explanation": "**Explanation:** LocalDate is the newest class added in Java 8",
+            "hint": null,
+            "correctAnswer": ["`LocalDate.now()`"],
+            "options": [
+              "`new SimpleDateFormat(\"yyyy-MM-dd\").format(new Date())`",
+              "`new Date(System.currentTimeMillis())`",
+              "`LocalDate.now()`",
+              "`Calendar.getInstance().getTime()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "3cd3bb2276cb0b3b7c309c62",
+            "question": "Fill in the blank to create a piece of code that will tell whether `int0` is divisible by `5`:\n`boolean isDivisibleBy5 = _____`",
+            "answer": "`int0 % 5 == 0`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`int0 % 5 == 0`"],
+            "options": [
+              "`int0 / 5 ? true: false`",
+              "`int0 % 5 == 0`",
+              "`int0 % 5 != 5`",
+              "`Math.isDivisible(int0, 5)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "33929f6bc94ce518de8bb098",
+            "question": "How many times will this code print \"Hello World!\"?\n```java\nclass Main {\n    public static void main(String[] args){\n        for (int i=0; i<10; i=i++){\n            i+=1;\n            System.out.println(\"Hello World!\");\n        }\n    }\n}\n```",
+            "answer": "10 times",
+            "explanation": "**Explanation:** Observe the loop increment. It's not an increment, it's an assignment(post).",
+            "hint": null,
+            "correctAnswer": ["10 times"],
+            "options": ["10 times", "9 times", "5 times", "infinite number of times"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "640689713f2f10a3cf2cd139",
+            "question": "The runtime system starts your program by calling which function first?",
+            "answer": "main",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["main"],
+            "options": ["print", "iterative", "hello", "main"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "a6c4dc8abc494a07b6c6e701",
+            "question": "What code would you use in Constructor A to call Constructor B?\n```java\npublic class Jedi {\n  /* Constructor A */\n  Jedi(String name, String species){\n    this(name, species, false);\n  }\n  /* Constructor B */\n  Jedi(String name, String species, boolean followsTheDarkSide){}\n}\n```",
+            "answer": "this(name, species, false)",
+            "explanation": "[Reference](https://www.scaler.com/topics/java/constructor-in-java/)",
+            "hint": null,
+            "correctAnswer": ["this(name, species, false)"],
+            "options": [
+              "Jedi(name, species, false)",
+              "new Jedi(name, species, false)",
+              "this(name, species, false)",
+              "super(name, species, false)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "a4a2a7ee7282b012bed047be",
+            "question": "\"An anonymous class requires a zero-argument constructor.\" that's not true?",
+            "answer": "An anonymous class does not require a zero-argument constructor.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["An anonymous class does not require a zero-argument constructor."],
+            "options": [
+              "An anonymous class may specify an abstract base class as its base type.",
+              "An anonymous class does not require a zero-argument constructor.",
+              "An anonymous class may specify an interface as its base type.",
+              "An anonymous class may specify both an abstract class and interface as base types."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "4d6463099e5e59e0c60bf0d0",
+            "question": "What will this program print out to the console when executed?\n```java\nimport java.util.LinkedList;\npublic class Main {\n    public static void main(String[] args){\n        LinkedList<Integer> list = new LinkedList<>();\n        list.add(5);\n        list.add(1);\n        list.add(10);\n        System.out.println(list);\n    }\n}\n```",
+            "answer": "[5, 1, 10]",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["[5, 1, 10]"],
+            "options": ["[5, 1, 10]", "[10, 5, 1]", "[1, 5, 10]", "[10, 1, 5]"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "14a9c800e6bc4b595cbefe83",
+            "question": "What is the output of this code?\n```java\nclass Main {\n    public static void main(String[] args){\n       String message = \"Hello\";\n       for (int i = 0; i<message.length(); i++){\n          System.out.print(message.charAt(i+1));\n       }\n    }\n}\n```",
+            "answer": "A runtime exception is thrown.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["A runtime exception is thrown."],
+            "options": [
+              "\"Hello\"",
+              "A runtime exception is thrown.",
+              "The code does not compile.",
+              "\"ello\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "8537ce2141c094d629130e1b",
+            "question": "Object-oriented programming is a style of programming where you organize your program around \\_ and data, rather than \\_ and logic.",
+            "answer": "objects; actions",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["objects; actions"],
+            "options": [
+              "functions; actions",
+              "objects; actions",
+              "actions; functions",
+              "actions; objects"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "0c218914f517d817d4e33bd8",
+            "question": "What statement returns true if \"nifty\" is of type String?",
+            "answer": "`\"nifty\" instanceof String`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`\"nifty\" instanceof String`"],
+            "options": [
+              "`\"nifty\".getType().equals(\"String\")`",
+              "`\"nifty\".getType() == String`",
+              "`\"nifty\".getClass().getSimpleName() == \"String\"`",
+              "`\"nifty\" instanceof String`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "259a699054aa394666bfebd4",
+            "question": "What is the output of this code?\n```java\nimport java.util.*;\nclass Main {\n    public static void main(String[] args) {\n        List<Boolean> list = new ArrayList<>();\n        list.add(true);\n        list.add(Boolean.parseBoolean(\"FalSe\"));\n        list.add(Boolean.TRUE);\n        System.out.print(list.size());\n        System.out.print(list.get(1) instanceof Boolean);\n    }\n}\n```",
+            "answer": "3true",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["3true"],
+            "options": ["A runtime exception is thrown.", "3false", "2true", "3true"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "fd277d2f891da3541de2d9e2",
+            "question": "What is the result of this code?\n```java\nclass Main {\n    Object message() {\n        return \"Hello!\";\n    }\n    public static void main(String[] args) {\n        System.out.print(new Main().message());\n        System.out.print(new Main2().message());\n    }\n}\nclass Main2 extends Main {\n    String message() {\n        return \"World!\";\n    }\n}\n```",
+            "answer": "Hello!World!",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Hello!World!"],
+            "options": [
+              "It will not compile because of line 7.",
+              "Hello!Hello!",
+              "Hello!World!",
+              "It will not compile because of line 11."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "b430d1a47db6563beb168039",
+            "question": "What method can be used to create a new instance of an object?",
+            "answer": "constructor",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["constructor"],
+            "options": ["another instance", "field", "constructor", "private method"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c38e8222bde8a6d08fe8aed8",
+            "question": "Which is the most reliable expression for testing whether the values of two string variables are the same?",
+            "answer": "string1.equals(string2)",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["string1.equals(string2)"],
+            "options": [
+              "string1 == string2",
+              "string1 = string2",
+              "string1.matches(string2)",
+              "string1.equals(string2)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "11dab2328e076a3b2035e213",
+            "question": "Which letters will print when this code is run?\n```java\npublic static void main(String[] args) {\n    try {\n        System.out.println(\"A\");\n        badMethod();\n        System.out.println(\"B\");\n    } catch (Exception ex) {\n        System.out.println(\"C\");\n    } finally {\n        System.out.println(\"D\");\n    }\n}\npublic static void badMethod() {\n    throw new Error();\n}\n```",
+            "answer": "A and D",
+            "explanation": "**Explanation:** `Error` is not inherited from `Exception`.",
+            "hint": null,
+            "correctAnswer": ["A and D"],
+            "options": ["A, B, and D", "A, C, and D", "C and D", "A and D"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "2922d9a179d1279efa9d5b71",
+            "question": "What is the output of this code?\n```java\nclass Main {\n    static int count = 0;\n    public static void main(String[] args) {\n        if (count < 3) {\n            count++;\n            main(null);\n        } else {\n            return;\n        }\n        System.out.println(\"Hello World!\");\n    }\n}\n```",
+            "answer": "It will print \"Hello World!\" three times.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["It will print \"Hello World!\" three times."],
+            "options": [
+              "It will throw a runtime exception.",
+              "It will not compile.",
+              "It will print \"Hello World!\" three times.",
+              "It will run forever."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "9e31278ca231645e70636524",
+            "question": "What is the output of this code?\n```java\nimport java.util.*;\nclass Main {\n    public static void main(String[] args) {\n        String[] array = {\"abc\", \"2\", \"10\", \"0\"};\n        List<String> list = Arrays.asList(array);\n        Collections.sort(list);\n        System.out.println(Arrays.toString(array));\n    }\n}\n```",
+            "answer": "`[0, 10, 2, abc]`",
+            "explanation": "**Explanation:** The `java.util.Arrays.asList(T... a)` returns a fixed-size list backed by the specified array. (Changes to the returned list \"write through\" to the array.)",
+            "hint": null,
+            "correctAnswer": ["`[0, 10, 2, abc]`"],
+            "options": [
+              "`[abc, 0, 2, 10]`",
+              "The code does not compile.",
+              "`[abc, 2, 10, 0]`",
+              "`[0, 10, 2, abc]`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "5303b18167736abf42cf06f3",
+            "question": "What is the output of this code?\n```java\nclass Main {\n    public static void main(String[] args) {\n        String message = \"Hello\";\n        print(message);\n        message += \"World!\";\n        print(message);\n    }\n    static void print(String message) {\n        System.out.print(message);\n        message += \" \";\n    }\n}\n```",
+            "answer": "HelloHelloWorld!",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["HelloHelloWorld!"],
+            "options": [
+              "Hello World!",
+              "HelloHelloWorld!",
+              "Hello Hello World!",
+              "Hello HelloWorld!"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "612b1104c5f3fb9218142a0b",
+            "question": "What is displayed when this code is compiled and executed?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        int x = 5;\n        x = 10;\n        System.out.println(x);\n    }\n}\n```",
+            "answer": "10",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["10"],
+            "options": ["x", "null", "10", "5"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "2c507ad3faf88b64c4464628",
+            "question": "Which approach cannot be used to iterate over a List named _theList_?",
+            "answer": "C",
+            "explanation": "```java\nfor (int i = 0; i < theList.size(); i++) {\nSystem.out.println(theList.get(i));\n}\n```\n```java\nfor (Object object : theList) {\nSystem.out.println(object);\n}\n```\n```java\nIterator it = theList.iterator();\nfor (it.hasNext()) {\nSystem.out.println(it.next());\n}\n```\n```java\ntheList.forEach(System.out::println);\n```\n**Explanation:** `for (it.hasNext())` should be `while (it.hasNext())`.",
+            "hint": null,
+            "correctAnswer": ["C"],
+            "options": ["A", "B", "C", "D"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "b96354440dd31cf32c928b3a",
+            "question": "What method signature will work with this code?\n`boolean healthyOrNot = isHealthy(\"avocado\");`",
+            "answer": "boolean isHealthy(String string)",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["boolean isHealthy(String string)"],
+            "options": [
+              "public void isHealthy(String avocado)",
+              "boolean isHealthy(String string)",
+              "public isHealthy(\"avocado\")",
+              "private String isHealthy(String food)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "eaf5dcb730c382f18d059522",
+            "question": "Which are valid keywords in a Java module descriptor (module-info.java)?",
+            "answer": "requires, exports",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["requires, exports"],
+            "options": [
+              "provides, employs",
+              "imports, exports",
+              "consumes, supplies",
+              "requires, exports"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "ffddfb2c934f73076a20d86c",
+            "question": "Which type of variable keeps a constant value once it is assigned?",
+            "answer": "final",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["final"],
+            "options": ["non-static", "static", "final", "private"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "ce64a1fee17ed40ac6e4a9ac",
+            "question": "How does the keyword `volatile` affect how a variable is handled?",
+            "answer": "It will never be cached by the CPU.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["It will never be cached by the CPU."],
+            "options": [
+              "It will be read by only one thread at a time.",
+              "It will be stored on the hard drive.",
+              "It will never be cached by the CPU.",
+              "It will be preferentially garbage collected."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "927ec001e0261ae08f54dfb3",
+            "question": "What is the result of this code?\n```java\nchar smooch = 'x';\nSystem.out.println((int) smooch);\n```",
+            "answer": "a positive number",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["a positive number"],
+            "options": [
+              "an alphanumeric character",
+              "a negative number",
+              "a positive number",
+              "a ClassCastException"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "47fb1048d27d74c097e1924a",
+            "question": "You get a NullPointerException. What is the most likely cause?",
+            "answer": "The object you are using has not been instantiated.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["The object you are using has not been instantiated."],
+            "options": [
+              "A file that needs to be opened cannot be found.",
+              "A network connection has been lost in the middle of communications.",
+              "Your code has used up all available memory.",
+              "The object you are using has not been instantiated."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "858f6f49b90dcccee0b323cb",
+            "question": "How would you fix this code so that it compiles?\n```java\npublic class Nosey {\n    int age;\n    public static void main(String[] args) {\n        System.out.println(\"Your age is: \" + age);\n    }\n}\n```",
+            "answer": "Make age static.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Make age static."],
+            "options": [
+              "Make age static.",
+              "Make age global.",
+              "Make age public.",
+              "Initialize age to a number."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "db2fbdbccf2f849b0ad68e54",
+            "question": "Add a Duck called \"Waddles\" to the ArrayList **ducks**.\n```java\npublic class Duck {\n    private String name;\n    Duck(String name) {}\n}\n```",
+            "answer": "`ducks.add(new Duck(\"Waddles\"));`",
+            "explanation": "`ducks.add(waddles);`\n`ducks.add(waddles);`",
+            "hint": null,
+            "correctAnswer": ["`ducks.add(new Duck(\"Waddles\"));`"],
+            "options": [
+              "`Duck waddles = new Duck();`",
+              "`Duck duck = new Duck(\"Waddles\");`",
+              "`ducks.add(new Duck(\"Waddles\"));`",
+              "`ducks.add(new Waddles());`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "fda4bcb35b1f3c60c137b8a0",
+            "question": "If you encounter `UnsupportedClassVersionError` it means the code was `___` on a newer version of Java than the JRE `___` it.",
+            "answer": "compiled; executing",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["compiled; executing"],
+            "options": [
+              "executed; interpreting",
+              "executed; compiling",
+              "compiled; executing",
+              "compiled, translating"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c0d1e2c9140322669e2c32d7",
+            "question": "Given this class, how would you make the code compile?\n```java\npublic class TheClass {\n    private final int x;\n}\n```",
+            "answer": "C",
+            "explanation": "```java\npublic TheClass() {\nx += 77;\n}\n```\n```java\npublic TheClass() {\nx = null;\n}\n```\n```java\npublic TheClass() {\nx = 77;\n}\n```\n```java\nprivate void setX(int x) {\nthis.x = x;\n}\npublic TheClass() {\nsetX(77);\n}\n```\n**Explanation:** `final` class members are allowed to be assigned only in three places: declaration, constructor, or an instance-initializer block.",
+            "hint": null,
+            "correctAnswer": ["C"],
+            "options": ["A", "B", "C", "D"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "29da2388cdcf602b15c72e0d",
+            "question": "How many times f will be printed?\n```java\npublic class Solution {\n    public static void main(String[] args) {\n        for (int i = 44; i > 40; i--) {\n            System.out.println(\"f\");\n        }\n    }\n}\n```",
+            "answer": "4",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["4"],
+            "options": ["4", "3", "5", "A Runtime exception will be thrown"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "579395df71fae8c9ab20a759",
+            "question": "Which statements about `abstract` classes are true?\n```\n1. They can be instantiated.\n2. They allow member variables and methods to be inherited by subclasses.\n3. They can contain constructors.\n```",
+            "answer": "2 and 3",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["2 and 3"],
+            "options": ["1, 2, and 3", "only 3", "2 and 3", "only 2"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c5e74c9244c5c5632f86ceb4",
+            "question": "Which keyword lets you call the constructor of a parent class?",
+            "answer": "super",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["super"],
+            "options": ["parent", "super", "this", "new"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "e9b45d7993ad158411b4ff0d",
+            "question": "What is the result of this code?\n```java\n  1: int a = 1;\n  2: int b = 0;\n  3: int c = a/b;\n  4: System.out.println(c);\n```",
+            "answer": "It will throw an ArithmeticException.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["It will throw an ArithmeticException."],
+            "options": [
+              "It will throw an ArithmeticException.",
+              "It will run and output 0.",
+              "It will not compile because of line 3.",
+              "It will run and output infinity."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "ac2a946375ff24576dfc1bf8",
+            "question": "Normally, to access a static member of a class such as Math.PI, you would need to specify the class \"Math\". What would be the best way to allow you to use simply \"PI\" in your code?",
+            "answer": "Add a static import.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Add a static import."],
+            "options": [
+              "Add a static import.",
+              "Declare local copies of the constant in your code.",
+              "This cannot be done. You must always qualify references to static members with the class from which they came from.",
+              "Put the static members in an interface and inherit from that interface."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "369c63cf83b37874035626ba",
+            "question": "Which keyword lets you use an interface?",
+            "answer": "implements",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["implements"],
+            "options": ["extends", "implements", "inherits", "Import"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "f90da4a91ce2d7db81c2eb87",
+            "question": "Why are ArrayLists better than arrays?",
+            "answer": "You don't have to decide the size of an ArrayList when you first make it.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "You don't have to decide the size of an ArrayList when you first make it."
+            ],
+            "options": [
+              "You don't have to decide the size of an ArrayList when you first make it.",
+              "You can put more items into an ArrayList than into an array.",
+              "ArrayLists can hold more kinds of objects than arrays.",
+              "You don't have to decide the type of an ArrayList when you first make it."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c6304b56f5b8fc0597ea5549",
+            "question": "Declare a variable that holds the first four digits of Π",
+            "answer": "double pi = 3.141;",
+            "explanation": "**Reasoning:**\n```java\npublic class TestReal {\npublic static void main (String[] argv)\n{\ndouble pi = 3.14159265;       //accuracy up to 15 digits\nfloat pi2 = 3.141F;           //accuracy up to 6-7 digits\nSystem.out.println (\"Pi=\" + pi);\nSystem.out.println (\"Pi2=\" + pi2);\n}\n}\n```\n```\nThe default Java type which Java will be used for a float variable will be double.\nSo, even if you declare any variable as float, what the compiler has to do is assign a double value to a float variable,\nwhich is not possible. So, to tell the compiler to treat this value as a float, that 'F' is used.\n```",
+            "hint": null,
+            "correctAnswer": ["double pi = 3.141;"],
+            "options": [
+              "int pi = 3.141;",
+              "decimal pi = 3.141;",
+              "double pi = 3.141;",
+              "float pi = 3.141;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "f57a4c34d367cc692dfc661a",
+            "question": "Use the magic power to cast a spell\n```java\npublic class MagicPower {\n    void castSpell(String spell) {}\n}\n```",
+            "answer": "`new MagicPower().castSpell(\"expecto patronum\");`",
+            "explanation": "`magicPower.castSpell();`\n[Reference](https://stackoverflow.com/a/2042836/993246)",
+            "hint": null,
+            "correctAnswer": ["`new MagicPower().castSpell(\"expecto patronum\");`"],
+            "options": [
+              "`new MagicPower().castSpell(\"expecto patronum\");`",
+              "`MagicPower magicPower = new MagicPower();`",
+              "`MagicPower.castSpell(\"expelliarmus\");`",
+              "`new MagicPower.castSpell();`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "9f1695ccc8a4fda19edb102a",
+            "question": "What language construct serves as a blueprint containing an object's properties and functionality?",
+            "answer": "class",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["class"],
+            "options": ["constructor", "instance", "class", "method"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "0a171abc82e3778031cdbec9",
+            "question": "What does this code print?\n```java\npublic static void main(String[] args) {\n    int x=5,y=10;\n    swapsies(x,y);\n    System.out.println(x+\" \"+y);\n}\nstatic void swapsies(int a, int b) {\n    int temp=a;\n    a=b;\n    b=temp;\n}\n```",
+            "answer": "5 10",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["5 10"],
+            "options": ["10 10", "5 10", "10 5", "5 5"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "57dfde8570374bbc578b2d17",
+            "question": "What is the result of this code?\n```java\ntry {\n    System.out.println(\"Hello World\");\n} catch (Exception e) {\n    System.out.println(\"e\");\n} catch (ArithmeticException e) {\n    System.out.println(\"e\");\n} finally {\n    System.out.println(\"!\");\n}\n```",
+            "answer": "It will not compile because the second catch statement is unreachable",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It will not compile because the second catch statement is unreachable"
+            ],
+            "options": [
+              "Hello World",
+              "It will not compile because the second catch statement is unreachable",
+              "Hello World!",
+              "It will throw a runtime exception"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "4e306e5dd9dc05e5aa0b66b4",
+            "question": "Which is not a Java keyword",
+            "answer": "unsigned",
+            "explanation": "**Explanation:** `native` is a part of the JNI interface.",
+            "hint": null,
+            "correctAnswer": ["unsigned"],
+            "options": ["finally", "native", "interface", "unsigned"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "3762db46f26538a7192d7186",
+            "question": "Which operator would you use to find the remainder after division?",
+            "answer": "`%`",
+            "explanation": "[Reference](http://www.cs.ukzn.ac.za/~hughm/java/intro/week2/21.html)",
+            "hint": null,
+            "correctAnswer": ["`%`"],
+            "options": ["`%`", "`//`", "`/`", "`DIV`"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "24d0f54f6bac8f2fa5e725df",
+            "question": "Which choice is a disadvantage of inheritance?",
+            "answer": "Classes related by inheritance are tightly coupled to each other.",
+            "explanation": "[Reference](http://erpbasic.blogspot.com/2012/01/inheritance-advantages-and.html#:~:text=Main%20disadvantage%20of%20using%20inheritance,used%20independent%20of%20each%20other.&text=4.,case%20of%20using%20that%20method.)",
+            "hint": null,
+            "correctAnswer": ["Classes related by inheritance are tightly coupled to each other."],
+            "options": [
+              "Overridden methods of the parent class cannot be reused.",
+              "Responsibilities are not evenly distributed between parent and child classes.",
+              "Classes related by inheritance are tightly coupled to each other.",
+              "The internal state of the parent class is accessible to its children."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "4fd250bbb91cfb10e85ceb32",
+            "question": "How would you declare and initialize an array of 10 ints?",
+            "answer": "`int[] numbers = new int[10];`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`int[] numbers = new int[10];`"],
+            "options": [
+              "`Array<Integer> numbers = new Array<Integer>(10);`",
+              "`Array[int] numbers = new Array[int](10);`",
+              "`int[] numbers = new int[10];`",
+              "`int numbers[] = int[10];`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "9088ad06e184605756343e9c",
+            "question": "Refactor this event handler to a lambda expression:\n```java\ngroucyButton.addActionListener(new ActionListener() {\n    @Override\n    public void actionPerformed(ActionEvent e) {\n        System.out.println(\"Press me one more time..\");\n    }\n});\n```",
+            "answer": "`groucyButton.addActionListener((event) -> System.out.println(\"Press me one more time...\"));`",
+            "explanation": "[Reference](https://www.codejava.net/java-core/the-java-language/java-8-lambda-listener-example)",
+            "hint": null,
+            "correctAnswer": [
+              "`groucyButton.addActionListener((event) -> System.out.println(\"Press me one more time...\"));`"
+            ],
+            "options": [
+              "`groucyButton.addActionListener(ActionListener listener -> System.out.println(\"Press me one more time...\"));`",
+              "`groucyButton.addActionListener((event) -> System.out.println(\"Press me one more time...\"));`",
+              "`groucyButton.addActionListener(new ActionListener(ActionEvent e) {() -> System.out.println(\"Press me one more time...\");});`",
+              "`groucyButton.addActionListener(() -> System.out.println(\"Press me one more time...\"));`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "f178eb6c9f8ba8a780c876ae",
+            "question": "Which functional interfaces does Java provide to serve as data types for lambda expressions?",
+            "answer": "Consumer, Predicate, Supplier",
+            "explanation": "[Reference](https://www.baeldung.com/java-8-functional-interfaces)",
+            "hint": null,
+            "correctAnswer": ["Consumer, Predicate, Supplier"],
+            "options": [
+              "Observer, Observable",
+              "Collector, Builder",
+              "Filter, Map, Reduce",
+              "Consumer, Predicate, Supplier"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "f715619f5c536e314c08ae0b",
+            "question": "What is a valid use of the hashCode() method?",
+            "answer": "deciding if two instances of a class are equal",
+            "explanation": "[Reference](https://www.baeldung.com/java-hashcode)",
+            "hint": null,
+            "correctAnswer": ["deciding if two instances of a class are equal"],
+            "options": [
+              "encrypting user passwords",
+              "deciding if two instances of a class are equal",
+              "enabling HashMap to find matches faster",
+              "moving objects from a List to a HashMap"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "939129ed476680bc2e40981f",
+            "question": "What kind of relationship does \"extends\" denote?",
+            "answer": "is-a",
+            "explanation": "[Reference](https://www.c-sharpcorner.com/UploadFile/3614a6/is-a-and-has-a-relationship-in-java/)",
+            "hint": null,
+            "correctAnswer": ["is-a"],
+            "options": ["uses-a", "is-a", "has-a", "was-a"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "e3c75ff386ae16d5b17bf982",
+            "question": "How do you force an object to be garbage collected?",
+            "answer": "Set object to null and call System.gc()",
+            "explanation": "[Reference](https://sematext.com/blog/java-garbage-collection/)",
+            "hint": null,
+            "correctAnswer": ["Set object to null and call System.gc()"],
+            "options": [
+              "Set object to null and call Runtime.gc()",
+              "Set object to null and call System.gc()",
+              "Set object to null and call Runtime.getRuntime().runFinalization()",
+              "There is no way to force an object to be garbage-collected"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "93ab0e76bce1f8391882e46c",
+            "question": "Java programmers commonly use design patterns. Some examples are the **\\_**, which helps create instances of a class, the **\\_**, which ensures that only one instance of a class can be created; and the **\\_**, which allows for a group of algorithms to be interchangeable.",
+            "answer": "static factory method; singleton; strategy pattern",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["static factory method; singleton; strategy pattern"],
+            "options": [
+              "static factory method; singleton; strategy pattern",
+              "strategy pattern; static factory method; singleton",
+              "creation pattern; singleton; prototype pattern",
+              "singleton; strategy pattern; static factory method"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "635f77d8e1226e4130c9a2a4",
+            "question": "Using Java's Reflection API, you can use \\_ to get the name of a class and \\_ to retrieve an array of its methods.",
+            "answer": "this.getClass().getSimpleName(); this.getClass().getDeclaredMethods()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "this.getClass().getSimpleName(); this.getClass().getDeclaredMethods()"
+            ],
+            "options": [
+              "this.getClass().getSimpleName(); this.getClass().getDeclaredMethods()",
+              "this.getName(); this.getMethods()",
+              "Reflection.getName(this); Reflection.getMethods(this)",
+              "Reflection.getClass(this).getName(); Reflection.getClass(this).getMethods()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "a5d2aafea0b775df962d7509",
+            "question": "Which is not a valid lambda expression?",
+            "answer": "`String a -> false;`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`String a -> false;`"],
+            "options": [
+              "`a -> false;`",
+              "`(a) -> false;`",
+              "`String a -> false;`",
+              "`(String a) -> false;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "18f05cc7e49b01f8aa07d278",
+            "question": "Which access modifier makes variables and methods visible only in the class where they are declared?",
+            "answer": "private",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["private"],
+            "options": ["public", "protected", "nonmodifier", "private"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "138bf60ae949d3ee4b7bc966",
+            "question": "What type of variable can be assigned only once?",
+            "answer": "final",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["final"],
+            "options": ["private", "non-static", "final", "static"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "fe09653bcc780ab2480ec075",
+            "question": "How would you convert a String to an Int?",
+            "answer": "`Integer.parseInt(\"21\")`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`Integer.parseInt(\"21\")`"],
+            "options": [
+              "`\"21\".intValue()`",
+              "`String.toInt(\"21\")`",
+              "`Integer.parseInt(\"21\")`",
+              "`String.valueOf(\"21\")`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c86b71eb9683fc4b0b328a62",
+            "question": "What method should be added to the Duck class to print the name Moby?\n```java\npublic class Duck {\n    private String name;\n    Duck(String name) {\n        this.name = name;\n    }\n    public static void main(String[] args) {\n        System.out.println(new Duck(\"Moby\"));\n    }\n}\n```",
+            "answer": "`public String toString() { return name; } `",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`public String toString() { return name; } `"],
+            "options": [
+              "`public String toString() { return name; } `",
+              "`public void println() { System.out.println(name); } `",
+              "`String toString() { return this.name; } `",
+              "`public void toString() { System.out.println(this.name); } `"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "5b8b7f4c8e1d94475793fa0e",
+            "question": "Which operator is used to concatenate Strings in Java",
+            "answer": "`+`",
+            "explanation": "[Reference](https://www.techiedelight.com/concatenate-two-strings-java/)",
+            "hint": null,
+            "correctAnswer": ["`+`"],
+            "options": ["`+`", "`&`", "`.`", "`-`"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "6b1757c49b067990d3a16d98",
+            "question": "How many times does this loop print \"exterminate\"?\n```java\nfor (int i = 44; i > 40; i--) {\n    System.out.println(\"exterminate\");\n}\n```",
+            "answer": "four",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["four"],
+            "options": ["two", "four", "three", "five"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "eed5f48846e3c801351ad990",
+            "question": "What is the value of myCharacter after line 3 is run?\n```java\npublic class Main {\n  public static void main (String[] args) {\n    char myCharacter = \"piper\".charAt(3);\n  }\n}\n```",
+            "answer": "e",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["e"],
+            "options": ["p", "r", "e", "i"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "a3ecfd1be1c686b6829e3c58",
+            "question": "When should you use a static method?",
+            "answer": "when you want your method to be available independently of class instances",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "when you want your method to be available independently of class instances"
+            ],
+            "options": [
+              "when your method is related to the object's characteristics",
+              "when you want your method to be available independently of class instances",
+              "when your method uses an object's instance variable",
+              "when your method is dependent on the specific instance that calls it"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "1d406d39a6a455a99cec85b7",
+            "question": "What phrase indicates that a function receives a copy of each argument passed to it rather than a reference to the objects themselves?",
+            "answer": "pass by value",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["pass by value"],
+            "options": ["pass by reference", "pass by occurrence", "pass by value", "API call"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "2d10b43eb034f3d338e68756",
+            "question": "In Java, what is the scope of a method's argument or parameter?",
+            "answer": "inside the method",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["inside the method"],
+            "options": [
+              "inside the method",
+              "both inside and outside the method",
+              "neither inside nor outside the method",
+              "outside the method"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "8819741d4d818f13d7f96ab3",
+            "question": "What is the output of this code?\n```java\npublic class Main {\n  public static void main (String[] args) {\n    int[] sampleNumbers = {8, 5, 3, 1};\n    System.out.println(sampleNumbers[2]);\n  }\n}\n```",
+            "answer": "3",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["3"],
+            "options": ["5", "8", "1", "3"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c9d7e2ecde9d72a199aee172",
+            "question": "Which change will make this code compile successfully?\n```java\npublic class Main {\n  String MESSAGE =\"Hello!\";\n  static void print(){\n    System.out.println(message);\n  }\n  void print2(){}\n}\n```",
+            "answer": "Remove the body of the `print` method.",
+            "explanation": "**Explanation:** Changing line 2 to `public static final String message` raises the error `message not initialized in the default constructor`.",
+            "hint": null,
+            "correctAnswer": ["Remove the body of the `print` method."],
+            "options": [
+              "Change line 2 to `public static final String message`",
+              "Change line 6 to `public void print2(){}`",
+              "Remove the body of the `print2` method and add a semicolon.",
+              "Remove the body of the `print` method."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "2047c27474052762e3bfa00b",
+            "question": "What is the output of this code?\n```java\nimport java.util.*;\nclass Main {\n  public static void main(String[] args) {\n    String[] array = new String[]{\"A\", \"B\", \"C\"};\n    List<String> list1 = Arrays.asList(array);\n    List<String> list2 = new ArrayList<>(Arrays.asList(array));\n    List<String> list3 = new ArrayList<>(Arrays.asList(\"A\", new String(\"B\"), \"C\"));\n    System.out.print(list1.equals(list2));\n    System.out.print(list1.equals(list3));\n  }\n}\n```",
+            "answer": "truetrue",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["truetrue"],
+            "options": ["falsefalse", "truetrue", "falsetrue", "truefalse"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c673806c4a0aea27eeae3c26",
+            "question": "Which code snippet is valid?",
+            "answer": "`ArrayList<String> words = new ArrayList<>(Arrays.asList(\"Hello\", \"World\"));`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`ArrayList<String> words = new ArrayList<>(Arrays.asList(\"Hello\", \"World\"));`"
+            ],
+            "options": [
+              "`ArrayList<String> words = new ArrayList<String>(){\"Hello\", \"World\"};`",
+              "`ArrayList words = Arrays.asList(\"Hello\", \"World\");`",
+              "`ArrayList<String> words = {\"Hello\", \"World\"};`",
+              "`ArrayList<String> words = new ArrayList<>(Arrays.asList(\"Hello\", \"World\"));`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "2a94496cbc109bf49507cf55",
+            "question": "What is the output of this code?\n```java\nclass Main {\n  public static void main(String[] args) {\n    StringBuilder sb = new StringBuilder(\"hello\");\n    sb.deleteCharAt(0).insert(0, \"H\").append(\" World!\");\n    System.out.println(sb);\n  }\n}\n```",
+            "answer": "\"Hello World!\"",
+            "explanation": "The code effectively converts the initial \"hello\" into \"HelloWorld!\" by deleting the first character, inserting \"H\" at the beginning, and appending \" World!\" to the end.",
+            "hint": null,
+            "correctAnswer": ["\"Hello World!\""],
+            "options": ["It will not compile.", "\"Hello World!\"", "\"hello\"", "????"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "665261b275c9f13f04001ced",
+            "question": "How would you use the TaxCalculator to determine the amount of tax on $50?\n```java\nclass TaxCalculator {\n  static double calculate(double total) {\n    return total * .05;\n  }\n}\n```",
+            "answer": "TaxCalculator.calculate(50);",
+            "explanation": "[Reference](https://www.geeksforgeeks.org/static-methods-vs-instance-methods-java/)",
+            "hint": null,
+            "correctAnswer": ["TaxCalculator.calculate(50);"],
+            "options": [
+              "TaxCalculator.calculate(50);",
+              "new TaxCalculator.calculate(50);",
+              "calculate(50);",
+              "new TaxCalculator.calculate($50);"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "ecc000305fbe0e38a12eba6a",
+            "question": "Which characteristic does not apply to instances of java.util.HashSet?",
+            "answer": "contains sorted elements",
+            "explanation": "**Explanation:** HashSet makes no guarantees as to the iteration order of the set; in particular, it does not guarantee that the order will remain constant over time.\n[Reference](https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html)",
+            "hint": null,
+            "correctAnswer": ["contains sorted elements"],
+            "options": [
+              "uses hashcode of objects when inserted",
+              "contains unordred elements",
+              "contains unique elements",
+              "contains sorted elements"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "7c2f85b3909d8b167e1c3868",
+            "question": "What is the output?\n```java\nimport java.util.*;\npublic class Main {\n    public static void main(String[] args)\n    {\n        PriorityQueue<Integer> queue = new PriorityQueue<>();\n        queue.add(4);\n        queue.add(3);\n        queue.add(2);\n        queue.add(1);\n        while (queue.isEmpty() == false) {\n            System.out.printf(\"%d\", queue.remove());\n        }\n    }\n}\n```",
+            "answer": "1 2 3 4",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["1 2 3 4"],
+            "options": ["1 3 2 4", "4 2 3 1", "1 2 3 4", "4 3 2 1"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "2bb67da56d1a45d42253a478",
+            "question": "What will this code print, assuming it is inside the main method of a class?\n`System.out.println(\"hello my friends\".split(\" \")[0]);`",
+            "answer": "hello",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["hello"],
+            "options": ["my", "hellomyfriends", "hello", "friends"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "5730773144ab7cb5906bad01",
+            "question": "You have an instance of type Map<String, Integer> named instruments containing the following key-value pairs: guitar=1200, cello=3000, and drum=2000. If you add the new key-value pair cello=4500 to the Map using the put method, how many elements do you have in the Map when you call instruments.size()?",
+            "answer": "3",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["3"],
+            "options": ["2", "When calling the put method, Java will throw an exception", "4", "3"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "8c8baa826c31326ae0c74842",
+            "question": "Which class acts as the root class for the Java Exception hierarchy?",
+            "answer": "Throwable",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Throwable"],
+            "options": ["Clonable", "Throwable", "Object", "Serializable"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "415d7d9a4488c0dde2769745",
+            "question": "Which class does not implement the java.util.Collection interface?",
+            "answer": "java.util.HashMap",
+            "explanation": "**Explanation:** HashMap class implements Map interface.",
+            "hint": null,
+            "correctAnswer": ["java.util.HashMap"],
+            "options": [
+              "java.util.Vector",
+              "java.util.ArrayList",
+              "java.util.HashSet",
+              "java.util.HashMap"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "829217af18740942cbc507ce",
+            "question": "You have a variable of named `employees` of type `List<Employee>` containing multiple entries. The `Employee` type has a method `getName()` that returns the employee name. Which statement properly extracts a list of employee names?",
+            "answer": "`employees.stream().map(Employee::getName).collect(Collectors.toList());`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`employees.stream().map(Employee::getName).collect(Collectors.toList());`"
+            ],
+            "options": [
+              "`employees.collect(employee -> employee.getName());`",
+              "`employees.filter(Employee::getName).collect(Collectors.toUnmodifiableList());`",
+              "`employees.stream().map(Employee::getName).collect(Collectors.toList());`",
+              "`employees.stream().collect((e) -> e.getName());`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "5404a96f01bfbcd137aa0f29",
+            "question": "This code does not compile. What needs to be changed so that it does?\n```java\npublic enum Direction {\n    EAST(\"E\"),\n    WEST(\"W\"),\n    NORTH(\"N\"),\n    SOUTH(\"S\");\n    private final String shortCode;\n    public String getShortCode() {\n        return shortCode;\n    }\n}\n```",
+            "answer": "Add a constructor that accepts a `String` parameter and assigns it to the field `shortCode`.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Add a constructor that accepts a `String` parameter and assigns it to the field `shortCode`."
+            ],
+            "options": [
+              "Add a constructor that accepts a `String` parameter and assigns it to the field `shortCode`.",
+              "Remove the `final` keyword for the field `shortCode`.",
+              "All enums need to be defined on a single line of code.",
+              "Add a setter method for the field `shortCode`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "1b553229062cd373b9617494",
+            "question": "Which language feature ensures that objects implementing the `AutoCloseable` interface are closed when it completes?",
+            "answer": "try-with-resources",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["try-with-resources"],
+            "options": [
+              "try-catch-finally",
+              "try-finally-close",
+              "try-with-resources",
+              "try-catch-close"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "1e34f718aedc8c8ee3cb1d72",
+            "question": "What code should go in line 3?\n```java\nclass Main {\n    public static void main(String[] args) {\n        array[0] = new int[]{1, 2, 3};\n        array[1] = new int[]{4, 5, 6};\n        array[2] = new int[]{7, 8, 9};\n        for (int i = 0; i < 3; i++)\n            System.out.print(array[i][1]); //prints 258\n    }\n }\n```",
+            "answer": "`int[][] array = new int[3][3];`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`int[][] array = new int[3][3];`"],
+            "options": [
+              "`int[][] array = new int[][];`",
+              "`int[][] array = new int[3][3];`",
+              "`int[][] array = new int[2][2];`",
+              "`int[][] array = [][];`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "7b950271f6bbdf9dbf929b52",
+            "question": "Is this an example of method overloading or overriding?\n```java\nclass Car {\n    public void accelerate() {}\n}\nclass Lambo extends Car {\n    public void accelerate(int speedLimit) {}\n    public void accelerate() {}\n}\n```",
+            "answer": "both",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["both"],
+            "options": ["neither", "both", "overloading", "overriding"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "98e1c3e5930fa1d2c27f29e8",
+            "question": "Which choice is the best data type for working with money in Java?",
+            "answer": "BigDecimal",
+            "explanation": "[Reference](https://www.scaler.com/topics/java/primitive-data-types/#types-of-primitive-data-types-in-java)",
+            "hint": null,
+            "correctAnswer": ["BigDecimal"],
+            "options": ["float", "String", "double", "BigDecimal"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "cfa4630def4c78b9e59a250e",
+            "question": "Which statement about constructors is not true?",
+            "answer": "Every class must explicitly define a constructor without parameters.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Every class must explicitly define a constructor without parameters."
+            ],
+            "options": [
+              "A class can have multiple constructors with a different parameter list.",
+              "You can call another constructor with `this` or `super`.",
+              "A constructor does not define a return value.",
+              "Every class must explicitly define a constructor without parameters."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "ac6cf6153c70e55b7bdae949",
+            "question": "What language feature allows types to be parameters on classes, interfaces, and methods in order to reuse the same code for different data types?",
+            "answer": "Generics",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Generics"],
+            "options": ["Regular Expressions", "Reflection", "Generics", "Concurrency"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "53745f231bdc8a659600514b",
+            "question": "What will be printed?\n```java\npublic class Berries{\n    String berry = \"blue\";\n    public static void main(String[] args) {\n        new Berries().juicy(\"straw\");\n    }\n    void juicy(String berry){\n        this.berry = \"rasp\";\n        System.out.println(berry + \"berry\");\n    }\n}\n```",
+            "answer": "strawberry",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["strawberry"],
+            "options": ["raspberry", "strawberry", "blueberry", "rasp"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "333e9c355060058acf1a331e",
+            "question": "What is the value of `forestCount` after this code executes?\n```java\nMap<String, Integer> forestSpecies = new HashMap<>();\nforestSpecies.put(\"Amazon\", 30000);\nforestSpecies.put(\"Congo\", 10000);\nforestSpecies.put(\"Daintree\", 15000);\nforestSpecies.put(\"Amazon\", 40000);\nint forestCount = forestSpecies.size();\n```",
+            "answer": "3",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["3"],
+            "options": ["3", "4", "2", "When calling the put method, Java will throw an exception"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "bbe8cc4bc38ae7abdd51d1bf",
+            "question": "What is the problem with this code?\n```java\nimport java.util.ArrayList;\nimport java.util.Arrays;\nimport java.util.List;\nclass Main {\n    public static void main(String[] args) {\n        List<String> list = new ArrayList<String>(Arrays.asList(\"a\", \"b\", \"c\"));\n        for(String value :list) {\n            if(value.equals(\"a\")) {\n                list.remove(value);\n            }\n        }\n        System.out.println(list); // outputs [b,c]\n    }\n}\n```",
+            "answer": "Modifying a collection while iterating through it can throw a ConcurrentModificationException.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Modifying a collection while iterating through it can throw a ConcurrentModificationException."
+            ],
+            "options": [
+              "String should be compared using == method instead of equals.",
+              "Modifying a collection while iterating through it can throw a ConcurrentModificationException.",
+              "The List interface does not allow an argument of type String to be passed to the remove method.",
+              "ArrayList does not implement the List interface."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "8e19217abf03ae24eb2d8976",
+            "question": "How do you convert this method into a lambda expression?\n```java\npublic int square(int x) {\n    return x * x;\n}\n```",
+            "answer": "`Function<Integer, Integer> squareLambda = x -> x * x;`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`Function<Integer, Integer> squareLambda = x -> x * x;`"],
+            "options": [
+              "`Function<Integer, Integer> squareLambda = (int x) -> { x * x };`",
+              "`Function<Integer, Integer> squareLambda = () -> { return x * x };`",
+              "`Function<Integer, Integer> squareLambda = x -> x * x;`",
+              "`Function<Integer, Integer> squareLambda = x -> return x * x;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "431df8955818d48c3565ed3c",
+            "question": "Which choice is a valid implementation of this interface?\n```java\ninterface MyInterface {\n    int foo(int x);\n}\n```",
+            "answer": "C",
+            "explanation": "```java\npublic class MyClass implements MyInterface {\n// ....\npublic void foo(int x){\nSystem.out.println(x);\n}\n}\n```\n```java\npublic class MyClass implements MyInterface {\n// ....\npublic double foo(int x){\nreturn x * 100;\n}\n}\n```\n```java\npublic class MyClass implements MyInterface {\n// ....\npublic int foo(int x){\nreturn x * 100;\n}\n}\n```\n```java\npublic class MyClass implements MyInterface {\n// ....\npublic int foo(){\nreturn 100;\n}\n}\n```",
+            "hint": null,
+            "correctAnswer": ["C"],
+            "options": ["A", "B", "C", "D"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "3c83a9f18db50e4e2ae18618",
+            "question": "What is the result of this program?\n```java\ninterface Foo {\n    int x = 10;\n}\npublic class Main{\n    public static void main(String[] args) {\n        Foo.x = 20;\n        System.out.println(Foo.x);\n    }\n}\n```",
+            "answer": "An error will occur when compiling.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["An error will occur when compiling."],
+            "options": ["10", "20", "null", "An error will occur when compiling."],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "fd039eb66bb0e73d75a86349",
+            "question": "Which statement must be inserted on line 1 to print the value true?\n```java\n1:\n2: Optional<String> opt = Optional.of(val);\n3: System.out.println(opt.isPresent());\n```",
+            "answer": "`String val = \"Sam\";`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`String val = \"Sam\";`"],
+            "options": [
+              "`Integer val = 15;`",
+              "`String val = \"Sam\";`",
+              "`String val = null;`",
+              "`Optional<String> val = Optional.empty();`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "afd5a86de09798cecc18e3de",
+            "question": "What will this code print, assuming it is inside the main method of a class?\n```java\nSystem.out.println(true && false || true);\nSystem.out.println(false || false && true);\n```",
+            "answer": "true </br> false",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["true </br> false"],
+            "options": [
+              "false </br> true",
+              "true </br> true",
+              "true </br> false",
+              "false </br> false"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "9e42a729042cee0cb67af108",
+            "question": "What will this code print?\n```java\nList<String> list1 = new ArrayList<>();\nlist1.add(\"One\");\nlist1.add(\"Two\");\nlist1.add(\"Three\");\nList<String> list2 = new ArrayList<>();\nlist2.add(\"Two\");\nlist1.remove(list2);\nSystem.out.println(list1);\n```",
+            "answer": "`[One, Two, Three]`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`[One, Two, Three]`"],
+            "options": ["`[Two]`", "`[One, Two, Three]`", "`[One, Three]`", "`Two`"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "87494d5f3d396aa2dd468ccb",
+            "question": "Which code checks whether the characters in two Strings,named `time` and `money`, are the same?",
+            "answer": "`if(time.equals(money)){}`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["`if(time.equals(money)){}`"],
+            "options": [
+              "`if(time <> money){}`",
+              "`if(time.equals(money)){}`",
+              "`if(time == money){}`",
+              "`if(time = money){}`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "7e415dfffbed085287228382",
+            "question": "An **\\_** is a serious issue thrown by the JVM that the JVM is unlikely to recover from. An **\\_** is an unexpected event that an application may be able to deal with to continue execution.",
+            "answer": "error, exception",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["error, exception"],
+            "options": [
+              "exception,assertion",
+              "AbnormalException, AccidentalException",
+              "error, exception",
+              "exception, error"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "5439466214a44639334bd063",
+            "question": "Which keyword would not be allowed here?\n```java\nclass Unicorn {\n    _____ Unicorn(){}\n}\n```",
+            "answer": "static",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["static"],
+            "options": ["static", "protected", "public", "void"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "971388cba53b4b529d222b81",
+            "question": "Which OOP concept is this code an example of?\n```java\nList[] myLists = {\n    new ArrayList<>(),\n    new LinkedList<>(),\n    new Stack<>(),\n    new Vector<>(),\n};\nfor (List list : myLists){\n    list.clear();\n}\n```",
+            "answer": "polymorphism",
+            "explanation": "**Explanation:** Switch between different implementations of the `List` interface.",
+            "hint": null,
+            "correctAnswer": ["polymorphism"],
+            "options": ["composition", "generics", "polymorphism", "encapsulation"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "df907d2709abd69b11e6decc",
+            "question": "What does this code print?\n```java\nString a = \"bikini\";\nString b = new String(\"bikini\");\nString c = new String(\"bikini\");\nSystem.out.println(a == b);\nSystem.out.println(b == c);\n```",
+            "answer": "false; false",
+            "explanation": "**Explanation:** `== operator` compares the object reference. `String a = \"bikini\"; String b = \"bikini\";` would result in True. Here new creates a new object, so false. Use `equals() method` to compare the content.",
+            "hint": null,
+            "correctAnswer": ["false; false"],
+            "options": ["true; false", "false; false", "false; true", "true; true"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "280dcf274cbb3b558f44bc41",
+            "question": "What keyword is added to a method declaration to ensure that two threads do not simultaneously execute it on the same object instance?",
+            "answer": "synchronized",
+            "explanation": "[Reference](https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html)",
+            "hint": null,
+            "correctAnswer": ["synchronized"],
+            "options": ["native", "volatile", "synchronized", "lock"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "35c95ccf2a4430f0bfddf591",
+            "question": "Which is a valid type for this lambda function?\n```java\n_____ oddOrEven = x -> {\n    return x % 2 == 0 ? \"even\" : \"odd\";\n};\n```",
+            "answer": "`Function<Integer, String>`",
+            "explanation": "[Explaination](https://github.com/0nyr/java/tree/main/examples/lambda_function), [Reference](https://www.geeksforgeeks.org/function-interface-in-java-with-examples/)",
+            "hint": null,
+            "correctAnswer": ["`Function<Integer, String>`"],
+            "options": [
+              "`Function<Integer, Boolean>`",
+              "`Function<String>`",
+              "`Function<Integer, String>`",
+              "`Function<Integer>`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "b498fcab975b6440faead435",
+            "question": "What is displayed when this code is compiled and executed?\n```java\nimport java.util.HashMap;\npublic class Main {\n    public static void main(String[] args) {\n        HashMap<String, Integer> pantry = new HashMap<>();\n        pantry.put(\"Apples\", 3);\n        pantry.put(\"Oranges\", 2);\n        int currentApples = pantry.get(\"Apples\");\n        pantry.put(\"Apples\", currentApples + 4);\n        System.out.println(pantry.get(\"Apples\"));\n    }\n}\n```",
+            "answer": "7",
+            "explanation": "[Explanation](https://github.com/0nyr/java/tree/main/training/linkedin_assessment/what_is_displayed_0)",
+            "hint": null,
+            "correctAnswer": ["7"],
+            "options": ["6", "3", "4", "7"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "f380f58b74b08d6aee92fcec",
+            "question": "What variable type should be declared for capitalization?\n```shell\nList<String> songTitles = Arrays.asList(\"humble\", \"element\", \"dna\");\n_______ capitalize = (str) -> str.toUpperCase();\nsongTitles.stream().map(capitalize).forEach(System.out::println);\n```",
+            "answer": "`Function<String, String>`",
+            "explanation": "[Explanation](https://github.com/0nyr/java/tree/main/training/linkedin_assessment/what_variable_type_0), [Reference](https://www.geeksforgeeks.org/function-interface-in-java-with-examples/)",
+            "hint": null,
+            "correctAnswer": ["`Function<String, String>`"],
+            "options": [
+              "`Function<String, String>`",
+              "`Stream<String>`",
+              "`String<String, String>`",
+              "`Map<String, String>`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "b5c3bad863a5339e1e3156e1",
+            "question": "Which is the correct return type for the processFunction method?\n```java\n_____ processFunction(Integer number, Function<Integer, String> lambda) {\n    return lambda.apply(number);\n}\n```",
+            "answer": "`String`",
+            "explanation": "[Explanation](https://github.com/0nyr/java/tree/main/training/linkedin_assessment/which_return_type_0)",
+            "hint": null,
+            "correctAnswer": ["`String`"],
+            "options": ["`Integer`", "`String`", "`Consumer`", "`Function<Integer, String>`"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "9e1132a65e5c9de08a36b91e",
+            "question": "What function could you use to replace slashes for dashes in a list of dates?\n```java\nList<String> dates = new ArrayList<String>();\n// missing code\ndates.replaceAll(replaceSlashes);\n```",
+            "answer": "`UnaryOperator<String> replaceSlashes = date -> date.replace(\"/\", \"-\");`",
+            "explanation": "**Explanation:** `replaceAll` method for any List<T> only accepts UnaryOperator<T> to pass every single element into it then put the result into the List<T> again.",
+            "hint": null,
+            "correctAnswer": [
+              "`UnaryOperator<String> replaceSlashes = date -> date.replace(\"/\", \"-\");`"
+            ],
+            "options": [
+              "`UnaryOperator<String> replaceSlashes = date -> date.replace(\"/\", \"-\");`",
+              "`Function<String, String> replaceSlashes = dates -> dates.replace(\"-\", \"/\");`",
+              "`Map<String, String> replaceSlashes = dates.replace(\"/\", \"-\");`",
+              "`Consumer<Date> replaceSlashes = date -> date.replace(\"/\", \"-\");`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "74e9d3c485da9a3af89f02a6",
+            "question": "From which class do all other classes implicitly extend?",
+            "answer": "`Object`",
+            "explanation": "[Explanation](https://stackoverflow.com/questions/17187218/default-class-that-is-extended-by-all-classes-in-java)",
+            "hint": null,
+            "correctAnswer": ["`Object`"],
+            "options": ["`Object`", "`Main`", "`Java`", "`Class`"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "9828c0b99788798bd20b592d",
+            "question": "How do you create and run a Thread for this class?\n```java\nimport java.util.date;\npublic class CurrentDateRunnable implements Runnable {\n    @Override\n    public void run () {\n        while (true) {\n            System.out.println(\"Current date: \" + new Date());\n            try {\n                Thread.sleep(5000);\n            } catch (InterruptedException e) {\n                throw new RuntimeException(e);\n            }\n        }\n    }\n}\n```",
+            "answer": "`Thread thread = new Thread(new CurrentDateRunnable()); thread.start();`",
+            "explanation": "[Reference](https://www.w3schools.com/java/java_threads.asp)",
+            "hint": null,
+            "correctAnswer": [
+              "`Thread thread = new Thread(new CurrentDateRunnable()); thread.start();`"
+            ],
+            "options": [
+              "`Thread thread = new Thread(new CurrentDateRunnable()); thread.start();`",
+              "`new Thread(new CurrentDateRunnable()).join();`",
+              "`new CurrentDateRunnable().run();`",
+              "`new CurrentDateRunnable().start();`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "4c77e3492f695e8e97cf0362",
+            "question": "Which expression is a functional equivalent?\n```java\nList<Integer> numbers = List.of(1,2,3,4);\nint total = 0;\nfor (Integer x : numbers) {\n    if (x % 2 == 0)\n    total += x * x;\n}\n```",
+            "answer": "D",
+            "explanation": "```java\nint total = numbers.stream()\n.transform(x -> x * x)\n.filter(x -> x % 2 == 0)\n.sum ();\n```\n```java\nint total = numbers.stream()\n.filter(x -> x % 2 == 0)\n.collect(Collectors.toInt());\n```\n```java\nint total = numbers.stream()\n.mapToInt (x -> {if (x % 2 == 0) return x * x;})\n.sum();\n```\n```java\nint total = numbers.stream()\n.filter(x -> x % 2 == 0)\n.mapToInt(x -> x * x)\n.sum();\n```\n**Explanation:** The given code in the question will give you the output 20 as total:\n```java\nnumbers                         // Input `List<Integer>` > [1, 2, 3, 4]\n.stream()                   // Converts input into `Stream<Integer>`\n.filter(x -> x % 2 == 0)    // Filter even numbers and return `Stream<Integer>` > [2, 4]\n.mapToInt(x -> x * x)       // Square the number, converts `Integer` to an `int`, and returns `IntStream` > [4, 16]\n.sum()                      // Returns the sum as `int` > 20\n```",
+            "hint": null,
+            "correctAnswer": ["D"],
+            "options": ["A", "B", "C", "D"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "6fdcfc310c8dd1c1182fd2da",
+            "question": "Which is not one of the standard input/output streams provided by java.lang.System?",
+            "answer": "print",
+            "explanation": "[Reference](https://www.whitman.edu/mathematics/java_tutorial/java/system/iostreams.html)",
+            "hint": null,
+            "correctAnswer": ["print"],
+            "options": ["print", "out", "err", "in"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "6d8fd8c851526eb334cfc632",
+            "question": "The compiler is complaining about this assignment of the variable pickle to the variable jar. How would you fix this?\n```java\ndouble pickle = 2;\nint jar = pickle;\n```",
+            "answer": "Cast pickle to an int before assigning it to the jar.",
+            "explanation": "[Reference](https://www.w3schools.com/java/java_type_casting.asp)",
+            "hint": null,
+            "correctAnswer": ["Cast pickle to an int before assigning it to the jar."],
+            "options": [
+              "Use the method toInt() to convert the pickle before assigning it to the jar.",
+              "Cast pickle to an int before assigning it to the jar.",
+              "Make pickle into a double by adding + \".0\"",
+              "Use the new keyword to create a new Integer from pickle before assigning it to the jar."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "4a79bdc97e99f650984d0c82",
+            "question": "What value should x have to make this loop execute 10 times?\n```java\nfor(int i=0; i<30; i+=x) {}\n```",
+            "answer": "3",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["3"],
+            "options": ["10", "3", "1", "0"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "a2893379e152e3f265e70286",
+            "question": "The **\\_** runs compiled Java code, while the **\\_** compiles Java files.",
+            "answer": "JRE; JDK",
+            "explanation": "[Reference](https://stackoverflow.com/questions/1906445/what-is-the-difference-between-jdk-and-jre)",
+            "hint": null,
+            "correctAnswer": ["JRE; JDK"],
+            "options": ["IDE; JRE", "JDK; IDE", "JRE; JDK", "JDK; JRE"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "3f85bf9ce64f226444a98bb7",
+            "question": "Which packages are part of Java Standard Edition",
+            "answer": "All above",
+            "explanation": "[Reference](https://docs.oracle.com/en/java/javase/11/docs/api/allpackages-index.html)",
+            "hint": null,
+            "correctAnswer": ["All above"],
+            "options": ["java.net", "java.util", "java.lang", "All above"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "78991499213f04f940ee7c24",
+            "question": "What values for x and y will cause this code to print \"btc\"?\n```java\nString buy = \"bitcoin\";\nSystem.out.println(buy.substring(x, x+1) + buy.substring(y, y+2))\n```",
+            "answer": "int x = 0; int y = 2;",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["int x = 0; int y = 2;"],
+            "options": [
+              "int x = 0; int y = 2;",
+              "int x = 1; int y = 3;",
+              "int x = 0; int y = 3;",
+              "int x = 1; int y = 3;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "d89987af723ef5e0fa67a95e",
+            "question": "Which keyword would you add to make this method the entry point of the program?\n```java\npublic class Main {\n    public static void main(String[] args) {\n        // Your program logic here\n    }\n}\n```",
+            "answer": "static",
+            "explanation": "[Reference](https://www.geeksforgeeks.org/java-main-method-public-static-void-main-string-args/)\nTo make the main method the entry point of the program in Java, we need to use the static keyword. So, the correct answer is: static\nThe main method must be declared as public static void main(String[] args) to serve as the entry point for a Java program",
+            "hint": null,
+            "correctAnswer": ["static"],
+            "options": ["exception", "args", "static", "String"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "03d49b85c53bd490df213408",
+            "question": "You have a list of Bunny objects that you want to sort by weight using Collections.sort. What modification would you make to the Bunny class?\n```java\n//This is how the original bunny class looks\nclass Bunny{\n    String name;\n    int weight;\n    Bunny(String name){\n        this.name = name;\n    }\n    public static void main(String args[]){\n        Bunny bunny = new Bunny(\"Bunny 1\");\n    }\n}\n```",
+            "answer": "Implement the Comparable interface by overriding the compareTo method.",
+            "explanation": "[Reference](https://www.geeksforgeeks.org/how-to-override-compareto-method-in-java/)",
+            "hint": null,
+            "correctAnswer": [
+              "Implement the Comparable interface by overriding the compareTo method."
+            ],
+            "options": [
+              "Implement the Comparable interface by overriding the compareTo method.",
+              "Add the keyword default to the weight variable.",
+              "Override the equals method inside the Bunny class.",
+              "Implement Sortable and override the sortBy method."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "5cd713598cfc9f1abaf0f673",
+            "question": "Identify the incorrect Java feature.",
+            "answer": "Use of pointers",
+            "explanation": "[Reference](https://www.interviewbit.com/blog/features-of-java/)",
+            "hint": null,
+            "correctAnswer": ["Use of pointers"],
+            "options": ["Object-oriented", "Use of pointers", "Dynamic", "Architectural neural"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "4668c9b03b2e4047a8cec977",
+            "question": "What is the output of this code?\n```java\nint yearsMarried = 2;\nswitch (yearsMarried) {\n   case 1:\n      System.out.println(\"paper\");\n   case 2:\n      System.out.println(\"cotton\");\n   case 3:\n      System.out.println(\"leather\");\n   default:\n      System.out.println(\"I don't gotta buy gifts for nobody!\");\n}\n```",
+            "answer": "cotton <br> leather <br> I don't gotta buy gifts for nobody!",
+            "explanation": "[Reference](https://stackoverflow.com/a/8564008)",
+            "hint": null,
+            "correctAnswer": ["cotton <br> leather <br> I don't gotta buy gifts for nobody!"],
+            "options": [
+              "cotton",
+              "cotton <br> leather",
+              "cotton <br> leather <br> I don't gotta buy gifts for nobody!",
+              "cotton <br> I don't gotta buy gifts for nobody!"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "7423c286a2e9621653060122",
+            "question": "What language features do these expressions demonstrate?\n```\nSystem.out::println\nDoggie::fetch\n```",
+            "answer": "method references",
+            "explanation": "[Reference](https://stackoverflow.com/questions/31020269/what-is-the-use-of-system-outprintln-in-java-8)",
+            "hint": null,
+            "correctAnswer": ["method references"],
+            "options": [
+              "condensed invocation",
+              "static references",
+              "method references",
+              "bad code"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "d79568303daa37d91cfc2c58",
+            "question": "What is the difference between the wait() and sleep() methods?",
+            "answer": "A waiter can be woken up by another Thread calling notification whereas a sleeper cannot.",
+            "explanation": "[Reference](https://docs.oracle.com/javase/tutorial/essential/concurrency/notify.html)",
+            "hint": null,
+            "correctAnswer": [
+              "A waiter can be woken up by another Thread calling notification whereas a sleeper cannot."
+            ],
+            "options": [
+              "Only Threads can wait, but any Object can be put to sleep.",
+              "A waiter can be woken up by another Thread calling notification whereas a sleeper cannot.",
+              "When things go wrong, sleep throws an IllegalMonitorStateException whereas wait throws an InterruptedException.",
+              "Sleep allows for multi-threading whereas wait does not."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "8aa2ee6728ee9d06fa0c6ec4",
+            "question": "Which is the right way to declare an enumeration of cats?",
+            "answer": "enum Cats {SPHYNX, SIAMESE, BENGAL}",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["enum Cats {SPHYNX, SIAMESE, BENGAL}"],
+            "options": [
+              "enum Cats (SPHYNX, SIAMESE, BENGAL);",
+              "enum Cats (\"sphynx\", \"siamese\", \"bengal\");",
+              "enum Cats {SPHYNX, SIAMESE, BENGAL}",
+              "enum Cats {\"sphynx\",\"siamese\",\"bengal}"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "ea7ba3518b175f870c9d309b",
+            "question": "What happens when this code is run?\n```java\nList<String> horses = new ArrayList<String>();\nhorses.add (\" Sea Biscuit \");\nSystem.out.println(horses.get(1).trim());\n```",
+            "answer": "An IndexOutOfBoundsException will be thrown.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["An IndexOutOfBoundsException will be thrown."],
+            "options": [
+              "\"Sea Biscuit\" will be printed.",
+              "\" Sea Biscuit \" will be printed.",
+              "An IndexOutOfBoundsException will be thrown.",
+              "A NullPointerException will be thrown."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "f765647eb09cb7a83235f040",
+            "question": "Which data structure would you choose to associate the amount of rainfall with each month?",
+            "answer": "Map",
+            "explanation": "**Explanation:**\n> from @yktsang01 in #3915 thread\nMap because the map is a key/value pair without creating new classes/objects. So can store the rainfall per month like `Map<java.time.Month, Double>`.\nThe other options will most likely need some new class to be meaningful:\n```java\npublic class Rainfall {\nprivate java.time.Month month;\nprivate double rainfall;\n}\nVector<Rainfall>\nLinkedList<Rainfall>\nQueue<Rainfall>\n```",
+            "hint": null,
+            "correctAnswer": ["Map"],
+            "options": ["Vector", "LinkedList", "Map", "Queue"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c39a907fceed1ee2ddd775f1",
+            "question": "Among the following which contains date information?",
+            "answer": "java.sql timestamp",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["java.sql timestamp"],
+            "options": ["java.sql timestamp", "java.io time", "java.io.timestamp", "java.sql.time"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c44d3a0971f322f427d1d962",
+            "question": "What is the size of float and double in Java?",
+            "answer": "32 and 64",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["32 and 64"],
+            "options": ["32 and 64", "32 and 32", "64 and 64", "64 and 32"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "c59653061f4811e22a6c6148",
+            "question": "When you pass an object reference as an argument to a method call what gets passed?",
+            "answer": "a copy of the reference",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["a copy of the reference"],
+            "options": [
+              "a reference to a copy",
+              "a copy of the reference",
+              "the object itself",
+              "the original reference"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "e83644273082d8cac1dbeaf5",
+            "question": "Which choice demonstrates a valid way to create a reference to a static function of another class?",
+            "answer": "Function<Integer, Integer> funcReference = MyClass::myFunction;",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Function<Integer, Integer> funcReference = MyClass::myFunction;"],
+            "options": [
+              "Function<Integer, Integer> funcReference = MyClass::myFunction;",
+              "Function<Integer, Integer> funcReference = MyClass()::myFunction();",
+              "Function<Integer, Integer> funcReference = MyClass().myFunction;",
+              "Function<Integer, Integer> funcReference = MyClass.myFunction();"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "2e7e9969a9ec5013a4991bbd",
+            "question": "What is UNICODE?",
+            "answer": "Unicode is used for external representation of characters and strings",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Unicode is used for external representation of characters and strings"
+            ],
+            "options": [
+              "Unicode is used for the external representation of words and strings",
+              "Unicode is used for internal representation of characters and strings",
+              "Unicode is used for external representation of characters and strings",
+              "Unicode is used for the internal representation of words and strings"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "e6cf226501729d130d70a5bd",
+            "question": "What kind of thread is the Garbage collector thread?",
+            "answer": "Daemon thread",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Daemon thread"],
+            "options": ["User thread", "Daemon thread", "Both", "None of these"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "a536ae1d5fd71a157057a71d",
+            "question": "What is HashMap and Map?",
+            "answer": "Map is Interface and Hashmap is the class that implements that",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Map is Interface and Hashmap is the class that implements that"],
+            "options": [
+              "HashMap is Interface and map is a class that implements that",
+              "HashMap is a class and map is an interface that implements that",
+              "Map is a class and Hashmap is an interface that implements that",
+              "Map is Interface and Hashmap is the class that implements that"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "ae90f6edb585ee477d188dec",
+            "question": "What invokes a thread's run() method?",
+            "answer": "start() method of the thread class.",
+            "explanation": "**Explanation:** After a thread is started, via its `start()` method of the Thread class, the JVM invokes the thread's `run()` method when the thread is initially executed.",
+            "hint": null,
+            "correctAnswer": ["start() method of the thread class."],
+            "options": [
+              "JVM invokes the thread's run() method when the thread is initially executed.",
+              "Main application running the thread.",
+              "start() method of the thread class.",
+              "None of the above."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "499653ce0e382f90743a5ca7",
+            "question": "What is true about a final class?",
+            "answer": "All of the above.",
+            "explanation": "**Explanation:** Final classes are created so the methods implemented by that class cannot be overridden. It can't be inherited. These classes are declared `final`.",
+            "hint": null,
+            "correctAnswer": ["All of the above."],
+            "options": [
+              "class declared final is a final class.",
+              "Final classes are created so the methods implemented by that class cannot be overridden.",
+              "It can't be inherited.",
+              "All of the above."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "4ad4794ac05887b231bfd4ef",
+            "question": "Which method can be used to find the highest value of x and y?",
+            "answer": "Math.max(x,y)",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Math.max(x,y)"],
+            "options": [
+              "Math.largest(x,y)",
+              "Math.maxNum(x,y)",
+              "Math.max(x,y)",
+              "Math.maximum(x,y)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "9b2b8698a37ee4a9a38471bb",
+            "question": "`void accept(T t)` is method of which Java functional interface?",
+            "answer": "Consumer",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Consumer"],
+            "options": ["Consumer", "Producer", "Both", "None"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "d3cdd2e720268e91463715f5",
+            "question": "Which of these does `Stream filter()` operate on?",
+            "answer": "Predicate",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Predicate"],
+            "options": ["Predicate", "Interface", "Class", "Methods"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "1c604ce058f58a9260cbab6c",
+            "question": "Which of these does `Stream map()` operates on?",
+            "answer": "Function",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Function"],
+            "options": ["Class", "Interface", "Predicate", "Function"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "49e4ae66f4c7bad4f71b22fa",
+            "question": "What code is needed at line 8?\n```java\n1: class Main {\n2:      public static void main(String[] args) {\n3:          Map<String, Integer> map = new HashMap<>();\n4:          map.put(\"a\", 1);\n5:          map.put(\"b\", 2);\n6:          map.put(\"c\", 3);\n7:          int result = 0;\n8:\n9:              result += entry.getValue();\n10:         }\n11:         System.out.println(result); // outputs 6\n12:     }\n13: }\n```",
+            "answer": "for(Entry<String, Integer> entry: map.entrySet()) {",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["for(Entry<String, Integer> entry: map.entrySet()) {"],
+            "options": [
+              "for(MapEntry<String, Integer> entry: map.entrySet()) {",
+              "for(String entry: map) {",
+              "for(Integer entry: map.values()) {",
+              "for(Entry<String, Integer> entry: map.entrySet()) {"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "d40eda1bd040ed832201faeb",
+            "question": "What will print when Lambo is instantiated?\n```java\nclass Car {\n    String color = \"blue\";\n}\nclass Lambo extends Car {\n    String color = \"white\";\n    public Lambo() {\n        System.out.println(super.color);\n        System.out.println(this.color);\n        System.out.println(color);\n    }\n}\n```",
+            "answer": "blue; java -jar FrogSounds.jar",
+            "explanation": "white\nwhite\nwhite\nblue\nwhite\nwhite\nwhite\nblue\n### Q156. Which command will run a FrogSounds app that someone emailed to you as a jar?",
+            "hint": null,
+            "correctAnswer": ["blue", "java -jar FrogSounds.jar"],
+            "options": [
+              "blue",
+              "blue",
+              "white",
+              "white",
+              "jar FrogSounds.java",
+              "javac FrogSounds.exe",
+              "jar cf FrogSounds.jar",
+              "java -jar FrogSounds.jar"
+            ],
+            "nature": "ChooseMany",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "0c14fbf5d4fff2a6a6d76043",
+            "question": "What is the default value of a short variable?",
+            "answer": "0",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["0"],
+            "options": ["0", "0.0", "null", "undefined"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "3afc1d1c8b8b29214d127f6b",
+            "question": "What will be the output of the following Java program?\n```java\nclass variable_scope {\n    public static void main(String args[]) {\n        int x;\n        x = 5;\n        {\n            int y = 6;\n            System.out.print(x + \" \" + y);\n        }\n        System.out.println(x + \" \" + y);\n    }\n}\n```",
+            "answer": "Compilation Error",
+            "explanation": "**Explanation:** Scope of variable Y is limited.",
+            "hint": null,
+            "correctAnswer": ["Compilation Error"],
+            "options": ["Compilation Error", "Runtime Error", "5 6 5 6", "5 6 5"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "cd003663b21349949e3bc355",
+            "question": "Subclasses of an abstract class are created using the keyword **\\_**.",
+            "answer": "extends",
+            "explanation": "[Reference](https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html)",
+            "hint": null,
+            "correctAnswer": ["extends"],
+            "options": ["extends", "abstracts", "interfaces", "implements"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "8db719c93eebdcf2afe91a78",
+            "question": "What will be the output of the following program?\n```java\nimport java.util.Formatter;\npublic class Course {\n    public static void main(String[] args) {\n        Formatter data = new Formatter();\n        data.format(\"course %s\", \"java \");\n        System.out.println(data);\n        data.format(\"tutorial %s\", \"Merit campus\");\n        System.out.println(data);\n    }\n}\n```",
+            "answer": "course java",
+            "explanation": "tutorial Merit campus\ncourse java tutorial Merit campus",
+            "hint": null,
+            "correctAnswer": ["course java"],
+            "options": ["course java", "course java", "Compilation Error", "Runtime Error"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "61651945b7f3f4be1f4e96ca",
+            "question": "Calculate the time complexity of the following program.\n```java\n void printUnorderedPairs(int[] arrayA, int[] arrayB){\n    for(int i = 0; i < arrayA.length; i++){\n        for(int  j = 0; j < arrayB.length; j++){\n            if(arrayA[i] < arrayB[j]){\n                System.out.println(arrayA[i] + \",\" + arrayB[j]);\n            }\n        }\n    }\n }\n```",
+            "answer": "O(AB)",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["O(AB)"],
+            "options": ["O(N\\*N)", "O(1)", "O(AB)", "O(A\\*B)"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "41e04f9d887af929df6c678f",
+            "question": "What do these expressions evaluate?\n1. true && false\n    2. true && false || true",
+            "answer": "1. false 2. true",
+            "explanation": "[Reference](<http://englishonlineclub.com/pdf/Cracking%20the%20Coding%20Interview%20-%20189%20Programming%20Questions%20and%20Solutions%20(6th%20Edition)%20[EnglishOnlineClub.com].pdf>) //check page number 47 and example number 4.:-}",
+            "hint": null,
+            "correctAnswer": ["1. false 2. true"],
+            "options": [
+              "1. false 2. true",
+              "1. false 2. false",
+              "1. true 2. false",
+              "1. true 2. true"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "288a4efc85032e991bdc834b",
+            "question": "What allows the programmer to destroy an object x?",
+            "answer": "4. Only the garbage collection system can destroy an object.",
+            "explanation": "[Reference](https://www.studytonight.com/java/garbage-collection.php) //No, the Garbage Collection can not be forced explicitly. We may request JVM for garbage collection by calling System.gc() method. But This does not guarantee that JVM will perform the garbage collection",
+            "hint": null,
+            "correctAnswer": ["4. Only the garbage collection system can destroy an object."],
+            "options": [
+              "1. x.delete()",
+              "2. x.finalize()",
+              "3. Runtime.getRuntime().gc()",
+              "4. Only the garbage collection system can destroy an object."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "1ec59a2ae177008e76458f21",
+            "question": "How many objects are eligible for garbage collection till flag\n```java\npublic class Test\n{\n    public static void main(String [] args)\n    {\n        Test obj1 = new Test();\n        Test obj2 = m1(obj1);\n        Test obj4 = new Test();\n        obj2 = obj4;               //Flag\n        doComplexStuff();\n    }\n    static Test m1(Test mx)\n    {\n        mx = new Test();\n        return mx;\n    }\n}\n```",
+            "answer": "2. 1",
+            "explanation": "[Reference](https://www.indiabix.com/java-programming/garbage-collections/) // question no 5.",
+            "hint": null,
+            "correctAnswer": ["2. 1"],
+            "options": ["1. 0", "2. 1", "3. 2", "4. 4"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "4c9f1adbe12fa8edb831b7e1",
+            "question": "Which interface definition allows this code to compile\n```java\nint length = 5;\nSquare square = x -> x*x;\nint a = square.calculate(length);\n```",
+            "answer": "B",
+            "explanation": "```java\n@FunctionalInterface\npublic interface Square {\nvoid calculate(int x);\n}\n```\n```java\n@FunctionalInterface\npublic interface Square {\nint calculate(int x);\n}\n```\n```java\n@FunctionalInterface\npublic interface Square {\nint calculate(int... x);\n}\n```\n```java\n@FunctionalInterface\npublic interface Square {\nvoid calculate(int x, int y);\n}\n```\n[Reference](https://www.baeldung.com/java-8-functional-interfaces)",
+            "hint": null,
+            "correctAnswer": ["B"],
+            "options": ["A", "B", "C", "D"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "ac4d0d2a9ee094301c4f7d9c",
+            "question": "Which of the following represents the time complexity of an algorithm?",
+            "answer": "O(A\\*B)",
+            "explanation": "**Reasoning:** The answer option 'O(AB)' should be corrected to 'O(A\\*B)' to accurately represent the time complexity.\n- O(N\\*N): This represents a quadratic time complexity, where the running time grows with the square of the input size.\n- O(1): This represents constant time complexity, indicating that the algorithm's running time doesn't depend on the input size.\n- O(A+B): This represents linear time complexity, indicating that the running time scales linearly with the sum of values A and B.\n- O(A\\*B): This represents quadratic time complexity, indicating that the running time scales quadratically with the product of values A and B.\n`The original answer option 'O(AB)' is incorrect as it does not properly represent a known time complexity notation. The correct notation should be 'O(A*B)' to indicate quadratic time complexity.`\n[Reference](https://www.geeksforgeeks.org/practice-questions-time-complexity-analysis/)",
+            "hint": null,
+            "correctAnswer": ["O(A\\*B)"],
+            "options": ["O(N\\*N)", "O(1)", "O(A+B)", "O(A\\*B)"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "a9835c40ad49a85f53d9bcaf",
+            "question": "Calculate the space complexity of the following program.\n```java\nvoid createArray(int n) {\n    int[] arr = new int[n];\n    for (int i = 0; i < n; i++) {\n        arr[i] = i * 2;\n    }\n}\n```",
+            "answer": "O(N)",
+            "explanation": "**Explanation:** In this program, an array of size n is created. The space complexity is determined by the size of the dynamic array, which is n. Therefore, the space complexity is O(N).",
+            "hint": null,
+            "correctAnswer": ["O(N)"],
+            "options": ["O(1)", "O(N)", "O(N^2)", "O(log(N))"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "1a54825fbd0e81d649ca9270",
+            "question": "What will be the output of the following Java code?\n```java\n    import java.util.*;\n    public class genericstack <E>\n    {\n        Stack <E> stk = new Stack <E>();\n    public void push(E obj)\n        {\n            stk.push(obj);\n    }\n    public E pop()\n        {\n            E obj = stk.pop();\n        return obj;\n    }\n    }\n    class Output\n    {\n        public static void main(String args[])\n        {\n            genericstack <String> gs = new genericstack<String>();\n            gs.push(\"Hello\");\n            System.out.println(gs.pop());\n        }\n    }\n```",
+            "answer": "Hello",
+            "explanation": "**Explanation:** In this program, The code defines a generic stack class, pushes the string \"Hello\" onto the stack, and then pops and prints \"Hello,\" resulting in the output \"Hello.\"",
+            "hint": null,
+            "correctAnswer": ["Hello"],
+            "options": ["H", "Hello", "Runtime Error", "Compilation Error"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "bfa9cdacab090caa307be165",
+            "question": "In Java, what is the purpose of the synchronized keyword when used in the context of methods or code blocks?",
+            "answer": "It is used to mark a method or code block as thread-safe, ensuring that only one thread can execute it at a time.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It is used to mark a method or code block as thread-safe, ensuring that only one thread can execute it at a time."
+            ],
+            "options": [
+              "It is used to specify that a method or code block is asynchronous, allowing multiple threads to execute it concurrently.",
+              "It is used to mark a method or code block as thread-safe, ensuring that only one thread can execute it at a time.",
+              "It indicates that the method or code block is highly optimized for performance and will run faster than non-synchronized methods.",
+              "It is used to prevent a method or code block from being executed by any thread, making it effectively \"locked.\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "b55f33b35cbb35024e141f06",
+            "question": "In Java, which of the following statements about the \"transient\" modifier is true?",
+            "answer": "Transient variables are not serialized when an object is serialized.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Transient variables are not serialized when an object is serialized."
+            ],
+            "options": [
+              "Transient variables cannot be accessed outside their declaring class.",
+              "Transient variables are automatically initialized with a default value.",
+              "Transient variables are not serialized when an object is serialized.",
+              "Transient is a keyword used to define inner classes."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "2c922d1a99bb3fbb00059669",
+            "question": "The following prototype shows that a Cylinder subclass is derived from a superclass called Circle.",
+            "answer": "Class Cylinder extends Circle.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Class Cylinder extends Circle."],
+            "options": [
+              "Class Circle extends Cylinder.",
+              "Class Cylinder derived Circle.",
+              "Class Cylinder extends Circle.",
+              "Class Circle derived Cylinder."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "6785cb9c271b141fd87d3684",
+            "question": "What will be the output of the following Java code snippet?\n```java\nclass abc\n{\n    public static void main(String args[])\n    {\n        if(args.length>0)\n        System.out.println(args.length);\n    }\n}\n```",
+            "answer": "The snippet compiles and runs but does not print anything.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["The snippet compiles and runs but does not print anything."],
+            "options": [
+              "The snippet compiles and runs but does not print anything.",
+              "The snippet compiles, runs, and prints 0.",
+              "The snippet compiles, runs, and prints 1.",
+              "The snippet does not compile."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "3749e047011a64ca16a89b1e",
+            "question": "Which of these classes allows us to define our own formatting pattern for dates and times?",
+            "answer": "SimpleDateFormat",
+            "explanation": "[Reference](https://www.sarthaks.com/2435260/which-of-these-class-allows-us-to-define-our-own-formatting-pattern-for-dates-and-time)",
+            "hint": null,
+            "correctAnswer": ["SimpleDateFormat"],
+            "options": [
+              "DefinedDateFormat",
+              "SimpleDateFormat",
+              "ComplexDateFormat",
+              "UsersDateFormatRead"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          },
+          {
+            "id": "0013f123ae80d5a9a8b27a33",
+            "question": "What kind of relationship does extends denote?",
+            "answer": "is-a",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["is-a"],
+            "options": ["is-a", "has-a", "was-a", "uses-a"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "1890afc4d97fa8bd01e55619-en",
+            "quizzId": "1890afc4d97fa8bd01e55619"
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "languages": ["en"],
+    "sources": ["java/java-quiz.md"],
+    "generatedAt": "2025-12-09T22:59:14.555Z",
+    "warnings": []
+  }
+}

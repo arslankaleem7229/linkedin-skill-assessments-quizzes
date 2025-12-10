@@ -20,7 +20,7 @@
  *   --overwrite        : rewrite existing .json files instead of skipping
  *   --dry-run          : parse and report without writing files
  *   --match <keyword>  : only process files whose path includes the keyword
- *   --created-by <id>  : seed user id (default: SEED_USER_ID env or "seed-user")
+ *   --created-by <id>  : seed user id (default: SEED_USER_ID env or "cmiz68drf00004eqsc3izonqy")
  *
  * The JSON file shape is intentionally close to the Prisma models so it
  * can be consumed by a later Prisma seed script without further parsing:
@@ -82,7 +82,7 @@ async function main() {
       });
 
       const outputFile = buildOutputPath({ root, outputRoot, sourcePath: relPath });
-      if (!config.overwrite && !(config.dryRun)) {
+      if (!config.overwrite && !config.dryRun) {
         const exists = await fileExists(outputFile);
         if (exists) {
           summary.skipped += 1;
@@ -113,7 +113,9 @@ async function main() {
 
   console.info('-----');
   console.info(`Processed ${summary.files} files`);
-  console.info(`Written: ${summary.written} | Skipped: ${summary.skipped} | Warnings: ${summary.warnings}`);
+  console.info(
+    `Written: ${summary.written} | Skipped: ${summary.skipped} | Warnings: ${summary.warnings}`,
+  );
 }
 
 /**
@@ -126,7 +128,7 @@ function parseArgs(argv) {
     overwrite: false,
     dryRun: false,
     match: null,
-    createdById: process.env.SEED_USER_ID || 'seed-user',
+    createdById: process.env.SEED_USER_ID || 'cmiz68drf00004eqsc3izonqy',
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -174,7 +176,11 @@ async function findQuizFiles(root, keyword) {
       const fullPath = path.join(dir, entry.name);
       if (entry.isDirectory()) {
         await walk(fullPath);
-      } else if (entry.isFile() && entry.name.endsWith('.md') && entry.name.toLowerCase().includes('quiz')) {
+      } else if (
+        entry.isFile() &&
+        entry.name.endsWith('.md') &&
+        entry.name.toLowerCase().includes('quiz')
+      ) {
         if (keyword && !fullPath.includes(keyword)) continue;
         results.push(fullPath);
       }
@@ -227,7 +233,8 @@ function parseQuizMarkdown({ content, sourcePath, createdById }) {
     questionBlocks.push(currentQuestion);
   }
 
-  const description = introLines.join(' ').replace(/\s+/g, ' ').trim() || `Seeded from ${sourcePath}`;
+  const description =
+    introLines.join(' ').replace(/\s+/g, ' ').trim() || `Seeded from ${sourcePath}`;
   const quizId = stableId('quiz', sourcePath);
 
   const questions = questionBlocks.map((block, index) => {

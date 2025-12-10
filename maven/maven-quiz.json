@@ -1,1126 +1,1551 @@
 {
   "quizz": {
     "id": "08b49f327d09533a20d844bf",
-    "title": "Maven",
-    "description": "Seeded from maven/maven-quiz.md",
-    "createdById": "seed-user",
-    "questions": [
+    "slug": "maven",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
       {
-        "id": "c5bc8dcacb979a5fcb4abeb3",
-        "question": "What element in the pom.xml file allows you to provide values that can be reused in other elements of the pom.xml?",
-        "answer": "Parent",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Parent"],
-        "options": ["Plugins", "Build", "Properties", "Parent"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "73cc57ef907ed449ae81636e",
-        "question": "If you wish to build and package your artifact using the Maven package goal but don't want to execute the unit tests, which environment variable and value would you use?",
-        "answer": "`maven.test.skip=TRUE`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`maven.test.skip=TRUE`"],
-        "options": [
-          "`maven.test.ignore=TRUE`",
-          "`maven.test.run=FALSE`",
-          "`maven.test.skip=TRUE`",
-          "`maven.verify.execute=FALSE`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a2fdedcc20182b9a6351ac2c",
-        "question": "When building a Maven EAR project and specifying the configuration of which projects to include, what is the element in the plugin configuration that contains Enterprise Java Bean projects?",
-        "answer": "modules/ejbModule",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["modules/ejbModule"],
-        "options": [
-          "modules/webModule",
-          "modules/ejbModule",
-          "modules/enterpriseModules",
-          "modules/services"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "73cdeadcdeeda1e57462a3e7",
-        "question": "The goal that is executed to generate and deploy a documentation website is \\_.",
-        "answer": "site",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["site"],
-        "options": ["deliver", "site", "doc", "deploy"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d4f3b189993010272001fc6b",
-        "question": "What does the `mvn -version` command do?",
-        "answer": "It print out your installed version of Maven.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["It print out your installed version of Maven."],
-        "options": [
-          "It builds your Maven project.",
-          "It installs Maven on your computer.",
-          "It updates Maven to the latest version.",
-          "It print out your installed version of Maven."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2ee83243ade7e65ba1e97824",
-        "question": "There are several properties available for use in a pom.xml file that refer to details of the project, such as groupId and version. What do all of these properties start with?",
-        "answer": "project",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["project"],
-        "options": ["pom", "maven", "jar", "project"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "97c9360492db611701bca9fb",
-        "question": "What directory structure contains the source code of your artifact?",
-        "answer": "src/main/java",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["src/main/java"],
-        "options": ["src/code", "src/test/java", "src/main/java", "src/main/resources"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "29e313441d58bbe102cc6987",
-        "question": "Which command is used to run the clean lifecycle followed by verify, install, and package with Maven?",
-        "answer": "`mvn clean verify install package`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`mvn clean verify install package`"],
-        "options": [
-          "`mvn clean install package`",
-          "`mvn package`",
-          "`mvn clean verify install package`",
-          "`mvn install package`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "91ab90a48a5db044a55c47ab",
-        "question": "Which goal would you use with the Dependency plugin to determine which included dependencies are not used, as well as those you are using that you have not defined?",
-        "answer": "`dependency:analyze`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`dependency:analyze`"],
-        "options": [
-          "`dependency:tree`",
-          "`dependency:properties`",
-          "`dependency:evaluate`",
-          "`dependency:analyze`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "40ae912c21ac769281cdc012",
-        "question": "In a multimodule project, if you have a plugin bound to a phase in the parent, it will be bound to the same phase in the module. What strategy could you employ to prevent the plugin from executing in the module?",
-        "answer": "Set a value in the configuration of the plugin in the module to be excluded like this: TRUE.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Set a value in the configuration of the plugin in the module to be excluded like this: TRUE."
-        ],
-        "options": [
-          "In the excluded element of the build section of the POM, list the plugin you do not want to run.",
-          "Set the phase in the module to none.",
-          "Set a value in the configuration of the plugin in the module to be excluded like this: TRUE.",
-          "Do not specify the plugin in the module."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6ab537ca549336531d3c6da2",
-        "question": "When building a web application with a WAR type project, which project directory should contain the style sheet, JavaScript, and other static file?",
-        "answer": "src/main/webapp",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["src/main/webapp"],
-        "options": ["src/main/static", "src/main/web", "src/main/resources", "src/main/webapp"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0431a223d934b5a9681c518e",
-        "question": "When performing a build, which Maven plugin will allow you to set the specific version of the artifact to be built without manual modifying the pom.xml file?",
-        "answer": "Versions",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Versions"],
-        "options": ["Compiler", "Surefire", "Versions", "Javadoc"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fb06ce4f24fa513ae76f0e45",
-        "question": "When building a Maven Archetype, what is the filepath and file of the archetype descriptor that specifies how to lay out the prototype files?",
-        "answer": "`src/main/resources/META-INF/maven/archetype-descriptor.xml`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`src/main/resources/META-INF/maven/archetype-descriptor.xml`"],
-        "options": [
-          "`src/main/template/descriptor.xml`",
-          "`src/main/resources/META-INF/maven/archetype-descriptor.xml`",
-          "`src/main/archetype/descriptor.xml`",
-          "`src/main/resources/META-INF/maven/maven-archetype.xml`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "36b49798a1f695e743cd62c5",
-        "question": "What is a valid packaging type for a Maven project?",
-        "answer": "all of these answers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["all of these answers"],
-        "options": ["WAR", "all of these answers", "POM", "EAR"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6bfa9728f120e7c9409dcd5f",
-        "question": "When two dependencies of your Maven project introduce the same transitive dependency with different versions, which one(s) will be included in the dependency list for your project?",
-        "answer": "the transitive dependency version of the artifact that is closest to your project",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "the transitive dependency version of the artifact that is closest to your project"
-        ],
-        "options": [
-          "the dependency with the higher version",
-          "the transitive dependency that comes from the dependency listed first in the pom.xml file",
-          "the transitive dependency that comes from the dependency listed last in the pom.xml file",
-          "the transitive dependency version of the artifact that is closest to your project"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cb1522f6bbd200782bf89c51",
-        "question": "Many organizations set up local mirrors to the Maven central repository. In order to leverage your company's Maven repository as a proxy for the Maven central repository, which element should you put into the settings.xml file?",
-        "answer": "LocalRepositories",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["LocalRepositories"],
-        "options": ["Replacements", "Proxies", "Mirrors", "LocalRepositories"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fd1bfa2f50119a332b95e59e",
-        "question": "Which Maven plugin would you leverage to specify the version of the compiler to target as well as the source level of the language?",
-        "answer": "Compiler",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Compiler"],
-        "options": ["Versions", "Surefire", "Target", "Compiler"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2ca79a8a7d496f54ce1d11a4",
-        "question": "If your machine is behind a proxy, where should you specify the proxy server settings in order for Maven to access remote resources?",
-        "answer": "`settings.xml`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`settings.xml`"],
-        "options": ["`.m2/proxy.txt`", "`pom.xml`", "`proxy.xml`", "`settings.xml`"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "dcb1a3c2f83390eafe3e4dfe",
-        "question": "What environment variable can you alter to increase the memory Maven uses?",
-        "answer": "MAVEN_OPTS",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["MAVEN_OPTS"],
-        "options": ["MAVEN_OPTS", "M2_HOME", "MAVEN_MEMORY", "PATH"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7100db9431055050acd0b98f",
-        "question": "How can you use Maven to run unit tests in parallel?",
-        "answer": "Specify the Maven Surefire Plugin and add a configuration that sets the parallel element to true.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Specify the Maven Surefire Plugin and add a configuration that sets the parallel element to true."
-        ],
-        "options": [
-          "It is not possible to do this.",
-          "Implement the JUnit dependency and add a configuration that sets the parallel element to true.",
-          "Specify the Maven Surefire Plugin and add a configuration that sets the parallel element to true.",
-          "Move each test suite into a separate submodule."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "74c21a01c191824149a21586",
-        "question": "What will the mvn dependency:tree command do?",
-        "answer": "Print out a report of your project's dependencies in a tree format.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Print out a report of your project's dependencies in a tree format."],
-        "options": [
-          "Verify the dependencies defined in the POM file.",
-          "Print out a report of your project's dependencies in a tree format.",
-          "Download all the transitive dependencies.",
-          "Prune unused dependencies from your dependency tree."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "99d1c1bbf266b92b957a8088",
-        "question": "How do you run a single unit test in Maven?",
-        "answer": "Use the -Dtest= flag and pass in the name of the test.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Use the -Dtest= flag and pass in the name of the test."],
-        "options": [
-          "Maven runs only a single unit test by default.",
-          "Use the -Dtest= flag and pass in the name of the test.",
-          "Use a plugin that can specify the test you want to run.",
-          "It is not possible to do this."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b626dcbef8524b49135a188b",
-        "question": "How can Maven profiles be triggered?",
-        "answer": "all of these answers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["all of these answers"],
-        "options": [
-          "by explicitly calling the profiles using the -P flag",
-          "based on environment variables",
-          "all of these answers",
-          "through Maven settings"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "70a64abaf5d6c4c8557ad50f",
-        "question": "Why will an mvn install command not deploy any artifacts to a remote repository?",
-        "answer": "The deploy phase of the default Maven lifecycle comes after the install phase.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "The deploy phase of the default Maven lifecycle comes after the install phase."
-        ],
-        "options": [
-          "The name of the artifact must also be specified in the command.",
-          "The name of the remote repository must also be specified in the command.",
-          "Deploying artifacts to a remote repository must be done manually.",
-          "The deploy phase of the default Maven lifecycle comes after the install phase."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d1c8d6aa0f91683cbbb44fdd",
-        "question": "Suppose you want to include a properties file in the JAR generated by your Maven build. What directory should you put it in?",
-        "answer": "`${basedir}/src/main/resources`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`${basedir}/src/main/resources`"],
-        "options": [
-          "`${basedir}/src/main/resources`",
-          "`${basedir}/src/main/java/resources`",
-          "`${basedir}/resources`",
-          "`${basedir}/src/main/properties`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3655d1c578bebeb1391df84a",
-        "question": "Which structure in a settings.xml file allows for flexing properties based on some value for the runtime of Maven?",
-        "answer": "Profiles",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Profiles"],
-        "options": ["Environment", "Properties", "Switch", "Profiles"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6e910d18fd5cf7e258f86854",
-        "question": "What does it mean if the scope of a dependency is runtime?",
-        "answer": "The dependency is not required to compile the project, but is needed at runtime.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "The dependency is not required to compile the project, but is needed at runtime."
-        ],
-        "options": [
-          "The dependency is not required to compile the project, but is needed at runtime.",
-          "The dependency is needed at compile time and at runtime, and must be packaged for distribution.",
-          "The dependency is needed at compile time and at runtime, but does NOT need to be packaged for distribution.",
-          "The dependency is required for compilation."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ade73938b2c2a40d43fbf1d5",
-        "question": "If you want to utilize a locally developed JAR file in another project and that JAR file has not been deployed to either the Maven central repository or your own locally sourced mirror repository, what Maven goal do you need to execute on the locally developed JAR project?",
-        "answer": "install",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["install"],
-        "options": ["package", "install", "compile", "test"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "161aff54faa517c468a3bce4",
-        "question": "What is the default packaging type for a Maven project build artifact?",
-        "answer": "JAR",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["JAR"],
-        "options": ["WAR", "JAR", "EAR", "POM"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "80c617fe6be8c8b0179924b2",
-        "question": "What does the following command do?\n> mvn archetype:generate \\\n> -DgroupID=sample-maven-project \\\n> -DartifactID=com.palmer.bethan.sample \\\n> -Dversion=1.0.0 \\\n> -DinteractiveMode=false",
-        "answer": "It generates a new Maven project using the default Maven archetype",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["It generates a new Maven project using the default Maven archetype"],
-        "options": [
-          "It does nothing since no archetype has been specified",
-          "It generates a new Maven archetype",
-          "It generates a new Maven project using the default Maven archetype",
-          "It cleans and installs the sample-maven-project project"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9a4ee9a24a0b040f91028df8",
-        "question": "When defining a dependency that is included with the runtime container, what scope do you use in the pom.xml?",
-        "answer": "provided",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["provided"],
-        "options": ["provided", "compile", "execution", "runtime"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5e3f62dc61b8917dbe2b99bc",
-        "question": "What argument do you pass to Maven in order to update SNAPSHOT from the remote repository?",
-        "answer": "-U",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["-U"],
-        "options": ["-U", "-J", "-X", "-S"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4416f2c63005fc40595eba88",
-        "question": "When performing a release using the Maven release plugin, which environment variable for batch mode is used to define the stamp placed in SCM to indicate the state of the artifact for the actual release?",
-        "answer": "releaseVersion",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["releaseVersion"],
-        "options": ["tag", "scmMark", "developmentVersion", "releaseVersion"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8e6c0a9fd8d473791bfdb62b",
-        "question": "These are two general uses of plugins. The first is build and the second is \\_",
-        "answer": "reporting",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["reporting"],
-        "options": ["reporting", "servers", "dependencies", "distribution management"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "51e933cdb5e5aea8daf14e8c",
-        "question": "What does the mvn clean command do?",
-        "answer": "It removes the target directory",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["It removes the target directory"],
-        "options": [
-          "It removes the target directory",
-          "It updates the version of the plugins defined in the POM file.",
-          "It removes unused dependencies in your project",
-          "It builds your project"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3830c9f7a1f1c1d37fab3ca9",
-        "question": "Bellow is a definition of the Maven JAR Plugin, where the main class is set to com.palmer.bethan.App. What is the effect of this?\n```\n<configuration>\n    <archive>\n        <manifest>\n            <addClasspath>true</addClasspath>\n            <mainClass>com.palmer.bethan.App</mainClass>\n        </manifest>\n    </archive>\n</configuration>\n```",
-        "answer": "Maven will generate an executable JAR, which can be used to run the App class.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Maven will generate an executable JAR, which can be used to run the App class."
-        ],
-        "options": [
-          "Maven will generate javadocs for the App class.",
-          "Maven will generate an executable JAR, which can be used to run the App class.",
-          "Maven will include only the App class when it compiles the source code.",
-          "Maven will add an empty main method to the App class."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "723a82da9fb53042976442c7",
-        "question": "Suppose you are packaging a Maven project and see the following error: \"[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!\" What do you add to your POM file to set the platform encoding to ensure your build is not platform dependent?",
-        "answer": "<project.build.sourceEncoding>",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["<project.build.sourceEncoding>"],
-        "options": [
-          "<project.build.resources>",
-          "<maven.compiler.source>",
-          "<project.build.sourceEncoding>",
-          "<project.compiler.encoding>"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fe66142ed15d100a18629087",
-        "question": "Why might you not want to include groupId and version elements in child POM files?",
-        "answer": "These elements are inherited from the parent POM file, and do not need to be repeated.",
-        "explanation": "[maven docs](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#the-solution)",
-        "hint": null,
-        "correctAnswer": [
-          "These elements are inherited from the parent POM file, and do not need to be repeated."
-        ],
-        "options": [
-          "If you include these elements, an error will be thrown when you try to build the project.",
-          "These elements are inherited from the parent POM file, and do not need to be repeated.",
-          "Child POM files should include definitions of only dependencies and plugins.",
-          "The values in the parent POM will be overridden by what is defined in the child POM."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "849a2a8bda54396cd969b282",
-        "question": "The settings.xml file that provides the user-specific settings for Maven is contained in which directory by default?",
-        "answer": "`${user.home}/.m2/settings.xml`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`${user.home}/.m2/settings.xml`"],
-        "options": [
-          "`${maven.home}/${user.name}/settings.xml`",
-          "`${user.home}/.m2/settings.xml`",
-          "`${maven.home}/conf/settings.xml`",
-          "`${user.home}/maven/settings.xml`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e2221444d4c286e2e4a1e5d6",
-        "question": "Suppose you are using Maven in a corporate environment and, to save bandwidth, you want to prevent the need for large numbers of developers to download the same dependency from the internet. What do you do to limit this?",
-        "answer": "Create an internal corporate repository to store copies of the necessary artifacts.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Create an internal corporate repository to store copies of the necessary artifacts."
-        ],
-        "options": [
-          "Create an internal corporate repository to store copies of the necessary artifacts.",
-          "It is not possible to do this.",
-          "When defining the dependency, set the scope to provided.",
-          "Each developer should define the dependency in the POM file in the local copy of the project."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b5492fdc10e028366474cb4f",
-        "question": "In multimodule projects, what do child POMs inherit from the parent POM?",
-        "answer": "all of these answers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["all of these answers"],
-        "options": ["all of these answers", "dependencies", "groupId", "version"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e912b6fb612a2b58e4c22017",
-        "question": "Below is a report generated for a multimodule project with the Checkstyle Plugin. Why might the highlighted links to the two child projects _not_ work?\n![q43](q43.png)",
-        "answer": "All links in Checkstyle reports must be specified in the plugin definition.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "All links in Checkstyle reports must be specified in the plugin definition."
-        ],
-        "options": [
-          "The Checkstyle Plugin does not work on child modules.",
-          "Each Checkstyle report is in the target/site folder of the respective module.",
-          "All links in Checkstyle reports must be specified in the plugin definition.",
-          "Checkstyle reports for child modules have to be behind a firewall."
-        ],
-        "nature": "ChooseOne",
-        "attachments": [
+        "id": "a8a326701ab8c82fa8f7a3ba",
+        "language": "md",
+        "title": "Maven",
+        "description": "Seeded from maven/maven-quiz.md",
+        "questions": [
           {
-            "id": "b1f5ce72d0abb1b4e6842967",
-            "url": "q43.png",
-            "type": "question"
+            "id": "c5bc8dcacb979a5fcb4abeb3",
+            "question": "What element in the pom.xml file allows you to provide values that can be reused in other elements of the pom.xml?",
+            "answer": "Parent",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Parent"
+            ],
+            "options": [
+              "Plugins",
+              "Build",
+              "Properties",
+              "Parent"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "73cc57ef907ed449ae81636e",
+            "question": "If you wish to build and package your artifact using the Maven package goal but don't want to execute the unit tests, which environment variable and value would you use?",
+            "answer": "`maven.test.skip=TRUE`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`maven.test.skip=TRUE`"
+            ],
+            "options": [
+              "`maven.test.ignore=TRUE`",
+              "`maven.test.run=FALSE`",
+              "`maven.test.skip=TRUE`",
+              "`maven.verify.execute=FALSE`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "a2fdedcc20182b9a6351ac2c",
+            "question": "When building a Maven EAR project and specifying the configuration of which projects to include, what is the element in the plugin configuration that contains Enterprise Java Bean projects?",
+            "answer": "modules/ejbModule",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "modules/ejbModule"
+            ],
+            "options": [
+              "modules/webModule",
+              "modules/ejbModule",
+              "modules/enterpriseModules",
+              "modules/services"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "73cdeadcdeeda1e57462a3e7",
+            "question": "The goal that is executed to generate and deploy a documentation website is \\_.",
+            "answer": "site",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "site"
+            ],
+            "options": [
+              "deliver",
+              "site",
+              "doc",
+              "deploy"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "d4f3b189993010272001fc6b",
+            "question": "What does the `mvn -version` command do?",
+            "answer": "It print out your installed version of Maven.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It print out your installed version of Maven."
+            ],
+            "options": [
+              "It builds your Maven project.",
+              "It installs Maven on your computer.",
+              "It updates Maven to the latest version.",
+              "It print out your installed version of Maven."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "2ee83243ade7e65ba1e97824",
+            "question": "There are several properties available for use in a pom.xml file that refer to details of the project, such as groupId and version. What do all of these properties start with?",
+            "answer": "project",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "project"
+            ],
+            "options": [
+              "pom",
+              "maven",
+              "jar",
+              "project"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "97c9360492db611701bca9fb",
+            "question": "What directory structure contains the source code of your artifact?",
+            "answer": "src/main/java",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "src/main/java"
+            ],
+            "options": [
+              "src/code",
+              "src/test/java",
+              "src/main/java",
+              "src/main/resources"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "29e313441d58bbe102cc6987",
+            "question": "Which command is used to run the clean lifecycle followed by verify, install, and package with Maven?",
+            "answer": "`mvn clean verify install package`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`mvn clean verify install package`"
+            ],
+            "options": [
+              "`mvn clean install package`",
+              "`mvn package`",
+              "`mvn clean verify install package`",
+              "`mvn install package`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "91ab90a48a5db044a55c47ab",
+            "question": "Which goal would you use with the Dependency plugin to determine which included dependencies are not used, as well as those you are using that you have not defined?",
+            "answer": "`dependency:analyze`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`dependency:analyze`"
+            ],
+            "options": [
+              "`dependency:tree`",
+              "`dependency:properties`",
+              "`dependency:evaluate`",
+              "`dependency:analyze`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "40ae912c21ac769281cdc012",
+            "question": "In a multimodule project, if you have a plugin bound to a phase in the parent, it will be bound to the same phase in the module. What strategy could you employ to prevent the plugin from executing in the module?",
+            "answer": "Set a value in the configuration of the plugin in the module to be excluded like this: TRUE.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Set a value in the configuration of the plugin in the module to be excluded like this: TRUE."
+            ],
+            "options": [
+              "In the excluded element of the build section of the POM, list the plugin you do not want to run.",
+              "Set the phase in the module to none.",
+              "Set a value in the configuration of the plugin in the module to be excluded like this: TRUE.",
+              "Do not specify the plugin in the module."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "6ab537ca549336531d3c6da2",
+            "question": "When building a web application with a WAR type project, which project directory should contain the style sheet, JavaScript, and other static file?",
+            "answer": "src/main/webapp",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "src/main/webapp"
+            ],
+            "options": [
+              "src/main/static",
+              "src/main/web",
+              "src/main/resources",
+              "src/main/webapp"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "0431a223d934b5a9681c518e",
+            "question": "When performing a build, which Maven plugin will allow you to set the specific version of the artifact to be built without manual modifying the pom.xml file?",
+            "answer": "Versions",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Versions"
+            ],
+            "options": [
+              "Compiler",
+              "Surefire",
+              "Versions",
+              "Javadoc"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "fb06ce4f24fa513ae76f0e45",
+            "question": "When building a Maven Archetype, what is the filepath and file of the archetype descriptor that specifies how to lay out the prototype files?",
+            "answer": "`src/main/resources/META-INF/maven/archetype-descriptor.xml`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`src/main/resources/META-INF/maven/archetype-descriptor.xml`"
+            ],
+            "options": [
+              "`src/main/template/descriptor.xml`",
+              "`src/main/resources/META-INF/maven/archetype-descriptor.xml`",
+              "`src/main/archetype/descriptor.xml`",
+              "`src/main/resources/META-INF/maven/maven-archetype.xml`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "36b49798a1f695e743cd62c5",
+            "question": "What is a valid packaging type for a Maven project?",
+            "answer": "all of these answers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "all of these answers"
+            ],
+            "options": [
+              "WAR",
+              "all of these answers",
+              "POM",
+              "EAR"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "6bfa9728f120e7c9409dcd5f",
+            "question": "When two dependencies of your Maven project introduce the same transitive dependency with different versions, which one(s) will be included in the dependency list for your project?",
+            "answer": "the transitive dependency version of the artifact that is closest to your project",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "the transitive dependency version of the artifact that is closest to your project"
+            ],
+            "options": [
+              "the dependency with the higher version",
+              "the transitive dependency that comes from the dependency listed first in the pom.xml file",
+              "the transitive dependency that comes from the dependency listed last in the pom.xml file",
+              "the transitive dependency version of the artifact that is closest to your project"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "cb1522f6bbd200782bf89c51",
+            "question": "Many organizations set up local mirrors to the Maven central repository. In order to leverage your company's Maven repository as a proxy for the Maven central repository, which element should you put into the settings.xml file?",
+            "answer": "LocalRepositories",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "LocalRepositories"
+            ],
+            "options": [
+              "Replacements",
+              "Proxies",
+              "Mirrors",
+              "LocalRepositories"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "fd1bfa2f50119a332b95e59e",
+            "question": "Which Maven plugin would you leverage to specify the version of the compiler to target as well as the source level of the language?",
+            "answer": "Compiler",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Compiler"
+            ],
+            "options": [
+              "Versions",
+              "Surefire",
+              "Target",
+              "Compiler"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "2ca79a8a7d496f54ce1d11a4",
+            "question": "If your machine is behind a proxy, where should you specify the proxy server settings in order for Maven to access remote resources?",
+            "answer": "`settings.xml`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`settings.xml`"
+            ],
+            "options": [
+              "`.m2/proxy.txt`",
+              "`pom.xml`",
+              "`proxy.xml`",
+              "`settings.xml`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "dcb1a3c2f83390eafe3e4dfe",
+            "question": "What environment variable can you alter to increase the memory Maven uses?",
+            "answer": "MAVEN_OPTS",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "MAVEN_OPTS"
+            ],
+            "options": [
+              "MAVEN_OPTS",
+              "M2_HOME",
+              "MAVEN_MEMORY",
+              "PATH"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "7100db9431055050acd0b98f",
+            "question": "How can you use Maven to run unit tests in parallel?",
+            "answer": "Specify the Maven Surefire Plugin and add a configuration that sets the parallel element to true.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Specify the Maven Surefire Plugin and add a configuration that sets the parallel element to true."
+            ],
+            "options": [
+              "It is not possible to do this.",
+              "Implement the JUnit dependency and add a configuration that sets the parallel element to true.",
+              "Specify the Maven Surefire Plugin and add a configuration that sets the parallel element to true.",
+              "Move each test suite into a separate submodule."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "74c21a01c191824149a21586",
+            "question": "What will the mvn dependency:tree command do?",
+            "answer": "Print out a report of your project's dependencies in a tree format.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Print out a report of your project's dependencies in a tree format."
+            ],
+            "options": [
+              "Verify the dependencies defined in the POM file.",
+              "Print out a report of your project's dependencies in a tree format.",
+              "Download all the transitive dependencies.",
+              "Prune unused dependencies from your dependency tree."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "99d1c1bbf266b92b957a8088",
+            "question": "How do you run a single unit test in Maven?",
+            "answer": "Use the -Dtest= flag and pass in the name of the test.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Use the -Dtest= flag and pass in the name of the test."
+            ],
+            "options": [
+              "Maven runs only a single unit test by default.",
+              "Use the -Dtest= flag and pass in the name of the test.",
+              "Use a plugin that can specify the test you want to run.",
+              "It is not possible to do this."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "b626dcbef8524b49135a188b",
+            "question": "How can Maven profiles be triggered?",
+            "answer": "all of these answers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "all of these answers"
+            ],
+            "options": [
+              "by explicitly calling the profiles using the -P flag",
+              "based on environment variables",
+              "all of these answers",
+              "through Maven settings"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "70a64abaf5d6c4c8557ad50f",
+            "question": "Why will an mvn install command not deploy any artifacts to a remote repository?",
+            "answer": "The deploy phase of the default Maven lifecycle comes after the install phase.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The deploy phase of the default Maven lifecycle comes after the install phase."
+            ],
+            "options": [
+              "The name of the artifact must also be specified in the command.",
+              "The name of the remote repository must also be specified in the command.",
+              "Deploying artifacts to a remote repository must be done manually.",
+              "The deploy phase of the default Maven lifecycle comes after the install phase."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "d1c8d6aa0f91683cbbb44fdd",
+            "question": "Suppose you want to include a properties file in the JAR generated by your Maven build. What directory should you put it in?",
+            "answer": "`${basedir}/src/main/resources`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`${basedir}/src/main/resources`"
+            ],
+            "options": [
+              "`${basedir}/src/main/resources`",
+              "`${basedir}/src/main/java/resources`",
+              "`${basedir}/resources`",
+              "`${basedir}/src/main/properties`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "3655d1c578bebeb1391df84a",
+            "question": "Which structure in a settings.xml file allows for flexing properties based on some value for the runtime of Maven?",
+            "answer": "Profiles",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Profiles"
+            ],
+            "options": [
+              "Environment",
+              "Properties",
+              "Switch",
+              "Profiles"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "6e910d18fd5cf7e258f86854",
+            "question": "What does it mean if the scope of a dependency is runtime?",
+            "answer": "The dependency is not required to compile the project, but is needed at runtime.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The dependency is not required to compile the project, but is needed at runtime."
+            ],
+            "options": [
+              "The dependency is not required to compile the project, but is needed at runtime.",
+              "The dependency is needed at compile time and at runtime, and must be packaged for distribution.",
+              "The dependency is needed at compile time and at runtime, but does NOT need to be packaged for distribution.",
+              "The dependency is required for compilation."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "ade73938b2c2a40d43fbf1d5",
+            "question": "If you want to utilize a locally developed JAR file in another project and that JAR file has not been deployed to either the Maven central repository or your own locally sourced mirror repository, what Maven goal do you need to execute on the locally developed JAR project?",
+            "answer": "install",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "install"
+            ],
+            "options": [
+              "package",
+              "install",
+              "compile",
+              "test"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "161aff54faa517c468a3bce4",
+            "question": "What is the default packaging type for a Maven project build artifact?",
+            "answer": "JAR",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "JAR"
+            ],
+            "options": [
+              "WAR",
+              "JAR",
+              "EAR",
+              "POM"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "80c617fe6be8c8b0179924b2",
+            "question": "What does the following command do?\n> mvn archetype:generate \\\n> -DgroupID=sample-maven-project \\\n> -DartifactID=com.palmer.bethan.sample \\\n> -Dversion=1.0.0 \\\n> -DinteractiveMode=false",
+            "answer": "It generates a new Maven project using the default Maven archetype",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It generates a new Maven project using the default Maven archetype"
+            ],
+            "options": [
+              "It does nothing since no archetype has been specified",
+              "It generates a new Maven archetype",
+              "It generates a new Maven project using the default Maven archetype",
+              "It cleans and installs the sample-maven-project project"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "9a4ee9a24a0b040f91028df8",
+            "question": "When defining a dependency that is included with the runtime container, what scope do you use in the pom.xml?",
+            "answer": "provided",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "provided"
+            ],
+            "options": [
+              "provided",
+              "compile",
+              "execution",
+              "runtime"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "5e3f62dc61b8917dbe2b99bc",
+            "question": "What argument do you pass to Maven in order to update SNAPSHOT from the remote repository?",
+            "answer": "-U",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "-U"
+            ],
+            "options": [
+              "-U",
+              "-J",
+              "-X",
+              "-S"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "4416f2c63005fc40595eba88",
+            "question": "When performing a release using the Maven release plugin, which environment variable for batch mode is used to define the stamp placed in SCM to indicate the state of the artifact for the actual release?",
+            "answer": "releaseVersion",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "releaseVersion"
+            ],
+            "options": [
+              "tag",
+              "scmMark",
+              "developmentVersion",
+              "releaseVersion"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "8e6c0a9fd8d473791bfdb62b",
+            "question": "These are two general uses of plugins. The first is build and the second is \\_",
+            "answer": "reporting",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "reporting"
+            ],
+            "options": [
+              "reporting",
+              "servers",
+              "dependencies",
+              "distribution management"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "51e933cdb5e5aea8daf14e8c",
+            "question": "What does the mvn clean command do?",
+            "answer": "It removes the target directory",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It removes the target directory"
+            ],
+            "options": [
+              "It removes the target directory",
+              "It updates the version of the plugins defined in the POM file.",
+              "It removes unused dependencies in your project",
+              "It builds your project"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "3830c9f7a1f1c1d37fab3ca9",
+            "question": "Bellow is a definition of the Maven JAR Plugin, where the main class is set to com.palmer.bethan.App. What is the effect of this?\n```\n<configuration>\n    <archive>\n        <manifest>\n            <addClasspath>true</addClasspath>\n            <mainClass>com.palmer.bethan.App</mainClass>\n        </manifest>\n    </archive>\n</configuration>\n```",
+            "answer": "Maven will generate an executable JAR, which can be used to run the App class.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Maven will generate an executable JAR, which can be used to run the App class."
+            ],
+            "options": [
+              "Maven will generate javadocs for the App class.",
+              "Maven will generate an executable JAR, which can be used to run the App class.",
+              "Maven will include only the App class when it compiles the source code.",
+              "Maven will add an empty main method to the App class."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "723a82da9fb53042976442c7",
+            "question": "Suppose you are packaging a Maven project and see the following error: \"[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!\" What do you add to your POM file to set the platform encoding to ensure your build is not platform dependent?",
+            "answer": "<project.build.sourceEncoding>",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "<project.build.sourceEncoding>"
+            ],
+            "options": [
+              "<project.build.resources>",
+              "<maven.compiler.source>",
+              "<project.build.sourceEncoding>",
+              "<project.compiler.encoding>"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "fe66142ed15d100a18629087",
+            "question": "Why might you not want to include groupId and version elements in child POM files?",
+            "answer": "These elements are inherited from the parent POM file, and do not need to be repeated.",
+            "explanation": "[maven docs](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html#the-solution)",
+            "hint": null,
+            "correctAnswer": [
+              "These elements are inherited from the parent POM file, and do not need to be repeated."
+            ],
+            "options": [
+              "If you include these elements, an error will be thrown when you try to build the project.",
+              "These elements are inherited from the parent POM file, and do not need to be repeated.",
+              "Child POM files should include definitions of only dependencies and plugins.",
+              "The values in the parent POM will be overridden by what is defined in the child POM."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "849a2a8bda54396cd969b282",
+            "question": "The settings.xml file that provides the user-specific settings for Maven is contained in which directory by default?",
+            "answer": "`${user.home}/.m2/settings.xml`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`${user.home}/.m2/settings.xml`"
+            ],
+            "options": [
+              "`${maven.home}/${user.name}/settings.xml`",
+              "`${user.home}/.m2/settings.xml`",
+              "`${maven.home}/conf/settings.xml`",
+              "`${user.home}/maven/settings.xml`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "e2221444d4c286e2e4a1e5d6",
+            "question": "Suppose you are using Maven in a corporate environment and, to save bandwidth, you want to prevent the need for large numbers of developers to download the same dependency from the internet. What do you do to limit this?",
+            "answer": "Create an internal corporate repository to store copies of the necessary artifacts.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Create an internal corporate repository to store copies of the necessary artifacts."
+            ],
+            "options": [
+              "Create an internal corporate repository to store copies of the necessary artifacts.",
+              "It is not possible to do this.",
+              "When defining the dependency, set the scope to provided.",
+              "Each developer should define the dependency in the POM file in the local copy of the project."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "b5492fdc10e028366474cb4f",
+            "question": "In multimodule projects, what do child POMs inherit from the parent POM?",
+            "answer": "all of these answers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "all of these answers"
+            ],
+            "options": [
+              "all of these answers",
+              "dependencies",
+              "groupId",
+              "version"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "e912b6fb612a2b58e4c22017",
+            "question": "Below is a report generated for a multimodule project with the Checkstyle Plugin. Why might the highlighted links to the two child projects _not_ work?\n![q43](q43.png)",
+            "answer": "All links in Checkstyle reports must be specified in the plugin definition.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "All links in Checkstyle reports must be specified in the plugin definition."
+            ],
+            "options": [
+              "The Checkstyle Plugin does not work on child modules.",
+              "Each Checkstyle report is in the target/site folder of the respective module.",
+              "All links in Checkstyle reports must be specified in the plugin definition.",
+              "Checkstyle reports for child modules have to be behind a firewall."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "42ec4eb44eae6f705e7ede24",
+                "url": "~/maven/q43.png",
+                "type": "question"
+              }
+            ],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "976295f52ef94cd372687c00",
+            "question": "Which build plugin allows you to create a \"fat\" JAR file that contains all of the dependencies in the final JAR file?",
+            "answer": "Shade",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Shade"
+            ],
+            "options": [
+              "Fatjar",
+              "Shade",
+              "Dependency",
+              "Package"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "8ac77773bd2142e308334ce1",
+            "question": "What is the default scope for Maven dependencies?",
+            "answer": "Compile",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Compile"
+            ],
+            "options": [
+              "Test",
+              "Compile",
+              "Runtime",
+              "Build"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "76a56735272c02b844418cf6",
+            "question": "How many times is compiler:compile called when executing mvn clean compile test package?",
+            "answer": "two",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "two"
+            ],
+            "options": [
+              "one",
+              "two",
+              "none",
+              "three"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "f49a172983ca252289b4b0fc",
+            "question": "What is one of the advantages of using properties in Maven?",
+            "answer": "You can avoid hard-coding values in multiple places.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "You can avoid hard-coding values in multiple places."
+            ],
+            "options": [
+              "Properties provide a template for you to build Maven projects with a certain structure.",
+              "Properties allow you to inherit values from the parent POM in the child POM.",
+              "You can avoid hard-coding values in multiple places.",
+              "Properties speed up your Maven build."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "3744a9cfe468810478ddd244",
+            "question": "What are the phases of the clean lifecycle?",
+            "answer": "pre-clean, clean and post-clean",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "pre-clean, clean and post-clean"
+            ],
+            "options": [
+              "pre-clean, clean and post-clean",
+              "Compile, clean and install",
+              "clean and install",
+              "validate, clean and deploy"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "d8d824c46aa40251f4eae8fe",
+            "question": "A compile-time dependency of a dependency for your project is often called **a\\_** dependency.",
+            "answer": "Transitive",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Transitive"
+            ],
+            "options": [
+              "Transitive",
+              "runtime",
+              "provided",
+              "test"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "05bf7473992cd71c673f9431",
+            "question": "For what purpose can plugins use the validate phase in the default lifecycle?",
+            "answer": "to carry out checks before building the project",
+            "explanation": "1. [stackoverflow](https://stackoverflow.com/a/40601037)\n2. [maven docs](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#a-build-lifecycle-is-made-up-of-phases)",
+            "hint": null,
+            "correctAnswer": [
+              "to carry out checks before building the project"
+            ],
+            "options": [
+              "to check the parent POM file defines all of the child POM files",
+              "to carry out checks before building the project",
+              "to ensure plugins defined in the POM file are in the correct order",
+              "to check the project structure is correct after building a project"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "4c71e8703899bb2aaac27f7f",
+            "question": "How do you check for unused dependencies in your project?",
+            "answer": "Run the analyze goal of the dependency plugin.",
+            "explanation": "1. [baeldung](https://www.baeldung.com/maven-unused-dependencies)\n2. [stackoverflow](https://stackoverflow.com/a/1518661)",
+            "hint": null,
+            "correctAnswer": [
+              "Run the analyze goal of the dependency plugin."
+            ],
+            "options": [
+              "Run mvn clean and look at which plugins are not mentioned in the output.",
+              "You will need to do this manually.",
+              "Include the Maven dependency plugin in your POM file and run the unpack goal.",
+              "Run the analyze goal of the dependency plugin."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "435f7282fbdc8b0448c36782",
+            "question": "Why is it best practice to avoid overriding the default directory structure?",
+            "answer": "all of these answers",
+            "explanation": "[maven docs](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)",
+            "hint": null,
+            "correctAnswer": [
+              "all of these answers"
+            ],
+            "options": [
+              "Keeping the default structure reduces onboarding time, because developers recognize it.",
+              "Overriding the default structure is very complex.",
+              "Overriding the default structure will cause Maven to take longer to compile your code.",
+              "all of these answers"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "41b31fec1f7b597d5fa12c95",
+            "question": "What is the main purpose of the install phase?",
+            "answer": "to copy the final project artifacts into the local Maven repository",
+            "explanation": "[maven docs](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#a-build-lifecycle-is-made-up-of-phases)",
+            "hint": null,
+            "correctAnswer": [
+              "to copy the final project artifacts into the local Maven repository"
+            ],
+            "options": [
+              "to compile the source code of the project",
+              "to install all of the remote dependencies",
+              "to deploy the final project artifacts into a remote Maven repository",
+              "to copy the final project artifacts into the local Maven repository"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "5c0bde299e9937f3aab62b86",
+            "question": "How do you skip the tests when running a mvn package command?",
+            "answer": "Use -DskipTests=true",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Use -DskipTests=true"
+            ],
+            "options": [
+              "Use -Dtest=skip",
+              "Use -DskipTests=true",
+              "Use -Dtests=pass",
+              "Use a plugin that can be configured to skip tests"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "2f87d648da1711d3d4e02942",
+            "question": "Below is a section of a settings.xml file. How can you use the path to the app home in your POM file?\n```\n<profiles>\n    <profile>\n        <id>set=app-home</id>\n        <properties>maven-people-plugin</artifactId>\n            <application-home>/path/to/application</application-home>\n        </properties>\n    </profile>\n</profiles>\n<activeProfiles>\n    <activeProfile>set-app-home</activeProfile>\n</activeProfiles>\n```",
+            "answer": "${application-home}",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "${application-home}"
+            ],
+            "options": [
+              "${activeProfile}",
+              "${application-home}",
+              "${set-app-home}",
+              "${/path/to/application}"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "8d511847e545ad3f03ef106e",
+            "question": "What is the default value of the warSourceDirectory configuration property of the Maven WAR Plugin? (2 possible solutions)",
+            "answer": "/src/main/webapp; /src/main/WEB-INF",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "/src/main/webapp",
+              "/src/main/WEB-INF"
+            ],
+            "options": [
+              "/src/main/webapp",
+              "/src/main/war",
+              "/src/main/WEB-INF",
+              "/src/web"
+            ],
+            "nature": "ChooseMany",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "d9e239d7d85962cbcae4bad1",
+            "question": "When building a Maven Archetype, where do you put your prototype files?",
+            "answer": "src/main/resources/archetype-resources",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "src/main/resources/archetype-resources"
+            ],
+            "options": [
+              "src/main/template",
+              "src/main/archetype",
+              "src/main/resources/archetype-resources",
+              "src/main/java"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "c1e6c7f8856a4a75ac6c67b0",
+            "question": "The primary purpose of Apache Maven is to provide uniform, easy, and standardized \\_.",
+            "answer": "builds",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "builds"
+            ],
+            "options": [
+              "versioning",
+              "project structure",
+              "source code style",
+              "builds"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "c0dd051b159caa79451424e9",
+            "question": "Below is the definition of a mirror in settings.xml. What does the element `<mirrorOf>\\*</mirrorOf>` tell Maven to do?\n```\n<mirror>\n    <id>internal-repo</id>\n    <url>http://repo.mycompany.com/proxy</url>\n    <mirrorOf>\\*</mirrorOf>\n</mirror>\n```",
+            "answer": "Mirror all repositories except for http://repomycompany.com/proxy.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Mirror all repositories except for http://repomycompany.com/proxy."
+            ],
+            "options": [
+              "Use a single repository by having it mirror all repository requests.",
+              "Mirror all repositories except for http://repomycompany.com/proxy.",
+              "Mirror any repositories with `\\*` in the name.",
+              "Use a mirror repository for every repository defined in the POM file."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "8d49539509be226f0154ed18",
+            "question": "How do you generate a site for a project with Maven?",
+            "answer": "Use the mvn site command.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Use the mvn site command."
+            ],
+            "options": [
+              "Use the mvn site command.",
+              "Use the mvn install command.",
+              "This is not possible.",
+              "Use the mvn package command."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "5540bbf3c5b220233cc4c790",
+            "question": "What is the default location of the local Maven repository?",
+            "answer": "USER_HOME/.m2/repository",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "USER_HOME/.m2/repository"
+            ],
+            "options": [
+              "USER_HOME/.m2/repository",
+              "USER_HOME/.m2/local",
+              "USER_HOME/maven/repository",
+              "/repo"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "887bcc24b5ec3cc77d4a58a7",
+            "question": "A phase is a step in \\_.",
+            "answer": "the build lifecycle",
+            "explanation": "[maven docs](https://maven.apache.org/what-is-maven.html#:~:text=Maven's%20primary%20goal%20is%20to,Providing%20a%20uniform%20build%20system)",
+            "hint": null,
+            "correctAnswer": [
+              "the build lifecycle"
+            ],
+            "options": [
+              "the compile goal",
+              "the development process",
+              "the build lifecycle",
+              "the POM file"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "5cd0d93527e8229b4529f516",
+            "question": "What is the Maven central repository?",
+            "answer": "an online repository for open-source binaries",
+            "explanation": "[!reference](https://www.javatpoint.com/maven-repository)",
+            "hint": null,
+            "correctAnswer": [
+              "an online repository for open-source binaries"
+            ],
+            "options": [
+              "a local repository created by Maven in your local file system",
+              "a repository in the middle of your Maven project",
+              "an online repository for open-source binaries",
+              "a repository that you must download to build a Maven project"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "68911ad71370d8f723070a95",
+            "question": "What are the artifacts that Apache Maven uses to perform its build operations?",
+            "answer": "plugins",
+            "explanation": "[!reference](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)",
+            "hint": null,
+            "correctAnswer": [
+              "plugins"
+            ],
+            "options": [
+              "ant files",
+              "properties",
+              "dependencies",
+              "plugins"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "7d56cf97de13a513da9fabd8",
+            "question": "Which plugin is used to copy, filter, include, and exclude non-Java files into your final project?",
+            "answer": "Resources",
+            "explanation": "[!reference](https://maven.apache.org/plugins/maven-resources-plugin/examples/include-exclude.html)",
+            "hint": null,
+            "correctAnswer": [
+              "Resources"
+            ],
+            "options": [
+              "Build",
+              "Files",
+              "Copy",
+              "Resources"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "21539f9fd7b7884ef1765a28",
+            "question": "What is a module in a Maven project?",
+            "answer": "a subproject, or child project",
+            "explanation": "[!reference](https://docs.jboss.org/tools/latest/en/maven_reference/html/creating_a_maven_application.html)",
+            "hint": null,
+            "correctAnswer": [
+              "a subproject, or child project"
+            ],
+            "options": [
+              "a dependency",
+              "a subproject, or child project",
+              "a Java package",
+              "a plugin"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "666e2a2eeb03d041b5f89e77",
+            "question": "What does the mvn --version command do?",
+            "answer": "It prints out your installed version of Maven.",
+            "explanation": "[!reference](https://jenkov.com/tutorials/maven/maven-commands.html)",
+            "hint": null,
+            "correctAnswer": [
+              "It prints out your installed version of Maven."
+            ],
+            "options": [
+              "It updates Maven to the latest version.",
+              "It prints out your installed version of Maven.",
+              "It builds your Maven project.",
+              "It installs Maven on your computer."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "dd9a11a746d70e2dbfc5c8f3",
+            "question": "When building a Maven project, where are Maven dependencies stored?",
+            "answer": "in your local repository",
+            "explanation": "[!reference](https://www.baeldung.com/maven-local-repository)",
+            "hint": null,
+            "correctAnswer": [
+              "in your local repository"
+            ],
+            "options": [
+              "in the target directory",
+              "in your local repository",
+              "in the POM file",
+              "online in the Maven central repository"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "a715ab33fbb5d966d9d8ed97",
+            "question": "Why is it best practice not to release SNAPSHOT versions of Maven artifacts to production?",
+            "answer": "A SNAPSHOT can be hard to reproduce, making it difficult to determine the cause of an issue.",
+            "explanation": "[!reference](https://maven.apache.org/guides/getting-started/index.html#What_is_a_SNAPSHOT_version)",
+            "hint": null,
+            "correctAnswer": [
+              "A SNAPSHOT can be hard to reproduce, making it difficult to determine the cause of an issue."
+            ],
+            "options": [
+              "A release marked with SNAPSHOT indicates that not all of the tests have passed.",
+              "A SNAPSHOT can be hard to reproduce, making it difficult to determine the cause of an issue.",
+              "SNAPSHOT releases do not contain any dependencies.",
+              "A release marked with SNAPSHOT may contain sensitive security information."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "aa09339a4644a278ecdd46c2",
+            "question": "Why do you use Maven Wrapper on a project shared with a large team of developers?",
+            "answer": "All developers will be using the same Maven version, providing stability.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "All developers will be using the same Maven version, providing stability."
+            ],
+            "options": [
+              "all of these answers",
+              "All developers will be using the same Maven version, providing stability.",
+              "The dependencies for the project will be downloaded only once for all developers, saving bandwidth.",
+              "Maven Wrapper checks dependencies for vulnerabilities, increasing security."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "cb850a88b06878cb6c5ab4b1",
+            "question": "This POM file contains an XML validation error. What is the cause of the error?\n![q70](q70.png)",
+            "answer": "The `<dependency>` elements should be inside `<dependencies>` elements.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The `<dependency>` elements should be inside `<dependencies>` elements."
+            ],
+            "options": [
+              "JUnit is not a valid dependency of a Maven project.",
+              "The `<dependency>` elements should be inside `<dependencies>` elements.",
+              "The `<dependency>` element is not a valid in a POM file.",
+              "The `<dependency>` elements should be at the bottom of the POM file."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "10630f5051ef87a636295dab",
+                "url": "~/maven/q70.png",
+                "type": "question"
+              }
+            ],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "33ff7b6cdb743e3ee4134e3d",
+            "question": "Below is the configuration for a server on settings.xml. What does this configuration do?\n![q71](q71.png)",
+            "answer": "It turns off the default behavior for headers and respecifies the Accept-Encoding header for the server with ID openssl.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It turns off the default behavior for headers and respecifies the Accept-Encoding header for the server with ID openssl."
+            ],
+            "options": [
+              "It disables put requests to headers.",
+              "It sets the headers for all GET requests.",
+              "all of these answers",
+              "It turns off the default behavior for headers and respecifies the Accept-Encoding header for the server with ID openssl."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "6f5cc57314ebfac67db6e862",
+                "url": "~/maven/q71.png",
+                "type": "question"
+              }
+            ],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "6ceabd4cfe49c9ac3a84843b",
+            "question": "Below is the build element of a parent POM file. Why might the resources not get copied when executing the plugin on a child project?\n<img width=\"535\" alt=\"5d697fe5498e21bcd2763c2a-1567198471328\" src=\"https://user-images.githubusercontent.com/97866339/224229468-989d52e7-c3d3-4ff2-9514-a38e71d56b7d.png\">",
+            "answer": "The plugin may not have been defined in the child POM.",
+            "explanation": "[maven docs](https://maven.apache.org/guides/mini/guide-http-settings.html#taking-control-of-your-http-headers)",
+            "hint": null,
+            "correctAnswer": [
+              "The plugin may not have been defined in the child POM."
+            ],
+            "options": [
+              "Plugins defined in the pluginManagement element can never be executed.",
+              "Plugins defined in the parent POM are not available in the child POM.",
+              "The Build Helper Maven Plugin works only on parent projects.",
+              "The plugin may not have been defined in the child POM."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "72f1e3ec513bb3488cbc6b58",
+            "question": "This image shows a POM file with a profile. When will this profile be activated?\n![img](q73.png)",
+            "answer": "when the system property debug is not set to true, or is not defined",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "when the system property debug is not set to true, or is not defined"
+            ],
+            "options": [
+              "always",
+              "when the system property debug is not set to true, or is not defined",
+              "when the system property debug is set to !true",
+              "never"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "38fd16d2566f28834953bac9",
+                "url": "~/maven/q73.png",
+                "type": "question"
+              }
+            ],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "41d15da9ccb3d50e9fc54085",
+            "question": "What command can you use to run the goal of the compiler plugin?",
+            "answer": "mvn compiler:compile; mvn test-compile",
+            "explanation": "[!reference](https://maven.apache.org/guides/mini/guide-multiple-modules.html)",
+            "hint": null,
+            "correctAnswer": [
+              "mvn compiler:compile",
+              "mvn test-compile"
+            ],
+            "options": [
+              "mvn compiler:compile",
+              "mvn compiler",
+              "mvn test-compile",
+              "mvn compiler:test"
+            ],
+            "nature": "ChooseMany",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
+          },
+          {
+            "id": "2a5612f961ebcd61d3b675be",
+            "question": "In order to leverage a single execution of an Apache Maven goal on a multimodule project, from which directory should you execute the goal?",
+            "answer": "the directory with the parent POM",
+            "explanation": "[!reference](https://maven.apache.org/guides/mini/guide-multiple-modules.html)",
+            "hint": null,
+            "correctAnswer": [
+              "the directory with the parent POM"
+            ],
+            "options": [
+              "the directory with the parent POM",
+              "the workspace directory",
+              "the development directory",
+              "the module directory"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "a8a326701ab8c82fa8f7a3ba",
+            "quizzId": "08b49f327d09533a20d844bf"
           }
         ]
-      },
-      {
-        "id": "976295f52ef94cd372687c00",
-        "question": "Which build plugin allows you to create a \"fat\" JAR file that contains all of the dependencies in the final JAR file?",
-        "answer": "Shade",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Shade"],
-        "options": ["Fatjar", "Shade", "Dependency", "Package"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8ac77773bd2142e308334ce1",
-        "question": "What is the default scope for Maven dependencies?",
-        "answer": "Compile",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Compile"],
-        "options": ["Test", "Compile", "Runtime", "Build"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "76a56735272c02b844418cf6",
-        "question": "How many times is compiler:compile called when executing mvn clean compile test package?",
-        "answer": "two",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["two"],
-        "options": ["one", "two", "none", "three"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f49a172983ca252289b4b0fc",
-        "question": "What is one of the advantages of using properties in Maven?",
-        "answer": "You can avoid hard-coding values in multiple places.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["You can avoid hard-coding values in multiple places."],
-        "options": [
-          "Properties provide a template for you to build Maven projects with a certain structure.",
-          "Properties allow you to inherit values from the parent POM in the child POM.",
-          "You can avoid hard-coding values in multiple places.",
-          "Properties speed up your Maven build."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3744a9cfe468810478ddd244",
-        "question": "What are the phases of the clean lifecycle?",
-        "answer": "pre-clean, clean and post-clean",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["pre-clean, clean and post-clean"],
-        "options": [
-          "pre-clean, clean and post-clean",
-          "Compile, clean and install",
-          "clean and install",
-          "validate, clean and deploy"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d8d824c46aa40251f4eae8fe",
-        "question": "A compile-time dependency of a dependency for your project is often called **a\\_** dependency.",
-        "answer": "Transitive",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Transitive"],
-        "options": ["Transitive", "runtime", "provided", "test"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "05bf7473992cd71c673f9431",
-        "question": "For what purpose can plugins use the validate phase in the default lifecycle?",
-        "answer": "to carry out checks before building the project",
-        "explanation": "1. [stackoverflow](https://stackoverflow.com/a/40601037)\n2. [maven docs](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#a-build-lifecycle-is-made-up-of-phases)",
-        "hint": null,
-        "correctAnswer": ["to carry out checks before building the project"],
-        "options": [
-          "to check the parent POM file defines all of the child POM files",
-          "to carry out checks before building the project",
-          "to ensure plugins defined in the POM file are in the correct order",
-          "to check the project structure is correct after building a project"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4c71e8703899bb2aaac27f7f",
-        "question": "How do you check for unused dependencies in your project?",
-        "answer": "Run the analyze goal of the dependency plugin.",
-        "explanation": "1. [baeldung](https://www.baeldung.com/maven-unused-dependencies)\n2. [stackoverflow](https://stackoverflow.com/a/1518661)",
-        "hint": null,
-        "correctAnswer": ["Run the analyze goal of the dependency plugin."],
-        "options": [
-          "Run mvn clean and look at which plugins are not mentioned in the output.",
-          "You will need to do this manually.",
-          "Include the Maven dependency plugin in your POM file and run the unpack goal.",
-          "Run the analyze goal of the dependency plugin."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "435f7282fbdc8b0448c36782",
-        "question": "Why is it best practice to avoid overriding the default directory structure?",
-        "answer": "all of these answers",
-        "explanation": "[maven docs](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html)",
-        "hint": null,
-        "correctAnswer": ["all of these answers"],
-        "options": [
-          "Keeping the default structure reduces onboarding time, because developers recognize it.",
-          "Overriding the default structure is very complex.",
-          "Overriding the default structure will cause Maven to take longer to compile your code.",
-          "all of these answers"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "41b31fec1f7b597d5fa12c95",
-        "question": "What is the main purpose of the install phase?",
-        "answer": "to copy the final project artifacts into the local Maven repository",
-        "explanation": "[maven docs](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#a-build-lifecycle-is-made-up-of-phases)",
-        "hint": null,
-        "correctAnswer": ["to copy the final project artifacts into the local Maven repository"],
-        "options": [
-          "to compile the source code of the project",
-          "to install all of the remote dependencies",
-          "to deploy the final project artifacts into a remote Maven repository",
-          "to copy the final project artifacts into the local Maven repository"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5c0bde299e9937f3aab62b86",
-        "question": "How do you skip the tests when running a mvn package command?",
-        "answer": "Use -DskipTests=true",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Use -DskipTests=true"],
-        "options": [
-          "Use -Dtest=skip",
-          "Use -DskipTests=true",
-          "Use -Dtests=pass",
-          "Use a plugin that can be configured to skip tests"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2f87d648da1711d3d4e02942",
-        "question": "Below is a section of a settings.xml file. How can you use the path to the app home in your POM file?\n```\n<profiles>\n    <profile>\n        <id>set=app-home</id>\n        <properties>maven-people-plugin</artifactId>\n            <application-home>/path/to/application</application-home>\n        </properties>\n    </profile>\n</profiles>\n<activeProfiles>\n    <activeProfile>set-app-home</activeProfile>\n</activeProfiles>\n```",
-        "answer": "${application-home}",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["${application-home}"],
-        "options": [
-          "${activeProfile}",
-          "${application-home}",
-          "${set-app-home}",
-          "${/path/to/application}"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8d511847e545ad3f03ef106e",
-        "question": "What is the default value of the warSourceDirectory configuration property of the Maven WAR Plugin? (2 possible solutions)",
-        "answer": "/src/main/webapp; /src/main/WEB-INF",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["/src/main/webapp", "/src/main/WEB-INF"],
-        "options": ["/src/main/webapp", "/src/main/war", "/src/main/WEB-INF", "/src/web"],
-        "nature": "ChooseMany",
-        "attachments": []
-      },
-      {
-        "id": "d9e239d7d85962cbcae4bad1",
-        "question": "When building a Maven Archetype, where do you put your prototype files?",
-        "answer": "src/main/resources/archetype-resources",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["src/main/resources/archetype-resources"],
-        "options": [
-          "src/main/template",
-          "src/main/archetype",
-          "src/main/resources/archetype-resources",
-          "src/main/java"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c1e6c7f8856a4a75ac6c67b0",
-        "question": "The primary purpose of Apache Maven is to provide uniform, easy, and standardized \\_.",
-        "answer": "builds",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["builds"],
-        "options": ["versioning", "project structure", "source code style", "builds"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c0dd051b159caa79451424e9",
-        "question": "Below is the definition of a mirror in settings.xml. What does the element `<mirrorOf>\\*</mirrorOf>` tell Maven to do?\n```\n<mirror>\n    <id>internal-repo</id>\n    <url>http://repo.mycompany.com/proxy</url>\n    <mirrorOf>\\*</mirrorOf>\n</mirror>\n```",
-        "answer": "Mirror all repositories except for http://repomycompany.com/proxy.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Mirror all repositories except for http://repomycompany.com/proxy."],
-        "options": [
-          "Use a single repository by having it mirror all repository requests.",
-          "Mirror all repositories except for http://repomycompany.com/proxy.",
-          "Mirror any repositories with `\\*` in the name.",
-          "Use a mirror repository for every repository defined in the POM file."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8d49539509be226f0154ed18",
-        "question": "How do you generate a site for a project with Maven?",
-        "answer": "Use the mvn site command.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Use the mvn site command."],
-        "options": [
-          "Use the mvn site command.",
-          "Use the mvn install command.",
-          "This is not possible.",
-          "Use the mvn package command."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5540bbf3c5b220233cc4c790",
-        "question": "What is the default location of the local Maven repository?",
-        "answer": "USER_HOME/.m2/repository",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["USER_HOME/.m2/repository"],
-        "options": [
-          "USER_HOME/.m2/repository",
-          "USER_HOME/.m2/local",
-          "USER_HOME/maven/repository",
-          "/repo"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "887bcc24b5ec3cc77d4a58a7",
-        "question": "A phase is a step in \\_.",
-        "answer": "the build lifecycle",
-        "explanation": "[maven docs](https://maven.apache.org/what-is-maven.html#:~:text=Maven's%20primary%20goal%20is%20to,Providing%20a%20uniform%20build%20system)",
-        "hint": null,
-        "correctAnswer": ["the build lifecycle"],
-        "options": [
-          "the compile goal",
-          "the development process",
-          "the build lifecycle",
-          "the POM file"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5cd0d93527e8229b4529f516",
-        "question": "What is the Maven central repository?",
-        "answer": "an online repository for open-source binaries",
-        "explanation": "[!reference](https://www.javatpoint.com/maven-repository)",
-        "hint": null,
-        "correctAnswer": ["an online repository for open-source binaries"],
-        "options": [
-          "a local repository created by Maven in your local file system",
-          "a repository in the middle of your Maven project",
-          "an online repository for open-source binaries",
-          "a repository that you must download to build a Maven project"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "68911ad71370d8f723070a95",
-        "question": "What are the artifacts that Apache Maven uses to perform its build operations?",
-        "answer": "plugins",
-        "explanation": "[!reference](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)",
-        "hint": null,
-        "correctAnswer": ["plugins"],
-        "options": ["ant files", "properties", "dependencies", "plugins"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7d56cf97de13a513da9fabd8",
-        "question": "Which plugin is used to copy, filter, include, and exclude non-Java files into your final project?",
-        "answer": "Resources",
-        "explanation": "[!reference](https://maven.apache.org/plugins/maven-resources-plugin/examples/include-exclude.html)",
-        "hint": null,
-        "correctAnswer": ["Resources"],
-        "options": ["Build", "Files", "Copy", "Resources"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "21539f9fd7b7884ef1765a28",
-        "question": "What is a module in a Maven project?",
-        "answer": "a subproject, or child project",
-        "explanation": "[!reference](https://docs.jboss.org/tools/latest/en/maven_reference/html/creating_a_maven_application.html)",
-        "hint": null,
-        "correctAnswer": ["a subproject, or child project"],
-        "options": ["a dependency", "a subproject, or child project", "a Java package", "a plugin"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "666e2a2eeb03d041b5f89e77",
-        "question": "What does the mvn --version command do?",
-        "answer": "It prints out your installed version of Maven.",
-        "explanation": "[!reference](https://jenkov.com/tutorials/maven/maven-commands.html)",
-        "hint": null,
-        "correctAnswer": ["It prints out your installed version of Maven."],
-        "options": [
-          "It updates Maven to the latest version.",
-          "It prints out your installed version of Maven.",
-          "It builds your Maven project.",
-          "It installs Maven on your computer."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "dd9a11a746d70e2dbfc5c8f3",
-        "question": "When building a Maven project, where are Maven dependencies stored?",
-        "answer": "in your local repository",
-        "explanation": "[!reference](https://www.baeldung.com/maven-local-repository)",
-        "hint": null,
-        "correctAnswer": ["in your local repository"],
-        "options": [
-          "in the target directory",
-          "in your local repository",
-          "in the POM file",
-          "online in the Maven central repository"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a715ab33fbb5d966d9d8ed97",
-        "question": "Why is it best practice not to release SNAPSHOT versions of Maven artifacts to production?",
-        "answer": "A SNAPSHOT can be hard to reproduce, making it difficult to determine the cause of an issue.",
-        "explanation": "[!reference](https://maven.apache.org/guides/getting-started/index.html#What_is_a_SNAPSHOT_version)",
-        "hint": null,
-        "correctAnswer": [
-          "A SNAPSHOT can be hard to reproduce, making it difficult to determine the cause of an issue."
-        ],
-        "options": [
-          "A release marked with SNAPSHOT indicates that not all of the tests have passed.",
-          "A SNAPSHOT can be hard to reproduce, making it difficult to determine the cause of an issue.",
-          "SNAPSHOT releases do not contain any dependencies.",
-          "A release marked with SNAPSHOT may contain sensitive security information."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "aa09339a4644a278ecdd46c2",
-        "question": "Why do you use Maven Wrapper on a project shared with a large team of developers?",
-        "answer": "All developers will be using the same Maven version, providing stability.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "All developers will be using the same Maven version, providing stability."
-        ],
-        "options": [
-          "all of these answers",
-          "All developers will be using the same Maven version, providing stability.",
-          "The dependencies for the project will be downloaded only once for all developers, saving bandwidth.",
-          "Maven Wrapper checks dependencies for vulnerabilities, increasing security."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cb850a88b06878cb6c5ab4b1",
-        "question": "This POM file contains an XML validation error. What is the cause of the error?\n![q70](q70.png)",
-        "answer": "The `<dependency>` elements should be inside `<dependencies>` elements.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "The `<dependency>` elements should be inside `<dependencies>` elements."
-        ],
-        "options": [
-          "JUnit is not a valid dependency of a Maven project.",
-          "The `<dependency>` elements should be inside `<dependencies>` elements.",
-          "The `<dependency>` element is not a valid in a POM file.",
-          "The `<dependency>` elements should be at the bottom of the POM file."
-        ],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "c173319f24d39171f130efbf",
-            "url": "q70.png",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "33ff7b6cdb743e3ee4134e3d",
-        "question": "Below is the configuration for a server on settings.xml. What does this configuration do?\n![q71](q71.png)",
-        "answer": "It turns off the default behavior for headers and respecifies the Accept-Encoding header for the server with ID openssl.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "It turns off the default behavior for headers and respecifies the Accept-Encoding header for the server with ID openssl."
-        ],
-        "options": [
-          "It disables put requests to headers.",
-          "It sets the headers for all GET requests.",
-          "all of these answers",
-          "It turns off the default behavior for headers and respecifies the Accept-Encoding header for the server with ID openssl."
-        ],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "8e4002bcf1727a0cda07e043",
-            "url": "q71.png",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "6ceabd4cfe49c9ac3a84843b",
-        "question": "Below is the build element of a parent POM file. Why might the resources not get copied when executing the plugin on a child project?\n<img width=\"535\" alt=\"5d697fe5498e21bcd2763c2a-1567198471328\" src=\"https://user-images.githubusercontent.com/97866339/224229468-989d52e7-c3d3-4ff2-9514-a38e71d56b7d.png\">",
-        "answer": "The plugin may not have been defined in the child POM.",
-        "explanation": "[maven docs](https://maven.apache.org/guides/mini/guide-http-settings.html#taking-control-of-your-http-headers)",
-        "hint": null,
-        "correctAnswer": ["The plugin may not have been defined in the child POM."],
-        "options": [
-          "Plugins defined in the pluginManagement element can never be executed.",
-          "Plugins defined in the parent POM are not available in the child POM.",
-          "The Build Helper Maven Plugin works only on parent projects.",
-          "The plugin may not have been defined in the child POM."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "72f1e3ec513bb3488cbc6b58",
-        "question": "This image shows a POM file with a profile. When will this profile be activated?\n![img](q73.png)",
-        "answer": "when the system property debug is not set to true, or is not defined",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["when the system property debug is not set to true, or is not defined"],
-        "options": [
-          "always",
-          "when the system property debug is not set to true, or is not defined",
-          "when the system property debug is set to !true",
-          "never"
-        ],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "38fd16d2566f28834953bac9",
-            "url": "q73.png",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "41d15da9ccb3d50e9fc54085",
-        "question": "What command can you use to run the goal of the compiler plugin?",
-        "answer": "mvn compiler:compile; mvn test-compile",
-        "explanation": "[!reference](https://maven.apache.org/guides/mini/guide-multiple-modules.html)",
-        "hint": null,
-        "correctAnswer": ["mvn compiler:compile", "mvn test-compile"],
-        "options": [
-          "mvn compiler:compile",
-          "mvn compiler",
-          "mvn test-compile",
-          "mvn compiler:test"
-        ],
-        "nature": "ChooseMany",
-        "attachments": []
-      },
-      {
-        "id": "2a5612f961ebcd61d3b675be",
-        "question": "In order to leverage a single execution of an Apache Maven goal on a multimodule project, from which directory should you execute the goal?",
-        "answer": "the directory with the parent POM",
-        "explanation": "[!reference](https://maven.apache.org/guides/mini/guide-multiple-modules.html)",
-        "hint": null,
-        "correctAnswer": ["the directory with the parent POM"],
-        "options": [
-          "the directory with the parent POM",
-          "the workspace directory",
-          "the development directory",
-          "the module directory"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
       }
     ]
   },
   "meta": {
     "source": "maven/maven-quiz.md",
-    "language": "md",
-    "generatedAt": "2025-12-09T14:56:14.342119+00:00",
+    "languages": [
+      "md"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.382631+00:00",
     "warnings": []
   }
 }

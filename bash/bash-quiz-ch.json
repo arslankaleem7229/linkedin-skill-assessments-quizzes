@@ -1,1739 +1,1936 @@
 {
   "quizz": {
     "id": "88e37edc64539fb39cf2b9f8",
-    "title": "Bash",
-    "description": "Seeded from bash/bash-quiz-ch.md",
-    "createdById": "seed-user",
-    "questions": [
+    "slug": "bash",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
       {
-        "id": "b601be279b42634e993ee578",
-        "question": "\u4ee5\u4e0b\u4e09\u79cd\u65b9\u6cd5\u4e2d,\u54ea\u4e00\u79cd\u53ef\u4ee5\u9012\u5f52\u5730\u5c06\u7528\u6237\u4e3b\u76ee\u5f55\u4e2d\u7684\u540d\u4e3a\"photo dir\"\u7684\u76ee\u5f55\u590d\u5236\u5230 /backups?\n```bash\ncp -R \"~/photo dir\" /backups #method1\ncp -R ~\"/photo dir\" /backups #method2\ncp -R ~/\"photo dir\" /backups #method3\n```",
-        "answer": "\u53ea\u6709method 3\u4f1a\u5c06 `\"~/\"` \u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55,\u7136\u540e\u9644\u52a0\u5305\u542b\u7a7a\u683c\u7684\u76ee\u5f55\u540d\u79f0\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u53ea\u6709method 3\u4f1a\u5c06 `\"~/\"` \u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55,\u7136\u540e\u9644\u52a0\u5305\u542b\u7a7a\u683c\u7684\u76ee\u5f55\u540d\u79f0\u3002"
-        ],
-        "options": [
-          "\u53ea\u6709method 1\u4f1a\u5c06 `\"~/\"` \u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55,\u7136\u540e\u9644\u52a0\u5305\u542b\u7a7a\u683c\u7684\u76ee\u5f55\u540d\u79f0\u3002",
-          "\u53ea\u6709method 2\u4f1a\u5c06 `\"~/\"` \u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55,\u7136\u540e\u9644\u52a0\u5305\u542b\u7a7a\u683c\u7684\u76ee\u5f55\u540d\u79f0\u3002",
-          "\u53ea\u6709method 3\u4f1a\u5c06 `\"~/\"` \u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55,\u7136\u540e\u9644\u52a0\u5305\u542b\u7a7a\u683c\u7684\u76ee\u5f55\u540d\u79f0\u3002",
-          "\u4e09\u79cd\u65b9\u6cd5\u90fd\u4e0d\u4f1a\u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55\u3002\u53ea\u6709\u4f7f\u7528 `\"$HOME/photo dir\"` \u624d\u4f1a\u6210\u529f\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "53f81427d792ba1fed982938",
-        "question": "\u5982\u679c\u5728\u5f53\u524d\u76ee\u5f55\u4e2d\u8fd0\u884c script.sh,\u5b83\u4f1a\u5931\u8d25\u3002\u4e3a\u4ec0\u4e48?\n```bash\n$ ls -1\nBeach photo1.jpg\nPhoto1.jpg\nPhoto2.jpg\nScript.sh\n$ cat script.sh\nfor i in $(ls *.jpg); do\n\tmv $i ${i}.bak\ndone\n```",
-        "answer": "for\u5faa\u73af\u4f1a\u5728\u5355\u8bcd\u8fb9\u754c\u5904\u62c6\u5206,\u800cBeach photo1.jpg\u4e2d\u6709\u4e00\u4e2a\u7a7a\u683c\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "for\u5faa\u73af\u4f1a\u5728\u5355\u8bcd\u8fb9\u754c\u5904\u62c6\u5206,\u800cBeach photo1.jpg\u4e2d\u6709\u4e00\u4e2a\u7a7a\u683c\u3002"
-        ],
-        "options": [
-          "ls: cannot access nonexistentfile: No such file or directory",
-          "for\u5faa\u73af\u4f1a\u5728\u5355\u8bcd\u8fb9\u754c\u5904\u62c6\u5206,\u800cBeach photo1.jpg\u4e2d\u6709\u4e00\u4e2a\u7a7a\u683c\u3002",
-          "mv\u547d\u4ee4\u4f1a\u5931\u8d25,\u56e0\u4e3a\u5927\u62ec\u53f7\u662fBash\u4e2d\u7684\u7279\u6b8a\u5b57\u7b26,\u4e0d\u80fd\u7528\u4e8e\u6587\u4ef6\u540d\u3002",
-          "\u8fd0\u884cscript.sh\u4f1a\u6210\u529f,\u56e0\u4e3als\u547d\u4ee4\u4f1a\u6784\u5efa\u5f53\u524d\u76ee\u5f55\u4e2d\u7684\u6587\u4ef6\u5217\u8868,\u5e76\u901a\u8fc7for\u5faa\u73af\u91cd\u547d\u540d\u6587\u4ef6,\u6dfb\u52a0.bak\u6269\u5c55\u540d\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "faeacf6e74b4765a0932f499",
-        "question": "\u8981\u5728subshell\u4e2d\u8fd0\u884c\u590d\u5236\u547d\u4ee4,\u5e94\u8be5\u4f7f\u7528\u54ea\u79cd\u8bed\u6cd5?",
-        "answer": "`( command )`",
-        "explanation": "[reference](https://en.wikiversity.org/wiki/Bash_programming/Subshells)\u3002Subshell\u662f\u7a0b\u5e8f\u5458\u6355\u83b7(\u901a\u5e38\u662f\u4e3a\u4e86\u5904\u7406)\u7a0b\u5e8f\u6216\u811a\u672c\u8f93\u51fa\u7684\u4e00\u79cd\u65b9\u5f0f\u3002\u8981\u5728subshell\u4e2d\u8fd0\u884c\u7684\u547d\u4ee4\u9700\u8981\u7528\u5355\u62ec\u53f7\u62ec\u8d77\u6765,\u5e76\u5728\u524d\u9762\u52a0\u4e0a\u7f8e\u5143\u7b26\u53f7:DIRCONTENTS=$(ls -l) echo ${DIRCONTENTS}",
-        "hint": null,
-        "correctAnswer": [
-          "`( command )`"
-        ],
-        "options": [
-          "`( command )`",
-          "`sh command`",
-          "`{ command; }`",
-          "`(( command ))`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cf72ff0a60ad501384a5cbce",
-        "question": "\u4f7f\u7528\"awk\",\u4ee5\u4e0b\u547d\u4ee4\u5b57\u7b26\u4e32\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\necho \"1 2 3\" | awk '{for (i=1; i<=NF; i++) s=s+$i};END {print s}'\n```",
-        "answer": "6",
-        "explanation": "[reference](https://www.cyberciti.biz/faq/bash-scripting-using-awk/)\u3002AWK\u662f\u4e00\u79cd\u7f16\u7a0b\u8bed\u8a00,\u4e13\u4e3a\u5904\u7406\u57fa\u4e8e\u6587\u672c\u7684\u6570\u636e\u800c\u8bbe\u8ba1,\u65e0\u8bba\u662f\u6587\u4ef6\u4e2d\u7684\u6570\u636e\u8fd8\u662f\u6570\u636e\u6d41,\u6216\u8005\u901a\u8fc7shell pipes\u3002\u6362\u53e5\u8bdd\u8bf4,\u4f60\u53ef\u4ee5\u5c06awk\u4e0eshell scripts\u7ed3\u5408\u4f7f\u7528,\u6216\u8005\u76f4\u63a5\u5728shell prompt\u4e0b\u4f7f\u7528\u3002",
-        "hint": null,
-        "correctAnswer": [
-          "6"
-        ],
-        "options": [
-          "6",
-          "123",
-          "3",
-          "600"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e8ba4154a2d7efdcee06ae98",
-        "question": "\u4ee5\u4e0b\u547d\u4ee4\u5c06\u5728\u6839\u6587\u4ef6\u7cfb\u7edf\u4e2d\u641c\u7d22\u540d\u4e3a\"finance.db\"\u7684\u6587\u4ef6\u3002\u5728\u6b64\u4e0a\u4e0b\u6587\u4e2d,\u54ea\u4e9b\u4fe1\u606f\u88ab\u53d1\u9001\u5230/dev/null?\n```bash\nfind / -name \"finance.db\" 1>results.txt 2>/dev/null\n```",
-        "answer": "\u53d1\u9001\u5230standard error\u7684\u4fe1\u606f,\u4f8b\u5982find\u547d\u4ee4\u8fd0\u884c\u65f6\u663e\u793a\u7684\u9519\u8bef",
-        "explanation": "[reference](https://www.cyberciti.biz/faq/how-to-redirect-standard-error-in-bash/)\u3002\u5c06stderr(standard error)\u91cd\u5b9a\u5411\u5230\u6587\u4ef6\u7684\u8bed\u6cd5:`command 2> errors.txt`\u3002",
-        "hint": null,
-        "correctAnswer": [
-          "\u53d1\u9001\u5230standard error\u7684\u4fe1\u606f,\u4f8b\u5982find\u547d\u4ee4\u8fd0\u884c\u65f6\u663e\u793a\u7684\u9519\u8bef"
-        ],
-        "options": [
-          "\u4e0d\u5339\u914dfinance.db\u7684\u6587\u4ef6\u540d",
-          "\u53d1\u9001\u5230standard error\u7684\u4fe1\u606f,\u4f8b\u5982find\u547d\u4ee4\u8fd0\u884c\u65f6\u663e\u793a\u7684\u9519\u8bef",
-          "\u5339\u914dfinance.db\u7684\u6587\u4ef6\u540d",
-          "\u53d1\u9001\u5230standard output\u7684\u4fe1\u606f,\u5373find\u547d\u4ee4\u627e\u5230\u7684\u6587\u4ef6\u8def\u5f84"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "617bdaa2eb6cde34436b2ba9",
-        "question": "\u8981\u6c38\u4e45\u5220\u9664\u540d\u4e3atextfile\u7684\u6587\u4ef6\u4e2d\u7684\u7a7a\u884c,\u53ef\u4ee5\u4f7f\u7528\u54ea\u4e2a\u547d\u4ee4?",
-        "answer": "`sed -i '/^$/d' textfile`",
-        "explanation": "[reference](https://www.gnu.org/software/sed/manual/sed.html#sed-regular-expressions)\nsed:sed\u662f\u4e00\u79cdstream editor,\u7528\u4e8e\u5bf9input stream\u6267\u884c\u57fa\u672c\u7684\u6587\u672c\u8f6c\u6362\u3002\n-i[SUFFIX]:\u6b64\u9009\u9879\u6307\u5b9a\u6587\u4ef6\u5c06\u5728\u539f\u5730\u7f16\u8f91\u3002\n'/^$/d':\u6b63\u5219\u8868\u8fbe\u5f0f\u4f4d\u4e8e//\u4e4b\u95f4\u3002^\u8868\u793a\u884c\u7684\u5f00\u5934,$\u8868\u793a\u884c\u7684\u7ed3\u5c3e\u3002^$\u8868\u793a\u5f00\u5934\u548c\u7ed3\u5c3e\u4e4b\u95f4\u6ca1\u6709\u4efb\u4f55\u5185\u5bb9\u3002\nd:\u5220\u9664pattern space;\u7acb\u5373\u5f00\u59cb\u4e0b\u4e00\u5faa\u73af\u3002\nWarning,\u4e0a\u8ff0\u793a\u4f8b\u5728Mac terminal\u4e0a\u7531\u4e8e\u4e0d\u540c\u7684UNIX flavours\u53ef\u80fd\u65e0\u6cd5\u5de5\u4f5c\u3002\u53ef\u4ee5\u901a\u8fc7\u6dfb\u52a0\u989d\u5916\u7684flag `-e`\u6216`--`\u6765\u4f7f\u5176\u5728Mac\u4e0a\u5de5\u4f5c(\u53c2\u8003[StackOverflow](https://stackoverflow.com/questions/4247068/sed-command-with-i-option-failing-on-mac-but-works-on-linux)):`sed -i -e '/^$/d' textfile.txt`",
-        "hint": null,
-        "correctAnswer": [
-          "`sed -i '/^$/d' textfile`"
-        ],
-        "options": [
-          "`sed -i '/^$/d' textfile`",
-          "`sed '/^$/d' textfile`",
-          "`cat textfile | sed '/^$/d`",
-          "`sed -i 's/^$//' textfile`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "88aafd86a4296c469de023fa",
-        "question": "\u5047\u8bbeuser1\u5b58\u5728,\u4ee5\u4e0b\u547d\u4ee4\u5b57\u7b26\u4e32\u7684\u7ed3\u679c\u662f\u4ec0\u4e48?\n```bash\nawk -F: '/user1/{print $1 \"-\" $3 \"-\" $6}' /etc/passwd\n```",
-        "answer": "\u5b83\u4f1a\u663e\u793auser1\u7684username\u3001UID\u548chome directory,\u7528\u8fde\u5b57\u7b26\u5206\u9694\u3002",
-        "explanation": "[reference](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)\u3002\u4f20\u7edf\u4e0a,/etc/passwd\u6587\u4ef6\u7528\u4e8e\u8bb0\u5f55\u6bcf\u4e2a\u6ce8\u518c\u7528\u6237\u7684\u4fe1\u606f,\u8fd9\u4e9b\u7528\u6237\u53ef\u4ee5\u8bbf\u95ee\u7cfb\u7edf\u3002/etc/passwd\u6587\u4ef6\u662f\u4e00\u4e2acolon-separated\u6587\u4ef6,\u5305\u542b\u4ee5\u4e0b\u4fe1\u606f:1-`Username`,2-`Password`,3-`User ID (UID)`,4-`Group ID (GID)`,5-`User ID Info (GECOS)`,6-`Home directory`,7-`Command/shell`",
-        "hint": null,
-        "correctAnswer": [
-          "\u5b83\u4f1a\u663e\u793auser1\u7684username\u3001UID\u548chome directory,\u7528\u8fde\u5b57\u7b26\u5206\u9694\u3002"
-        ],
-        "options": [
-          "\u5b83\u4f1a\u663e\u793auser1\u7684username\u3001UID\u548chome directory,\u7528\u5192\u53f7\u5206\u9694\u3002",
-          "\u5b83\u4f1a\u6253\u5370user1\u7684UID\u3001GID\u548chome directory,\u7528\u8fde\u5b57\u7b26\u5206\u9694\u3002",
-          "\u5b83\u4f1a\u6253\u5370user1\u7684UID\u3001comment\u548chome directory,\u7528\u8fde\u5b57\u7b26\u5206\u9694\u3002",
-          "\u5b83\u4f1a\u663e\u793auser1\u7684username\u3001UID\u548chome directory,\u7528\u8fde\u5b57\u7b26\u5206\u9694\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f03502e85f5650de43a775a9",
-        "question": "\u5982\u679c\u5728Bash\u811a\u672c\u4e2d\u4f7f\u7528`\"set -e\"`\u4f1a\u53d1\u751f\u4ec0\u4e48?",
-        "answer": "\u5982\u679ccommand\u3001list of commands\u3001compound command\u6216\u53ef\u80fd\u7684pipeline\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002",
-        "explanation": "[reference](http://redsymbol.net/articles/unofficial-bash-strict-mode/)\u3002set -e\u9009\u9879\u6307\u793abash\u5982\u679c\u4efb\u4f55command [1]\u8fd4\u56de\u975e\u96f6exit status,\u5219\u7acb\u5373\u9000\u51fa\u3002\u4f60\u53ef\u80fd\u4e0d\u5e0c\u671b\u5728command-line shell\u4e2d\u8bbe\u7f6e\u6b64\u9009\u9879,\u4f46\u5728script\u4e2d\u5b83\u975e\u5e38\u6709\u7528\u3002\u5728\u6240\u6709\u5e7f\u6cdb\u4f7f\u7528\u7684general-purpose programming languages\u4e2d,\u672a\u5904\u7406\u7684runtime error\u2014\u2014\u65e0\u8bba\u662fJava\u4e2d\u629b\u51fa\u7684exception,\u8fd8\u662fC\u4e2d\u7684segmentation fault,\u6216\u8005Python\u4e2d\u7684syntax error\u2014\u2014\u90fd\u4f1a\u7acb\u5373\u505c\u6b62\u7a0b\u5e8f\u7684\u6267\u884c;\u540e\u7eed\u884c\u4e0d\u4f1a\u88ab\u6267\u884c\u3002",
-        "hint": null,
-        "correctAnswer": [
-          "\u5982\u679ccommand\u3001list of commands\u3001compound command\u6216\u53ef\u80fd\u7684pipeline\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002"
-        ],
-        "options": [
-          "\u5982\u679c\u51fd\u6570\u6216subshell\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002",
-          "\u5982\u679c\u6761\u4ef6\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002",
-          "\u5982\u679clocal\u3001declare\u6216typeset\u8d4b\u503c\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002",
-          "\u5982\u679ccommand\u3001list of commands\u3001compound command\u6216\u53ef\u80fd\u7684pipeline\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "40e930d3c7ea04c2f16e8ce0",
-        "question": "**\\_** \u5173\u952e\u5b57\u4f1a\u6682\u505c\u811a\u672c\u4ee5\u4ecestandard input\u83b7\u53d6\u8f93\u5165\u3002",
-        "answer": "read",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "read"
-        ],
-        "options": [
-          "get",
-          "argument",
-          "read",
-          "input"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "03539568527585538bc62f6b",
-        "question": "\u5982\u679cfile.sql\u5305\u542b\u8981\u6267\u884c\u7684SQL\u8bed\u53e5,\u90a3\u4e48file.txt\u4e2d\u4f1a\u6709\u4ec0\u4e48\u5185\u5bb9?\n```bash\nmysql < file.sql > file.txt\n```",
-        "answer": "MySQL\u547d\u4ee4\u7684non-error output",
-        "explanation": "**Note**:`\u67e5\u770b\u4e0b\u9762\u7684\u95ee\u9898\u4ee5\u4e86\u89e3\u53d8\u4f53\u3002`",
-        "hint": null,
-        "correctAnswer": [
-          "MySQL\u547d\u4ee4\u7684non-error output"
-        ],
-        "options": [
-          "file.sql\u7684\u5185\u5bb9\u526f\u672c",
-          "\u8868\u793a\u8fd9\u662f\u65e0\u6548\u8bed\u6cd5\u7684\u9519\u8bef",
-          "MySQL\u547d\u4ee4\u7684error output",
-          "MySQL\u547d\u4ee4\u7684non-error output"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "de70fc408cd7f3dfde4d1c08",
-        "question": "\u5c4f\u5e55\u4e0a\u7684\u8f93\u51fa\u548cout.txt\u7684\u5185\u5bb9\u6709\u4ec0\u4e48\u533a\u522b?\n```bash\nmysql < file.sql > out.txt\n```",
-        "answer": "\u5c4f\u5e55\u4e0a\u6ca1\u6709\u8f93\u51fa,\u56e0\u4e3a\u5b83\u88ab\u91cd\u5b9a\u5411\u5230out.txt\u3002",
-        "explanation": "**Note**:`\u67e5\u770b\u4e0a\u9762\u7684\u95ee\u9898\u4ee5\u4e86\u89e3\u53d8\u4f53\u3002`",
-        "hint": null,
-        "correctAnswer": [
-          "\u5c4f\u5e55\u4e0a\u6ca1\u6709\u8f93\u51fa,\u56e0\u4e3a\u5b83\u88ab\u91cd\u5b9a\u5411\u5230out.txt\u3002"
-        ],
-        "options": [
-          "\u5c4f\u5e55\u4e0a\u7684\u8f93\u51fa\u4e0eout.txt\u5b8c\u5168\u76f8\u540c",
-          "\u5c4f\u5e55\u4e0a\u6ca1\u6709\u8f93\u51fa,\u56e0\u4e3a\u5b83\u88ab\u91cd\u5b9a\u5411\u5230out.txt\u3002",
-          "\u5c4f\u5e55\u4e0a\u7684\u8f93\u51fa\u4e0eout.txt\u5b8c\u5168\u76f8\u540c,\u4f46\u5e26\u6709\u884c\u53f7\u3002",
-          "out.txt\u6587\u4ef6\u5c06\u4fdd\u5b58STDERR,\u800cSTDOUT\u5c06\u663e\u793a\u5728\u5c4f\u5e55\u4e0a\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "dbf7c974db6c7db3d3d86784",
-        "question": "SUID\u6216setuid\u5982\u4f55\u5f71\u54cd\u53ef\u6267\u884c\u547d\u4ee4?",
-        "answer": "\u5f53\u547d\u4ee4\u88ab\u6267\u884c\u65f6,\u5176running privileges\u4f1a\u63d0\u5347\u5230\u547d\u4ee4\u7684user owner\u3002",
-        "explanation": "[reference](https://en.wikipedia.org/wiki/Setuid#:~:text=The%20Linux%20and%20Unix%20access,to%20change%20behaviour%20in%20directories.)\u3002Linux\u548cUnix\u7684access rights flags setuid\u548csetgid(\u5206\u522b\u662fset user identity\u548cset group identity\u7684\u7f29\u5199)[1]\u5141\u8bb8\u7528\u6237\u4ee5\u53ef\u6267\u884c\u6587\u4ef6owner\u6216group\u7684file system permissions\u8fd0\u884c\u53ef\u6267\u884c\u6587\u4ef6,\u5e76\u5728directories\u4e2d\u66f4\u6539behavior\u3002",
-        "hint": null,
-        "correctAnswer": [
-          "\u5f53\u547d\u4ee4\u88ab\u6267\u884c\u65f6,\u5176running privileges\u4f1a\u63d0\u5347\u5230\u547d\u4ee4\u7684user owner\u3002"
-        ],
-        "options": [
-          "\u5f53\u547d\u4ee4\u521b\u5efa\u6587\u4ef6\u65f6,\u8fd9\u4e9b\u6587\u4ef6\u5c06\u5f52\u547d\u4ee4\u7684group owner\u6240\u6709\u3002",
-          "SUID bit\u5141\u8bb8\u4efb\u4f55\u4eba\u6267\u884c\u547d\u4ee4,\u65e0\u8bba\u8bbe\u7f6e\u4e86\u4ec0\u4e48\u5176\u4ed6permissions\u3002",
-          "\u5f53\u547d\u4ee4\u88ab\u6267\u884c\u65f6,\u5176running privileges\u4f1a\u63d0\u5347\u5230\u547d\u4ee4\u7684user owner\u3002",
-          "\u5f53\u547d\u4ee4\u88ab\u6267\u884c\u65f6,\u5176running privileges\u4f1a\u63d0\u5347\u5230\u547d\u4ee4\u7684group owner\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a07adca6c4fc37bf12f81290",
-        "question": "\u8981\u4ece\u540d\u4e3atextfile\u7684\u6587\u4ef6\u4e2d\u63d0\u53d6\u7b2c\u4e00\u5217\u7684\u6587\u672c,\u53ef\u4ee5\u4f7f\u7528\u54ea\u4e2a\u547d\u4ee4?",
-        "answer": "`cat textfile | awk '{print $1}'`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`cat textfile | awk '{print $1}'`"
-        ],
-        "options": [
-          "`cat {$1,textfile}`",
-          "`cat textfile | awk [print $1]`",
-          "`cat textfile | awk '{print $1}'`",
-          "`awk textfile {print $1}`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "451f597188b5c0e5405b97e4",
-        "question": "\u8c03\u51faBash history search\u7684\u952e\u76d8\u5feb\u6377\u952e\u662f\u4ec0\u4e48?\n```bash\n(reverse-i-search)`':\n```",
-        "answer": "Ctrl + R",
-        "explanation": "Note:\u5728Mac\u4e0a,\u5b83\u4f1a\u663e\u793a`bck-i-search:`\u800c\u4e0d\u662f`(reverse-i-search)`\u3002",
-        "hint": null,
-        "correctAnswer": [
-          "Ctrl + R"
-        ],
-        "options": [
-          "Esc + R",
-          "Ctrl + H",
-          "Ctrl + R",
-          "Alt + R"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "31daabd79badab3e5bafee40",
-        "question": "\u54ea\u4e2a\u7b97\u672f\u8868\u8fbe\u5f0f\u4f1a\u7ed9\u51fa\u6700\u7cbe\u786e\u7684\u7b54\u6848?",
-        "answer": "`var=$(echo 'scale=2; 10 / 8' | bc)`",
-        "explanation": "[reference](https://www.geeksforgeeks.org/bc-command-linux-examples/)\u3002bc\u547d\u4ee4\u7528\u4e8ecommand line calculator\u3002\u5b83\u7c7b\u4f3c\u4e8ebasic calculator,\u53ef\u4ee5\u7528\u6765\u8fdb\u884c\u57fa\u672c\u7684\u6570\u5b66\u8ba1\u7b97\u3002\u5e26\u6709\u4e24\u4f4dprecision\u7684division\u5c06\u4f20\u9012\u7ed9`bc`,\u8fdb\u884c\u8ba1\u7b97,\u5e76\u5206\u914d\u7ed9\u53d8\u91cf\u3002",
-        "hint": null,
-        "correctAnswer": [
-          "`var=$(echo 'scale=2; 10 / 8' | bc)`"
-        ],
-        "options": [
-          "`var=$( expr 10 / 8 )`",
-          "`(( var= 10 /8 ))`",
-          "`var=$(( 10 / 8 ))`",
-          "`var=$(echo 'scale=2; 10 / 8' | bc)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6b9bce464f1579dde5cdfbcb",
-        "question": "\u6b64\u811a\u672c\u7684\u7ed3\u679c\u662f\u4ec0\u4e48?\n```bash\ntxt=Penguins\n[[ $txt =~ [a-z]{8} ]]; echo $?\n```",
-        "answer": "1,\u8868\u793a'false',\u56e0\u4e3a\u53d8\u91cf\"txt\"\u4e0d\u5305\u542b\u516b\u4e2a\u4ecb\u4e8ea\u548cz\u4e4b\u95f4\u7684\u5c0f\u5199\u5b57\u6bcd",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "1,\u8868\u793a'false',\u56e0\u4e3a\u53d8\u91cf\"txt\"\u4e0d\u5305\u542b\u516b\u4e2a\u4ecb\u4e8ea\u548cz\u4e4b\u95f4\u7684\u5c0f\u5199\u5b57\u6bcd"
-        ],
-        "options": [
-          "0,\u8868\u793a'true',\u56e0\u4e3a\u53d8\u91cf\"txt\"\u5305\u542b\u516b\u4e2a\u5b57\u6bcd",
-          "0,\u8868\u793a'true',\u56e0\u4e3a\u6bcf\u4e2a\u4eba\u90fd\u559c\u6b22penguins!",
-          "1,\u8868\u793a'false',\u56e0\u4e3a\u53d8\u91cf\"txt\"\u957f\u5ea6\u8d85\u8fc7\u516b\u4e2a\u5b57\u7b26",
-          "1,\u8868\u793a'false',\u56e0\u4e3a\u53d8\u91cf\"txt\"\u4e0d\u5305\u542b\u516b\u4e2a\u4ecb\u4e8ea\u548cz\u4e4b\u95f4\u7684\u5c0f\u5199\u5b57\u6bcd"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "feb8822d15701c386a39d824",
-        "question": "\u5982\u4f55\u5c06Bash shell prompt\u66f4\u6539\u4e3a\u4ee5\u4e0b\u5185\u5bb9?\n```bash\nHAL>\n```",
-        "answer": "`export PS1=\"HAL>\"`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`export PS1=\"HAL>\"`"
-        ],
-        "options": [
-          "`SHELL=\"HAL\\>\"`",
-          "`SHELL=\"HAL>\"`",
-          "`export PS1=\"HAL>\"`",
-          "`PS1=\"HAL\\>\"`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cf73ca4c1670705a9f278380",
-        "question": "\u4ee5\u4e0b\u4ee3\u7801\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\nVAR=\"/var/www/html/website.com/html/\"\necho \"${VAR#*/html}\"\n```",
-        "answer": "`/website.com/html/`",
-        "explanation": "[reference]()\n\u6839\u636ePOSIX shell specification:`${parameter#[word]}`\u3002Remove Smallest Prefix Pattern\u3002word\u5c06\u88abexpanded\u4ee5\u751f\u6210\u4e00\u4e2apattern\u3002parameter expansion\u5c06\u5bfc\u81f4parameter,\u5220\u9664\u4e0epattern\u5339\u914d\u7684\u6700\u5c0fprefix\u90e8\u5206\u3002\n\u4f8b\u5982,`${VAR#?}`\u6269\u5c55\u4e3a$VAR\u7684\u503c,\u5220\u9664\u7b2c\u4e00\u4e2a\u5b57\u7b26\u3002\u800c`${VAR#\\*/html}`\u6269\u5c55\u4e3a\u5305\u542b\u6240\u6709\u5b57\u7b26\u76f4\u5230\u5e76\u5305\u62ec`/html`\u7684\u6587\u672c,\u8fd9\u4e9b\u5185\u5bb9\u5c06\u4ece\u53d8\u91cf\u4e2d\u5220\u9664,\u751f\u6210\u8f93\u51fa`/website.com/html/`\u3002",
-        "hint": null,
-        "correctAnswer": [
-          "`/website.com/html/`"
-        ],
-        "options": [
-          "`/website.com/html/`",
-          "`/html/website.com/html/`",
-          "`/var/www/html/website.com/`",
-          "\u5c4f\u5e55\u4e0a\u4e0d\u4f1a\u6709\u4efb\u4f55\u8f93\u51fa\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b392c83e1efb671be9376b7c",
-        "question": "\u5982\u679c\u5728standard input\u4e2d\u63d0\u793a\u8f93\u5165\u6587\u672c,\u53ef\u4ee5\u901a\u8fc7\u4ec0\u4e48\u952e\u7ec4\u5408\u544a\u8bc9\u547d\u4ee4\u8f93\u5165\u5b8c\u6210?",
-        "answer": "Ctrl + D (Windows)\u6216Command + D (Mac)",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Ctrl + D (Windows)\u6216Command + D (Mac)"
-        ],
-        "options": [
-          "Ctrl + A (Windows)\u6216Command + A (Mac)",
-          "Ctrl + E (Windows)\u6216Command + E (Mac)",
-          "Ctrl + D (Windows)\u6216Command + D (Mac)",
-          "Ctrl + Z (Windows)\u6216Command + Z (Mac)"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "652d45552ffaa5b7a2305613",
-        "question": "\u4e3a\u4e86\u4f7fBash\u811a\u672c\u50cf\u64cd\u4f5c\u7cfb\u7edf\u547d\u4ee4\u4e00\u6837\u6267\u884c,\u5b83\u5e94\u8be5\u4ee5shebang line\u5f00\u5934\u3002\u8fd9\u662f\u4ec0\u4e48\u6837\u5b50?",
-        "answer": "`#!/usr/bin/env bash`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`#!/usr/bin/env bash`"
-        ],
-        "options": [
-          "`#!/usr/bin/env bash`",
-          "`~/usr/bin/env bash`",
-          "`'$!/usr/bin/env bash`",
-          "`#/usr/bin/env bash`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7a0497465dd84131f50c7000",
-        "question": "\u4ee5\u4e0bBash\u811a\u672c\u884c\u53ef\u80fd\u4f1a\u751f\u6210\u5982\u4e0b\u6240\u793a\u7684\u8f93\u51fa:\n```bash\nThe date is: Sun Mar 24 12:30:06 CST 2019!\n```",
-        "answer": "`echo \"The date is: $(date)!\"`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`echo \"The date is: $(date)!\"`"
-        ],
-        "options": [
-          "`echo \"The date is: !\"`",
-          "`echo \"The date is: date!\"`",
-          "`echo \"The date is: (date)!\"`",
-          "`echo \"The date is: $(date)!\"`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bb6d7b2839a945b6e1881a06",
-        "question": "\u5047\u8bbe\u5f53\u524d\u5de5\u4f5c\u76ee\u5f55\u662f\u60a8\u7684\u4e3b\u76ee\u5f55\u3002\u5982\u4f55\u8fd0\u884c\u4f4d\u4e8e\u4e3b\u76ee\u5f55\u4e2d\u7684\u811a\u672cdemo.sh?\u627e\u51fa\u4e09\u4e2a\u6b63\u786e\u7b54\u6848\u3002\n```bash\nA. /home/demo.sh\nB. ./demo.sh\nC. ~/demo.sh\nD. bash /home/demo.sh\nE. bash demo.sh\n```",
-        "answer": "B, C, E",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "B, C, E"
-        ],
-        "options": [
-          "B, C, E",
-          "A, B, C",
-          "C, D, E",
-          "B, D, E"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1f7da59b434913b094f796f0",
-        "question": "\u5982\u4f55\u83b7\u53d6\u6811\u72b6\u7ed3\u6784\u4e2d\u6240\u6709.html\u6587\u4ef6\u7684\u5217\u8868?",
-        "answer": "`find . -name \\*.html -print`",
-        "explanation": "`\u7b2c\u4e8c\u4e2a\u9009\u9879\u770b\u8d77\u6765\u4e0d\u9519,\u4f46\u5982\u679c\u5f53\u524d\u5de5\u4f5c\u76ee\u5f55\u4e2d\u6709\u4efb\u4f55.html\u6587\u4ef6,\\*\u4f1a\u88ab\u6269\u5c55\u3002`",
-        "hint": null,
-        "correctAnswer": [
-          "`find . -name \\*.html -print`"
-        ],
-        "options": [
-          "`find . -type html`",
-          "`find . -name *.html`",
-          "`find *.html`",
-          "`find . -name \\*.html -print`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3ed60c1ea6a91b17e18ce258",
-        "question": "out.txt\u4e2d\u4f1a\u6709\u4ec0\u4e48\u5185\u5bb9?\n```bash\ncat < in.txt > out.txt\n```",
-        "answer": "\u5b83\u4f1a\u662fin.txt\u7684\u5185\u5bb9\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u5b83\u4f1a\u662fin.txt\u7684\u5185\u5bb9\u3002"
-        ],
-        "options": [
-          "\u547d\u4ee4\u884c\u7684\u8f93\u51fa\u3002\u9ed8\u8ba4\u60c5\u51b5\u4e0b,STDIN\u6765\u81ea\u952e\u76d8\u3002",
-          "\u4ec0\u4e48\u90fd\u6ca1\u6709,\u56e0\u4e3a\u65e0\u6cd5\u4ece\u6587\u4ef6(in.txt)\u91cd\u5b9a\u5411\u5230\u53e6\u4e00\u4e2a\u6587\u4ef6(out.txt)\u3002\u53ea\u80fd\u4ece\u547d\u4ee4\u91cd\u5b9a\u5411\u5230\u6587\u4ef6\u3002",
-          "\u5b83\u4f1a\u662fin.txt\u7684\u5185\u5bb9\u3002",
-          "\u4ec0\u4e48\u90fd\u6ca1\u6709\u3002\u91cd\u5b9a\u5411\u4f1a\u521b\u5efa\u4e00\u4e2a\u65b0\u7684\u7a7a\u6587\u4ef6,\u4f46cat\u547d\u4ee4\u4e0d\u4f1a\u6709\u4efb\u4f55\u8f93\u51fa\u8fdb\u884c\u91cd\u5b9a\u5411\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "baeb5da7f54e6c78f2ecf552",
-        "question": "\u8fd9\u4e2abash\u8bed\u53e5\u7684\u4f5c\u7528\u662f\u4ec0\u4e48?\n```bash\n(( $a == $b ))\necho $?\n```",
-        "answer": "\u5b83\u6d4b\u8bd5\u53d8\u91cf`$a`\u548c`$b`\u7684\u503c\u662f\u5426\u76f8\u7b49\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u5b83\u6d4b\u8bd5\u53d8\u91cf`$a`\u548c`$b`\u7684\u503c\u662f\u5426\u76f8\u7b49\u3002"
-        ],
-        "options": [
-          "\u5b83\u5728`$a`\u548c`$b`\u7684\u503c\u4e4b\u95f4\u5faa\u73af\u3002",
-          "\u5b83\u6d4b\u8bd5\u53d8\u91cf`$a`\u548c`$b`\u7684\u503c\u662f\u5426\u76f8\u7b49\u3002",
-          "\u5982\u679c`$b`\u7684\u503c\u5927\u4e8e`$a`,\u5b83\u4f1a\u8fd4\u56de`$b`\u3002",
-          "\u5982\u679c`$a`\u7684\u503c\u5927\u4e8e`$b`,\u5b83\u4f1a\u8fd4\u56de`$a`\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "79fdcb5c0f7debd21a43cfc3",
-        "question": "\u5728case\u8bed\u53e5\u4e2d,\u60a8\u4f7f\u7528\u4ec0\u4e48\u6765\u544a\u8bc9Bash\u5b8c\u6210\u7279\u5b9a\u6d4b\u8bd5?",
-        "answer": "`; ;`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`; ;`"
-        ],
-        "options": [
-          "`; ;`",
-          "`: :`",
-          "`done`",
-          "`$$`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e7066b080319978750b2e7c2",
-        "question": "\u5728\u8fd9\u4e2a\u8bed\u53e5\u4e2d,\u661f\u53f7\u4ee3\u8868\u4ec0\u4e48?\n```bash\n#!/usr/bin/env bash\ncase $num in\n\t1)\n\techo \"one\"\n\t;;\n\t2)\n\techo \"two\"\n\t;;\n\t*)\n\techo \"a mystery\"\n\t;;\nesac\n```",
-        "answer": "\u4e00\u4e2a\u5339\u914d\u4efb\u4f55\u503c\u7684case,\u63d0\u4f9bdefault option,\u5982\u679c\u6ca1\u6709\u5176\u4ed6case\u6355\u83b7\u8be5\u503c",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u4e00\u4e2a\u5339\u914d\u4efb\u4f55\u503c\u7684case,\u63d0\u4f9bdefault option,\u5982\u679c\u6ca1\u6709\u5176\u4ed6case\u6355\u83b7\u8be5\u503c"
-        ],
-        "options": [
-          "\u4e00\u4e2a\u5339\u914d\u4efb\u4f55\u503c\u7684case,\u63d0\u4f9bdefault option,\u5982\u679c\u6ca1\u6709\u5176\u4ed6case\u6355\u83b7\u8be5\u503c",
-          "\u4e00\u4e2a\u4ec5\u5728\u661f\u53f7\u5b57\u7b26\u4f20\u9012\u5230\u811a\u672c\u65f6\u53d1\u751f\u7684case",
-          "\u6240\u6709\u5176\u4ed6case\u5408\u5e76\u5728\u4e00\u8d77\u7684\u64cd\u4f5c",
-          "\u9488\u5bf9\u4efb\u4f55\u8f93\u5165\u91c7\u53d6\u7684\u64cd\u4f5c,\u5373\u4f7f\u5b83\u7b26\u5408\u6307\u5b9a\u6761\u4ef6"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1e22b08515d16d3b38ac557f",
-        "question": "\u54ea\u4e2aBash\u811a\u672c\u53ef\u4ee5\u6b63\u786e\u521b\u5efa\u8fd9\u4e9b\u6587\u4ef6?",
-        "answer": "`touch file{1..10}.txt`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`touch file{1..10}.txt`"
-        ],
-        "options": [
-          "`touch file{1+10}.txt`",
-          "`touch file{1-10}.txt`",
-          "`touch file{1..10}.txt`",
-          "`touch file(1..10).txt`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8aa1e951e0f11f86a1a86452",
-        "question": "\u60a8\u4f1a\u68c0\u67e5\u54ea\u4e2a\u53d8\u91cf\u4ee5\u9a8c\u8bc1\u6700\u540e\u6267\u884c\u7684\u547d\u4ee4\u662f\u5426\u6210\u529f?",
-        "answer": "`$?`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`$?`"
-        ],
-        "options": [
-          "`$$`",
-          "`$?`",
-          "`$!`",
-          "`$@`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e94f5c04bd9c3acb4fd50b81",
-        "question": "\u8fd9\u4e2a\u811a\u672c\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\n#!/bin/bash\nfname=john\njohn=thomas\necho ${!fname}\n```",
-        "answer": "thomas",
-        "explanation": "[reference](https://unix.stackexchange.com/questions/41292/variable-substitution-with-an-exclamation-mark-in-bash)",
-        "hint": null,
-        "correctAnswer": [
-          "thomas"
-        ],
-        "options": [
-          "john",
-          "thomas",
-          "\u8bed\u6cd5\u9519\u8bef",
-          "\u7a7a\u767d"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9265fdee031c2d6a44c5ba24",
-        "question": "\u8fd9\u4e2a\u811a\u672c\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n![question](images/Q30/question.png)",
-        "answer": "`D` ![D](images/Q30/C.png); D",
-        "explanation": "\u4ee5\u4e0b\u662fQ.30\u7684\u6587\u672c\u7248\u672c:\n```bash\nll\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file1.txt\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file2.txt\n..\nll | sed -e 's,file,text,g'\n```\n```\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file1.file\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file2.file\n..\n```\n```\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file1.txt\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file2.txt\n..\n```\n```\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 text1.file\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 text2.file\n..\n```\n```\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 text1.txt\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 text2.txt\n..\n```",
-        "hint": null,
-        "correctAnswer": [
-          "`D` ![D](images/Q30/C.png)",
-          "D"
-        ],
-        "options": [
-          "`A` ![A](images/Q30/A.png)",
-          "`B` ![B](images/Q30/B.png)",
-          "`C` ![C](images/Q30/D.png)",
-          "`D` ![D](images/Q30/C.png)",
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseMany",
-        "attachments": [
+        "id": "21b43383e2a83ffb0f4b10a3",
+        "language": "ch",
+        "title": "Bash",
+        "description": "Seeded from bash/bash-quiz-ch.md",
+        "questions": [
           {
-            "id": "75846ad1e6743ca5aecd3d32",
-            "url": "images/Q30/question.png",
-            "type": "question"
+            "id": "b601be279b42634e993ee578",
+            "question": "\u4ee5\u4e0b\u4e09\u79cd\u65b9\u6cd5\u4e2d,\u54ea\u4e00\u79cd\u53ef\u4ee5\u9012\u5f52\u5730\u5c06\u7528\u6237\u4e3b\u76ee\u5f55\u4e2d\u7684\u540d\u4e3a\"photo dir\"\u7684\u76ee\u5f55\u590d\u5236\u5230 /backups?\n```bash\ncp -R \"~/photo dir\" /backups #method1\ncp -R ~\"/photo dir\" /backups #method2\ncp -R ~/\"photo dir\" /backups #method3\n```",
+            "answer": "\u53ea\u6709method 3\u4f1a\u5c06 `\"~/\"` \u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55,\u7136\u540e\u9644\u52a0\u5305\u542b\u7a7a\u683c\u7684\u76ee\u5f55\u540d\u79f0\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u53ea\u6709method 3\u4f1a\u5c06 `\"~/\"` \u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55,\u7136\u540e\u9644\u52a0\u5305\u542b\u7a7a\u683c\u7684\u76ee\u5f55\u540d\u79f0\u3002"
+            ],
+            "options": [
+              "\u53ea\u6709method 1\u4f1a\u5c06 `\"~/\"` \u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55,\u7136\u540e\u9644\u52a0\u5305\u542b\u7a7a\u683c\u7684\u76ee\u5f55\u540d\u79f0\u3002",
+              "\u53ea\u6709method 2\u4f1a\u5c06 `\"~/\"` \u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55,\u7136\u540e\u9644\u52a0\u5305\u542b\u7a7a\u683c\u7684\u76ee\u5f55\u540d\u79f0\u3002",
+              "\u53ea\u6709method 3\u4f1a\u5c06 `\"~/\"` \u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55,\u7136\u540e\u9644\u52a0\u5305\u542b\u7a7a\u683c\u7684\u76ee\u5f55\u540d\u79f0\u3002",
+              "\u4e09\u79cd\u65b9\u6cd5\u90fd\u4e0d\u4f1a\u5c55\u5f00\u4e3a\u7528\u6237\u7684\u4e3b\u76ee\u5f55\u3002\u53ea\u6709\u4f7f\u7528 `\"$HOME/photo dir\"` \u624d\u4f1a\u6210\u529f\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
           },
           {
-            "id": "5ce63158d4f432a533abf9d2",
-            "url": "images/Q30/A.png",
-            "type": "question"
+            "id": "53f81427d792ba1fed982938",
+            "question": "\u5982\u679c\u5728\u5f53\u524d\u76ee\u5f55\u4e2d\u8fd0\u884c script.sh,\u5b83\u4f1a\u5931\u8d25\u3002\u4e3a\u4ec0\u4e48?\n```bash\n$ ls -1\nBeach photo1.jpg\nPhoto1.jpg\nPhoto2.jpg\nScript.sh\n$ cat script.sh\nfor i in $(ls *.jpg); do\n\tmv $i ${i}.bak\ndone\n```",
+            "answer": "for\u5faa\u73af\u4f1a\u5728\u5355\u8bcd\u8fb9\u754c\u5904\u62c6\u5206,\u800cBeach photo1.jpg\u4e2d\u6709\u4e00\u4e2a\u7a7a\u683c\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "for\u5faa\u73af\u4f1a\u5728\u5355\u8bcd\u8fb9\u754c\u5904\u62c6\u5206,\u800cBeach photo1.jpg\u4e2d\u6709\u4e00\u4e2a\u7a7a\u683c\u3002"
+            ],
+            "options": [
+              "ls: cannot access nonexistentfile: No such file or directory",
+              "for\u5faa\u73af\u4f1a\u5728\u5355\u8bcd\u8fb9\u754c\u5904\u62c6\u5206,\u800cBeach photo1.jpg\u4e2d\u6709\u4e00\u4e2a\u7a7a\u683c\u3002",
+              "mv\u547d\u4ee4\u4f1a\u5931\u8d25,\u56e0\u4e3a\u5927\u62ec\u53f7\u662fBash\u4e2d\u7684\u7279\u6b8a\u5b57\u7b26,\u4e0d\u80fd\u7528\u4e8e\u6587\u4ef6\u540d\u3002",
+              "\u8fd0\u884cscript.sh\u4f1a\u6210\u529f,\u56e0\u4e3als\u547d\u4ee4\u4f1a\u6784\u5efa\u5f53\u524d\u76ee\u5f55\u4e2d\u7684\u6587\u4ef6\u5217\u8868,\u5e76\u901a\u8fc7for\u5faa\u73af\u91cd\u547d\u540d\u6587\u4ef6,\u6dfb\u52a0.bak\u6269\u5c55\u540d\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
           },
           {
-            "id": "995ef25be2cfcd6b0433bac5",
-            "url": "images/Q30/B.png",
-            "type": "question"
+            "id": "faeacf6e74b4765a0932f499",
+            "question": "\u8981\u5728subshell\u4e2d\u8fd0\u884c\u590d\u5236\u547d\u4ee4,\u5e94\u8be5\u4f7f\u7528\u54ea\u79cd\u8bed\u6cd5?",
+            "answer": "`( command )`",
+            "explanation": "[reference](https://en.wikiversity.org/wiki/Bash_programming/Subshells)\u3002Subshell\u662f\u7a0b\u5e8f\u5458\u6355\u83b7(\u901a\u5e38\u662f\u4e3a\u4e86\u5904\u7406)\u7a0b\u5e8f\u6216\u811a\u672c\u8f93\u51fa\u7684\u4e00\u79cd\u65b9\u5f0f\u3002\u8981\u5728subshell\u4e2d\u8fd0\u884c\u7684\u547d\u4ee4\u9700\u8981\u7528\u5355\u62ec\u53f7\u62ec\u8d77\u6765,\u5e76\u5728\u524d\u9762\u52a0\u4e0a\u7f8e\u5143\u7b26\u53f7:DIRCONTENTS=$(ls -l) echo ${DIRCONTENTS}",
+            "hint": null,
+            "correctAnswer": [
+              "`( command )`"
+            ],
+            "options": [
+              "`( command )`",
+              "`sh command`",
+              "`{ command; }`",
+              "`(( command ))`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
           },
           {
-            "id": "00213bc451ab30496eb08c94",
-            "url": "images/Q30/D.png",
-            "type": "question"
+            "id": "cf72ff0a60ad501384a5cbce",
+            "question": "\u4f7f\u7528\"awk\",\u4ee5\u4e0b\u547d\u4ee4\u5b57\u7b26\u4e32\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\necho \"1 2 3\" | awk '{for (i=1; i<=NF; i++) s=s+$i};END {print s}'\n```",
+            "answer": "6",
+            "explanation": "[reference](https://www.cyberciti.biz/faq/bash-scripting-using-awk/)\u3002AWK\u662f\u4e00\u79cd\u7f16\u7a0b\u8bed\u8a00,\u4e13\u4e3a\u5904\u7406\u57fa\u4e8e\u6587\u672c\u7684\u6570\u636e\u800c\u8bbe\u8ba1,\u65e0\u8bba\u662f\u6587\u4ef6\u4e2d\u7684\u6570\u636e\u8fd8\u662f\u6570\u636e\u6d41,\u6216\u8005\u901a\u8fc7shell pipes\u3002\u6362\u53e5\u8bdd\u8bf4,\u4f60\u53ef\u4ee5\u5c06awk\u4e0eshell scripts\u7ed3\u5408\u4f7f\u7528,\u6216\u8005\u76f4\u63a5\u5728shell prompt\u4e0b\u4f7f\u7528\u3002",
+            "hint": null,
+            "correctAnswer": [
+              "6"
+            ],
+            "options": [
+              "6",
+              "123",
+              "3",
+              "600"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
           },
           {
-            "id": "27df22de1e933872217e859a",
-            "url": "images/Q30/C.png",
-            "type": "question"
+            "id": "e8ba4154a2d7efdcee06ae98",
+            "question": "\u4ee5\u4e0b\u547d\u4ee4\u5c06\u5728\u6839\u6587\u4ef6\u7cfb\u7edf\u4e2d\u641c\u7d22\u540d\u4e3a\"finance.db\"\u7684\u6587\u4ef6\u3002\u5728\u6b64\u4e0a\u4e0b\u6587\u4e2d,\u54ea\u4e9b\u4fe1\u606f\u88ab\u53d1\u9001\u5230/dev/null?\n```bash\nfind / -name \"finance.db\" 1>results.txt 2>/dev/null\n```",
+            "answer": "\u53d1\u9001\u5230standard error\u7684\u4fe1\u606f,\u4f8b\u5982find\u547d\u4ee4\u8fd0\u884c\u65f6\u663e\u793a\u7684\u9519\u8bef",
+            "explanation": "[reference](https://www.cyberciti.biz/faq/how-to-redirect-standard-error-in-bash/)\u3002\u5c06stderr(standard error)\u91cd\u5b9a\u5411\u5230\u6587\u4ef6\u7684\u8bed\u6cd5:`command 2> errors.txt`\u3002",
+            "hint": null,
+            "correctAnswer": [
+              "\u53d1\u9001\u5230standard error\u7684\u4fe1\u606f,\u4f8b\u5982find\u547d\u4ee4\u8fd0\u884c\u65f6\u663e\u793a\u7684\u9519\u8bef"
+            ],
+            "options": [
+              "\u4e0d\u5339\u914dfinance.db\u7684\u6587\u4ef6\u540d",
+              "\u53d1\u9001\u5230standard error\u7684\u4fe1\u606f,\u4f8b\u5982find\u547d\u4ee4\u8fd0\u884c\u65f6\u663e\u793a\u7684\u9519\u8bef",
+              "\u5339\u914dfinance.db\u7684\u6587\u4ef6\u540d",
+              "\u53d1\u9001\u5230standard output\u7684\u4fe1\u606f,\u5373find\u547d\u4ee4\u627e\u5230\u7684\u6587\u4ef6\u8def\u5f84"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "617bdaa2eb6cde34436b2ba9",
+            "question": "\u8981\u6c38\u4e45\u5220\u9664\u540d\u4e3atextfile\u7684\u6587\u4ef6\u4e2d\u7684\u7a7a\u884c,\u53ef\u4ee5\u4f7f\u7528\u54ea\u4e2a\u547d\u4ee4?",
+            "answer": "`sed -i '/^$/d' textfile`",
+            "explanation": "[reference](https://www.gnu.org/software/sed/manual/sed.html#sed-regular-expressions)\nsed:sed\u662f\u4e00\u79cdstream editor,\u7528\u4e8e\u5bf9input stream\u6267\u884c\u57fa\u672c\u7684\u6587\u672c\u8f6c\u6362\u3002\n-i[SUFFIX]:\u6b64\u9009\u9879\u6307\u5b9a\u6587\u4ef6\u5c06\u5728\u539f\u5730\u7f16\u8f91\u3002\n'/^$/d':\u6b63\u5219\u8868\u8fbe\u5f0f\u4f4d\u4e8e//\u4e4b\u95f4\u3002^\u8868\u793a\u884c\u7684\u5f00\u5934,$\u8868\u793a\u884c\u7684\u7ed3\u5c3e\u3002^$\u8868\u793a\u5f00\u5934\u548c\u7ed3\u5c3e\u4e4b\u95f4\u6ca1\u6709\u4efb\u4f55\u5185\u5bb9\u3002\nd:\u5220\u9664pattern space;\u7acb\u5373\u5f00\u59cb\u4e0b\u4e00\u5faa\u73af\u3002\nWarning,\u4e0a\u8ff0\u793a\u4f8b\u5728Mac terminal\u4e0a\u7531\u4e8e\u4e0d\u540c\u7684UNIX flavours\u53ef\u80fd\u65e0\u6cd5\u5de5\u4f5c\u3002\u53ef\u4ee5\u901a\u8fc7\u6dfb\u52a0\u989d\u5916\u7684flag `-e`\u6216`--`\u6765\u4f7f\u5176\u5728Mac\u4e0a\u5de5\u4f5c(\u53c2\u8003[StackOverflow](https://stackoverflow.com/questions/4247068/sed-command-with-i-option-failing-on-mac-but-works-on-linux)):`sed -i -e '/^$/d' textfile.txt`",
+            "hint": null,
+            "correctAnswer": [
+              "`sed -i '/^$/d' textfile`"
+            ],
+            "options": [
+              "`sed -i '/^$/d' textfile`",
+              "`sed '/^$/d' textfile`",
+              "`cat textfile | sed '/^$/d`",
+              "`sed -i 's/^$//' textfile`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "88aafd86a4296c469de023fa",
+            "question": "\u5047\u8bbeuser1\u5b58\u5728,\u4ee5\u4e0b\u547d\u4ee4\u5b57\u7b26\u4e32\u7684\u7ed3\u679c\u662f\u4ec0\u4e48?\n```bash\nawk -F: '/user1/{print $1 \"-\" $3 \"-\" $6}' /etc/passwd\n```",
+            "answer": "\u5b83\u4f1a\u663e\u793auser1\u7684username\u3001UID\u548chome directory,\u7528\u8fde\u5b57\u7b26\u5206\u9694\u3002",
+            "explanation": "[reference](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)\u3002\u4f20\u7edf\u4e0a,/etc/passwd\u6587\u4ef6\u7528\u4e8e\u8bb0\u5f55\u6bcf\u4e2a\u6ce8\u518c\u7528\u6237\u7684\u4fe1\u606f,\u8fd9\u4e9b\u7528\u6237\u53ef\u4ee5\u8bbf\u95ee\u7cfb\u7edf\u3002/etc/passwd\u6587\u4ef6\u662f\u4e00\u4e2acolon-separated\u6587\u4ef6,\u5305\u542b\u4ee5\u4e0b\u4fe1\u606f:1-`Username`,2-`Password`,3-`User ID (UID)`,4-`Group ID (GID)`,5-`User ID Info (GECOS)`,6-`Home directory`,7-`Command/shell`",
+            "hint": null,
+            "correctAnswer": [
+              "\u5b83\u4f1a\u663e\u793auser1\u7684username\u3001UID\u548chome directory,\u7528\u8fde\u5b57\u7b26\u5206\u9694\u3002"
+            ],
+            "options": [
+              "\u5b83\u4f1a\u663e\u793auser1\u7684username\u3001UID\u548chome directory,\u7528\u5192\u53f7\u5206\u9694\u3002",
+              "\u5b83\u4f1a\u6253\u5370user1\u7684UID\u3001GID\u548chome directory,\u7528\u8fde\u5b57\u7b26\u5206\u9694\u3002",
+              "\u5b83\u4f1a\u6253\u5370user1\u7684UID\u3001comment\u548chome directory,\u7528\u8fde\u5b57\u7b26\u5206\u9694\u3002",
+              "\u5b83\u4f1a\u663e\u793auser1\u7684username\u3001UID\u548chome directory,\u7528\u8fde\u5b57\u7b26\u5206\u9694\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "f03502e85f5650de43a775a9",
+            "question": "\u5982\u679c\u5728Bash\u811a\u672c\u4e2d\u4f7f\u7528`\"set -e\"`\u4f1a\u53d1\u751f\u4ec0\u4e48?",
+            "answer": "\u5982\u679ccommand\u3001list of commands\u3001compound command\u6216\u53ef\u80fd\u7684pipeline\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002",
+            "explanation": "[reference](http://redsymbol.net/articles/unofficial-bash-strict-mode/)\u3002set -e\u9009\u9879\u6307\u793abash\u5982\u679c\u4efb\u4f55command [1]\u8fd4\u56de\u975e\u96f6exit status,\u5219\u7acb\u5373\u9000\u51fa\u3002\u4f60\u53ef\u80fd\u4e0d\u5e0c\u671b\u5728command-line shell\u4e2d\u8bbe\u7f6e\u6b64\u9009\u9879,\u4f46\u5728script\u4e2d\u5b83\u975e\u5e38\u6709\u7528\u3002\u5728\u6240\u6709\u5e7f\u6cdb\u4f7f\u7528\u7684general-purpose programming languages\u4e2d,\u672a\u5904\u7406\u7684runtime error\u2014\u2014\u65e0\u8bba\u662fJava\u4e2d\u629b\u51fa\u7684exception,\u8fd8\u662fC\u4e2d\u7684segmentation fault,\u6216\u8005Python\u4e2d\u7684syntax error\u2014\u2014\u90fd\u4f1a\u7acb\u5373\u505c\u6b62\u7a0b\u5e8f\u7684\u6267\u884c;\u540e\u7eed\u884c\u4e0d\u4f1a\u88ab\u6267\u884c\u3002",
+            "hint": null,
+            "correctAnswer": [
+              "\u5982\u679ccommand\u3001list of commands\u3001compound command\u6216\u53ef\u80fd\u7684pipeline\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002"
+            ],
+            "options": [
+              "\u5982\u679c\u51fd\u6570\u6216subshell\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002",
+              "\u5982\u679c\u6761\u4ef6\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002",
+              "\u5982\u679clocal\u3001declare\u6216typeset\u8d4b\u503c\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002",
+              "\u5982\u679ccommand\u3001list of commands\u3001compound command\u6216\u53ef\u80fd\u7684pipeline\u8fd4\u56de\u975e\u96f6status code,Bash\u5c06\u9000\u51fa\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "40e930d3c7ea04c2f16e8ce0",
+            "question": "**\\_** \u5173\u952e\u5b57\u4f1a\u6682\u505c\u811a\u672c\u4ee5\u4ecestandard input\u83b7\u53d6\u8f93\u5165\u3002",
+            "answer": "read",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "read"
+            ],
+            "options": [
+              "get",
+              "argument",
+              "read",
+              "input"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "03539568527585538bc62f6b",
+            "question": "\u5982\u679cfile.sql\u5305\u542b\u8981\u6267\u884c\u7684SQL\u8bed\u53e5,\u90a3\u4e48file.txt\u4e2d\u4f1a\u6709\u4ec0\u4e48\u5185\u5bb9?\n```bash\nmysql < file.sql > file.txt\n```",
+            "answer": "MySQL\u547d\u4ee4\u7684non-error output",
+            "explanation": "**Note**:`\u67e5\u770b\u4e0b\u9762\u7684\u95ee\u9898\u4ee5\u4e86\u89e3\u53d8\u4f53\u3002`",
+            "hint": null,
+            "correctAnswer": [
+              "MySQL\u547d\u4ee4\u7684non-error output"
+            ],
+            "options": [
+              "file.sql\u7684\u5185\u5bb9\u526f\u672c",
+              "\u8868\u793a\u8fd9\u662f\u65e0\u6548\u8bed\u6cd5\u7684\u9519\u8bef",
+              "MySQL\u547d\u4ee4\u7684error output",
+              "MySQL\u547d\u4ee4\u7684non-error output"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "de70fc408cd7f3dfde4d1c08",
+            "question": "\u5c4f\u5e55\u4e0a\u7684\u8f93\u51fa\u548cout.txt\u7684\u5185\u5bb9\u6709\u4ec0\u4e48\u533a\u522b?\n```bash\nmysql < file.sql > out.txt\n```",
+            "answer": "\u5c4f\u5e55\u4e0a\u6ca1\u6709\u8f93\u51fa,\u56e0\u4e3a\u5b83\u88ab\u91cd\u5b9a\u5411\u5230out.txt\u3002",
+            "explanation": "**Note**:`\u67e5\u770b\u4e0a\u9762\u7684\u95ee\u9898\u4ee5\u4e86\u89e3\u53d8\u4f53\u3002`",
+            "hint": null,
+            "correctAnswer": [
+              "\u5c4f\u5e55\u4e0a\u6ca1\u6709\u8f93\u51fa,\u56e0\u4e3a\u5b83\u88ab\u91cd\u5b9a\u5411\u5230out.txt\u3002"
+            ],
+            "options": [
+              "\u5c4f\u5e55\u4e0a\u7684\u8f93\u51fa\u4e0eout.txt\u5b8c\u5168\u76f8\u540c",
+              "\u5c4f\u5e55\u4e0a\u6ca1\u6709\u8f93\u51fa,\u56e0\u4e3a\u5b83\u88ab\u91cd\u5b9a\u5411\u5230out.txt\u3002",
+              "\u5c4f\u5e55\u4e0a\u7684\u8f93\u51fa\u4e0eout.txt\u5b8c\u5168\u76f8\u540c,\u4f46\u5e26\u6709\u884c\u53f7\u3002",
+              "out.txt\u6587\u4ef6\u5c06\u4fdd\u5b58STDERR,\u800cSTDOUT\u5c06\u663e\u793a\u5728\u5c4f\u5e55\u4e0a\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "dbf7c974db6c7db3d3d86784",
+            "question": "SUID\u6216setuid\u5982\u4f55\u5f71\u54cd\u53ef\u6267\u884c\u547d\u4ee4?",
+            "answer": "\u5f53\u547d\u4ee4\u88ab\u6267\u884c\u65f6,\u5176running privileges\u4f1a\u63d0\u5347\u5230\u547d\u4ee4\u7684user owner\u3002",
+            "explanation": "[reference](https://en.wikipedia.org/wiki/Setuid#:~:text=The%20Linux%20and%20Unix%20access,to%20change%20behaviour%20in%20directories.)\u3002Linux\u548cUnix\u7684access rights flags setuid\u548csetgid(\u5206\u522b\u662fset user identity\u548cset group identity\u7684\u7f29\u5199)[1]\u5141\u8bb8\u7528\u6237\u4ee5\u53ef\u6267\u884c\u6587\u4ef6owner\u6216group\u7684file system permissions\u8fd0\u884c\u53ef\u6267\u884c\u6587\u4ef6,\u5e76\u5728directories\u4e2d\u66f4\u6539behavior\u3002",
+            "hint": null,
+            "correctAnswer": [
+              "\u5f53\u547d\u4ee4\u88ab\u6267\u884c\u65f6,\u5176running privileges\u4f1a\u63d0\u5347\u5230\u547d\u4ee4\u7684user owner\u3002"
+            ],
+            "options": [
+              "\u5f53\u547d\u4ee4\u521b\u5efa\u6587\u4ef6\u65f6,\u8fd9\u4e9b\u6587\u4ef6\u5c06\u5f52\u547d\u4ee4\u7684group owner\u6240\u6709\u3002",
+              "SUID bit\u5141\u8bb8\u4efb\u4f55\u4eba\u6267\u884c\u547d\u4ee4,\u65e0\u8bba\u8bbe\u7f6e\u4e86\u4ec0\u4e48\u5176\u4ed6permissions\u3002",
+              "\u5f53\u547d\u4ee4\u88ab\u6267\u884c\u65f6,\u5176running privileges\u4f1a\u63d0\u5347\u5230\u547d\u4ee4\u7684user owner\u3002",
+              "\u5f53\u547d\u4ee4\u88ab\u6267\u884c\u65f6,\u5176running privileges\u4f1a\u63d0\u5347\u5230\u547d\u4ee4\u7684group owner\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "a07adca6c4fc37bf12f81290",
+            "question": "\u8981\u4ece\u540d\u4e3atextfile\u7684\u6587\u4ef6\u4e2d\u63d0\u53d6\u7b2c\u4e00\u5217\u7684\u6587\u672c,\u53ef\u4ee5\u4f7f\u7528\u54ea\u4e2a\u547d\u4ee4?",
+            "answer": "`cat textfile | awk '{print $1}'`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`cat textfile | awk '{print $1}'`"
+            ],
+            "options": [
+              "`cat {$1,textfile}`",
+              "`cat textfile | awk [print $1]`",
+              "`cat textfile | awk '{print $1}'`",
+              "`awk textfile {print $1}`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "451f597188b5c0e5405b97e4",
+            "question": "\u8c03\u51faBash history search\u7684\u952e\u76d8\u5feb\u6377\u952e\u662f\u4ec0\u4e48?\n```bash\n(reverse-i-search)`':\n```",
+            "answer": "Ctrl + R",
+            "explanation": "Note:\u5728Mac\u4e0a,\u5b83\u4f1a\u663e\u793a`bck-i-search:`\u800c\u4e0d\u662f`(reverse-i-search)`\u3002",
+            "hint": null,
+            "correctAnswer": [
+              "Ctrl + R"
+            ],
+            "options": [
+              "Esc + R",
+              "Ctrl + H",
+              "Ctrl + R",
+              "Alt + R"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "31daabd79badab3e5bafee40",
+            "question": "\u54ea\u4e2a\u7b97\u672f\u8868\u8fbe\u5f0f\u4f1a\u7ed9\u51fa\u6700\u7cbe\u786e\u7684\u7b54\u6848?",
+            "answer": "`var=$(echo 'scale=2; 10 / 8' | bc)`",
+            "explanation": "[reference](https://www.geeksforgeeks.org/bc-command-linux-examples/)\u3002bc\u547d\u4ee4\u7528\u4e8ecommand line calculator\u3002\u5b83\u7c7b\u4f3c\u4e8ebasic calculator,\u53ef\u4ee5\u7528\u6765\u8fdb\u884c\u57fa\u672c\u7684\u6570\u5b66\u8ba1\u7b97\u3002\u5e26\u6709\u4e24\u4f4dprecision\u7684division\u5c06\u4f20\u9012\u7ed9`bc`,\u8fdb\u884c\u8ba1\u7b97,\u5e76\u5206\u914d\u7ed9\u53d8\u91cf\u3002",
+            "hint": null,
+            "correctAnswer": [
+              "`var=$(echo 'scale=2; 10 / 8' | bc)`"
+            ],
+            "options": [
+              "`var=$( expr 10 / 8 )`",
+              "`(( var= 10 /8 ))`",
+              "`var=$(( 10 / 8 ))`",
+              "`var=$(echo 'scale=2; 10 / 8' | bc)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "6b9bce464f1579dde5cdfbcb",
+            "question": "\u6b64\u811a\u672c\u7684\u7ed3\u679c\u662f\u4ec0\u4e48?\n```bash\ntxt=Penguins\n[[ $txt =~ [a-z]{8} ]]; echo $?\n```",
+            "answer": "1,\u8868\u793a'false',\u56e0\u4e3a\u53d8\u91cf\"txt\"\u4e0d\u5305\u542b\u516b\u4e2a\u4ecb\u4e8ea\u548cz\u4e4b\u95f4\u7684\u5c0f\u5199\u5b57\u6bcd",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "1,\u8868\u793a'false',\u56e0\u4e3a\u53d8\u91cf\"txt\"\u4e0d\u5305\u542b\u516b\u4e2a\u4ecb\u4e8ea\u548cz\u4e4b\u95f4\u7684\u5c0f\u5199\u5b57\u6bcd"
+            ],
+            "options": [
+              "0,\u8868\u793a'true',\u56e0\u4e3a\u53d8\u91cf\"txt\"\u5305\u542b\u516b\u4e2a\u5b57\u6bcd",
+              "0,\u8868\u793a'true',\u56e0\u4e3a\u6bcf\u4e2a\u4eba\u90fd\u559c\u6b22penguins!",
+              "1,\u8868\u793a'false',\u56e0\u4e3a\u53d8\u91cf\"txt\"\u957f\u5ea6\u8d85\u8fc7\u516b\u4e2a\u5b57\u7b26",
+              "1,\u8868\u793a'false',\u56e0\u4e3a\u53d8\u91cf\"txt\"\u4e0d\u5305\u542b\u516b\u4e2a\u4ecb\u4e8ea\u548cz\u4e4b\u95f4\u7684\u5c0f\u5199\u5b57\u6bcd"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "feb8822d15701c386a39d824",
+            "question": "\u5982\u4f55\u5c06Bash shell prompt\u66f4\u6539\u4e3a\u4ee5\u4e0b\u5185\u5bb9?\n```bash\nHAL>\n```",
+            "answer": "`export PS1=\"HAL>\"`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`export PS1=\"HAL>\"`"
+            ],
+            "options": [
+              "`SHELL=\"HAL\\>\"`",
+              "`SHELL=\"HAL>\"`",
+              "`export PS1=\"HAL>\"`",
+              "`PS1=\"HAL\\>\"`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "cf73ca4c1670705a9f278380",
+            "question": "\u4ee5\u4e0b\u4ee3\u7801\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\nVAR=\"/var/www/html/website.com/html/\"\necho \"${VAR#*/html}\"\n```",
+            "answer": "`/website.com/html/`",
+            "explanation": "[reference]()\n\u6839\u636ePOSIX shell specification:`${parameter#[word]}`\u3002Remove Smallest Prefix Pattern\u3002word\u5c06\u88abexpanded\u4ee5\u751f\u6210\u4e00\u4e2apattern\u3002parameter expansion\u5c06\u5bfc\u81f4parameter,\u5220\u9664\u4e0epattern\u5339\u914d\u7684\u6700\u5c0fprefix\u90e8\u5206\u3002\n\u4f8b\u5982,`${VAR#?}`\u6269\u5c55\u4e3a$VAR\u7684\u503c,\u5220\u9664\u7b2c\u4e00\u4e2a\u5b57\u7b26\u3002\u800c`${VAR#\\*/html}`\u6269\u5c55\u4e3a\u5305\u542b\u6240\u6709\u5b57\u7b26\u76f4\u5230\u5e76\u5305\u62ec`/html`\u7684\u6587\u672c,\u8fd9\u4e9b\u5185\u5bb9\u5c06\u4ece\u53d8\u91cf\u4e2d\u5220\u9664,\u751f\u6210\u8f93\u51fa`/website.com/html/`\u3002",
+            "hint": null,
+            "correctAnswer": [
+              "`/website.com/html/`"
+            ],
+            "options": [
+              "`/website.com/html/`",
+              "`/html/website.com/html/`",
+              "`/var/www/html/website.com/`",
+              "\u5c4f\u5e55\u4e0a\u4e0d\u4f1a\u6709\u4efb\u4f55\u8f93\u51fa\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "b392c83e1efb671be9376b7c",
+            "question": "\u5982\u679c\u5728standard input\u4e2d\u63d0\u793a\u8f93\u5165\u6587\u672c,\u53ef\u4ee5\u901a\u8fc7\u4ec0\u4e48\u952e\u7ec4\u5408\u544a\u8bc9\u547d\u4ee4\u8f93\u5165\u5b8c\u6210?",
+            "answer": "Ctrl + D (Windows)\u6216Command + D (Mac)",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Ctrl + D (Windows)\u6216Command + D (Mac)"
+            ],
+            "options": [
+              "Ctrl + A (Windows)\u6216Command + A (Mac)",
+              "Ctrl + E (Windows)\u6216Command + E (Mac)",
+              "Ctrl + D (Windows)\u6216Command + D (Mac)",
+              "Ctrl + Z (Windows)\u6216Command + Z (Mac)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "652d45552ffaa5b7a2305613",
+            "question": "\u4e3a\u4e86\u4f7fBash\u811a\u672c\u50cf\u64cd\u4f5c\u7cfb\u7edf\u547d\u4ee4\u4e00\u6837\u6267\u884c,\u5b83\u5e94\u8be5\u4ee5shebang line\u5f00\u5934\u3002\u8fd9\u662f\u4ec0\u4e48\u6837\u5b50?",
+            "answer": "`#!/usr/bin/env bash`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`#!/usr/bin/env bash`"
+            ],
+            "options": [
+              "`#!/usr/bin/env bash`",
+              "`~/usr/bin/env bash`",
+              "`'$!/usr/bin/env bash`",
+              "`#/usr/bin/env bash`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "7a0497465dd84131f50c7000",
+            "question": "\u4ee5\u4e0bBash\u811a\u672c\u884c\u53ef\u80fd\u4f1a\u751f\u6210\u5982\u4e0b\u6240\u793a\u7684\u8f93\u51fa:\n```bash\nThe date is: Sun Mar 24 12:30:06 CST 2019!\n```",
+            "answer": "`echo \"The date is: $(date)!\"`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`echo \"The date is: $(date)!\"`"
+            ],
+            "options": [
+              "`echo \"The date is: !\"`",
+              "`echo \"The date is: date!\"`",
+              "`echo \"The date is: (date)!\"`",
+              "`echo \"The date is: $(date)!\"`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "bb6d7b2839a945b6e1881a06",
+            "question": "\u5047\u8bbe\u5f53\u524d\u5de5\u4f5c\u76ee\u5f55\u662f\u60a8\u7684\u4e3b\u76ee\u5f55\u3002\u5982\u4f55\u8fd0\u884c\u4f4d\u4e8e\u4e3b\u76ee\u5f55\u4e2d\u7684\u811a\u672cdemo.sh?\u627e\u51fa\u4e09\u4e2a\u6b63\u786e\u7b54\u6848\u3002\n```bash\nA. /home/demo.sh\nB. ./demo.sh\nC. ~/demo.sh\nD. bash /home/demo.sh\nE. bash demo.sh\n```",
+            "answer": "B, C, E",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "B, C, E"
+            ],
+            "options": [
+              "B, C, E",
+              "A, B, C",
+              "C, D, E",
+              "B, D, E"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "1f7da59b434913b094f796f0",
+            "question": "\u5982\u4f55\u83b7\u53d6\u6811\u72b6\u7ed3\u6784\u4e2d\u6240\u6709.html\u6587\u4ef6\u7684\u5217\u8868?",
+            "answer": "`find . -name \\*.html -print`",
+            "explanation": "`\u7b2c\u4e8c\u4e2a\u9009\u9879\u770b\u8d77\u6765\u4e0d\u9519,\u4f46\u5982\u679c\u5f53\u524d\u5de5\u4f5c\u76ee\u5f55\u4e2d\u6709\u4efb\u4f55.html\u6587\u4ef6,\\*\u4f1a\u88ab\u6269\u5c55\u3002`",
+            "hint": null,
+            "correctAnswer": [
+              "`find . -name \\*.html -print`"
+            ],
+            "options": [
+              "`find . -type html`",
+              "`find . -name *.html`",
+              "`find *.html`",
+              "`find . -name \\*.html -print`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "3ed60c1ea6a91b17e18ce258",
+            "question": "out.txt\u4e2d\u4f1a\u6709\u4ec0\u4e48\u5185\u5bb9?\n```bash\ncat < in.txt > out.txt\n```",
+            "answer": "\u5b83\u4f1a\u662fin.txt\u7684\u5185\u5bb9\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u5b83\u4f1a\u662fin.txt\u7684\u5185\u5bb9\u3002"
+            ],
+            "options": [
+              "\u547d\u4ee4\u884c\u7684\u8f93\u51fa\u3002\u9ed8\u8ba4\u60c5\u51b5\u4e0b,STDIN\u6765\u81ea\u952e\u76d8\u3002",
+              "\u4ec0\u4e48\u90fd\u6ca1\u6709,\u56e0\u4e3a\u65e0\u6cd5\u4ece\u6587\u4ef6(in.txt)\u91cd\u5b9a\u5411\u5230\u53e6\u4e00\u4e2a\u6587\u4ef6(out.txt)\u3002\u53ea\u80fd\u4ece\u547d\u4ee4\u91cd\u5b9a\u5411\u5230\u6587\u4ef6\u3002",
+              "\u5b83\u4f1a\u662fin.txt\u7684\u5185\u5bb9\u3002",
+              "\u4ec0\u4e48\u90fd\u6ca1\u6709\u3002\u91cd\u5b9a\u5411\u4f1a\u521b\u5efa\u4e00\u4e2a\u65b0\u7684\u7a7a\u6587\u4ef6,\u4f46cat\u547d\u4ee4\u4e0d\u4f1a\u6709\u4efb\u4f55\u8f93\u51fa\u8fdb\u884c\u91cd\u5b9a\u5411\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "baeb5da7f54e6c78f2ecf552",
+            "question": "\u8fd9\u4e2abash\u8bed\u53e5\u7684\u4f5c\u7528\u662f\u4ec0\u4e48?\n```bash\n(( $a == $b ))\necho $?\n```",
+            "answer": "\u5b83\u6d4b\u8bd5\u53d8\u91cf`$a`\u548c`$b`\u7684\u503c\u662f\u5426\u76f8\u7b49\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u5b83\u6d4b\u8bd5\u53d8\u91cf`$a`\u548c`$b`\u7684\u503c\u662f\u5426\u76f8\u7b49\u3002"
+            ],
+            "options": [
+              "\u5b83\u5728`$a`\u548c`$b`\u7684\u503c\u4e4b\u95f4\u5faa\u73af\u3002",
+              "\u5b83\u6d4b\u8bd5\u53d8\u91cf`$a`\u548c`$b`\u7684\u503c\u662f\u5426\u76f8\u7b49\u3002",
+              "\u5982\u679c`$b`\u7684\u503c\u5927\u4e8e`$a`,\u5b83\u4f1a\u8fd4\u56de`$b`\u3002",
+              "\u5982\u679c`$a`\u7684\u503c\u5927\u4e8e`$b`,\u5b83\u4f1a\u8fd4\u56de`$a`\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "79fdcb5c0f7debd21a43cfc3",
+            "question": "\u5728case\u8bed\u53e5\u4e2d,\u60a8\u4f7f\u7528\u4ec0\u4e48\u6765\u544a\u8bc9Bash\u5b8c\u6210\u7279\u5b9a\u6d4b\u8bd5?",
+            "answer": "`; ;`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`; ;`"
+            ],
+            "options": [
+              "`; ;`",
+              "`: :`",
+              "`done`",
+              "`$$`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "e7066b080319978750b2e7c2",
+            "question": "\u5728\u8fd9\u4e2a\u8bed\u53e5\u4e2d,\u661f\u53f7\u4ee3\u8868\u4ec0\u4e48?\n```bash\n#!/usr/bin/env bash\ncase $num in\n\t1)\n\techo \"one\"\n\t;;\n\t2)\n\techo \"two\"\n\t;;\n\t*)\n\techo \"a mystery\"\n\t;;\nesac\n```",
+            "answer": "\u4e00\u4e2a\u5339\u914d\u4efb\u4f55\u503c\u7684case,\u63d0\u4f9bdefault option,\u5982\u679c\u6ca1\u6709\u5176\u4ed6case\u6355\u83b7\u8be5\u503c",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u4e00\u4e2a\u5339\u914d\u4efb\u4f55\u503c\u7684case,\u63d0\u4f9bdefault option,\u5982\u679c\u6ca1\u6709\u5176\u4ed6case\u6355\u83b7\u8be5\u503c"
+            ],
+            "options": [
+              "\u4e00\u4e2a\u5339\u914d\u4efb\u4f55\u503c\u7684case,\u63d0\u4f9bdefault option,\u5982\u679c\u6ca1\u6709\u5176\u4ed6case\u6355\u83b7\u8be5\u503c",
+              "\u4e00\u4e2a\u4ec5\u5728\u661f\u53f7\u5b57\u7b26\u4f20\u9012\u5230\u811a\u672c\u65f6\u53d1\u751f\u7684case",
+              "\u6240\u6709\u5176\u4ed6case\u5408\u5e76\u5728\u4e00\u8d77\u7684\u64cd\u4f5c",
+              "\u9488\u5bf9\u4efb\u4f55\u8f93\u5165\u91c7\u53d6\u7684\u64cd\u4f5c,\u5373\u4f7f\u5b83\u7b26\u5408\u6307\u5b9a\u6761\u4ef6"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "1e22b08515d16d3b38ac557f",
+            "question": "\u54ea\u4e2aBash\u811a\u672c\u53ef\u4ee5\u6b63\u786e\u521b\u5efa\u8fd9\u4e9b\u6587\u4ef6?",
+            "answer": "`touch file{1..10}.txt`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`touch file{1..10}.txt`"
+            ],
+            "options": [
+              "`touch file{1+10}.txt`",
+              "`touch file{1-10}.txt`",
+              "`touch file{1..10}.txt`",
+              "`touch file(1..10).txt`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "8aa1e951e0f11f86a1a86452",
+            "question": "\u60a8\u4f1a\u68c0\u67e5\u54ea\u4e2a\u53d8\u91cf\u4ee5\u9a8c\u8bc1\u6700\u540e\u6267\u884c\u7684\u547d\u4ee4\u662f\u5426\u6210\u529f?",
+            "answer": "`$?`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`$?`"
+            ],
+            "options": [
+              "`$$`",
+              "`$?`",
+              "`$!`",
+              "`$@`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "e94f5c04bd9c3acb4fd50b81",
+            "question": "\u8fd9\u4e2a\u811a\u672c\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\n#!/bin/bash\nfname=john\njohn=thomas\necho ${!fname}\n```",
+            "answer": "thomas",
+            "explanation": "[reference](https://unix.stackexchange.com/questions/41292/variable-substitution-with-an-exclamation-mark-in-bash)",
+            "hint": null,
+            "correctAnswer": [
+              "thomas"
+            ],
+            "options": [
+              "john",
+              "thomas",
+              "\u8bed\u6cd5\u9519\u8bef",
+              "\u7a7a\u767d"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "9265fdee031c2d6a44c5ba24",
+            "question": "\u8fd9\u4e2a\u811a\u672c\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n![question](images/Q30/question.png)",
+            "answer": "`D` ![D](images/Q30/C.png); D",
+            "explanation": "\u4ee5\u4e0b\u662fQ.30\u7684\u6587\u672c\u7248\u672c:\n```bash\nll\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file1.txt\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file2.txt\n..\nll | sed -e 's,file,text,g'\n```\n```\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file1.file\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file2.file\n..\n```\n```\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file1.txt\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 file2.txt\n..\n```\n```\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 text1.file\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 text2.file\n..\n```\n```\n-rw-r--r-- 1 frankmolev staff 374   Jun 3 19:30 .\n-rw-r--r-- 1 frankmolev staff 1666  Jun 3 19:30 ..\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 text1.txt\n-rw-r--r-- 1 frankmolev staff 0     Jun 3 19:30 text2.txt\n..\n```",
+            "hint": null,
+            "correctAnswer": [
+              "`D` ![D](images/Q30/C.png)",
+              "D"
+            ],
+            "options": [
+              "`A` ![A](images/Q30/A.png)",
+              "`B` ![B](images/Q30/B.png)",
+              "`C` ![C](images/Q30/D.png)",
+              "`D` ![D](images/Q30/C.png)",
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseMany",
+            "attachments": [
+              {
+                "id": "75846ad1e6743ca5aecd3d32",
+                "url": "~/bash/images/Q30/question.png",
+                "type": "question"
+              },
+              {
+                "id": "5ce63158d4f432a533abf9d2",
+                "url": "~/bash/images/Q30/A.png",
+                "type": "question"
+              },
+              {
+                "id": "995ef25be2cfcd6b0433bac5",
+                "url": "~/bash/images/Q30/B.png",
+                "type": "question"
+              },
+              {
+                "id": "00213bc451ab30496eb08c94",
+                "url": "~/bash/images/Q30/D.png",
+                "type": "question"
+              },
+              {
+                "id": "27df22de1e933872217e859a",
+                "url": "~/bash/images/Q30/C.png",
+                "type": "question"
+              }
+            ],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "bcf114cb488c328eefd79221",
+            "question": "\u5728\u76ee\u5f55\u4e2d\u641c\u7d22\u6587\u4ef6,\u8fd9\u4e24\u4e2afind\u547d\u4ee4\u6709\u4ec0\u4e48\u4e0d\u540c?\n```bash\nA. find . -name '%text%'\nB. find . -name '*text*'\n```",
+            "answer": "A\u4f1a\u641c\u7d22\u540d\u79f0\u4e0e`'%text%'`\u5b8c\u5168\u5339\u914d\u7684\u6240\u6709\u6587\u4ef6,\u800cB\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"text\"\u7684\u6240\u6709\u6587\u4ef6\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "A\u4f1a\u641c\u7d22\u540d\u79f0\u4e0e`'%text%'`\u5b8c\u5168\u5339\u914d\u7684\u6240\u6709\u6587\u4ef6,\u800cB\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"text\"\u7684\u6240\u6709\u6587\u4ef6\u3002"
+            ],
+            "options": [
+              "A\u4f1a\u641c\u7d22\u540d\u79f0\u4e0e`'%text%'`\u5b8c\u5168\u5339\u914d\u7684\u6240\u6709\u6587\u4ef6,\u800cB\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"text\"\u7684\u6240\u6709\u6587\u4ef6\u3002",
+              "A\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"%text%\"\u7684\u6240\u6709\u6587\u4ef6,\u800cB\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"text\"\u7684\u6240\u6709\u6587\u4ef6\u3002",
+              "A\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"text\"\u7684\u6240\u6709\u6587\u4ef6,\u800cB\u4f1a\u641c\u7d22\u540d\u79f0\u4e0e`\"*text*\"`\u5b8c\u5168\u5339\u914d\u7684\u6240\u6709\u6587\u4ef6\u3002",
+              "A\u548cB\u90fd\u4f1a\u4ea7\u751f\u76f8\u540c\u7684\u7ed3\u679c\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "8d3ce5101995a01721201f5c",
+            "question": "\u4ec0\u4e48\u662fSTDOUT?",
+            "answer": "standard output\u7684\u9996\u5b57\u6bcd\u7f29\u5199",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "standard output\u7684\u9996\u5b57\u6bcd\u7f29\u5199"
+            ],
+            "options": [
+              "standard output\u7684\u9996\u5b57\u6bcd\u7f29\u5199",
+              "\u7528\u4e8e\u63a5\u6536input\u7684Linux\u7cfb\u7edf",
+              "standard output\u7684\u9996\u5b57\u6bcd\u7f29\u5199",
+              "\u7528\u4e8e\u63a5\u6536output\u7684Linux\u7cfb\u7edf"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "c5a2bd9b7506d272a27ee499",
+            "question": "/etc/shadow\u4e2d\u7684\u5bc6\u7801\u5b58\u50a8\u4f4d\u7f6e\u662f\u4ec0\u4e48?",
+            "answer": "hashed",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "hashed"
+            ],
+            "options": [
+              "hashed",
+              "encrypted",
+              "hashed and salted",
+              "plain text"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "b9e7b761a99869004da58e68",
+            "question": "\u54ea\u4e2astatement\u63cf\u8ff0\u4e86\u6b64\u4ee3\u7801?\n```bash\n#!/bin/bash\necho \"1=$1\"\necho \"2=$2\"\n```",
+            "answer": "$1\u548c$2\u662fpositional parameters\u4f20\u9012\u7ed9script\u3002",
+            "explanation": "[reference](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html)",
+            "hint": null,
+            "correctAnswer": [
+              "$1\u548c$2\u662fpositional parameters\u4f20\u9012\u7ed9script\u3002"
+            ],
+            "options": [
+              "\u53d8\u91cf\u662f\u73af\u5883\u53d8\u91cf,\u901a\u8fc7export\u4f20\u9012\u7ed9script\u3002",
+              "$1\u548c$2\u662fpositional parameters\u4f20\u9012\u7ed9script\u3002",
+              "$1\u662fscript\u7684\u7b2c\u4e00\u884c,$2\u662f\u7b2c\u4e8c\u884c\u3002",
+              "$1\u662f\u7b2c\u4e00\u4e2a\u8fdb\u7a0b\u7684process ID,$2\u662f\u7b2c\u4e8c\u4e2a\u8fdb\u7a0b\u7684process ID\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "8de801d0048812a41ac9de6b",
+            "question": "\u811a\u672c\u53ef\u4ee5\u4eceuser\u63a5\u6536input\u7684\u65b9\u5f0f\u5305\u62ec\\_\\_\\_\\_\\_.",
+            "answer": "\u4ee5\u4e0a\u6240\u6709\u65b9\u5f0f",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u4ee5\u4e0a\u6240\u6709\u65b9\u5f0f"
+            ],
+            "options": [
+              "\u4f7f\u7528arguments\u4f20\u9012\u7ed9script",
+              "prompting user\u4ee5interactively\u8f93\u5165data",
+              "\u4ecefiles\u8bfb\u53d6",
+              "\u4ee5\u4e0a\u6240\u6709\u65b9\u5f0f"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "20a43bd067122fa61908de00",
+            "question": "\u8fd9\u4e2aexpression\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\necho \"$(( 4 * 5 + 3 / 2 ))\"\n```",
+            "answer": "21.5",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "21.5"
+            ],
+            "options": [
+              "11.5",
+              "21",
+              "21.5",
+              "11"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "d4aabaf7682fa340205e3951",
+            "question": "\u54ea\u4e2astatement\u7528\u4e8e\u544a\u8bc9Bash\u6d4b\u8bd5\u53c2\u6570\u7684\u503c\u5e76\u8fd0\u884c\u4e0d\u540c\u7684statement\u5757\u53d6\u51b3\u4e8eparameter\u7684\u503c?",
+            "answer": "`case`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`case`"
+            ],
+            "options": [
+              "`for`",
+              "`while`",
+              "`case`",
+              "`until`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "b430b1d242622d14dc7509ec",
+            "question": "stdout\u548cstderr\u662f\u4ee5\u4e0b\u54ea\u4e2a\u7684\u4f8b\u5b50?",
+            "answer": "output streams",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "output streams"
+            ],
+            "options": [
+              "text files",
+              "email files",
+              "output streams",
+              "configuration files"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "52c54d5c0c6d1869de567be5",
+            "question": "\u54ea\u4e2acommand\u641c\u7d22current directory\u548c\u6240\u6709subdirectories\u4e2d\u6240\u6709\u540d\u4e3asales.db\u7684files?",
+            "answer": "`find . -name sales.db`",
+            "explanation": "\u6ce8\u610f:\u4e24\u4e2a\u6b63\u786e\u7b54\u6848\u7684\u9009\u9879\u770b\u8d77\u6765\u76f8\u540c,\u8fd9\u53ef\u80fd\u662f\u539f\u59cb\u95ee\u9898\u7684\u6253\u5b57\u9519\u8bef\u3002",
+            "hint": null,
+            "correctAnswer": [
+              "`find . -name sales.db`"
+            ],
+            "options": [
+              "`find . -name sales.db`",
+              "`find . -name sales.db`",
+              "`find . -db sales.db`",
+              "`find . -file sales.db`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "48fa9e27c550d72254a17aaf",
+            "question": "\u5f53\u5c06output redirected\u5230files\u65f6,\u5b58\u5728\u8fd9\u4e9b\u64cd\u4f5c\u7b26 > \u548c >>\u3002\u5b83\u4eec\u6709\u4ec0\u4e48\u4e0d\u540c?",
+            "answer": "> \u8986\u76d6\u73b0\u6709file; >> \u8ffd\u52a0\u5230\u73b0\u6709file\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "> \u8986\u76d6\u73b0\u6709file; >> \u8ffd\u52a0\u5230\u73b0\u6709file\u3002"
+            ],
+            "options": [
+              "> \u5c06output\u5199\u5165file; >> \u5c06output\u53d1\u9001\u5230STDOUT\u3002",
+              "> \u5c06output\u53d1\u9001\u5230STDOUT; >> \u5c06output\u5199\u5165file\u3002",
+              "> \u8986\u76d6\u73b0\u6709file; >> \u8ffd\u52a0\u5230\u73b0\u6709file\u3002",
+              "> \u521b\u5efa\u65b0file; >> \u8986\u76d6\u73b0\u6709file\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "53c988a3a51c8253dafbc711",
+            "question": "\u6b64statement\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\nVAR=\"This old man came rolling\"\necho \"${VAR//man/rolling}\"\n```",
+            "answer": "This old rolling came rolling",
+            "explanation": "[reference](https://tldp.org/LDP/abs/html/string-manipulation.html)",
+            "hint": null,
+            "correctAnswer": [
+              "This old rolling came rolling"
+            ],
+            "options": [
+              "This old rolling came rolling",
+              "This old man came man",
+              "This old man came rolling",
+              "This old came"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "62f93702ca276960e649c52f",
+            "question": "statement `if [ -x \"$file\" ]` \u6d4b\u8bd5\u4ec0\u4e48?",
+            "answer": "file\u662f\u5426\u53ef\u6267\u884c",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "file\u662f\u5426\u53ef\u6267\u884c"
+            ],
+            "options": [
+              "file\u662f\u5426\u53ef\u7f16\u8f91",
+              "file\u662f\u5426\u53ef\u6267\u884c",
+              "file\u662f\u5426symbolic link",
+              "file\u662f\u5426\u7531root\u62e5\u6709"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "ea9469aa1988c7bd92ad1a02",
+            "question": "\u54ea\u4e2aoption\u9002\u7528\u4e8e\u51fd\u6570\u548cshell execution environment?",
+            "answer": "`export`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`export`"
+            ],
+            "options": [
+              "`export`",
+              "`sudo`",
+              "`module`",
+              "`secure`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "c628e5daec85aaf731ed930a",
+            "question": "\u54ea\u4e2acharacter\u5141\u8bb8\u60a8\u5728bash\u4e2d\u8fde\u63a5\u547d\u4ee4,\u4ee5\u4fbf\u5373\u4f7f\u4e00\u4e2a\u547d\u4ee4\u5931\u8d25\u4e5f\u4f1a\u8fd0\u884c\u6240\u6709\u547d\u4ee4?",
+            "answer": "`;`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`;`"
+            ],
+            "options": [
+              "`|`",
+              "`\\`",
+              "`;`",
+              "`&`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "0ddf513164b35cf42aaa7239",
+            "question": "\u54ea\u4e2a\u9009\u9879\u7528\u4e8e\u6392\u5e8f\u548cunique?",
+            "answer": "`sort -u`",
+            "explanation": "[reference](https://man7.org/linux/man-pages/man1/sort.1.html)",
+            "hint": null,
+            "correctAnswer": [
+              "`sort -u`"
+            ],
+            "options": [
+              "`sort | uniq -u`",
+              "`sort -u`",
+              "`sort --unique`",
+              "`sort -uniq`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "0c2b72aa32e5978b7f82ae0d",
+            "question": "\u5047\u8bbe\u5b58\u5728\u6587\u4ef6file.txt,\u4e0b\u5217statement\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\ncat file.txt | while IFS= read -r line; do\n  echo $line\ndone\n```",
+            "answer": "file.txt\u7684\u5185\u5bb9",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "file.txt\u7684\u5185\u5bb9"
+            ],
+            "options": [
+              "file.txt\u7684\u5185\u5bb9,\u6bcf\u884c\u524d\u9762\u6709\u884c\u53f7",
+              "file.txt\u7684\u5185\u5bb9",
+              "file.txt\u7684\u5185\u5bb9,\u6bcf\u884c\u540e\u9762\u6709\u884c\u53f7",
+              "file.txt\u7684\u5185\u5bb9,\u6240\u6709\u5185\u5bb9\u5728\u4e00\u884c"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "21622080b00e8bc5798de988",
+            "question": "\u4f7f\u7528command expansion,\u54ea\u4e2astatement\u5c06current shell\u66ff\u6362\u4e3anew shell?",
+            "answer": "`exec bash`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`exec bash`"
+            ],
+            "options": [
+              "`exec bash`",
+              "`source bash`",
+              "`new bash`",
+              "`open bash`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "0edc28f1ce5969f13d222b95",
+            "question": "\u7ed9\u5b9a\u6b64snippet,\u54ea\u4e2astatement\u6b63\u786e\u63cf\u8ff0\u4e86$1?\n```bash\n#!/usr/bin/env bash\necho $1\n```",
+            "answer": "\u5b83\u662f\u8868\u793a\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u7684argument\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u5b83\u662f\u8868\u793a\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u7684argument\u3002"
+            ],
+            "options": [
+              "\u5b83\u662f\u8868\u793ascript name\u7684argument\u3002",
+              "\u5b83\u662f\u8868\u793a\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u7684argument\u3002",
+              "\u5b83\u662f\u8868\u793aprocess number(PID)\u7684argument\u3002",
+              "\u5b83\u662f\u8868\u793a\u811a\u672c\u9996\u6b21\u6267\u884c\u7684epoch time(\u4ee5\u6beb\u79d2\u4e3a\u5355\u4f4d)\u7684argument\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "1fd1b1d5a928878f4515e0cf",
+            "question": "\u5047\u8bbe\u6587\u4ef6test.txt\u5305\u542b\u4ee5\u4e0bcontent,\u8fd9\u4e2aexpression\u7684\u7ed3\u679c\u662f\u4ec0\u4e48?\n```bash\ncat < test.txt > test.txt\n```",
+            "answer": "test.txt\u88ab\u8986\u76d6\u5e76\u53d8\u7a7a\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "test.txt\u88ab\u8986\u76d6\u5e76\u53d8\u7a7a\u3002"
+            ],
+            "options": [
+              ".txt\u7684\u5185\u5bb9\u88ab\u663e\u793a\u3002",
+              "\u51fa\u73b0\u4e00\u4e2a\u9519\u8bef,\u56e0\u4e3a\u65e0\u6cd5\u540c\u65f6\u6253\u5f00\u76f8\u540c\u7684file\u8fdb\u884creading\u548cwriting\u3002",
+              "test.txt\u88ab\u8986\u76d6\u5e76\u53d8\u7a7a\u3002",
+              "test.txt\u7684\u5185\u5bb9\u4e0d\u4f1a\u6539\u53d8\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "684f658a182791a6bb703c97",
+            "question": "\u4ec0\u4e48\u662f\u6b63\u786e\u6d4b\u8bd5\u53d8\u91cf\u5b58\u5728\u7684\u65b9\u6cd5?",
+            "answer": "`if [ \"$myvar\" ]; then echo \"Test was true\"; fi`",
+            "explanation": "\u6ce8\u610f:\u4e00\u4e9b\u6765\u6e90\u8bf4B\u662f\u6b63\u786e\u7684,\u56e0\u4e3a\u5b83\u6d4b\u8bd5\u53d8\u91cf\u662f\u5426\u6709\u503c\u3002\u4f46\u662f\u9898\u76ee\u95ee\u7684\u662f\"\u6d4b\u8bd5\u53d8\u91cf\u5b58\u5728\",\u6240\u4ee5C\u53ef\u80fd\u66f4\u51c6\u786e\u3002",
+            "hint": null,
+            "correctAnswer": [
+              "`if [ \"$myvar\" ]; then echo \"Test was true\"; fi`"
+            ],
+            "options": [
+              "`if [ -a \"$myvar\" ]; then echo \"Test was true\"; fi`",
+              "`if [ -n \"$myvar\" ]; then echo \"Test was true\"; fi`",
+              "`if [ \"$myvar\" ]; then echo \"Test was true\"; fi`",
+              "\u4ee5\u4e0a\u90fd\u4e0d\u662f"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "fcc0e249f0642b77dd6a8f9f",
+            "question": "\u9664\u4e86while\u548cuntil\u4e4b\u5916,Bash\u652f\u6301\u7684\u53e6\u4e00\u4e2aloop construct\u662f\u4ec0\u4e48?",
+            "answer": "`for`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`for`"
+            ],
+            "options": [
+              "`for`",
+              "`do-while`",
+              "`repeat`",
+              "`loop`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "038c041966bd9f63f8c6f5d1",
+            "question": "\u5185\u90e8shell\u53d8\u91cf\u5305\u542b\\_\\_\\_\\_\\_\u3002",
+            "answer": "\u4ee5\u4e0a\u6240\u6709",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u4ee5\u4e0a\u6240\u6709"
+            ],
+            "options": [
+              "currently logged-in user",
+              "currently running process",
+              "system's hostname",
+              "\u4ee5\u4e0a\u6240\u6709"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "36cd16639cf81045e8fe28d7",
+            "question": "\u4e0b\u5217\u54ea\u4e2a\u4e0d\u662f\u6709\u6548\u7684bash shebang line?",
+            "answer": "`#!/bin/basher`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`#!/bin/basher`"
+            ],
+            "options": [
+              "`#!/bin/bash`",
+              "`#!/bin/sh`",
+              "`#!/bin/basher`",
+              "`#!/usr/bin/env bash`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "31e674b4af37b35504636cdf",
+            "question": "\u8fd9\u4e2acommand sequence\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\ncat <<EOF\n-------------------------\n   This is line 1.\n   This is line 2.\n   This is line 3.\n-------------------------\nEOF\n```",
+            "answer": "C",
+            "explanation": "```bash\nThis is line 1.\nThis is line 2.\nThis is line 3.\n```\n```bash\n-------------------------This is line 1.This is line 2.This is line 3.-------------------------\n```\n```bash\n-------------------------\nThis is line 1.\nThis is line 2.\nThis is line 3.\n-------------------------\n```\n```bash\n-------------------------\nThis is line 1.\nThis is line 2.\nThis is line 3.\n-------------------------\n```",
+            "hint": null,
+            "correctAnswer": [
+              "C"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "a209992b136b268fe2554551",
+            "question": "\u4e0b\u5217\u54ea\u4e2a\u4e0d\u662f\u6709\u6548\u7684bash loop?",
+            "answer": "`do-until`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`do-until`"
+            ],
+            "options": [
+              "`until`",
+              "`do-until`",
+              "`for`",
+              "`while`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "07308dc964dce90d0950988e",
+            "question": "\u54ea\u4e2a\u7279\u6b8avariable\u4fdd\u5b58script PID?",
+            "answer": "`$$`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`$$`"
+            ],
+            "options": [
+              "`$$`",
+              "`$!`",
+              "`$?`",
+              "`$@`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "12bfd97df435e7d9e029aeb8",
+            "question": "\u4e0b\u5217\u54ea\u4e2a\u4e0d\u662ftest condition\u5e38\u7528\u7684\u7279\u6b8aparameter?",
+            "answer": "`$-`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`$-`"
+            ],
+            "options": [
+              "`$?`",
+              "`$-`",
+              "`$@`",
+              "`$0`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "2613bd967e312f9241170dcc",
+            "question": "\u5f53\u6587\u4ef6\u4f7f\u7528tab-delimited fields\u65f6,\u60a8\u53ef\u80fd\u60f3\u8981\u8bbe\u7f6einternal field separator\u4e3a\u54ea\u4e2acharacter?",
+            "answer": "`\\t`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`\\t`"
+            ],
+            "options": [
+              "`\\t`",
+              "`\\s`",
+              "`\\n`",
+              "`\\d`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "cd11be44bb28636af5ee2758",
+            "question": "\u54ea\u4e2ascript statement\u5c06\u521b\u5efa\u4e00\u4e2a\u53ef\u7531script\u5199\u5165\u7684file descriptor?",
+            "answer": "`exec 3>word.txt`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`exec 3>word.txt`"
+            ],
+            "options": [
+              "`exec 3>word.txt`",
+              "`exec 4<word.txt`",
+              "`exec 3>word.txt`",
+              "`exec 3>&1`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "855062cd6e7c8226c167e7b4",
+            "question": "\u60a8\u53ef\u4ee5\u68c0\u67e5\u54ea\u4e2aspecial variable\u4ee5\u9a8c\u8bc1script\u4e2d\u6700\u540e\u6267\u884c\u7684command\u6210\u529f?",
+            "answer": "`$?`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`$?`"
+            ],
+            "options": [
+              "`$$`",
+              "`$?`",
+              "`$!`",
+              "`$@`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "cfd041f2f923b7a5705ea658",
+            "question": "\u6b64statement\u7684\u529f\u80fd\u662f\u4ec0\u4e48?\n```bash\nfor i in $(ls); do\n  echo $i\ndone\n```",
+            "answer": "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2afile\u5e76echo filename\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2afile\u5e76echo filename\u3002"
+            ],
+            "options": [
+              "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2afile\u5e76echo filename\u3002",
+              "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2adirectory\u5e76echo directory name\u3002",
+              "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2afile\u5e76echo file permissions\u3002",
+              "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2adirectory\u5e76echo directory permissions\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "f410b4b094c8a072f7cf23f8",
+            "question": "\u4ee5\u4e0b\u54ea\u4e2acharacters\u53ef\u4ee5\u91cd\u5b9a\u5411standard error stream?",
+            "answer": "`2>`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`2>`"
+            ],
+            "options": [
+              "`2>`",
+              "`3>`",
+              "`1>`",
+              "`&>`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "81f1bc5e7b7032e97833cbb9",
+            "question": "\u4ee5\u4e0b\u54ea\u4e2astatement\u6b63\u786e\u63cf\u8ff0\u4e86\u6b64\u811a\u672c?\n```bash\n#!/bin/bash\necho $1\n```",
+            "answer": "\u5b83\u8f93\u51fa\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u5b83\u8f93\u51fa\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u3002"
+            ],
+            "options": [
+              "\u5b83\u8f93\u51fascript\u7684\u7b2c\u4e00\u884c\u3002",
+              "\u5b83\u8f93\u51fa\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u3002",
+              "\u5b83\u8f93\u51fascript\u7684process ID(PID)\u3002",
+              "\u5b83\u8f93\u51fascript\u7684\u9996\u6b21\u6267\u884ctime(\u4ee5\u6beb\u79d2\u4e3a\u5355\u4f4d)\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "391f25ee274b367fc019073d",
+            "question": "\u5047\u8bbe\u60a8\u6709\u4e00\u4e2a\u5305\u542b\u591a\u4e2a.csv files\u7684directory\u3002\u60a8\u60f3\u6253\u5370\u51fa\u5305\u542b\u5b57\u7b26\u4e32\"profit\"\u7684\u6240\u6709\u6587\u4ef6\u7684\u7b2c\u4e09\u5217\u3002\u4ee5\u4e0b\u54ea\u4e2astatement\u53ef\u4ee5\u5b9e\u73b0\u6b64\u76ee\u7684?",
+            "answer": "`for file in *.csv; do grep profit $file | awk -F',' '{print $3}'; done`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`for file in *.csv; do grep profit $file | awk -F',' '{print $3}'; done`"
+            ],
+            "options": [
+              "`for file in *.csv; do awk -F',' '{print $3}' $file | grep profit; done`",
+              "`for file in *.csv; do grep profit $file | awk -F',' '{print $3}'; done`",
+              "`for file in *.csv; do grep -F',' profit $file | awk '{print $3}'; done`",
+              "`for file in *.csv; do awk '{print $3}' $file | grep -F',' profit; done`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "d8ce85e5a839a89110638c9d",
+            "question": "\u4ee5\u4e0b\u547d\u4ee4\u7684\u8f93\u51fa\u4f1a\u662f\u4ec0\u4e48?\n```bash\nVAR='Hello World!'\necho ${VAR:6:5}\n```",
+            "answer": "World",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "World"
+            ],
+            "options": [
+              "World",
+              "Hello",
+              "World!",
+              "Hello World!"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "aab73a0d791a09762d371419",
+            "question": "\u5bf9\u4e8e\u540d\u4e3ajon\u7684user,\u4ee5\u4e0b\u547d\u4ee4\u7684\u7ed3\u679c\u662f\u4ec0\u4e48?\n```bash\necho 'Hello, $(whoami)!'\n```",
+            "answer": "Hello, $(whoami)!",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Hello, $(whoami)!"
+            ],
+            "options": [
+              "Hello, $(jon)!",
+              "Hello, jon!",
+              "Hello, $(whoami)!",
+              "Hello, whoami!"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "7679ec067eb724dc5e74e6fe",
+            "question": "\u5982\u4f55\u901a\u8fc7\u538b\u7f29\u5c06directory\u590d\u5236\u5230\u53e6\u4e00\u7cfb\u7edf?",
+            "answer": "`tar cvzf - /wwwdata | ssh root@192.168.1.201 \"dd of=/backup/wwwdata.tar.gz\"`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`tar cvzf - /wwwdata | ssh root@192.168.1.201 \"dd of=/backup/wwwdata.tar.gz\"`"
+            ],
+            "options": [
+              "`tar -ssh user@192.158.1.1 /bin/newfile`",
+              "`tar cvzf - /wwwdata | ssh root@192.168.1.201 \"dd of=/backup/wwwdata.tar.gz\"`",
+              "\u65e0\u6cd5\u538b\u7f29stream",
+              "`scp -r directory user@192.168.1.1:/tmp`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "71ef69f4ec75ac09d02e2a4a",
+            "question": "\u8981\u5c06command `ls -lah` \u5206\u914d\u7ed9shortcut command `lh`,\u5e94\u8be5\u4f7f\u7528\u4ec0\u4e48\u547d\u4ee4?",
+            "answer": "`alias lh='ls -lah'`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`alias lh='ls -lah'`"
+            ],
+            "options": [
+              "`alias lh='ls -lah'`",
+              "`link lh='ls -lah'`",
+              "`alias 'ls -lah'=lh`",
+              "`lh | ls -lah`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "996f09591bc9de6b1f0efe03",
+            "question": "\u54ea\u4e2astatement\u4f1a\u6253\u5370home directory\u6216subdirectories\u4e2d\u6240\u6709\u5b8c\u6574\u8def\u5f84\u7684.csv files,\u540c\u65f6\u4e0d\u663e\u793a\u4efb\u4f55errors?",
+            "answer": "find $HOME -name \"\\*.csv\" 2>/dev/null",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "find $HOME -name \"\\*.csv\" 2>/dev/null"
+            ],
+            "options": [
+              "find $USER_DIR -name \"\\*.csv\" 2>/dev/null",
+              "find $HOME -name \"\\*.csv\" 1>/dev/null",
+              "find $HOME -name \"\\*.csv\" 2>/dev/null",
+              "find HOME -name \"\\*.csv\" 1>/dev/null"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "8f5135cb8c2d690058a2fc1f",
+            "question": "\u5728Bash\u4e2d,\u9ed8\u8ba4prompt string\u672b\u5c3e\u7684#\u8868\u793a\u4ec0\u4e48?",
+            "answer": "\u7528\u6237\u4ee5root\u8eab\u4efd\u64cd\u4f5c",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u7528\u6237\u4ee5root\u8eab\u4efd\u64cd\u4f5c"
+            ],
+            "options": [
+              "\u7528\u6237\u4ee5root\u8eab\u4efd\u64cd\u4f5c",
+              "\u5f53\u524dworking directory\u662ffilesystem\u7684root",
+              "\u7cfb\u7edf\u6709updates\u53ef\u7528",
+              "\u7528\u6237\u662fnon-privileged user"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "345cedf69d90403703f71e06",
+            "question": "\u4ee5\u4e0b\u547d\u4ee4\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\n$ ls -l\nfile10.txt\nfile1.txt\nfileabc.txt\nfilea.txt\nfileb.txt\nfilec.txt\n$ ls -l file[^abc]*.txt\n```",
+            "answer": "A",
+            "explanation": "```bash\nfile1.txt\nfile10.txt\n```\n```bash\nfile10.txt\nfile1.txt\nfileabc.txt\nfilea.txt\nfileb.txt\nfilec.txt\n```\n```bash\nfileabc.txt filea.txt fileb.txt filec.txt\n```\n```bash\nfilea.txt\nfileb.txt\nfilec.txt\n```\n[reference](https://tldp.org/LDP/abs/html/globbingref.html)\n`\u6b64\u5904\u7684caret(^)\u8868\u793a\u5426\u5b9abrackets\u5185\u7684\u5339\u914d\u9879\u3002`",
+            "hint": null,
+            "correctAnswer": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "87bd78fe9692aa9f5da27b25",
+            "question": "\u4ee5\u4e0bcommand sequence\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\ncat <<EOF\n------------------------\n   This is line 1.\n   This is line 2.\n   This is line 3.\n------------------------\nEOF\n```",
+            "answer": "C",
+            "explanation": "```bash\nThis is line 1.\nThis is line 2.\nThis is line 3.\n```\n```bash\n------------------------This is line 1.This is line 2.This is line 3.------------------------\n```\n```bash\n------------------------\nThis is line 1.\nThis is line 2.\nThis is line 3.\n------------------------\n```\n```bash\n------------------------\nThis is line 1.\nThis is line 2.\nThis is line 3.\n------------------------\n```",
+            "hint": null,
+            "correctAnswer": [
+              "C"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "65655d33f19139223e6ee1e4",
+            "question": "out.txt\u4e2d\u4f1a\u662f\u4ec0\u4e48\u5185\u5bb9?\n```bash\n#!/bin/bash\necho 123446789 > out.txt\nexec 3<> out.txt\nread -n 4 <&3\necho -n 5 >&3\nexec 3>&-\n```",
+            "answer": "123456789",
+            "explanation": "1. [I/O Redirection](https://tldp.org/LDP/abs/html/io-redirection.html)\n2. [What is the difference between \"echo\" and \"echo -n\"?](https://stackoverflow.com/questions/30761986/what-is-the-difference-between-echo-and-echo-n)",
+            "hint": null,
+            "correctAnswer": [
+              "123456789"
+            ],
+            "options": [
+              "123446789",
+              "hyphen character(-)",
+              "123456789",
+              "\u6570\u5b575,\u5b83\u901a\u8fc7echo\u5199\u5165\u6587\u4ef6"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "ddc71d1bb00a6f221b1a1ec6",
+            "question": "\u54ea\u4e2a\u53d8\u91cf\u5305\u542bscript\u8fd0\u884c\u65f6\u7684process ID(PID)?",
+            "answer": "$$",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "$$"
+            ],
+            "options": [
+              "$ID",
+              "$#",
+              "$@",
+              "$$"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "9b714ed293744c667c012388",
+            "question": "\u901a\u8fc7\u7ed3\u5408extended globbing\u548cparameter expansion,VAR\u7684\u503c\u4f1a\u662f\u4ec0\u4e48?\n```\n#!/bin/bash\nshopt -s extglob\nVAR='     This is...     a string of characters     '\nVAR=${VAR##+([[:space:]])}; VAR=${VAR%%+([[:space:]])};\necho \"$VAR\"\n```",
+            "answer": "`<pre>This is... a string of characters</pre>`",
+            "explanation": "Reference:\n1. [What is the meaning of the ${0##...} syntax with variable, braces and hash character in bash?](https://stackoverflow.com/questions/2059794/what-is-the-meaning-of-the-0-syntax-with-variable-braces-and-hash-chara)\n2. [What does expanding a variable as \"${var%%r\\*}\" mean in bash?](https://stackoverflow.com/questions/41859601/what-does-expanding-a-variable-as-varr-mean-in-bash)",
+            "hint": null,
+            "correctAnswer": [
+              "`<pre>This is... a string of characters</pre>`"
+            ],
+            "options": [
+              "`<pre> This is... a string of characters</pre>`",
+              "`<pre> This is...a string of characters</pre>`",
+              "`<pre>This is... a string of characters</pre>`",
+              "`<pre>This is...a string of characters</pre>`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "990228ccaa398d41eb9f3770",
+            "question": "\u54ea\u4e2aoperator\u544a\u8bc9shell\u5728background\u8fd0\u884c\u7ed9\u5b9acommand?",
+            "answer": "&",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "&"
+            ],
+            "options": [
+              "!",
+              "&&",
+              "&",
+              "$"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "21143ae8e23d488ff47e5741",
+            "question": "LINUX\u7cfb\u7edf\u4e2d\u7684nice number\u8303\u56f4\u662f?",
+            "answer": "-20\u523019",
+            "explanation": "[Reference](https://man7.org/linux/man-pages/man2/nice.2.html)",
+            "hint": null,
+            "correctAnswer": [
+              "-20\u523019"
+            ],
+            "options": [
+              "-20\u52300",
+              "-20\u523019",
+              "0\u523019",
+              "10\u523010"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "e6981d430fb8ec0eb0de7544",
+            "question": "\u5728Bash\u4e2d,\u4ee5\u4e0bexpression\u7684\u7ed3\u679c\u662f\u4ec0\u4e48?\n```\necho $((4/3))\n```",
+            "answer": "1",
+            "explanation": "[Reference](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-10.html)",
+            "hint": null,
+            "correctAnswer": [
+              "1"
+            ],
+            "options": [
+              "1.3",
+              "1.3333333333",
+              "1",
+              "2"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "b7fc20a6a655dc15b34daa4e",
+            "question": "\u8981\u8ba9loop\u6301\u7eed\u8fd0\u884c\u76f4\u5230\u67d0\u4e2acondition\u53d8\u4e3atrue,\u4f60\u53ef\u80fd\u4f1a\u4f7f\u7528\u4ec0\u4e48?",
+            "answer": "while",
+            "explanation": "[Reference](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html)",
+            "hint": null,
+            "correctAnswer": [
+              "while"
+            ],
+            "options": [
+              "if",
+              "case",
+              "while",
+              "for"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "046d7652bbb969d83638abf5",
+            "question": "\u4ee5\u4e0bcommand sequence\u7684\u4f5c\u7528\u662f\u4ec0\u4e48?\n```bash\ncat > notes -\n```",
+            "answer": "\u5b83\u4ecestandard input\u63a5\u53d7text\u5e76\u5c06\u5176\u653e\u5165\"notes\" file\u4e2d\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u5b83\u4ecestandard input\u63a5\u53d7text\u5e76\u5c06\u5176\u653e\u5165\"notes\" file\u4e2d\u3002"
+            ],
+            "options": [
+              "\u5b83\u521b\u5efa\u4e00\u4e2a\u540d\u4e3a\"notes\"\u7684\u7a7afile,\u7136\u540e\u9000\u51fa\u3002",
+              "\u5b83\u5c06\"notes\" file\u7684\u5185\u5bb9\u8f93\u51fa\u5230\u5c4f\u5e55,\u7136\u540e\u5220\u9664\u5b83\u3002",
+              "\u5b83\u4ecestandard input\u63a5\u53d7text\u5e76\u5c06\u5176\u653e\u5165\"notes\" file\u4e2d\u3002",
+              "\u5b83\u5c06text\u8ffd\u52a0\u5230\u4e00\u4e2a\u540d\u4e3a\"notes\"\u7684\u73b0\u6709file\u4e2d\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "7be116e2cd2c16ea9fefabb6",
+            "question": "\u4f60\u60f3\u5339\u914d\u4e94\u4e2a\u5b57\u6bcd\u7684palindromes,\u4f8b\u5982radar\u3001rotor\u548ctenet\u3002\u5e94\u8be5\u4f7f\u7528\u54ea\u4e2ased option?",
+            "answer": "`sed -E -n '/^(.)(.)(.)\\2\\1$/p'`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`sed -E -n '/^(.)(.)(.)\\2\\1$/p'`"
+            ],
+            "options": [
+              "`sed -E -n '/^(.)(.)\\3\\2\\1$/p'`",
+              "`sed -E -n '/^(.)(.)(.).\\2\\1$/p'`",
+              "`sed -E -n '/^(.)(.)(.)\\2\\1$/p'`",
+              "`sed -E -n '/^(.)(.)(.)(.)\\3\\2\\1$/p'`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "0d5a60489441f150d4d8be21",
+            "question": "\u8981\u5411\u5f53\u524denvironment\u6dfb\u52a0\u4e00\u4e2avalue,\u5e94\u8be5\u4f7f\u7528\u4ec0\u4e48command?",
+            "answer": "export",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "export"
+            ],
+            "options": [
+              "shell_add",
+              "save",
+              "echo",
+              "export"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "268e73465a8254c7b05ec778",
+            "question": "\u4ee5\u4e0b\u4e24\u4e2aconditional expressions\u6709\u4ec0\u4e48\u533a\u522b?\n```bash\n[[$A==$B]]\n[[$A -eq $B]]\n```",
+            "answer": "\u5b83\u4eec\u662f\u4e00\u6837\u7684\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u5b83\u4eec\u662f\u4e00\u6837\u7684\u3002"
+            ],
+            "options": [
+              "[[$A == $B]]\u7528\u4e8enumeric comparisons,\u800c[[$a-eq $B]]\u7528\u4e8etext comparisons\u3002",
+              "[[$A==$B]]\u662f\u8fdb\u884ccomparison\u7684\u65b0\u65b9\u6cd5,\u800c[[$a-eq $B]]\u662flegacy syntax\u3002",
+              "\u5b83\u4eec\u662f\u4e00\u6837\u7684\u3002",
+              "[[$A==$B]]\u7528\u4e8etext comparisons,\u800c[[$a-eq $B]]\u7528\u4e8enumeric comparisons\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "5062d511c3e073b4955544a0",
+            "question": "\u4ee5\u4e0b\u4ee3\u7801\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\nVAR=\"united states\"\necho \"${VAR^}\"\n```",
+            "answer": "United states",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "United states"
+            ],
+            "options": [
+              "unitedstates",
+              "United States",
+              "United states",
+              "UNITED STATES"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "42d7c59718987932adcde5c6",
+            "question": "\u5982\u679c\u6309\u539f\u6837\u8fd0\u884c\u4ee5\u4e0bscript,\u4f1a\u53d1\u751f\u4ec0\u4e48?\n```bash\n#!/bin/bash\n#condition 1\nif [ $foo = \"bar\" ]; then echo \"foo is bar\"\nfi\n#condition 2\nif [[ $foo = \"bar\" ]]; then echo \"foo is bar\"\nfi\n```",
+            "answer": "\u4e24\u4e2aconditions\u90fd\u4f1a\u5931\u8d25\u3002",
+            "explanation": "**Explanation:**\u811a\u672c\u5982\u5199\u7684\u90a3\u6837\u4f1a\u8f93\u51fa`line 3: [: =: unary operator expected`\u3002\u5b9a\u4e49variable\u5e76assign value `foo=\"bar\"`,\u4e24\u4e2aconditions\u90fd\u4f1a\u6210\u529f\u3002",
+            "hint": null,
+            "correctAnswer": [
+              "\u4e24\u4e2aconditions\u90fd\u4f1a\u5931\u8d25\u3002"
+            ],
+            "options": [
+              "\u4e24\u4e2aconditions\u90fd\u4f1a\u5931\u8d25\u3002",
+              "\u4e24\u4e2aconditions\u90fd\u4f1a\u6210\u529f\u3002",
+              "Condition 1\u4f1a\u6210\u529f,Condition 2\u4f1a\u5931\u8d25\u3002",
+              "Condition 1\u4f1a\u5931\u8d25,Condition 2\u4f1a\u6210\u529f\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "70ff2ded57a5128df980fa17",
+            "question": "\u54ea\u4e2avariable\u5305\u542b\u4ececommand line\u4f20\u9012\u7ed9script\u7684arguments\u6570\u91cf?",
+            "answer": "`$#`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`$#`"
+            ],
+            "options": [
+              "`$#`",
+              "`$@`",
+              "`0`",
+              "`$!`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "06bd39a099c5ef161ec5ccc1",
+            "question": "\u5728Bash scripting\u4e2d,script\u5f00\u5934\u7684\"shebang\"(#!)\u8868\u793a\u4ec0\u4e48?\u4e3a\u4ec0\u4e48\u91cd\u8981?",
+            "answer": "\u5b83\u5e2e\u52a9system\u8bc6\u522bscript\u7684interpreter,\u786e\u4fdd\u4f7f\u7528\u6b63\u786e\u7684interpreter\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\u5b83\u5e2e\u52a9system\u8bc6\u522bscript\u7684interpreter,\u786e\u4fdd\u4f7f\u7528\u6b63\u786e\u7684interpreter\u3002"
+            ],
+            "options": [
+              "\u5b83\u6307\u793a\u5e94\u4f7f\u7528\u54ea\u4e2aBash interpreter\u6765\u6267\u884cscript\u3002",
+              "\u5b83\u6307\u5b9a\u8fd0\u884cscript\u6240\u9700\u7684Bash version\u3002",
+              "\u5b83\u5c06script\u6807\u8bb0\u4e3aexecutable\u3002",
+              "\u5b83\u5e2e\u52a9system\u8bc6\u522bscript\u7684interpreter,\u786e\u4fdd\u4f7f\u7528\u6b63\u786e\u7684interpreter\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "c44d16541d487d1771c31e73",
+            "question": "\u54ea\u4e2avariable\u5305\u542bscript\u8fd0\u884c\u65f6\u7684process ID(PID)?",
+            "answer": "`$$`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`$$`"
+            ],
+            "options": [
+              "`$ID`",
+              "`$@`",
+              "`$#`",
+              "`$$`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "0c81854f4a8579f25b5f9d6f",
+            "question": "\u5982\u679cuser\u60f3\u5728\u6ca1\u6709shebang line\u6216execute permissions\u7684\u60c5\u51b5\u4e0b\u6267\u884cscript sh,user\u5e94\u8be5\u8f93\u5165\u4ec0\u4e48?",
+            "answer": "'bash script.sh'\u3002",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "'bash script.sh'\u3002"
+            ],
+            "options": [
+              "\u6267\u884cshell script\u9700\u8981shebang line\u3002",
+              "'bash script.sh'\u3002",
+              "'exec script.sh'\u3002",
+              "\u6267\u884cshell script\u9700\u8981execute permissions\u3002"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "88d5fdcd21bc6ac45b51fc36",
+            "question": "\u4ee5\u4e0bcompound command\u7684\u6700\u53ef\u80fd\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\ncat -n animals | sort -r | head -n 5\n```",
+            "answer": "d.",
+            "explanation": "```bash\n1\tAnt\n2\tBear\n3\tCat\n4\tDog\n5\tElephant\n```\n```bash\n9\tIbex\nB\tHippo\n7\tGiraffe\n6\tFox\n5\tElephant\n4\tDog\n3\tCat\n2\tBear\n1\tAnt10\tJaguar\n```\n```bash\nJaguar\nIbex\nHippo\nGiraffe\nFox\n```\n```bash\n9\tIbex\n8\tHippo\n7\tGiraffe\n6\tFox\n5\tElephant\n```",
+            "hint": null,
+            "correctAnswer": [
+              "d."
+            ],
+            "options": [
+              "a.",
+              "b.",
+              "c.",
+              "d."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "0ff72ac33204a38807a841ae",
+            "question": "\u4ee5\u4e0b\u54ea\u4e2a\u4e0d\u662f\u6709\u6548\u7684Bash variable name?",
+            "answer": "`1var`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`1var`"
+            ],
+            "options": [
+              "`$HOME`",
+              "`my_var`",
+              "`1var`",
+              "`!`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "8cff35cfea273d39ce9c4ad7",
+            "question": "\u5728Bash\u4e2d,\u521b\u5efa\u4e00\u4e2aone-liner command,\u9012\u5f52\u67e5\u627edirectory\u53ca\u5176subdirectories\u4e2d\u6240\u6709extension\u4e3a\".txt\"\u7684files,\u5e76\u7edf\u8ba1\u8fd9\u4e9bfiles\u7684\u603bline\u6570\u3002\u8f93\u51fa\u5e94\u4ec5\u663e\u793a\u603bline count\u3002\n\u4ee5\u4e0b\u54ea\u4e2aone-liner Bash command\u53ef\u4ee5\u5b8c\u6210\u6b64task?",
+            "answer": "`find . -name \"*.txt\" -exec cat {} \\; | wc -l`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`find . -name \"*.txt\" -exec cat {} \\; | wc -l`"
+            ],
+            "options": [
+              "`find . -name \"*.txt\" -exec wc -l {} \\; | awk '{total += $1} END {print total}'`",
+              "`grep -r \".*\\.txt$\" | wc -l`",
+              "`find . -type f -name \"*.txt\" | xargs wc -l | tail -n 1`",
+              "`find . -name \"*.txt\" -exec cat {} \\; | wc -l`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
+          },
+          {
+            "id": "26308c7c57a3895397eea5c9",
+            "question": "> \u548c >> redirection operators\u4e4b\u95f4\u6709\u4ec0\u4e48\u533a\u522b?",
+            "answer": "`> \u4f1a\u8986\u76d6target file\u7684\u5185\u5bb9,\u800c >> \u4f1a\u5c06\u5185\u5bb9\u8ffd\u52a0\u5230target file\u7684\u672b\u5c3e\u3002`",
+            "explanation": "[reference](https://www.shells.com/l/en-US/tutorial/Difference-between-%E2%80%9C%3E%E2%80%9D-and-%E2%80%9C%3E%3E%E2%80%9D-in-Linux#:~:text=So%2C%20what%20we%20learned%20is,to%20modify%20files%20in%20Linux.)",
+            "hint": null,
+            "correctAnswer": [
+              "`> \u4f1a\u8986\u76d6target file\u7684\u5185\u5bb9,\u800c >> \u4f1a\u5c06\u5185\u5bb9\u8ffd\u52a0\u5230target file\u7684\u672b\u5c3e\u3002`"
+            ],
+            "options": [
+              "`> \u4f1a\u8986\u76d6target file\u7684\u5185\u5bb9,\u800c >> \u4f1a\u5c06\u5185\u5bb9\u8ffd\u52a0\u5230target file\u7684\u672b\u5c3e\u3002`",
+              "`> \u7528\u4e8e\u91cd\u5b9a\u5411input,\u800c >> \u7528\u4e8e\u91cd\u5b9a\u5411output\u3002`",
+              "`> \u7528\u4e8estandard output,\u800c >> \u7528\u4e8estandard error\u3002`",
+              "`> \u662funary operator,\u800c >> \u662fbinary operator\u3002`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "21b43383e2a83ffb0f4b10a3",
+            "quizzId": "88e37edc64539fb39cf2b9f8"
           }
         ]
-      },
-      {
-        "id": "bcf114cb488c328eefd79221",
-        "question": "\u5728\u76ee\u5f55\u4e2d\u641c\u7d22\u6587\u4ef6,\u8fd9\u4e24\u4e2afind\u547d\u4ee4\u6709\u4ec0\u4e48\u4e0d\u540c?\n```bash\nA. find . -name '%text%'\nB. find . -name '*text*'\n```",
-        "answer": "A\u4f1a\u641c\u7d22\u540d\u79f0\u4e0e`'%text%'`\u5b8c\u5168\u5339\u914d\u7684\u6240\u6709\u6587\u4ef6,\u800cB\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"text\"\u7684\u6240\u6709\u6587\u4ef6\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "A\u4f1a\u641c\u7d22\u540d\u79f0\u4e0e`'%text%'`\u5b8c\u5168\u5339\u914d\u7684\u6240\u6709\u6587\u4ef6,\u800cB\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"text\"\u7684\u6240\u6709\u6587\u4ef6\u3002"
-        ],
-        "options": [
-          "A\u4f1a\u641c\u7d22\u540d\u79f0\u4e0e`'%text%'`\u5b8c\u5168\u5339\u914d\u7684\u6240\u6709\u6587\u4ef6,\u800cB\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"text\"\u7684\u6240\u6709\u6587\u4ef6\u3002",
-          "A\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"%text%\"\u7684\u6240\u6709\u6587\u4ef6,\u800cB\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"text\"\u7684\u6240\u6709\u6587\u4ef6\u3002",
-          "A\u4f1a\u641c\u7d22\u540d\u79f0\u5305\u542bsubstring \"text\"\u7684\u6240\u6709\u6587\u4ef6,\u800cB\u4f1a\u641c\u7d22\u540d\u79f0\u4e0e`\"*text*\"`\u5b8c\u5168\u5339\u914d\u7684\u6240\u6709\u6587\u4ef6\u3002",
-          "A\u548cB\u90fd\u4f1a\u4ea7\u751f\u76f8\u540c\u7684\u7ed3\u679c\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8d3ce5101995a01721201f5c",
-        "question": "\u4ec0\u4e48\u662fSTDOUT?",
-        "answer": "standard output\u7684\u9996\u5b57\u6bcd\u7f29\u5199",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "standard output\u7684\u9996\u5b57\u6bcd\u7f29\u5199"
-        ],
-        "options": [
-          "standard output\u7684\u9996\u5b57\u6bcd\u7f29\u5199",
-          "\u7528\u4e8e\u63a5\u6536input\u7684Linux\u7cfb\u7edf",
-          "standard output\u7684\u9996\u5b57\u6bcd\u7f29\u5199",
-          "\u7528\u4e8e\u63a5\u6536output\u7684Linux\u7cfb\u7edf"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c5a2bd9b7506d272a27ee499",
-        "question": "/etc/shadow\u4e2d\u7684\u5bc6\u7801\u5b58\u50a8\u4f4d\u7f6e\u662f\u4ec0\u4e48?",
-        "answer": "hashed",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "hashed"
-        ],
-        "options": [
-          "hashed",
-          "encrypted",
-          "hashed and salted",
-          "plain text"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b9e7b761a99869004da58e68",
-        "question": "\u54ea\u4e2astatement\u63cf\u8ff0\u4e86\u6b64\u4ee3\u7801?\n```bash\n#!/bin/bash\necho \"1=$1\"\necho \"2=$2\"\n```",
-        "answer": "$1\u548c$2\u662fpositional parameters\u4f20\u9012\u7ed9script\u3002",
-        "explanation": "[reference](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html)",
-        "hint": null,
-        "correctAnswer": [
-          "$1\u548c$2\u662fpositional parameters\u4f20\u9012\u7ed9script\u3002"
-        ],
-        "options": [
-          "\u53d8\u91cf\u662f\u73af\u5883\u53d8\u91cf,\u901a\u8fc7export\u4f20\u9012\u7ed9script\u3002",
-          "$1\u548c$2\u662fpositional parameters\u4f20\u9012\u7ed9script\u3002",
-          "$1\u662fscript\u7684\u7b2c\u4e00\u884c,$2\u662f\u7b2c\u4e8c\u884c\u3002",
-          "$1\u662f\u7b2c\u4e00\u4e2a\u8fdb\u7a0b\u7684process ID,$2\u662f\u7b2c\u4e8c\u4e2a\u8fdb\u7a0b\u7684process ID\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8de801d0048812a41ac9de6b",
-        "question": "\u811a\u672c\u53ef\u4ee5\u4eceuser\u63a5\u6536input\u7684\u65b9\u5f0f\u5305\u62ec\\_\\_\\_\\_\\_.",
-        "answer": "\u4ee5\u4e0a\u6240\u6709\u65b9\u5f0f",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u4ee5\u4e0a\u6240\u6709\u65b9\u5f0f"
-        ],
-        "options": [
-          "\u4f7f\u7528arguments\u4f20\u9012\u7ed9script",
-          "prompting user\u4ee5interactively\u8f93\u5165data",
-          "\u4ecefiles\u8bfb\u53d6",
-          "\u4ee5\u4e0a\u6240\u6709\u65b9\u5f0f"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "20a43bd067122fa61908de00",
-        "question": "\u8fd9\u4e2aexpression\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\necho \"$(( 4 * 5 + 3 / 2 ))\"\n```",
-        "answer": "21.5",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "21.5"
-        ],
-        "options": [
-          "11.5",
-          "21",
-          "21.5",
-          "11"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d4aabaf7682fa340205e3951",
-        "question": "\u54ea\u4e2astatement\u7528\u4e8e\u544a\u8bc9Bash\u6d4b\u8bd5\u53c2\u6570\u7684\u503c\u5e76\u8fd0\u884c\u4e0d\u540c\u7684statement\u5757\u53d6\u51b3\u4e8eparameter\u7684\u503c?",
-        "answer": "`case`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`case`"
-        ],
-        "options": [
-          "`for`",
-          "`while`",
-          "`case`",
-          "`until`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b430b1d242622d14dc7509ec",
-        "question": "stdout\u548cstderr\u662f\u4ee5\u4e0b\u54ea\u4e2a\u7684\u4f8b\u5b50?",
-        "answer": "output streams",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "output streams"
-        ],
-        "options": [
-          "text files",
-          "email files",
-          "output streams",
-          "configuration files"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "52c54d5c0c6d1869de567be5",
-        "question": "\u54ea\u4e2acommand\u641c\u7d22current directory\u548c\u6240\u6709subdirectories\u4e2d\u6240\u6709\u540d\u4e3asales.db\u7684files?",
-        "answer": "`find . -name sales.db`",
-        "explanation": "\u6ce8\u610f:\u4e24\u4e2a\u6b63\u786e\u7b54\u6848\u7684\u9009\u9879\u770b\u8d77\u6765\u76f8\u540c,\u8fd9\u53ef\u80fd\u662f\u539f\u59cb\u95ee\u9898\u7684\u6253\u5b57\u9519\u8bef\u3002",
-        "hint": null,
-        "correctAnswer": [
-          "`find . -name sales.db`"
-        ],
-        "options": [
-          "`find . -name sales.db`",
-          "`find . -name sales.db`",
-          "`find . -db sales.db`",
-          "`find . -file sales.db`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "48fa9e27c550d72254a17aaf",
-        "question": "\u5f53\u5c06output redirected\u5230files\u65f6,\u5b58\u5728\u8fd9\u4e9b\u64cd\u4f5c\u7b26 > \u548c >>\u3002\u5b83\u4eec\u6709\u4ec0\u4e48\u4e0d\u540c?",
-        "answer": "> \u8986\u76d6\u73b0\u6709file; >> \u8ffd\u52a0\u5230\u73b0\u6709file\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "> \u8986\u76d6\u73b0\u6709file; >> \u8ffd\u52a0\u5230\u73b0\u6709file\u3002"
-        ],
-        "options": [
-          "> \u5c06output\u5199\u5165file; >> \u5c06output\u53d1\u9001\u5230STDOUT\u3002",
-          "> \u5c06output\u53d1\u9001\u5230STDOUT; >> \u5c06output\u5199\u5165file\u3002",
-          "> \u8986\u76d6\u73b0\u6709file; >> \u8ffd\u52a0\u5230\u73b0\u6709file\u3002",
-          "> \u521b\u5efa\u65b0file; >> \u8986\u76d6\u73b0\u6709file\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "53c988a3a51c8253dafbc711",
-        "question": "\u6b64statement\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\nVAR=\"This old man came rolling\"\necho \"${VAR//man/rolling}\"\n```",
-        "answer": "This old rolling came rolling",
-        "explanation": "[reference](https://tldp.org/LDP/abs/html/string-manipulation.html)",
-        "hint": null,
-        "correctAnswer": [
-          "This old rolling came rolling"
-        ],
-        "options": [
-          "This old rolling came rolling",
-          "This old man came man",
-          "This old man came rolling",
-          "This old came"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "62f93702ca276960e649c52f",
-        "question": "statement `if [ -x \"$file\" ]` \u6d4b\u8bd5\u4ec0\u4e48?",
-        "answer": "file\u662f\u5426\u53ef\u6267\u884c",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "file\u662f\u5426\u53ef\u6267\u884c"
-        ],
-        "options": [
-          "file\u662f\u5426\u53ef\u7f16\u8f91",
-          "file\u662f\u5426\u53ef\u6267\u884c",
-          "file\u662f\u5426symbolic link",
-          "file\u662f\u5426\u7531root\u62e5\u6709"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ea9469aa1988c7bd92ad1a02",
-        "question": "\u54ea\u4e2aoption\u9002\u7528\u4e8e\u51fd\u6570\u548cshell execution environment?",
-        "answer": "`export`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`export`"
-        ],
-        "options": [
-          "`export`",
-          "`sudo`",
-          "`module`",
-          "`secure`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c628e5daec85aaf731ed930a",
-        "question": "\u54ea\u4e2acharacter\u5141\u8bb8\u60a8\u5728bash\u4e2d\u8fde\u63a5\u547d\u4ee4,\u4ee5\u4fbf\u5373\u4f7f\u4e00\u4e2a\u547d\u4ee4\u5931\u8d25\u4e5f\u4f1a\u8fd0\u884c\u6240\u6709\u547d\u4ee4?",
-        "answer": "`;`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`;`"
-        ],
-        "options": [
-          "`|`",
-          "`\\`",
-          "`;`",
-          "`&`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0ddf513164b35cf42aaa7239",
-        "question": "\u54ea\u4e2a\u9009\u9879\u7528\u4e8e\u6392\u5e8f\u548cunique?",
-        "answer": "`sort -u`",
-        "explanation": "[reference](https://man7.org/linux/man-pages/man1/sort.1.html)",
-        "hint": null,
-        "correctAnswer": [
-          "`sort -u`"
-        ],
-        "options": [
-          "`sort | uniq -u`",
-          "`sort -u`",
-          "`sort --unique`",
-          "`sort -uniq`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0c2b72aa32e5978b7f82ae0d",
-        "question": "\u5047\u8bbe\u5b58\u5728\u6587\u4ef6file.txt,\u4e0b\u5217statement\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\ncat file.txt | while IFS= read -r line; do\n  echo $line\ndone\n```",
-        "answer": "file.txt\u7684\u5185\u5bb9",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "file.txt\u7684\u5185\u5bb9"
-        ],
-        "options": [
-          "file.txt\u7684\u5185\u5bb9,\u6bcf\u884c\u524d\u9762\u6709\u884c\u53f7",
-          "file.txt\u7684\u5185\u5bb9",
-          "file.txt\u7684\u5185\u5bb9,\u6bcf\u884c\u540e\u9762\u6709\u884c\u53f7",
-          "file.txt\u7684\u5185\u5bb9,\u6240\u6709\u5185\u5bb9\u5728\u4e00\u884c"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "21622080b00e8bc5798de988",
-        "question": "\u4f7f\u7528command expansion,\u54ea\u4e2astatement\u5c06current shell\u66ff\u6362\u4e3anew shell?",
-        "answer": "`exec bash`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`exec bash`"
-        ],
-        "options": [
-          "`exec bash`",
-          "`source bash`",
-          "`new bash`",
-          "`open bash`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0edc28f1ce5969f13d222b95",
-        "question": "\u7ed9\u5b9a\u6b64snippet,\u54ea\u4e2astatement\u6b63\u786e\u63cf\u8ff0\u4e86$1?\n```bash\n#!/usr/bin/env bash\necho $1\n```",
-        "answer": "\u5b83\u662f\u8868\u793a\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u7684argument\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u5b83\u662f\u8868\u793a\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u7684argument\u3002"
-        ],
-        "options": [
-          "\u5b83\u662f\u8868\u793ascript name\u7684argument\u3002",
-          "\u5b83\u662f\u8868\u793a\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u7684argument\u3002",
-          "\u5b83\u662f\u8868\u793aprocess number(PID)\u7684argument\u3002",
-          "\u5b83\u662f\u8868\u793a\u811a\u672c\u9996\u6b21\u6267\u884c\u7684epoch time(\u4ee5\u6beb\u79d2\u4e3a\u5355\u4f4d)\u7684argument\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1fd1b1d5a928878f4515e0cf",
-        "question": "\u5047\u8bbe\u6587\u4ef6test.txt\u5305\u542b\u4ee5\u4e0bcontent,\u8fd9\u4e2aexpression\u7684\u7ed3\u679c\u662f\u4ec0\u4e48?\n```bash\ncat < test.txt > test.txt\n```",
-        "answer": "test.txt\u88ab\u8986\u76d6\u5e76\u53d8\u7a7a\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "test.txt\u88ab\u8986\u76d6\u5e76\u53d8\u7a7a\u3002"
-        ],
-        "options": [
-          ".txt\u7684\u5185\u5bb9\u88ab\u663e\u793a\u3002",
-          "\u51fa\u73b0\u4e00\u4e2a\u9519\u8bef,\u56e0\u4e3a\u65e0\u6cd5\u540c\u65f6\u6253\u5f00\u76f8\u540c\u7684file\u8fdb\u884creading\u548cwriting\u3002",
-          "test.txt\u88ab\u8986\u76d6\u5e76\u53d8\u7a7a\u3002",
-          "test.txt\u7684\u5185\u5bb9\u4e0d\u4f1a\u6539\u53d8\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "684f658a182791a6bb703c97",
-        "question": "\u4ec0\u4e48\u662f\u6b63\u786e\u6d4b\u8bd5\u53d8\u91cf\u5b58\u5728\u7684\u65b9\u6cd5?",
-        "answer": "`if [ \"$myvar\" ]; then echo \"Test was true\"; fi`",
-        "explanation": "\u6ce8\u610f:\u4e00\u4e9b\u6765\u6e90\u8bf4B\u662f\u6b63\u786e\u7684,\u56e0\u4e3a\u5b83\u6d4b\u8bd5\u53d8\u91cf\u662f\u5426\u6709\u503c\u3002\u4f46\u662f\u9898\u76ee\u95ee\u7684\u662f\"\u6d4b\u8bd5\u53d8\u91cf\u5b58\u5728\",\u6240\u4ee5C\u53ef\u80fd\u66f4\u51c6\u786e\u3002",
-        "hint": null,
-        "correctAnswer": [
-          "`if [ \"$myvar\" ]; then echo \"Test was true\"; fi`"
-        ],
-        "options": [
-          "`if [ -a \"$myvar\" ]; then echo \"Test was true\"; fi`",
-          "`if [ -n \"$myvar\" ]; then echo \"Test was true\"; fi`",
-          "`if [ \"$myvar\" ]; then echo \"Test was true\"; fi`",
-          "\u4ee5\u4e0a\u90fd\u4e0d\u662f"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fcc0e249f0642b77dd6a8f9f",
-        "question": "\u9664\u4e86while\u548cuntil\u4e4b\u5916,Bash\u652f\u6301\u7684\u53e6\u4e00\u4e2aloop construct\u662f\u4ec0\u4e48?",
-        "answer": "`for`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`for`"
-        ],
-        "options": [
-          "`for`",
-          "`do-while`",
-          "`repeat`",
-          "`loop`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "038c041966bd9f63f8c6f5d1",
-        "question": "\u5185\u90e8shell\u53d8\u91cf\u5305\u542b\\_\\_\\_\\_\\_\u3002",
-        "answer": "\u4ee5\u4e0a\u6240\u6709",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u4ee5\u4e0a\u6240\u6709"
-        ],
-        "options": [
-          "currently logged-in user",
-          "currently running process",
-          "system's hostname",
-          "\u4ee5\u4e0a\u6240\u6709"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "36cd16639cf81045e8fe28d7",
-        "question": "\u4e0b\u5217\u54ea\u4e2a\u4e0d\u662f\u6709\u6548\u7684bash shebang line?",
-        "answer": "`#!/bin/basher`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`#!/bin/basher`"
-        ],
-        "options": [
-          "`#!/bin/bash`",
-          "`#!/bin/sh`",
-          "`#!/bin/basher`",
-          "`#!/usr/bin/env bash`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "31e674b4af37b35504636cdf",
-        "question": "\u8fd9\u4e2acommand sequence\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\ncat <<EOF\n-------------------------\n   This is line 1.\n   This is line 2.\n   This is line 3.\n-------------------------\nEOF\n```",
-        "answer": "C",
-        "explanation": "```bash\nThis is line 1.\nThis is line 2.\nThis is line 3.\n```\n```bash\n-------------------------This is line 1.This is line 2.This is line 3.-------------------------\n```\n```bash\n-------------------------\nThis is line 1.\nThis is line 2.\nThis is line 3.\n-------------------------\n```\n```bash\n-------------------------\nThis is line 1.\nThis is line 2.\nThis is line 3.\n-------------------------\n```",
-        "hint": null,
-        "correctAnswer": [
-          "C"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a209992b136b268fe2554551",
-        "question": "\u4e0b\u5217\u54ea\u4e2a\u4e0d\u662f\u6709\u6548\u7684bash loop?",
-        "answer": "`do-until`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`do-until`"
-        ],
-        "options": [
-          "`until`",
-          "`do-until`",
-          "`for`",
-          "`while`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "07308dc964dce90d0950988e",
-        "question": "\u54ea\u4e2a\u7279\u6b8avariable\u4fdd\u5b58script PID?",
-        "answer": "`$$`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`$$`"
-        ],
-        "options": [
-          "`$$`",
-          "`$!`",
-          "`$?`",
-          "`$@`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "12bfd97df435e7d9e029aeb8",
-        "question": "\u4e0b\u5217\u54ea\u4e2a\u4e0d\u662ftest condition\u5e38\u7528\u7684\u7279\u6b8aparameter?",
-        "answer": "`$-`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`$-`"
-        ],
-        "options": [
-          "`$?`",
-          "`$-`",
-          "`$@`",
-          "`$0`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2613bd967e312f9241170dcc",
-        "question": "\u5f53\u6587\u4ef6\u4f7f\u7528tab-delimited fields\u65f6,\u60a8\u53ef\u80fd\u60f3\u8981\u8bbe\u7f6einternal field separator\u4e3a\u54ea\u4e2acharacter?",
-        "answer": "`\\t`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`\\t`"
-        ],
-        "options": [
-          "`\\t`",
-          "`\\s`",
-          "`\\n`",
-          "`\\d`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cd11be44bb28636af5ee2758",
-        "question": "\u54ea\u4e2ascript statement\u5c06\u521b\u5efa\u4e00\u4e2a\u53ef\u7531script\u5199\u5165\u7684file descriptor?",
-        "answer": "`exec 3>word.txt`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`exec 3>word.txt`"
-        ],
-        "options": [
-          "`exec 3>word.txt`",
-          "`exec 4<word.txt`",
-          "`exec 3>word.txt`",
-          "`exec 3>&1`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "855062cd6e7c8226c167e7b4",
-        "question": "\u60a8\u53ef\u4ee5\u68c0\u67e5\u54ea\u4e2aspecial variable\u4ee5\u9a8c\u8bc1script\u4e2d\u6700\u540e\u6267\u884c\u7684command\u6210\u529f?",
-        "answer": "`$?`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`$?`"
-        ],
-        "options": [
-          "`$$`",
-          "`$?`",
-          "`$!`",
-          "`$@`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cfd041f2f923b7a5705ea658",
-        "question": "\u6b64statement\u7684\u529f\u80fd\u662f\u4ec0\u4e48?\n```bash\nfor i in $(ls); do\n  echo $i\ndone\n```",
-        "answer": "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2afile\u5e76echo filename\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2afile\u5e76echo filename\u3002"
-        ],
-        "options": [
-          "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2afile\u5e76echo filename\u3002",
-          "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2adirectory\u5e76echo directory name\u3002",
-          "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2afile\u5e76echo file permissions\u3002",
-          "\u5b83\u904d\u5386\u5f53\u524ddirectory\u4e2d\u7684\u6bcf\u4e2adirectory\u5e76echo directory permissions\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f410b4b094c8a072f7cf23f8",
-        "question": "\u4ee5\u4e0b\u54ea\u4e2acharacters\u53ef\u4ee5\u91cd\u5b9a\u5411standard error stream?",
-        "answer": "`2>`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`2>`"
-        ],
-        "options": [
-          "`2>`",
-          "`3>`",
-          "`1>`",
-          "`&>`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "81f1bc5e7b7032e97833cbb9",
-        "question": "\u4ee5\u4e0b\u54ea\u4e2astatement\u6b63\u786e\u63cf\u8ff0\u4e86\u6b64\u811a\u672c?\n```bash\n#!/bin/bash\necho $1\n```",
-        "answer": "\u5b83\u8f93\u51fa\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u5b83\u8f93\u51fa\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u3002"
-        ],
-        "options": [
-          "\u5b83\u8f93\u51fascript\u7684\u7b2c\u4e00\u884c\u3002",
-          "\u5b83\u8f93\u51fa\u4f20\u9012\u7ed9script\u7684\u7b2c\u4e00\u4e2aargument\u3002",
-          "\u5b83\u8f93\u51fascript\u7684process ID(PID)\u3002",
-          "\u5b83\u8f93\u51fascript\u7684\u9996\u6b21\u6267\u884ctime(\u4ee5\u6beb\u79d2\u4e3a\u5355\u4f4d)\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "391f25ee274b367fc019073d",
-        "question": "\u5047\u8bbe\u60a8\u6709\u4e00\u4e2a\u5305\u542b\u591a\u4e2a.csv files\u7684directory\u3002\u60a8\u60f3\u6253\u5370\u51fa\u5305\u542b\u5b57\u7b26\u4e32\"profit\"\u7684\u6240\u6709\u6587\u4ef6\u7684\u7b2c\u4e09\u5217\u3002\u4ee5\u4e0b\u54ea\u4e2astatement\u53ef\u4ee5\u5b9e\u73b0\u6b64\u76ee\u7684?",
-        "answer": "`for file in *.csv; do grep profit $file | awk -F',' '{print $3}'; done`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`for file in *.csv; do grep profit $file | awk -F',' '{print $3}'; done`"
-        ],
-        "options": [
-          "`for file in *.csv; do awk -F',' '{print $3}' $file | grep profit; done`",
-          "`for file in *.csv; do grep profit $file | awk -F',' '{print $3}'; done`",
-          "`for file in *.csv; do grep -F',' profit $file | awk '{print $3}'; done`",
-          "`for file in *.csv; do awk '{print $3}' $file | grep -F',' profit; done`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d8ce85e5a839a89110638c9d",
-        "question": "\u4ee5\u4e0b\u547d\u4ee4\u7684\u8f93\u51fa\u4f1a\u662f\u4ec0\u4e48?\n```bash\nVAR='Hello World!'\necho ${VAR:6:5}\n```",
-        "answer": "World",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "World"
-        ],
-        "options": [
-          "World",
-          "Hello",
-          "World!",
-          "Hello World!"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "aab73a0d791a09762d371419",
-        "question": "\u5bf9\u4e8e\u540d\u4e3ajon\u7684user,\u4ee5\u4e0b\u547d\u4ee4\u7684\u7ed3\u679c\u662f\u4ec0\u4e48?\n```bash\necho 'Hello, $(whoami)!'\n```",
-        "answer": "Hello, $(whoami)!",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Hello, $(whoami)!"
-        ],
-        "options": [
-          "Hello, $(jon)!",
-          "Hello, jon!",
-          "Hello, $(whoami)!",
-          "Hello, whoami!"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7679ec067eb724dc5e74e6fe",
-        "question": "\u5982\u4f55\u901a\u8fc7\u538b\u7f29\u5c06directory\u590d\u5236\u5230\u53e6\u4e00\u7cfb\u7edf?",
-        "answer": "`tar cvzf - /wwwdata | ssh root@192.168.1.201 \"dd of=/backup/wwwdata.tar.gz\"`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`tar cvzf - /wwwdata | ssh root@192.168.1.201 \"dd of=/backup/wwwdata.tar.gz\"`"
-        ],
-        "options": [
-          "`tar -ssh user@192.158.1.1 /bin/newfile`",
-          "`tar cvzf - /wwwdata | ssh root@192.168.1.201 \"dd of=/backup/wwwdata.tar.gz\"`",
-          "\u65e0\u6cd5\u538b\u7f29stream",
-          "`scp -r directory user@192.168.1.1:/tmp`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "71ef69f4ec75ac09d02e2a4a",
-        "question": "\u8981\u5c06command `ls -lah` \u5206\u914d\u7ed9shortcut command `lh`,\u5e94\u8be5\u4f7f\u7528\u4ec0\u4e48\u547d\u4ee4?",
-        "answer": "`alias lh='ls -lah'`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`alias lh='ls -lah'`"
-        ],
-        "options": [
-          "`alias lh='ls -lah'`",
-          "`link lh='ls -lah'`",
-          "`alias 'ls -lah'=lh`",
-          "`lh | ls -lah`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "996f09591bc9de6b1f0efe03",
-        "question": "\u54ea\u4e2astatement\u4f1a\u6253\u5370home directory\u6216subdirectories\u4e2d\u6240\u6709\u5b8c\u6574\u8def\u5f84\u7684.csv files,\u540c\u65f6\u4e0d\u663e\u793a\u4efb\u4f55errors?",
-        "answer": "find $HOME -name \"\\*.csv\" 2>/dev/null",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "find $HOME -name \"\\*.csv\" 2>/dev/null"
-        ],
-        "options": [
-          "find $USER_DIR -name \"\\*.csv\" 2>/dev/null",
-          "find $HOME -name \"\\*.csv\" 1>/dev/null",
-          "find $HOME -name \"\\*.csv\" 2>/dev/null",
-          "find HOME -name \"\\*.csv\" 1>/dev/null"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8f5135cb8c2d690058a2fc1f",
-        "question": "\u5728Bash\u4e2d,\u9ed8\u8ba4prompt string\u672b\u5c3e\u7684#\u8868\u793a\u4ec0\u4e48?",
-        "answer": "\u7528\u6237\u4ee5root\u8eab\u4efd\u64cd\u4f5c",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u7528\u6237\u4ee5root\u8eab\u4efd\u64cd\u4f5c"
-        ],
-        "options": [
-          "\u7528\u6237\u4ee5root\u8eab\u4efd\u64cd\u4f5c",
-          "\u5f53\u524dworking directory\u662ffilesystem\u7684root",
-          "\u7cfb\u7edf\u6709updates\u53ef\u7528",
-          "\u7528\u6237\u662fnon-privileged user"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "345cedf69d90403703f71e06",
-        "question": "\u4ee5\u4e0b\u547d\u4ee4\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\n$ ls -l\nfile10.txt\nfile1.txt\nfileabc.txt\nfilea.txt\nfileb.txt\nfilec.txt\n$ ls -l file[^abc]*.txt\n```",
-        "answer": "A",
-        "explanation": "```bash\nfile1.txt\nfile10.txt\n```\n```bash\nfile10.txt\nfile1.txt\nfileabc.txt\nfilea.txt\nfileb.txt\nfilec.txt\n```\n```bash\nfileabc.txt filea.txt fileb.txt filec.txt\n```\n```bash\nfilea.txt\nfileb.txt\nfilec.txt\n```\n[reference](https://tldp.org/LDP/abs/html/globbingref.html)\n`\u6b64\u5904\u7684caret(^)\u8868\u793a\u5426\u5b9abrackets\u5185\u7684\u5339\u914d\u9879\u3002`",
-        "hint": null,
-        "correctAnswer": [
-          "A"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "87bd78fe9692aa9f5da27b25",
-        "question": "\u4ee5\u4e0bcommand sequence\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\ncat <<EOF\n------------------------\n   This is line 1.\n   This is line 2.\n   This is line 3.\n------------------------\nEOF\n```",
-        "answer": "C",
-        "explanation": "```bash\nThis is line 1.\nThis is line 2.\nThis is line 3.\n```\n```bash\n------------------------This is line 1.This is line 2.This is line 3.------------------------\n```\n```bash\n------------------------\nThis is line 1.\nThis is line 2.\nThis is line 3.\n------------------------\n```\n```bash\n------------------------\nThis is line 1.\nThis is line 2.\nThis is line 3.\n------------------------\n```",
-        "hint": null,
-        "correctAnswer": [
-          "C"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "65655d33f19139223e6ee1e4",
-        "question": "out.txt\u4e2d\u4f1a\u662f\u4ec0\u4e48\u5185\u5bb9?\n```bash\n#!/bin/bash\necho 123446789 > out.txt\nexec 3<> out.txt\nread -n 4 <&3\necho -n 5 >&3\nexec 3>&-\n```",
-        "answer": "123456789",
-        "explanation": "1. [I/O Redirection](https://tldp.org/LDP/abs/html/io-redirection.html)\n2. [What is the difference between \"echo\" and \"echo -n\"?](https://stackoverflow.com/questions/30761986/what-is-the-difference-between-echo-and-echo-n)",
-        "hint": null,
-        "correctAnswer": [
-          "123456789"
-        ],
-        "options": [
-          "123446789",
-          "hyphen character(-)",
-          "123456789",
-          "\u6570\u5b575,\u5b83\u901a\u8fc7echo\u5199\u5165\u6587\u4ef6"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ddc71d1bb00a6f221b1a1ec6",
-        "question": "\u54ea\u4e2a\u53d8\u91cf\u5305\u542bscript\u8fd0\u884c\u65f6\u7684process ID(PID)?",
-        "answer": "$$",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "$$"
-        ],
-        "options": [
-          "$ID",
-          "$#",
-          "$@",
-          "$$"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9b714ed293744c667c012388",
-        "question": "\u901a\u8fc7\u7ed3\u5408extended globbing\u548cparameter expansion,VAR\u7684\u503c\u4f1a\u662f\u4ec0\u4e48?\n```\n#!/bin/bash\nshopt -s extglob\nVAR='     This is...     a string of characters     '\nVAR=${VAR##+([[:space:]])}; VAR=${VAR%%+([[:space:]])};\necho \"$VAR\"\n```",
-        "answer": "`<pre>This is... a string of characters</pre>`",
-        "explanation": "Reference:\n1. [What is the meaning of the ${0##...} syntax with variable, braces and hash character in bash?](https://stackoverflow.com/questions/2059794/what-is-the-meaning-of-the-0-syntax-with-variable-braces-and-hash-chara)\n2. [What does expanding a variable as \"${var%%r\\*}\" mean in bash?](https://stackoverflow.com/questions/41859601/what-does-expanding-a-variable-as-varr-mean-in-bash)",
-        "hint": null,
-        "correctAnswer": [
-          "`<pre>This is... a string of characters</pre>`"
-        ],
-        "options": [
-          "`<pre> This is... a string of characters</pre>`",
-          "`<pre> This is...a string of characters</pre>`",
-          "`<pre>This is... a string of characters</pre>`",
-          "`<pre>This is...a string of characters</pre>`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "990228ccaa398d41eb9f3770",
-        "question": "\u54ea\u4e2aoperator\u544a\u8bc9shell\u5728background\u8fd0\u884c\u7ed9\u5b9acommand?",
-        "answer": "&",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "&"
-        ],
-        "options": [
-          "!",
-          "&&",
-          "&",
-          "$"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "21143ae8e23d488ff47e5741",
-        "question": "LINUX\u7cfb\u7edf\u4e2d\u7684nice number\u8303\u56f4\u662f?",
-        "answer": "-20\u523019",
-        "explanation": "[Reference](https://man7.org/linux/man-pages/man2/nice.2.html)",
-        "hint": null,
-        "correctAnswer": [
-          "-20\u523019"
-        ],
-        "options": [
-          "-20\u52300",
-          "-20\u523019",
-          "0\u523019",
-          "10\u523010"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e6981d430fb8ec0eb0de7544",
-        "question": "\u5728Bash\u4e2d,\u4ee5\u4e0bexpression\u7684\u7ed3\u679c\u662f\u4ec0\u4e48?\n```\necho $((4/3))\n```",
-        "answer": "1",
-        "explanation": "[Reference](https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-10.html)",
-        "hint": null,
-        "correctAnswer": [
-          "1"
-        ],
-        "options": [
-          "1.3",
-          "1.3333333333",
-          "1",
-          "2"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b7fc20a6a655dc15b34daa4e",
-        "question": "\u8981\u8ba9loop\u6301\u7eed\u8fd0\u884c\u76f4\u5230\u67d0\u4e2acondition\u53d8\u4e3atrue,\u4f60\u53ef\u80fd\u4f1a\u4f7f\u7528\u4ec0\u4e48?",
-        "answer": "while",
-        "explanation": "[Reference](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_09_02.html)",
-        "hint": null,
-        "correctAnswer": [
-          "while"
-        ],
-        "options": [
-          "if",
-          "case",
-          "while",
-          "for"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "046d7652bbb969d83638abf5",
-        "question": "\u4ee5\u4e0bcommand sequence\u7684\u4f5c\u7528\u662f\u4ec0\u4e48?\n```bash\ncat > notes -\n```",
-        "answer": "\u5b83\u4ecestandard input\u63a5\u53d7text\u5e76\u5c06\u5176\u653e\u5165\"notes\" file\u4e2d\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u5b83\u4ecestandard input\u63a5\u53d7text\u5e76\u5c06\u5176\u653e\u5165\"notes\" file\u4e2d\u3002"
-        ],
-        "options": [
-          "\u5b83\u521b\u5efa\u4e00\u4e2a\u540d\u4e3a\"notes\"\u7684\u7a7afile,\u7136\u540e\u9000\u51fa\u3002",
-          "\u5b83\u5c06\"notes\" file\u7684\u5185\u5bb9\u8f93\u51fa\u5230\u5c4f\u5e55,\u7136\u540e\u5220\u9664\u5b83\u3002",
-          "\u5b83\u4ecestandard input\u63a5\u53d7text\u5e76\u5c06\u5176\u653e\u5165\"notes\" file\u4e2d\u3002",
-          "\u5b83\u5c06text\u8ffd\u52a0\u5230\u4e00\u4e2a\u540d\u4e3a\"notes\"\u7684\u73b0\u6709file\u4e2d\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7be116e2cd2c16ea9fefabb6",
-        "question": "\u4f60\u60f3\u5339\u914d\u4e94\u4e2a\u5b57\u6bcd\u7684palindromes,\u4f8b\u5982radar\u3001rotor\u548ctenet\u3002\u5e94\u8be5\u4f7f\u7528\u54ea\u4e2ased option?",
-        "answer": "`sed -E -n '/^(.)(.)(.)\\2\\1$/p'`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`sed -E -n '/^(.)(.)(.)\\2\\1$/p'`"
-        ],
-        "options": [
-          "`sed -E -n '/^(.)(.)\\3\\2\\1$/p'`",
-          "`sed -E -n '/^(.)(.)(.).\\2\\1$/p'`",
-          "`sed -E -n '/^(.)(.)(.)\\2\\1$/p'`",
-          "`sed -E -n '/^(.)(.)(.)(.)\\3\\2\\1$/p'`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0d5a60489441f150d4d8be21",
-        "question": "\u8981\u5411\u5f53\u524denvironment\u6dfb\u52a0\u4e00\u4e2avalue,\u5e94\u8be5\u4f7f\u7528\u4ec0\u4e48command?",
-        "answer": "export",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "export"
-        ],
-        "options": [
-          "shell_add",
-          "save",
-          "echo",
-          "export"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "268e73465a8254c7b05ec778",
-        "question": "\u4ee5\u4e0b\u4e24\u4e2aconditional expressions\u6709\u4ec0\u4e48\u533a\u522b?\n```bash\n[[$A==$B]]\n[[$A -eq $B]]\n```",
-        "answer": "\u5b83\u4eec\u662f\u4e00\u6837\u7684\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u5b83\u4eec\u662f\u4e00\u6837\u7684\u3002"
-        ],
-        "options": [
-          "[[$A == $B]]\u7528\u4e8enumeric comparisons,\u800c[[$a-eq $B]]\u7528\u4e8etext comparisons\u3002",
-          "[[$A==$B]]\u662f\u8fdb\u884ccomparison\u7684\u65b0\u65b9\u6cd5,\u800c[[$a-eq $B]]\u662flegacy syntax\u3002",
-          "\u5b83\u4eec\u662f\u4e00\u6837\u7684\u3002",
-          "[[$A==$B]]\u7528\u4e8etext comparisons,\u800c[[$a-eq $B]]\u7528\u4e8enumeric comparisons\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5062d511c3e073b4955544a0",
-        "question": "\u4ee5\u4e0b\u4ee3\u7801\u7684\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\nVAR=\"united states\"\necho \"${VAR^}\"\n```",
-        "answer": "United states",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "United states"
-        ],
-        "options": [
-          "unitedstates",
-          "United States",
-          "United states",
-          "UNITED STATES"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "42d7c59718987932adcde5c6",
-        "question": "\u5982\u679c\u6309\u539f\u6837\u8fd0\u884c\u4ee5\u4e0bscript,\u4f1a\u53d1\u751f\u4ec0\u4e48?\n```bash\n#!/bin/bash\n#condition 1\nif [ $foo = \"bar\" ]; then echo \"foo is bar\"\nfi\n#condition 2\nif [[ $foo = \"bar\" ]]; then echo \"foo is bar\"\nfi\n```",
-        "answer": "\u4e24\u4e2aconditions\u90fd\u4f1a\u5931\u8d25\u3002",
-        "explanation": "**Explanation:**\u811a\u672c\u5982\u5199\u7684\u90a3\u6837\u4f1a\u8f93\u51fa`line 3: [: =: unary operator expected`\u3002\u5b9a\u4e49variable\u5e76assign value `foo=\"bar\"`,\u4e24\u4e2aconditions\u90fd\u4f1a\u6210\u529f\u3002",
-        "hint": null,
-        "correctAnswer": [
-          "\u4e24\u4e2aconditions\u90fd\u4f1a\u5931\u8d25\u3002"
-        ],
-        "options": [
-          "\u4e24\u4e2aconditions\u90fd\u4f1a\u5931\u8d25\u3002",
-          "\u4e24\u4e2aconditions\u90fd\u4f1a\u6210\u529f\u3002",
-          "Condition 1\u4f1a\u6210\u529f,Condition 2\u4f1a\u5931\u8d25\u3002",
-          "Condition 1\u4f1a\u5931\u8d25,Condition 2\u4f1a\u6210\u529f\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "70ff2ded57a5128df980fa17",
-        "question": "\u54ea\u4e2avariable\u5305\u542b\u4ececommand line\u4f20\u9012\u7ed9script\u7684arguments\u6570\u91cf?",
-        "answer": "`$#`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`$#`"
-        ],
-        "options": [
-          "`$#`",
-          "`$@`",
-          "`0`",
-          "`$!`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "06bd39a099c5ef161ec5ccc1",
-        "question": "\u5728Bash scripting\u4e2d,script\u5f00\u5934\u7684\"shebang\"(#!)\u8868\u793a\u4ec0\u4e48?\u4e3a\u4ec0\u4e48\u91cd\u8981?",
-        "answer": "\u5b83\u5e2e\u52a9system\u8bc6\u522bscript\u7684interpreter,\u786e\u4fdd\u4f7f\u7528\u6b63\u786e\u7684interpreter\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\u5b83\u5e2e\u52a9system\u8bc6\u522bscript\u7684interpreter,\u786e\u4fdd\u4f7f\u7528\u6b63\u786e\u7684interpreter\u3002"
-        ],
-        "options": [
-          "\u5b83\u6307\u793a\u5e94\u4f7f\u7528\u54ea\u4e2aBash interpreter\u6765\u6267\u884cscript\u3002",
-          "\u5b83\u6307\u5b9a\u8fd0\u884cscript\u6240\u9700\u7684Bash version\u3002",
-          "\u5b83\u5c06script\u6807\u8bb0\u4e3aexecutable\u3002",
-          "\u5b83\u5e2e\u52a9system\u8bc6\u522bscript\u7684interpreter,\u786e\u4fdd\u4f7f\u7528\u6b63\u786e\u7684interpreter\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c44d16541d487d1771c31e73",
-        "question": "\u54ea\u4e2avariable\u5305\u542bscript\u8fd0\u884c\u65f6\u7684process ID(PID)?",
-        "answer": "`$$`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`$$`"
-        ],
-        "options": [
-          "`$ID`",
-          "`$@`",
-          "`$#`",
-          "`$$`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0c81854f4a8579f25b5f9d6f",
-        "question": "\u5982\u679cuser\u60f3\u5728\u6ca1\u6709shebang line\u6216execute permissions\u7684\u60c5\u51b5\u4e0b\u6267\u884cscript sh,user\u5e94\u8be5\u8f93\u5165\u4ec0\u4e48?",
-        "answer": "'bash script.sh'\u3002",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "'bash script.sh'\u3002"
-        ],
-        "options": [
-          "\u6267\u884cshell script\u9700\u8981shebang line\u3002",
-          "'bash script.sh'\u3002",
-          "'exec script.sh'\u3002",
-          "\u6267\u884cshell script\u9700\u8981execute permissions\u3002"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "88d5fdcd21bc6ac45b51fc36",
-        "question": "\u4ee5\u4e0bcompound command\u7684\u6700\u53ef\u80fd\u8f93\u51fa\u662f\u4ec0\u4e48?\n```bash\ncat -n animals | sort -r | head -n 5\n```",
-        "answer": "d.",
-        "explanation": "```bash\n1\tAnt\n2\tBear\n3\tCat\n4\tDog\n5\tElephant\n```\n```bash\n9\tIbex\nB\tHippo\n7\tGiraffe\n6\tFox\n5\tElephant\n4\tDog\n3\tCat\n2\tBear\n1\tAnt10\tJaguar\n```\n```bash\nJaguar\nIbex\nHippo\nGiraffe\nFox\n```\n```bash\n9\tIbex\n8\tHippo\n7\tGiraffe\n6\tFox\n5\tElephant\n```",
-        "hint": null,
-        "correctAnswer": [
-          "d."
-        ],
-        "options": [
-          "a.",
-          "b.",
-          "c.",
-          "d."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0ff72ac33204a38807a841ae",
-        "question": "\u4ee5\u4e0b\u54ea\u4e2a\u4e0d\u662f\u6709\u6548\u7684Bash variable name?",
-        "answer": "`1var`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`1var`"
-        ],
-        "options": [
-          "`$HOME`",
-          "`my_var`",
-          "`1var`",
-          "`!`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8cff35cfea273d39ce9c4ad7",
-        "question": "\u5728Bash\u4e2d,\u521b\u5efa\u4e00\u4e2aone-liner command,\u9012\u5f52\u67e5\u627edirectory\u53ca\u5176subdirectories\u4e2d\u6240\u6709extension\u4e3a\".txt\"\u7684files,\u5e76\u7edf\u8ba1\u8fd9\u4e9bfiles\u7684\u603bline\u6570\u3002\u8f93\u51fa\u5e94\u4ec5\u663e\u793a\u603bline count\u3002\n\u4ee5\u4e0b\u54ea\u4e2aone-liner Bash command\u53ef\u4ee5\u5b8c\u6210\u6b64task?",
-        "answer": "`find . -name \"*.txt\" -exec cat {} \\; | wc -l`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`find . -name \"*.txt\" -exec cat {} \\; | wc -l`"
-        ],
-        "options": [
-          "`find . -name \"*.txt\" -exec wc -l {} \\; | awk '{total += $1} END {print total}'`",
-          "`grep -r \".*\\.txt$\" | wc -l`",
-          "`find . -type f -name \"*.txt\" | xargs wc -l | tail -n 1`",
-          "`find . -name \"*.txt\" -exec cat {} \\; | wc -l`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "26308c7c57a3895397eea5c9",
-        "question": "> \u548c >> redirection operators\u4e4b\u95f4\u6709\u4ec0\u4e48\u533a\u522b?",
-        "answer": "`> \u4f1a\u8986\u76d6target file\u7684\u5185\u5bb9,\u800c >> \u4f1a\u5c06\u5185\u5bb9\u8ffd\u52a0\u5230target file\u7684\u672b\u5c3e\u3002`",
-        "explanation": "[reference](https://www.shells.com/l/en-US/tutorial/Difference-between-%E2%80%9C%3E%E2%80%9D-and-%E2%80%9C%3E%3E%E2%80%9D-in-Linux#:~:text=So%2C%20what%20we%20learned%20is,to%20modify%20files%20in%20Linux.)",
-        "hint": null,
-        "correctAnswer": [
-          "`> \u4f1a\u8986\u76d6target file\u7684\u5185\u5bb9,\u800c >> \u4f1a\u5c06\u5185\u5bb9\u8ffd\u52a0\u5230target file\u7684\u672b\u5c3e\u3002`"
-        ],
-        "options": [
-          "`> \u4f1a\u8986\u76d6target file\u7684\u5185\u5bb9,\u800c >> \u4f1a\u5c06\u5185\u5bb9\u8ffd\u52a0\u5230target file\u7684\u672b\u5c3e\u3002`",
-          "`> \u7528\u4e8e\u91cd\u5b9a\u5411input,\u800c >> \u7528\u4e8e\u91cd\u5b9a\u5411output\u3002`",
-          "`> \u7528\u4e8estandard output,\u800c >> \u7528\u4e8estandard error\u3002`",
-          "`> \u662funary operator,\u800c >> \u662fbinary operator\u3002`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
       }
     ]
   },
   "meta": {
     "source": "bash/bash-quiz-ch.md",
-    "language": "ch",
-    "generatedAt": "2025-12-09T14:56:14.068465+00:00",
+    "languages": [
+      "ch"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.087077+00:00",
     "warnings": []
   }
 }

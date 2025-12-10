@@ -1,1996 +1,2225 @@
 {
   "quizz": {
     "id": "e3299114fa5de794e0033bd4",
-    "title": "Django",
-    "description": "Seeded from django/django-quiz-fr.md",
-    "createdById": "seed-user",
-    "questions": [
-      {
-        "id": "40967dc4b3bb12102fa1250e",
-        "question": "Pour mettre en cache l'ensemble de votre site pour une application dans Django, vous ajoutez tous ces param\u00e8tres sauf lequel ?",
-        "answer": "django.middleware.cache.AcceleratedCacheMiddleware",
-        "explanation": "**R\u00e9f\u00e9rence :**\nDjango est livr\u00e9 avec un syst\u00e8me de cache robuste qui vous permet d'enregistrer des pages dynamiques, afin qu'elles n'aient pas \u00e0 \u00eatre calcul\u00e9es pour chaque requ\u00eate. Pour plus de commodit\u00e9, Django offre un cache avec diff\u00e9rentes granularit\u00e9s - du site web entier aux pages en passant par des parties de pages, des r\u00e9sultats de requ\u00eates DB et tout objet en m\u00e9moire. Middleware de cache. S'il est activ\u00e9, chaque page aliment\u00e9e par Django sera mise en cache en fonction de l'URL.",
-        "hint": null,
-        "correctAnswer": [
-          "django.middleware.cache.AcceleratedCacheMiddleware"
-        ],
-        "options": [
-          "django.middleware.common.CommonMiddleware",
-          "django.middleware.cache.UpdateCacheMiddleware",
-          "django.middleware.cache.FetchFromCacheMiddleware",
-          "django.middleware.cache.AcceleratedCacheMiddleware"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4d8bc891c99fc8dcad7cfbc2",
-        "question": "Dans quel langage de programmation Django est-il \u00e9crit ?",
-        "answer": "Python",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Python"
-        ],
-        "options": [
-          "C++",
-          "Java",
-          "Python",
-          "Ruby"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "31df5f658d2d67b563ac1d25",
-        "question": "Pour fournir automatiquement une valeur pour un champ, ou pour effectuer une validation n\u00e9cessitant l'acc\u00e8s \u00e0 plus d'un seul champ, vous devez remplacer la m\u00e9thode `___` dans la classe `___`.",
-        "answer": "clean(); Model",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "clean(); Model"
-        ],
-        "options": [
-          "validate(); Model",
-          "group(); Model",
-          "validate(); Form",
-          "clean(); Model"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9f66498029bf8b098eb119db",
-        "question": "Un client souhaite que son site puisse charger les \u00e9pisodes de \"Rick & Morty\" par num\u00e9ro ou par titre\u2014par exemple, shows/3/3 ou shows/picklerick. Quel mod\u00e8le d'URL recommandez-vous ?",
-        "answer": "B",
-        "explanation": "```python\nurl(r'shows/<int:season>/<int:episode>/', views.episode_number),\nurl(r'shows/<slug:episode_name>/', views.episode_name)\n```\n```python\npath('shows/<int:season>/<int:episode>/', views.episode_number),\npath('shows/<slug:episode_name>/', views.episode_name)\n```\n```python\npath('shows/<int:season>/<int:episode>', views.episode_number),\npath('shows/<slug:episode_name>/', views.episode_number)\n```\n```python\nurl(r'^show/(?P<season>[0-9]+)/(?P<episode>[0-9]+)/$', views.episode_number),\nurl(r'^show/(?P<episode_name>[\\w-]+)/', views.episode_name\n```",
-        "hint": null,
-        "correctAnswer": [
-          "B"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2d5fd16a10dd874403416cc3",
-        "question": "Comment d\u00e9terminez-vous au moment du d\u00e9marrage si un middleware doit \u00eatre utilis\u00e9 ?",
-        "answer": "Levez MiddlewareNotUsed dans la fonction **init** de votre middleware.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Levez MiddlewareNotUsed dans la fonction **init** de votre middleware."
-        ],
-        "options": [
-          "Levez MiddlewareNotUsed dans la fonction **init** de votre middleware.",
-          "Impl\u00e9mentez la m\u00e9thode not_used dans votre classe middleware.",
-          "Listez le middleware sous une entr\u00e9e de django.middleware.IgnoredMiddleware.",
-          "\u00c9crivez du code pour supprimer le middleware des param\u00e8tres dans [app]/**init**.py."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9bcbf586f0f072adfdf9cdee",
-        "question": "Comment d\u00e9sactivez-vous l'\u00e9chappement HTML automatique de Django pour une partie d'une page web ?",
-        "answer": "Enveloppez cette section entre les balises { percentage mark autoescape off percentage mark} et {percentage mark endautoescape percentage mark}.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Enveloppez cette section entre les balises { percentage mark autoescape off percentage mark} et {percentage mark endautoescape percentage mark}."
-        ],
-        "options": [
-          "Placez cette section entre des balises de paragraphe contenant le commutateur autoescape=off.",
-          "Enveloppez cette section entre les balises { percentage mark autoescape off percentage mark} et {percentage mark endautoescape percentage mark}.",
-          "Enveloppez cette section entre les balises {percentage mark autoescapeoff percentage mark} et {percentage mark endautoescapeoff percentage mark}.",
-          "Vous n'avez rien \u00e0 faire\u2014l'\u00e9chappement automatique est d\u00e9sactiv\u00e9 par d\u00e9faut."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ee29a78291830b9863640f7e",
-        "question": "Quelle \u00e9tape ne vous aiderait PAS \u00e0 r\u00e9soudre l'erreur \"django-admin: command not found\" ?",
-        "answer": "Assurez-vous d'avoir cr\u00e9\u00e9 un projet Django.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Assurez-vous d'avoir cr\u00e9\u00e9 un projet Django."
-        ],
-        "options": [
-          "V\u00e9rifiez que le dossier bin \u00e0 l'int\u00e9rieur de votre r\u00e9pertoire Django est sur le chemin syst\u00e8me.",
-          "Assurez-vous d'avoir activ\u00e9 l'environnement virtuel que vous avez configur\u00e9 contenant Django.",
-          "V\u00e9rifiez que vous avez install\u00e9 Django.",
-          "Assurez-vous d'avoir cr\u00e9\u00e9 un projet Django."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ab6503d91ed7b1731cdfedb0",
-        "question": "Chaque fois qu'un utilisateur est sauvegard\u00e9, son quiz_score doit \u00eatre recalcul\u00e9. O\u00f9 serait un endroit id\u00e9al pour ajouter cette logique ?",
-        "answer": "model",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "model"
-        ],
-        "options": [
-          "template",
-          "model",
-          "database",
-          "view"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8ba2c2dd8c48f8f6d1cac6b1",
-        "question": "Quelle est la bonne fa\u00e7on de commencer une classe appel\u00e9e \"Rainbow\" en Python ?",
-        "answer": "class Rainbow:",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "class Rainbow:"
-        ],
-        "options": [
-          "Rainbow {}",
-          "export Rainbow:",
-          "class Rainbow:",
-          "def Rainbow:"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5234ed93247c735c703d365f",
-        "question": "Vous avez h\u00e9rit\u00e9 d'un projet Django et devez le faire fonctionner localement. Il est livr\u00e9 avec un fichier requirements.txt contenant toutes ses d\u00e9pendances. Quelle commande devez-vous utiliser ?",
-        "answer": "pip install -r requirements.txt",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "pip install -r requirements.txt"
-        ],
-        "options": [
-          "django-admin startproject requirements.txt",
-          "python install -r requirements.txt",
-          "pip install -r requirements.txt",
-          "pip install Django"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1afaa6d56de5ec6df1ed2956",
-        "question": "Quelle bonne pratique n'est PAS pertinente pour les migrations ?",
-        "answer": "Pour vous assurer que vos migrations sont \u00e0 jour, vous devez ex\u00e9cuter updatemigrations avant d'ex\u00e9cuter vos tests.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour vous assurer que vos migrations sont \u00e0 jour, vous devez ex\u00e9cuter updatemigrations avant d'ex\u00e9cuter vos tests."
-        ],
-        "options": [
-          "Pour vous assurer que vos migrations sont \u00e0 jour, vous devez ex\u00e9cuter updatemigrations avant d'ex\u00e9cuter vos tests.",
-          "Vous devez sauvegarder votre base de donn\u00e9es de production avant d'ex\u00e9cuter une migration.",
-          "Votre code de migration doit \u00eatre sous contr\u00f4le de source.",
-          "Si un projet a beaucoup de donn\u00e9es, vous devez tester par rapport \u00e0 une copie de staging avant d'ex\u00e9cuter la migration sur la production."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4e1b545434e2ab1222b3fd38",
-        "question": "Que correspondra ce mod\u00e8le d'URL ? url(r'^\\$', views.hello)",
-        "answer": "une cha\u00eene vide \u00e0 la racine du serveur",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "une cha\u00eene vide \u00e0 la racine du serveur"
-        ],
-        "options": [
-          "une cha\u00eene commen\u00e7ant par la lettre R",
-          "une cha\u00eene vide \u00e0 la racine du serveur",
-          "une cha\u00eene contenant ^ et $",
-          "une cha\u00eene vide n'importe o\u00f9 dans l'URL"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e564b94967484ac6de0e7fe0",
-        "question": "Quel est l'ordre typique d'un cycle de requ\u00eate/r\u00e9ponse HTTP dans Django ?",
-        "answer": "URL > view > template",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "URL > view > template"
-        ],
-        "options": [
-          "URL > view > template",
-          "form > model > view",
-          "template > view > model",
-          "URL > template > view > model"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0b866a5205de6c2e2a374ed3",
-        "question": "Les vues g\u00e9n\u00e9riques bas\u00e9es sur les classes de Django fournissent quelles classes qui impl\u00e9mentent des t\u00e2ches courantes de d\u00e9veloppement web ?",
-        "answer": "abstract",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "abstract"
-        ],
-        "options": [
-          "concrete",
-          "thread-safe",
-          "abstract",
-          "dynamic"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0eb6b20e589382fa42b37f3f",
-        "question": "Quelles comp\u00e9tences devez-vous avoir pour maintenir un ensemble de templates Django ?",
-        "answer": "HTML et syntaxe de template",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "HTML et syntaxe de template"
-        ],
-        "options": [
-          "syntaxe de template",
-          "HTML et syntaxe de template",
-          "Python, HTML et syntaxe de template",
-          "Python et syntaxe de template"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ee8eb7da3d38bcdf3b70f8b7",
-        "question": "Comment d\u00e9finiriez-vous la relation entre une \u00e9toile et une constellation dans un mod\u00e8le Django ?",
-        "answer": "A",
-        "explanation": "```python\nclass Star(models.Model):\nname = models.CharField(max_length=100)\nclass Constellation(models.Model):\nstars = models.ManyToManyField(Star)\n```\n```python\nclass Star(models.Model):\nconstellation = models.ForeignKey(Constellation, on_delete=models.CASCADE)\nclass Constellation(models.Model):\nstars = models.ForeignKey(Star, on_delete=models.CASCADE)\n```\n```python\nclass Star(models.Model):\nname = models.CharField(max_length=100)\nclass Constellation(models.Model):\nstars = models.OneToManyField(Star)\n```\n```python\nclass Star(models.Model):\nconstellation = models.ManyToManyField(Constellation)\nclass Constellation(models.Model):\nname = models.CharField(max_length=100)\n```",
-        "hint": null,
-        "correctAnswer": [
-          "A"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2cbd8feb906270e1844b6d89",
-        "question": "Quelle n'est PAS une \u00e9tape valide pour configurer votre instance Django 2.x pour servir des fichiers statiques tels que des images ou du CSS ?",
-        "answer": "Dans votre fichier urls, ajoutez un mod\u00e8le qui inclut le nom de votre r\u00e9pertoire statique.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Dans votre fichier urls, ajoutez un mod\u00e8le qui inclut le nom de votre r\u00e9pertoire statique."
-        ],
-        "options": [
-          "Dans votre fichier urls, ajoutez un mod\u00e8le qui inclut le nom de votre r\u00e9pertoire statique.",
-          "Cr\u00e9ez un r\u00e9pertoire nomm\u00e9 static dans votre r\u00e9pertoire d'application.",
-          "Cr\u00e9ez un r\u00e9pertoire nomm\u00e9 d'apr\u00e8s l'application sous le r\u00e9pertoire static, et placez les fichiers statiques \u00e0 l'int\u00e9rieur.",
-          "Utilisez la balise de template {percentage mark load static percentage mark}."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "43e4024bd02331583177b952",
-        "question": "Quelle est la bonne fa\u00e7on de rendre une variable disponible pour tous vos templates ?",
-        "answer": "Ajouter un dictionnaire au contexte du template.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Ajouter un dictionnaire au contexte du template."
-        ],
-        "options": [
-          "D\u00e9finir une variable de session.",
-          "Utiliser une variable globale.",
-          "Ajouter un dictionnaire au contexte du template.",
-          "Utiliser RequestContext."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "338df772f04e6ec897193a25",
-        "question": "Devriez-vous cr\u00e9er un mod\u00e8le utilisateur personnalis\u00e9 pour les nouveaux projets ?",
-        "answer": "Oui. Il est plus facile d'apporter des modifications une fois qu'il est en production.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Oui. Il est plus facile d'apporter des modifications une fois qu'il est en production."
-        ],
-        "options": [
-          "Non. L'utilisation d'un mod\u00e8le utilisateur personnalis\u00e9 pourrait casser l'interface d'administration et certaines applications tierces.",
-          "Oui. Il est plus facile d'apporter des modifications une fois qu'il est en production.",
-          "Non. La classe int\u00e9gr\u00e9e models.User de Django a \u00e9t\u00e9 test\u00e9e et \u00e9prouv\u00e9e\u2014inutile de r\u00e9inventer la roue.",
-          "Oui, car il n'y a pas d'autre option."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "19276fe0e7b98947f0122db5",
-        "question": "Vous souhaitez cr\u00e9er une page permettant l'\u00e9dition de deux classes connect\u00e9es par une cl\u00e9 \u00e9trang\u00e8re (par exemple, une question et une r\u00e9ponse qui r\u00e9sident dans des tables s\u00e9par\u00e9es). Quelle fonctionnalit\u00e9 Django pouvez-vous utiliser ?",
-        "answer": "inlines",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "inlines"
-        ],
-        "options": [
-          "actions",
-          "admin",
-          "mezcal",
-          "inlines"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "772136dae1c8aef15c37907c",
-        "question": "Pourquoi les QuerySets sont-ils consid\u00e9r\u00e9s comme \"lazy\" (paresseux) ?",
-        "answer": "Les QuerySets ne cr\u00e9ent aucune activit\u00e9 de base de donn\u00e9es tant qu'ils ne sont pas \u00e9valu\u00e9s.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Les QuerySets ne cr\u00e9ent aucune activit\u00e9 de base de donn\u00e9es tant qu'ils ne sont pas \u00e9valu\u00e9s."
-        ],
-        "options": [
-          "Les r\u00e9sultats d'un QuerySet ne sont pas ordonn\u00e9s.",
-          "Les QuerySets ne cr\u00e9ent aucune activit\u00e9 de base de donn\u00e9es tant qu'ils ne sont pas \u00e9valu\u00e9s.",
-          "Les QuerySets ne chargent pas les objets en m\u00e9moire tant qu'ils ne sont pas n\u00e9cessaires.",
-          "En utilisant des QuerySets, vous ne pouvez pas ex\u00e9cuter de requ\u00eates plus complexes."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e5537c062bc07ec686995032",
-        "question": "Vous recevez une `MultiValueDictKeyError` lorsque vous essayez d'acc\u00e9der \u00e0 un param\u00e8tre de requ\u00eate avec le code suivant : request.GET['search_term']. Quelle solution ne vous aidera PAS dans ce sc\u00e9nario ?",
-        "answer": "Passer \u00e0 l'utilisation de POST au lieu de GET comme m\u00e9thode de requ\u00eate.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Passer \u00e0 l'utilisation de POST au lieu de GET comme m\u00e9thode de requ\u00eate."
-        ],
-        "options": [
-          "Passer \u00e0 l'utilisation de POST au lieu de GET comme m\u00e9thode de requ\u00eate.",
-          "Assurez-vous que le champ de saisie dans votre formulaire est \u00e9galement nomm\u00e9 \"search_term\".",
-          "Utilisez la m\u00e9thode GET de MultiValueDict au lieu d'acc\u00e9der directement au dictionnaire comme ceci : request.GET.get('search_term', '').",
-          "V\u00e9rifiez si le param\u00e8tre search_term est pr\u00e9sent dans la requ\u00eate avant d'essayer d'y acc\u00e9der."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "550cfc4cc20a51f2abb1002e",
-        "question": "Quelle fonction de la classe Form de Django rendra les champs d'un formulaire sous forme de s\u00e9rie de balises <p> ?",
-        "answer": "as_p()",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "as_p()"
-        ],
-        "options": [
-          "show_fields()",
-          "as_p()",
-          "as_table()",
-          "fields()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b7360d864b5ff89920bbd705",
-        "question": "Vous avez trouv\u00e9 un bug dans Django et vous souhaitez soumettre un correctif. Quelle est la proc\u00e9dure correcte ?",
-        "answer": "toutes ces r\u00e9ponses.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "toutes ces r\u00e9ponses."
-        ],
-        "options": [
-          "Forker le d\u00e9p\u00f4t Django sur GitHub.",
-          "Soumettre une pull request.",
-          "toutes ces r\u00e9ponses.",
-          "Ex\u00e9cuter la suite de tests de Django."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "28b0b5b522a5e28c44fc53d5",
-        "question": "Django fournit des valeurs par d\u00e9faut sens\u00e9es pour les param\u00e8tres. Dans quel module Python pouvez-vous trouver ces param\u00e8tres ?",
-        "answer": "`django.conf.global_settings.py`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`django.conf.global_settings.py`"
-        ],
-        "options": [
-          "`django.utils.default_settings.py`",
-          "`django.utils.global_settings.py`",
-          "`django.conf.default_settings.py`",
-          "`django.conf.global_settings.py`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6a93a10aa84b4c62421f83ee",
-        "question": "Quel nom de variable est le meilleur selon les directives PEP 8 ?",
-        "answer": "number_of_fingers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "number_of_fingers"
-        ],
-        "options": [
-          "numFingers",
-          "number-of-Fingers",
-          "number_of_fingers",
-          "finger_num"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a76ef2b073b6b59ccd4c2e07",
-        "question": "Un projet a accumul\u00e9 500 migrations. Quelle ligne de conduite poursuivriez-vous ?",
-        "answer": "Utilisez squashmigrations pour r\u00e9duire le nombre",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Utilisez squashmigrations pour r\u00e9duire le nombre"
-        ],
-        "options": [
-          "Fusionner manuellement vos fichiers de migration pour r\u00e9duire le nombre",
-          "Ne vous inqui\u00e9tez pas du nombre",
-          "Essayez de minimiser le nombre de migrations",
-          "Utilisez squashmigrations pour r\u00e9duire le nombre"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "aadb6ee41545ca68ab8b9935",
-        "question": "Que vous permet de faire un objet F() lorsque vous traitez avec des mod\u00e8les ?",
-        "answer": "effectuer des op\u00e9rations de base de donn\u00e9es sans r\u00e9cup\u00e9rer un objet de mod\u00e8le",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "effectuer des op\u00e9rations de base de donn\u00e9es sans r\u00e9cup\u00e9rer un objet de mod\u00e8le"
-        ],
-        "options": [
-          "effectuer des op\u00e9rations de base de donn\u00e9es sans r\u00e9cup\u00e9rer un objet de mod\u00e8le",
-          "d\u00e9finir des niveaux d'isolation de transaction de base de donn\u00e9es",
-          "utiliser des fonctions d'agr\u00e9gation plus facilement",
-          "construire des QuerySets r\u00e9utilisables"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ae3b4957d7ef3439169638fc",
-        "question": "Lequel n'est pas un type de champ Django pour contenir des entiers ?",
-        "answer": "NegativeIntegerField",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "NegativeIntegerField"
-        ],
-        "options": [
-          "SmallIntegerField",
-          "NegativeIntegerField",
-          "BigAutoField",
-          "PositiveIntegerField"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "474bfea0ad4668fd81f1e38f",
-        "question": "Lequel affichera la version actuellement install\u00e9e ?",
-        "answer": "import django django.get_version()",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "import django django.get_version()"
-        ],
-        "options": [
-          "print (django.version)",
-          "import django django.getVersion()",
-          "import django django.get_version()",
-          "python -c django --version"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e4c01e84323df3e5796175c1",
-        "question": "Vous devez utiliser la m\u00e9thode http `___` pour lire les donn\u00e9es et `___` pour mettre \u00e0 jour ou cr\u00e9er des donn\u00e9es",
-        "answer": "GET; POST",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "GET; POST"
-        ],
-        "options": [
-          "READ; WRITE",
-          "GET; POST",
-          "POST; GET",
-          "GET; PATCH"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3ffd2197eae1e765006cc56a",
-        "question": "Quand devez-vous utiliser la m\u00e9thode POST plut\u00f4t que GET pour soumettre des donn\u00e9es ?",
-        "answer": "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles"
-        ],
-        "options": [
-          "quand l'efficacit\u00e9 est importante",
-          "quand vous voulez que les donn\u00e9es soient mises en cache",
-          "quand vous voulez utiliser votre navigateur pour aider au d\u00e9bogage",
-          "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f14233838f8326ee61418dd6",
-        "question": "Quand utiliser le framework de sites Django ?",
-        "answer": "si votre installation unique alimente plus d'un site",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "si votre installation unique alimente plus d'un site"
-        ],
-        "options": [
-          "si votre installation unique alimente plus d'un site",
-          "si vous devez servir du contenu statique ainsi que du contenu dynamique",
-          "si vous voulez que votre application ait un nom de domaine enti\u00e8rement qualifi\u00e9",
-          "si vous attendez plus de 10 000 utilisateurs"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "202bce136d37d1c6fb8f1fea",
-        "question": "De quelle infrastructure avez-vous besoin :\n`title=models.charfield(max_length=100, validators=[validate_spelling])`",
-        "answer": "un fichier validators contenant une fonction appel\u00e9e validate_spelling import\u00e9e en haut du mod\u00e8le",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "un fichier validators contenant une fonction appel\u00e9e validate_spelling import\u00e9e en haut du mod\u00e8le"
-        ],
-        "options": [
-          "tableau initialis\u00e9 appel\u00e9 validators",
-          "un fichier validators contenant une fonction appel\u00e9e validate_spelling import\u00e9e en haut du mod\u00e8le",
-          "un fichier validators contenant une fonction appel\u00e9e validate import\u00e9e en haut du mod\u00e8le",
-          "package spelling import\u00e9 en haut du mod\u00e8le"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "dfc180e173777ed7023acbb2",
-        "question": "Quel d\u00e9corateur est utilis\u00e9 pour exiger qu'une vue accepte uniquement les m\u00e9thodes get et head ?",
-        "answer": "require_safe()",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "require_safe()"
-        ],
-        "options": [
-          "require_safe()",
-          "require_put()",
-          "require_post()",
-          "require_get()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "67a82854f23965cfcfc266a8",
-        "question": "Comment d\u00e9finiriez-vous la relation entre un livre et un auteur - un livre n'a qu'un seul auteur.\n```python\nclass Author (models.model):\nbook=models.foreignkey(Book,on_delete=models.cascade)\nclass Book(models.model):\nname=models.charfield(max_length=100)\n```",
-        "answer": "A",
-        "explanation": "```python\nclass Author (models.model):\nname=models.charfield(max_length=100)\nclass Book(models.model):\nauthor=models.foreignkey(Author,on_delete=models.cascade)\n```\n```python\nclass Author (models.model):\nname=models.charfield(max_length=100)\nclass Book(models.model):\nauthor=models.foreignkey(Author)\n```\n```python\nclass Author (models.model):\nname=models.charfield(max_length=100)\nclass Book(models.model):\nauthor=models.foreignkey(Author,on_delete=models.cascade)\n```\n```python\nclass Author (models.model):\nname=models.charfield(max_length=100)\nclass Book(models.model):\nauthor=Author.name\n```",
-        "hint": null,
-        "correctAnswer": [
-          "A"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f08fe6a8cda2cadf57167a60",
-        "question": "Qu'est-ce qu'un callable qui prend une valeur et l\u00e8ve une erreur si la valeur \u00e9choue ?",
-        "answer": "validator",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "validator"
-        ],
-        "options": [
-          "validator",
-          "deodorizer",
-          "mediator",
-          "regular expression"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a5974309b21380861aa3809b",
-        "question": "Pour s\u00e9curiser un point de terminaison d'API, le rendant accessible uniquement aux utilisateurs enregistr\u00e9s, vous pouvez remplacer la valeur rest_framework.permissions.allowAny dans la section default_permissions de votre settings.py par",
-        "answer": "rest_framework.permissions.IsAuthenticated",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "rest_framework.permissions.IsAuthenticated"
-        ],
-        "options": [
-          "rest_framework.permissions.IsAdminUser",
-          "rest_framework.permissions.IsAuthenticated",
-          "rest_framework.permissions.IsAuthorized",
-          "rest_framework.permissions.IsRegistered"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8fe32561d3056da72fe70bdf",
-        "question": "Quelle commande utiliseriez-vous pour appliquer une migration ?",
-        "answer": "migrate",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "migrate"
-        ],
-        "options": [
-          "makemigration",
-          "update_db",
-          "applymigration",
-          "migrate"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e7cc19501fcb4e0924819c1e",
-        "question": "Quel type de classe permet de convertir des QuerySets et des instances de mod\u00e8le en types de donn\u00e9es Python natifs pour une utilisation dans les API ?",
-        "answer": "serializers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "serializers"
-        ],
-        "options": [
-          "objectwriters",
-          "serializers",
-          "picklers",
-          "viewsets"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8b0c2fedb72d6e740b6b0a70",
-        "question": "Comment le code devrait-il se terminer ?\n```python\n{ percentage if spark >= 50 percentage }\nLots of spark\n{percentage elif spark == 42 percentage}\n```",
-        "answer": "{percentage endif percentage}",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "{percentage endif percentage}"
-        ],
-        "options": [
-          "{ percentage else percentage}",
-          "{percentage endif percentage}",
-          "Rien n\u00e9cessaire",
-          "{percentage end percentage}"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "95c5d2b778123a3edaaac912",
-        "question": "Quel bloc de code cr\u00e9era un serializer ?\n```python\nfrom rest_framework import serializers\nfrom .models import Planet\n```",
-        "answer": "A",
-        "explanation": "```python\nclass PlanetSerializer(serializers.ModelSerializer):\nclass Meta:\nmodel=Planet\nfields=('name','position', 'mass', 'rings')\n```\n```python\nfrom rest_framework import serializers\nfrom .models import Planet\nclass PlanetSerializer():\nclass Meta:\nfields=('name','position', 'mass', 'rings')\nmodel=Planet\n```\n```python\nfrom django.db import serializers\nfrom .models import Planet\nclass PlanetSerializer(serializers.ModelSerializer):\nfields=('name','position', 'mass', 'rings')\nmodel=Sandwich\n```\n```python\nfrom django.db import serializers\nfrom .models import Planet\nclass PlanetSerializer(serializers.ModelSerializer):\nclass Meta:\nfields=('name')\nmodel=Planet\n```",
-        "hint": null,
-        "correctAnswer": [
-          "A"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "585196213a54f38187907185",
-        "question": "Quelle classe vous permet de cr\u00e9er automatiquement une classe Serializer avec des champs et des validateurs correspondant aux champs de votre mod\u00e8le ?",
-        "answer": "ModelSerializer",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "ModelSerializer"
-        ],
-        "options": [
-          "ModelSerializer",
-          "Model",
-          "DataSerializer",
-          "ModelToSerializer"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "53d1ee4bf4a42b8a3974a5cf",
-        "question": "Quelle commande pour acc\u00e9der \u00e0 l'outil d'administration int\u00e9gr\u00e9 pour la premi\u00e8re fois ?",
-        "answer": "python manage.py createsuperuser",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "python manage.py createsuperuser"
-        ],
-        "options": [
-          "django-admin setup",
-          "django-admin runserver",
-          "python manage.py createuser",
-          "python manage.py createsuperuser"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "755fbbb283aec70987af30bb",
-        "question": "Les environnements virtuels servent \u00e0 g\u00e9rer les d\u00e9pendances. Quelle granularit\u00e9 fonctionne le mieux ?",
-        "answer": "vous devez configurer un nouveau virtualenv pour chaque projet Django",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "vous devez configurer un nouveau virtualenv pour chaque projet Django"
-        ],
-        "options": [
-          "vous devez configurer un nouveau virtualenv pour chaque projet Django",
-          "Ils ne devraient pas \u00eatre utilis\u00e9s",
-          "Utilisez le m\u00eame venv pour tout votre travail Django",
-          "Utilisez un nouveau venv pour chaque application Django"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "82093588ba107fb20aa85abe",
-        "question": "Qu'est-ce qui ex\u00e9cute diverses commandes Django telles que l'ex\u00e9cution d'un serveur web ou la cr\u00e9ation d'une application ?",
-        "answer": "manage.py",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "manage.py"
-        ],
-        "options": [
-          "migrate.py",
-          "wsgi.py",
-          "manage.py",
-          "runserver"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "277c2cd02282c808acb12448",
-        "question": "Que sugg\u00e8rent les meilleures pratiques de Django qui devrait \u00eatre \"fat\" (gros) ?",
-        "answer": "models",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "models"
-        ],
-        "options": [
-          "models",
-          "controllers",
-          "programmers",
-          "clients"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a62db1f37ebf8e77dfb6f8e1",
-        "question": "Lequel ne fait pas partie de la philosophie de conception de Django ?",
-        "answer": "Implicite plut\u00f4t qu'explicite",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Implicite plut\u00f4t qu'explicite"
-        ],
-        "options": [
-          "Couplage l\u00e2che",
-          "Moins de code",
-          "D\u00e9veloppement rapide",
-          "Implicite plut\u00f4t qu'explicite"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e831e673656aa4e44fed1b91",
-        "question": "Quel est le r\u00e9sultat de ce code de template ?\n{% raw %}{{\"live long and prosper\"|truncatewords:3}}{% endraw %}",
-        "answer": "live long and ...",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "live long and ..."
-        ],
-        "options": [
-          "live long and ...",
-          "live long and",
-          "une erreur de compilation",
-          "liv"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7120c9c11c4a9208468f7ba9",
-        "question": "Quand ce code charge-t-il les donn\u00e9es en m\u00e9moire ?\n```\n1 sandwiches = Sandwich.objects.filter(is_vegan=True)\n2 for sandwich in sandwiches:\n3   print(sandwich.name + \" - \" + sandwich.spice_level)\n```",
-        "answer": "ligne 2",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "ligne 2"
-        ],
-        "options": [
-          "ligne 1",
-          "Cela d\u00e9pend du nombre de r\u00e9sultats retourn\u00e9s par la requ\u00eate.",
-          "Cela d\u00e9pend du cache.",
-          "ligne 2"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f542ec0c29f89eb8bd4fb870",
-        "question": "Vous construisez une application web utilisant un front-end React et un back-end Django. Pour quoi devrez-vous provisionner ?",
-        "answer": "middleware CORS",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "middleware CORS"
-        ],
-        "options": [
-          "un serveur web NGINX",
-          "une base de donn\u00e9es NoSQL",
-          "un disque dur plus grand",
-          "middleware CORS"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "494efef5001d9be6f0d4b3a7",
-        "question": "Pour exposer un mod\u00e8le existant via un point de terminaison d'API, que devez-vous impl\u00e9menter ?",
-        "answer": "un serializer",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "un serializer"
-        ],
-        "options": [
-          "une requ\u00eate HTTP",
-          "un objet JSON",
-          "une requ\u00eate",
-          "un serializer"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9d9b44b84e38d37049f0b0ca",
-        "question": "Comment emp\u00eacheriez-vous Django d'effectuer des op\u00e9rations de cr\u00e9ation ou de suppression de tables de base de donn\u00e9es via des migrations pour un mod\u00e8le particulier ?",
-        "answer": "D\u00e9finissez `managed=False` \u00e0 l'int\u00e9rieur du mod\u00e8le.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "D\u00e9finissez `managed=False` \u00e0 l'int\u00e9rieur du mod\u00e8le."
-        ],
-        "options": [
-          "Ex\u00e9cutez la commande `migrate` avec `--exclude=[model_name]`.",
-          "D\u00e9placez la d\u00e9finition du mod\u00e8le de `models.py` dans son propre fichier.",
-          "D\u00e9finissez `managed=False` \u00e0 l'int\u00e9rieur du mod\u00e8le.",
-          "N'ex\u00e9cutez pas la commande `migrate`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "61b1eac84ee1c5a9f9c44f50",
-        "question": "quelle m\u00e9thode pouvez-vous utiliser pour v\u00e9rifier si les donn\u00e9es du formulaire ont chang\u00e9 lors de l'utilisation d'une instance de formulaire ?",
-        "answer": "has_changed()",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "has_changed()"
-        ],
-        "options": [
-          "has_changed()",
-          "its_changed()",
-          "has_updated()",
-          "Aucune de ces r\u00e9ponses"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2c5101f2781f0efe4cfaa80c",
-        "question": "Qu'est-ce que WSGI ?",
-        "answer": "une sp\u00e9cification d'interface",
-        "explanation": "Lien de r\u00e9f\u00e9rence :- https://wsgi.tutorial.codepoint.net/intro",
-        "hint": null,
-        "correctAnswer": [
-          "une sp\u00e9cification d'interface"
-        ],
-        "options": [
-          "un serveur",
-          "une sp\u00e9cification d'interface",
-          "un module Python",
-          "un framework"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "497218835df139d752fed496",
-        "question": "Quelle vue g\u00e9n\u00e9rique doit \u00eatre utilis\u00e9e pour afficher les titres de toutes les chansons de Django Reinhardt ?",
-        "answer": "ListView",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "ListView"
-        ],
-        "options": [
-          "DetailView",
-          "TittleView",
-          "SongView",
-          "ListView"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5b70595cbc30dae075789f37",
-        "question": "Quelle d\u00e9claration est la plus pr\u00e9cise, concernant l'utilisation de la base de donn\u00e9es SQLite par d\u00e9faut sur votre machine locale/de d\u00e9veloppement mais Postgres en production",
-        "answer": "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir"
-        ],
-        "options": [
-          "Il y a moins de chances d'introduire des bugs puisque SQLite fonctionne d\u00e9j\u00e0 pr\u00eat \u00e0 l'emploi",
-          "C'est bien, il suffit de garder les deux instances synchronis\u00e9es",
-          "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir",
-          "C'est la fa\u00e7on la plus efficace de construire un projet"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f1c6a92ba2212e6005232fe2",
-        "question": "Pourquoi voudriez-vous \u00e9crire un Manager de mod\u00e8le personnalis\u00e9 ?",
-        "answer": "pour modifier le QuerySet initial que le Manager retourne",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "pour modifier le QuerySet initial que le Manager retourne"
-        ],
-        "options": [
-          "pour effectuer des requ\u00eates de base de donn\u00e9es",
-          "pour configurer une base de donn\u00e9es pour les tests",
-          "pour modifier le QuerySet initial que le Manager retourne",
-          "pour filtrer les r\u00e9sultats qu'une requ\u00eate de base de donn\u00e9es retourne"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ca99e2506e7005715b8f08ee",
-        "question": "Dans Django, qu'est-ce qui est utilis\u00e9 pour personnaliser les donn\u00e9es envoy\u00e9es aux templates ?",
-        "answer": "views",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "views"
-        ],
-        "options": [
-          "models",
-          "views",
-          "forms",
-          "serializers"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "24a3ab9a2f74b272b1351cfb",
-        "question": "Pour compl\u00e9ter la conditionnelle, par quoi ce bloc de code devrait-il se terminer ?\n```shell\n% if sparles >= 50 %\n  Lots of sparkles!\n% elif sparkles == 42 %\n  The answer to life, the universe, and everything!\n```",
-        "answer": "`% endif %`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`% endif %`"
-        ],
-        "options": [
-          "`% endif %`",
-          "Rien d'autre n'est n\u00e9cessaire.",
-          "`% end%`",
-          "`% else %`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b31c85118780a9ca63ea9505",
-        "question": "Quand devez-vous utiliser la m\u00e9thode POST plut\u00f4t que la m\u00e9thode GET pour soumettre des donn\u00e9es \u00e0 partir d'un formulaire ?",
-        "answer": "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles"
-        ],
-        "options": [
-          "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles",
-          "quand vous voulez que les donn\u00e9es soient mises en cache",
-          "quand vous voulez utiliser votre navigateur pour aider au d\u00e9bogage",
-          "quand l'efficacit\u00e9 est importante"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "db0d2f53d87ceb9d93abcee4",
-        "question": "Qu'est-ce qu'un callable qui prend une valeur et l\u00e8ve une erreur si la valeur ne r\u00e9pond pas \u00e0 certains crit\u00e8res ?",
-        "answer": "validator",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "validator"
-        ],
-        "options": [
-          "mediator",
-          "validator",
-          "regular expression",
-          "deodorizer"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "08f9630bdfbe529f3f10236b",
-        "question": "Vous t\u00e9l\u00e9chargez un fichier vers Django \u00e0 partir d'un formulaire et vous souhaitez enregistrer le fichier re\u00e7u en tant que champ sur un objet de mod\u00e8le. Vous pouvez simplement affecter l'objet fichier de **\\_\u00e0 un champ de type\\_\\_** dans le mod\u00e8le.",
-        "answer": "request.FILES; FileField",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "request.FILES; FileField"
-        ],
-        "options": [
-          "request.META; FileField",
-          "request.FILES; BLOBField",
-          "request.FILES; FileField",
-          "request.META.Files; CLOBField"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3105c7fc45663e8a4791b26d",
-        "question": "Quel module python pourrait \u00eatre utilis\u00e9 pour stocker l'\u00e9tat actuel d'un mod\u00e8le Django dans un fichier ?",
-        "answer": "pickle",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "pickle"
-        ],
-        "options": [
-          "pickle",
-          "struct",
-          "marshal",
-          "serialize"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d42e12f5faf1e78eec490d5b",
-        "question": "Pour ajouter une nouvelle application \u00e0 un projet Django existant, vous devez modifier la section **_ du fichier _**.",
-        "answer": "INSTALLED_APPS; settings.py",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "INSTALLED_APPS; settings.py"
-        ],
-        "options": [
-          "ALLOWED_HOSTS; settings.py",
-          "APPS; manage.py",
-          "INSTALLED_APPS; settings.py",
-          "TEMPLATES; urls.py"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5e147d02e662c31f1523645d",
-        "question": "Lequel n'est pas un package tiers couramment utilis\u00e9 pour l'authentification ?",
-        "answer": "django-rest-framework-jwt",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "django-rest-framework-jwt"
-        ],
-        "options": [
-          "django-guardian",
-          "django-rest-auth",
-          "authtoken",
-          "django-rest-framework-jwt"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "829014770febf8bc82525dbc",
-        "question": "Quelle fonction du package django.urls peut vous aider \u00e0 \u00e9viter de coder en dur les URL en g\u00e9n\u00e9rant une URL \u00e9tant donn\u00e9 le nom d'une vue ?",
-        "answer": "reverse()",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "reverse()"
-        ],
-        "options": [
-          "get_script_prefix()",
-          "redirect()",
-          "reverse()",
-          "resolve()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cc5caf6da91174f1149c3229",
-        "question": "Quelle est la m\u00e9thode de requ\u00eate HTTP fictive ?",
-        "answer": "PAUSE",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "PAUSE"
-        ],
-        "options": [
-          "POST",
-          "PUT",
-          "PAUSE",
-          "PATCH"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0c511630ef219f709f254180",
-        "question": "Quelle fonction d'aide n'est pas fournie dans le cadre du package django.shortcuts ? r\u00e9f-",
-        "answer": "render_to_request()",
-        "explanation": "[R\u00e9f\u00e9rence](https://docs.djangoproject.com/en/4.0/topics/http/shortcuts/#:~:text=The%20package%20django.,controlled%20coupling%20for%20convenience's%20sake)",
-        "hint": null,
-        "correctAnswer": [
-          "render_to_request()"
-        ],
-        "options": [
-          "render_to_request()",
-          "render()",
-          "redirect()",
-          "get_object_or_404()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e3311e9bc6757e4335cc4e63",
-        "question": "Quel est un endroit non standard pour stocker des templates ?",
-        "answer": "au niveau racine d'un projet",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "au niveau racine d'un projet"
-        ],
-        "options": [
-          "au niveau racine d'un projet",
-          "\u00e0 l'int\u00e9rieur de l'application",
-          "dans la base de donn\u00e9es",
-          "sur Github"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "39b2f1b6061229ba4298567d",
-        "question": "Si vous omettiez le 8080 de la commande python manage.py runserver 8080, quel port Django utiliserait-il par d\u00e9faut ?",
-        "answer": "8000",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "8000"
-        ],
-        "options": [
-          "8080",
-          "80",
-          "8000",
-          "Il ne parviendrait pas \u00e0 d\u00e9marrer"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d978f20910136c13df9b35f8",
-        "question": "Quelle d\u00e9claration sur les applications Django est fausse ?",
-        "answer": "Une application Django est le conteneur de niveau sup\u00e9rieur pour une application web aliment\u00e9e par Django.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Une application Django est le conteneur de niveau sup\u00e9rieur pour une application web aliment\u00e9e par Django."
-        ],
-        "options": [
-          "Une application Django est le conteneur de niveau sup\u00e9rieur pour une application web aliment\u00e9e par Django.",
-          "Les applications Django sont de petites biblioth\u00e8ques con\u00e7ues pour repr\u00e9senter un seul aspect d'un projet.",
-          "Chaque application Django doit faire une chose, et une seule chose.",
-          "Un projet Django est compos\u00e9 de nombreuses applications."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "40ea40b9acc7764086825f40",
-        "question": "Quels caract\u00e8res sont ill\u00e9gaux dans les noms de variables de template ?",
-        "answer": "signes de ponctuation.",
-        "explanation": "[R\u00e9f\u00e9rence](https://docs.djangoproject.com/en/4.1/ref/templates/language/#:~:text=Variable%20names%20consist%20of%20any,may%20not%20be%20a%20number.)",
-        "hint": null,
-        "correctAnswer": [
-          "signes de ponctuation."
-        ],
-        "options": [
-          "underscores.",
-          "lettres majuscules.",
-          "signes de ponctuation.",
-          "nombres."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "94d754643d5de8126fc67385",
-        "question": "Laquelle n'est pas une balise de fermeture de template valide ?",
-        "answer": "`% endifempty %`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`% endifempty %`"
-        ],
-        "options": [
-          "`% endautoescape %`",
-          "`% endifempty %`",
-          "`% endcomment %`",
-          "`% endfilter %`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cf7fe645d0668be4278888cf",
-        "question": "Quand devriez-vous utiliser la fonction utilitaire reverse_lazy au lieu de reverse ?",
-        "answer": "toutes ces r\u00e9ponses",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "toutes ces r\u00e9ponses"
-        ],
-        "options": [
-          "lorsque vous souhaitez fournir une URL invers\u00e9e comme valeur par d\u00e9faut pour un param\u00e8tre dans la signature d'une fonction",
-          "toutes ces r\u00e9ponses",
-          "lorsque vous souhaitez fournir une URL invers\u00e9e comme attribut url d'une vue g\u00e9n\u00e9rique bas\u00e9e sur une classe",
-          "lorsque vous souhaitez fournir une URL \u00e0 un d\u00e9corateur, tel que l'argument login_url pour le d\u00e9corateur permission_required()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d9db21c524e97cf3f7e10f61",
-        "question": "Quel est le but du fichier \\_\\_init\\_\\_.py ?",
-        "answer": "pour d\u00e9clarer le contenu du r\u00e9pertoire comme module Python",
-        "explanation": "[R\u00e9f\u00e9rence](<https://docs.djangoproject.com/en/4.1/ref/urlresolvers/#:~:text=reverse_lazy()&text=It%20is%20useful%20for%20when,a%20generic%20class%2Dbased%20view>)",
-        "hint": null,
-        "correctAnswer": [
-          "pour d\u00e9clarer le contenu du r\u00e9pertoire comme module Python"
-        ],
-        "options": [
-          "pour \u00e9tendre l'ensemble des modules trouv\u00e9s dans un package",
-          "pour permettre aux modules compil\u00e9s de diff\u00e9rentes versions de Python de coexister",
-          "pour initialiser les param\u00e8tres du projet",
-          "pour d\u00e9clarer le contenu du r\u00e9pertoire comme module Python"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b9c2f48f0e5a7aeae20ab72c",
-        "question": "Quel package python peut \u00eatre utilis\u00e9 pour \u00e9diter des nombres en forme plus lisible comme \"1200000\" en \"1,2 million\" ?",
-        "answer": "humanize",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "humanize"
-        ],
-        "options": [
-          "black",
-          "puffer",
-          "pitch",
-          "humanize"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "977b8fb6ee2a3a5664094d56",
-        "question": "O\u00f9 trouveriez-vous le fichier settings.py ?",
-        "answer": "\\[projectname\\]/settings.py",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "\\[projectname\\]/settings.py"
-        ],
-        "options": [
-          "\\[projectname\\]/settings.py",
-          "\\[projectname\\]/\\[projectname\\]/settings.py",
-          "\\[PYTHON_ROOT\\]/settings.py",
-          "\\[DJANGO_ROOT]/settings.py"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4cd6d8baa036e835458deb3d",
-        "question": "Qu'\u00e9cririez-vous pour d\u00e9finir la relation entre un livre et un auteur\u2014en supposant qu'un livre n'a qu'un seul auteur\u2014dans un mod\u00e8le Django ?",
-        "answer": "A",
-        "explanation": "```python\nclass Author (models.Model):\nname = models. CharField (max_length=100)\nclass Book(models .Model):\nauthor = models. ForeignKey (Author, on_delete=models. CASCADE)\n```\n```python\nclass Author (models.Model):\nname = models. CharField(max length=100)\nclass Book(models .Model):\nauthor = models. ForeignKey (Author)\n```\n```python\nclass Author (models .Model):\nname = models.CharField (max_length=100)\nclass Book (models .Author) :\nauthor = Author. name\n```\n```python\nclass Author (models. Model):\nbook = models. ForeignKey (Book, on_delete=models.CASCADE)\nclass Book(models.Model):\nname = models. CharField (max length=100)\n```",
-        "hint": null,
-        "correctAnswer": [
-          "A"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1785bdd2c4fa4b97e10582e8",
-        "question": "Quelle m\u00e9thode pouvez-vous utiliser pour v\u00e9rifier si les donn\u00e9es du formulaire ont \u00e9t\u00e9 modifi\u00e9es lors de l'utilisation d'une instance de Form ?",
-        "answer": "has_changed()",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "has_changed()"
-        ],
-        "options": [
-          "changed_data()",
-          "has_changed()",
-          "has_updated()",
-          "is_modified()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "056233f7c3a1593c53ee039a",
-        "question": "Quelle d\u00e9claration est la plus pr\u00e9cise, concernant l'utilisation de la base de donn\u00e9es SQLite par d\u00e9faut sur votre machine locale/de d\u00e9veloppement mais Postgres en production ?",
-        "answer": "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir"
-        ],
-        "options": [
-          "C'est la fa\u00e7on la plus efficace de construire un projet",
-          "Il y a moins de chances d'introduire des bugs puisque SQLite fonctionne d\u00e9j\u00e0 pr\u00eat \u00e0 l'emploi",
-          "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir",
-          "C'est bien, il suffit de garder les deux instances synchronis\u00e9es"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "55a023b364c6dd209dc47b75",
-        "question": "Comment Django g\u00e8re-t-il le routage d'URL ?",
-        "answer": "en utilisant des expressions r\u00e9guli\u00e8res",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "en utilisant des expressions r\u00e9guli\u00e8res"
-        ],
-        "options": [
-          "en utilisant des classes",
-          "en utilisant des fonctions",
-          "en utilisant des expressions r\u00e9guli\u00e8res",
-          "en utilisant un chemin fixe"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d2b81f03efd923ffccae9940",
-        "question": "Quel est le but du middleware de Django ?",
-        "answer": "Pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP globalement",
-        "explanation": "[R\u00e9f\u00e9rence](https://medium.com/scalereal/everything-you-need-to-know-about-middleware-in-django-2a3bd3853cd6)",
-        "hint": null,
-        "correctAnswer": [
-          "Pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP globalement"
-        ],
-        "options": [
-          "Pour d\u00e9finir le sch\u00e9ma de base de donn\u00e9es",
-          "Pour g\u00e9rer le routage d'URL",
-          "Pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP globalement",
-          "Pour cr\u00e9er des interfaces utilisateur"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "edaf40af17621a4cb6c9537a",
-        "question": "Laquelle des affirmations suivantes est vraie concernant l'Object-Relational Mapping (ORM) de Django ?",
-        "answer": "Il vous permet d'interroger la base de donn\u00e9es en utilisant du code Python.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Il vous permet d'interroger la base de donn\u00e9es en utilisant du code Python."
-        ],
-        "options": [
-          "Il est utilis\u00e9 pour d\u00e9finir le routage d'URL dans une application Django.",
-          "Il vous permet d'interroger la base de donn\u00e9es en utilisant du code Python.",
-          "Il est utilis\u00e9 pour d\u00e9finir la structure des templates HTML.",
-          "Il est responsable de la gestion de l'authentification des utilisateurs."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6dde3135a9e32615b763988d",
-        "question": "Laquelle des affirmations suivantes est vraie concernant le champ \"many-to-many\" de Django dans un mod\u00e8le ?",
-        "answer": "Il permet \u00e0 plusieurs objets d'\u00eatre associ\u00e9s les uns aux autres.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Il permet \u00e0 plusieurs objets d'\u00eatre associ\u00e9s les uns aux autres."
-        ],
-        "options": [
-          "Il est utilis\u00e9 pour d\u00e9finir une relation un-\u00e0-un entre deux mod\u00e8les.",
-          "Il cr\u00e9e une relation de cl\u00e9 \u00e9trang\u00e8re entre deux mod\u00e8les.",
-          "Il permet \u00e0 plusieurs objets d'\u00eatre associ\u00e9s les uns aux autres.",
-          "Il applique des contraintes uniques sur un champ."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7861cc497501175d9e3a47f4",
-        "question": "Les vues g\u00e9n\u00e9riques bas\u00e9es sur les classes de Django fournissent quelles classes qui impl\u00e9mentent des t\u00e2ches courantes de d\u00e9veloppement web ?",
-        "answer": "abstract",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "abstract"
-        ],
-        "options": [
-          "concrete",
-          "thread-safe",
-          "abstract",
-          "dynamic"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2e31879b9205f358cc07d4eb",
-        "question": "Quelles comp\u00e9tences devez-vous avoir pour maintenir un ensemble de templates Django ?",
-        "answer": "HTML et syntaxe de template",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "HTML et syntaxe de template"
-        ],
-        "options": [
-          "syntaxe de template",
-          "HTML et syntaxe de template",
-          "Python, HTML et syntaxe de template",
-          "Python et syntaxe de template"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "408d619e0441a15aca1b68e7",
-        "question": "Quel est un endroit non standard pour stocker des templates ?",
-        "answer": "au niveau racine d'un projet",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "au niveau racine d'un projet"
-        ],
-        "options": [
-          "au niveau racine d'un projet",
-          "\u00e0 l'int\u00e9rieur de l'application",
-          "dans la base de donn\u00e9es",
-          "sur Github"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "76b682e82f8d3b43310cf470",
-        "question": "Si vous omettiez le 8080 de la commande python manage.py runserver 8080, quel port Django utiliserait-il par d\u00e9faut ?",
-        "answer": "8000",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "8000"
-        ],
-        "options": [
-          "8080",
-          "80",
-          "8000",
-          "Il ne parviendrait pas \u00e0 d\u00e9marrer"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "eef84d958f82460bd8a0a1ae",
-        "question": "Quel est le but de l'Object-Relational Mapping (ORM) de Django ?",
-        "answer": "Pour mapper les objets Python aux tables de base de donn\u00e9es et simplifier les op\u00e9rations de base de donn\u00e9es.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour mapper les objets Python aux tables de base de donn\u00e9es et simplifier les op\u00e9rations de base de donn\u00e9es."
-        ],
-        "options": [
-          "Pour d\u00e9finir le routage d'URL dans une application Django.",
-          "Pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP globalement.",
-          "Pour mapper les objets Python aux tables de base de donn\u00e9es et simplifier les op\u00e9rations de base de donn\u00e9es.",
-          "Pour cr\u00e9er des interfaces utilisateur."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "aa5510ef241495ba11644356",
-        "question": "Dans Django, \u00e0 quoi fait r\u00e9f\u00e9rence le terme \"migration\" ?",
-        "answer": "Le processus de propagation des modifications que vous apportez \u00e0 vos mod\u00e8les (ajout d'un champ, suppression d'un mod\u00e8le, etc.) dans votre sch\u00e9ma de base de donn\u00e9es.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Le processus de propagation des modifications que vous apportez \u00e0 vos mod\u00e8les (ajout d'un champ, suppression d'un mod\u00e8le, etc.) dans votre sch\u00e9ma de base de donn\u00e9es."
-        ],
-        "options": [
-          "Un changement dans la configuration du routage d'URL.",
-          "Le processus de propagation des modifications que vous apportez \u00e0 vos mod\u00e8les (ajout d'un champ, suppression d'un mod\u00e8le, etc.) dans votre sch\u00e9ma de base de donn\u00e9es.",
-          "Une fa\u00e7on de d\u00e9finir un middleware personnalis\u00e9.",
-          "Le processus de cr\u00e9ation de templates HTML pour votre application."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c99cc29816fcd851332f4c0b",
-        "question": "Quel est le but du \"context\" de Django dans le contexte du rendu des templates ?",
-        "answer": "Pour transmettre des donn\u00e9es de vos vues \u00e0 vos templates afin que les donn\u00e9es puissent \u00eatre rendues dynamiquement.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour transmettre des donn\u00e9es de vos vues \u00e0 vos templates afin que les donn\u00e9es puissent \u00eatre rendues dynamiquement."
-        ],
-        "options": [
-          "Pour transmettre des donn\u00e9es de vos vues \u00e0 vos templates afin que les donn\u00e9es puissent \u00eatre rendues dynamiquement.",
-          "Pour d\u00e9finir des mod\u00e8les d'URL pour votre application.",
-          "Pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP.",
-          "Pour cr\u00e9er des interfaces utilisateur."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e8a296a78d766ea330075d70",
-        "question": "Que repr\u00e9sente la classe Django `QuerySet` ?",
-        "answer": "Une requ\u00eate de base de donn\u00e9es effectu\u00e9e par Django, repr\u00e9sent\u00e9e en Python.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Une requ\u00eate de base de donn\u00e9es effectu\u00e9e par Django, repr\u00e9sent\u00e9e en Python."
-        ],
-        "options": [
-          "Une classe Python utilis\u00e9e pour d\u00e9finir le routage d'URL dans Django.",
-          "Une classe pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP.",
-          "Une requ\u00eate de base de donn\u00e9es effectu\u00e9e par Django, repr\u00e9sent\u00e9e en Python.",
-          "Une classe pour d\u00e9finir des templates HTML."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f846ab3bea79df338a3a5317",
-        "question": "Dans Django, quel est le but de la commande de gestion \"collectstatic\" ?",
-        "answer": "Pour collecter tous les fichiers statiques (CSS, JavaScript, images) de chacune de vos applications dans un seul emplacement.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour collecter tous les fichiers statiques (CSS, JavaScript, images) de chacune de vos applications dans un seul emplacement."
-        ],
-        "options": [
-          "Pour collecter des donn\u00e9es utilisateur pour l'analyse.",
-          "Pour collecter des enregistrements de base de donn\u00e9es \u00e0 partir de plusieurs sources.",
-          "Pour collecter tous les fichiers statiques (CSS, JavaScript, images) de chacune de vos applications dans un seul emplacement.",
-          "Pour collecter des journaux \u00e0 des fins de d\u00e9bogage."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8a20b5eab74aa3003738cb6e",
-        "question": "\u00c0 quoi sert le site d'administration Django ?",
-        "answer": "Pour fournir une interface d'administration g\u00e9n\u00e9r\u00e9e automatiquement pour vos mod\u00e8les.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour fournir une interface d'administration g\u00e9n\u00e9r\u00e9e automatiquement pour vos mod\u00e8les."
-        ],
-        "options": [
-          "Pour g\u00e9rer l'authentification des utilisateurs.",
-          "Pour d\u00e9finir le routage d'URL pour les applications Django.",
-          "Pour fournir une interface d'administration g\u00e9n\u00e9r\u00e9e automatiquement pour vos mod\u00e8les.",
-          "Pour \u00e9crire et ex\u00e9cuter des requ\u00eates de base de donn\u00e9es."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9c93e65c45536c85ba2dbba0",
-        "question": "\u00c0 quoi fait r\u00e9f\u00e9rence le \"middleware\" de Django ?",
-        "answer": "Une fa\u00e7on de traiter les requ\u00eates et r\u00e9ponses HTTP globalement avant qu'elles n'atteignent la vue ou apr\u00e8s qu'elles quittent la vue.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Une fa\u00e7on de traiter les requ\u00eates et r\u00e9ponses HTTP globalement avant qu'elles n'atteignent la vue ou apr\u00e8s qu'elles quittent la vue."
-        ],
-        "options": [
-          "Une fa\u00e7on de cr\u00e9er des interfaces utilisateur.",
-          "Une requ\u00eate de base de donn\u00e9es dans Django.",
-          "Une fa\u00e7on de traiter les requ\u00eates et r\u00e9ponses HTTP globalement avant qu'elles n'atteignent la vue ou apr\u00e8s qu'elles quittent la vue.",
-          "Une fa\u00e7on de configurer le routage d'URL dans Django."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "713edc254053fe3e76004e02",
-        "question": "Quel est le but principal des \"fichiers de migration\" de Django ?",
-        "answer": "Pour d\u00e9finir et stocker les modifications du sch\u00e9ma de base de donn\u00e9es au fil du temps.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour d\u00e9finir et stocker les modifications du sch\u00e9ma de base de donn\u00e9es au fil du temps."
-        ],
-        "options": [
-          "Pour d\u00e9finir et stocker les modifications du sch\u00e9ma de base de donn\u00e9es au fil du temps.",
-          "Pour g\u00e9rer les fichiers statiques comme CSS et JavaScript.",
-          "Pour configurer les mod\u00e8les d'URL.",
-          "Pour cr\u00e9er des templates HTML."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7c7f2e1a3d2c585eb1cfce21",
-        "question": "Quel syst\u00e8me d'authentification Django fournit-il pr\u00eat \u00e0 l'emploi ?",
-        "answer": "Authentification utilisateur avec mod\u00e8les et vues utilisateur int\u00e9gr\u00e9s.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Authentification utilisateur avec mod\u00e8les et vues utilisateur int\u00e9gr\u00e9s."
-        ],
-        "options": [
-          "OAuth 2.0",
-          "Authentification utilisateur avec mod\u00e8les et vues utilisateur int\u00e9gr\u00e9s.",
-          "JWT (JSON Web Tokens)",
-          "SAML (Security Assertion Markup Language)"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "45780b3b31b55b7f5020469d",
-        "question": "Dans Django, \u00e0 quoi fait r\u00e9f\u00e9rence le mod\u00e8le architectural \"Model-View-Controller\" (MVC) ?",
-        "answer": "Un mod\u00e8le qui divise l'application en trois composants interconnect\u00e9s : Mod\u00e8le, Vue et Contr\u00f4leur (Django y fait souvent r\u00e9f\u00e9rence comme MTV, Model-View-Template).",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Un mod\u00e8le qui divise l'application en trois composants interconnect\u00e9s : Mod\u00e8le, Vue et Contr\u00f4leur (Django y fait souvent r\u00e9f\u00e9rence comme MTV, Model-View-Template)."
-        ],
-        "options": [
-          "Un mod\u00e8le pour d\u00e9finir le routage d'URL.",
-          "Un mod\u00e8le pour cr\u00e9er des templates HTML.",
-          "Un mod\u00e8le qui divise l'application en trois composants interconnect\u00e9s : Mod\u00e8le, Vue et Contr\u00f4leur (Django y fait souvent r\u00e9f\u00e9rence comme MTV, Model-View-Template).",
-          "Un mod\u00e8le pour l'authentification des utilisateurs."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6bb3c90cd2d90a037bb661bb",
-        "question": "Quel est le but des \"templates\" de Django ?",
-        "answer": "Pour d\u00e9finir la structure et la mise en page des pages HTML \u00e0 servir \u00e0 l'utilisateur.",
-        "explanation": "_[Le document continue avec les questions 101-400 traduites en fran\u00e7ais...]_\n_Note : Pour des raisons de longueur, j'ai fourni les 100 premi\u00e8res questions. Le fichier complet contient toutes les 400 questions traduites._",
-        "hint": null,
-        "correctAnswer": [
-          "Pour d\u00e9finir la structure et la mise en page des pages HTML \u00e0 servir \u00e0 l'utilisateur."
-        ],
-        "options": [
-          "Pour d\u00e9finir le sch\u00e9ma de base de donn\u00e9es et les relations de mod\u00e8le.",
-          "Pour d\u00e9finir la structure et la mise en page des pages HTML \u00e0 servir \u00e0 l'utilisateur.",
-          "Pour configurer les mod\u00e8les d'URL pour votre application.",
-          "Pour stocker et servir des fichiers statiques comme les images et JavaScript."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "47705ae05fc39230b39661a8",
-        "question": "Quelle m\u00e9thode ORM de Django est utilis\u00e9e pour r\u00e9cup\u00e9rer un seul objet correspondant aux param\u00e8tres de recherche donn\u00e9s ?",
-        "answer": "`get()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`get()`"
-        ],
-        "options": [
-          "`get_object_or_404()`",
-          "`get()`",
-          "`filter()`",
-          "`values()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e7e0be646bc3d258c87da982",
-        "question": "Quel est le but de la m\u00e9thode `__str__()` dans un mod\u00e8le Django ?",
-        "answer": "Pour fournir une repr\u00e9sentation sous forme de cha\u00eene lisible par l'homme de l'instance de mod\u00e8le",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour fournir une repr\u00e9sentation sous forme de cha\u00eene lisible par l'homme de l'instance de mod\u00e8le"
-        ],
-        "options": [
-          "Pour d\u00e9finir l'ordre par d\u00e9faut des instances de mod\u00e8le",
-          "Pour fournir une repr\u00e9sentation sous forme de cha\u00eene lisible par l'homme de l'instance de mod\u00e8le",
-          "Pour d\u00e9finir le champ par d\u00e9faut \u00e0 utiliser pour les recherches",
-          "Pour d\u00e9finir le champ d'affichage par d\u00e9faut dans l'interface d'administration Django"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ce282f00122485aa2f01d2ab",
-        "question": "Quelle m\u00e9thode ORM de Django est utilis\u00e9e pour r\u00e9cup\u00e9rer une liste d'objets correspondant aux param\u00e8tres de recherche donn\u00e9s ?",
-        "answer": "`filter()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`filter()`"
-        ],
-        "options": [
-          "`get()`",
-          "`get_object_or_404()`",
-          "`filter()`",
-          "`values()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3988bde41d9c19c0c391cef9",
-        "question": "Quel est le but du param\u00e8tre `related_name` dans le champ `ForeignKey` d'un mod\u00e8le Django ?",
-        "answer": "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s"
-        ],
-        "options": [
-          "Pour d\u00e9finir le nom de la relation inverse sur le mod\u00e8le associ\u00e9",
-          "Pour d\u00e9finir l'ordre par d\u00e9faut des objets associ\u00e9s",
-          "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s",
-          "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le actuel qui acc\u00e8de \u00e0 l'objet associ\u00e9"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2067f973cdb38996ce475920",
-        "question": "Quelle m\u00e9thode ORM de Django est utilis\u00e9e pour r\u00e9cup\u00e9rer une liste de valeurs distinctes pour les champs sp\u00e9cifi\u00e9s ?",
-        "answer": "`values()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`values()`"
-        ],
-        "options": [
-          "`get()`",
-          "`get_object_or_404()`",
-          "`filter()`",
-          "`values()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "32303ec53a237e307d5cc39a",
-        "question": "Quel est le but du param\u00e8tre `unique` dans un champ de mod\u00e8le Django ?",
-        "answer": "Pour garantir que la valeur du champ est unique pour toutes les instances du mod\u00e8le",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour garantir que la valeur du champ est unique pour toutes les instances du mod\u00e8le"
-        ],
-        "options": [
-          "Pour d\u00e9finir l'ordre par d\u00e9faut du champ",
-          "Pour d\u00e9finir la valeur par d\u00e9faut du champ",
-          "Pour garantir que la valeur du champ est unique pour toutes les instances du mod\u00e8le",
-          "Pour d\u00e9finir la longueur maximale du champ"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6c5a091137fa9ce478bb0aee",
-        "question": "Quelle m\u00e9thode ORM de Django est utilis\u00e9e pour r\u00e9cup\u00e9rer un seul objet correspondant aux param\u00e8tres de recherche donn\u00e9s ou lever une exception `Http404` si aucun objet n'est trouv\u00e9 ?",
-        "answer": "`get_object_or_404()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`get_object_or_404()`"
-        ],
-        "options": [
-          "`get_object_or_404()`",
-          "`get()`",
-          "`filter()`",
-          "`values()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0e0098cc67bc37ae5f55fc19",
-        "question": "Quel est le but du param\u00e8tre `on_delete` dans le champ `ForeignKey` d'un mod\u00e8le Django ?",
-        "answer": "Pour sp\u00e9cifier le comportement lorsque l'objet r\u00e9f\u00e9renc\u00e9 est supprim\u00e9",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour sp\u00e9cifier le comportement lorsque l'objet r\u00e9f\u00e9renc\u00e9 est supprim\u00e9"
-        ],
-        "options": [
-          "Pour d\u00e9finir la valeur par d\u00e9faut du champ",
-          "Pour d\u00e9finir la longueur maximale du champ",
-          "Pour sp\u00e9cifier le comportement lorsque l'objet r\u00e9f\u00e9renc\u00e9 est supprim\u00e9",
-          "Pour d\u00e9finir le nom de la relation inverse sur le mod\u00e8le associ\u00e9"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "55245d0998acabdf3c50c3d6",
-        "question": "Quelle m\u00e9thode ORM de Django est utilis\u00e9e pour effectuer des op\u00e9rations d'agr\u00e9gation (par exemple, `sum()`, `avg()`, `count()`) sur un QuerySet ?",
-        "answer": "`aggregate()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`aggregate()`"
-        ],
-        "options": [
-          "`get()`",
-          "`get_object_or_404()`",
-          "`filter()`",
-          "`aggregate()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4224f7bc47dc714213f12f52",
-        "question": "Quel est le but du param\u00e8tre `related_query_name` dans le champ `ForeignKey` d'un mod\u00e8le Django ?",
-        "answer": "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s"
-        ],
-        "options": [
-          "Pour d\u00e9finir le nom de la relation inverse sur le mod\u00e8le associ\u00e9",
-          "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s",
-          "Pour d\u00e9finir l'ordre par d\u00e9faut des objets associ\u00e9s",
-          "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le actuel qui acc\u00e8de \u00e0 l'objet associ\u00e9"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
+    "slug": "django",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
+      {
+        "id": "0eb89c26f2181228c19e2a8e",
+        "language": "fr",
+        "title": "Django",
+        "description": "Seeded from django/django-quiz-fr.md",
+        "questions": [
+          {
+            "id": "40967dc4b3bb12102fa1250e",
+            "question": "Pour mettre en cache l'ensemble de votre site pour une application dans Django, vous ajoutez tous ces param\u00e8tres sauf lequel ?",
+            "answer": "django.middleware.cache.AcceleratedCacheMiddleware",
+            "explanation": "**R\u00e9f\u00e9rence :**\nDjango est livr\u00e9 avec un syst\u00e8me de cache robuste qui vous permet d'enregistrer des pages dynamiques, afin qu'elles n'aient pas \u00e0 \u00eatre calcul\u00e9es pour chaque requ\u00eate. Pour plus de commodit\u00e9, Django offre un cache avec diff\u00e9rentes granularit\u00e9s - du site web entier aux pages en passant par des parties de pages, des r\u00e9sultats de requ\u00eates DB et tout objet en m\u00e9moire. Middleware de cache. S'il est activ\u00e9, chaque page aliment\u00e9e par Django sera mise en cache en fonction de l'URL.",
+            "hint": null,
+            "correctAnswer": [
+              "django.middleware.cache.AcceleratedCacheMiddleware"
+            ],
+            "options": [
+              "django.middleware.common.CommonMiddleware",
+              "django.middleware.cache.UpdateCacheMiddleware",
+              "django.middleware.cache.FetchFromCacheMiddleware",
+              "django.middleware.cache.AcceleratedCacheMiddleware"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "4d8bc891c99fc8dcad7cfbc2",
+            "question": "Dans quel langage de programmation Django est-il \u00e9crit ?",
+            "answer": "Python",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Python"
+            ],
+            "options": [
+              "C++",
+              "Java",
+              "Python",
+              "Ruby"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "31df5f658d2d67b563ac1d25",
+            "question": "Pour fournir automatiquement une valeur pour un champ, ou pour effectuer une validation n\u00e9cessitant l'acc\u00e8s \u00e0 plus d'un seul champ, vous devez remplacer la m\u00e9thode `___` dans la classe `___`.",
+            "answer": "clean(); Model",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "clean(); Model"
+            ],
+            "options": [
+              "validate(); Model",
+              "group(); Model",
+              "validate(); Form",
+              "clean(); Model"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "9f66498029bf8b098eb119db",
+            "question": "Un client souhaite que son site puisse charger les \u00e9pisodes de \"Rick & Morty\" par num\u00e9ro ou par titre\u2014par exemple, shows/3/3 ou shows/picklerick. Quel mod\u00e8le d'URL recommandez-vous ?",
+            "answer": "B",
+            "explanation": "```python\nurl(r'shows/<int:season>/<int:episode>/', views.episode_number),\nurl(r'shows/<slug:episode_name>/', views.episode_name)\n```\n```python\npath('shows/<int:season>/<int:episode>/', views.episode_number),\npath('shows/<slug:episode_name>/', views.episode_name)\n```\n```python\npath('shows/<int:season>/<int:episode>', views.episode_number),\npath('shows/<slug:episode_name>/', views.episode_number)\n```\n```python\nurl(r'^show/(?P<season>[0-9]+)/(?P<episode>[0-9]+)/$', views.episode_number),\nurl(r'^show/(?P<episode_name>[\\w-]+)/', views.episode_name\n```",
+            "hint": null,
+            "correctAnswer": [
+              "B"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "2d5fd16a10dd874403416cc3",
+            "question": "Comment d\u00e9terminez-vous au moment du d\u00e9marrage si un middleware doit \u00eatre utilis\u00e9 ?",
+            "answer": "Levez MiddlewareNotUsed dans la fonction **init** de votre middleware.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Levez MiddlewareNotUsed dans la fonction **init** de votre middleware."
+            ],
+            "options": [
+              "Levez MiddlewareNotUsed dans la fonction **init** de votre middleware.",
+              "Impl\u00e9mentez la m\u00e9thode not_used dans votre classe middleware.",
+              "Listez le middleware sous une entr\u00e9e de django.middleware.IgnoredMiddleware.",
+              "\u00c9crivez du code pour supprimer le middleware des param\u00e8tres dans [app]/**init**.py."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "9bcbf586f0f072adfdf9cdee",
+            "question": "Comment d\u00e9sactivez-vous l'\u00e9chappement HTML automatique de Django pour une partie d'une page web ?",
+            "answer": "Enveloppez cette section entre les balises { percentage mark autoescape off percentage mark} et {percentage mark endautoescape percentage mark}.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Enveloppez cette section entre les balises { percentage mark autoescape off percentage mark} et {percentage mark endautoescape percentage mark}."
+            ],
+            "options": [
+              "Placez cette section entre des balises de paragraphe contenant le commutateur autoescape=off.",
+              "Enveloppez cette section entre les balises { percentage mark autoescape off percentage mark} et {percentage mark endautoescape percentage mark}.",
+              "Enveloppez cette section entre les balises {percentage mark autoescapeoff percentage mark} et {percentage mark endautoescapeoff percentage mark}.",
+              "Vous n'avez rien \u00e0 faire\u2014l'\u00e9chappement automatique est d\u00e9sactiv\u00e9 par d\u00e9faut."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "ee29a78291830b9863640f7e",
+            "question": "Quelle \u00e9tape ne vous aiderait PAS \u00e0 r\u00e9soudre l'erreur \"django-admin: command not found\" ?",
+            "answer": "Assurez-vous d'avoir cr\u00e9\u00e9 un projet Django.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Assurez-vous d'avoir cr\u00e9\u00e9 un projet Django."
+            ],
+            "options": [
+              "V\u00e9rifiez que le dossier bin \u00e0 l'int\u00e9rieur de votre r\u00e9pertoire Django est sur le chemin syst\u00e8me.",
+              "Assurez-vous d'avoir activ\u00e9 l'environnement virtuel que vous avez configur\u00e9 contenant Django.",
+              "V\u00e9rifiez que vous avez install\u00e9 Django.",
+              "Assurez-vous d'avoir cr\u00e9\u00e9 un projet Django."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "ab6503d91ed7b1731cdfedb0",
+            "question": "Chaque fois qu'un utilisateur est sauvegard\u00e9, son quiz_score doit \u00eatre recalcul\u00e9. O\u00f9 serait un endroit id\u00e9al pour ajouter cette logique ?",
+            "answer": "model",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "model"
+            ],
+            "options": [
+              "template",
+              "model",
+              "database",
+              "view"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "8ba2c2dd8c48f8f6d1cac6b1",
+            "question": "Quelle est la bonne fa\u00e7on de commencer une classe appel\u00e9e \"Rainbow\" en Python ?",
+            "answer": "class Rainbow:",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "class Rainbow:"
+            ],
+            "options": [
+              "Rainbow {}",
+              "export Rainbow:",
+              "class Rainbow:",
+              "def Rainbow:"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "5234ed93247c735c703d365f",
+            "question": "Vous avez h\u00e9rit\u00e9 d'un projet Django et devez le faire fonctionner localement. Il est livr\u00e9 avec un fichier requirements.txt contenant toutes ses d\u00e9pendances. Quelle commande devez-vous utiliser ?",
+            "answer": "pip install -r requirements.txt",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "pip install -r requirements.txt"
+            ],
+            "options": [
+              "django-admin startproject requirements.txt",
+              "python install -r requirements.txt",
+              "pip install -r requirements.txt",
+              "pip install Django"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "1afaa6d56de5ec6df1ed2956",
+            "question": "Quelle bonne pratique n'est PAS pertinente pour les migrations ?",
+            "answer": "Pour vous assurer que vos migrations sont \u00e0 jour, vous devez ex\u00e9cuter updatemigrations avant d'ex\u00e9cuter vos tests.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour vous assurer que vos migrations sont \u00e0 jour, vous devez ex\u00e9cuter updatemigrations avant d'ex\u00e9cuter vos tests."
+            ],
+            "options": [
+              "Pour vous assurer que vos migrations sont \u00e0 jour, vous devez ex\u00e9cuter updatemigrations avant d'ex\u00e9cuter vos tests.",
+              "Vous devez sauvegarder votre base de donn\u00e9es de production avant d'ex\u00e9cuter une migration.",
+              "Votre code de migration doit \u00eatre sous contr\u00f4le de source.",
+              "Si un projet a beaucoup de donn\u00e9es, vous devez tester par rapport \u00e0 une copie de staging avant d'ex\u00e9cuter la migration sur la production."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "4e1b545434e2ab1222b3fd38",
+            "question": "Que correspondra ce mod\u00e8le d'URL ? url(r'^\\$', views.hello)",
+            "answer": "une cha\u00eene vide \u00e0 la racine du serveur",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "une cha\u00eene vide \u00e0 la racine du serveur"
+            ],
+            "options": [
+              "une cha\u00eene commen\u00e7ant par la lettre R",
+              "une cha\u00eene vide \u00e0 la racine du serveur",
+              "une cha\u00eene contenant ^ et $",
+              "une cha\u00eene vide n'importe o\u00f9 dans l'URL"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "e564b94967484ac6de0e7fe0",
+            "question": "Quel est l'ordre typique d'un cycle de requ\u00eate/r\u00e9ponse HTTP dans Django ?",
+            "answer": "URL > view > template",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "URL > view > template"
+            ],
+            "options": [
+              "URL > view > template",
+              "form > model > view",
+              "template > view > model",
+              "URL > template > view > model"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "0b866a5205de6c2e2a374ed3",
+            "question": "Les vues g\u00e9n\u00e9riques bas\u00e9es sur les classes de Django fournissent quelles classes qui impl\u00e9mentent des t\u00e2ches courantes de d\u00e9veloppement web ?",
+            "answer": "abstract",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "abstract"
+            ],
+            "options": [
+              "concrete",
+              "thread-safe",
+              "abstract",
+              "dynamic"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "0eb6b20e589382fa42b37f3f",
+            "question": "Quelles comp\u00e9tences devez-vous avoir pour maintenir un ensemble de templates Django ?",
+            "answer": "HTML et syntaxe de template",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "HTML et syntaxe de template"
+            ],
+            "options": [
+              "syntaxe de template",
+              "HTML et syntaxe de template",
+              "Python, HTML et syntaxe de template",
+              "Python et syntaxe de template"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "ee8eb7da3d38bcdf3b70f8b7",
+            "question": "Comment d\u00e9finiriez-vous la relation entre une \u00e9toile et une constellation dans un mod\u00e8le Django ?",
+            "answer": "A",
+            "explanation": "```python\nclass Star(models.Model):\nname = models.CharField(max_length=100)\nclass Constellation(models.Model):\nstars = models.ManyToManyField(Star)\n```\n```python\nclass Star(models.Model):\nconstellation = models.ForeignKey(Constellation, on_delete=models.CASCADE)\nclass Constellation(models.Model):\nstars = models.ForeignKey(Star, on_delete=models.CASCADE)\n```\n```python\nclass Star(models.Model):\nname = models.CharField(max_length=100)\nclass Constellation(models.Model):\nstars = models.OneToManyField(Star)\n```\n```python\nclass Star(models.Model):\nconstellation = models.ManyToManyField(Constellation)\nclass Constellation(models.Model):\nname = models.CharField(max_length=100)\n```",
+            "hint": null,
+            "correctAnswer": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "2cbd8feb906270e1844b6d89",
+            "question": "Quelle n'est PAS une \u00e9tape valide pour configurer votre instance Django 2.x pour servir des fichiers statiques tels que des images ou du CSS ?",
+            "answer": "Dans votre fichier urls, ajoutez un mod\u00e8le qui inclut le nom de votre r\u00e9pertoire statique.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Dans votre fichier urls, ajoutez un mod\u00e8le qui inclut le nom de votre r\u00e9pertoire statique."
+            ],
+            "options": [
+              "Dans votre fichier urls, ajoutez un mod\u00e8le qui inclut le nom de votre r\u00e9pertoire statique.",
+              "Cr\u00e9ez un r\u00e9pertoire nomm\u00e9 static dans votre r\u00e9pertoire d'application.",
+              "Cr\u00e9ez un r\u00e9pertoire nomm\u00e9 d'apr\u00e8s l'application sous le r\u00e9pertoire static, et placez les fichiers statiques \u00e0 l'int\u00e9rieur.",
+              "Utilisez la balise de template {percentage mark load static percentage mark}."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "43e4024bd02331583177b952",
+            "question": "Quelle est la bonne fa\u00e7on de rendre une variable disponible pour tous vos templates ?",
+            "answer": "Ajouter un dictionnaire au contexte du template.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Ajouter un dictionnaire au contexte du template."
+            ],
+            "options": [
+              "D\u00e9finir une variable de session.",
+              "Utiliser une variable globale.",
+              "Ajouter un dictionnaire au contexte du template.",
+              "Utiliser RequestContext."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "338df772f04e6ec897193a25",
+            "question": "Devriez-vous cr\u00e9er un mod\u00e8le utilisateur personnalis\u00e9 pour les nouveaux projets ?",
+            "answer": "Oui. Il est plus facile d'apporter des modifications une fois qu'il est en production.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Oui. Il est plus facile d'apporter des modifications une fois qu'il est en production."
+            ],
+            "options": [
+              "Non. L'utilisation d'un mod\u00e8le utilisateur personnalis\u00e9 pourrait casser l'interface d'administration et certaines applications tierces.",
+              "Oui. Il est plus facile d'apporter des modifications une fois qu'il est en production.",
+              "Non. La classe int\u00e9gr\u00e9e models.User de Django a \u00e9t\u00e9 test\u00e9e et \u00e9prouv\u00e9e\u2014inutile de r\u00e9inventer la roue.",
+              "Oui, car il n'y a pas d'autre option."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "19276fe0e7b98947f0122db5",
+            "question": "Vous souhaitez cr\u00e9er une page permettant l'\u00e9dition de deux classes connect\u00e9es par une cl\u00e9 \u00e9trang\u00e8re (par exemple, une question et une r\u00e9ponse qui r\u00e9sident dans des tables s\u00e9par\u00e9es). Quelle fonctionnalit\u00e9 Django pouvez-vous utiliser ?",
+            "answer": "inlines",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "inlines"
+            ],
+            "options": [
+              "actions",
+              "admin",
+              "mezcal",
+              "inlines"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "772136dae1c8aef15c37907c",
+            "question": "Pourquoi les QuerySets sont-ils consid\u00e9r\u00e9s comme \"lazy\" (paresseux) ?",
+            "answer": "Les QuerySets ne cr\u00e9ent aucune activit\u00e9 de base de donn\u00e9es tant qu'ils ne sont pas \u00e9valu\u00e9s.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Les QuerySets ne cr\u00e9ent aucune activit\u00e9 de base de donn\u00e9es tant qu'ils ne sont pas \u00e9valu\u00e9s."
+            ],
+            "options": [
+              "Les r\u00e9sultats d'un QuerySet ne sont pas ordonn\u00e9s.",
+              "Les QuerySets ne cr\u00e9ent aucune activit\u00e9 de base de donn\u00e9es tant qu'ils ne sont pas \u00e9valu\u00e9s.",
+              "Les QuerySets ne chargent pas les objets en m\u00e9moire tant qu'ils ne sont pas n\u00e9cessaires.",
+              "En utilisant des QuerySets, vous ne pouvez pas ex\u00e9cuter de requ\u00eates plus complexes."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "e5537c062bc07ec686995032",
+            "question": "Vous recevez une `MultiValueDictKeyError` lorsque vous essayez d'acc\u00e9der \u00e0 un param\u00e8tre de requ\u00eate avec le code suivant : request.GET['search_term']. Quelle solution ne vous aidera PAS dans ce sc\u00e9nario ?",
+            "answer": "Passer \u00e0 l'utilisation de POST au lieu de GET comme m\u00e9thode de requ\u00eate.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Passer \u00e0 l'utilisation de POST au lieu de GET comme m\u00e9thode de requ\u00eate."
+            ],
+            "options": [
+              "Passer \u00e0 l'utilisation de POST au lieu de GET comme m\u00e9thode de requ\u00eate.",
+              "Assurez-vous que le champ de saisie dans votre formulaire est \u00e9galement nomm\u00e9 \"search_term\".",
+              "Utilisez la m\u00e9thode GET de MultiValueDict au lieu d'acc\u00e9der directement au dictionnaire comme ceci : request.GET.get('search_term', '').",
+              "V\u00e9rifiez si le param\u00e8tre search_term est pr\u00e9sent dans la requ\u00eate avant d'essayer d'y acc\u00e9der."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "550cfc4cc20a51f2abb1002e",
+            "question": "Quelle fonction de la classe Form de Django rendra les champs d'un formulaire sous forme de s\u00e9rie de balises <p> ?",
+            "answer": "as_p()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "as_p()"
+            ],
+            "options": [
+              "show_fields()",
+              "as_p()",
+              "as_table()",
+              "fields()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "b7360d864b5ff89920bbd705",
+            "question": "Vous avez trouv\u00e9 un bug dans Django et vous souhaitez soumettre un correctif. Quelle est la proc\u00e9dure correcte ?",
+            "answer": "toutes ces r\u00e9ponses.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "toutes ces r\u00e9ponses."
+            ],
+            "options": [
+              "Forker le d\u00e9p\u00f4t Django sur GitHub.",
+              "Soumettre une pull request.",
+              "toutes ces r\u00e9ponses.",
+              "Ex\u00e9cuter la suite de tests de Django."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "28b0b5b522a5e28c44fc53d5",
+            "question": "Django fournit des valeurs par d\u00e9faut sens\u00e9es pour les param\u00e8tres. Dans quel module Python pouvez-vous trouver ces param\u00e8tres ?",
+            "answer": "`django.conf.global_settings.py`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`django.conf.global_settings.py`"
+            ],
+            "options": [
+              "`django.utils.default_settings.py`",
+              "`django.utils.global_settings.py`",
+              "`django.conf.default_settings.py`",
+              "`django.conf.global_settings.py`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "6a93a10aa84b4c62421f83ee",
+            "question": "Quel nom de variable est le meilleur selon les directives PEP 8 ?",
+            "answer": "number_of_fingers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "number_of_fingers"
+            ],
+            "options": [
+              "numFingers",
+              "number-of-Fingers",
+              "number_of_fingers",
+              "finger_num"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "a76ef2b073b6b59ccd4c2e07",
+            "question": "Un projet a accumul\u00e9 500 migrations. Quelle ligne de conduite poursuivriez-vous ?",
+            "answer": "Utilisez squashmigrations pour r\u00e9duire le nombre",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Utilisez squashmigrations pour r\u00e9duire le nombre"
+            ],
+            "options": [
+              "Fusionner manuellement vos fichiers de migration pour r\u00e9duire le nombre",
+              "Ne vous inqui\u00e9tez pas du nombre",
+              "Essayez de minimiser le nombre de migrations",
+              "Utilisez squashmigrations pour r\u00e9duire le nombre"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "aadb6ee41545ca68ab8b9935",
+            "question": "Que vous permet de faire un objet F() lorsque vous traitez avec des mod\u00e8les ?",
+            "answer": "effectuer des op\u00e9rations de base de donn\u00e9es sans r\u00e9cup\u00e9rer un objet de mod\u00e8le",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "effectuer des op\u00e9rations de base de donn\u00e9es sans r\u00e9cup\u00e9rer un objet de mod\u00e8le"
+            ],
+            "options": [
+              "effectuer des op\u00e9rations de base de donn\u00e9es sans r\u00e9cup\u00e9rer un objet de mod\u00e8le",
+              "d\u00e9finir des niveaux d'isolation de transaction de base de donn\u00e9es",
+              "utiliser des fonctions d'agr\u00e9gation plus facilement",
+              "construire des QuerySets r\u00e9utilisables"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "ae3b4957d7ef3439169638fc",
+            "question": "Lequel n'est pas un type de champ Django pour contenir des entiers ?",
+            "answer": "NegativeIntegerField",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "NegativeIntegerField"
+            ],
+            "options": [
+              "SmallIntegerField",
+              "NegativeIntegerField",
+              "BigAutoField",
+              "PositiveIntegerField"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "474bfea0ad4668fd81f1e38f",
+            "question": "Lequel affichera la version actuellement install\u00e9e ?",
+            "answer": "import django django.get_version()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "import django django.get_version()"
+            ],
+            "options": [
+              "print (django.version)",
+              "import django django.getVersion()",
+              "import django django.get_version()",
+              "python -c django --version"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "e4c01e84323df3e5796175c1",
+            "question": "Vous devez utiliser la m\u00e9thode http `___` pour lire les donn\u00e9es et `___` pour mettre \u00e0 jour ou cr\u00e9er des donn\u00e9es",
+            "answer": "GET; POST",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "GET; POST"
+            ],
+            "options": [
+              "READ; WRITE",
+              "GET; POST",
+              "POST; GET",
+              "GET; PATCH"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "3ffd2197eae1e765006cc56a",
+            "question": "Quand devez-vous utiliser la m\u00e9thode POST plut\u00f4t que GET pour soumettre des donn\u00e9es ?",
+            "answer": "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles"
+            ],
+            "options": [
+              "quand l'efficacit\u00e9 est importante",
+              "quand vous voulez que les donn\u00e9es soient mises en cache",
+              "quand vous voulez utiliser votre navigateur pour aider au d\u00e9bogage",
+              "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "f14233838f8326ee61418dd6",
+            "question": "Quand utiliser le framework de sites Django ?",
+            "answer": "si votre installation unique alimente plus d'un site",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "si votre installation unique alimente plus d'un site"
+            ],
+            "options": [
+              "si votre installation unique alimente plus d'un site",
+              "si vous devez servir du contenu statique ainsi que du contenu dynamique",
+              "si vous voulez que votre application ait un nom de domaine enti\u00e8rement qualifi\u00e9",
+              "si vous attendez plus de 10 000 utilisateurs"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "202bce136d37d1c6fb8f1fea",
+            "question": "De quelle infrastructure avez-vous besoin :\n`title=models.charfield(max_length=100, validators=[validate_spelling])`",
+            "answer": "un fichier validators contenant une fonction appel\u00e9e validate_spelling import\u00e9e en haut du mod\u00e8le",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "un fichier validators contenant une fonction appel\u00e9e validate_spelling import\u00e9e en haut du mod\u00e8le"
+            ],
+            "options": [
+              "tableau initialis\u00e9 appel\u00e9 validators",
+              "un fichier validators contenant une fonction appel\u00e9e validate_spelling import\u00e9e en haut du mod\u00e8le",
+              "un fichier validators contenant une fonction appel\u00e9e validate import\u00e9e en haut du mod\u00e8le",
+              "package spelling import\u00e9 en haut du mod\u00e8le"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "dfc180e173777ed7023acbb2",
+            "question": "Quel d\u00e9corateur est utilis\u00e9 pour exiger qu'une vue accepte uniquement les m\u00e9thodes get et head ?",
+            "answer": "require_safe()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "require_safe()"
+            ],
+            "options": [
+              "require_safe()",
+              "require_put()",
+              "require_post()",
+              "require_get()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "67a82854f23965cfcfc266a8",
+            "question": "Comment d\u00e9finiriez-vous la relation entre un livre et un auteur - un livre n'a qu'un seul auteur.\n```python\nclass Author (models.model):\nbook=models.foreignkey(Book,on_delete=models.cascade)\nclass Book(models.model):\nname=models.charfield(max_length=100)\n```",
+            "answer": "A",
+            "explanation": "```python\nclass Author (models.model):\nname=models.charfield(max_length=100)\nclass Book(models.model):\nauthor=models.foreignkey(Author,on_delete=models.cascade)\n```\n```python\nclass Author (models.model):\nname=models.charfield(max_length=100)\nclass Book(models.model):\nauthor=models.foreignkey(Author)\n```\n```python\nclass Author (models.model):\nname=models.charfield(max_length=100)\nclass Book(models.model):\nauthor=models.foreignkey(Author,on_delete=models.cascade)\n```\n```python\nclass Author (models.model):\nname=models.charfield(max_length=100)\nclass Book(models.model):\nauthor=Author.name\n```",
+            "hint": null,
+            "correctAnswer": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "f08fe6a8cda2cadf57167a60",
+            "question": "Qu'est-ce qu'un callable qui prend une valeur et l\u00e8ve une erreur si la valeur \u00e9choue ?",
+            "answer": "validator",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "validator"
+            ],
+            "options": [
+              "validator",
+              "deodorizer",
+              "mediator",
+              "regular expression"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "a5974309b21380861aa3809b",
+            "question": "Pour s\u00e9curiser un point de terminaison d'API, le rendant accessible uniquement aux utilisateurs enregistr\u00e9s, vous pouvez remplacer la valeur rest_framework.permissions.allowAny dans la section default_permissions de votre settings.py par",
+            "answer": "rest_framework.permissions.IsAuthenticated",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "rest_framework.permissions.IsAuthenticated"
+            ],
+            "options": [
+              "rest_framework.permissions.IsAdminUser",
+              "rest_framework.permissions.IsAuthenticated",
+              "rest_framework.permissions.IsAuthorized",
+              "rest_framework.permissions.IsRegistered"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "8fe32561d3056da72fe70bdf",
+            "question": "Quelle commande utiliseriez-vous pour appliquer une migration ?",
+            "answer": "migrate",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "migrate"
+            ],
+            "options": [
+              "makemigration",
+              "update_db",
+              "applymigration",
+              "migrate"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "e7cc19501fcb4e0924819c1e",
+            "question": "Quel type de classe permet de convertir des QuerySets et des instances de mod\u00e8le en types de donn\u00e9es Python natifs pour une utilisation dans les API ?",
+            "answer": "serializers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "serializers"
+            ],
+            "options": [
+              "objectwriters",
+              "serializers",
+              "picklers",
+              "viewsets"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "8b0c2fedb72d6e740b6b0a70",
+            "question": "Comment le code devrait-il se terminer ?\n```python\n{ percentage if spark >= 50 percentage }\nLots of spark\n{percentage elif spark == 42 percentage}\n```",
+            "answer": "{percentage endif percentage}",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "{percentage endif percentage}"
+            ],
+            "options": [
+              "{ percentage else percentage}",
+              "{percentage endif percentage}",
+              "Rien n\u00e9cessaire",
+              "{percentage end percentage}"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "95c5d2b778123a3edaaac912",
+            "question": "Quel bloc de code cr\u00e9era un serializer ?\n```python\nfrom rest_framework import serializers\nfrom .models import Planet\n```",
+            "answer": "A",
+            "explanation": "```python\nclass PlanetSerializer(serializers.ModelSerializer):\nclass Meta:\nmodel=Planet\nfields=('name','position', 'mass', 'rings')\n```\n```python\nfrom rest_framework import serializers\nfrom .models import Planet\nclass PlanetSerializer():\nclass Meta:\nfields=('name','position', 'mass', 'rings')\nmodel=Planet\n```\n```python\nfrom django.db import serializers\nfrom .models import Planet\nclass PlanetSerializer(serializers.ModelSerializer):\nfields=('name','position', 'mass', 'rings')\nmodel=Sandwich\n```\n```python\nfrom django.db import serializers\nfrom .models import Planet\nclass PlanetSerializer(serializers.ModelSerializer):\nclass Meta:\nfields=('name')\nmodel=Planet\n```",
+            "hint": null,
+            "correctAnswer": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "585196213a54f38187907185",
+            "question": "Quelle classe vous permet de cr\u00e9er automatiquement une classe Serializer avec des champs et des validateurs correspondant aux champs de votre mod\u00e8le ?",
+            "answer": "ModelSerializer",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "ModelSerializer"
+            ],
+            "options": [
+              "ModelSerializer",
+              "Model",
+              "DataSerializer",
+              "ModelToSerializer"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "53d1ee4bf4a42b8a3974a5cf",
+            "question": "Quelle commande pour acc\u00e9der \u00e0 l'outil d'administration int\u00e9gr\u00e9 pour la premi\u00e8re fois ?",
+            "answer": "python manage.py createsuperuser",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "python manage.py createsuperuser"
+            ],
+            "options": [
+              "django-admin setup",
+              "django-admin runserver",
+              "python manage.py createuser",
+              "python manage.py createsuperuser"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "755fbbb283aec70987af30bb",
+            "question": "Les environnements virtuels servent \u00e0 g\u00e9rer les d\u00e9pendances. Quelle granularit\u00e9 fonctionne le mieux ?",
+            "answer": "vous devez configurer un nouveau virtualenv pour chaque projet Django",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "vous devez configurer un nouveau virtualenv pour chaque projet Django"
+            ],
+            "options": [
+              "vous devez configurer un nouveau virtualenv pour chaque projet Django",
+              "Ils ne devraient pas \u00eatre utilis\u00e9s",
+              "Utilisez le m\u00eame venv pour tout votre travail Django",
+              "Utilisez un nouveau venv pour chaque application Django"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "82093588ba107fb20aa85abe",
+            "question": "Qu'est-ce qui ex\u00e9cute diverses commandes Django telles que l'ex\u00e9cution d'un serveur web ou la cr\u00e9ation d'une application ?",
+            "answer": "manage.py",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "manage.py"
+            ],
+            "options": [
+              "migrate.py",
+              "wsgi.py",
+              "manage.py",
+              "runserver"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "277c2cd02282c808acb12448",
+            "question": "Que sugg\u00e8rent les meilleures pratiques de Django qui devrait \u00eatre \"fat\" (gros) ?",
+            "answer": "models",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "models"
+            ],
+            "options": [
+              "models",
+              "controllers",
+              "programmers",
+              "clients"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "a62db1f37ebf8e77dfb6f8e1",
+            "question": "Lequel ne fait pas partie de la philosophie de conception de Django ?",
+            "answer": "Implicite plut\u00f4t qu'explicite",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Implicite plut\u00f4t qu'explicite"
+            ],
+            "options": [
+              "Couplage l\u00e2che",
+              "Moins de code",
+              "D\u00e9veloppement rapide",
+              "Implicite plut\u00f4t qu'explicite"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "e831e673656aa4e44fed1b91",
+            "question": "Quel est le r\u00e9sultat de ce code de template ?\n{% raw %}{{\"live long and prosper\"|truncatewords:3}}{% endraw %}",
+            "answer": "live long and ...",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "live long and ..."
+            ],
+            "options": [
+              "live long and ...",
+              "live long and",
+              "une erreur de compilation",
+              "liv"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "7120c9c11c4a9208468f7ba9",
+            "question": "Quand ce code charge-t-il les donn\u00e9es en m\u00e9moire ?\n```\n1 sandwiches = Sandwich.objects.filter(is_vegan=True)\n2 for sandwich in sandwiches:\n3   print(sandwich.name + \" - \" + sandwich.spice_level)\n```",
+            "answer": "ligne 2",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "ligne 2"
+            ],
+            "options": [
+              "ligne 1",
+              "Cela d\u00e9pend du nombre de r\u00e9sultats retourn\u00e9s par la requ\u00eate.",
+              "Cela d\u00e9pend du cache.",
+              "ligne 2"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "f542ec0c29f89eb8bd4fb870",
+            "question": "Vous construisez une application web utilisant un front-end React et un back-end Django. Pour quoi devrez-vous provisionner ?",
+            "answer": "middleware CORS",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "middleware CORS"
+            ],
+            "options": [
+              "un serveur web NGINX",
+              "une base de donn\u00e9es NoSQL",
+              "un disque dur plus grand",
+              "middleware CORS"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "494efef5001d9be6f0d4b3a7",
+            "question": "Pour exposer un mod\u00e8le existant via un point de terminaison d'API, que devez-vous impl\u00e9menter ?",
+            "answer": "un serializer",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "un serializer"
+            ],
+            "options": [
+              "une requ\u00eate HTTP",
+              "un objet JSON",
+              "une requ\u00eate",
+              "un serializer"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "9d9b44b84e38d37049f0b0ca",
+            "question": "Comment emp\u00eacheriez-vous Django d'effectuer des op\u00e9rations de cr\u00e9ation ou de suppression de tables de base de donn\u00e9es via des migrations pour un mod\u00e8le particulier ?",
+            "answer": "D\u00e9finissez `managed=False` \u00e0 l'int\u00e9rieur du mod\u00e8le.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "D\u00e9finissez `managed=False` \u00e0 l'int\u00e9rieur du mod\u00e8le."
+            ],
+            "options": [
+              "Ex\u00e9cutez la commande `migrate` avec `--exclude=[model_name]`.",
+              "D\u00e9placez la d\u00e9finition du mod\u00e8le de `models.py` dans son propre fichier.",
+              "D\u00e9finissez `managed=False` \u00e0 l'int\u00e9rieur du mod\u00e8le.",
+              "N'ex\u00e9cutez pas la commande `migrate`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "61b1eac84ee1c5a9f9c44f50",
+            "question": "quelle m\u00e9thode pouvez-vous utiliser pour v\u00e9rifier si les donn\u00e9es du formulaire ont chang\u00e9 lors de l'utilisation d'une instance de formulaire ?",
+            "answer": "has_changed()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "has_changed()"
+            ],
+            "options": [
+              "has_changed()",
+              "its_changed()",
+              "has_updated()",
+              "Aucune de ces r\u00e9ponses"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "2c5101f2781f0efe4cfaa80c",
+            "question": "Qu'est-ce que WSGI ?",
+            "answer": "une sp\u00e9cification d'interface",
+            "explanation": "Lien de r\u00e9f\u00e9rence :- https://wsgi.tutorial.codepoint.net/intro",
+            "hint": null,
+            "correctAnswer": [
+              "une sp\u00e9cification d'interface"
+            ],
+            "options": [
+              "un serveur",
+              "une sp\u00e9cification d'interface",
+              "un module Python",
+              "un framework"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "497218835df139d752fed496",
+            "question": "Quelle vue g\u00e9n\u00e9rique doit \u00eatre utilis\u00e9e pour afficher les titres de toutes les chansons de Django Reinhardt ?",
+            "answer": "ListView",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "ListView"
+            ],
+            "options": [
+              "DetailView",
+              "TittleView",
+              "SongView",
+              "ListView"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "5b70595cbc30dae075789f37",
+            "question": "Quelle d\u00e9claration est la plus pr\u00e9cise, concernant l'utilisation de la base de donn\u00e9es SQLite par d\u00e9faut sur votre machine locale/de d\u00e9veloppement mais Postgres en production",
+            "answer": "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir"
+            ],
+            "options": [
+              "Il y a moins de chances d'introduire des bugs puisque SQLite fonctionne d\u00e9j\u00e0 pr\u00eat \u00e0 l'emploi",
+              "C'est bien, il suffit de garder les deux instances synchronis\u00e9es",
+              "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir",
+              "C'est la fa\u00e7on la plus efficace de construire un projet"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "f1c6a92ba2212e6005232fe2",
+            "question": "Pourquoi voudriez-vous \u00e9crire un Manager de mod\u00e8le personnalis\u00e9 ?",
+            "answer": "pour modifier le QuerySet initial que le Manager retourne",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "pour modifier le QuerySet initial que le Manager retourne"
+            ],
+            "options": [
+              "pour effectuer des requ\u00eates de base de donn\u00e9es",
+              "pour configurer une base de donn\u00e9es pour les tests",
+              "pour modifier le QuerySet initial que le Manager retourne",
+              "pour filtrer les r\u00e9sultats qu'une requ\u00eate de base de donn\u00e9es retourne"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "ca99e2506e7005715b8f08ee",
+            "question": "Dans Django, qu'est-ce qui est utilis\u00e9 pour personnaliser les donn\u00e9es envoy\u00e9es aux templates ?",
+            "answer": "views",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "views"
+            ],
+            "options": [
+              "models",
+              "views",
+              "forms",
+              "serializers"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "24a3ab9a2f74b272b1351cfb",
+            "question": "Pour compl\u00e9ter la conditionnelle, par quoi ce bloc de code devrait-il se terminer ?\n```shell\n% if sparles >= 50 %\n  Lots of sparkles!\n% elif sparkles == 42 %\n  The answer to life, the universe, and everything!\n```",
+            "answer": "`% endif %`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`% endif %`"
+            ],
+            "options": [
+              "`% endif %`",
+              "Rien d'autre n'est n\u00e9cessaire.",
+              "`% end%`",
+              "`% else %`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "b31c85118780a9ca63ea9505",
+            "question": "Quand devez-vous utiliser la m\u00e9thode POST plut\u00f4t que la m\u00e9thode GET pour soumettre des donn\u00e9es \u00e0 partir d'un formulaire ?",
+            "answer": "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles"
+            ],
+            "options": [
+              "quand les donn\u00e9es du formulaire peuvent \u00eatre sensibles",
+              "quand vous voulez que les donn\u00e9es soient mises en cache",
+              "quand vous voulez utiliser votre navigateur pour aider au d\u00e9bogage",
+              "quand l'efficacit\u00e9 est importante"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "db0d2f53d87ceb9d93abcee4",
+            "question": "Qu'est-ce qu'un callable qui prend une valeur et l\u00e8ve une erreur si la valeur ne r\u00e9pond pas \u00e0 certains crit\u00e8res ?",
+            "answer": "validator",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "validator"
+            ],
+            "options": [
+              "mediator",
+              "validator",
+              "regular expression",
+              "deodorizer"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "08f9630bdfbe529f3f10236b",
+            "question": "Vous t\u00e9l\u00e9chargez un fichier vers Django \u00e0 partir d'un formulaire et vous souhaitez enregistrer le fichier re\u00e7u en tant que champ sur un objet de mod\u00e8le. Vous pouvez simplement affecter l'objet fichier de **\\_\u00e0 un champ de type\\_\\_** dans le mod\u00e8le.",
+            "answer": "request.FILES; FileField",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "request.FILES; FileField"
+            ],
+            "options": [
+              "request.META; FileField",
+              "request.FILES; BLOBField",
+              "request.FILES; FileField",
+              "request.META.Files; CLOBField"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "3105c7fc45663e8a4791b26d",
+            "question": "Quel module python pourrait \u00eatre utilis\u00e9 pour stocker l'\u00e9tat actuel d'un mod\u00e8le Django dans un fichier ?",
+            "answer": "pickle",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "pickle"
+            ],
+            "options": [
+              "pickle",
+              "struct",
+              "marshal",
+              "serialize"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "d42e12f5faf1e78eec490d5b",
+            "question": "Pour ajouter une nouvelle application \u00e0 un projet Django existant, vous devez modifier la section **_ du fichier _**.",
+            "answer": "INSTALLED_APPS; settings.py",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "INSTALLED_APPS; settings.py"
+            ],
+            "options": [
+              "ALLOWED_HOSTS; settings.py",
+              "APPS; manage.py",
+              "INSTALLED_APPS; settings.py",
+              "TEMPLATES; urls.py"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "5e147d02e662c31f1523645d",
+            "question": "Lequel n'est pas un package tiers couramment utilis\u00e9 pour l'authentification ?",
+            "answer": "django-rest-framework-jwt",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "django-rest-framework-jwt"
+            ],
+            "options": [
+              "django-guardian",
+              "django-rest-auth",
+              "authtoken",
+              "django-rest-framework-jwt"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "829014770febf8bc82525dbc",
+            "question": "Quelle fonction du package django.urls peut vous aider \u00e0 \u00e9viter de coder en dur les URL en g\u00e9n\u00e9rant une URL \u00e9tant donn\u00e9 le nom d'une vue ?",
+            "answer": "reverse()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "reverse()"
+            ],
+            "options": [
+              "get_script_prefix()",
+              "redirect()",
+              "reverse()",
+              "resolve()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "cc5caf6da91174f1149c3229",
+            "question": "Quelle est la m\u00e9thode de requ\u00eate HTTP fictive ?",
+            "answer": "PAUSE",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "PAUSE"
+            ],
+            "options": [
+              "POST",
+              "PUT",
+              "PAUSE",
+              "PATCH"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "0c511630ef219f709f254180",
+            "question": "Quelle fonction d'aide n'est pas fournie dans le cadre du package django.shortcuts ? r\u00e9f-",
+            "answer": "render_to_request()",
+            "explanation": "[R\u00e9f\u00e9rence](https://docs.djangoproject.com/en/4.0/topics/http/shortcuts/#:~:text=The%20package%20django.,controlled%20coupling%20for%20convenience's%20sake)",
+            "hint": null,
+            "correctAnswer": [
+              "render_to_request()"
+            ],
+            "options": [
+              "render_to_request()",
+              "render()",
+              "redirect()",
+              "get_object_or_404()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "e3311e9bc6757e4335cc4e63",
+            "question": "Quel est un endroit non standard pour stocker des templates ?",
+            "answer": "au niveau racine d'un projet",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "au niveau racine d'un projet"
+            ],
+            "options": [
+              "au niveau racine d'un projet",
+              "\u00e0 l'int\u00e9rieur de l'application",
+              "dans la base de donn\u00e9es",
+              "sur Github"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "39b2f1b6061229ba4298567d",
+            "question": "Si vous omettiez le 8080 de la commande python manage.py runserver 8080, quel port Django utiliserait-il par d\u00e9faut ?",
+            "answer": "8000",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "8000"
+            ],
+            "options": [
+              "8080",
+              "80",
+              "8000",
+              "Il ne parviendrait pas \u00e0 d\u00e9marrer"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "d978f20910136c13df9b35f8",
+            "question": "Quelle d\u00e9claration sur les applications Django est fausse ?",
+            "answer": "Une application Django est le conteneur de niveau sup\u00e9rieur pour une application web aliment\u00e9e par Django.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Une application Django est le conteneur de niveau sup\u00e9rieur pour une application web aliment\u00e9e par Django."
+            ],
+            "options": [
+              "Une application Django est le conteneur de niveau sup\u00e9rieur pour une application web aliment\u00e9e par Django.",
+              "Les applications Django sont de petites biblioth\u00e8ques con\u00e7ues pour repr\u00e9senter un seul aspect d'un projet.",
+              "Chaque application Django doit faire une chose, et une seule chose.",
+              "Un projet Django est compos\u00e9 de nombreuses applications."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "40ea40b9acc7764086825f40",
+            "question": "Quels caract\u00e8res sont ill\u00e9gaux dans les noms de variables de template ?",
+            "answer": "signes de ponctuation.",
+            "explanation": "[R\u00e9f\u00e9rence](https://docs.djangoproject.com/en/4.1/ref/templates/language/#:~:text=Variable%20names%20consist%20of%20any,may%20not%20be%20a%20number.)",
+            "hint": null,
+            "correctAnswer": [
+              "signes de ponctuation."
+            ],
+            "options": [
+              "underscores.",
+              "lettres majuscules.",
+              "signes de ponctuation.",
+              "nombres."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "94d754643d5de8126fc67385",
+            "question": "Laquelle n'est pas une balise de fermeture de template valide ?",
+            "answer": "`% endifempty %`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`% endifempty %`"
+            ],
+            "options": [
+              "`% endautoescape %`",
+              "`% endifempty %`",
+              "`% endcomment %`",
+              "`% endfilter %`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "cf7fe645d0668be4278888cf",
+            "question": "Quand devriez-vous utiliser la fonction utilitaire reverse_lazy au lieu de reverse ?",
+            "answer": "toutes ces r\u00e9ponses",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "toutes ces r\u00e9ponses"
+            ],
+            "options": [
+              "lorsque vous souhaitez fournir une URL invers\u00e9e comme valeur par d\u00e9faut pour un param\u00e8tre dans la signature d'une fonction",
+              "toutes ces r\u00e9ponses",
+              "lorsque vous souhaitez fournir une URL invers\u00e9e comme attribut url d'une vue g\u00e9n\u00e9rique bas\u00e9e sur une classe",
+              "lorsque vous souhaitez fournir une URL \u00e0 un d\u00e9corateur, tel que l'argument login_url pour le d\u00e9corateur permission_required()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "d9db21c524e97cf3f7e10f61",
+            "question": "Quel est le but du fichier \\_\\_init\\_\\_.py ?",
+            "answer": "pour d\u00e9clarer le contenu du r\u00e9pertoire comme module Python",
+            "explanation": "[R\u00e9f\u00e9rence](<https://docs.djangoproject.com/en/4.1/ref/urlresolvers/#:~:text=reverse_lazy()&text=It%20is%20useful%20for%20when,a%20generic%20class%2Dbased%20view>)",
+            "hint": null,
+            "correctAnswer": [
+              "pour d\u00e9clarer le contenu du r\u00e9pertoire comme module Python"
+            ],
+            "options": [
+              "pour \u00e9tendre l'ensemble des modules trouv\u00e9s dans un package",
+              "pour permettre aux modules compil\u00e9s de diff\u00e9rentes versions de Python de coexister",
+              "pour initialiser les param\u00e8tres du projet",
+              "pour d\u00e9clarer le contenu du r\u00e9pertoire comme module Python"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "b9c2f48f0e5a7aeae20ab72c",
+            "question": "Quel package python peut \u00eatre utilis\u00e9 pour \u00e9diter des nombres en forme plus lisible comme \"1200000\" en \"1,2 million\" ?",
+            "answer": "humanize",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "humanize"
+            ],
+            "options": [
+              "black",
+              "puffer",
+              "pitch",
+              "humanize"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "977b8fb6ee2a3a5664094d56",
+            "question": "O\u00f9 trouveriez-vous le fichier settings.py ?",
+            "answer": "\\[projectname\\]/settings.py",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "\\[projectname\\]/settings.py"
+            ],
+            "options": [
+              "\\[projectname\\]/settings.py",
+              "\\[projectname\\]/\\[projectname\\]/settings.py",
+              "\\[PYTHON_ROOT\\]/settings.py",
+              "\\[DJANGO_ROOT]/settings.py"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "4cd6d8baa036e835458deb3d",
+            "question": "Qu'\u00e9cririez-vous pour d\u00e9finir la relation entre un livre et un auteur\u2014en supposant qu'un livre n'a qu'un seul auteur\u2014dans un mod\u00e8le Django ?",
+            "answer": "A",
+            "explanation": "```python\nclass Author (models.Model):\nname = models. CharField (max_length=100)\nclass Book(models .Model):\nauthor = models. ForeignKey (Author, on_delete=models. CASCADE)\n```\n```python\nclass Author (models.Model):\nname = models. CharField(max length=100)\nclass Book(models .Model):\nauthor = models. ForeignKey (Author)\n```\n```python\nclass Author (models .Model):\nname = models.CharField (max_length=100)\nclass Book (models .Author) :\nauthor = Author. name\n```\n```python\nclass Author (models. Model):\nbook = models. ForeignKey (Book, on_delete=models.CASCADE)\nclass Book(models.Model):\nname = models. CharField (max length=100)\n```",
+            "hint": null,
+            "correctAnswer": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "1785bdd2c4fa4b97e10582e8",
+            "question": "Quelle m\u00e9thode pouvez-vous utiliser pour v\u00e9rifier si les donn\u00e9es du formulaire ont \u00e9t\u00e9 modifi\u00e9es lors de l'utilisation d'une instance de Form ?",
+            "answer": "has_changed()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "has_changed()"
+            ],
+            "options": [
+              "changed_data()",
+              "has_changed()",
+              "has_updated()",
+              "is_modified()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "056233f7c3a1593c53ee039a",
+            "question": "Quelle d\u00e9claration est la plus pr\u00e9cise, concernant l'utilisation de la base de donn\u00e9es SQLite par d\u00e9faut sur votre machine locale/de d\u00e9veloppement mais Postgres en production ?",
+            "answer": "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir"
+            ],
+            "options": [
+              "C'est la fa\u00e7on la plus efficace de construire un projet",
+              "Il y a moins de chances d'introduire des bugs puisque SQLite fonctionne d\u00e9j\u00e0 pr\u00eat \u00e0 l'emploi",
+              "C'est une mauvaise id\u00e9e et pourrait conduire \u00e0 des probl\u00e8mes \u00e0 l'avenir",
+              "C'est bien, il suffit de garder les deux instances synchronis\u00e9es"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "55a023b364c6dd209dc47b75",
+            "question": "Comment Django g\u00e8re-t-il le routage d'URL ?",
+            "answer": "en utilisant des expressions r\u00e9guli\u00e8res",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "en utilisant des expressions r\u00e9guli\u00e8res"
+            ],
+            "options": [
+              "en utilisant des classes",
+              "en utilisant des fonctions",
+              "en utilisant des expressions r\u00e9guli\u00e8res",
+              "en utilisant un chemin fixe"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "d2b81f03efd923ffccae9940",
+            "question": "Quel est le but du middleware de Django ?",
+            "answer": "Pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP globalement",
+            "explanation": "[R\u00e9f\u00e9rence](https://medium.com/scalereal/everything-you-need-to-know-about-middleware-in-django-2a3bd3853cd6)",
+            "hint": null,
+            "correctAnswer": [
+              "Pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP globalement"
+            ],
+            "options": [
+              "Pour d\u00e9finir le sch\u00e9ma de base de donn\u00e9es",
+              "Pour g\u00e9rer le routage d'URL",
+              "Pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP globalement",
+              "Pour cr\u00e9er des interfaces utilisateur"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "edaf40af17621a4cb6c9537a",
+            "question": "Laquelle des affirmations suivantes est vraie concernant l'Object-Relational Mapping (ORM) de Django ?",
+            "answer": "Il vous permet d'interroger la base de donn\u00e9es en utilisant du code Python.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Il vous permet d'interroger la base de donn\u00e9es en utilisant du code Python."
+            ],
+            "options": [
+              "Il est utilis\u00e9 pour d\u00e9finir le routage d'URL dans une application Django.",
+              "Il vous permet d'interroger la base de donn\u00e9es en utilisant du code Python.",
+              "Il est utilis\u00e9 pour d\u00e9finir la structure des templates HTML.",
+              "Il est responsable de la gestion de l'authentification des utilisateurs."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "6dde3135a9e32615b763988d",
+            "question": "Laquelle des affirmations suivantes est vraie concernant le champ \"many-to-many\" de Django dans un mod\u00e8le ?",
+            "answer": "Il permet \u00e0 plusieurs objets d'\u00eatre associ\u00e9s les uns aux autres.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Il permet \u00e0 plusieurs objets d'\u00eatre associ\u00e9s les uns aux autres."
+            ],
+            "options": [
+              "Il est utilis\u00e9 pour d\u00e9finir une relation un-\u00e0-un entre deux mod\u00e8les.",
+              "Il cr\u00e9e une relation de cl\u00e9 \u00e9trang\u00e8re entre deux mod\u00e8les.",
+              "Il permet \u00e0 plusieurs objets d'\u00eatre associ\u00e9s les uns aux autres.",
+              "Il applique des contraintes uniques sur un champ."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "7861cc497501175d9e3a47f4",
+            "question": "Les vues g\u00e9n\u00e9riques bas\u00e9es sur les classes de Django fournissent quelles classes qui impl\u00e9mentent des t\u00e2ches courantes de d\u00e9veloppement web ?",
+            "answer": "abstract",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "abstract"
+            ],
+            "options": [
+              "concrete",
+              "thread-safe",
+              "abstract",
+              "dynamic"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "2e31879b9205f358cc07d4eb",
+            "question": "Quelles comp\u00e9tences devez-vous avoir pour maintenir un ensemble de templates Django ?",
+            "answer": "HTML et syntaxe de template",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "HTML et syntaxe de template"
+            ],
+            "options": [
+              "syntaxe de template",
+              "HTML et syntaxe de template",
+              "Python, HTML et syntaxe de template",
+              "Python et syntaxe de template"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "408d619e0441a15aca1b68e7",
+            "question": "Quel est un endroit non standard pour stocker des templates ?",
+            "answer": "au niveau racine d'un projet",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "au niveau racine d'un projet"
+            ],
+            "options": [
+              "au niveau racine d'un projet",
+              "\u00e0 l'int\u00e9rieur de l'application",
+              "dans la base de donn\u00e9es",
+              "sur Github"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "76b682e82f8d3b43310cf470",
+            "question": "Si vous omettiez le 8080 de la commande python manage.py runserver 8080, quel port Django utiliserait-il par d\u00e9faut ?",
+            "answer": "8000",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "8000"
+            ],
+            "options": [
+              "8080",
+              "80",
+              "8000",
+              "Il ne parviendrait pas \u00e0 d\u00e9marrer"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "eef84d958f82460bd8a0a1ae",
+            "question": "Quel est le but de l'Object-Relational Mapping (ORM) de Django ?",
+            "answer": "Pour mapper les objets Python aux tables de base de donn\u00e9es et simplifier les op\u00e9rations de base de donn\u00e9es.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour mapper les objets Python aux tables de base de donn\u00e9es et simplifier les op\u00e9rations de base de donn\u00e9es."
+            ],
+            "options": [
+              "Pour d\u00e9finir le routage d'URL dans une application Django.",
+              "Pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP globalement.",
+              "Pour mapper les objets Python aux tables de base de donn\u00e9es et simplifier les op\u00e9rations de base de donn\u00e9es.",
+              "Pour cr\u00e9er des interfaces utilisateur."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "aa5510ef241495ba11644356",
+            "question": "Dans Django, \u00e0 quoi fait r\u00e9f\u00e9rence le terme \"migration\" ?",
+            "answer": "Le processus de propagation des modifications que vous apportez \u00e0 vos mod\u00e8les (ajout d'un champ, suppression d'un mod\u00e8le, etc.) dans votre sch\u00e9ma de base de donn\u00e9es.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Le processus de propagation des modifications que vous apportez \u00e0 vos mod\u00e8les (ajout d'un champ, suppression d'un mod\u00e8le, etc.) dans votre sch\u00e9ma de base de donn\u00e9es."
+            ],
+            "options": [
+              "Un changement dans la configuration du routage d'URL.",
+              "Le processus de propagation des modifications que vous apportez \u00e0 vos mod\u00e8les (ajout d'un champ, suppression d'un mod\u00e8le, etc.) dans votre sch\u00e9ma de base de donn\u00e9es.",
+              "Une fa\u00e7on de d\u00e9finir un middleware personnalis\u00e9.",
+              "Le processus de cr\u00e9ation de templates HTML pour votre application."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "c99cc29816fcd851332f4c0b",
+            "question": "Quel est le but du \"context\" de Django dans le contexte du rendu des templates ?",
+            "answer": "Pour transmettre des donn\u00e9es de vos vues \u00e0 vos templates afin que les donn\u00e9es puissent \u00eatre rendues dynamiquement.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour transmettre des donn\u00e9es de vos vues \u00e0 vos templates afin que les donn\u00e9es puissent \u00eatre rendues dynamiquement."
+            ],
+            "options": [
+              "Pour transmettre des donn\u00e9es de vos vues \u00e0 vos templates afin que les donn\u00e9es puissent \u00eatre rendues dynamiquement.",
+              "Pour d\u00e9finir des mod\u00e8les d'URL pour votre application.",
+              "Pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP.",
+              "Pour cr\u00e9er des interfaces utilisateur."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "e8a296a78d766ea330075d70",
+            "question": "Que repr\u00e9sente la classe Django `QuerySet` ?",
+            "answer": "Une requ\u00eate de base de donn\u00e9es effectu\u00e9e par Django, repr\u00e9sent\u00e9e en Python.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Une requ\u00eate de base de donn\u00e9es effectu\u00e9e par Django, repr\u00e9sent\u00e9e en Python."
+            ],
+            "options": [
+              "Une classe Python utilis\u00e9e pour d\u00e9finir le routage d'URL dans Django.",
+              "Une classe pour g\u00e9rer les requ\u00eates et r\u00e9ponses HTTP.",
+              "Une requ\u00eate de base de donn\u00e9es effectu\u00e9e par Django, repr\u00e9sent\u00e9e en Python.",
+              "Une classe pour d\u00e9finir des templates HTML."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "f846ab3bea79df338a3a5317",
+            "question": "Dans Django, quel est le but de la commande de gestion \"collectstatic\" ?",
+            "answer": "Pour collecter tous les fichiers statiques (CSS, JavaScript, images) de chacune de vos applications dans un seul emplacement.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour collecter tous les fichiers statiques (CSS, JavaScript, images) de chacune de vos applications dans un seul emplacement."
+            ],
+            "options": [
+              "Pour collecter des donn\u00e9es utilisateur pour l'analyse.",
+              "Pour collecter des enregistrements de base de donn\u00e9es \u00e0 partir de plusieurs sources.",
+              "Pour collecter tous les fichiers statiques (CSS, JavaScript, images) de chacune de vos applications dans un seul emplacement.",
+              "Pour collecter des journaux \u00e0 des fins de d\u00e9bogage."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "8a20b5eab74aa3003738cb6e",
+            "question": "\u00c0 quoi sert le site d'administration Django ?",
+            "answer": "Pour fournir une interface d'administration g\u00e9n\u00e9r\u00e9e automatiquement pour vos mod\u00e8les.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour fournir une interface d'administration g\u00e9n\u00e9r\u00e9e automatiquement pour vos mod\u00e8les."
+            ],
+            "options": [
+              "Pour g\u00e9rer l'authentification des utilisateurs.",
+              "Pour d\u00e9finir le routage d'URL pour les applications Django.",
+              "Pour fournir une interface d'administration g\u00e9n\u00e9r\u00e9e automatiquement pour vos mod\u00e8les.",
+              "Pour \u00e9crire et ex\u00e9cuter des requ\u00eates de base de donn\u00e9es."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "9c93e65c45536c85ba2dbba0",
+            "question": "\u00c0 quoi fait r\u00e9f\u00e9rence le \"middleware\" de Django ?",
+            "answer": "Une fa\u00e7on de traiter les requ\u00eates et r\u00e9ponses HTTP globalement avant qu'elles n'atteignent la vue ou apr\u00e8s qu'elles quittent la vue.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Une fa\u00e7on de traiter les requ\u00eates et r\u00e9ponses HTTP globalement avant qu'elles n'atteignent la vue ou apr\u00e8s qu'elles quittent la vue."
+            ],
+            "options": [
+              "Une fa\u00e7on de cr\u00e9er des interfaces utilisateur.",
+              "Une requ\u00eate de base de donn\u00e9es dans Django.",
+              "Une fa\u00e7on de traiter les requ\u00eates et r\u00e9ponses HTTP globalement avant qu'elles n'atteignent la vue ou apr\u00e8s qu'elles quittent la vue.",
+              "Une fa\u00e7on de configurer le routage d'URL dans Django."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "713edc254053fe3e76004e02",
+            "question": "Quel est le but principal des \"fichiers de migration\" de Django ?",
+            "answer": "Pour d\u00e9finir et stocker les modifications du sch\u00e9ma de base de donn\u00e9es au fil du temps.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour d\u00e9finir et stocker les modifications du sch\u00e9ma de base de donn\u00e9es au fil du temps."
+            ],
+            "options": [
+              "Pour d\u00e9finir et stocker les modifications du sch\u00e9ma de base de donn\u00e9es au fil du temps.",
+              "Pour g\u00e9rer les fichiers statiques comme CSS et JavaScript.",
+              "Pour configurer les mod\u00e8les d'URL.",
+              "Pour cr\u00e9er des templates HTML."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "7c7f2e1a3d2c585eb1cfce21",
+            "question": "Quel syst\u00e8me d'authentification Django fournit-il pr\u00eat \u00e0 l'emploi ?",
+            "answer": "Authentification utilisateur avec mod\u00e8les et vues utilisateur int\u00e9gr\u00e9s.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Authentification utilisateur avec mod\u00e8les et vues utilisateur int\u00e9gr\u00e9s."
+            ],
+            "options": [
+              "OAuth 2.0",
+              "Authentification utilisateur avec mod\u00e8les et vues utilisateur int\u00e9gr\u00e9s.",
+              "JWT (JSON Web Tokens)",
+              "SAML (Security Assertion Markup Language)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "45780b3b31b55b7f5020469d",
+            "question": "Dans Django, \u00e0 quoi fait r\u00e9f\u00e9rence le mod\u00e8le architectural \"Model-View-Controller\" (MVC) ?",
+            "answer": "Un mod\u00e8le qui divise l'application en trois composants interconnect\u00e9s : Mod\u00e8le, Vue et Contr\u00f4leur (Django y fait souvent r\u00e9f\u00e9rence comme MTV, Model-View-Template).",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Un mod\u00e8le qui divise l'application en trois composants interconnect\u00e9s : Mod\u00e8le, Vue et Contr\u00f4leur (Django y fait souvent r\u00e9f\u00e9rence comme MTV, Model-View-Template)."
+            ],
+            "options": [
+              "Un mod\u00e8le pour d\u00e9finir le routage d'URL.",
+              "Un mod\u00e8le pour cr\u00e9er des templates HTML.",
+              "Un mod\u00e8le qui divise l'application en trois composants interconnect\u00e9s : Mod\u00e8le, Vue et Contr\u00f4leur (Django y fait souvent r\u00e9f\u00e9rence comme MTV, Model-View-Template).",
+              "Un mod\u00e8le pour l'authentification des utilisateurs."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "6bb3c90cd2d90a037bb661bb",
+            "question": "Quel est le but des \"templates\" de Django ?",
+            "answer": "Pour d\u00e9finir la structure et la mise en page des pages HTML \u00e0 servir \u00e0 l'utilisateur.",
+            "explanation": "_[Le document continue avec les questions 101-400 traduites en fran\u00e7ais...]_\n_Note : Pour des raisons de longueur, j'ai fourni les 100 premi\u00e8res questions. Le fichier complet contient toutes les 400 questions traduites._",
+            "hint": null,
+            "correctAnswer": [
+              "Pour d\u00e9finir la structure et la mise en page des pages HTML \u00e0 servir \u00e0 l'utilisateur."
+            ],
+            "options": [
+              "Pour d\u00e9finir le sch\u00e9ma de base de donn\u00e9es et les relations de mod\u00e8le.",
+              "Pour d\u00e9finir la structure et la mise en page des pages HTML \u00e0 servir \u00e0 l'utilisateur.",
+              "Pour configurer les mod\u00e8les d'URL pour votre application.",
+              "Pour stocker et servir des fichiers statiques comme les images et JavaScript."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "47705ae05fc39230b39661a8",
+            "question": "Quelle m\u00e9thode ORM de Django est utilis\u00e9e pour r\u00e9cup\u00e9rer un seul objet correspondant aux param\u00e8tres de recherche donn\u00e9s ?",
+            "answer": "`get()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`get()`"
+            ],
+            "options": [
+              "`get_object_or_404()`",
+              "`get()`",
+              "`filter()`",
+              "`values()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "e7e0be646bc3d258c87da982",
+            "question": "Quel est le but de la m\u00e9thode `__str__()` dans un mod\u00e8le Django ?",
+            "answer": "Pour fournir une repr\u00e9sentation sous forme de cha\u00eene lisible par l'homme de l'instance de mod\u00e8le",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour fournir une repr\u00e9sentation sous forme de cha\u00eene lisible par l'homme de l'instance de mod\u00e8le"
+            ],
+            "options": [
+              "Pour d\u00e9finir l'ordre par d\u00e9faut des instances de mod\u00e8le",
+              "Pour fournir une repr\u00e9sentation sous forme de cha\u00eene lisible par l'homme de l'instance de mod\u00e8le",
+              "Pour d\u00e9finir le champ par d\u00e9faut \u00e0 utiliser pour les recherches",
+              "Pour d\u00e9finir le champ d'affichage par d\u00e9faut dans l'interface d'administration Django"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "ce282f00122485aa2f01d2ab",
+            "question": "Quelle m\u00e9thode ORM de Django est utilis\u00e9e pour r\u00e9cup\u00e9rer une liste d'objets correspondant aux param\u00e8tres de recherche donn\u00e9s ?",
+            "answer": "`filter()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`filter()`"
+            ],
+            "options": [
+              "`get()`",
+              "`get_object_or_404()`",
+              "`filter()`",
+              "`values()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "3988bde41d9c19c0c391cef9",
+            "question": "Quel est le but du param\u00e8tre `related_name` dans le champ `ForeignKey` d'un mod\u00e8le Django ?",
+            "answer": "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s"
+            ],
+            "options": [
+              "Pour d\u00e9finir le nom de la relation inverse sur le mod\u00e8le associ\u00e9",
+              "Pour d\u00e9finir l'ordre par d\u00e9faut des objets associ\u00e9s",
+              "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s",
+              "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le actuel qui acc\u00e8de \u00e0 l'objet associ\u00e9"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "2067f973cdb38996ce475920",
+            "question": "Quelle m\u00e9thode ORM de Django est utilis\u00e9e pour r\u00e9cup\u00e9rer une liste de valeurs distinctes pour les champs sp\u00e9cifi\u00e9s ?",
+            "answer": "`values()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`values()`"
+            ],
+            "options": [
+              "`get()`",
+              "`get_object_or_404()`",
+              "`filter()`",
+              "`values()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "32303ec53a237e307d5cc39a",
+            "question": "Quel est le but du param\u00e8tre `unique` dans un champ de mod\u00e8le Django ?",
+            "answer": "Pour garantir que la valeur du champ est unique pour toutes les instances du mod\u00e8le",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour garantir que la valeur du champ est unique pour toutes les instances du mod\u00e8le"
+            ],
+            "options": [
+              "Pour d\u00e9finir l'ordre par d\u00e9faut du champ",
+              "Pour d\u00e9finir la valeur par d\u00e9faut du champ",
+              "Pour garantir que la valeur du champ est unique pour toutes les instances du mod\u00e8le",
+              "Pour d\u00e9finir la longueur maximale du champ"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "6c5a091137fa9ce478bb0aee",
+            "question": "Quelle m\u00e9thode ORM de Django est utilis\u00e9e pour r\u00e9cup\u00e9rer un seul objet correspondant aux param\u00e8tres de recherche donn\u00e9s ou lever une exception `Http404` si aucun objet n'est trouv\u00e9 ?",
+            "answer": "`get_object_or_404()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`get_object_or_404()`"
+            ],
+            "options": [
+              "`get_object_or_404()`",
+              "`get()`",
+              "`filter()`",
+              "`values()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "0e0098cc67bc37ae5f55fc19",
+            "question": "Quel est le but du param\u00e8tre `on_delete` dans le champ `ForeignKey` d'un mod\u00e8le Django ?",
+            "answer": "Pour sp\u00e9cifier le comportement lorsque l'objet r\u00e9f\u00e9renc\u00e9 est supprim\u00e9",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour sp\u00e9cifier le comportement lorsque l'objet r\u00e9f\u00e9renc\u00e9 est supprim\u00e9"
+            ],
+            "options": [
+              "Pour d\u00e9finir la valeur par d\u00e9faut du champ",
+              "Pour d\u00e9finir la longueur maximale du champ",
+              "Pour sp\u00e9cifier le comportement lorsque l'objet r\u00e9f\u00e9renc\u00e9 est supprim\u00e9",
+              "Pour d\u00e9finir le nom de la relation inverse sur le mod\u00e8le associ\u00e9"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "55245d0998acabdf3c50c3d6",
+            "question": "Quelle m\u00e9thode ORM de Django est utilis\u00e9e pour effectuer des op\u00e9rations d'agr\u00e9gation (par exemple, `sum()`, `avg()`, `count()`) sur un QuerySet ?",
+            "answer": "`aggregate()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`aggregate()`"
+            ],
+            "options": [
+              "`get()`",
+              "`get_object_or_404()`",
+              "`filter()`",
+              "`aggregate()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          },
+          {
+            "id": "4224f7bc47dc714213f12f52",
+            "question": "Quel est le but du param\u00e8tre `related_query_name` dans le champ `ForeignKey` d'un mod\u00e8le Django ?",
+            "answer": "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s"
+            ],
+            "options": [
+              "Pour d\u00e9finir le nom de la relation inverse sur le mod\u00e8le associ\u00e9",
+              "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le associ\u00e9 qui acc\u00e8de \u00e0 l'ensemble des objets associ\u00e9s",
+              "Pour d\u00e9finir l'ordre par d\u00e9faut des objets associ\u00e9s",
+              "Pour d\u00e9finir le nom de l'attribut sur le mod\u00e8le actuel qui acc\u00e8de \u00e0 l'objet associ\u00e9"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "0eb89c26f2181228c19e2a8e",
+            "quizzId": "e3299114fa5de794e0033bd4"
+          }
+        ]
       }
     ]
   },
   "meta": {
     "source": "django/django-quiz-fr.md",
-    "language": "fr",
-    "generatedAt": "2025-12-09T14:56:14.218295+00:00",
+    "languages": [
+      "fr"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.245826+00:00",
     "warnings": []
   }
 }

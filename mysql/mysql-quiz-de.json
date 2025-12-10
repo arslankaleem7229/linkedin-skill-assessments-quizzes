@@ -1,1678 +1,2407 @@
 {
   "quizz": {
     "id": "d0c81afc194833db1461e3cf",
-    "title": "MySQL",
-    "description": "Seeded from mysql/mysql-quiz-de.md",
-    "createdById": "seed-user",
-    "questions": [
+    "slug": "mysql",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
       {
-        "id": "9b8fb7b4a15c122dd54efb6b",
-        "question": "Wenn Sie eine Unterabfrage innerhalb der Hauptabfrage haben, welche Abfrage wird zuerst ausgef\u00fchrt?",
-        "answer": "die Unterabfrage",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["die Unterabfrage"],
-        "options": [
-          "Die Unterabfrage wird nie ausgef\u00fchrt. Nur die Hauptabfrage wird ausgef\u00fchrt.",
-          "Sie werden gleichzeitig ausgef\u00fchrt",
-          "die Hauptabfrage",
-          "die Unterabfrage"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9f2b7d6f34b7916996c986b4",
-        "question": "Sie m\u00fcssen zus\u00e4tzlich zu den Daten die gesamte Datenbank einschlie\u00dflich der Datenbankobjekte exportieren. Welches Befehlszeilentool verwendest du?",
-        "answer": "mysqldump",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["mysqldump"],
-        "options": ["mysqlexport", "mysqladmin", "mysqldump", "mysqld"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "59a9ad814b25e13ec0b1073b",
-        "question": "Sie m\u00fcssen die Genauigkeit und Zuverl\u00e4ssigkeit der Daten in Ihrer Datenbank sicherstellen. Sie weisen einige Einschr\u00e4nkungen zu, um den Datentyp einzuschr\u00e4nken, der in eine Tabelle aufgenommen werden kann. Welche Art von Einschr\u00e4nkungen weisen Sie zu?",
-        "answer": "Spaltenebene",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Spaltenebene"],
-        "options": ["Zeilenebene", "Datenbankebene", "Spaltenebene", "Funktionsebene"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7cb753c4218b937de4c457e2",
-        "question": "Welche Option der meisten MySQL-Befehlszeilenprogramme kann verwendet werden, um eine Beschreibung der verschiedenen Optionen des Programms zu erhalten?",
-        "answer": "--help",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["--help"],
-        "options": ["--option", "?", "--help", "-h"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "88f0e5308e333cd0eb9961fa",
-        "question": "MySQL verwendet Umgebungsvariablen in einigen Programmen und Befehlszeilenoperationen. Welche Variable wird von der Shell verwendet, um MySQL-Programme zu finden?",
-        "answer": "PATH",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["PATH"],
-        "options": ["DIR", "HOME", "PATH", "MYSQL_HOME"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "68dedeff74d4be9d141347c8",
-        "question": "Wie k\u00f6nnen Sie eine gespeicherte Prozedur in MySQL erstellen?",
-        "answer": "B",
-        "explanation": "```\n1 CREATE PROCEDURE P () AS\n2 BEGIN\n3 END;\n```\n```\n1 CREATE PROCEDURE P ()\n2 BEGIN\n3 END\n```\n```\n1 CREATE PROCP\n2 BEGIN\n3 END;\n```\n```\n1 CREATE PROC P AS O\n2 BEGIN\n3 END;\n```",
-        "hint": null,
-        "correctAnswer": ["B"],
-        "options": ["A", "B", "C", "D"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fe8c32a235de98c5bac733f9",
-        "question": "Wenn Sie ein Tabellenschema zum Speichern von Sch\u00fclernoten als Buchstaben (A, B, C, D oder F) erstellen w\u00fcrden, welcher Spaltentyp w\u00e4re die beste Wahl?",
-        "answer": "ENUM",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["ENUM"],
-        "options": ["ENUM", "OTEXT", "VARCHAR", "LONGTEXT"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "18a527a751fca320319f45a2",
-        "question": "Das Management hat Sie gebeten, eine Mitarbeiterdatenbank aufzubauen. Sie beginnen mit der Mitarbeitertabelle. Was ist die korrekte Syntax?",
-        "answer": "D",
-        "explanation": "```sql\nCREATE TABLE employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY ON employeeID\n);\n```\n```sql\nCREATE TABLE employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY employeeID\n);\n```\n```sql\nCREATE TABLE IF EXISTS employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY (employeeID)\n);\n```\n```sql\nCREATE TABLE IF NOT EXISTS employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY (employeeID)\n);\n```",
-        "hint": null,
-        "correctAnswer": ["D"],
-        "options": ["A", "B", "C", "D"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "88ff5f933818b62bda06ceea",
-        "question": "Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie m\u00fcssen die Liste der Kunden erstellen, die bestimmte Automodelle gekauft haben. Welche SQL-Klausel verwenden Sie?\n![mysql Q09](images/mysql_q09.jpg)",
-        "answer": "IN",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["IN"],
-        "options": ["LIKE", "IN", "BETWEEN", "HAVING"],
-        "nature": "ChooseOne",
-        "attachments": [
+        "id": "c5dcba3a035692d2f51b52e3",
+        "language": "de",
+        "title": "MySQL",
+        "description": "Seeded from mysql/mysql-quiz-de.md",
+        "questions": [
           {
-            "id": "ac0dddb44746b9f20f6fcd94",
-            "url": "images/mysql_q09.jpg",
-            "type": "question"
+            "id": "9b8fb7b4a15c122dd54efb6b",
+            "question": "Wenn Sie eine Unterabfrage innerhalb der Hauptabfrage haben, welche Abfrage wird zuerst ausgef\u00fchrt?",
+            "answer": "die Unterabfrage",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "die Unterabfrage"
+            ],
+            "options": [
+              "Die Unterabfrage wird nie ausgef\u00fchrt. Nur die Hauptabfrage wird ausgef\u00fchrt.",
+              "Sie werden gleichzeitig ausgef\u00fchrt",
+              "die Hauptabfrage",
+              "die Unterabfrage"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "9f2b7d6f34b7916996c986b4",
+            "question": "Sie m\u00fcssen zus\u00e4tzlich zu den Daten die gesamte Datenbank einschlie\u00dflich der Datenbankobjekte exportieren. Welches Befehlszeilentool verwendest du?",
+            "answer": "mysqldump",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "mysqldump"
+            ],
+            "options": [
+              "mysqlexport",
+              "mysqladmin",
+              "mysqldump",
+              "mysqld"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "59a9ad814b25e13ec0b1073b",
+            "question": "Sie m\u00fcssen die Genauigkeit und Zuverl\u00e4ssigkeit der Daten in Ihrer Datenbank sicherstellen. Sie weisen einige Einschr\u00e4nkungen zu, um den Datentyp einzuschr\u00e4nken, der in eine Tabelle aufgenommen werden kann. Welche Art von Einschr\u00e4nkungen weisen Sie zu?",
+            "answer": "Spaltenebene",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Spaltenebene"
+            ],
+            "options": [
+              "Zeilenebene",
+              "Datenbankebene",
+              "Spaltenebene",
+              "Funktionsebene"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "7cb753c4218b937de4c457e2",
+            "question": "Welche Option der meisten MySQL-Befehlszeilenprogramme kann verwendet werden, um eine Beschreibung der verschiedenen Optionen des Programms zu erhalten?",
+            "answer": "--help",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "--help"
+            ],
+            "options": [
+              "--option",
+              "?",
+              "--help",
+              "-h"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "88f0e5308e333cd0eb9961fa",
+            "question": "MySQL verwendet Umgebungsvariablen in einigen Programmen und Befehlszeilenoperationen. Welche Variable wird von der Shell verwendet, um MySQL-Programme zu finden?",
+            "answer": "PATH",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "PATH"
+            ],
+            "options": [
+              "DIR",
+              "HOME",
+              "PATH",
+              "MYSQL_HOME"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "68dedeff74d4be9d141347c8",
+            "question": "Wie k\u00f6nnen Sie eine gespeicherte Prozedur in MySQL erstellen?",
+            "answer": "B",
+            "explanation": "```\n1 CREATE PROCEDURE P () AS\n2 BEGIN\n3 END;\n```\n```\n1 CREATE PROCEDURE P ()\n2 BEGIN\n3 END\n```\n```\n1 CREATE PROCP\n2 BEGIN\n3 END;\n```\n```\n1 CREATE PROC P AS O\n2 BEGIN\n3 END;\n```",
+            "hint": null,
+            "correctAnswer": [
+              "B"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "fe8c32a235de98c5bac733f9",
+            "question": "Wenn Sie ein Tabellenschema zum Speichern von Sch\u00fclernoten als Buchstaben (A, B, C, D oder F) erstellen w\u00fcrden, welcher Spaltentyp w\u00e4re die beste Wahl?",
+            "answer": "ENUM",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "ENUM"
+            ],
+            "options": [
+              "ENUM",
+              "OTEXT",
+              "VARCHAR",
+              "LONGTEXT"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "18a527a751fca320319f45a2",
+            "question": "Das Management hat Sie gebeten, eine Mitarbeiterdatenbank aufzubauen. Sie beginnen mit der Mitarbeitertabelle. Was ist die korrekte Syntax?",
+            "answer": "D",
+            "explanation": "```sql\nCREATE TABLE employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY ON employeeID\n);\n```\n```sql\nCREATE TABLE employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY employeeID\n);\n```\n```sql\nCREATE TABLE IF EXISTS employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY (employeeID)\n);\n```\n```sql\nCREATE TABLE IF NOT EXISTS employee (\nemployeeID char(10),\nfirstName varchar(50),\nlastName varchar(50),\nphone varchar(20),\naddress varchar(50),\nPRIMARY KEY (employeeID)\n);\n```",
+            "hint": null,
+            "correctAnswer": [
+              "D"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "88ff5f933818b62bda06ceea",
+            "question": "Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie m\u00fcssen die Liste der Kunden erstellen, die bestimmte Automodelle gekauft haben. Welche SQL-Klausel verwenden Sie?\n![mysql Q09](images/mysql_q09.jpg)",
+            "answer": "IN",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "IN"
+            ],
+            "options": [
+              "LIKE",
+              "IN",
+              "BETWEEN",
+              "HAVING"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "f5ad4365c7f623aa0dfb90ac",
+                "url": "~/mysql/images/mysql_q09.jpg",
+                "type": "question"
+              }
+            ],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "9ba10514718828e2c8b5f9c9",
+            "question": "Welche Abfrage w\u00fcrde NICHT zur Verwaltung eines MySQL-Servers verwendet werden?",
+            "answer": "SELECT column FROM tbl",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "SELECT column FROM tbl"
+            ],
+            "options": [
+              "USE db",
+              "SELECT column FROM tbl",
+              "SHOW COLUMNS FROM tbl",
+              "SHOW TABLES"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "8bf5f424b21adecd02d20eb0",
+            "question": "Der MySQL-Server kann abh\u00e4ngig vom Wert der Systemvariablen sql_mode in verschiedenen SQL-Modi betrieben werden. Welcher Modus \u00e4ndert Syntax und Verhalten, um mehr mit Standard-SQL \u00fcbereinzustimmen?",
+            "answer": "ANSI",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "ANSI"
+            ],
+            "options": [
+              "TRADITIONAL",
+              "ANSI",
+              "MSSQL",
+              "STRICT"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "f0ee1597ba25d2894127cb2f",
+            "question": "MySQL-Programme sind eine Reihe von Befehlszeilendienstprogrammen, die mit typischen MySQL-Distributionen bereitgestellt werden. MySQL ist als Datenbank konzipiert.",
+            "answer": "Client und Server",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Client und Server"
+            ],
+            "options": [
+              "Datenbank und Programmierung",
+              "Benutzer und Administrator",
+              "Client und Server",
+              "Syntax und Objekte"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "26d4fcfba4ca82acdb6ff19c",
+            "question": "Welcher MySQL-Befehl zeigt die Struktur einer Tabelle?",
+            "answer": "DESCRIBE table;",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "DESCRIBE table;"
+            ],
+            "options": [
+              "INFO table;",
+              "SHOW table;",
+              "STRUCTURE table;",
+              "DESCRIBE table;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "68b3abbdcdfab3d4e000dbd3",
+            "question": "MySQL verwendet Sicherheit basierend auf \\_ f\u00fcr alle Verbindungen, Abfragen und andere Operationen, die Benutzer versuchen k\u00f6nnen auszuf\u00fchren.",
+            "answer": "Zugriffskontrolllisten",
+            "explanation": "[Referenz](https://dev.mysql.com/doc/refman/8.0/en/security-guidelines.html)",
+            "hint": null,
+            "correctAnswer": [
+              "Zugriffskontrolllisten"
+            ],
+            "options": [
+              "Administratorschema",
+              "verschl\u00fcsselte Algorithmen",
+              "Benutzereinstellungen",
+              "Zugriffskontrolllisten"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "c4b66a5721d5bf7d64d5c810",
+            "question": "Welcher MySQL-Befehl modifiziert Datens\u00e4tze in einer Tabelle?",
+            "answer": "UPDATE",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "UPDATE"
+            ],
+            "options": [
+              "UPDATE",
+              "MODIFY",
+              "CHANGE",
+              "ALTER"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "23056e6bd1730d57060e84a9",
+            "question": "Was ist die beste Art von Abfrage, um das Format einer E-Mail-Adresse in einer MySQL-Tabelle zu validieren?",
+            "answer": "eine SQL-Abfrage mit einem regul\u00e4ren Ausdruck",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "eine SQL-Abfrage mit einem regul\u00e4ren Ausdruck"
+            ],
+            "options": [
+              "eine SQL-Abfrage mit Partitionen",
+              "eine SQL-Abfrage mit IS NULL",
+              "eine SQL-Abfrage mit einem regul\u00e4ren Ausdruck",
+              "eine SQL-Abfrage mit LTRIM oder RTRIM"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "74ccda6f10a58be3524ad613",
+            "question": "In MySQL folgt auf Abfragen immer welches Zeichen?",
+            "answer": "Semikolon",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Semikolon"
+            ],
+            "options": [
+              "Zeilenumbruch",
+              "Doppelpunkt",
+              "Semikolon",
+              "Raute"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "ada8141547851746e596e580",
+            "question": "Wie k\u00f6nnen Sie einen Datensatz mit MySQL entfernen?",
+            "answer": "DELETE FROM",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "DELETE FROM"
+            ],
+            "options": [
+              "DELETE",
+              "DELETE FROM",
+              "REMOVE",
+              "REMOVE FROM"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "709d9becf84cfd19ef7b7881",
+            "question": "Welche Auswahl ist KEINE Anweisung, die Sie zum Filtern von Daten verwenden w\u00fcrden?",
+            "answer": "GROUP BY",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "GROUP BY"
+            ],
+            "options": [
+              "GROUP BY",
+              "WHERE",
+              "LIMIT",
+              "LIKE"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "1a1ebc900f2e8b6fd3c58e99",
+            "question": "Was gibt die folgende SQL-Anweisung zur\u00fcck?\n`SELECT * FROM Employees WHERE EmployeeName LIKE 'a%'`",
+            "answer": "Es wird in der Employees-Tabelle aufgezeichnet, wo der Wert in der EmployeeName-Spalte mit \"a\" beginnt.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Es wird in der Employees-Tabelle aufgezeichnet, wo der Wert in der EmployeeName-Spalte mit \"a\" beginnt."
+            ],
+            "options": [
+              "Es wird in der Tabelle \u201eEmployees\u201c aufgezeichnet, wo der Wert in der Spalte \u201eEmployeeName\u201c kein \u201ea\u201c enth\u00e4lt.",
+              "Es wird in der Employees-Tabelle aufgezeichnet, wo der Wert in der EmployeeName-Spalte mit \"a\" beginnt.",
+              "Es wird in der Tabelle \u201eEmployees\u201c aufgezeichnet, wo der Wert in der Spalte \u201eEmployeeName\u201c ein \u201ea\u201c hat.",
+              "Es wird in der Employees-Tabelle aufgezeichnet, wo der Wert in der EmployeeName-Spalte mit \"a\" endet."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "354ca9c38f340133cbb15fdd",
+            "question": "Was steht in \u201eSELECT \\* FROM clients;\u201c f\u00fcr \u201eclients\u201c?",
+            "answer": "eine Tabelle",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "eine Tabelle"
+            ],
+            "options": [
+              "eine SQL-Abfrage",
+              "eine SQL-Anweisung",
+              "eine Datenbank",
+              "eine Tabelle"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "497740b1699eb71951f593b7",
+            "question": "Wie unterscheidet sich MySQL von SQL?",
+            "answer": "SQL ist eine Standardsprache zum Abrufen und Bearbeiten von Daten aus strukturierten Datenbanken. MySQL ist ein relationales Datenbankverwaltungssystem, das zur Verwaltung von SQL-Datenbanken verwendet wird.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "SQL ist eine Standardsprache zum Abrufen und Bearbeiten von Daten aus strukturierten Datenbanken. MySQL ist ein relationales Datenbankverwaltungssystem, das zur Verwaltung von SQL-Datenbanken verwendet wird."
+            ],
+            "options": [
+              "SQL ist eine Standardsprache zum Abrufen und Bearbeiten von Daten aus strukturierten Datenbanken. MySQL ist ein nichtrelationales Datenbankverwaltungssystem, das zur Verwaltung von SQL-Datenbanken verwendet wird.",
+              "SQL ist eine Standardsprache zum Abrufen und Bearbeiten von Daten aus strukturierten Datenbanken. MySQL ist ein relationales Datenbankverwaltungssystem, das zur Verwaltung von SQL-Datenbanken verwendet wird.",
+              "Sie unterscheiden sich nicht. MySQL und SQL beziehen sich auf dasselbe.",
+              "My SQL ist eine Sprache und SQL ist eine Softwareanwendung."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "37fd3bc38977c7c330a26873",
+            "question": "Welche Abfrage funktioniert, wenn Sie eine Tabelle mit Filmen nach Namen bestellen m\u00fcssen?",
+            "answer": "SELECT \\* FROM movies ORDER BY name",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "SELECT \\* FROM movies ORDER BY name"
+            ],
+            "options": [
+              "SELECT \\* FROM movies GROUP BY name",
+              "SELECT \\* FROM movies ORDER BY name",
+              "SELECT \\* FROM movies ORDER TABLE by name",
+              "SELECT \\* FROM movies FILTER BY name"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "2cd6d53924c0db345ec92583",
+            "question": "Ein Trigger ist ein Datenbankobjekt, das einer Tabelle zugeordnet ist und aktiviert wird, wenn ein bestimmtes Ereignis f\u00fcr die Tabelle eintritt. Welche drei Ereignisse sind das?",
+            "answer": "INSERT, UPDATE, DELETE",
+            "explanation": "[Referenz](https://dev.mysql.com/doc/refman/5.7/en/triggers.html)",
+            "hint": null,
+            "correctAnswer": [
+              "INSERT, UPDATE, DELETE"
+            ],
+            "options": [
+              "INSERT, UPDATE, DELETE",
+              "CREATE, ALTER, DROP",
+              "OPEN, FETCH, CLOSE",
+              "DECLARE, SET, SELECT"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "5bc76dd0eaf84761b4c948bc",
+            "question": "Sie arbeiten mit sehr gro\u00dfen Tabellen in Ihrer Datenbank. Welche SQL-Klausel verwenden Sie, um \u00fcberm\u00e4\u00dfig gro\u00dfe Abfrageergebnisse zu verhindern?",
+            "answer": "LIMIT",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "LIMIT"
+            ],
+            "options": [
+              "UNIQUE",
+              "LIMIT",
+              "DISTINCT",
+              "CONSTRAINT"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "fd9ff931808cdcd7e7c19e02",
+            "question": "Was ist der Standardport f\u00fcr MySQL Server?",
+            "answer": "3306",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "3306"
+            ],
+            "options": [
+              "25",
+              "990",
+              "0",
+              "3306"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "3e4950b5834258ae16c4735a",
+            "question": "Wie k\u00f6nnen Sie doppelte Daten filtern, w\u00e4hrend Sie Datens\u00e4tze aus einer Tabelle abrufen?",
+            "answer": "DISTINCT",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "DISTINCT"
+            ],
+            "options": [
+              "DISTINCT",
+              "WHERE",
+              "LIMIT",
+              "AS"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "102827df1a9683b3e425d561",
+            "question": "Was ist der Unterschied zwischen DROP und TRUNCATE?",
+            "answer": "DROP l\u00f6scht die Tabelle vollst\u00e4ndig und entfernt auch ihre Definition. TRUNCATE l\u00f6scht die Tabelle, l\u00f6scht aber nicht die Definition.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "DROP l\u00f6scht die Tabelle vollst\u00e4ndig und entfernt auch ihre Definition. TRUNCATE l\u00f6scht die Tabelle, l\u00f6scht aber nicht die Definition."
+            ],
+            "options": [
+              "Sie beziehen sich beide auf denselben Vorgang des vollst\u00e4ndigen L\u00f6schens der Tabelle.",
+              "Sie beziehen sich beide auf denselben Vorgang des L\u00f6schens der Tabelle, behalten aber ihre Definition bei.",
+              "TRUNCATE l\u00f6scht die Tabelle vollst\u00e4ndig und entfernt auch ihre Definition. DROP l\u00f6scht die Tabelle, l\u00f6scht aber nicht die Definition.",
+              "DROP l\u00f6scht die Tabelle vollst\u00e4ndig und entfernt auch ihre Definition. TRUNCATE l\u00f6scht die Tabelle, l\u00f6scht aber nicht die Definition."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "bc8ecfa3abeeedfb1ae2b1af",
+            "question": "Wie w\u00e4hlen Sie jede Zeile in einer bestimmten Tabelle mit dem Namen \"Inventar\" aus?",
+            "answer": "SELECT \\* FROM inventory;",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "SELECT \\* FROM inventory;"
+            ],
+            "options": [
+              "SELECT all FROM inventory;",
+              "FROM inventory SELECT all;",
+              "FROM inventory SELECT \\*;",
+              "SELECT \\* FROM inventory;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "b97f0e55c3dbe8b4dc788178",
+            "question": "Was hat jede Tabelle in einer effizient gestalteten relationalen Datenbank?",
+            "answer": "Prim\u00e4rschl\u00fcssel",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Prim\u00e4rschl\u00fcssel"
+            ],
+            "options": [
+              "Satz von Triggern",
+              "sequentielles ID-Feld",
+              "mindestens drei Spalten",
+              "Prim\u00e4rschl\u00fcssel"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "027808617adebffd1998d0bc",
+            "question": "MySQL-Optionsdateien bieten eine M\u00f6glichkeit, h\u00e4ufig verwendete Optionen anzugeben, sodass sie nicht jedes Mal, wenn Sie ein Programm ausf\u00fchren, in die Befehlszeile eingegeben werden m\u00fcssen. Was ist ein anderer Name f\u00fcr die Optionsdateien?",
+            "answer": "Konfigurationsdateien",
+            "explanation": "[Referenz](https://dev.mysql.com/doc/refman/8.0/en/option-files.html)",
+            "hint": null,
+            "correctAnswer": [
+              "Konfigurationsdateien"
+            ],
+            "options": [
+              "variable Einstellungen",
+              "Konfigurationsdateien",
+              "Hilfedateien",
+              "Standardeinstellungen"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "9e67efcedca4f8281c5ce565",
+            "question": "Nach der Installation von MySQL kann es erforderlich sein, \\_ zu initialisieren, was bei einigen MySQL-Installationsmethoden automatisch erfolgen kann.",
+            "answer": "Datenverzeichnis",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Datenverzeichnis"
+            ],
+            "options": [
+              "Speicher-Engine",
+              "Benutzerkonten",
+              "Grant-Tabellen",
+              "Datenverzeichnis"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "1397b196830672b4ad9dcfab",
+            "question": "Sie m\u00fcssen die Daten in der Kundentabelle in eine CSV-Datei exportieren, mit Spalten\u00fcberschriften in der ersten Zeile. Welche Klausel f\u00fcgen Sie Ihrem MySQL-Befehl hinzu?",
+            "answer": "UNION",
+            "explanation": "[Beispiel](https://stackoverflow.com/questions/5941809/include-headers-when-using-select-into-outfile)",
+            "hint": null,
+            "correctAnswer": [
+              "UNION"
+            ],
+            "options": [
+              "JOIN",
+              "WITH HEADERS",
+              "UNION",
+              "WITH COLUMNS"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "97cc521a12e9b30cea293d59",
+            "question": "Eine Form der Sicherung, die Replikation, erm\u00f6glicht es Ihnen, identische Daten auf mehreren Servern als \\_ Konfiguration zu verwalten.",
+            "answer": "master-slave",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "master-slave"
+            ],
+            "options": [
+              "remote-local",
+              "parent-child",
+              "master-slave",
+              "logical-physical"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "809b74489f34f8b8d6e7f800",
+            "question": "Was ist die Voraussetzung f\u00fcr die Verwendung einer Unterabfrage in der SELECT-Klausel?",
+            "answer": "Die Unterabfrage muss einen einzelnen Wert zur\u00fcckgeben.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Die Unterabfrage muss einen einzelnen Wert zur\u00fcckgeben."
+            ],
+            "options": [
+              "Die Unterabfrage muss eine Aggregatfunktion verwenden.",
+              "Die Unterabfrage muss auf dieselbe Tabelle verweisen wie die Hauptabfrage.",
+              "Die Unterabfrage muss einen einzelnen Wert zur\u00fcckgeben.",
+              "Die Unterabfrage muss mindestens einen Wert zur\u00fcckgeben."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "e6fd52584aed47f78666803e",
+            "question": "Jedes Mal, wenn MySQL aktualisiert wird, ist es am besten, mysql_upgrade auszuf\u00fchren, das nach Inkompatibilit\u00e4ten mit dem aktualisierten MySQL-Server sucht. Was macht dieser Befehl, wenn er eine Tabelle mit einer m\u00f6glichen Inkompatibilit\u00e4t findet?",
+            "answer": "Es f\u00fchrt eine Tabellenpr\u00fcfung durch und versucht, falls Probleme gefunden werden, eine Tabellenreparatur.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Es f\u00fchrt eine Tabellenpr\u00fcfung durch und versucht, falls Probleme gefunden werden, eine Tabellenreparatur."
+            ],
+            "options": [
+              "Es f\u00fchrt eine Tabellenpr\u00fcfung durch und versucht, falls Probleme gefunden werden, eine Tabellenreparatur.",
+              "Es stoppt und benachrichtigt den Serveradministrator, dass das Upgrade nicht abgeschlossen werden kann, bis das Inkompatibilit\u00e4tsproblem behoben ist.",
+              "stellt dem Serveradministrator einen vollst\u00e4ndigen Bericht der Tabellenspezifikationen und der Inkompatibilit\u00e4ten bereit.",
+              "Es f\u00fchrt eine Tabellenpr\u00fcfung durch und zeigt, wenn Probleme gefunden werden, die Informationen an, damit der Serveradministrator Ma\u00dfnahmen ergreifen kann."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "9ae3c94f53eb6ec75e98aad0",
+            "question": "Welche MySQL-Anweisung wird verwendet, um zu \u00fcberpr\u00fcfen, welche Konten bestimmte Berechtigungen haben?",
+            "answer": "show grants (zeigt die Privilegien und Rollen an, die einem MySQL-Benutzerkonto oder einer MySQL-Rolle zugewiesen sind)",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "show grants (zeigt die Privilegien und Rollen an, die einem MySQL-Benutzerkonto oder einer MySQL-Rolle zugewiesen sind)"
+            ],
+            "options": [
+              "show grants (zeigt die Privilegien und Rollen an, die einem MySQL-Benutzerkonto oder einer MySQL-Rolle zugewiesen sind)",
+              "showprivilegien (zeigt die Liste der Systemprivilegien, die der MySQL-Server unterst\u00fctzt)",
+              "Zugriff anzeigen",
+              "Benutzerberechtigungen anzeigen"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "5ba3ba59cea9ea4ab989ce5d",
+            "question": "Womit kann kein Ausl\u00f6ser verkn\u00fcpft werden?",
+            "answer": "temporary table",
+            "explanation": "[Referenz](https://dev.mysql.com/doc/refman/5.7/en/create-trigger.html)",
+            "hint": null,
+            "correctAnswer": [
+              "temporary table"
+            ],
+            "options": [
+              "temporary table",
+              "system table",
+              "large table",
+              "new table"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "ca6d404eb786185f0a25fb49",
+            "question": "Sp\u00e4tere Versionen von MySQL unterst\u00fctzen den nativen JSON-Datentyp zum Speichern von JSON-Dokumenten. Was ist ein Nachteil von JSON-Spalten?",
+            "answer": "kann nicht direkt indiziert werden",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "kann nicht direkt indiziert werden"
+            ],
+            "options": [
+              "ineffizient zum Speichern von JSON-Dokumenten",
+              "kann nicht direkt indiziert werden",
+              "Dokumente k\u00f6nnen nicht validiert werden, wenn sie in json-Spalten gespeichert sind",
+              "kann nicht normalisiert werden"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "6b1d987d2767264907143f30",
+            "question": "Welche Aussage trifft auf das folgende Diagramm zu?\n![mysql Q41](images/mysql_q41.jpg)",
+            "answer": "Kunden-ID ist der Fremdschl\u00fcssel f\u00fcr Kunden-ID",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Kunden-ID ist der Fremdschl\u00fcssel f\u00fcr Kunden-ID"
+            ],
+            "options": [
+              "carid ist der Prim\u00e4rschl\u00fcssel f\u00fcr K\u00e4ufe",
+              "carid ist der Fremdschl\u00fcssel f\u00fcr cars.carid",
+              "Kunden-ID ist der Fremdschl\u00fcssel f\u00fcr Kunden-ID",
+              "Kunden-ID ist der Prim\u00e4rschl\u00fcssel f\u00fcr K\u00e4ufe"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "d28c252dff52dac991d231a1",
+                "url": "~/mysql/images/mysql_q41.jpg",
+                "type": "question"
+              }
+            ],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "6ae092229b8bc48bec844075",
+            "question": "Mit welcher Anweisung k\u00f6nnen Sie Daten aus einer Datei in die Tabelle laden?",
+            "answer": "`LOAD DATA INFILE`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`LOAD DATA INFILE`"
+            ],
+            "options": [
+              "`cat file | mysql`",
+              "`LOAD DATA INFILE`",
+              "`LOAD DATA LOCAL INFILE`",
+              "`extended INSERT statement`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "9cb3fbf242f124d938545af3",
+            "question": "Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie m\u00fcssen sicherstellen, dass jeder zur Tabelle \u201eEink\u00e4ufe\u201c hinzugef\u00fcgte Datensatz aus einer Kunden-ID besteht, die bereits in der Tabelle \u201eKunden\u201c vorhanden ist, und einer Fahrzeug-ID, die bereits in der Tabelle \u201eAutos\u201c vorhanden ist. Sie entscheiden sich, einen Trigger f\u00fcr die Validierung zu verwenden. Welches verwendest du?\n![mysql Q43](images/mysql_q85.jpg)",
+            "answer": "`BEFORE INSERT`",
+            "explanation": "`IF EXISTS` und `CROSS JOIN` sind f\u00fcr einen Trigger nicht g\u00fcltig.",
+            "hint": null,
+            "correctAnswer": [
+              "`BEFORE INSERT`"
+            ],
+            "options": [
+              "`AFTER INSERT`",
+              "`BEFORE INSERT`",
+              "`CROSS JOIN`",
+              "`IF EXISTS`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "2c2b773867a65e49d67948d7",
+                "url": "~/mysql/images/mysql_q85.jpg",
+                "type": "question"
+              }
+            ],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "bcdca63f2a12c3cb52380f8f",
+            "question": "Welches ist die korrekte Syntax einer erweiterten Einf\u00fcgeanweisung?",
+            "answer": "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002),",
+            "explanation": "('Mercedes', 'C', 2003)\nvalues ('Mercedes', 'C', 2003)\n('Mercedes', 'C', 2003)\n('Mercedes', 'C', 2003)",
+            "hint": null,
+            "correctAnswer": [
+              "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002),"
+            ],
+            "options": [
+              "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002)",
+              "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002)",
+              "insert into cars (make, model, year) extended ('Ford', 'Mustang', 2002),",
+              "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002),"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "420f77007963fcaece4ef382",
+            "question": "Sie m\u00fcssen eine exakte Kopie einer Tabelle mit allen Spalten und Indizes erstellen. Wie k\u00f6nnen Sie alle Informationen erhalten, die Sie ben\u00f6tigen, um dies zu erreichen?",
+            "answer": "show create table",
+            "explanation": "Beachten Sie, dass es bei der Frage um das _Bekommen_ der Daten geht und nicht um die \\_Duplizierungsoperation selbst. Und tats\u00e4chlich besteht \u00fcberhaupt keine Notwendigkeit, `SHOW CREATE TABLE` auszuf\u00fchren. [Um die Tabelle zu duplizieren](https://popsql.com/learn-sql/mysql/how-to-duplicate-a-table-in-mysql) Struktur k\u00f6nnen Sie `CREATE TABLE new_table LIKE original_table;`.",
+            "hint": null,
+            "correctAnswer": [
+              "show create table"
+            ],
+            "options": [
+              "create table",
+              "clone table",
+              "insert into",
+              "show create table"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "9af5400a7801d4b2cde1f02d",
+            "question": "sie m\u00fcssen ihr mysql-system gegen angreifer sichern. Was sollst du _nicht_ tun?",
+            "answer": "F\u00fchren Sie den MySQL-Server als Unix-Root-Benutzer aus.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "F\u00fchren Sie den MySQL-Server als Unix-Root-Benutzer aus."
+            ],
+            "options": [
+              "MySQL-Server als normaler Benutzer ausf\u00fchren.",
+              "Gew\u00e4hren Sie anderen Benutzern das PROCESS- oder SUPER-Privileg.",
+              "F\u00fchren Sie den MySQL-Server als Unix-Root-Benutzer aus.",
+              "Verwenden Sie das komprimierte Protokoll."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "ec4b588c85dd237e854fda11",
+            "question": "Sie verwalten eine Datenbank mit einer Tabelle \u201eKunden\u201c. Sie haben eine tempor\u00e4re Tabelle, auch \"Kunden\" genannt, erstellt, mit der Sie f\u00fcr die Dauer Ihrer Sitzung arbeiten. Sie m\u00fcssen die tempor\u00e4re Tabelle mit anderen Spezifikationen neu erstellen. Welchen Befehl m\u00fcssen Sie zuerst ausf\u00fchren?",
+            "answer": "`DROP TEMPORARY TABLE customers;`",
+            "explanation": "1. [Referenz](https://dev.mysql.com/doc/refman/8.0/en/drop-table.html)\n2. [Referenz](https://www.mysqltutorial.org/mysql-temporary-table)",
+            "hint": null,
+            "correctAnswer": [
+              "`DROP TEMPORARY TABLE customers;`"
+            ],
+            "options": [
+              "`CREATE TEMPORARY TABLE customers;`",
+              "`DROP TEMP TABLE Kunden;`",
+              "`DROP TABLE Kunden;`",
+              "`DROP TEMPORARY TABLE customers;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "528474ef496adcf24a7645f7",
+            "question": "Sie m\u00fcssen eine komplexe Abfrage mit rekursiven Unterabfragen ausf\u00fchren, ohne jedoch eine gespeicherte Prozedur oder eine Funktion zu erstellen. Welchen Befehl oder welche Klausel verwenden Sie?",
+            "answer": "WITH",
+            "explanation": "Genau daf\u00fcr ist [WITH-Klausel](https://dev.mysql.com/doc/refman/8.0/en/with.html) konzipiert",
+            "hint": null,
+            "correctAnswer": [
+              "WITH"
+            ],
+            "options": [
+              "COLLATE",
+              "UNION",
+              "FULL JOIN",
+              "WITH"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "a7e838759fe483024cb4cd9f",
+            "question": "Welche Wahl ist kein Verarbeitungsalgorithmus f\u00fcr Datenbankansichten?",
+            "answer": "updatable",
+            "explanation": "[Referenz](https://dev.mysql.com/doc/refman/8.0/en/view-algorithms.html)",
+            "hint": null,
+            "correctAnswer": [
+              "updatable"
+            ],
+            "options": [
+              "merge",
+              "updatable",
+              "temptable",
+              "undefined"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "0e0191660a0dbda195211ab7",
+            "question": "Wof\u00fcr wird das MySQL-Befehlszeilendienstprogramm \u201eperror\u201c verwendet?",
+            "answer": "um Speicherfehlercodes anzuzeigen",
+            "explanation": "Hinweis: perror gibt eine Beschreibung f\u00fcr einen Systemfehlercode oder f\u00fcr einen Fehlercode einer Speicher-Engine (Tabellenhandler) aus -\n[link](<https://dev.mysql.com/doc/refman/5.7/en/perror.html#:~:text=2%20perror%20%E2%80%94%20Display%20MySQL%20Error% 20Message%20Information,-For%20most%20system&text=You%20can%20find%20out%20what,(table%20handler)%20error%20code>)",
+            "hint": null,
+            "correctAnswer": [
+              "um Speicherfehlercodes anzuzeigen"
+            ],
+            "options": [
+              "um Ihre MySQL-Version anzuzeigen",
+              "um Betriebssystem-Fehlercodes anzuzeigen",
+              "um fehlerhafte Standardeinstellungen anzuzeigen",
+              "um Speicherfehlercodes anzuzeigen"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "976523685dc9e8f5f0f7bc3b",
+            "question": "Wie k\u00f6nnen Sie alle Spalten f\u00fcr eine bestimmte Tabelle auflisten?",
+            "answer": "SHOW COLUMNS FROM table;",
+            "explanation": "Hinweis: `DESCRIBE tablename` ist eine Abk\u00fcrzung f\u00fcr diesen Befehl",
+            "hint": null,
+            "correctAnswer": [
+              "SHOW COLUMNS FROM table;"
+            ],
+            "options": [
+              "SHOW table COLUMNS;",
+              "SHOW COLUMNS FROM table;",
+              "LIST table COLUMNS;",
+              "SELECT COLUMNS FROM table;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "f564db068cee01d930e672be",
+            "question": "Wie w\u00fcrden Sie den vollst\u00e4ndigen Tabellensatz in der aktuell ausgew\u00e4hlten Datenbank auflisten?",
+            "answer": "SHOW TABLES;",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "SHOW TABLES;"
+            ],
+            "options": [
+              "SELECT \\* FROM DATABASE;",
+              "SHOW TABLES;",
+              "LIST TABLES;",
+              "SELECT ALL TABLES;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "860cf32226cac70b3e9c361d",
+            "question": "Welche Auswahl geh\u00f6rt nicht zu den Tabellenpflegeanweisungen?",
+            "answer": "CREATE TABLE;",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "CREATE TABLE;"
+            ],
+            "options": [
+              "CHECK TABLE;",
+              "CREATE TABLE;",
+              "ANALYZE TABLE;",
+              "OPTIMIZE TABLE;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "a32ac1b8b41651f7072c9097",
+            "question": "In welcher Tabelle speichert MySQL Passw\u00f6rter f\u00fcr Benutzerkonten?",
+            "answer": "mysql.user;",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "mysql.user;"
+            ],
+            "options": [
+              "mysql.accounts;",
+              "mysql.passwords;",
+              "mysql.admin;",
+              "mysql.user;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "0eabb3ec6bdb9144b1b2c605",
+            "question": "Das Management hat Sie gebeten, eine Mitarbeiterdatenbank aufzubauen. Sie m\u00fcssen die aktuelle Position und das Gehalt jedes Mitarbeiters sowie alle fr\u00fcheren Positionen und Geh\u00e4lter im Unternehmen angeben. Sie entscheiden sich f\u00fcr eine Eins-zu-Viele-Struktur: eine Mitarbeitertabelle mit den wichtigsten Informationen wie Name und Adresse und eine Besch\u00e4ftigungstabelle mit Positions- und Gehaltshistorie. Sie k\u00f6nnen das Feld employeeID verwenden, um sie zu verbinden. Wof\u00fcr ist Employment.employeeID ein Beispiel?",
+            "answer": "Fremdschl\u00fcssel;",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Fremdschl\u00fcssel;"
+            ],
+            "options": [
+              "Prim\u00e4rschl\u00fcssel;",
+              "Sekund\u00e4rschl\u00fcssel;",
+              "Fremdschl\u00fcssel;",
+              "Alternativschl\u00fcssel;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "0c6b9b42598ce765340439b9",
+            "question": "Was ist in neueren Versionen von MySQL (8.0+) die korrekte Syntax, um einen CTE (Common Table Expression) zu deklarieren?",
+            "answer": "WITH cte as (SELECT id FROM users) SELECT ...",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "WITH cte as (SELECT id FROM users) SELECT ..."
+            ],
+            "options": [
+              "WITH (SELECT id FROM users) as cte, SELECT ...",
+              "WITH (SELECT id FROM users) as cte SELECT ...",
+              "WITH cte as (SELECT id FROM users), SELECT ...",
+              "WITH cte as (SELECT id FROM users) SELECT ..."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "8e909ac1f410e812f00dee9e",
+            "question": "Was ist ein Grund, Datenredundanz in ein normalisiertes Datenbankdesign einzuf\u00fchren?",
+            "answer": "um die Besch\u00e4digung von Daten zu reduzieren; um das System schneller zu machen",
+            "explanation": "Hinweis: \"um das System schneller zu machen\" kann auch richtig sein. Zum Beispiel k\u00f6nnen wir eine schwere Abfrage im Voraus berechnen und ihr Ergebnis in einer Spalte speichern (als Cache verwenden). Wenn also \"System\" \"Anwendung, die mysql verwendet\" bedeutet, dann ist es auch richtig.",
+            "hint": null,
+            "correctAnswer": [
+              "um die Besch\u00e4digung von Daten zu reduzieren",
+              "um das System schneller zu machen"
+            ],
+            "options": [
+              "um die Besch\u00e4digung von Daten zu reduzieren",
+              "um den Speicherplatz zu reduzieren",
+              "um das System schneller zu machen",
+              "um Datenanomalien zu vermeiden"
+            ],
+            "nature": "ChooseMany",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "9fe79d5c8a47d5ffbc7901a4",
+            "question": "Das folgende Code-Snippet wird verwendet, um Daten aus einer XML-Datei in eine Tabelle einzulesen. Welche XML-Struktur wird von der Anweisung \\_nicht\\_ unterst\u00fctzt?\n```mysql\nLOAD XML LOCAL INFILE 'cars.xml'\nINTO TABLE cars\nROWS IDENTIFIED BY `<car>`;\n```",
+            "answer": "B",
+            "explanation": "```xml\n<car>\n<field name=\"make\"> Lexus </field>\n<field name=\"model\"> IS300 </field>\n<field name=\"make\"> 2016 </field>\n</car>\n```\n```xml\n<car name=\"make\"> Dodge </car>\n<car name=\"model\"> Ram </car>\n<car name=\"year\"> 2000 </car>\n```\n```xml\n<car make=\"Ford\" model=\"Mustang\" year=\"2002\"/>\n```\n```xml\n<car year=\"2010\">\n<make>Mercedes</make> <model> C-Class</model>\n</car>\n```",
+            "hint": null,
+            "correctAnswer": [
+              "B"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "2e09aeefca6b96f93768fdbc",
+            "question": "Sie laden Daten in eine Tabelle. Mit welchem \u200b\u200bBefehl k\u00f6nnen Sie sicherstellen, dass alle Daten eingef\u00fcgt und doppelte Zeilen verworfen werden?",
+            "answer": "`INSERT IGNORE`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`INSERT IGNORE`"
+            ],
+            "options": [
+              "`INSERT IGNORE`",
+              "`INSERT UNIQUE`",
+              "`INSERT INTO`",
+              "`INSERT DISTINCT`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "0f5ecd013407125fac5f5b83",
+            "question": "Welche Aussage \u00fcber die `TRUNCATE TABLE`-Anweisung ist richtig?",
+            "answer": "Es wird immer zuerst gel\u00f6scht und dann eine neue Tabelle neu erstellt.; Es ruft die der Tabelle zugeordneten `DELETE`-Trigger nicht auf.",
+            "explanation": "Hinweis: Beide Antworten sind richtig \u2013 siehe [TRUNCATE TABLE Statement](https://dev.mysql.com/doc/refman/8.0/en/truncate-table.html) im MySQL-Handbuch",
+            "hint": null,
+            "correctAnswer": [
+              "Es wird immer zuerst gel\u00f6scht und dann eine neue Tabelle neu erstellt.",
+              "Es ruft die der Tabelle zugeordneten `DELETE`-Trigger nicht auf."
+            ],
+            "options": [
+              "Es stoppt und gibt einen Fehler aus, wenn es auf eine Zeile trifft, die von einer Zeile in einer untergeordneten Tabelle referenziert wird.",
+              "Es wird immer zuerst gel\u00f6scht und dann eine neue Tabelle neu erstellt.",
+              "Es l\u00f6scht Zeilen nacheinander in Tabellen mit Fremdschl\u00fcsseleinschr\u00e4nkungen.",
+              "Es ruft die der Tabelle zugeordneten `DELETE`-Trigger nicht auf."
+            ],
+            "nature": "ChooseMany",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "dd9198c2109daf2bd41539e8",
+            "question": "Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie m\u00fcssen die Anzahl der verkauften Autos pro Heimatstaat des Wohnsitzes jedes Kunden erhalten. Wie k\u00f6nnen Sie dies erreichen?\n![mysql Q61](images/mysql_q61.png)",
+            "answer": "`SELECT state, COUNT(*) FROM customers c, purchases p WHERE c.ID = p.customerID GROUP BY state;`",
+            "explanation": "Erl\u00e4uterung: Der Unterschied zwischen 2 und 3 besteht darin, dass LEFT JOIN vor der Gruppierung 1 Zeile pro Kunde zur\u00fcckgibt. Wenn es durch RIGHT JOIN ersetzt w\u00fcrde, w\u00fcrde es die richtigen Informationen zur\u00fcckgeben.",
+            "hint": null,
+            "correctAnswer": [
+              "`SELECT state, COUNT(*) FROM customers c, purchases p WHERE c.ID = p.customerID GROUP BY state;`"
+            ],
+            "options": [
+              "`SELECT state, COUNT(*) FROM customers WHERE ID IN (SELECT customerID FROM purchases) GROUP BY state;`",
+              "`SELECT state, COUNT(*) FROM customers c LEFT JOIN purchases p ON c.ID = p.customerID GROUP BY state;`",
+              "`SELECT state, COUNT(*) FROM customers c, purchases p WHERE c.ID = p.customerID GROUP BY state;`",
+              "`SELECT state, COUNT(*) FROM customers GROUP BY state;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "661e78fa8d816261f82b2265",
+                "url": "~/mysql/images/mysql_q61.png",
+                "type": "question"
+              }
+            ],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "c6bd0c7a682eb03568fcd63a",
+            "question": "Bei der Datenmigration m\u00fcssen h\u00e4ufig doppelte Zeilen im Rahmen der Datenbereinigung gel\u00f6scht werden. Welche Aussage funktioniert am besten?",
+            "answer": "`DELETE JOIN`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`DELETE JOIN`"
+            ],
+            "options": [
+              "`DELETE DUPS`",
+              "`DELETE DISTINCT`",
+              "`DELETE JOIN`",
+              "`DELETE WITH`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "5cf5b48aa826aae109ef3a92",
+            "question": "Was m\u00fcssen Sie bei der Arbeit mit dem MySQL-Cursor au\u00dferdem deklarieren?",
+            "answer": "`NOT FOUND` handler",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`NOT FOUND` handler"
+            ],
+            "options": [
+              "`DEFAULT` value",
+              "`RETURN` variable",
+              "`SQLEXCEPTION` routine",
+              "`NOT FOUND` handler"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "f4f6d1117e104871ed00628b",
+            "question": "Welcher Sicherungstyp umfasst alle \u00c4nderungen, die an den Daten vorgenommen wurden, seit die letzte vollst\u00e4ndige Sicherung durchgef\u00fchrt wurde?",
+            "answer": "differential",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "differential"
+            ],
+            "options": [
+              "snapshot",
+              "logical",
+              "differential",
+              "incremental"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "c05e6dd51364c9fa5167184e",
+            "question": "Sie m\u00fcssen eine MySQL-Datenbank aus einer Sicherungsdatei wiederherstellen. Welches Befehlszeilentool verwenden Sie f\u00fcr den eigentlichen Datenimport, nachdem Sie die Datenbank neu erstellt haben?",
+            "answer": "`mysql`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`mysql`"
+            ],
+            "options": [
+              "`mysqld`",
+              "`mysql`",
+              "`mysqladmin`",
+              "`mysqldump`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "6f0378b7dac93d72ea02c83f",
+            "question": "Sie importieren Daten als JSON in eine neue Tabelle. Sie f\u00fchren CREATE TABLE json_data ( city JSON ) aus; und Zeilen in diese Tabelle einf\u00fcgen. Was ist die korrekte Syntax, um die Liste der St\u00e4dte anzuzeigen?",
+            "answer": "`SELECT city->>'$.name' city FROM json_data;`",
+            "explanation": "Hinweis: Die letzte Option ist auch g\u00fcltig, aber die Ergebnisse werden in Anf\u00fchrungszeichen gesetzt",
+            "hint": null,
+            "correctAnswer": [
+              "`SELECT city->>'$.name' city FROM json_data;`"
+            ],
+            "options": [
+              "`SELECT city FROM json_data;`",
+              "`SELECT city->>'$.name' city FROM json_data;`",
+              "`SELECT city.name city FROM json_data;`",
+              "`SELECT city->'$.name' city FROM json_data;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "830f977e6a17c0f21633352e",
+            "question": "Wenn Sie MyISAM anstelle von InnoDB verwenden m\u00f6chten, welche Option m\u00fcssen Sie in der CREATE TABLE-Anweisung angeben?",
+            "answer": "ENGINE",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "ENGINE"
+            ],
+            "options": [
+              "ENGINE",
+              "PARTITION",
+              "STORAGE",
+              "TABLESPACE"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "5fc65c7dea43a1ba8ea93ba2",
+            "question": "Sie arbeiten mit der Tabelle in diesem Diagramm. Sie m\u00f6chten mit der Volltextsuche die Kunden finden, die in einer Stra\u00dfe oder Einfahrt wohnen. Wie lautet der Befehl dazu?\nTable name: **customers**\n| ID   | lastname | firstname | phone        | address             | city        | state | zip   |\n| ---- | -------- | --------- | ------------ | ------------------- | ----------- | ----- | ----- |\n| A001 | Smith    | Bob       | 212-555-1212 | 1001 1st Street     | New York    | NY    | 10001 |\n| A002 | Chang    | John      | 213-555-5678 | 888 Rodeo Drive     | Los Angeles | CA    | 90210 |\n| A003 | Smith    | Mary      | 999-999-9999 | 123 Main Street     | Anytown     | VA    | 12345 |\n| A004 | Johnson  | Jack      | 312-312-3120 | 1111 Chicago Avenue | Chicago     | IL    | 60606 |\n| A005 | Lopez    | Linda     | 737-777-3333 | 123 Main Street     | Austin      | TX    | 73344 |",
+            "answer": "D",
+            "explanation": "```sql\nSELECT *\nFROM customers\nWHERE address MATCH 'Street' OR 'Drive';\n```\n```sql\nSELECT *\nFROM customers\nWHERE MATCH(address) IN ('street, drive');\n```\n```sql\nSELECT *\nFROM customers\nWHERE address MATCH 'Street' OR address MATCH 'Drive';\n```\n```sql\nSELECT *\nFROM customers\nWHERE MATCH(address) AGAINST ('street, drive');\n```",
+            "hint": null,
+            "correctAnswer": [
+              "D"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "8758112a1c615bf2039fd131",
+            "question": "Welche Abfrage listet die Datenbanken auf dem aktuellen Server auf?",
+            "answer": "SHOW DATABASES;",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "SHOW DATABASES;"
+            ],
+            "options": [
+              "SHOW DATABASES;",
+              "LIST ALL DATABASES;",
+              "LIST DATABASES;",
+              "SHOW DB;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "a487ca15c38789368b4fdfcf",
+            "question": "Was ist das Ergebnis der Datenbankentwurfsphase?",
+            "answer": "eine Liste von Entit\u00e4ten, ihrer Beziehung, Beschr\u00e4nkungen, Datentypen und Kardinalit\u00e4ten",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "eine Liste von Entit\u00e4ten, ihrer Beziehung, Beschr\u00e4nkungen, Datentypen und Kardinalit\u00e4ten"
+            ],
+            "options": [
+              "alle Tabellen, Spalten, Datentypen, Indizes und ihre Beziehungen",
+              "eine Liste von Entit\u00e4ten, ihrer Beziehung und Einschr\u00e4nkungen",
+              "alle Tabellen und deren Namen, die zur Implementierung des logischen Modells ben\u00f6tigt werden",
+              "eine Liste von Entit\u00e4ten, ihrer Beziehung, Beschr\u00e4nkungen, Datentypen und Kardinalit\u00e4ten"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "eccace7ab98a32d0ece6973a",
+            "question": "Welche Wahl ist _kein_ g\u00fcltiges Modell f\u00fcr einen gespeicherten Prozedurparameter?",
+            "answer": "IN OUT",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "IN OUT"
+            ],
+            "options": [
+              "INOUT",
+              "IN",
+              "OUT",
+              "IN OUT"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "8687b7ef8d1ff82c80b9f166",
+            "question": "Welchen Vorteil bietet die Verwendung einer tempor\u00e4ren Tabelle anstelle einer Heap-Tabelle?",
+            "answer": "Die tempor\u00e4re Tabelle wird gel\u00f6scht, sobald Ihre Sitzung getrennt wird.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Die tempor\u00e4re Tabelle wird gel\u00f6scht, sobald Ihre Sitzung getrennt wird."
+            ],
+            "options": [
+              "Die tempor\u00e4re Tabelle wird gel\u00f6scht, wenn die Datenbank neu gestartet wird.",
+              "Tempor\u00e4re Tabellen k\u00f6nnen von Clients gemeinsam genutzt werden, wodurch sie in Gruppenentwicklungsumgebungen besser verwendbar sind.",
+              "Die tempor\u00e4re Tabelle wird gel\u00f6scht, sobald Ihre Sitzung getrennt wird.",
+              "Das Erstellen einer tempor\u00e4ren Tabelle erfordert keine besonderen Berechtigungen."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "184f0ff020f51d1a9da828e6",
+            "question": "Welches ist ein g\u00fcltiger Konstruktor f\u00fcr eine Klasse namens User?",
+            "answer": "`public User() {}`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`public User() {}`"
+            ],
+            "options": [
+              "`public construct User() {}`",
+              "`public User() {}`",
+              "`public instance User() {}`",
+              "`public init User() {}`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "bcfdebf6d0ac4b942b91b245",
+            "question": "Was ist die maximale Anzahl von Spalten, die von einem einzelnen Tabellenindex verwendet werden k\u00f6nnen?",
+            "answer": "16",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "16"
+            ],
+            "options": [
+              "2",
+              "4",
+              "8",
+              "16"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "2c626504761bc1d7169475d2",
+            "question": "Welcher Befehl gibt eine Liste von Triggern in der aktuellen Datenbank zur\u00fcck?",
+            "answer": "`SHOW TRIGGERS;`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`SHOW TRIGGERS;`"
+            ],
+            "options": [
+              "`DISPLAY TRIGGERS;`",
+              "`SHOW TRIGGERS;`",
+              "`SELECT ALL TRIGGERS;`",
+              "`SELECT * FROM information_schema.triggers;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "f20183d865ca7b60b7acd862",
+            "question": "Welche Aussage zu den Datentypen TIMESTAMP und DATETIME ist richtig?",
+            "answer": "TIMESTAMP und DATETIME werden beide ohne Zeitzone gespeichert.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "TIMESTAMP und DATETIME werden beide ohne Zeitzone gespeichert."
+            ],
+            "options": [
+              "TIMESTAMP-Werte ben\u00f6tigen mehr Bytes zum Speichern als DATETIME-Werte.",
+              "TIMESTAMP wird ohne Zeitzone gespeichert und DATETIME wird in UTC-Werten gespeichert.",
+              "TIMESTAMP und DATETIME werden beide ohne Zeitzone gespeichert.",
+              "TIMESTAMP wird in UTC-Werten gespeichert und DATETIME wird ohne Zeitzone gespeichert."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "a73f5e5746e214200b397372",
+            "question": "Was ist das \u00c4quivalent zum Befehl mysqladmin reload?",
+            "answer": "`mysqladmin flush-privileges`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`mysqladmin flush-privileges`"
+            ],
+            "options": [
+              "`mysqladmin flush-threads`",
+              "`mysqladmin flush-tables`",
+              "`mysqladmin flush-privileges`",
+              "`mysqladmin flush-all`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "6121bc3e37b64e11698990a1",
+            "question": "Erkl\u00e4ren Sie den Sicherheitsaspekt gespeicherter Prozeduren",
+            "answer": "Gespeicherte Prozeduren sind sicher, da Anwendungen Zugriff auf gespeicherte Prozeduren und nicht auf zugrunde liegende Tabellen gew\u00e4hrt werden kann",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Gespeicherte Prozeduren sind sicher, da Anwendungen Zugriff auf gespeicherte Prozeduren und nicht auf zugrunde liegende Tabellen gew\u00e4hrt werden kann"
+            ],
+            "options": [
+              "Gespeicherte Prozeduren sind nicht sicher, da sie von der Befehlszeile als Root-Benutzer ausgef\u00fchrt werden k\u00f6nnen",
+              "Stored Procedures sind sicher, da der Eigent\u00fcmer der Stored Procedure entscheiden kann, wem Zugriff gew\u00e4hrt wird",
+              "Gespeicherte Prozeduren sind sicher, da Anwendungen Zugriff auf gespeicherte Prozeduren und nicht auf zugrunde liegende Tabellen gew\u00e4hrt werden kann",
+              "Gespeicherte Prozeduren sind nicht sicher, da sie Anweisungen ausf\u00fchren k\u00f6nnen, um Tabellen zu l\u00f6schen oder Daten massenweise zu l\u00f6schen"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "b999786e5e43ca1730ce54de",
+            "question": "Wie w\u00fcrden Sie Daten zu allen Kunden abrufen, bei denen keine Telefonnummer gespeichert ist?",
+            "answer": "`SELECT * FROM customers WHERE PhoneNumber IS NULL;`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`SELECT * FROM customers WHERE PhoneNumber IS NULL;`"
+            ],
+            "options": [
+              "`SELECT * FROM customers WHERE PhoneNumber = NULL;`",
+              "`SELECT * FROM customers WHERE PhoneNumber IS NOT VALID;`",
+              "`SELECT * FROM customers WHERE PhoneNumber IS NULL;`",
+              "`SELECT * FROM customers WHERE PhoneNumber IS UNKNOWN;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "49180b9b19f15ff64ba9dce8",
+            "question": "Im folgenden Diagramm ist das Preisfeld als Typ DECIMAL deklariert. Was w\u00e4re eine effizientere Deklaration f\u00fcr dieses Feld?\n![Mysql-Bild](images/mysql_q80.png)",
+            "answer": "DECIMAL(10,2)",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "DECIMAL(10,2)"
+            ],
+            "options": [
+              "FLOAT",
+              "DECIMAL(10,2)",
+              "NUMERIC",
+              "DOUBLE"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "39c7b9a613ed00fed8dc97a4",
+                "url": "~/mysql/images/mysql_q80.png",
+                "type": "question"
+              }
+            ],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "d8aa53f4899fde4a80ce17a0",
+            "question": "Welche Option ist \u201ekein\u201c verf\u00fcgbarer Zeichenfolgentyp f\u00fcr eine Spalte?",
+            "answer": "`BIT`",
+            "explanation": "Erl\u00e4uterung: BIT ist kein String-Typ",
+            "hint": null,
+            "correctAnswer": [
+              "`BIT`"
+            ],
+            "options": [
+              "`ENUM`",
+              "`SET`",
+              "`BIT`",
+              "`CHAR`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "db74f89e0669f8c81d59f1a5",
+            "question": "Dieses Diagramm zeigt, welche Art von Beziehung zwischen Kunden und Autos?\n![Mysql-Bild](images/mysql_q80.png)",
+            "answer": "many-to-many",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "many-to-many"
+            ],
+            "options": [
+              "one-to-many",
+              "parent-child",
+              "many-to-many",
+              "many-to-one"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "a3a1bc11dbac29e21e68e36b",
+                "url": "~/mysql/images/mysql_q80.png",
+                "type": "question"
+              }
+            ],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "b32536e03c1779174b996d10",
+            "question": "Eine gespeicherte Routine ist ein Satz von SQL-Anweisungen, die auf dem Server gespeichert sind und entweder als Prozedur oder als Funktion vorliegen. Welche Anweisung kann nicht in gespeicherten Routinen verwendet werden?",
+            "answer": "`USE`",
+            "explanation": "Erl\u00e4uterung: Sowohl `SET` als auch `DECLARE` werden verwendet, um Variablen zu erstellen. Referenz: [Tutorial zu MySQL STORED PROCEDURE mit Beispielen](https://www.softwaretestinghelp.com/mysql-stored-procedure/)",
+            "hint": null,
+            "correctAnswer": [
+              "`USE`"
+            ],
+            "options": [
+              "`SELECT`",
+              "`USE`",
+              "`SET`",
+              "`DECLARE`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "5e4b957551c0ae7949c9e00d",
+            "question": "Wenn ein neuer Student zu einer neuen Datenbank hinzugef\u00fcgt wird, m\u00f6chten Sie, dass neue Datens\u00e4tze in den zugeh\u00f6rigen Tabellen wie Pr\u00fcfung, Ergebnis und Anwesenheit erstellt werden. Wie w\u00fcrden Sie dies erreichen?",
+            "answer": "trigger",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "trigger"
+            ],
+            "options": [
+              "trigger",
+              "regular expression",
+              "view",
+              "index"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "95b7d4071b7bd865628235a9",
+            "question": "Im folgenden Diagramm sind die ID-Felder als Typ CHAR statt INT deklariert. Was ist KEIN m\u00f6glicher Grund f\u00fcr diese Entscheidung?\n![Mysql-Bild](images/mysql_q85.png)",
+            "answer": "Der Datentyp `CHAR(10)` ist effizienter und platzsparender.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Der Datentyp `CHAR(10)` ist effizienter und platzsparender."
+            ],
+            "options": [
+              "Das ID-Feld muss Buchstaben und nicht nur Zahlen enthalten.",
+              "Sie k\u00f6nnen ein konsistentes Format f\u00fcr alle Tabellen haben, die ID-Felder erfordern.",
+              "Das ID-Feld muss f\u00fchrende Nullen haben, die der INT-Datentyp abschneiden w\u00fcrde.",
+              "Der Datentyp `CHAR(10)` ist effizienter und platzsparender."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "0e280680962ff50d1c64636b",
+                "url": "~/mysql/images/mysql_q85.png",
+                "type": "question"
+              }
+            ],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "fef5a8086168c9e16d35b532",
+            "question": "Warum sollten Sie einen allgemeinen Tabellenausdruck (CTE) verwenden?",
+            "answer": "Um komplexe Abfragen aufzuschl\u00fcsseln und die Wiederverwendung innerhalb einer Abfrage zu erm\u00f6glichen.",
+            "explanation": "Erl\u00e4uterung: CTEs erstellen keine tempor\u00e4ren Tabellen, sie funktionieren nur innerhalb einer einzelnen Abfrage. Referenz: [13.2.15 WITH (Common Table Expressions)](https://dev.mysql.com/doc/refman/8.0/en/with.html).",
+            "hint": null,
+            "correctAnswer": [
+              "Um komplexe Abfragen aufzuschl\u00fcsseln und die Wiederverwendung innerhalb einer Abfrage zu erm\u00f6glichen."
+            ],
+            "options": [
+              "Zum Definieren von Abfragen zur sp\u00e4teren Wiederverwendung f\u00fcr die Dauer der aktuellen Sitzung",
+              "Zum Erstellen tempor\u00e4rer Tabellen, die zur Vorauswahl h\u00e4ufig verwendeter Ergebnismengen verwendet werden k\u00f6nnen.",
+              "Um einen neuen Einzelwert aus einer Ergebnismenge zu berechnen und an den Abfrageparser zur\u00fcckzugeben.",
+              "Um komplexe Abfragen aufzuschl\u00fcsseln und die Wiederverwendung innerhalb einer Abfrage zu erm\u00f6glichen."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "cefdb5de137b43d052f8f22b",
+            "question": "Welcher Optionsmodifikator weist ein Programm an, nicht mit einem Fehler zu beenden, wenn es die Option nicht erkennt, sondern stattdessen eine Warnung auszugeben?",
+            "answer": "--loose",
+            "explanation": "Referenz: [4.2.2.4 Program Option Modifiers](https://dev.mysql.com/doc/refman/8.0/en/option-modifiers.html)",
+            "hint": null,
+            "correctAnswer": [
+              "--loose"
+            ],
+            "options": [
+              "--verbose",
+              "--skip",
+              "--skip-error",
+              "--loose"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "f5e2459f5cc2b8928b611bed",
+            "question": "Was gibt diese SQL-Anweisung zur\u00fcck?\n```\nSELECT name FROM students WHERE name REGEXP '^to';\n```",
+            "answer": "alle Namen, die mit \u201eto\u201c beginnen, wie z. B. Tommy oder Tony",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "alle Namen, die mit \u201eto\u201c beginnen, wie z. B. Tommy oder Tony"
+            ],
+            "options": [
+              "alle Namen, die mit \u201eto\u201c beginnen, wie z. B. Tommy oder Tony",
+              "alle Namen mit \"to\", wie Roberto und Tommy",
+              "Alle Namen ohne \"to\", wie Samantha oder Kathryn",
+              "alle Namen, die mit \u201eto\u201c enden, wie z. B. Roberto"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "d01855d449c388c4d7134f7b",
+            "question": "Sie arbeiten mit den Tabellen wie in der Abbildung dargestellt. Sie m\u00fcssen die Liste der Gesamtpreise f\u00fcr jede Automarke und jedes Automodell erstellen, mit Zwischensummen f\u00fcr jede Marke und der Gesamtsumme aller Preise. Welche SQL-Klausel verwenden Sie?\n![Mysql-Bild](images/mysql_q92.png)",
+            "answer": "WITH ROLLUP",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "WITH ROLLUP"
+            ],
+            "options": [
+              "UNION",
+              "SHOW TOTALS",
+              "UNION ALL",
+              "WITH ROLLUP"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "7acd5f3311980fc4fd0c37ed",
+                "url": "~/mysql/images/mysql_q92.png",
+                "type": "question"
+              }
+            ],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "fa12d2bec1b48e05a5ee5029",
+            "question": "Die Left- und Right-Joins werden auch als \\_ bezeichnet.",
+            "answer": "Outer Join",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Outer Join"
+            ],
+            "options": [
+              "Inner Join",
+              "Natural Join",
+              "Outer Join",
+              "Cartesian Join"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "d262f5e7c99a8ece53534830",
+            "question": "Was ist der g\u00fcltige Weg, um eine Datenbankansicht in MySQL zu erstellen?",
+            "answer": "`CREATE VIEW v1 AS SELECT * FROM t1;`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`CREATE VIEW v1 AS SELECT * FROM t1;`"
+            ],
+            "options": [
+              "`CREATE VIEW v1 SELECT * FROM t1 WHERE col1 > 10;`",
+              "`CREATE VIEW v1 AS BEGIN SELECT * FROM t1 END;`",
+              "`CREATE VIEW v1 BEGIN SELECT * FROM t1 END;`",
+              "`CREATE VIEW v1 AS SELECT * FROM t1;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "eed625124933aa8e3838cf48",
+            "question": "Wie werden Berechtigungen in MySQL implementiert?",
+            "answer": "access control lists",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "access control lists"
+            ],
+            "options": [
+              "encrypted algorithms",
+              "access control lists",
+              "user settings",
+              "administrator schema"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "9e2d8a268341d45b9e7b885c",
+            "question": "Innerhalb einer Transaktion m\u00fcssen mehrere Operationen durchgef\u00fchrt werden. Was w\u00fcrden Sie tun, wenn w\u00e4hrend dieser Transaktion eine Ausnahme auftritt?",
+            "answer": "`ROLLBACK`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`ROLLBACK`"
+            ],
+            "options": [
+              "`UNDO`",
+              "`UNCOMMIT`",
+              "`ROLLBACK`",
+              "`REVERSE`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "afce221a41cf198eb4f5013f",
+            "question": "Welche Funktion findet die aktuelle Uhrzeit oder das Datum in MySQL?",
+            "answer": "CURDATE()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "CURDATE()"
+            ],
+            "options": [
+              "DATE()",
+              "GETDATE()",
+              "CURDATE()",
+              "CURRENT()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "be5b392c1bf5a297adb1ac2c",
+            "question": "Was ist die korrekte Verwendung von ENUM in MySQL?",
+            "answer": "`Create table size (name ENUM('Small','Medium','Large'));`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`Create table size (name ENUM('Small','Medium','Large'));`"
+            ],
+            "options": [
+              "`Create table size (ENUM ('Small','Medium','Large'));`",
+              "`Create table ENUM (name ('Small','Medium','Large'));`",
+              "`Create table size (name: ENUM['Small','Medium','Large']);`",
+              "`Create table size (name ENUM('Small','Medium','Large'));`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "35fcdbd539cc74943d5c01d3",
+            "question": "Der mysqldump-Befehl kann keine Ausgabe in **\\_** generieren.",
+            "answer": "JSON",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "JSON"
+            ],
+            "options": [
+              "JSON",
+              "CSV",
+              "XML",
+              "TXT"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "9b5f6941caa43a87b539b8e6",
+            "question": "Sie arbeiten mit den unten gezeigten Tabellen. Sie m\u00fcssen die Liste aller Autos erstellen, unabh\u00e4ngig davon, ob sie verkauft wurden oder nicht. Welche Aussage leistet das?\n![Mysql-Bild](images/mysql_q98.png)",
+            "answer": "D",
+            "explanation": "```\nSELECT cars.*, purchases.date\nFROM cars RIGHT JOIN purchases\nON cars.ID = purchases.carID;\n```\n```\nSELECT cars.*, purchases.date\nFROM cars INNER JOIN purchases\nON cars.ID = purchases.carID;\n```\n```\nSELECT cars.*, purchases.date\nFROM cars JOIN purchases\nON cars.ID = purchases.carID;\n```\n```\nSELECT cars.*, purchases.date FROM cars LEFT JOIN purchases ON cars.ID = purchases.carID;\n```",
+            "hint": null,
+            "correctAnswer": [
+              "D"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "5395f397106e59863f4356ef",
+                "url": "~/mysql/images/mysql_q98.png",
+                "type": "question"
+              }
+            ],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "33d98c589f885d35bd676e9d",
+            "question": "Welcher Codeausschnitt aus einer gespeicherten Prozedur sollte als CASE-Anweisung umgeschrieben werden?",
+            "answer": "D",
+            "explanation": "```\nIF var1 THEN SET varA = var1;\nELSEIF var2 THEN SET varA = var2;\nELSEIF var3 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```\n```\nIF var1 = var2 THEN SET varA = var1;\nELSEIF var2 = var3 THEN SET varA = var2;\nELSEIF var3 = var4 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```\n```\nIF var1 = 1 THEN SET varA = var1;\nELSEIF var2 = 2 THEN SET varA = var2;\nELSEIF var3 = 3 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```\n```\nIF var1 = 1 THEN SET varA = var1;\nELSEIF var1 = 2 THEN SET varA = var2;\nELSEIF var1 = 3 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```",
+            "hint": null,
+            "correctAnswer": [
+              "D"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "1015727cf874032bdaebe035",
+            "question": "Warum w\u00fcrden Sie gespeicherte Funktionen verwenden?",
+            "answer": "f\u00fcr Formeln und Gesch\u00e4ftsregeln, die auf ein bestimmtes Triggerereignis angewendet werden sollen, z. B. auf Einf\u00fcgungen",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "f\u00fcr Formeln und Gesch\u00e4ftsregeln, die auf ein bestimmtes Triggerereignis angewendet werden sollen, z. B. auf Einf\u00fcgungen"
+            ],
+            "options": [
+              "f\u00fcr Formeln und Gesch\u00e4ftsregeln, die Sie auf Spalten in einer SQL-Abfrage anwenden m\u00f6chten",
+              "f\u00fcr Formeln und Gesch\u00e4ftsregeln, die auf ein bestimmtes Triggerereignis angewendet werden sollen, z. B. auf Einf\u00fcgungen",
+              "zum automatischen \u00c4ndern der Daten einer Tabelle basierend auf einer Abfrage",
+              "zur Wiederverwendung wiederkehrender Abfragen"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "3675feb7c2fc4a479047cf6f",
+            "question": "Welche Schritte m\u00fcssen Sie unternehmen, um die Tabelle aus diesem Diagramm zu normalisieren?\nTabellenname: Superhelden\n| Name | Pseudonym | Leistung1 | Leistung2 | Macht3 |\n| ---- | ----- | ------ | ------ | ------ |\n| \u00dcbermensch | Clark Kent | Flug | R\u00f6ntgenblick | Superst\u00e4rke |\n| Wunderfrau | Diana Prinz | Kraftfelder | Reflexe | Telepathie |\n| Spiderman | Peter Parker | Walkriechen | Web-Making | Verbesserte Sinne |\n| Aquaman | Arthur Curry | Unterwasseratmung | Verbesserte Sicht | Ausdauer |\n| Hulk | Bruce-Banner | Superst\u00e4rke | Strahlenimmunit\u00e4t | Unverwundbarkeit |",
+            "answer": "Erstellen Sie eine weitere Tabelle zum Nachschlagen von Kr\u00e4ften mit Feldern f\u00fcr Code und Beschreibung sowie eine Verbindungstabelle mit Superheldennamen und Kraftcodes.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Erstellen Sie eine weitere Tabelle zum Nachschlagen von Kr\u00e4ften mit Feldern f\u00fcr Code und Beschreibung sowie eine Verbindungstabelle mit Superheldennamen und Kraftcodes."
+            ],
+            "options": [
+              "Erstellen Sie eine weitere Tabelle zum Nachschlagen von Kr\u00e4ften mit Feldern f\u00fcr Code und Beschreibung sowie eine Verbindungstabelle mit Superheldennamen und Kraftcodes.",
+              "F\u00fcgen Sie dieser Tabelle eine Spalte hinzu, die als Datensatzkennung dient, und machen Sie sie zum Prim\u00e4rschl\u00fcssel.",
+              "Erweitern Sie diese Tabelle um zus\u00e4tzliche Spalten \"power4\", \"power5\" und so weiter, um zus\u00e4tzliche Kr\u00e4fte f\u00fcr jeden Superhelden zu erm\u00f6glichen.",
+              "Konvertieren Sie diese Tabelle so, dass sie eine Spalte mit dem Namen \"Power\" hat, und f\u00fcgen Sie einen Datensatz f\u00fcr jede Superhelden-Power-Kombination hinzu, f\u00fcr insgesamt 15 Datens\u00e4tze in diesem Beispiel."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "57004b6dbd210964545ab923",
+            "question": "Was ist ein g\u00fcltiger Weg, um eine Datenbankansicht in MySQL zu erstellen?",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [
+              "1 CREATE VIEW v1 2 SELECT \\* FROM t1 3 WHERE col1 &gt; 10;",
+              "1 CREATE VIEW v1 2 BEGIN 3 SELECT \\* FROM t1 4 END",
+              "1 CREATE VIEW v1 AS 2 SELECT \\* FROM t1;",
+              "1 CREATE VIEW v1 AS 2 BEGIN 3 SELECT \\* FROM t1 4 END;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "ec4d69bc031fbf9833d0d736",
+            "question": "Eine Tabelle Item hat ein boolesches Feld endOfLife und ein makeYear-Feld vom Typ YEAR(4). Wie k\u00f6nnen Sie den booleschen Wert f\u00fcr alle Artikel, die vor 2019 hergestellt wurden, auf wahr setzen?",
+            "answer": "UPDATE Item SET endOfLife = true WHERE makeYear < 2019",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "UPDATE Item SET endOfLife = true WHERE makeYear < 2019"
+            ],
+            "options": [
+              "UPSERT Item SET endOfLife = true WHERE makeYear < 2019",
+              "CHANGE Item SET endOfLife = true WHERE makeYear < 2019",
+              "ALTER Item SET endOfLife = true WHERE makeYear < 2019",
+              "UPDATE Item SET endOfLife = true WHERE makeYear < 2019"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "db4e196fe80ebea9877fa965",
+            "question": "Welche Auswahl ist ein Beispiel f\u00fcr eine Aggregatfunktion?Welche Auswahl ist ein Beispiel f\u00fcr eine Aggregatfunktion?",
+            "answer": "COUNT()",
+            "explanation": "[Referenz](https://www.sqltutorial.org/sql-aggregate-functions/)",
+            "hint": null,
+            "correctAnswer": [
+              "COUNT()"
+            ],
+            "options": [
+              "NOW()",
+              "MID()",
+              "FORMAT()",
+              "COUNT()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "e8339219971970f066ac967b",
+            "question": "In diesem Diagramm arbeiten Sie am UPDATE-Trigger in der Mitarbeitertabelle. Wie k\u00f6nnen Sie auf den neuen Wert f\u00fcr die Adresse innerhalb des Triggers zugreifen?\n![Mysql-Bild](images/mysql_q103.png)",
+            "answer": "Use NEW.address",
+            "explanation": "[Referenz](https://dev.mysql.com/doc/refman/8.0/en/trigger-syntax.html)",
+            "hint": null,
+            "correctAnswer": [
+              "Use NEW.address"
+            ],
+            "options": [
+              "Use NEW.address",
+              "Use INSERTED.address",
+              "Use DELETED.address",
+              "USE OLD.address"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "2b091908a7e603127b1e4047",
+                "url": "~/mysql/images/mysql_q103.png",
+                "type": "question"
+              }
+            ],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "6e80425b0b280fdea02ab7ca",
+            "question": "Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie m\u00fcssen die Liste der Kunden erstellen, die bestimmte Automodelle gekauft haben. Welche SQL-Klausel verwenden Sie?",
+            "answer": "UNION",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "UNION"
+            ],
+            "options": [
+              "UNION ALL",
+              "UNION",
+              "SHOW TOTALS",
+              "WITH ROLLUP"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "c44dafd9425bfa2baddc6c6b",
+            "question": "Sie verwalten eine Datenbank mit einer Tabelle namens \u201eKunden\u201c. Sie haben eine tempor\u00e4re Tabelle, auch \"Kunden\" genannt, erstellt, mit der Sie f\u00fcr die Dauer Ihrer Sitzung arbeiten. Sie m\u00fcssen die tempor\u00e4re Tabelle mit anderen Spezifikationen neu erstellen. Welchen Befehl m\u00fcssen Sie zuerst ausf\u00fchren?",
+            "answer": "`DROP TABLE customers;`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`DROP TABLE customers;`"
+            ],
+            "options": [
+              "`CREATE TEMPORARY TABLE customers;`",
+              "`DROP TEMP TABLE customers;`",
+              "`DROP TEMPORARY TABLE customers;`",
+              "`DROP TABLE customers;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "b3d88857966d714b7b6cf58d",
+            "question": "Wie w\u00fcrden Sie in MySQL eine Abfrage ohne Ber\u00fccksichtigung der Gro\u00df-/Kleinschreibung erstellen?",
+            "answer": "`SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`"
+            ],
+            "options": [
+              "`SELECT * FROM customers WHERE UPPEERCASE(LastName) = 'POTTER';`",
+              "`SELECT * FROM customers WHERE LOWERCASE(LastName) = 'potter';`",
+              "`SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`",
+              "`SELECT * FROM customers WHERE UPPER(LastName) = 'Potter';`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "03f68a4174eee1bc529c8070",
+            "question": "Zu welchen Kategorien in Mysql geh\u00f6rt das Schl\u00fcsselwort \"COUNT\"?",
+            "answer": "Aggregatfunktionen",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Aggregatfunktionen"
+            ],
+            "options": [
+              "Aggregatfunktionen",
+              "Operatoren",
+              "Klauseln",
+              "Alle genannten"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "46a9f40bd5933aa2c27db886",
+            "question": "Welche der folgenden geh\u00f6rt zu einer \"Aggregatfunktion\"?",
+            "answer": "COUNT",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "COUNT"
+            ],
+            "options": [
+              "COUNT",
+              "UPPER",
+              "LOWER",
+              "Alle genannten"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "d035ff56b2fd41b0880f1759",
+            "question": "Was bedeutet die \"HAVING\"-Klausel in MySQL?",
+            "answer": "Zum Herausfiltern der Zeilenwerte",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Zum Herausfiltern der Zeilenwerte"
+            ],
+            "options": [
+              "Um die Spaltenwerte herauszufiltern",
+              "Zum Herausfiltern der Zeilenwerte",
+              "Zum Herausfiltern der Zeilen- und Spaltenwerte",
+              "Keine der genannten"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "176e6cea53f9d2c5ccdc0f13",
+            "question": "Welche Klausel \u00e4hnelt der \"HAVING\"-Klausel in Mysql?",
+            "answer": "WHERE",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "WHERE"
+            ],
+            "options": [
+              "SELECT",
+              "FROM",
+              "WHERE",
+              "Keine der genannten"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "aeed466887af777b017895b3",
+            "question": "Was wird die Ausgabe des folgenden MySQL-Befehls sein?\nSELECT emp_id, fname, lname\n      FROM employee\n      WHERE title=\u2019HEAD TELLER\u2019 AND start_date&gt;2008-11-23;",
+            "answer": "Spaltenerw\u00e4hnung mit \"SELECT\"-Klausel und nur die Zeilen, die \"HEAD TELLER\" als \"title\" enthalten",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Spaltenerw\u00e4hnung mit \"SELECT\"-Klausel und nur die Zeilen, die \"HEAD TELLER\" als \"title\" enthalten"
+            ],
+            "options": [
+              "Alle Spalten",
+              "Nur die Spalten, die mit der \"SELECT\"-Klausel erw\u00e4hnt werden",
+              "Spaltenerw\u00e4hnung mit \"SELECT\"-Klausel und nur die Zeilen, die \"HEAD TELLER\" als \"title\" enthalten",
+              "Keine der genannten"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "bda4dfa7d2d7975f0b6d7f07",
+            "question": "Gibt es einen Fehler in der folgenden MySQL-Anweisung?\nSELECT e.emp_id, e.fname,e.lname,d.name\n      FROM employee e INNER JOIN department d\n      ON e.dept_id=e.dept_id;",
+            "answer": "NEIN",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "NEIN"
+            ],
+            "options": [
+              "NEIN",
+              "JAWOHL",
+              "Abh\u00e4ngig",
+              "Keine der genannten"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "0f7c1bb8c6c217bcab5c0cd8",
+            "question": "Sp\u00e4tere Versionen von MySQL unterst\u00fctzen den nativen JSON-Datentyp zum Speichern von JSON-Dokumenten. Was ist ein Nachteil von JSON-Spalten?",
+            "answer": "JSON-Spalten k\u00f6nnen nicht direkt indiziert werden.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "JSON-Spalten k\u00f6nnen nicht direkt indiziert werden."
+            ],
+            "options": [
+              "JSON-Spalten k\u00f6nnen nicht normalisiert werden.",
+              "JSON-Spalten k\u00f6nnen nicht direkt indiziert werden.",
+              "JSON-Spalten sind zum Speichern von JSON-Dokumenten ineffizient.",
+              "JSON-Dokumente k\u00f6nnen nicht validiert werden, wenn sie in JSON-Spalten gespeichert sind."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "e577c3452e8bb5d5b79c96fb",
+            "question": "Wie w\u00e4hlen Sie mit MySQL alle Datens\u00e4tze aus einer Tabelle mit dem Namen \"Personen\" aus, in der der \"Nachname\" alphabetisch zwischen (und einschlie\u00dflich) \"Hansen\" und \"Pettersen\" steht?",
+            "answer": "`SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'`",
+            "explanation": "[Referenz](https://www.w3schools.com/mysql/mysql_between.asp)",
+            "hint": null,
+            "correctAnswer": [
+              "`SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'`"
+            ],
+            "options": [
+              "`SELECT LastName>'Hansen' AND LastName<'Pettersen' FROM Persons`",
+              "`SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'`",
+              "`SELECT * FROM Persons WHERE LastName>'Hansen' AND LastName<'Pettersen'`",
+              "`Keines der oben genannten.`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "8fc99ff8eb335c0b2e209e09",
+            "question": "Betrachten Sie den unten angegebenen Satz von Beziehungen und die folgende SQL-Abfrage\nStudents : (Roll number, Name, Date of birth)\n        Courses: (Course number, Course name, instructor)\n        Grades: (Roll number, Course number, Grade)\n        SELECT DISTINCT Name\n        FROM Students, Courses, Grades\n        WHERE Students.Roll_number = Grades.Roll_number\n        AND Courses.Instructor =Sriram\n        AND Courses.Course_number = Grades.Course_number\n        AND Grades.Grade = A\n(Welche der folgenden Mengen wird durch die obige Abfrage berechnet?)",
+            "answer": "Namen von Studenten, die in mindestens einem der von Sriram unterrichteten Kurse eine A-Note erhalten haben",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Namen von Studenten, die in mindestens einem der von Sriram unterrichteten Kurse eine A-Note erhalten haben"
+            ],
+            "options": [
+              "Namen von Sch\u00fclern, die in allen von Sriram unterrichteten Kursen eine A-Note erhalten haben",
+              "Namen der Studenten, die in allen Kursen eine A-Note erhalten haben",
+              "Namen von Studenten, die in mindestens einem der von Sriram unterrichteten Kurse eine A-Note erhalten haben",
+              "Nichts des oben Genannten"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
+          },
+          {
+            "id": "ff5094dbdc66c9080d84f445",
+            "question": "Angenommen, Sie haben eine Tabelle sales mit einer Spalte product_id. Welche SQL-Abfrage gibt korrekt die Gesamtzahl der einzigartigen verkauften Produkte zur\u00fcck?",
+            "answer": "`SELECT COUNT(DISTINCT product_id) FROM sales;`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`SELECT COUNT(DISTINCT product_id) FROM sales;`"
+            ],
+            "options": [
+              "`SELECT COUNT(product_id) FROM sales;`",
+              "`SELECT COUNT(DISTINCT product_id) FROM sales;`",
+              "`SELECT SUM(DISTINCT product_id) FROM sales;`",
+              "`SELECT product_id FROM sales;`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c5dcba3a035692d2f51b52e3",
+            "quizzId": "d0c81afc194833db1461e3cf"
           }
         ]
-      },
-      {
-        "id": "9ba10514718828e2c8b5f9c9",
-        "question": "Welche Abfrage w\u00fcrde NICHT zur Verwaltung eines MySQL-Servers verwendet werden?",
-        "answer": "SELECT column FROM tbl",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["SELECT column FROM tbl"],
-        "options": ["USE db", "SELECT column FROM tbl", "SHOW COLUMNS FROM tbl", "SHOW TABLES"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8bf5f424b21adecd02d20eb0",
-        "question": "Der MySQL-Server kann abh\u00e4ngig vom Wert der Systemvariablen sql_mode in verschiedenen SQL-Modi betrieben werden. Welcher Modus \u00e4ndert Syntax und Verhalten, um mehr mit Standard-SQL \u00fcbereinzustimmen?",
-        "answer": "ANSI",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["ANSI"],
-        "options": ["TRADITIONAL", "ANSI", "MSSQL", "STRICT"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f0ee1597ba25d2894127cb2f",
-        "question": "MySQL-Programme sind eine Reihe von Befehlszeilendienstprogrammen, die mit typischen MySQL-Distributionen bereitgestellt werden. MySQL ist als Datenbank konzipiert.",
-        "answer": "Client und Server",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Client und Server"],
-        "options": [
-          "Datenbank und Programmierung",
-          "Benutzer und Administrator",
-          "Client und Server",
-          "Syntax und Objekte"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "26d4fcfba4ca82acdb6ff19c",
-        "question": "Welcher MySQL-Befehl zeigt die Struktur einer Tabelle?",
-        "answer": "DESCRIBE table;",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["DESCRIBE table;"],
-        "options": ["INFO table;", "SHOW table;", "STRUCTURE table;", "DESCRIBE table;"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "68b3abbdcdfab3d4e000dbd3",
-        "question": "MySQL verwendet Sicherheit basierend auf \\_ f\u00fcr alle Verbindungen, Abfragen und andere Operationen, die Benutzer versuchen k\u00f6nnen auszuf\u00fchren.",
-        "answer": "Zugriffskontrolllisten",
-        "explanation": "[Referenz](https://dev.mysql.com/doc/refman/8.0/en/security-guidelines.html)",
-        "hint": null,
-        "correctAnswer": ["Zugriffskontrolllisten"],
-        "options": [
-          "Administratorschema",
-          "verschl\u00fcsselte Algorithmen",
-          "Benutzereinstellungen",
-          "Zugriffskontrolllisten"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c4b66a5721d5bf7d64d5c810",
-        "question": "Welcher MySQL-Befehl modifiziert Datens\u00e4tze in einer Tabelle?",
-        "answer": "UPDATE",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["UPDATE"],
-        "options": ["UPDATE", "MODIFY", "CHANGE", "ALTER"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "23056e6bd1730d57060e84a9",
-        "question": "Was ist die beste Art von Abfrage, um das Format einer E-Mail-Adresse in einer MySQL-Tabelle zu validieren?",
-        "answer": "eine SQL-Abfrage mit einem regul\u00e4ren Ausdruck",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["eine SQL-Abfrage mit einem regul\u00e4ren Ausdruck"],
-        "options": [
-          "eine SQL-Abfrage mit Partitionen",
-          "eine SQL-Abfrage mit IS NULL",
-          "eine SQL-Abfrage mit einem regul\u00e4ren Ausdruck",
-          "eine SQL-Abfrage mit LTRIM oder RTRIM"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "74ccda6f10a58be3524ad613",
-        "question": "In MySQL folgt auf Abfragen immer welches Zeichen?",
-        "answer": "Semikolon",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Semikolon"],
-        "options": ["Zeilenumbruch", "Doppelpunkt", "Semikolon", "Raute"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ada8141547851746e596e580",
-        "question": "Wie k\u00f6nnen Sie einen Datensatz mit MySQL entfernen?",
-        "answer": "DELETE FROM",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["DELETE FROM"],
-        "options": ["DELETE", "DELETE FROM", "REMOVE", "REMOVE FROM"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "709d9becf84cfd19ef7b7881",
-        "question": "Welche Auswahl ist KEINE Anweisung, die Sie zum Filtern von Daten verwenden w\u00fcrden?",
-        "answer": "GROUP BY",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["GROUP BY"],
-        "options": ["GROUP BY", "WHERE", "LIMIT", "LIKE"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1a1ebc900f2e8b6fd3c58e99",
-        "question": "Was gibt die folgende SQL-Anweisung zur\u00fcck?\n`SELECT * FROM Employees WHERE EmployeeName LIKE 'a%'`",
-        "answer": "Es wird in der Employees-Tabelle aufgezeichnet, wo der Wert in der EmployeeName-Spalte mit \"a\" beginnt.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Es wird in der Employees-Tabelle aufgezeichnet, wo der Wert in der EmployeeName-Spalte mit \"a\" beginnt."
-        ],
-        "options": [
-          "Es wird in der Tabelle \u201eEmployees\u201c aufgezeichnet, wo der Wert in der Spalte \u201eEmployeeName\u201c kein \u201ea\u201c enth\u00e4lt.",
-          "Es wird in der Employees-Tabelle aufgezeichnet, wo der Wert in der EmployeeName-Spalte mit \"a\" beginnt.",
-          "Es wird in der Tabelle \u201eEmployees\u201c aufgezeichnet, wo der Wert in der Spalte \u201eEmployeeName\u201c ein \u201ea\u201c hat.",
-          "Es wird in der Employees-Tabelle aufgezeichnet, wo der Wert in der EmployeeName-Spalte mit \"a\" endet."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "354ca9c38f340133cbb15fdd",
-        "question": "Was steht in \u201eSELECT \\* FROM clients;\u201c f\u00fcr \u201eclients\u201c?",
-        "answer": "eine Tabelle",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["eine Tabelle"],
-        "options": ["eine SQL-Abfrage", "eine SQL-Anweisung", "eine Datenbank", "eine Tabelle"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "497740b1699eb71951f593b7",
-        "question": "Wie unterscheidet sich MySQL von SQL?",
-        "answer": "SQL ist eine Standardsprache zum Abrufen und Bearbeiten von Daten aus strukturierten Datenbanken. MySQL ist ein relationales Datenbankverwaltungssystem, das zur Verwaltung von SQL-Datenbanken verwendet wird.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "SQL ist eine Standardsprache zum Abrufen und Bearbeiten von Daten aus strukturierten Datenbanken. MySQL ist ein relationales Datenbankverwaltungssystem, das zur Verwaltung von SQL-Datenbanken verwendet wird."
-        ],
-        "options": [
-          "SQL ist eine Standardsprache zum Abrufen und Bearbeiten von Daten aus strukturierten Datenbanken. MySQL ist ein nichtrelationales Datenbankverwaltungssystem, das zur Verwaltung von SQL-Datenbanken verwendet wird.",
-          "SQL ist eine Standardsprache zum Abrufen und Bearbeiten von Daten aus strukturierten Datenbanken. MySQL ist ein relationales Datenbankverwaltungssystem, das zur Verwaltung von SQL-Datenbanken verwendet wird.",
-          "Sie unterscheiden sich nicht. MySQL und SQL beziehen sich auf dasselbe.",
-          "My SQL ist eine Sprache und SQL ist eine Softwareanwendung."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "37fd3bc38977c7c330a26873",
-        "question": "Welche Abfrage funktioniert, wenn Sie eine Tabelle mit Filmen nach Namen bestellen m\u00fcssen?",
-        "answer": "SELECT \\* FROM movies ORDER BY name",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["SELECT \\* FROM movies ORDER BY name"],
-        "options": [
-          "SELECT \\* FROM movies GROUP BY name",
-          "SELECT \\* FROM movies ORDER BY name",
-          "SELECT \\* FROM movies ORDER TABLE by name",
-          "SELECT \\* FROM movies FILTER BY name"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2cd6d53924c0db345ec92583",
-        "question": "Ein Trigger ist ein Datenbankobjekt, das einer Tabelle zugeordnet ist und aktiviert wird, wenn ein bestimmtes Ereignis f\u00fcr die Tabelle eintritt. Welche drei Ereignisse sind das?",
-        "answer": "INSERT, UPDATE, DELETE",
-        "explanation": "[Referenz](https://dev.mysql.com/doc/refman/5.7/en/triggers.html)",
-        "hint": null,
-        "correctAnswer": ["INSERT, UPDATE, DELETE"],
-        "options": [
-          "INSERT, UPDATE, DELETE",
-          "CREATE, ALTER, DROP",
-          "OPEN, FETCH, CLOSE",
-          "DECLARE, SET, SELECT"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5bc76dd0eaf84761b4c948bc",
-        "question": "Sie arbeiten mit sehr gro\u00dfen Tabellen in Ihrer Datenbank. Welche SQL-Klausel verwenden Sie, um \u00fcberm\u00e4\u00dfig gro\u00dfe Abfrageergebnisse zu verhindern?",
-        "answer": "LIMIT",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["LIMIT"],
-        "options": ["UNIQUE", "LIMIT", "DISTINCT", "CONSTRAINT"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fd9ff931808cdcd7e7c19e02",
-        "question": "Was ist der Standardport f\u00fcr MySQL Server?",
-        "answer": "3306",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["3306"],
-        "options": ["25", "990", "0", "3306"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3e4950b5834258ae16c4735a",
-        "question": "Wie k\u00f6nnen Sie doppelte Daten filtern, w\u00e4hrend Sie Datens\u00e4tze aus einer Tabelle abrufen?",
-        "answer": "DISTINCT",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["DISTINCT"],
-        "options": ["DISTINCT", "WHERE", "LIMIT", "AS"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "102827df1a9683b3e425d561",
-        "question": "Was ist der Unterschied zwischen DROP und TRUNCATE?",
-        "answer": "DROP l\u00f6scht die Tabelle vollst\u00e4ndig und entfernt auch ihre Definition. TRUNCATE l\u00f6scht die Tabelle, l\u00f6scht aber nicht die Definition.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "DROP l\u00f6scht die Tabelle vollst\u00e4ndig und entfernt auch ihre Definition. TRUNCATE l\u00f6scht die Tabelle, l\u00f6scht aber nicht die Definition."
-        ],
-        "options": [
-          "Sie beziehen sich beide auf denselben Vorgang des vollst\u00e4ndigen L\u00f6schens der Tabelle.",
-          "Sie beziehen sich beide auf denselben Vorgang des L\u00f6schens der Tabelle, behalten aber ihre Definition bei.",
-          "TRUNCATE l\u00f6scht die Tabelle vollst\u00e4ndig und entfernt auch ihre Definition. DROP l\u00f6scht die Tabelle, l\u00f6scht aber nicht die Definition.",
-          "DROP l\u00f6scht die Tabelle vollst\u00e4ndig und entfernt auch ihre Definition. TRUNCATE l\u00f6scht die Tabelle, l\u00f6scht aber nicht die Definition."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bc8ecfa3abeeedfb1ae2b1af",
-        "question": "Wie w\u00e4hlen Sie jede Zeile in einer bestimmten Tabelle mit dem Namen \"Inventar\" aus?",
-        "answer": "SELECT \\* FROM inventory;",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["SELECT \\* FROM inventory;"],
-        "options": [
-          "SELECT all FROM inventory;",
-          "FROM inventory SELECT all;",
-          "FROM inventory SELECT \\*;",
-          "SELECT \\* FROM inventory;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b97f0e55c3dbe8b4dc788178",
-        "question": "Was hat jede Tabelle in einer effizient gestalteten relationalen Datenbank?",
-        "answer": "Prim\u00e4rschl\u00fcssel",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Prim\u00e4rschl\u00fcssel"],
-        "options": [
-          "Satz von Triggern",
-          "sequentielles ID-Feld",
-          "mindestens drei Spalten",
-          "Prim\u00e4rschl\u00fcssel"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "027808617adebffd1998d0bc",
-        "question": "MySQL-Optionsdateien bieten eine M\u00f6glichkeit, h\u00e4ufig verwendete Optionen anzugeben, sodass sie nicht jedes Mal, wenn Sie ein Programm ausf\u00fchren, in die Befehlszeile eingegeben werden m\u00fcssen. Was ist ein anderer Name f\u00fcr die Optionsdateien?",
-        "answer": "Konfigurationsdateien",
-        "explanation": "[Referenz](https://dev.mysql.com/doc/refman/8.0/en/option-files.html)",
-        "hint": null,
-        "correctAnswer": ["Konfigurationsdateien"],
-        "options": [
-          "variable Einstellungen",
-          "Konfigurationsdateien",
-          "Hilfedateien",
-          "Standardeinstellungen"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9e67efcedca4f8281c5ce565",
-        "question": "Nach der Installation von MySQL kann es erforderlich sein, \\_ zu initialisieren, was bei einigen MySQL-Installationsmethoden automatisch erfolgen kann.",
-        "answer": "Datenverzeichnis",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Datenverzeichnis"],
-        "options": ["Speicher-Engine", "Benutzerkonten", "Grant-Tabellen", "Datenverzeichnis"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1397b196830672b4ad9dcfab",
-        "question": "Sie m\u00fcssen die Daten in der Kundentabelle in eine CSV-Datei exportieren, mit Spalten\u00fcberschriften in der ersten Zeile. Welche Klausel f\u00fcgen Sie Ihrem MySQL-Befehl hinzu?",
-        "answer": "UNION",
-        "explanation": "[Beispiel](https://stackoverflow.com/questions/5941809/include-headers-when-using-select-into-outfile)",
-        "hint": null,
-        "correctAnswer": ["UNION"],
-        "options": ["JOIN", "WITH HEADERS", "UNION", "WITH COLUMNS"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "97cc521a12e9b30cea293d59",
-        "question": "Eine Form der Sicherung, die Replikation, erm\u00f6glicht es Ihnen, identische Daten auf mehreren Servern als \\_ Konfiguration zu verwalten.",
-        "answer": "master-slave",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["master-slave"],
-        "options": ["remote-local", "parent-child", "master-slave", "logical-physical"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "809b74489f34f8b8d6e7f800",
-        "question": "Was ist die Voraussetzung f\u00fcr die Verwendung einer Unterabfrage in der SELECT-Klausel?",
-        "answer": "Die Unterabfrage muss einen einzelnen Wert zur\u00fcckgeben.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Die Unterabfrage muss einen einzelnen Wert zur\u00fcckgeben."],
-        "options": [
-          "Die Unterabfrage muss eine Aggregatfunktion verwenden.",
-          "Die Unterabfrage muss auf dieselbe Tabelle verweisen wie die Hauptabfrage.",
-          "Die Unterabfrage muss einen einzelnen Wert zur\u00fcckgeben.",
-          "Die Unterabfrage muss mindestens einen Wert zur\u00fcckgeben."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e6fd52584aed47f78666803e",
-        "question": "Jedes Mal, wenn MySQL aktualisiert wird, ist es am besten, mysql_upgrade auszuf\u00fchren, das nach Inkompatibilit\u00e4ten mit dem aktualisierten MySQL-Server sucht. Was macht dieser Befehl, wenn er eine Tabelle mit einer m\u00f6glichen Inkompatibilit\u00e4t findet?",
-        "answer": "Es f\u00fchrt eine Tabellenpr\u00fcfung durch und versucht, falls Probleme gefunden werden, eine Tabellenreparatur.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Es f\u00fchrt eine Tabellenpr\u00fcfung durch und versucht, falls Probleme gefunden werden, eine Tabellenreparatur."
-        ],
-        "options": [
-          "Es f\u00fchrt eine Tabellenpr\u00fcfung durch und versucht, falls Probleme gefunden werden, eine Tabellenreparatur.",
-          "Es stoppt und benachrichtigt den Serveradministrator, dass das Upgrade nicht abgeschlossen werden kann, bis das Inkompatibilit\u00e4tsproblem behoben ist.",
-          "stellt dem Serveradministrator einen vollst\u00e4ndigen Bericht der Tabellenspezifikationen und der Inkompatibilit\u00e4ten bereit.",
-          "Es f\u00fchrt eine Tabellenpr\u00fcfung durch und zeigt, wenn Probleme gefunden werden, die Informationen an, damit der Serveradministrator Ma\u00dfnahmen ergreifen kann."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9ae3c94f53eb6ec75e98aad0",
-        "question": "Welche MySQL-Anweisung wird verwendet, um zu \u00fcberpr\u00fcfen, welche Konten bestimmte Berechtigungen haben?",
-        "answer": "show grants (zeigt die Privilegien und Rollen an, die einem MySQL-Benutzerkonto oder einer MySQL-Rolle zugewiesen sind)",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "show grants (zeigt die Privilegien und Rollen an, die einem MySQL-Benutzerkonto oder einer MySQL-Rolle zugewiesen sind)"
-        ],
-        "options": [
-          "show grants (zeigt die Privilegien und Rollen an, die einem MySQL-Benutzerkonto oder einer MySQL-Rolle zugewiesen sind)",
-          "showprivilegien (zeigt die Liste der Systemprivilegien, die der MySQL-Server unterst\u00fctzt)",
-          "Zugriff anzeigen",
-          "Benutzerberechtigungen anzeigen"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5ba3ba59cea9ea4ab989ce5d",
-        "question": "Womit kann kein Ausl\u00f6ser verkn\u00fcpft werden?",
-        "answer": "temporary table",
-        "explanation": "[Referenz](https://dev.mysql.com/doc/refman/5.7/en/create-trigger.html)",
-        "hint": null,
-        "correctAnswer": ["temporary table"],
-        "options": ["temporary table", "system table", "large table", "new table"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ca6d404eb786185f0a25fb49",
-        "question": "Sp\u00e4tere Versionen von MySQL unterst\u00fctzen den nativen JSON-Datentyp zum Speichern von JSON-Dokumenten. Was ist ein Nachteil von JSON-Spalten?",
-        "answer": "kann nicht direkt indiziert werden",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["kann nicht direkt indiziert werden"],
-        "options": [
-          "ineffizient zum Speichern von JSON-Dokumenten",
-          "kann nicht direkt indiziert werden",
-          "Dokumente k\u00f6nnen nicht validiert werden, wenn sie in json-Spalten gespeichert sind",
-          "kann nicht normalisiert werden"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6b1d987d2767264907143f30",
-        "question": "Welche Aussage trifft auf das folgende Diagramm zu?\n![mysql Q41](images/mysql_q41.jpg)",
-        "answer": "Kunden-ID ist der Fremdschl\u00fcssel f\u00fcr Kunden-ID",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Kunden-ID ist der Fremdschl\u00fcssel f\u00fcr Kunden-ID"],
-        "options": [
-          "carid ist der Prim\u00e4rschl\u00fcssel f\u00fcr K\u00e4ufe",
-          "carid ist der Fremdschl\u00fcssel f\u00fcr cars.carid",
-          "Kunden-ID ist der Fremdschl\u00fcssel f\u00fcr Kunden-ID",
-          "Kunden-ID ist der Prim\u00e4rschl\u00fcssel f\u00fcr K\u00e4ufe"
-        ],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "508b5674afbfc081d480c50e",
-            "url": "images/mysql_q41.jpg",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "6ae092229b8bc48bec844075",
-        "question": "Mit welcher Anweisung k\u00f6nnen Sie Daten aus einer Datei in die Tabelle laden?",
-        "answer": "`LOAD DATA INFILE`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`LOAD DATA INFILE`"],
-        "options": [
-          "`cat file | mysql`",
-          "`LOAD DATA INFILE`",
-          "`LOAD DATA LOCAL INFILE`",
-          "`extended INSERT statement`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9cb3fbf242f124d938545af3",
-        "question": "Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie m\u00fcssen sicherstellen, dass jeder zur Tabelle \u201eEink\u00e4ufe\u201c hinzugef\u00fcgte Datensatz aus einer Kunden-ID besteht, die bereits in der Tabelle \u201eKunden\u201c vorhanden ist, und einer Fahrzeug-ID, die bereits in der Tabelle \u201eAutos\u201c vorhanden ist. Sie entscheiden sich, einen Trigger f\u00fcr die Validierung zu verwenden. Welches verwendest du?\n![mysql Q43](images/mysql_q85.jpg)",
-        "answer": "`BEFORE INSERT`",
-        "explanation": "`IF EXISTS` und `CROSS JOIN` sind f\u00fcr einen Trigger nicht g\u00fcltig.",
-        "hint": null,
-        "correctAnswer": ["`BEFORE INSERT`"],
-        "options": ["`AFTER INSERT`", "`BEFORE INSERT`", "`CROSS JOIN`", "`IF EXISTS`"],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "691d3cf837736a562fda12b8",
-            "url": "images/mysql_q85.jpg",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "bcdca63f2a12c3cb52380f8f",
-        "question": "Welches ist die korrekte Syntax einer erweiterten Einf\u00fcgeanweisung?",
-        "answer": "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002),",
-        "explanation": "('Mercedes', 'C', 2003)\nvalues ('Mercedes', 'C', 2003)\n('Mercedes', 'C', 2003)\n('Mercedes', 'C', 2003)",
-        "hint": null,
-        "correctAnswer": ["insert into cars (make, model, year) values ('Ford', 'Mustang', 2002),"],
-        "options": [
-          "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002)",
-          "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002)",
-          "insert into cars (make, model, year) extended ('Ford', 'Mustang', 2002),",
-          "insert into cars (make, model, year) values ('Ford', 'Mustang', 2002),"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "420f77007963fcaece4ef382",
-        "question": "Sie m\u00fcssen eine exakte Kopie einer Tabelle mit allen Spalten und Indizes erstellen. Wie k\u00f6nnen Sie alle Informationen erhalten, die Sie ben\u00f6tigen, um dies zu erreichen?",
-        "answer": "show create table",
-        "explanation": "Beachten Sie, dass es bei der Frage um das _Bekommen_ der Daten geht und nicht um die \\_Duplizierungsoperation selbst. Und tats\u00e4chlich besteht \u00fcberhaupt keine Notwendigkeit, `SHOW CREATE TABLE` auszuf\u00fchren. [Um die Tabelle zu duplizieren](https://popsql.com/learn-sql/mysql/how-to-duplicate-a-table-in-mysql) Struktur k\u00f6nnen Sie `CREATE TABLE new_table LIKE original_table;`.",
-        "hint": null,
-        "correctAnswer": ["show create table"],
-        "options": ["create table", "clone table", "insert into", "show create table"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9af5400a7801d4b2cde1f02d",
-        "question": "sie m\u00fcssen ihr mysql-system gegen angreifer sichern. Was sollst du _nicht_ tun?",
-        "answer": "F\u00fchren Sie den MySQL-Server als Unix-Root-Benutzer aus.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["F\u00fchren Sie den MySQL-Server als Unix-Root-Benutzer aus."],
-        "options": [
-          "MySQL-Server als normaler Benutzer ausf\u00fchren.",
-          "Gew\u00e4hren Sie anderen Benutzern das PROCESS- oder SUPER-Privileg.",
-          "F\u00fchren Sie den MySQL-Server als Unix-Root-Benutzer aus.",
-          "Verwenden Sie das komprimierte Protokoll."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ec4b588c85dd237e854fda11",
-        "question": "Sie verwalten eine Datenbank mit einer Tabelle \u201eKunden\u201c. Sie haben eine tempor\u00e4re Tabelle, auch \"Kunden\" genannt, erstellt, mit der Sie f\u00fcr die Dauer Ihrer Sitzung arbeiten. Sie m\u00fcssen die tempor\u00e4re Tabelle mit anderen Spezifikationen neu erstellen. Welchen Befehl m\u00fcssen Sie zuerst ausf\u00fchren?",
-        "answer": "`DROP TEMPORARY TABLE customers;`",
-        "explanation": "1. [Referenz](https://dev.mysql.com/doc/refman/8.0/en/drop-table.html)\n2. [Referenz](https://www.mysqltutorial.org/mysql-temporary-table)",
-        "hint": null,
-        "correctAnswer": ["`DROP TEMPORARY TABLE customers;`"],
-        "options": [
-          "`CREATE TEMPORARY TABLE customers;`",
-          "`DROP TEMP TABLE Kunden;`",
-          "`DROP TABLE Kunden;`",
-          "`DROP TEMPORARY TABLE customers;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "528474ef496adcf24a7645f7",
-        "question": "Sie m\u00fcssen eine komplexe Abfrage mit rekursiven Unterabfragen ausf\u00fchren, ohne jedoch eine gespeicherte Prozedur oder eine Funktion zu erstellen. Welchen Befehl oder welche Klausel verwenden Sie?",
-        "answer": "WITH",
-        "explanation": "Genau daf\u00fcr ist [WITH-Klausel](https://dev.mysql.com/doc/refman/8.0/en/with.html) konzipiert",
-        "hint": null,
-        "correctAnswer": ["WITH"],
-        "options": ["COLLATE", "UNION", "FULL JOIN", "WITH"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a7e838759fe483024cb4cd9f",
-        "question": "Welche Wahl ist kein Verarbeitungsalgorithmus f\u00fcr Datenbankansichten?",
-        "answer": "updatable",
-        "explanation": "[Referenz](https://dev.mysql.com/doc/refman/8.0/en/view-algorithms.html)",
-        "hint": null,
-        "correctAnswer": ["updatable"],
-        "options": ["merge", "updatable", "temptable", "undefined"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0e0191660a0dbda195211ab7",
-        "question": "Wof\u00fcr wird das MySQL-Befehlszeilendienstprogramm \u201eperror\u201c verwendet?",
-        "answer": "um Speicherfehlercodes anzuzeigen",
-        "explanation": "Hinweis: perror gibt eine Beschreibung f\u00fcr einen Systemfehlercode oder f\u00fcr einen Fehlercode einer Speicher-Engine (Tabellenhandler) aus -\n[link](<https://dev.mysql.com/doc/refman/5.7/en/perror.html#:~:text=2%20perror%20%E2%80%94%20Display%20MySQL%20Error% 20Message%20Information,-For%20most%20system&text=You%20can%20find%20out%20what,(table%20handler)%20error%20code>)",
-        "hint": null,
-        "correctAnswer": ["um Speicherfehlercodes anzuzeigen"],
-        "options": [
-          "um Ihre MySQL-Version anzuzeigen",
-          "um Betriebssystem-Fehlercodes anzuzeigen",
-          "um fehlerhafte Standardeinstellungen anzuzeigen",
-          "um Speicherfehlercodes anzuzeigen"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "976523685dc9e8f5f0f7bc3b",
-        "question": "Wie k\u00f6nnen Sie alle Spalten f\u00fcr eine bestimmte Tabelle auflisten?",
-        "answer": "SHOW COLUMNS FROM table;",
-        "explanation": "Hinweis: `DESCRIBE tablename` ist eine Abk\u00fcrzung f\u00fcr diesen Befehl",
-        "hint": null,
-        "correctAnswer": ["SHOW COLUMNS FROM table;"],
-        "options": [
-          "SHOW table COLUMNS;",
-          "SHOW COLUMNS FROM table;",
-          "LIST table COLUMNS;",
-          "SELECT COLUMNS FROM table;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f564db068cee01d930e672be",
-        "question": "Wie w\u00fcrden Sie den vollst\u00e4ndigen Tabellensatz in der aktuell ausgew\u00e4hlten Datenbank auflisten?",
-        "answer": "SHOW TABLES;",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["SHOW TABLES;"],
-        "options": [
-          "SELECT \\* FROM DATABASE;",
-          "SHOW TABLES;",
-          "LIST TABLES;",
-          "SELECT ALL TABLES;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "860cf32226cac70b3e9c361d",
-        "question": "Welche Auswahl geh\u00f6rt nicht zu den Tabellenpflegeanweisungen?",
-        "answer": "CREATE TABLE;",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["CREATE TABLE;"],
-        "options": ["CHECK TABLE;", "CREATE TABLE;", "ANALYZE TABLE;", "OPTIMIZE TABLE;"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a32ac1b8b41651f7072c9097",
-        "question": "In welcher Tabelle speichert MySQL Passw\u00f6rter f\u00fcr Benutzerkonten?",
-        "answer": "mysql.user;",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["mysql.user;"],
-        "options": ["mysql.accounts;", "mysql.passwords;", "mysql.admin;", "mysql.user;"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0eabb3ec6bdb9144b1b2c605",
-        "question": "Das Management hat Sie gebeten, eine Mitarbeiterdatenbank aufzubauen. Sie m\u00fcssen die aktuelle Position und das Gehalt jedes Mitarbeiters sowie alle fr\u00fcheren Positionen und Geh\u00e4lter im Unternehmen angeben. Sie entscheiden sich f\u00fcr eine Eins-zu-Viele-Struktur: eine Mitarbeitertabelle mit den wichtigsten Informationen wie Name und Adresse und eine Besch\u00e4ftigungstabelle mit Positions- und Gehaltshistorie. Sie k\u00f6nnen das Feld employeeID verwenden, um sie zu verbinden. Wof\u00fcr ist Employment.employeeID ein Beispiel?",
-        "answer": "Fremdschl\u00fcssel;",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Fremdschl\u00fcssel;"],
-        "options": [
-          "Prim\u00e4rschl\u00fcssel;",
-          "Sekund\u00e4rschl\u00fcssel;",
-          "Fremdschl\u00fcssel;",
-          "Alternativschl\u00fcssel;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0c6b9b42598ce765340439b9",
-        "question": "Was ist in neueren Versionen von MySQL (8.0+) die korrekte Syntax, um einen CTE (Common Table Expression) zu deklarieren?",
-        "answer": "WITH cte as (SELECT id FROM users) SELECT ...",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["WITH cte as (SELECT id FROM users) SELECT ..."],
-        "options": [
-          "WITH (SELECT id FROM users) as cte, SELECT ...",
-          "WITH (SELECT id FROM users) as cte SELECT ...",
-          "WITH cte as (SELECT id FROM users), SELECT ...",
-          "WITH cte as (SELECT id FROM users) SELECT ..."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8e909ac1f410e812f00dee9e",
-        "question": "Was ist ein Grund, Datenredundanz in ein normalisiertes Datenbankdesign einzuf\u00fchren?",
-        "answer": "um die Besch\u00e4digung von Daten zu reduzieren; um das System schneller zu machen",
-        "explanation": "Hinweis: \"um das System schneller zu machen\" kann auch richtig sein. Zum Beispiel k\u00f6nnen wir eine schwere Abfrage im Voraus berechnen und ihr Ergebnis in einer Spalte speichern (als Cache verwenden). Wenn also \"System\" \"Anwendung, die mysql verwendet\" bedeutet, dann ist es auch richtig.",
-        "hint": null,
-        "correctAnswer": [
-          "um die Besch\u00e4digung von Daten zu reduzieren",
-          "um das System schneller zu machen"
-        ],
-        "options": [
-          "um die Besch\u00e4digung von Daten zu reduzieren",
-          "um den Speicherplatz zu reduzieren",
-          "um das System schneller zu machen",
-          "um Datenanomalien zu vermeiden"
-        ],
-        "nature": "ChooseMany",
-        "attachments": []
-      },
-      {
-        "id": "9fe79d5c8a47d5ffbc7901a4",
-        "question": "Das folgende Code-Snippet wird verwendet, um Daten aus einer XML-Datei in eine Tabelle einzulesen. Welche XML-Struktur wird von der Anweisung \\_nicht\\_ unterst\u00fctzt?\n```mysql\nLOAD XML LOCAL INFILE 'cars.xml'\nINTO TABLE cars\nROWS IDENTIFIED BY `<car>`;\n```",
-        "answer": "B",
-        "explanation": "```xml\n<car>\n<field name=\"make\"> Lexus </field>\n<field name=\"model\"> IS300 </field>\n<field name=\"make\"> 2016 </field>\n</car>\n```\n```xml\n<car name=\"make\"> Dodge </car>\n<car name=\"model\"> Ram </car>\n<car name=\"year\"> 2000 </car>\n```\n```xml\n<car make=\"Ford\" model=\"Mustang\" year=\"2002\"/>\n```\n```xml\n<car year=\"2010\">\n<make>Mercedes</make> <model> C-Class</model>\n</car>\n```",
-        "hint": null,
-        "correctAnswer": ["B"],
-        "options": ["A", "B", "C", "D"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2e09aeefca6b96f93768fdbc",
-        "question": "Sie laden Daten in eine Tabelle. Mit welchem \u200b\u200bBefehl k\u00f6nnen Sie sicherstellen, dass alle Daten eingef\u00fcgt und doppelte Zeilen verworfen werden?",
-        "answer": "`INSERT IGNORE`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`INSERT IGNORE`"],
-        "options": ["`INSERT IGNORE`", "`INSERT UNIQUE`", "`INSERT INTO`", "`INSERT DISTINCT`"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0f5ecd013407125fac5f5b83",
-        "question": "Welche Aussage \u00fcber die `TRUNCATE TABLE`-Anweisung ist richtig?",
-        "answer": "Es wird immer zuerst gel\u00f6scht und dann eine neue Tabelle neu erstellt.; Es ruft die der Tabelle zugeordneten `DELETE`-Trigger nicht auf.",
-        "explanation": "Hinweis: Beide Antworten sind richtig \u2013 siehe [TRUNCATE TABLE Statement](https://dev.mysql.com/doc/refman/8.0/en/truncate-table.html) im MySQL-Handbuch",
-        "hint": null,
-        "correctAnswer": [
-          "Es wird immer zuerst gel\u00f6scht und dann eine neue Tabelle neu erstellt.",
-          "Es ruft die der Tabelle zugeordneten `DELETE`-Trigger nicht auf."
-        ],
-        "options": [
-          "Es stoppt und gibt einen Fehler aus, wenn es auf eine Zeile trifft, die von einer Zeile in einer untergeordneten Tabelle referenziert wird.",
-          "Es wird immer zuerst gel\u00f6scht und dann eine neue Tabelle neu erstellt.",
-          "Es l\u00f6scht Zeilen nacheinander in Tabellen mit Fremdschl\u00fcsseleinschr\u00e4nkungen.",
-          "Es ruft die der Tabelle zugeordneten `DELETE`-Trigger nicht auf."
-        ],
-        "nature": "ChooseMany",
-        "attachments": []
-      },
-      {
-        "id": "dd9198c2109daf2bd41539e8",
-        "question": "Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie m\u00fcssen die Anzahl der verkauften Autos pro Heimatstaat des Wohnsitzes jedes Kunden erhalten. Wie k\u00f6nnen Sie dies erreichen?\n![mysql Q61](images/mysql_q61.png)",
-        "answer": "`SELECT state, COUNT(*) FROM customers c, purchases p WHERE c.ID = p.customerID GROUP BY state;`",
-        "explanation": "Erl\u00e4uterung: Der Unterschied zwischen 2 und 3 besteht darin, dass LEFT JOIN vor der Gruppierung 1 Zeile pro Kunde zur\u00fcckgibt. Wenn es durch RIGHT JOIN ersetzt w\u00fcrde, w\u00fcrde es die richtigen Informationen zur\u00fcckgeben.",
-        "hint": null,
-        "correctAnswer": [
-          "`SELECT state, COUNT(*) FROM customers c, purchases p WHERE c.ID = p.customerID GROUP BY state;`"
-        ],
-        "options": [
-          "`SELECT state, COUNT(*) FROM customers WHERE ID IN (SELECT customerID FROM purchases) GROUP BY state;`",
-          "`SELECT state, COUNT(*) FROM customers c LEFT JOIN purchases p ON c.ID = p.customerID GROUP BY state;`",
-          "`SELECT state, COUNT(*) FROM customers c, purchases p WHERE c.ID = p.customerID GROUP BY state;`",
-          "`SELECT state, COUNT(*) FROM customers GROUP BY state;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "efd4c190712c171663adb324",
-            "url": "images/mysql_q61.png",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "c6bd0c7a682eb03568fcd63a",
-        "question": "Bei der Datenmigration m\u00fcssen h\u00e4ufig doppelte Zeilen im Rahmen der Datenbereinigung gel\u00f6scht werden. Welche Aussage funktioniert am besten?",
-        "answer": "`DELETE JOIN`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`DELETE JOIN`"],
-        "options": ["`DELETE DUPS`", "`DELETE DISTINCT`", "`DELETE JOIN`", "`DELETE WITH`"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5cf5b48aa826aae109ef3a92",
-        "question": "Was m\u00fcssen Sie bei der Arbeit mit dem MySQL-Cursor au\u00dferdem deklarieren?",
-        "answer": "`NOT FOUND` handler",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`NOT FOUND` handler"],
-        "options": [
-          "`DEFAULT` value",
-          "`RETURN` variable",
-          "`SQLEXCEPTION` routine",
-          "`NOT FOUND` handler"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f4f6d1117e104871ed00628b",
-        "question": "Welcher Sicherungstyp umfasst alle \u00c4nderungen, die an den Daten vorgenommen wurden, seit die letzte vollst\u00e4ndige Sicherung durchgef\u00fchrt wurde?",
-        "answer": "differential",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["differential"],
-        "options": ["snapshot", "logical", "differential", "incremental"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c05e6dd51364c9fa5167184e",
-        "question": "Sie m\u00fcssen eine MySQL-Datenbank aus einer Sicherungsdatei wiederherstellen. Welches Befehlszeilentool verwenden Sie f\u00fcr den eigentlichen Datenimport, nachdem Sie die Datenbank neu erstellt haben?",
-        "answer": "`mysql`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`mysql`"],
-        "options": ["`mysqld`", "`mysql`", "`mysqladmin`", "`mysqldump`"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6f0378b7dac93d72ea02c83f",
-        "question": "Sie importieren Daten als JSON in eine neue Tabelle. Sie f\u00fchren CREATE TABLE json_data ( city JSON ) aus; und Zeilen in diese Tabelle einf\u00fcgen. Was ist die korrekte Syntax, um die Liste der St\u00e4dte anzuzeigen?",
-        "answer": "`SELECT city->>'$.name' city FROM json_data;`",
-        "explanation": "Hinweis: Die letzte Option ist auch g\u00fcltig, aber die Ergebnisse werden in Anf\u00fchrungszeichen gesetzt",
-        "hint": null,
-        "correctAnswer": ["`SELECT city->>'$.name' city FROM json_data;`"],
-        "options": [
-          "`SELECT city FROM json_data;`",
-          "`SELECT city->>'$.name' city FROM json_data;`",
-          "`SELECT city.name city FROM json_data;`",
-          "`SELECT city->'$.name' city FROM json_data;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "830f977e6a17c0f21633352e",
-        "question": "Wenn Sie MyISAM anstelle von InnoDB verwenden m\u00f6chten, welche Option m\u00fcssen Sie in der CREATE TABLE-Anweisung angeben?",
-        "answer": "ENGINE",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["ENGINE"],
-        "options": ["ENGINE", "PARTITION", "STORAGE", "TABLESPACE"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5fc65c7dea43a1ba8ea93ba2",
-        "question": "Sie arbeiten mit der Tabelle in diesem Diagramm. Sie m\u00f6chten mit der Volltextsuche die Kunden finden, die in einer Stra\u00dfe oder Einfahrt wohnen. Wie lautet der Befehl dazu?\nTable name: **customers**\n| ID   | lastname | firstname | phone        | address             | city        | state | zip   |\n| ---- | -------- | --------- | ------------ | ------------------- | ----------- | ----- | ----- |\n| A001 | Smith    | Bob       | 212-555-1212 | 1001 1st Street     | New York    | NY    | 10001 |\n| A002 | Chang    | John      | 213-555-5678 | 888 Rodeo Drive     | Los Angeles | CA    | 90210 |\n| A003 | Smith    | Mary      | 999-999-9999 | 123 Main Street     | Anytown     | VA    | 12345 |\n| A004 | Johnson  | Jack      | 312-312-3120 | 1111 Chicago Avenue | Chicago     | IL    | 60606 |\n| A005 | Lopez    | Linda     | 737-777-3333 | 123 Main Street     | Austin      | TX    | 73344 |",
-        "answer": "D",
-        "explanation": "```sql\nSELECT *\nFROM customers\nWHERE address MATCH 'Street' OR 'Drive';\n```\n```sql\nSELECT *\nFROM customers\nWHERE MATCH(address) IN ('street, drive');\n```\n```sql\nSELECT *\nFROM customers\nWHERE address MATCH 'Street' OR address MATCH 'Drive';\n```\n```sql\nSELECT *\nFROM customers\nWHERE MATCH(address) AGAINST ('street, drive');\n```",
-        "hint": null,
-        "correctAnswer": ["D"],
-        "options": ["A", "B", "C", "D"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8758112a1c615bf2039fd131",
-        "question": "Welche Abfrage listet die Datenbanken auf dem aktuellen Server auf?",
-        "answer": "SHOW DATABASES;",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["SHOW DATABASES;"],
-        "options": ["SHOW DATABASES;", "LIST ALL DATABASES;", "LIST DATABASES;", "SHOW DB;"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a487ca15c38789368b4fdfcf",
-        "question": "Was ist das Ergebnis der Datenbankentwurfsphase?",
-        "answer": "eine Liste von Entit\u00e4ten, ihrer Beziehung, Beschr\u00e4nkungen, Datentypen und Kardinalit\u00e4ten",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "eine Liste von Entit\u00e4ten, ihrer Beziehung, Beschr\u00e4nkungen, Datentypen und Kardinalit\u00e4ten"
-        ],
-        "options": [
-          "alle Tabellen, Spalten, Datentypen, Indizes und ihre Beziehungen",
-          "eine Liste von Entit\u00e4ten, ihrer Beziehung und Einschr\u00e4nkungen",
-          "alle Tabellen und deren Namen, die zur Implementierung des logischen Modells ben\u00f6tigt werden",
-          "eine Liste von Entit\u00e4ten, ihrer Beziehung, Beschr\u00e4nkungen, Datentypen und Kardinalit\u00e4ten"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "eccace7ab98a32d0ece6973a",
-        "question": "Welche Wahl ist _kein_ g\u00fcltiges Modell f\u00fcr einen gespeicherten Prozedurparameter?",
-        "answer": "IN OUT",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["IN OUT"],
-        "options": ["INOUT", "IN", "OUT", "IN OUT"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8687b7ef8d1ff82c80b9f166",
-        "question": "Welchen Vorteil bietet die Verwendung einer tempor\u00e4ren Tabelle anstelle einer Heap-Tabelle?",
-        "answer": "Die tempor\u00e4re Tabelle wird gel\u00f6scht, sobald Ihre Sitzung getrennt wird.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Die tempor\u00e4re Tabelle wird gel\u00f6scht, sobald Ihre Sitzung getrennt wird."
-        ],
-        "options": [
-          "Die tempor\u00e4re Tabelle wird gel\u00f6scht, wenn die Datenbank neu gestartet wird.",
-          "Tempor\u00e4re Tabellen k\u00f6nnen von Clients gemeinsam genutzt werden, wodurch sie in Gruppenentwicklungsumgebungen besser verwendbar sind.",
-          "Die tempor\u00e4re Tabelle wird gel\u00f6scht, sobald Ihre Sitzung getrennt wird.",
-          "Das Erstellen einer tempor\u00e4ren Tabelle erfordert keine besonderen Berechtigungen."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "184f0ff020f51d1a9da828e6",
-        "question": "Welches ist ein g\u00fcltiger Konstruktor f\u00fcr eine Klasse namens User?",
-        "answer": "`public User() {}`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`public User() {}`"],
-        "options": [
-          "`public construct User() {}`",
-          "`public User() {}`",
-          "`public instance User() {}`",
-          "`public init User() {}`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bcfdebf6d0ac4b942b91b245",
-        "question": "Was ist die maximale Anzahl von Spalten, die von einem einzelnen Tabellenindex verwendet werden k\u00f6nnen?",
-        "answer": "16",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["16"],
-        "options": ["2", "4", "8", "16"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2c626504761bc1d7169475d2",
-        "question": "Welcher Befehl gibt eine Liste von Triggern in der aktuellen Datenbank zur\u00fcck?",
-        "answer": "`SHOW TRIGGERS;`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`SHOW TRIGGERS;`"],
-        "options": [
-          "`DISPLAY TRIGGERS;`",
-          "`SHOW TRIGGERS;`",
-          "`SELECT ALL TRIGGERS;`",
-          "`SELECT * FROM information_schema.triggers;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f20183d865ca7b60b7acd862",
-        "question": "Welche Aussage zu den Datentypen TIMESTAMP und DATETIME ist richtig?",
-        "answer": "TIMESTAMP und DATETIME werden beide ohne Zeitzone gespeichert.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["TIMESTAMP und DATETIME werden beide ohne Zeitzone gespeichert."],
-        "options": [
-          "TIMESTAMP-Werte ben\u00f6tigen mehr Bytes zum Speichern als DATETIME-Werte.",
-          "TIMESTAMP wird ohne Zeitzone gespeichert und DATETIME wird in UTC-Werten gespeichert.",
-          "TIMESTAMP und DATETIME werden beide ohne Zeitzone gespeichert.",
-          "TIMESTAMP wird in UTC-Werten gespeichert und DATETIME wird ohne Zeitzone gespeichert."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a73f5e5746e214200b397372",
-        "question": "Was ist das \u00c4quivalent zum Befehl mysqladmin reload?",
-        "answer": "`mysqladmin flush-privileges`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`mysqladmin flush-privileges`"],
-        "options": [
-          "`mysqladmin flush-threads`",
-          "`mysqladmin flush-tables`",
-          "`mysqladmin flush-privileges`",
-          "`mysqladmin flush-all`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6121bc3e37b64e11698990a1",
-        "question": "Erkl\u00e4ren Sie den Sicherheitsaspekt gespeicherter Prozeduren",
-        "answer": "Gespeicherte Prozeduren sind sicher, da Anwendungen Zugriff auf gespeicherte Prozeduren und nicht auf zugrunde liegende Tabellen gew\u00e4hrt werden kann",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Gespeicherte Prozeduren sind sicher, da Anwendungen Zugriff auf gespeicherte Prozeduren und nicht auf zugrunde liegende Tabellen gew\u00e4hrt werden kann"
-        ],
-        "options": [
-          "Gespeicherte Prozeduren sind nicht sicher, da sie von der Befehlszeile als Root-Benutzer ausgef\u00fchrt werden k\u00f6nnen",
-          "Stored Procedures sind sicher, da der Eigent\u00fcmer der Stored Procedure entscheiden kann, wem Zugriff gew\u00e4hrt wird",
-          "Gespeicherte Prozeduren sind sicher, da Anwendungen Zugriff auf gespeicherte Prozeduren und nicht auf zugrunde liegende Tabellen gew\u00e4hrt werden kann",
-          "Gespeicherte Prozeduren sind nicht sicher, da sie Anweisungen ausf\u00fchren k\u00f6nnen, um Tabellen zu l\u00f6schen oder Daten massenweise zu l\u00f6schen"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b999786e5e43ca1730ce54de",
-        "question": "Wie w\u00fcrden Sie Daten zu allen Kunden abrufen, bei denen keine Telefonnummer gespeichert ist?",
-        "answer": "`SELECT * FROM customers WHERE PhoneNumber IS NULL;`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`SELECT * FROM customers WHERE PhoneNumber IS NULL;`"],
-        "options": [
-          "`SELECT * FROM customers WHERE PhoneNumber = NULL;`",
-          "`SELECT * FROM customers WHERE PhoneNumber IS NOT VALID;`",
-          "`SELECT * FROM customers WHERE PhoneNumber IS NULL;`",
-          "`SELECT * FROM customers WHERE PhoneNumber IS UNKNOWN;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "49180b9b19f15ff64ba9dce8",
-        "question": "Im folgenden Diagramm ist das Preisfeld als Typ DECIMAL deklariert. Was w\u00e4re eine effizientere Deklaration f\u00fcr dieses Feld?\n![Mysql-Bild](images/mysql_q80.png)",
-        "answer": "DECIMAL(10,2)",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["DECIMAL(10,2)"],
-        "options": ["FLOAT", "DECIMAL(10,2)", "NUMERIC", "DOUBLE"],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "4c5b2e25d482f6d05857bb35",
-            "url": "images/mysql_q80.png",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "d8aa53f4899fde4a80ce17a0",
-        "question": "Welche Option ist \u201ekein\u201c verf\u00fcgbarer Zeichenfolgentyp f\u00fcr eine Spalte?",
-        "answer": "`BIT`",
-        "explanation": "Erl\u00e4uterung: BIT ist kein String-Typ",
-        "hint": null,
-        "correctAnswer": ["`BIT`"],
-        "options": ["`ENUM`", "`SET`", "`BIT`", "`CHAR`"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "db74f89e0669f8c81d59f1a5",
-        "question": "Dieses Diagramm zeigt, welche Art von Beziehung zwischen Kunden und Autos?\n![Mysql-Bild](images/mysql_q80.png)",
-        "answer": "many-to-many",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["many-to-many"],
-        "options": ["one-to-many", "parent-child", "many-to-many", "many-to-one"],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "fb13b0d17669ae8a0b882edc",
-            "url": "images/mysql_q80.png",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "b32536e03c1779174b996d10",
-        "question": "Eine gespeicherte Routine ist ein Satz von SQL-Anweisungen, die auf dem Server gespeichert sind und entweder als Prozedur oder als Funktion vorliegen. Welche Anweisung kann nicht in gespeicherten Routinen verwendet werden?",
-        "answer": "`USE`",
-        "explanation": "Erl\u00e4uterung: Sowohl `SET` als auch `DECLARE` werden verwendet, um Variablen zu erstellen. Referenz: [Tutorial zu MySQL STORED PROCEDURE mit Beispielen](https://www.softwaretestinghelp.com/mysql-stored-procedure/)",
-        "hint": null,
-        "correctAnswer": ["`USE`"],
-        "options": ["`SELECT`", "`USE`", "`SET`", "`DECLARE`"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5e4b957551c0ae7949c9e00d",
-        "question": "Wenn ein neuer Student zu einer neuen Datenbank hinzugef\u00fcgt wird, m\u00f6chten Sie, dass neue Datens\u00e4tze in den zugeh\u00f6rigen Tabellen wie Pr\u00fcfung, Ergebnis und Anwesenheit erstellt werden. Wie w\u00fcrden Sie dies erreichen?",
-        "answer": "trigger",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["trigger"],
-        "options": ["trigger", "regular expression", "view", "index"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "95b7d4071b7bd865628235a9",
-        "question": "Im folgenden Diagramm sind die ID-Felder als Typ CHAR statt INT deklariert. Was ist KEIN m\u00f6glicher Grund f\u00fcr diese Entscheidung?\n![Mysql-Bild](images/mysql_q85.png)",
-        "answer": "Der Datentyp `CHAR(10)` ist effizienter und platzsparender.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Der Datentyp `CHAR(10)` ist effizienter und platzsparender."],
-        "options": [
-          "Das ID-Feld muss Buchstaben und nicht nur Zahlen enthalten.",
-          "Sie k\u00f6nnen ein konsistentes Format f\u00fcr alle Tabellen haben, die ID-Felder erfordern.",
-          "Das ID-Feld muss f\u00fchrende Nullen haben, die der INT-Datentyp abschneiden w\u00fcrde.",
-          "Der Datentyp `CHAR(10)` ist effizienter und platzsparender."
-        ],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "828aaa8880f73cd2533b15e7",
-            "url": "images/mysql_q85.png",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "fef5a8086168c9e16d35b532",
-        "question": "Warum sollten Sie einen allgemeinen Tabellenausdruck (CTE) verwenden?",
-        "answer": "Um komplexe Abfragen aufzuschl\u00fcsseln und die Wiederverwendung innerhalb einer Abfrage zu erm\u00f6glichen.",
-        "explanation": "Erl\u00e4uterung: CTEs erstellen keine tempor\u00e4ren Tabellen, sie funktionieren nur innerhalb einer einzelnen Abfrage. Referenz: [13.2.15 WITH (Common Table Expressions)](https://dev.mysql.com/doc/refman/8.0/en/with.html).",
-        "hint": null,
-        "correctAnswer": [
-          "Um komplexe Abfragen aufzuschl\u00fcsseln und die Wiederverwendung innerhalb einer Abfrage zu erm\u00f6glichen."
-        ],
-        "options": [
-          "Zum Definieren von Abfragen zur sp\u00e4teren Wiederverwendung f\u00fcr die Dauer der aktuellen Sitzung",
-          "Zum Erstellen tempor\u00e4rer Tabellen, die zur Vorauswahl h\u00e4ufig verwendeter Ergebnismengen verwendet werden k\u00f6nnen.",
-          "Um einen neuen Einzelwert aus einer Ergebnismenge zu berechnen und an den Abfrageparser zur\u00fcckzugeben.",
-          "Um komplexe Abfragen aufzuschl\u00fcsseln und die Wiederverwendung innerhalb einer Abfrage zu erm\u00f6glichen."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cefdb5de137b43d052f8f22b",
-        "question": "Welcher Optionsmodifikator weist ein Programm an, nicht mit einem Fehler zu beenden, wenn es die Option nicht erkennt, sondern stattdessen eine Warnung auszugeben?",
-        "answer": "--loose",
-        "explanation": "Referenz: [4.2.2.4 Program Option Modifiers](https://dev.mysql.com/doc/refman/8.0/en/option-modifiers.html)",
-        "hint": null,
-        "correctAnswer": ["--loose"],
-        "options": ["--verbose", "--skip", "--skip-error", "--loose"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f5e2459f5cc2b8928b611bed",
-        "question": "Was gibt diese SQL-Anweisung zur\u00fcck?\n```\nSELECT name FROM students WHERE name REGEXP '^to';\n```",
-        "answer": "alle Namen, die mit \u201eto\u201c beginnen, wie z. B. Tommy oder Tony",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["alle Namen, die mit \u201eto\u201c beginnen, wie z. B. Tommy oder Tony"],
-        "options": [
-          "alle Namen, die mit \u201eto\u201c beginnen, wie z. B. Tommy oder Tony",
-          "alle Namen mit \"to\", wie Roberto und Tommy",
-          "Alle Namen ohne \"to\", wie Samantha oder Kathryn",
-          "alle Namen, die mit \u201eto\u201c enden, wie z. B. Roberto"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d01855d449c388c4d7134f7b",
-        "question": "Sie arbeiten mit den Tabellen wie in der Abbildung dargestellt. Sie m\u00fcssen die Liste der Gesamtpreise f\u00fcr jede Automarke und jedes Automodell erstellen, mit Zwischensummen f\u00fcr jede Marke und der Gesamtsumme aller Preise. Welche SQL-Klausel verwenden Sie?\n![Mysql-Bild](images/mysql_q92.png)",
-        "answer": "WITH ROLLUP",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["WITH ROLLUP"],
-        "options": ["UNION", "SHOW TOTALS", "UNION ALL", "WITH ROLLUP"],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "d22a6073c165134611cd5471",
-            "url": "images/mysql_q92.png",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "fa12d2bec1b48e05a5ee5029",
-        "question": "Die Left- und Right-Joins werden auch als \\_ bezeichnet.",
-        "answer": "Outer Join",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Outer Join"],
-        "options": ["Inner Join", "Natural Join", "Outer Join", "Cartesian Join"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d262f5e7c99a8ece53534830",
-        "question": "Was ist der g\u00fcltige Weg, um eine Datenbankansicht in MySQL zu erstellen?",
-        "answer": "`CREATE VIEW v1 AS SELECT * FROM t1;`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`CREATE VIEW v1 AS SELECT * FROM t1;`"],
-        "options": [
-          "`CREATE VIEW v1 SELECT * FROM t1 WHERE col1 > 10;`",
-          "`CREATE VIEW v1 AS BEGIN SELECT * FROM t1 END;`",
-          "`CREATE VIEW v1 BEGIN SELECT * FROM t1 END;`",
-          "`CREATE VIEW v1 AS SELECT * FROM t1;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "eed625124933aa8e3838cf48",
-        "question": "Wie werden Berechtigungen in MySQL implementiert?",
-        "answer": "access control lists",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["access control lists"],
-        "options": [
-          "encrypted algorithms",
-          "access control lists",
-          "user settings",
-          "administrator schema"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9e2d8a268341d45b9e7b885c",
-        "question": "Innerhalb einer Transaktion m\u00fcssen mehrere Operationen durchgef\u00fchrt werden. Was w\u00fcrden Sie tun, wenn w\u00e4hrend dieser Transaktion eine Ausnahme auftritt?",
-        "answer": "`ROLLBACK`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`ROLLBACK`"],
-        "options": ["`UNDO`", "`UNCOMMIT`", "`ROLLBACK`", "`REVERSE`"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "afce221a41cf198eb4f5013f",
-        "question": "Welche Funktion findet die aktuelle Uhrzeit oder das Datum in MySQL?",
-        "answer": "CURDATE()",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["CURDATE()"],
-        "options": ["DATE()", "GETDATE()", "CURDATE()", "CURRENT()"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "be5b392c1bf5a297adb1ac2c",
-        "question": "Was ist die korrekte Verwendung von ENUM in MySQL?",
-        "answer": "`Create table size (name ENUM('Small','Medium','Large'));`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`Create table size (name ENUM('Small','Medium','Large'));`"],
-        "options": [
-          "`Create table size (ENUM ('Small','Medium','Large'));`",
-          "`Create table ENUM (name ('Small','Medium','Large'));`",
-          "`Create table size (name: ENUM['Small','Medium','Large']);`",
-          "`Create table size (name ENUM('Small','Medium','Large'));`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "35fcdbd539cc74943d5c01d3",
-        "question": "Der mysqldump-Befehl kann keine Ausgabe in **\\_** generieren.",
-        "answer": "JSON",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["JSON"],
-        "options": ["JSON", "CSV", "XML", "TXT"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9b5f6941caa43a87b539b8e6",
-        "question": "Sie arbeiten mit den unten gezeigten Tabellen. Sie m\u00fcssen die Liste aller Autos erstellen, unabh\u00e4ngig davon, ob sie verkauft wurden oder nicht. Welche Aussage leistet das?\n![Mysql-Bild](images/mysql_q98.png)",
-        "answer": "D",
-        "explanation": "```\nSELECT cars.*, purchases.date\nFROM cars RIGHT JOIN purchases\nON cars.ID = purchases.carID;\n```\n```\nSELECT cars.*, purchases.date\nFROM cars INNER JOIN purchases\nON cars.ID = purchases.carID;\n```\n```\nSELECT cars.*, purchases.date\nFROM cars JOIN purchases\nON cars.ID = purchases.carID;\n```\n```\nSELECT cars.*, purchases.date FROM cars LEFT JOIN purchases ON cars.ID = purchases.carID;\n```",
-        "hint": null,
-        "correctAnswer": ["D"],
-        "options": ["A", "B", "C", "D"],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "9ff584f68f7698d642856f10",
-            "url": "images/mysql_q98.png",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "33d98c589f885d35bd676e9d",
-        "question": "Welcher Codeausschnitt aus einer gespeicherten Prozedur sollte als CASE-Anweisung umgeschrieben werden?",
-        "answer": "D",
-        "explanation": "```\nIF var1 THEN SET varA = var1;\nELSEIF var2 THEN SET varA = var2;\nELSEIF var3 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```\n```\nIF var1 = var2 THEN SET varA = var1;\nELSEIF var2 = var3 THEN SET varA = var2;\nELSEIF var3 = var4 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```\n```\nIF var1 = 1 THEN SET varA = var1;\nELSEIF var2 = 2 THEN SET varA = var2;\nELSEIF var3 = 3 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```\n```\nIF var1 = 1 THEN SET varA = var1;\nELSEIF var1 = 2 THEN SET varA = var2;\nELSEIF var1 = 3 THEN SET varA = var3;\nELSE SET varA = var4;\nEND IF;\n```",
-        "hint": null,
-        "correctAnswer": ["D"],
-        "options": ["A", "B", "C", "D"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1015727cf874032bdaebe035",
-        "question": "Warum w\u00fcrden Sie gespeicherte Funktionen verwenden?",
-        "answer": "f\u00fcr Formeln und Gesch\u00e4ftsregeln, die auf ein bestimmtes Triggerereignis angewendet werden sollen, z. B. auf Einf\u00fcgungen",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "f\u00fcr Formeln und Gesch\u00e4ftsregeln, die auf ein bestimmtes Triggerereignis angewendet werden sollen, z. B. auf Einf\u00fcgungen"
-        ],
-        "options": [
-          "f\u00fcr Formeln und Gesch\u00e4ftsregeln, die Sie auf Spalten in einer SQL-Abfrage anwenden m\u00f6chten",
-          "f\u00fcr Formeln und Gesch\u00e4ftsregeln, die auf ein bestimmtes Triggerereignis angewendet werden sollen, z. B. auf Einf\u00fcgungen",
-          "zum automatischen \u00c4ndern der Daten einer Tabelle basierend auf einer Abfrage",
-          "zur Wiederverwendung wiederkehrender Abfragen"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3675feb7c2fc4a479047cf6f",
-        "question": "Welche Schritte m\u00fcssen Sie unternehmen, um die Tabelle aus diesem Diagramm zu normalisieren?\nTabellenname: Superhelden\n| Name | Pseudonym | Leistung1 | Leistung2 | Macht3 |\n| ---- | ----- | ------ | ------ | ------ |\n| \u00dcbermensch | Clark Kent | Flug | R\u00f6ntgenblick | Superst\u00e4rke |\n| Wunderfrau | Diana Prinz | Kraftfelder | Reflexe | Telepathie |\n| Spiderman | Peter Parker | Walkriechen | Web-Making | Verbesserte Sinne |\n| Aquaman | Arthur Curry | Unterwasseratmung | Verbesserte Sicht | Ausdauer |\n| Hulk | Bruce-Banner | Superst\u00e4rke | Strahlenimmunit\u00e4t | Unverwundbarkeit |",
-        "answer": "Erstellen Sie eine weitere Tabelle zum Nachschlagen von Kr\u00e4ften mit Feldern f\u00fcr Code und Beschreibung sowie eine Verbindungstabelle mit Superheldennamen und Kraftcodes.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Erstellen Sie eine weitere Tabelle zum Nachschlagen von Kr\u00e4ften mit Feldern f\u00fcr Code und Beschreibung sowie eine Verbindungstabelle mit Superheldennamen und Kraftcodes."
-        ],
-        "options": [
-          "Erstellen Sie eine weitere Tabelle zum Nachschlagen von Kr\u00e4ften mit Feldern f\u00fcr Code und Beschreibung sowie eine Verbindungstabelle mit Superheldennamen und Kraftcodes.",
-          "F\u00fcgen Sie dieser Tabelle eine Spalte hinzu, die als Datensatzkennung dient, und machen Sie sie zum Prim\u00e4rschl\u00fcssel.",
-          "Erweitern Sie diese Tabelle um zus\u00e4tzliche Spalten \"power4\", \"power5\" und so weiter, um zus\u00e4tzliche Kr\u00e4fte f\u00fcr jeden Superhelden zu erm\u00f6glichen.",
-          "Konvertieren Sie diese Tabelle so, dass sie eine Spalte mit dem Namen \"Power\" hat, und f\u00fcgen Sie einen Datensatz f\u00fcr jede Superhelden-Power-Kombination hinzu, f\u00fcr insgesamt 15 Datens\u00e4tze in diesem Beispiel."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "57004b6dbd210964545ab923",
-        "question": "Was ist ein g\u00fcltiger Weg, um eine Datenbankansicht in MySQL zu erstellen?",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [
-          "1 CREATE VIEW v1 2 SELECT \\* FROM t1 3 WHERE col1 &gt; 10;",
-          "1 CREATE VIEW v1 2 BEGIN 3 SELECT \\* FROM t1 4 END",
-          "1 CREATE VIEW v1 AS 2 SELECT \\* FROM t1;",
-          "1 CREATE VIEW v1 AS 2 BEGIN 3 SELECT \\* FROM t1 4 END;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ec4d69bc031fbf9833d0d736",
-        "question": "Eine Tabelle Item hat ein boolesches Feld endOfLife und ein makeYear-Feld vom Typ YEAR(4). Wie k\u00f6nnen Sie den booleschen Wert f\u00fcr alle Artikel, die vor 2019 hergestellt wurden, auf wahr setzen?",
-        "answer": "UPDATE Item SET endOfLife = true WHERE makeYear < 2019",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["UPDATE Item SET endOfLife = true WHERE makeYear < 2019"],
-        "options": [
-          "UPSERT Item SET endOfLife = true WHERE makeYear < 2019",
-          "CHANGE Item SET endOfLife = true WHERE makeYear < 2019",
-          "ALTER Item SET endOfLife = true WHERE makeYear < 2019",
-          "UPDATE Item SET endOfLife = true WHERE makeYear < 2019"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "db4e196fe80ebea9877fa965",
-        "question": "Welche Auswahl ist ein Beispiel f\u00fcr eine Aggregatfunktion?Welche Auswahl ist ein Beispiel f\u00fcr eine Aggregatfunktion?",
-        "answer": "COUNT()",
-        "explanation": "[Referenz](https://www.sqltutorial.org/sql-aggregate-functions/)",
-        "hint": null,
-        "correctAnswer": ["COUNT()"],
-        "options": ["NOW()", "MID()", "FORMAT()", "COUNT()"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e8339219971970f066ac967b",
-        "question": "In diesem Diagramm arbeiten Sie am UPDATE-Trigger in der Mitarbeitertabelle. Wie k\u00f6nnen Sie auf den neuen Wert f\u00fcr die Adresse innerhalb des Triggers zugreifen?\n![Mysql-Bild](images/mysql_q103.png)",
-        "answer": "Use NEW.address",
-        "explanation": "[Referenz](https://dev.mysql.com/doc/refman/8.0/en/trigger-syntax.html)",
-        "hint": null,
-        "correctAnswer": ["Use NEW.address"],
-        "options": [
-          "Use NEW.address",
-          "Use INSERTED.address",
-          "Use DELETED.address",
-          "USE OLD.address"
-        ],
-        "nature": "ChooseOne",
-        "attachments": [
-          {
-            "id": "e94c4ca23b3bc8eb2dec8cd2",
-            "url": "images/mysql_q103.png",
-            "type": "question"
-          }
-        ]
-      },
-      {
-        "id": "6e80425b0b280fdea02ab7ca",
-        "question": "Sie arbeiten mit den Tabellen, wie in diesem Diagramm gezeigt. Sie m\u00fcssen die Liste der Kunden erstellen, die bestimmte Automodelle gekauft haben. Welche SQL-Klausel verwenden Sie?",
-        "answer": "UNION",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["UNION"],
-        "options": ["UNION ALL", "UNION", "SHOW TOTALS", "WITH ROLLUP"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c44dafd9425bfa2baddc6c6b",
-        "question": "Sie verwalten eine Datenbank mit einer Tabelle namens \u201eKunden\u201c. Sie haben eine tempor\u00e4re Tabelle, auch \"Kunden\" genannt, erstellt, mit der Sie f\u00fcr die Dauer Ihrer Sitzung arbeiten. Sie m\u00fcssen die tempor\u00e4re Tabelle mit anderen Spezifikationen neu erstellen. Welchen Befehl m\u00fcssen Sie zuerst ausf\u00fchren?",
-        "answer": "`DROP TABLE customers;`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`DROP TABLE customers;`"],
-        "options": [
-          "`CREATE TEMPORARY TABLE customers;`",
-          "`DROP TEMP TABLE customers;`",
-          "`DROP TEMPORARY TABLE customers;`",
-          "`DROP TABLE customers;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b3d88857966d714b7b6cf58d",
-        "question": "Wie w\u00fcrden Sie in MySQL eine Abfrage ohne Ber\u00fccksichtigung der Gro\u00df-/Kleinschreibung erstellen?",
-        "answer": "`SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`"],
-        "options": [
-          "`SELECT * FROM customers WHERE UPPEERCASE(LastName) = 'POTTER';`",
-          "`SELECT * FROM customers WHERE LOWERCASE(LastName) = 'potter';`",
-          "`SELECT * FROM customers WHERE UPPER(LastName) = 'POTTER';`",
-          "`SELECT * FROM customers WHERE UPPER(LastName) = 'Potter';`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "03f68a4174eee1bc529c8070",
-        "question": "Zu welchen Kategorien in Mysql geh\u00f6rt das Schl\u00fcsselwort \"COUNT\"?",
-        "answer": "Aggregatfunktionen",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Aggregatfunktionen"],
-        "options": ["Aggregatfunktionen", "Operatoren", "Klauseln", "Alle genannten"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "46a9f40bd5933aa2c27db886",
-        "question": "Welche der folgenden geh\u00f6rt zu einer \"Aggregatfunktion\"?",
-        "answer": "COUNT",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["COUNT"],
-        "options": ["COUNT", "UPPER", "LOWER", "Alle genannten"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d035ff56b2fd41b0880f1759",
-        "question": "Was bedeutet die \"HAVING\"-Klausel in MySQL?",
-        "answer": "Zum Herausfiltern der Zeilenwerte",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["Zum Herausfiltern der Zeilenwerte"],
-        "options": [
-          "Um die Spaltenwerte herauszufiltern",
-          "Zum Herausfiltern der Zeilenwerte",
-          "Zum Herausfiltern der Zeilen- und Spaltenwerte",
-          "Keine der genannten"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "176e6cea53f9d2c5ccdc0f13",
-        "question": "Welche Klausel \u00e4hnelt der \"HAVING\"-Klausel in Mysql?",
-        "answer": "WHERE",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["WHERE"],
-        "options": ["SELECT", "FROM", "WHERE", "Keine der genannten"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "aeed466887af777b017895b3",
-        "question": "Was wird die Ausgabe des folgenden MySQL-Befehls sein?\nSELECT emp_id, fname, lname\n      FROM employee\n      WHERE title=\u2019HEAD TELLER\u2019 AND start_date&gt;2008-11-23;",
-        "answer": "Spaltenerw\u00e4hnung mit \"SELECT\"-Klausel und nur die Zeilen, die \"HEAD TELLER\" als \"title\" enthalten",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Spaltenerw\u00e4hnung mit \"SELECT\"-Klausel und nur die Zeilen, die \"HEAD TELLER\" als \"title\" enthalten"
-        ],
-        "options": [
-          "Alle Spalten",
-          "Nur die Spalten, die mit der \"SELECT\"-Klausel erw\u00e4hnt werden",
-          "Spaltenerw\u00e4hnung mit \"SELECT\"-Klausel und nur die Zeilen, die \"HEAD TELLER\" als \"title\" enthalten",
-          "Keine der genannten"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bda4dfa7d2d7975f0b6d7f07",
-        "question": "Gibt es einen Fehler in der folgenden MySQL-Anweisung?\nSELECT e.emp_id, e.fname,e.lname,d.name\n      FROM employee e INNER JOIN department d\n      ON e.dept_id=e.dept_id;",
-        "answer": "NEIN",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["NEIN"],
-        "options": ["NEIN", "JAWOHL", "Abh\u00e4ngig", "Keine der genannten"],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0f7c1bb8c6c217bcab5c0cd8",
-        "question": "Sp\u00e4tere Versionen von MySQL unterst\u00fctzen den nativen JSON-Datentyp zum Speichern von JSON-Dokumenten. Was ist ein Nachteil von JSON-Spalten?",
-        "answer": "JSON-Spalten k\u00f6nnen nicht direkt indiziert werden.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["JSON-Spalten k\u00f6nnen nicht direkt indiziert werden."],
-        "options": [
-          "JSON-Spalten k\u00f6nnen nicht normalisiert werden.",
-          "JSON-Spalten k\u00f6nnen nicht direkt indiziert werden.",
-          "JSON-Spalten sind zum Speichern von JSON-Dokumenten ineffizient.",
-          "JSON-Dokumente k\u00f6nnen nicht validiert werden, wenn sie in JSON-Spalten gespeichert sind."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e577c3452e8bb5d5b79c96fb",
-        "question": "Wie w\u00e4hlen Sie mit MySQL alle Datens\u00e4tze aus einer Tabelle mit dem Namen \"Personen\" aus, in der der \"Nachname\" alphabetisch zwischen (und einschlie\u00dflich) \"Hansen\" und \"Pettersen\" steht?",
-        "answer": "`SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'`",
-        "explanation": "[Referenz](https://www.w3schools.com/mysql/mysql_between.asp)",
-        "hint": null,
-        "correctAnswer": [
-          "`SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'`"
-        ],
-        "options": [
-          "`SELECT LastName>'Hansen' AND LastName<'Pettersen' FROM Persons`",
-          "`SELECT * FROM Persons WHERE LastName BETWEEN 'Hansen' AND 'Pettersen'`",
-          "`SELECT * FROM Persons WHERE LastName>'Hansen' AND LastName<'Pettersen'`",
-          "`Keines der oben genannten.`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8fc99ff8eb335c0b2e209e09",
-        "question": "Betrachten Sie den unten angegebenen Satz von Beziehungen und die folgende SQL-Abfrage\nStudents : (Roll number, Name, Date of birth)\n        Courses: (Course number, Course name, instructor)\n        Grades: (Roll number, Course number, Grade)\n        SELECT DISTINCT Name\n        FROM Students, Courses, Grades\n        WHERE Students.Roll_number = Grades.Roll_number\n        AND Courses.Instructor =Sriram\n        AND Courses.Course_number = Grades.Course_number\n        AND Grades.Grade = A\n(Welche der folgenden Mengen wird durch die obige Abfrage berechnet?)",
-        "answer": "Namen von Studenten, die in mindestens einem der von Sriram unterrichteten Kurse eine A-Note erhalten haben",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Namen von Studenten, die in mindestens einem der von Sriram unterrichteten Kurse eine A-Note erhalten haben"
-        ],
-        "options": [
-          "Namen von Sch\u00fclern, die in allen von Sriram unterrichteten Kursen eine A-Note erhalten haben",
-          "Namen der Studenten, die in allen Kursen eine A-Note erhalten haben",
-          "Namen von Studenten, die in mindestens einem der von Sriram unterrichteten Kurse eine A-Note erhalten haben",
-          "Nichts des oben Genannten"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ff5094dbdc66c9080d84f445",
-        "question": "Angenommen, Sie haben eine Tabelle sales mit einer Spalte product_id. Welche SQL-Abfrage gibt korrekt die Gesamtzahl der einzigartigen verkauften Produkte zur\u00fcck?",
-        "answer": "`SELECT COUNT(DISTINCT product_id) FROM sales;`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": ["`SELECT COUNT(DISTINCT product_id) FROM sales;`"],
-        "options": [
-          "`SELECT COUNT(product_id) FROM sales;`",
-          "`SELECT COUNT(DISTINCT product_id) FROM sales;`",
-          "`SELECT SUM(DISTINCT product_id) FROM sales;`",
-          "`SELECT product_id FROM sales;`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
       }
     ]
   },
   "meta": {
     "source": "mysql/mysql-quiz-de.md",
-    "language": "de",
-    "generatedAt": "2025-12-09T14:56:14.374864+00:00",
-    "warnings": ["Question 100 has no marked correct answers"]
+    "languages": [
+      "de"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.419920+00:00",
+    "warnings": [
+      "Question 100 has no marked correct answers"
+    ]
   }
 }

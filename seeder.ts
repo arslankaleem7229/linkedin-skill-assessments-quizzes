@@ -92,7 +92,8 @@ function parseArgs(argv: string[]): SeedConfig {
 
 async function seedFile(filePath: string, config: SeedConfig): Promise<SeedResult> {
   const relPath = path.relative(config.root, filePath);
-  const tildePath = `/Users/arslankaleem/Workspace/Junk/linkedin-skill-assessments-quizzes/${relPath.split(path.sep).join('/')}`;
+  const absRoot = path.resolve(config.root).split(path.sep).join('/');
+  const tildePath = path.posix.join(absRoot, relPath.split(path.sep).join('/'));
 
   try {
     // const raw = await fs.readFile(filePath, { encoding: 'utf8' });
@@ -125,7 +126,7 @@ async function seedFile(filePath: string, config: SeedConfig): Promise<SeedResul
       headers: [
         [
           'Authorization',
-          'Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..5whTfLS_ktyWpp7I.9vyqtBAA_kCWfeObiZZHyanX-05zUNNDcW5JrrEVtn1_IEM9nPc-5G8DhAQN3bRX1mMXcNCfPyqvaH_J4t7MoWJtJync1wVm2cgQ9vwxRuy17hCo-1XrRk1_xbuIQ8imWASgkkgrOh0AezadTCbXJ8HCQN7kU6r0oWMRHZWR2E3xU4URgde_2Ge9nqpJqvuZMFU5V-_tP-2eUjjgcQ8rX0XMV6YaTTw8QDeoEI-jx0V2cF140GSs.fGPnYSl4aeXMz0WRZhkZBg',
+          'Bearer eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..LSG8wt3C-7YGI3b6.3V7cCFa9A_1OLp59ee_a6U1IhXC36But15SqUkjBk6HV1gyKyweMezC8H-5CSNPI713cXmRA1_aNcCP0K_H7sV5wNKoEEUhdo16_aw3APLh2SJLs79MksNhnBNxYa9zqpKvB1RLDT3Ove6Y5UTB_mBGcLFy4Y8nnE68hdjjXZ6h0zSyeQLw2nweoBXM3HImju9x6ze67A6kuNZZwwxbUvPKHD5iR967MT82XjJO-AiYk6l0Y.QTZl_s-thuhiEs-dNGzD6A',
         ],
       ],
     });
@@ -155,6 +156,8 @@ async function findQuizJsonFiles(root: string, keyword?: string): Promise<string
 
   async function walk(dir: string) {
     const entries = await fs.readdir(dir, { withFileTypes: true });
+    const hasCombined = entries.some((entry) => entry.isFile() && entry.name === 'quizz.json');
+
     for (const entry of entries) {
       if (skip.has(entry.name)) continue;
 
@@ -163,6 +166,7 @@ async function findQuizJsonFiles(root: string, keyword?: string): Promise<string
         await walk(fullPath);
       } else if (entry.isFile()) {
         const lower = entry.name.toLowerCase();
+        if (hasCombined && lower !== 'quizz.json') continue;
         if (lower.endsWith('.json') && lower.includes('quiz')) {
           if (keyword && !fullPath.includes(keyword)) continue;
           results.push(fullPath);
@@ -177,44 +181,54 @@ async function findQuizJsonFiles(root: string, keyword?: string): Promise<string
 
 function normalizeAttachmentUrls(payload: any, filePath: string, root: string): number {
   if (!payload || typeof payload !== 'object') return 0;
-  const questions = payload?.quizz?.questions;
-  if (!Array.isArray(questions)) return 0;
-
   const baseDir = path.dirname(filePath);
   const relDir = path.relative(root, baseDir);
   const relParts = relDir ? relDir.split(path.sep).filter(Boolean) : [];
+  const absRoot = path.resolve(root).split(path.sep).join('/');
+
+  const normalizeList = (questions: any[]): number => {
+    if (!Array.isArray(questions)) return 0;
+    let localChanges = 0;
+    for (const question of questions) {
+      if (!question || !Array.isArray(question.attachments)) continue;
+
+      question.attachments = question.attachments.map((attachment: any) => {
+        if (!attachment || typeof attachment.url !== 'string') return attachment;
+
+        const trimmed = attachment.url.trim();
+        if (!trimmed) return attachment;
+
+        const isAbsolute =
+          /^https?:\/\//i.test(trimmed) ||
+          trimmed.startsWith('~') ||
+          trimmed.startsWith('/') ||
+          trimmed.startsWith(absRoot);
+
+        if (isAbsolute) {
+          return trimmed === attachment.url ? attachment : { ...attachment, url: trimmed };
+        }
+
+        const clean = trimmed.replace(/^\.?\//, '');
+        const normalized = path.posix.join(absRoot, ...relParts, clean);
+
+        if (normalized !== attachment.url) {
+          localChanges += 1;
+          return { ...attachment, url: normalized };
+        }
+
+        return attachment;
+      });
+    }
+    return localChanges;
+  };
+
   let changes = 0;
-
-  for (const question of questions) {
-    if (!question || !Array.isArray(question.attachments)) continue;
-
-    question.attachments = question.attachments.map((attachment: any) => {
-      if (!attachment || typeof attachment.url !== 'string') return attachment;
-
-      const trimmed = attachment.url.trim();
-      if (!trimmed) return attachment;
-
-      const isAbsolute =
-        /^https?:\/\//i.test(trimmed) ||
-        trimmed.startsWith('/Users/arslankaleem/Workspace/Junk/linkedin-skill-assessments-quizzes');
-      if (isAbsolute) {
-        return trimmed === attachment.url ? attachment : { ...attachment, url: trimmed };
-      }
-
-      const clean = trimmed.replace(/^\.?\//, '');
-      const normalized = path.posix.join(
-        '/Users/arslankaleem/Workspace/Junk/linkedin-skill-assessments-quizzes',
-        ...relParts,
-        clean,
-      );
-
-      if (normalized !== attachment.url) {
-        changes += 1;
-        return { ...attachment, url: normalized };
-      }
-
-      return attachment;
-    });
+  if (Array.isArray(payload?.quizz?.sets)) {
+    for (const set of payload.quizz.sets) {
+      changes += normalizeList(set?.questions);
+    }
+  } else {
+    changes += normalizeList(payload?.quizz?.questions);
   }
 
   return changes;

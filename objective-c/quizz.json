@@ -1,0 +1,820 @@
+{
+  "quizz": {
+    "id": "cab5dedb61a2e5c2d9f425b1",
+    "slug": "objective-c",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
+      {
+        "id": "cab5dedb61a2e5c2d9f425b1-en",
+        "language": "en",
+        "title": "Objective-C",
+        "description": "Seeded from objective-c/objective-c-quiz.md",
+        "questions": [
+          {
+            "id": "ed175c3d98a7ef62df64dd29",
+            "question": "What is the value of s?\n```\nNSMutableString *s = [NSMutableString stringWithString: @\"123\"];\n[s appendString: @\"456\"];\n```",
+            "answer": "123456",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["123456"],
+            "options": ["123456", "123", "123", "456", "This code contains an error."],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "8ad8a0fcb6a2fa5a7ff601b8",
+            "question": "What's the value of i after these statements?\n```\nNSString *str = nil;\nNSInteger i = str.integerValue;\n```",
+            "answer": "0 (technically `nil` == 0 but i will have a literal value of `0` and not the `void*` value of `nil`)",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "0 (technically `nil` == 0 but i will have a literal value of `0` and not the `void*` value of `nil`)"
+            ],
+            "options": [
+              "nil",
+              "0 (technically `nil` == 0 but i will have a literal value of `0` and not the `void*` value of `nil`)",
+              "-1",
+              "This code crashes."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "baad71c5783b0066eba457b3",
+            "question": "What value is in str after this line in executed?\n`NSString str = \"test\" + \" \" + \"more\";`",
+            "answer": "This code contains an error",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["This code contains an error"],
+            "options": ["test", "nil", "test more", "This code contains an error"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "c6053c0d8c41d6ecd6067602",
+            "question": "What is the output of the code given below?\n```\n    NSPredicate *p2 = [NSPredicate predicateWithBlock:^BOOL(NSString*  evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {\n      return evaluatedObject.intValue % 2 == 0;\n    }];\n    NSArray *vals = @[@\"1\", @\"2\", @\"3\"];\n    NSArray *n2 = [vals filteredArrayUsingPredicate:p2];\n    NSLog(@\"%@\", n2.firstObject);\n```",
+            "answer": "2",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["2"],
+            "options": ["2", "1,2,3", "1,2", "Nothing, since this code contains an error."],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "023fcbf06ef81423b666a193",
+            "question": "Property defaults include \\_?",
+            "answer": "atomic/strong",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["atomic/strong"],
+            "options": ["atomic/strong", "atomic/weak", "nonatomic/weak", "nonatomic/strong"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "6e6ac2915bce2ee74f4413c4",
+            "question": "What is the key difference between NSDictionary and NSMutableDictionary?",
+            "answer": "NSMutableDictionary's values can change",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["NSMutableDictionary's values can change"],
+            "options": [
+              "NSMutableDictionary's values can change",
+              "NSMutableDictionary has not initializers.",
+              "NSDictionary can't be copied.",
+              "NSDictionary's values can change."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "b0f7e106290e2e7af08eff26",
+            "question": "What is foo?\n`-(float)foo;`",
+            "answer": "A function with a return type of float.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["A function with a return type of float."],
+            "options": [
+              "A function with a return type of float.",
+              "This code contains an error.",
+              "A variable declaration of type float.",
+              "A property of type float."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "66e9786fa9e53d7442c5e512",
+            "question": "What can you glean from this line?\n`#import \"NSString+NameHelper.h\"`",
+            "answer": "NameHelper is a category of NSString.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["NameHelper is a category of NSString."],
+            "options": [
+              "NameHelper is a category of NSString.",
+              "NameHelper is a subclass of NSString.",
+              "NSString implements the NameHelper protocol.",
+              "NSString has a helper class."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "691fac9dcc87a87867db2f68",
+            "question": "What's wrong with this code?\n`float x = 5.;`",
+            "answer": "Nothing is wrong with this code.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Nothing is wrong with this code."],
+            "options": [
+              "Nothing is wrong with this code.",
+              "Declarations do not need semicolons.",
+              "x=5 is an invalid float.",
+              "Variables can't be declared and initialized in the same state."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "00ab7d729c2315f9577e259b",
+            "question": "How many times with this loop be executed?\n```\nfor (int x=0; x<100; x++) {\n  x = x + 1;\n}\n```",
+            "answer": "50",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["50"],
+            "options": ["50", "99", "100", "This code contains an error."],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "2a7ecdd5d7b3d7015db2367d",
+            "question": "What is this code an example of?\n`[self addObserver: self forKeyPath: @\"val\" options:0 context: nil];`",
+            "answer": "Key-Value Observing",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Key-Value Observing"],
+            "options": [
+              "Key-Value Observing",
+              "Class Value Observing",
+              "Key-Data Observing",
+              "KeyPath Observing"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "50268733417cd4e1d0d91657",
+            "question": "What does ARC stand for?",
+            "answer": "Automatic Reference Counting",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Automatic Reference Counting"],
+            "options": [
+              "Automatic Reference Counting",
+              "Automatic Retain Checking",
+              "Async Retain Cycles",
+              "Automatic Release Code"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "1cf2e9cc61e6a8cf5cab6918",
+            "question": "What is printed for this code?\n```\nint val = 0;\nval = 1.5;\nprintf(\"%d\", val);\n```",
+            "answer": "1",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["1"],
+            "options": ["1", "2", "0", "This code contains an error."],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "701762e9985659e1600b3541",
+            "question": "What best describes class inheritance in Objective-C?",
+            "answer": "single inheritance but multiple protocol implementation",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["single inheritance but multiple protocol implementation"],
+            "options": [
+              "single inheritance but multiple protocol implementation",
+              "Objective-C doesn't support inheritance",
+              "dual class inheritance",
+              "unlimited class inheritance and protocol adherence"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "07fb2950f5d3602d2178048d",
+            "question": "How many keys does this NSDictionary have after this code is executed?\n`NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys: @\"b\", @\"e\", @\"a\", @\"r\", nil];`",
+            "answer": "2",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["2"],
+            "options": ["2", "4", "5", "This code contains an error."],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "f9952fd15f72cf1c9dad9d34",
+            "question": "What is the error in this code?\n```\nNSMutableDictionary *dict1 = [NSMutableDictionary dictionaryWithCapacity:5];\n[dict1 setValue:@\"key\" forKey:@\"value\"];\n```",
+            "answer": "Nothing is wrong with it",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Nothing is wrong with it"],
+            "options": [
+              "The key and value items are mixed",
+              "You can't set the capacity of a dictionary",
+              "NSMutableDictionary doesn't have a :setValue:forKey function.",
+              "Nothing is wrong with it"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "b08c9c25da64c381120a9cd3",
+            "question": "What is printed from this code?\n```\nNSData *data = [@\"print\" dataUsingEncoding:NSASCIIStringEncoding];\nNSLog(@\"%@\", [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding]);\n```",
+            "answer": "print",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["print"],
+            "options": [
+              "print",
+              "Nothing is printed from this code.",
+              "nil",
+              "This code is invalid."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "6436519702e6b13a442224eb",
+            "question": "What is different about this function?\n`+(void)doSomething;`",
+            "answer": "It is static",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["It is static"],
+            "options": [
+              "It is static",
+              "It is abstract.",
+              "It is inline.",
+              "This code contains an error."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "df7aee166e488d95f2a3ff12",
+            "question": "Structs can have \\_?",
+            "answer": "fields",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["fields"],
+            "options": ["functions", "initializers", "fields", "All of the above"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "3f11616d2874174fd6ad0cd5",
+            "question": "What is wrong with this code?\n```\n@interface MyClass : NSObject\n    @property (strong, nonatomic, readonly) NSString *name;\n  @end\n```",
+            "answer": "There is nothing wrong with this code.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["There is nothing wrong with this code."],
+            "options": [
+              "There is nothing wrong with this code.",
+              "There is not read-only directive.",
+              "MyClass doesn't implement NSObject.",
+              "Properties are declared in the implementation."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "3820694894c7439a847eb206",
+            "question": "What is an enums base type for the code below?\n`typedef enum { Foo1, Foo2} Foo;`",
+            "answer": "There is no base type.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["There is no base type."],
+            "options": ["There is no base type.", "NSObject", "int", "NSNumber"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "2e6f65b906fe0568b704576b",
+            "question": "If you want to store a small amount of information (e.g., user settings), whats the best, built-in way to go?",
+            "answer": "UserDefaults",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["UserDefaults"],
+            "options": ["UserDefaults", "plist file", "CoreData", "TextFile"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "f2443e6cfaf68e801b035741",
+            "question": "What are categories used for?",
+            "answer": "to extend other classes",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["to extend other classes"],
+            "options": [
+              "to extend other classes",
+              "to manage access control",
+              "to coordinate objects",
+              "to group classes"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "15a77979bc7b0621721b27c2",
+            "question": "What is this Objective-C code checking?\n```\nif ([keyPath isInstanceOf:[NSString class]]) {\n}\n```",
+            "answer": "This code contains an error",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["This code contains an error"],
+            "options": [
+              "This code contains an error",
+              "if keyPath is an instance of NSString",
+              "if keyPath's baseclass is the same as NSString's baseclass",
+              "if keyPath implements the same methods as NSString"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "e6b1b1094d74aea184b8e2a7",
+            "question": "What is this a declaration of?\n`int(^foo)(int);`",
+            "answer": "a block of code",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["a block of code"],
+            "options": ["an Extension", "a Generic", "a block of code", "an abstract class"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "5a254694312ca463a05b0f27",
+            "question": "For observing changes to a property, which of these two statements cause the related method to be called and why?\n```\n1. _val = 1;\n2. self.val= 100;\n```",
+            "answer": "Statement 2, since it calls the auto-created setter on the property.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Statement 2, since it calls the auto-created setter on the property."
+            ],
+            "options": [
+              "Statement 2, since it calls the auto-created setter on the property.",
+              "Statement 1, since it uses the property directly.",
+              "Statement 2, since it specifies the class instance to use.",
+              "Statement 1, since it calls the auto-created setter on the property."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "c6f286cd65d77142bdb66b20",
+            "question": "What is wrong with this code?\n```\nfloat x = 2.0;\nint(^foo)(int) = ^(int n1) {\n  return (int)(n1*x);\n};\nfoo(5);\n```",
+            "answer": "Nothing is wrong with this code.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Nothing is wrong with this code."],
+            "options": [
+              "Ints and floats can't be multiplied.",
+              "The parameter isn't declared correctly.",
+              "x is not in the right scope.",
+              "Nothing is wrong with this code."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "37fdc4b77f31f9a6f344af7a",
+            "question": "What's the difference between an array and a set?",
+            "answer": "Arrays are ordered, non-unique values.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Arrays are ordered, non-unique values."],
+            "options": [
+              "Arrays are ordered, non-unique values.",
+              "Arrays are stored sorted.",
+              "Sets are ordered, unique values.",
+              "Sets can contain nils."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "9ecb32c99c735a2ccbaf5ba1",
+            "question": "Dot notation can be used for \\_?",
+            "answer": "property getter/setter",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["property getter/setter"],
+            "options": [
+              "nothing, as they're never used in Objective-C",
+              "function calls only",
+              "property getter/setter",
+              "parameter delimiters"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "d7d8f561b45ef141e175ba84",
+            "question": "What is the value of newVals after this code is executed?\n```\nNSArray *vals = @[@\"1\", @\"2\", @\"3\"];\nNSPredicate *pred = [NSPredicate predicateWithFormat:@\"SELF.intValue > 1\"];\nNSArray *newVals = [vals filteredArrayUsingPredicate:pred];\n```",
+            "answer": "2,3",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["2,3"],
+            "options": ["2,3", "nil", "2,\"3\"", "This code contains an error"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "37abe0bd3ac32e887abfedc9",
+            "question": "How would this function be called?\n`-(int)foo:(int)a b:(int)c;`",
+            "answer": "[self foo:5 b:10];",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["[self foo:5 b:10];"],
+            "options": [
+              "self.foo(5, b:10);",
+              "This code contains an error.",
+              "[self foo:5:10:20];",
+              "[self foo:5 b:10];"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "d1e03d8f7ced6a0ffc5cbe3b",
+            "question": "What is the type of the error return value stored in json?\n```\nNSError *error;\nNSData *data;\nid json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];\n```",
+            "answer": "id",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["id"],
+            "options": ["NSString", "NSArray", "id", "NSDictionary"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "cadc974a3327c6f8f01ed376",
+            "question": "What is significant about this function declaration?\n```\n-(void)testFunc:(NSString**)str;\n```",
+            "answer": "The parameter is passed by reference and may be changed",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["The parameter is passed by reference and may be changed"],
+            "options": [
+              "The parameter is passed by value and can not be changed",
+              "\\*\\* is not allowed on a parameter",
+              "The parameter may be nil",
+              "The parameter is passed by reference and may be changed"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "a6167212926d4bc8d400e3e5",
+            "question": "What is printed from this code execution?\n```\ntypedef enum {\n    thing1,\n    thing2,\n    thing3\n} Thing;\n-(void) enumStuff {\n    NSLog(@\"%d\", thing2);\n}\n```",
+            "answer": "1",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["1"],
+            "options": ["0", "1", "thing2", "This code does not print anything"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "056789c375c2688ef0d4658c",
+            "question": "You are worried about threaded access to a property and possible collision in writing. What directive should you use on the property?",
+            "answer": "atomic",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["atomic"],
+            "options": ["non-atomic", "strong", "weak", "atomic"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "b031585dda24b00f26d7ccd2",
+            "question": "What is wrong with this line of code?\n```\nint temp = 1==1;\n```",
+            "answer": "Nothing is wrong with it.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Nothing is wrong with it."],
+            "options": [
+              "`temp` is a keyword.",
+              "1==1 is invalid.",
+              "1==1 evaluates to a Boolean.",
+              "Nothing is wrong with it."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "f0fa33d71c9614bc437a123c",
+            "question": "What is special about the code within this block?\n```\ndispatch_async(dispatch_get_main_queue(), ^{\n// code\n});\n```",
+            "answer": "It executes on the main queue.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["It executes on the main queue."],
+            "options": [
+              "It executes on the main queue.",
+              "It is the last code to run before the app goes inactive.",
+              "It executes on a background thread.",
+              "It is queued to execute in the background."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "1922b7ec1e177a4532bcfb7e",
+            "question": "How many items are in set1 after this code executes?\n```\nNSMutableSet *set1 = [NSMutableSet setWithObjects: @1,@2, @3, @4, @5, nil];\n[set1 add0bject:@3];\n```",
+            "answer": "five",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["five"],
+            "options": ["zero", "six", "one", "five"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "421e4c20a3857c8cebf17afc",
+            "question": "What is wrong with this code?\n```\nNSDictionary *d1 = @[@\"v1\", @4, @\"v2\", @5.6, @\"v3\"];\nNSlog(@\"d1: %@\", d1);\n```",
+            "answer": "The last key is missing a value.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["The last key is missing a value."],
+            "options": [
+              "NSDictionary cannot be printed this way.",
+              "The last key is missing a value.",
+              "Dictionaries cannot have mixed types as values.",
+              "d1 is assigned an NSArray of values."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "c56c55e5138f4ff30b93d8fb",
+            "question": "What is the initial value of the property `val`?\n```\n@property (nonatomic, readonly) int val;\n```",
+            "answer": "undefined",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["undefined"],
+            "options": ["8", "nil", "-1", "undefined"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "5fd3dcda4e77560f36448d47",
+            "question": "Which thread should UI updates be processed on to avoid crashes and application lag?",
+            "answer": "UI",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["UI"],
+            "options": ["UI", "dispatch", "background", "main"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "6e9a9e72338f8f989e01e2ce",
+            "question": "What is the value of val after this code is executed?\n```\nNSString *val = @\"1.23\";\nBOOL tf = val.boolValue;\n```",
+            "answer": "NO",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["NO"],
+            "options": ["YES", "NO", "1", "This code is invalid"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "e8bd8914505a70088b4067a1",
+            "question": "In this code, what does ThatOne refer to?\n```\n@interface TestClass : ThisOne <ThatOne>\n```",
+            "answer": "a protocoL impLemented by ThisOne",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["a protocoL impLemented by ThisOne"],
+            "options": [
+              "the parent class of TestClass",
+              "the name of the category being created for ThisOne",
+              "a protocoL impLemented by ThisOne",
+              "a helper file's name"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "52dcdd681b1fa8444f1c94c5",
+            "question": "What is the value of result after this code is executed?\n```\nNSString *result = [Ftest\"\n    stringByTrimmingCharactersInSet.NSCharacterSet.alphanumericCharacterSet];\n```",
+            "answer": "\"test\"",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["\"test\""],
+            "options": ["\"\"", "\"es\"", "\"test\"", "None of the above"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "1415da1c202b7ee80ef39000",
+            "question": "When will self receive the notification based on this code?\n```\nMyClass .classObj = [[MyClass allot] init];\n[class0bj add0bserver:self forKeyPath:@\"name\"\n              options:NSKeyValueObservingOptionNew context:NULL];\n```",
+            "answer": "when the name property in the class0bj instance changes",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["when the name property in the class0bj instance changes"],
+            "options": [
+              "class0bj will recieve the notification, not self.",
+              "when class0bj is set to \"name\"",
+              "when the name property in the class0bj instance changes",
+              "None of the above"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "18be3e9a1d339af9de380cde",
+            "question": "What is wrong with this code?\n```\n[*\"true\" boolValue];\n```",
+            "answer": "NSString doesn't have a boolValue function.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["NSString doesn't have a boolValue function."],
+            "options": [
+              "String literal are not created with\\*.",
+              "NSString doesn't have a boolValue function.",
+              "\"true\" has no meaning.",
+              "There is nothing wrong with this code."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "00ad3eabed473fc3f6665656",
+            "question": "How many times does this loop execute?\n```\nint loopVal = 0;\nfor (int i=0; i>loopVal; i--){\n    i--;\n}\n```",
+            "answer": "zero",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["zero"],
+            "options": ["an infinite number of times", "zero", "one", "This code is invalid."],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "d5206cf0a77e6a4d4370cb89",
+            "question": "What will this code print?\n```\nNSLog(@\"%lu\", @\"test\".length);\n```",
+            "answer": "4",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["4"],
+            "options": ["\"test\"", "4", "0", "Nothing, this code is invalid."],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "ab0be6c06e4b9fdec13f782a",
+            "question": "What is the value of numVtoInt after this code is executed?\n```\nNSNumber *numV = [NSNumber numberWithFloat:6.7];\nint numVtoInt = numV.intValue;\n```",
+            "answer": "7",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["7"],
+            "options": ["6", "0", "6.7", "7"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "f73182ac5f76b399219e8dcd",
+            "question": "What does this code print?\n```\nNSString *val = @\"1.23\";\nNSLog(@\"%.04f\", val.floatValue);\n```",
+            "answer": "1.2300",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["1.2300"],
+            "options": ["1.2300", ".04", "1", "This code is invalid"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          },
+          {
+            "id": "723228d1afa7fec8b469763a",
+            "question": "What is the maximum possible value of r1 in this code?\n```\nint r1 = arc4random() % 10;\n```",
+            "answer": "9",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["9"],
+            "options": ["0", "9", "1", "10"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "cab5dedb61a2e5c2d9f425b1-en",
+            "quizzId": "cab5dedb61a2e5c2d9f425b1"
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "languages": ["en"],
+    "sources": ["objective-c/objective-c-quiz.md"],
+    "generatedAt": "2025-12-09T22:59:14.647Z",
+    "warnings": []
+  }
+}

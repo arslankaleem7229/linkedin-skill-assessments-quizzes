@@ -1,1198 +1,1339 @@
 {
   "quizz": {
     "id": "63a81213f574a5b346888e6c",
-    "title": "Angolare",
-    "description": "Seeded from angular/angular-quiz-it.md",
-    "createdById": "seed-user",
-    "questions": [
-      {
-        "id": "d87083a6f5f19ee50136f9ab",
-        "question": "Qual \u00e8 lo scopo del decoratore ViewChild in questa classe di componenti?\n```ts\n@Component({\n    ...\n    template: '<p #bio></p>'\n})\nexport class UserDetailsComponent {\n    @ViewChild('bio') bio;\n}\n```",
-        "answer": "Fornisce l'accesso dall'interno della classe componente all'oggetto ElementRef per il `<p>` con la variabile di riferimento del modello bio nella visualizzazione del modello del componente.",
-        "explanation": "[DigitalOcean - viewchild-access-component](https://www.digitalocean.com/community/tutorials/angular-viewchild-access-component)",
-        "hint": null,
-        "correctAnswer": [
-          "Fornisce l'accesso dall'interno della classe componente all'oggetto ElementRef per il `<p>` con la variabile di riferimento del modello bio nella visualizzazione del modello del componente."
-        ],
-        "options": [
-          "Fornisce l'accesso dall'interno della classe componente all'oggetto ElementRef per il `<p>` con la variabile di riferimento del modello bio nella visualizzazione del modello del componente.",
-          "Indica che il `<p>` di cui viene eseguito il rendering come figlio della visualizzazione padre che utilizza questo componente.",
-          "Rende il `<p>` nel modello supporta la proiezione del contenuto.",
-          "Rende il `<p>` visibile nel rendering finale. Se il #bio \u00e8 stato utilizzato nel modello e il @ViewChild non \u00e8 stato utilizzato nella classe, Angular nasconder\u00e0 automaticamente il valore `<p>` che ha #bio su di esso."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ca6721d0dfd99c4abf650521",
-        "question": "Quale metodo viene utilizzato per collegare un FormControl a un elemento di input DOM nativo in moduli reattivi?",
-        "answer": "Utilizzare la direttiva formControlName e impostare il valore uguale al nome della stringa assegnato a FormControl.",
-        "explanation": "[Angular.io - Gruppi di moduli reattivi](https://angular.io/guide/reactive-forms#creating-nested-form-groups)",
-        "hint": null,
-        "correctAnswer": [
-          "Utilizzare la direttiva formControlName e impostare il valore uguale al nome della stringa assegnato a FormControl."
-        ],
-        "options": [
-          "Aggiungere il nome della stringa assegnato a FormControl a un attributo denominato controlli nella finestra di dialogo <form> per indicare quali campi deve includere.",
-          "Utilizzare la sintassi di associazione tra parentesi quadre attorno all'attributo value sull'elemento DOM e impostarlo uguale a un'istanza di FormControl.",
-          "Utilizzare la direttiva formControlName e impostare il valore uguale al nome della stringa assegnato a FormControl.",
-          "Utilizzare il nome della stringa assegnato a FormControl come valore per l'attributo id dell'elemento DOM."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3999047c53b1ab01b16f9cfc",
-        "question": "Qual \u00e8 la differenza tra il `paramMap` E la `queryParamMap` sul `ActivatedRoute` classe?",
-        "answer": "Entrambi sono Osservabili contenenti valori della stringa URL della route richiesta. ParamMap contiene i valori dei parametri presenti nel percorso URL e queryParamMap contiene i parametri di query URL.",
-        "explanation": "[StackOverflow](https://stackoverflow.com/a/49617621)",
-        "hint": null,
-        "correctAnswer": [
-          "Entrambi sono Osservabili contenenti valori della stringa URL della route richiesta. ParamMap contiene i valori dei parametri presenti nel percorso URL e queryParamMap contiene i parametri di query URL."
-        ],
-        "options": [
-          "ParamMap \u00e8 un oggetto letterale dei parametri nel percorso URL di una route. QueryParamMap \u00e8 un Observable di quegli stessi parametri.",
-          "ParamMap \u00e8 un Oggetto osservabile che contiene i valori dei parametri che fanno parte del percorso URL di una route. QueryParamMap \u00e8 un metodo che accetta una matrice di chiavi e viene utilizzato per trovare parametri specifici in paramMap.",
-          "paramMap \u00e8 il nome legacy di Angular 3. Il nuovo nome \u00e8 queryParamMap.",
-          "Entrambi sono Osservabili contenenti valori della stringa URL della route richiesta. ParamMap contiene i valori dei parametri presenti nel percorso URL e queryParamMap contiene i parametri di query URL."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "02816a7a54e16ddb9100d9f0",
-        "question": "In base al seguente utilizzo della pipe asincrona e supponendo che il campo della classe users sia un Observable, quante sottoscrizioni agli utenti Observable vengono effettuate?\n```html\n<h2>Names</h2>\n<div *ngFor=\"let user of users | async\">{{ user.name }}</div>\n<h2>Ages</h2>\n<div *ngFor=\"let user of users | async\">{{ user.age }}</div>\n<h2>Genders</h2>\n<div *ngFor=\"let user of users | async\">{{ user.gender }}</div>\n```",
-        "answer": "Tre. Ce n'\u00e8 uno per ogni pipe asincrona.",
-        "explanation": "[UltimateCourses](https://ultimatecourses.com/blog/angular-ngfor-async-pipe)",
-        "hint": null,
-        "correctAnswer": [
-          "Tre. Ce n'\u00e8 uno per ogni pipe asincrona."
-        ],
-        "options": [
-          "Nessuno. La pipe asincrona non viene sottoscritta automaticamente.",
-          "Nessuno. La sintassi del modello non \u00e8 corretta.",
-          "Tre. Ce n'\u00e8 uno per ogni pipe asincrona.",
-          "Uno. La pipe asincrona memorizza internamente observables per tipo."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3c52d73b75ecfcc387ea15f0",
-        "question": "Come \u00e8 possibile utilizzare HttpClient per inviare una richiesta POST a un endpoint da una funzione addOrder in questo OrderService?\n```ts\nexport class OrderService {\n  constructor(private httpClient: HttpClient) {}\n  addOrder(order: Order) {\n    // Missing line\n  }\n}\n```",
-        "answer": "this.httpClient.post<Order>(this.orderUrl, order).subscribe();",
-        "explanation": "[Angular.io - Invio di dati al server](https://angular.io/guide/http#sending-data-to-a-server)",
-        "hint": null,
-        "correctAnswer": [
-          "this.httpClient.post<Order>(this.orderUrl, order).subscribe();"
-        ],
-        "options": [
-          "this.httpClient.url(this.orderUrl).post(order);",
-          "this.httpClient.send(this.orderUrl, order);",
-          "this.httpClient.post<Order>(this.orderUrl, ordine);",
-          "this.httpClient.post<Order>(this.orderUrl, order).subscribe();"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8127031a8386eba387e44066",
-        "question": "A cosa serve il metodo RouterModule.forRoot?",
-        "answer": "Registrazione delle definizioni di route a livello di applicazione radice.",
-        "explanation": "[O ' REILLY](https://www.oreilly.com/library/view/switching-to-angular/9781788620703/c9e90774-0e10-410b-bd20-d3e9e0b8d117.xhtml)",
-        "hint": null,
-        "correctAnswer": [
-          "Registrazione delle definizioni di route a livello di applicazione radice."
-        ],
-        "options": [
-          "Registrazione di tutti i provider che si intende utilizzare nei componenti instradati.",
-          "Registrazione delle definizioni di route a livello di applicazione radice.",
-          "Indicando che Angular dovrebbe fare il tifo per i tuoi percorsi per avere successo.",
-          "Dichiarando che si intende utilizzare il routing solo a livello di radice."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "093a087acb815ad2b7528761",
-        "question": "Su quali elementi DOM corrisponder\u00e0 questo selettore di metadati dei componenti?\n```ts\n@Component({\n    selector: 'app-user-card',\n    . . .\n})\n```",
-        "answer": "Tutte le istanze di `<app-user-card></app-user-card>`.",
-        "explanation": "[Angular.io - Metadati dei componenti](https://angular.io/guide/architecture-components#component-metadata)",
-        "hint": null,
-        "correctAnswer": [
-          "Tutte le istanze di `<app-user-card></app-user-card>`."
-        ],
-        "options": [
-          "Qualsiasi elemento con l'attributo app-user-card, ad esempio `<div app-user-card></div>`.",
-          "La prima istanza di `<app-user-card></app-user-card>`.",
-          "Tutte le istanze di `<app-user-card></app-user-card>`.",
-          "Tutte le istanze di `<user-card></user-card>`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ab68b77675b6c33359c224a0",
-        "question": "Qual \u00e8 la sintassi del modello corretta per l'utilizzo della direttiva strutturale ngFor incorporata per eseguire il rendering di un elenco di productNames?",
-        "answer": "&shy;",
-        "explanation": "```ts\n<ul>\n<li [ngFor]=\"let productName of productNames\">{{ productName }}</li>\n</ul>\n```\n```ts\n<ul>\n<li ngFor=\"let productName of productNames\">{{ productName }}</li>\n</ul>\n```\n```ts\n<ul>\n<li *ngFor=\"let productName of productNames\">{{ productName }}</li>\n</ul>\n```\n```ts\n<ul>\n<? for productName in productNames { ?>\n<li>{{ productName }}</li>\n<? } ?>\n</ul>\n```\n[Angular.io - Direttive strutturali](https://angular.io/guide/built-in-directives#listing-items-with-ngfor)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "81c19f1e7c09f0182fea455c",
-        "question": "Quali sono le propriet\u00e0 dei metadati del decoratore a due componenti utilizzate per impostare gli stili CSS per un componente?",
-        "answer": "stili e styleUrls.",
-        "explanation": "[Angular.io - Stili dei componenti](https://angular.io/guide/component-styles)",
-        "hint": null,
-        "correctAnswer": [
-          "stili e styleUrls."
-        ],
-        "options": [
-          "viewEncapsulation e viewEncapsulationFiles.",
-          "Ce n'\u00e8 solo uno ed \u00e8 la propriet\u00e0 denominata css.",
-          "css e cssUrl.",
-          "stili e styleUrls."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8bbef16883982b20a444a868",
-        "question": "Con la classe di componenti seguente, quale sintassi del modello verr\u00e0 utilizzata nel modello per visualizzare il valore del campo della classe title?\n```ts\n@Component({\n  selector: 'app-title-card',\n  template: '',\n})\nclass TitleCardComponent {\n  title = 'User Data';\n}\n```",
-        "answer": "`{{ title }}`",
-        "explanation": "[Angular.io - Interpolazione di stringhe o Interpolazione di testo](https://angular.io/guide/interpolation)",
-        "hint": null,
-        "correctAnswer": [
-          "`{{ title }}`"
-        ],
-        "options": [
-          "`{{ 'title' }}`",
-          "`{{ title }}`",
-          "`[title]`",
-          "Un campo di classe non pu\u00f2 essere visualizzato in un modello tramite la sintassi del modello."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7c7f77059e86012da5ae018c",
-        "question": "Qual \u00e8 lo scopo del metodo valueChanges in un oggetto FormControl?",
-        "answer": "\u00c8 un osservabile che emette ogni volta che il valore del controllo cambia, in modo da poter reagire a nuovi valori e prendere decisioni logiche in quel momento.",
-        "explanation": "[Angular.io - Visualizzazione di un valore di controllo from](https://angular.io/guide/reactive-forms#displaying-a-form-control-value)",
-        "hint": null,
-        "correctAnswer": [
-          "\u00c8 un osservabile che emette ogni volta che il valore del controllo cambia, in modo da poter reagire a nuovi valori e prendere decisioni logiche in quel momento."
-        ],
-        "options": [
-          "Viene utilizzato per configurare i valori consentiti per il controllo.",
-          "Viene utilizzato per modificare il valore di un controllo in un nuovo valore. Si chiamerebbe tale metodo e si passerebbe il nuovo valore per il campo modulo. Supporta anche il passaggio di una matrice di valori che possono essere impostati nel tempo.",
-          "Restituisce un valore booleano in base a se il valore del controllo \u00e8 diverso dal valore con cui \u00e8 stato inizializzato.",
-          "\u00c8 un osservabile che emette ogni volta che il valore del controllo cambia, in modo da poter reagire a nuovi valori e prendere decisioni logiche in quel momento."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1a29a55d8796f266a0f2e3cc",
-        "question": "Quale direttiva viene utilizzata per collegare un `<a>` tag al routing?",
-        "answer": "routerLink",
-        "explanation": "[Angular.io - RouterLink](https://angular.io/api/router/RouterLink#description)",
-        "hint": null,
-        "correctAnswer": [
-          "routerLink"
-        ],
-        "options": [
-          "routeTo",
-          "routerLink",
-          "routePath",
-          "appLink"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0e7fbdc8ae68b0f85d26baeb",
-        "question": "A cosa serve il decoratore Output in questa classe di componenti?\n```ts\n@Component({\n    selector: 'app-shopping-cart',\n    . . .\n})\nexport class ShoppingCartComponent {\n    @Output() itemTotalChanged = new EventEmitter();\n}\n```",
-        "answer": "Fornisce un modo per associare gli eventi al `itemTotalChanged` campo di classe, in questo modo: `<app-shopping-cart (itemTotalChanged)=\"logNewTotal($event)\"></app-shopping-cart>`.",
-        "explanation": "[Angular.io - Invio di dati al componente padre](https://angular.io/guide/inputs-outputs#sending-data-to-a-parent-component)",
-        "hint": null,
-        "correctAnswer": [
-          "Fornisce un modo per associare gli eventi al `itemTotalChanged` campo di classe, in questo modo: `<app-shopping-cart (itemTotalChanged)=\"logNewTotal($event)\"></app-shopping-cart>`."
-        ],
-        "options": [
-          "Rende il `itemTotalChanged` campo di classe pubblico.",
-          "Fornisce un modo per associare i valori al `itemTotalChanged` campo di classe, in questo modo: `<app-shopping-cart [itemTotalChanged]=\"newTotal\"></app-shopping-cart>`.",
-          "Fornisce un modo per associare gli eventi al `itemTotalChanged` campo di classe, in questo modo: `<app-shopping-cart (itemTotalChanged)=\"logNewTotal($event)\"></app-shopping-cart>`.",
-          "\u00c8 semplicemente un modo per mettere un commento davanti a un campo di classe per la documentazione."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "700cf3963970e2b10597ace8",
-        "question": "Qual \u00e8 la differenza tra questi due esempi di markup per la gestione condizionale della visualizzazione?\n```html\n<div *ngIf=\"isVisible\">Active</div>\n<div [hidden]=\"!isVisible\">Active</div>\n```",
-        "answer": "Il `ngIf` non esegue il rendering del div nel DOM se l'espressione \u00e8 false. Le `hidden` l'utilizzo della propriet\u00e0 nasconde il contenuto div nel riquadro di visualizzazione del browser, ma il div \u00e8 ancora nel DOM.",
-        "explanation": "[StackOverflow](https://stackoverflow.com/a/39778145)",
-        "hint": null,
-        "correctAnswer": [
-          "Il `ngIf` non esegue il rendering del div nel DOM se l'espressione \u00e8 false. Le `hidden` l'utilizzo della propriet\u00e0 nasconde il contenuto div nel riquadro di visualizzazione del browser, ma il div \u00e8 ancora nel DOM."
-        ],
-        "options": [
-          "Il `ngIf` \u00e8 una scorciatoia per l'altro esempio. Quando Angular elabora tale direttiva, scrive un elemento div nel DOM con la propriet\u00e0 nascosta.",
-          "Sono fondamentalmente gli stessi.",
-          "Il `ngIf` non esegue il rendering del div nel DOM se l'espressione \u00e8 false. Le `hidden` l'utilizzo della propriet\u00e0 nasconde il contenuto div nel riquadro di visualizzazione del browser, ma il div \u00e8 ancora nel DOM.",
-          "Il `ngIf` \u00e8 valido, ma l'uso del `hidden` \u00e8 errata e generer\u00e0 un errore."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "32b529fa760755ba473879fb",
-        "question": "Come \u00e8 possibile disabilitare il pulsante di invio quando il modulo presenta errori in questo esempio di moduli basati su modelli?\n```html\n<form #userForm=\"ngForm\">\n  <input type=\"text\" ngModel name=\"firstName\" required />\n  <input type=\"text\" ngModel name=\"lastName\" required />\n  <button (click)=\"submit(userForm.value)\">Save</button>\n</form>\n```",
-        "answer": "&shy;",
-        "explanation": "```html\n<button (click)=\"submit(userForm.value)\" disable=\"userForm.invalid\">Save</button>\n```\n```html\n<button (click)=\"submit(userForm.value)\" [disabled]=\"userForm.invalid\">Save</button>\n```\n```html\n<button (click)=\"submit(userForm.value)\" [ngForm.disabled]=\"userForm.valid\">Save</button>\n```\n```html\n<button (click)=\"submit(userForm.value)\" *ngIf=\"userForm.valid\">Save</button>\n```\n[Angular.io - Invia il modulo con ngSubmit](https://angular.io/guide/forms#submit-the-form-with-ngsubmit)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "07153a83cb907ddb7625be9f",
-        "question": "Si desidera vedere quali file verrebbero generati creando un nuovo componente della scheda contatto. Quale comando useresti?",
-        "answer": "ng generare la scheda contatto del componente --dry-run",
-        "explanation": "[Angular.io - ng genera opzioni](https://angular.io/cli/generate#options)",
-        "hint": null,
-        "correctAnswer": [
-          "ng generare la scheda contatto del componente --dry-run"
-        ],
-        "options": [
-          "ng generare la scheda contatto del componente --dry-run",
-          "ng generare la scheda contatto del componente --no-files",
-          "ng genera componente componente --dry",
-          "ng genera componente --exclude"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "831bc324466644cfb9110721",
-        "question": "In base al componente seguente, quale sintassi del modello verr\u00e0 utilizzata per associare il campo titleText di TitleCardComponent alla propriet\u00e0 title dell'elemento h1?\n```ts\n@Component({\n  selector: 'app-title-card',\n  template: '<h1 title=\"User Data\"> {{titleText}}</h1>',\n})\nexport class TitleCardComponent {\n  titleText = 'User Data';\n}\n```",
-        "answer": "`<h1 [title]=\"titleText\">{{ titleText }}</h1>`",
-        "explanation": "[Angular.io - Interpolazione delle stringhe](https://angular.io/guide/interpolation)",
-        "hint": null,
-        "correctAnswer": [
-          "`<h1 [title]=\"titleText\">{{ titleText }}</h1>`"
-        ],
-        "options": [
-          "`<h1 data-title=\"titleText\">{{ titleText }}</h1>`",
-          "`<h1 title=\"titleText\">{{ titleText }}</h1>`",
-          "`<h1 [title]=\"titleText\">{{ titleText }}</h1>`",
-          "`<h1 titleText>{{ titleText }}</h1>`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f09ff92810a607de32955474",
-        "question": "Cosa sono gli hook angolari per il ciclo di vita?",
-        "answer": "metodi denominati riservati per componenti e direttive che Angular chiamer\u00e0 durante i tempi impostati nella sua esecuzione e possono essere utilizzati per attingere a quei momenti del ciclo di vita",
-        "explanation": "[Angular.io - Ganci per il ciclo di vita](https://angular.io/guide/lifecycle-hooks)",
-        "hint": null,
-        "correctAnswer": [
-          "metodi denominati riservati per componenti e direttive che Angular chiamer\u00e0 durante i tempi impostati nella sua esecuzione e possono essere utilizzati per attingere a quei momenti del ciclo di vita"
-        ],
-        "options": [
-          "logger per monitorare lo stato di salute di un'app Angular",
-          "provider che possono essere utilizzati per tenere traccia delle istanze dei componenti",
-          "pipe incorporate che possono essere utilizzate nei modelli per eventi DOM",
-          "metodi denominati riservati per componenti e direttive che Angular chiamer\u00e0 durante i tempi impostati nella sua esecuzione e possono essere utilizzati per attingere a quei momenti del ciclo di vita"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4913efb68d87c68fa9d2bc0a",
-        "question": "Scegli la descrizione migliore per questo codice di sintassi del modello:\n```html\n<span>Boss: {{job?.bossName}} </span>\n```",
-        "answer": "Sta usando l'operatore di navigazione sicura (?) sul campo di lavoro. Se il campo job non \u00e8 definito, l'accesso a bossName verr\u00e0 ignorato e non si verificher\u00e0 alcun errore.",
-        "explanation": "[StackOverflow](https://stackoverflow.com/a/60182134)",
-        "hint": null,
-        "correctAnswer": [
-          "Sta usando l'operatore di navigazione sicura (?) sul campo di lavoro. Se il campo job non \u00e8 definito, l'accesso a bossName verr\u00e0 ignorato e non si verificher\u00e0 alcun errore."
-        ],
-        "options": [
-          "Il ? \u00e8 l'abbreviazione per la pipe asincrona. Il valore del lavoro deve essere un Osservabile.",
-          "Sta usando l'operatore di navigazione sicura (?) sul campo di lavoro. Se il campo job non \u00e8 definito, l'accesso a bossName verr\u00e0 ignorato e non si verificher\u00e0 alcun errore.",
-          "Si \u00e8 verificato un errore nella sintassi del modello. Le? non \u00e8 valido qui.",
-          "Sta giocando il valore del lavoro se ne ha uno; in caso contrario, viene visualizzato il bossName."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d527e792b37f5626053949d4",
-        "question": "Come si configura una definizione di route per un oggetto UserDetailComponent che supporta il percorso URL user/23 (dove 23 rappresenta l'ID dell'utente richiesto)?",
-        "answer": "`{ path: 'user/:id', component: UserDetailComponent }`",
-        "explanation": "[CodeCraft - Percorsi parametrizzati](https://codecraft.tv/courses/angular/routing/parameterised-routes/#_configuration)",
-        "hint": null,
-        "correctAnswer": [
-          "`{ path: 'user/:id', component: UserDetailComponent }`"
-        ],
-        "options": [
-          "`{ path: 'user/:id', component: UserDetailComponent }`",
-          "`{ url: 'user/:id', routedComponent: UserDetailComponent }`",
-          "`{ routedPath: 'user/:id', component: UserDetailComponent }`",
-          "`{ destination: new UserDetailComponent(), route: 'user/:id' }`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8f612a44a85e580841181724",
-        "question": "Cosa stanno facendo i decoratori HostListener e il decoratore HostBinding in questa direttiva?\n```ts\n@Directive({\n  selector: '[appCallout]',\n})\nexport class CalloutDirective {\n  @HostBinding('style.font-weight') fontWeight = 'normal';\n  @HostListener('mouseenter')\n  onMouseEnter() {\n    this.fontWeight = 'bold';\n  }\n  @HostListener('mouseleave')\n  onMouseLeave() {\n    this.fontWeight = 'normal';\n  }\n}\n```",
-        "answer": "Stanno impostando il campo CalloutDirective.fontWeight in base al fatto che il mouse sia o meno sopra l'elemento DOM. HostListener imposta quindi la propriet\u00e0 CSS font-weight sul valore fontWeight.",
-        "explanation": "[DigitalOcean](https://www.digitalocean.com/community/tutorials/angular-hostbinding-hostlistener)",
-        "hint": null,
-        "correctAnswer": [
-          "Stanno impostando il campo CalloutDirective.fontWeight in base al fatto che il mouse sia o meno sopra l'elemento DOM. HostListener imposta quindi la propriet\u00e0 CSS font-weight sul valore fontWeight."
-        ],
-        "options": [
-          "Stanno impostando il campo CalloutDirective.fontWeight in base al fatto che il mouse sia o meno sopra l'elemento DOM. HostListener imposta quindi la propriet\u00e0 CSS font-weight sul valore fontWeight.",
-          "Stanno istituendo la direttiva per verificare l'elemento DOM su cui si trova. Se sono stati aggiunti binding di evento per l'ingresso e l'uscita del mouse, utilizzer\u00e0 questo codice. Altrimenti non accadr\u00e0 nulla.",
-          "Questo \u00e8 un uso scorretto di HostListener e HostBinding. I decoratori HostListener e HostBinding non fanno nulla sulle direttive; funzionano solo se utilizzati su componenti.",
-          "Se l'elemento DOM su cui \u00e8 posizionata questa direttiva ha la propriet\u00e0 CSS font-weight impostata su di esso, gli eventi mouseenter e mouseleave verranno generati."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "31c24385dd4350d407629694",
-        "question": "Quale sintassi del modello angolare \u00e8 possibile utilizzare in questo campo modulo basato su modello per accedere al valore del campo e verificare la convalida all'interno del markup del modello?\n```html\n<input type=\"text\" ngModel name=\"firstName\" required minlength=\"4\" />\n<span *ngIf=\"\">Invalid field data</span>\n```",
-        "answer": "\u00c8 possibile utilizzare una variabile di riferimento del modello e la funzionalit\u00e0 exportAs della direttiva ngModel.",
-        "explanation": "[Angular.io -Mostra e nascondi errore di convalida ](https://angular.io/guide/forms#show-and-hide-validation-error-messages)\n[Medio](https://medium.com/@agoiabeladeyemi/template-driven-forms-in-angular-4a3a5ad960de)",
-        "hint": null,
-        "correctAnswer": [
-          "\u00c8 possibile utilizzare una variabile di riferimento del modello e la funzionalit\u00e0 exportAs della direttiva ngModel."
-        ],
-        "options": [
-          "\u00c8 possibile utilizzare una variabile di riferimento del modello e la funzionalit\u00e0 exportAs della direttiva ngModel.",
-          "\u00c8 possibile utilizzare la direttiva ngModel in combinazione con il nome del campo di input.",
-          "\u00c8 possibile utilizzare una variabile di riferimento del modello per l'elemento di input HTML e quindi selezionare la propriet\u00e0 valid da tale.",
-          "Non \u00e8 possibile accedere al valore del campo con i moduli basati su modelli. \u00c8 necessario utilizzare moduli reattivi per questo."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6ebb685afd142b84dc04274b",
-        "question": "Qual \u00e8 il tipo di valore che verr\u00e0 archiviato nella variabile di riferimento del modello headerText in questo markup?\n```html\n<h1 #headerText>User List</h1>\n```",
-        "answer": "un Angular ElementRef, un wrapper attorno a un elemento nativo",
-        "explanation": "[Pluralsight - Variabile di riferimento del modello](https://www.pluralsight.com/guides/how-to-use-template-reference-variables-in-angular)",
-        "hint": null,
-        "correctAnswer": [
-          "un Angular ElementRef, un wrapper attorno a un elemento nativo"
-        ],
-        "options": [
-          "un Angular ElementRef, un wrapper attorno a un elemento nativo",
-          "il testo interno del `<h1>` elemento",
-          "una classe di componenti di intestazione",
-          "il tipo di elemento DOM nativo htmlHeadingElement"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7d26a82b77982917b8c8dbfb",
-        "question": "Qual \u00e8 la differenza, se presente, della logica di codice risultante basata su queste due configurazioni del provider?\n```ts\n[{ provide: FormattedLogger, useClass: Logger }][{ provide: FormattedLogger, useExisting: Logger }];\n```",
-        "answer": "La sintassi useClass indica all'iniettore di creare una nuova istanza di Logger e di associarla al token FormattedLogger. La sintassi useExisting si riferisce a un'istanza di oggetto gi\u00e0 esistente dichiarata come Logger.",
-        "explanation": "[Angular.io - Provider di dipendenze](https://angular.io/guide/dependency-injection-providers#defining-providers)\n[TektutorialHub](https://www.tektutorialshub.com/angular/angular-providers/)",
-        "hint": null,
-        "correctAnswer": [
-          "La sintassi useClass indica all'iniettore di creare una nuova istanza di Logger e di associarla al token FormattedLogger. La sintassi useExisting si riferisce a un'istanza di oggetto gi\u00e0 esistente dichiarata come Logger."
-        ],
-        "options": [
-          "Sono gli stessi. Entrambi si tradurranno in una nuova istanza di Logger associata al token FormattedLogger.",
-          "La sintassi useClass indica all'iniettore di creare una nuova istanza di Logger e di associarla al token FormattedLogger. La sintassi useExisting si riferisce a un'istanza di oggetto gi\u00e0 esistente dichiarata come Logger.",
-          "Entrambi si sbagliano. Un tipo forte non pu\u00f2 essere utilizzato per useClass o useExisting.",
-          "Sono gli stessi. Entrambi faranno s\u00ec che il token FormattedLogger sia un alias per l'istanza di Logger."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "29959aaf0f52a5b6ca8064fb",
-        "question": "Qual \u00e8 lo scopo della propriet\u00e0 data (vista nell'esempio seguente) in una configurazione di route?\n```ts\n  {\n      path: 'customers',\n      component: CustomerListComponent,\n      data: { accountSection: true }\n  }\n```",
-        "answer": "un modo per includere dati statici di sola lettura associati alla route che possono essere recuperati da ActivatedRoute",
-        "explanation": "[TektutorialsHub](https://www.tektutorialshub.com/angular/angular-pass-data-to-route/#:~:text=Angular%20allows%20us%20to%20pass,of%20the%20history%20state%20object)\n[StackOverflow](https://stackoverflow.com/a/36835156)",
-        "hint": null,
-        "correctAnswer": [
-          "un modo per includere dati statici di sola lettura associati alla route che possono essere recuperati da ActivatedRoute"
-        ],
-        "options": [
-          "un mapping chiave/valore per l'impostazione di valori @Input sull'istanza del componente instradato",
-          "un modo per includere dati statici di sola lettura associati alla route che possono essere recuperati da ActivatedRoute",
-          "una propriet\u00e0 sulla route che pu\u00f2 essere utilizzata per caricare dati dinamici per la route",
-          "un oggetto che verr\u00e0 iniettato automaticamente nel costruttore del componente instradato."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "82a1eaf906090a6b659a1df0",
-        "question": "Come funziona il built-in `ngIf` direttiva strutturale modificare il DOM renderizzato in base a questa sintassi del modello?\n```ts\n@Component({\n  selector: 'app-product',\n  template: '<div *ngIf=\"product\">{{ product.name }}</div>',\n})\nexport class ProductComponent {\n  @Input() product;\n}\n```",
-        "answer": "Se il campo della classe di prodotto \u00e8 \"truthy\", il DOM renderizzato includer\u00e0 il `<div>` con il valore del `product.name` campo. Se non \u00e8 \"veritiero\", il DOM renderizzato non conterr\u00e0 il `<div>` elemento.",
-        "explanation": "[Riferimento (angular.io)](https://angular.io/api/common/NgIf)",
-        "hint": null,
-        "correctAnswer": [
-          "Se il campo della classe di prodotto \u00e8 \"truthy\", il DOM renderizzato includer\u00e0 il `<div>` con il valore del `product.name` campo. Se non \u00e8 \"veritiero\", il DOM renderizzato non conterr\u00e0 il `<div>` elemento."
-        ],
-        "options": [
-          "Il `<div>` funge da segnaposto. Se il campo della classe di prodotto \u00e8 \"truthy\", l'opzione `<div>` verr\u00e0 sostituito solo dal `product.name` valore; in caso contrario, non verr\u00e0 eseguito il rendering di nulla.",
-          "Il `<div>` verr\u00e0 sempre renderizzato e, se il campo di prodotto \u00e8 \"veritiero\", il `<div>` conterr\u00e0 l'elemento `product.name` valore; In caso contrario, verr\u00e0 eseguito il rendering del comando `<div>` elemento senza valore.",
-          "Produce un errore, dal momento che ngIf non \u00e8 una direttiva strutturale incorporata.",
-          "Se il campo della classe di prodotto \u00e8 \"truthy\", il DOM renderizzato includer\u00e0 il `<div>` con il valore del `product.name` campo. Se non \u00e8 \"veritiero\", il DOM renderizzato non conterr\u00e0 il `<div>` elemento."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f762addecdd1184d510027e2",
-        "question": "Che cosa fa questo codice?\n```ts\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\nplatformBrowserDynamic().bootstrapModule(AppModule);\n```",
-        "answer": "Dichiara un modulo Angular denominato AppModule che contiene un componente bootstrap denominato AppComponent. Quindi registra quel modulo con Angular, in modo che l'app possa avviarsi.",
-        "explanation": "[Angular.io - Il NgModule di base](https://angular.io/guide/ngmodules#the-basic-ngmodule)",
-        "hint": null,
-        "correctAnswer": [
-          "Dichiara un modulo Angular denominato AppModule che contiene un componente bootstrap denominato AppComponent. Quindi registra quel modulo con Angular, in modo che l'app possa avviarsi."
-        ],
-        "options": [
-          "Esegue uno unit test per un NgModule.",
-          "Fornisce un modo per codificare la struttura del documento di un'applicazione Angular. Il @NgModule \u00e8 una forma di commento del codice inline che viene ignorato dal compilatore TypeScript ma viene visualizzato con una formattazione speciale nelle applicazioni dell'editor di codice.",
-          "Dichiara un modulo Angular denominato AppModule e lo rende disponibile per il lazy loading in tutta l'applicazione.",
-          "Dichiara un modulo Angular denominato AppModule che contiene un componente bootstrap denominato AppComponent. Quindi registra quel modulo con Angular, in modo che l'app possa avviarsi."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5dc51daf0211dafe910b4c44",
-        "question": "Quale scelta descrive meglio ci\u00f2 che il _risolvere_ in questa configurazione di route?\n```ts\n{\n   path: ':id',\n   component: UserComponent,\n   resolve: {\n     user: UserResolverService\n   }\n}\n```",
-        "answer": "Prima di caricare il _Componente utente_, il router si iscriver\u00e0 al _Osservabile_ restituito da un _risolvere_ nella finestra di dialogo _Metodo UserResolverService_. Questa tecnica pu\u00f2 essere utilizzata per ottenere dati precaricati per un _rotta_.",
-        "explanation": "[angular.io](https://angular.io/api/router/Resolve)",
-        "hint": null,
-        "correctAnswer": [
-          "Prima di caricare il _Componente utente_, il router si iscriver\u00e0 al _Osservabile_ restituito da un _risolvere_ nella finestra di dialogo _Metodo UserResolverService_. Questa tecnica pu\u00f2 essere utilizzata per ottenere dati precaricati per un _rotta_."
-        ],
-        "options": [
-          "Prima di caricare il _Componente utente_, il router si iscriver\u00e0 al _Osservabile_ restituito da un _risolvere_ nella finestra di dialogo _Metodo UserResolverService_. Questa tecnica pu\u00f2 essere utilizzata per ottenere dati precaricati per un _rotta_.",
-          "Dopo il _rotta_ viene eseguita la risoluzione e il componente viene caricato e sottoposto a rendering, il parametro _Metodo UserResolverService_ avr\u00e0 un metodo denominato _utente_ esecuzione che ripulir\u00e0 tutte le connessioni dati aperte.",
-          "Si \u00e8 verificato un errore. Il nome della propriet\u00e0 corretto \u00e8 _onResolve_.",
-          "Il _Componente utente_ avr\u00e0 un parametro nel suo costruttore per *utente*E la _router_ gestir\u00e0 l'iniezione di un valore per questo da una chiamata a un _utente_ nella finestra di dialogo _Metodo UserResolverService_."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b8f033e51e74695b2eccde92",
-        "question": "Qual \u00e8 lo scopo del decoratore ContentChildren in questa classe di componenti?\n```ts\n@Component({\n . . .\n template: '<ng-content></ng-content\u203a'\n})\nexport class TabsListComponent {\n @ContentChildren(TabComponent) tabs;\n}\n```",
-        "answer": "Fornisce l'accesso dall'interno della classe componente a qualsiasi _TabComponente_ Componenti che sono stati proiettati nel contenuto nella finestra di dialogo <ng-content> per questo componente.",
-        "explanation": "[betterprogramming.pub](https://betterprogramming.pub/understanding-contentchildren-with-an-example-e76ce78968db)",
-        "hint": null,
-        "correctAnswer": [
-          "Fornisce l'accesso dall'interno della classe componente a qualsiasi _TabComponente_ Componenti che sono stati proiettati nel contenuto nella finestra di dialogo <ng-content> per questo componente."
-        ],
-        "options": [
-          "Se presente _TabsComponente_ Gli elementi vengono aggiunti alla finestra di dialogo _TabsListaComponente_ modello, verranno inseriti nel modello <ng-content> in fase di esecuzione.",
-          "Crea _TabComponente_ componenti nella finestra di dialogo _TabsListaComponente_ modello quando un modello _TabsListaComponente_ viene creata un'istanza.",
-          "Fornisce l'accesso dall'interno della classe componente a qualsiasi _TabComponente_ Componenti che sono stati proiettati nel contenuto nella finestra di dialogo <ng-content> per questo componente.",
-          "Limita gli elementi consentiti che possono essere inseriti in un _TabsListaComponente_ per consentire solo _TabComponente_ elementi."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "194be2c1f1d19f3e3156e724",
-        "question": "Affinch\u00e9 Angular possa elaborare i componenti in un'applicazione, dove devono essere registrati i tipi di componenti?",
-        "answer": "in una propriet\u00e0 di metadati del decoratore NgModule denominata _Dichiarazioni_",
-        "explanation": "[angular.io](https://angular.io/guide/ngmodule-api#ngmodule-metadata)",
-        "hint": null,
-        "correctAnswer": [
-          "in una propriet\u00e0 di metadati del decoratore NgModule denominata _Dichiarazioni_"
-        ],
-        "options": [
-          "all'interno di un tag di script nel file index.html",
-          "in un tag di metadati del decoratore NgModule denominato _Componenti_",
-          "Non \u00e8 necessaria alcuna registrazione, \u00e8 sufficiente includere i file dei componenti in una directory dell'app.",
-          "in una propriet\u00e0 di metadati del decoratore NgModule denominata _Dichiarazioni_"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fde71f3e2d6064481192fd6f",
-        "question": "Qual \u00e8 lo scopo del `fixture.detectChanges()` chiamare in questo unit test?\n```ts\nTestBed.configureTestingModule({\n  declarations: [UserCardComponent],\n});\nlet fixture = TestBed.createComponent(UserCardComponent);\nfixture.detectChanges();\nexpect(fixture.nativeElement.querySelector('h1').textContent).toContain(\n  fixture.componentInstance.title,\n);\n```",
-        "answer": "Forza Angular a eseguire il rilevamento delle modifiche, che eseguir\u00e0 il rendering del _UserCardComponent_ prima di poter convalidare il relativo modello.",
-        "explanation": "[angular.io](https://angular.io/api/core/testing/ComponentFixture#detectChanges)",
-        "hint": null,
-        "correctAnswer": [
-          "Forza Angular a eseguire il rilevamento delle modifiche, che eseguir\u00e0 il rendering del _UserCardComponent_ prima di poter convalidare il relativo modello."
-        ],
-        "options": [
-          "Tiene traccia di eventuali modifiche Ul e fallir\u00e0 lo unit test se ne vengono effettuate.",
-          "Viene utilizzato per garantire la stabilit\u00e0 del modello di componente tra pi\u00f9 unit test nell'intero gruppo di test.",
-          "Forza Angular a eseguire il rilevamento delle modifiche, che eseguir\u00e0 il rendering del _UserCardComponent_ prima di poter convalidare il relativo modello.",
-          "Viene utilizzato per registrare gli eventi di rilevamento delle modifiche nella console durante le esecuzioni degli unit test."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ac10d058fbac97d5947bb73d",
-        "question": "Che aspetto avr\u00e0 il segmento url in base alla seguente chiamata al `Router.navigate` quando goToUser viene passato il valore 15?\n```ts\nexport class ToolsComponent {\n  constructor(private router: Router) {}\n  goToUser(id: number) {\n    this.router.navigate(['user', id]);\n  }\n}\n```",
-        "answer": "/utente/15",
-        "explanation": "[angular.io](https://angular.io/api/router/Router#navigate)",
-        "hint": null,
-        "correctAnswer": [
-          "/utente/15"
-        ],
-        "options": [
-          "/utente/15",
-          "/utente?id=15",
-          "/utente:15",
-          "/utente;id=15"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b8a7faab41e06c46f2faab61",
-        "question": "Quando un servizio viene fornito per root e viene anche aggiunto alla configurazione del provider per un modulo lazy-loaded, quale istanza di tale servizio fornisce l'iniettore ai costruttori nel modulo lazy-loaded?",
-        "answer": "Una nuova istanza di tale servizio viene creata quando il modulo \u00e8 pigro caricato.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Una nuova istanza di tale servizio viene creata quando il modulo \u00e8 pigro caricato."
-        ],
-        "options": [
-          "Una nuova istanza di tale servizio viene creata quando il modulo \u00e8 pigro caricato.",
-          "Non \u00e8 consentito fornire un servizio dello stesso tipo a livello di modulo lazy-loaded.",
-          "Se un'istanza del servizio non \u00e8 stata ancora creata a livello radice. ne creer\u00e0 uno l\u00ec e poi lo user\u00e0.",
-          "Una singola istanza di quel servizio viene sempre istanziata alla radice ed \u00e8 l'unica mai utilizzata, anche all'interno di moduli pigri."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ce376334f1b1ec274a5fee2d",
-        "question": "Cosa sta facendo il decoratore HostBinding in questa direttiva?\n```ts\n@Directive({\n  selector: ' [appHighlight] ',\n})\nexport class HighlightDirective {\n  @HostBinding('class.highlighted') highlight = true;\n}\n```",
-        "answer": "Sta aggiungendo la classe CSS denominata evidenziata a qualsiasi elemento DOM che ha la direttiva appHighlight su di esso.",
-        "explanation": "[StackOverflow](https://stackoverflow.com/a/46207423)",
-        "hint": null,
-        "correctAnswer": [
-          "Sta aggiungendo la classe CSS denominata evidenziata a qualsiasi elemento DOM che ha la direttiva appHighlight su di esso."
-        ],
-        "options": [
-          "Sta aggiungendo la classe CSS denominata evidenziata a qualsiasi elemento DOM che ha la direttiva appHighlight su di esso.",
-          "HostBinding non fa nulla sulle direttive, solo sui componenti.",
-          "Sta specificando se l'elemento host ottiene la classe evidenziata aggiunta al suo attributo class, quindi l'evidenziazione del campo della classe di direttiva verr\u00e0 impostata su true; e se non viene aggiunto sull'host verr\u00e0 impostato su false.",
-          "Sta creando uno stile in linea sull'elemento host con una propriet\u00e0 CSS denominata highlight impostata su true."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2a08fe7c3a011e6c2066aca7",
-        "question": "Nei moduli reattivi, quale tipo di classe di modulo Angular viene utilizzato sul DOM nativo <form> elemento per cablarlo?",
-        "answer": "`FormGroup`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`FormGroup`"
-        ],
-        "options": [
-          "`FormArray`",
-          "`FormControl`",
-          "`FormGroup`",
-          "`all of these answers`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "245140c48f8803d04df011a0",
-        "question": "Supponendo che il nome utente FormControl sia stato configurato con un validatore minLength, come \u00e8 possibile impostare una visualizzazione degli errori nel seguente markup dei moduli reattivi per il campo nome utente?\n```html\n<form [formGroup]=\"form\"\u203a\n  <input type=\"text\" formControlName= \"username\"\u203a\n  ...\n</form>\n```",
-        "answer": "&shy;",
-        "explanation": "```ts\n<span *ngIf=\"username.minLength.invalid\"\u203a\nUsername length is not valid\n</span>\n```\n```ts\n<input type=\"text\" formControlName=\"username\" [showMinLength]=\"true\"\u203a\n```\n```ts\n<span *ngIf=\"form.get('username').getError('minLength') as minLengthError\">\nUsername must be at least {{ minLengthError.requiredLength }} characters.\n</span>\n```\n```ts\n<input type=\"text\" formControlName=\"username\" #userName=\"ngModer\">\n<span *ngIf=\"userName.errors.minlength\"\u203a\nUsername must be at least {{ userName.errors.minlength.requiredLength }} characters.\n</span>\n```\n[Codice](https://codecraft.tv/courses/angular/forms/template-driven/)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "71172858713da024b17e830e",
-        "question": "In che modo la modalit\u00e0 di incapsulamento della vista emulata gestisce i CSS per un componente?",
-        "answer": "Crea attributi univoci per gli elementi DOM e definisce gli ambiti dei selettori CSS scritti in tali ID attributo.",
-        "explanation": "[Angular.io](https://angular.io/guide/view-encapsulation#inspecting-generated-css)",
-        "hint": null,
-        "correctAnswer": [
-          "Crea attributi univoci per gli elementi DOM e definisce gli ambiti dei selettori CSS scritti in tali ID attributo."
-        ],
-        "options": [
-          "Rende il CSS esattamente come l'hai scritto senza alcuna modifica.",
-          "Fa uso di markup DOM ombra e CSS.",
-          "Crea attributi univoci per gli elementi DOM e definisce gli ambiti dei selettori CSS scritti in tali ID attributo.",
-          "Esegue il rendering di tutte le regole CSS che scrivi come CSS in linea su tutti gli elementi DOM su cui le usi nel modello."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3497e64c31a86c8fc3dd08e7",
-        "question": "Con la seguente configurazione di TestBed, cosa \u00e8 possibile utilizzare per accedere al DOM renderizzato per UserCardComponent?\n```ts\nTestBed.configureTestingModule({\n  declarations: [UserCardComponent],\n});\nlet fixture = TestBed.createComponent(UserCardComponent);\n```",
-        "answer": "`fixture.nativeElement`",
-        "explanation": "[StackOverflow](https://stackoverflow.com/a/56504773)\n[Angular.io](https://angular.io/guide/testing-components-basics#nativeelement)",
-        "hint": null,
-        "correctAnswer": [
-          "`fixture.nativeElement`"
-        ],
-        "options": [
-          "`fixture.componentTemplate`",
-          "`fixture.getComponentHtml()`",
-          "`fixture.nativeElement`",
-          "`fixture.componentInstance.template `"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d22f3bd7eb7fd039199afae3",
-        "question": "Dati questi due componenti, cosa verr\u00e0 renderizzato al DOM in base all'utilizzo del markup?\n```ts\n@Component({\n selector: 'app-card',\n template: '<h1>Data Card</h1><ng-content></ng-content>'\n})\nexport class CardComponent { }\n@Component({\n selector: 'app-bio',\n template: '<ng-content></ng-content>.\n})\nexport class BioComponent { }\n// markup usage:\n<app-card><app-bio>Been around for four years.</app-bio></app-card>\n```",
-        "answer": "&shy;",
-        "explanation": "```ts\n<app-card>\n<h1>Data Card</hl>\n<app-bio>\nBeen around for four years.\n</app-bio>\n</app-card>\n```\n```ts\n<h1>Data Card</h1>\n<app-bio>\nBeen around for four years.\n</app-bio>\n```\n```ts\n<app-card>\n<h1>Data Card</hl>\n<ng-content></ng-content>\n<app-bio>\nBeen around for four years.\n<ng-content></ng-content>\n</app-bio>\n</app-card>\n```\n```ts\n<app-card>\n<h1>Data Card</hl>\n</app-card>\n```",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7f3a4a9fb8f77abb3c48428d",
-        "question": "Dato il componente app-title-card nel codice seguente, quale DOM eseguir\u00e0 il rendering del componente app-user-card?\n```ts\n@Component({\n   selector: 'app-user-card',\n   template: '<app-title-card></app-title-card><p>Jenny Smith</p>'\n})\n@Component({\n   selector: 'app-title-card',\n   template: '<h1>User Data</hl>'\n})\n// usage of user card component in parent component html\n<app-user-card></app-user-card>\n```",
-        "answer": "&shy;",
-        "explanation": "```ts\n<app-user-card>\n<app-title-card>\n<h1>User Data</h1>\n</app-title-card>\n<p>Jenny Smith</p>\n</app-user-card>\n```\n```ts\n<h1>User Data</h1>\n<p>Jenny Smith<p>\n```\n```ts\n<app-user-card>\n<app-title-card></app-title-card>\n</app-user-card>\n```\n```ts\n<div app-user-card>\n<h1 app-title-card>User Data</h1>\n<p>Jenny Smith</p>\n</div>\n```",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5183ac8381f3bb3d9e03ec20",
-        "question": "Scegli il codice corrispondente per la registrazione del provider personalizzato che il decoratore @Inject () sta cercando:\n```ts\nconstructor(@Inject('Logger') private logger) { }\n```",
-        "answer": "&shy;",
-        "explanation": "```ts\nproviders: [Logger];\n```\n```ts\nproviders: [{ provide: 'Logger', useClass: Logger }];\n```\n```ts\n@Injectable({\nprovidedln: 'root'\n})\n```\n```ts\nproviders: [{ provide: 'Logger' }];\n```\n[StackOverflow](https://stackoverflow.com/a/37315355)\n[TektutorialHub](https://www.tektutorialshub.com/angular/angular-injector-injectable-inject/)\n[Angular.io - Dependency Injection In Azione](https://angular.io/guide/dependency-injection-in-action#supply-a-custom-provider-with-inject)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4597380b599dcb89d4163aa3",
-        "question": "Quale scelta descrive meglio il seguente utilizzo del metodo HttpClient.get nel metodo della classe getsettings?\n```ts\nexport class SettingsService {\n    constructor(private httpClient: HttpClient) { }\n    ...\ngetSettings()\n{\n    return this.httpClient.get<Settings>(this.settingsUrl)\n        .pipe(\n            retry(3)\n        );\n}}\n```",
-        "answer": "Quando viene sottoscritto il risultato del metodo getSettings, verr\u00e0 effettuata la chiamata HTTP GET; se fallisce, verr\u00e0 ritentato fino a tre volte prima che si arrenda e restituisca un errore.",
-        "explanation": "[learnrxjs.io](https://www.learnrxjs.io/learn-rxjs/operators/error_handling/retry)\n[dev.to](https://dev.to/gparlakov/how-does-rxjs-retry-work-412p)",
-        "hint": null,
-        "correctAnswer": [
-          "Quando viene sottoscritto il risultato del metodo getSettings, verr\u00e0 effettuata la chiamata HTTP GET; se fallisce, verr\u00e0 ritentato fino a tre volte prima che si arrenda e restituisca un errore."
-        ],
-        "options": [
-          "Il metodo pipe RxJs \u00e8 un alias per il metodo subscribe, quindi una chiamata a `getSettings` eseguir\u00e0 la query get. L'operatore di ripetizione dei tentativi viene utilizzato per indicare alla chiamata di pipe di riprovare la query get tre volte.",
-          "Produrr\u00e0 un errore in fase di esecuzione perch\u00e9 il metodo pipe non \u00e8 disponibile al di fuori del `Httpclient.get` chiamare.",
-          "Ogni singola chiamata al metodo getSettings comporter\u00e0 che Httpclient effettui tre richieste get totali a settingsUrl, il che non \u00e8 l'ideale perch\u00e9 ci saranno sempre due chiamate extra che non sono necessarie. L'operatore di ripetizione tentativi non deve essere utilizzato in questo modo.",
-          "Quando viene sottoscritto il risultato del metodo getSettings, verr\u00e0 effettuata la chiamata HTTP GET; se fallisce, verr\u00e0 ritentato fino a tre volte prima che si arrenda e restituisca un errore."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2cb50a852e53a66a1a92885c",
-        "question": "Quando un servizio richiede un'installazione per inizializzare lo stato predefinito tramite un metodo, come \u00e8 possibile assicurarsi che tale metodo venga richiamato prima che il servizio venga iniettato ovunque?",
-        "answer": "Utilizzare un provider di fabbrica a livello di AppModule radice che dipende dal servizio per chiamare tale metodo di servizio.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Utilizzare un provider di fabbrica a livello di AppModule radice che dipende dal servizio per chiamare tale metodo di servizio."
-        ],
-        "options": [
-          "Inserire invece la logica di quel metodo di servizio nel costruttore del servizio.",
-          "Utilizzare un provider di fabbrica a livello di AppModule radice che dipende dal servizio per chiamare tale metodo di servizio.",
-          "non \u00e8 possibile farlo all'avvio dell'applicazione; puoi farlo solo a livello di componente.",
-          "Creare un'istanza di un'istanza del servizio a livello globale (ambito finestra) e quindi chiamare tale metodo."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5328e103c058fdfed4995069",
-        "question": "Quale affermazione descrive meglio questo utilizzo del TestBed?\n```ts\nconst spy = jasmine.createSpyObj('DataService', ['getUsersFromApi']);\nTestBed.configureTestingModule({\n  providers: [UserService, { provide: DataService, useValue: spy }],\n});\nconst userService = TestBed.get(UserService);\n```",
-        "answer": "Il TestBed impalca un NgModule con due provider e gestisce qualsiasi iniezione di dipendenza. Se una classe Angular richiede DataService nel relativo costruttore, TestBed inietter\u00e0 spy in tale costruttore.",
-        "explanation": "- `All other tests be ignored, including tests that assert results against one of these providers and a non-defined provider.`\n`Although it will work when multiple providers in this configuration are asserted against in a single test.`",
-        "hint": null,
-        "correctAnswer": [
-          "Il TestBed impalca un NgModule con due provider e gestisce qualsiasi iniezione di dipendenza. Se una classe Angular richiede DataService nel relativo costruttore, TestBed inietter\u00e0 spy in tale costruttore."
-        ],
-        "options": [
-          "Il TestBed \u00e8 richiesto ogni volta che si desidera utilizzare un oggetto spia in uno unit test per un provider Angular.",
-          "Il TestBed viene utilizzato per testare la vista di un componente.",
-          "Il TestBed impalca un NgModule con due provider e gestisce qualsiasi iniezione di dipendenza. Se una classe Angular richiede DataService nel relativo costruttore, TestBed inietter\u00e0 spy in tale costruttore.",
-          "Il TestBed sta configurando il test runner per dirgli di eseguire solo test per i due provider elencati nel suo array di provider."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4d0e746fed0822db31678a09",
-        "question": "Qual \u00e8 la differenza principale tra un componente e una direttiva?",
-        "answer": "Un componente ha un modello e una direttiva no.",
-        "explanation": "[StackOverflow](https://stackoverflow.com/a/34616190)",
-        "hint": null,
-        "correctAnswer": [
-          "Un componente ha un modello e una direttiva no."
-        ],
-        "options": [
-          "Un componente utilizza una propriet\u00e0 di metadati del selettore e una direttiva no.",
-          "Una direttiva pu\u00f2 essere utilizzata per aggiungere eventi personalizzati al DOM e un componente non pu\u00f2.",
-          "Un componente ha un modello e una direttiva no.",
-          "Una direttiva pu\u00f2 essere destinata solo agli elementi DOM nativi."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b3847e065e56d7f8956889af",
-        "question": "Cosa si potrebbe aggiungere a questa classe di direttiva per consentire di impostare la lunghezza del troncato durante l'utilizzo della direttiva nel markup?\n```ts\n  @Directive({\n      selector: '[appTruncate]'\n  })\n  export class TruncateDirective {\n      . . .\n  }\n  // example of desired usage:\n  <p [appTruncate]=\"10\">Some very long text here</p>\n```",
-        "answer": "`@Input() appTruncate: number;`",
-        "explanation": "[Angular.io](https://angular.io/guide/attribute-directives#passing-values-into-an-attribute-directive)\n[StackOverflow](https://stackoverflow.com/a/46303049)",
-        "hint": null,
-        "correctAnswer": [
-          "`@Input() appTruncate: number;`"
-        ],
-        "options": [
-          "`@Input() appTruncate: number;`",
-          "`@Output() appTruncate;`",
-          "`constructor(maxLength: number) { }`",
-          "`Nothing. The directive selector cannot be used to pass in values to the directive.`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "24dc1470f1c1f643c852861b",
-        "question": "Come \u00e8 possibile passare i parametri di query a questo `HttpClient.get` richiesta?\n```ts\nexport class OrderService {\n  constructor(private httpClient: HttpClient) {}\n  getOrdersByYear(year: number): Observable<Order[]> {\n    return this.httpClient.get<Order[]>(this.ordersUrl);\n  }\n}\n```",
-        "answer": "&shy;",
-        "explanation": "```ts\nconst options = { params: new HttpParams().set('year', year) };\nreturn this.httpClient.get<Order[]>(this.ordersUrl, options);\n```\n```ts\ngetOrdersByYear(year: number): Observable<Order[]> {\nreturn this.httpClient.addParam('year', year).get<Order[]>(this.ordersUrl, year);\n}\n```\n[StackOverflow](https://stackoverflow.com/a/34475594)\n[TektutorialHub](https://www.tektutorialshub.com/angular/angular-pass-url-parameters-query-strings/#httpparams)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "`return this.httpClient.get<Order[]>(this.ordersUrl, {'year': year})`",
-          "`return this.httpClient.get<Order[]>(this.ordersUrl, year)`",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9823fee2faabd653d236ad00",
-        "question": "Supponendo il `DataService` \u00e8 stato registrato nei provider per l'applicazione, quale risposta descrive meglio cosa succede in base al costruttore di questo componente?\n```ts\n    @Component({\n        ...\n    })\n    export class OrderHistoryComponent {\n        constructor(private dataService: DataService) {}\n        ...\n    }\n```",
-        "answer": "Quando Angular crea una nuova istanza del `OrderHistoryComponent`, l'iniettore fornir\u00e0 un'istanza di un `DataService` al primo argomento del costruttore del componente. Il costruttore `dataService` verr\u00e0 utilizzato per impostare un campo di istanza privata con lo stesso nome sull'istanza.",
-        "explanation": "[StackOverflow](https://stackoverflow.com/a/49755822)\n[Angular.io - Iniezione di dipendenze](https://angular.io/guide/dependency-injection)",
-        "hint": null,
-        "correctAnswer": [
-          "Quando Angular crea una nuova istanza del `OrderHistoryComponent`, l'iniettore fornir\u00e0 un'istanza di un `DataService` al primo argomento del costruttore del componente. Il costruttore `dataService` verr\u00e0 utilizzato per impostare un campo di istanza privata con lo stesso nome sull'istanza."
-        ],
-        "options": [
-          "Dichiara che il `OrderHistoryComponent` avr\u00e0 la propria versione di un `DataService` e che non dovrebbe mai utilizzare istanze esistenti. Le `DataService` dovrebbe essere istanziato all'interno della classe come campo privato affinch\u00e9 questo codice sia completo e funzionante.",
-          "Quando Angular crea una nuova istanza del `OrderHistoryComponent`, l'iniettore fornir\u00e0 un'istanza di un `DataService` al primo argomento del costruttore del componente. Il costruttore `dataService` verr\u00e0 utilizzato per impostare un campo di istanza privata con lo stesso nome sull'istanza.",
-          "Fornisce un modo per eseguire solo test dei componenti; il costruttore non viene utilizzato nell'esecuzione effettiva dell'applicazione Angular.",
-          "Consente all'elemento personalizzato a cui \u00e8 destinato il componente di avere una propriet\u00e0 personalizzata denominata `dataService` che pu\u00f2 essere utilizzato per associare un `DataService` istanza a."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ea9f4ef6872b779b8ff2fa84",
-        "question": "Completare questo markup utilizzando il comando `ngIf` direttiva per implementare un altro caso che visualizzer\u00e0 il testo \"L'utente non \u00e8 attivo\":\n```ts\n<div *ngIf=\"userIsActive; else inactive\">\n  Currently active!\n</div>\n```",
-        "answer": "&shy;",
-        "explanation": "```ts\n<div #inactive>User is not active.</div>\n```\n```ts\n<div *ngIf=\"inactive\">\nUser is not active.\n</div>\n```\n```ts\n<ng-template #else=\"inactive\">\n<div>User is not active.</div>\n</ng-template>\n```\n```ts\n<ng-template #inactive>\n<div>User is not active.</div>\n</ng-template>\n```\n[Angular.io](https://angular.io/api/common/NgIf)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "868bfd949d492eb4d7918cfa",
-        "question": "Qual \u00e8 la sintassi corretta per una definizione di route per caricare pigramente un modulo di feature?",
-        "answer": "&shy;",
-        "explanation": "```\n{\npath: 'users',\nlazy: './users/users.module#UsersModule'\n}\n```\n```\n{\npath: 'users',\nloadChildren: () => import('./users/users.module').then(m => m.UserModule)\n}\n```\n```\n{\npath: 'users',\nloadChildren: './users/users.module#UsersModule'\n}\n```\n```\n{\npath: 'users',\nmodule: UsersModule\n}\n```\n[Angular.io - Moduli di caricamento pigro](https://angular.io/guide/lazy-loading-ngmodules)",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "15368c2c5421f862acd60b75",
-        "question": "Descrivere come viene impostata e configurata la convalida in questo esempio di moduli reattivi:\n```ts\nexport class UserFormControl implements OnInit {\n    ...\n    ngOnInit() {\n        this.form = this.formBuilder.group({\n            username: this.formBuilder.control('',\n                [Validators.required, Validators.minLength(5), this.unique]),\n        )};\n    }\n    unique(control: FormControl) {\n        return control.value !== 'admin' ? null: {notUnique: true};\n    }\n}\n```",
-        "answer": "Il `FormControl` per `username` si sta configurando con tre validatori: il `required` e `minLength` validatori che provengono da Angular e una funzione di convalida personalizzata denominata `unique` che verifica la presenza del valore non uguale alla stringa `admin`.",
-        "explanation": "[Angular.io - Convalida del modulo](https://angular.io/guide/form-validation)\n[Angular University Blog](https://blog.angular-university.io/angular-custom-validators/)",
-        "hint": null,
-        "correctAnswer": [
-          "Il `FormControl` per `username` si sta configurando con tre validatori: il `required` e `minLength` validatori che provengono da Angular e una funzione di convalida personalizzata denominata `unique` che verifica la presenza del valore non uguale alla stringa `admin`."
-        ],
-        "options": [
-          "Il `FormControl` per `username` viene configurato per escludere tre validatori dai validatori che \u00e8 consentito utilizzare.",
-          "Il `FormControl` per `username` si sta configurando per consentire l'utilizzo di tre possibili validatori: `required, maxLength`e uno personalizzato denominato `unique`. Per abilitarli `validators`, una direttiva di convalida dovrebbe essere inserita nei campi modulo nel markup.",
-          "La convalida non pu\u00f2 essere impostata in questo modo in forme reattive.",
-          "Il `FormControl` per `username` si sta configurando con tre validatori: il `required` e `minLength` validatori che provengono da Angular e una funzione di convalida personalizzata denominata `unique` che verifica la presenza del valore non uguale alla stringa `admin`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ab52ee6db79d346b7c55db9f",
-        "question": "Cosa fa il decoratore iniettabile in questa classe di servizio?\n```ts\n@Injectable({\n    providedIn: 'root'\n)}\nexport class DataService { }\n```",
-        "answer": "Registra un provider per il servizio nell'iniettore dell'applicazione radice, rendendo disponibile una singola istanza di esso in tutta l'applicazione.",
-        "explanation": "[Angular.io](https://angular.io/guide/providers#providing-a-service)",
-        "hint": null,
-        "correctAnswer": [
-          "Registra un provider per il servizio nell'iniettore dell'applicazione radice, rendendo disponibile una singola istanza di esso in tutta l'applicazione."
-        ],
-        "options": [
-          "Registra un provider per il servizio che \u00e8 disponibile solo a livello di modulo root, non per eventuali moduli figlio.",
-          "Registra un provider per il servizio nell'iniettore dell'applicazione radice, rendendo disponibile una singola istanza di esso in tutta l'applicazione.",
-          "Fa in modo che il servizio possa essere iniettato solo nel componente bootstrapped per l'applicazione.",
-          "Imposta una regola di tempo di compilazione che consente di inserire il tipo di servizio solo nella propriet\u00e0 dei metadati dei provider della radice NgModule."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "aa814ac71d38f06bfca5d328",
-        "question": "Descrivi l'utilizzo di questo codice\n```ts\nexport interface AppSettings {\n  title: string;\n  version: number;\n}\nexport const APP_SETTINGS = new InjectionToken<AppSettings>('app.settings');\n```",
-        "answer": "InjectionToken viene utilizzato per creare un token provider per una dipendenza non di classe. Un valore letterale Object pu\u00f2 essere provider come valore per il tipo di provider di dipendenza APP_SETTINGS che pu\u00f2 quindi essere iniettato in componenti, servizi, ecc..",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "InjectionToken viene utilizzato per creare un token provider per una dipendenza non di classe. Un valore letterale Object pu\u00f2 essere provider come valore per il tipo di provider di dipendenza APP_SETTINGS che pu\u00f2 quindi essere iniettato in componenti, servizi, ecc.."
-        ],
-        "options": [
-          "InjectionToken aggiunge un'istanza di AppSettings al provider root tramite la chiamata del costruttore InjectionToken, rendendola automaticamente disponibile a tutti i NgModules, servizi e componenti in tutta l'applicazione Angular senza la necessit\u00e0 di iniettarla da nessuna parte.",
-          "InjectionToken viene utilizzato per creare un token provider per una dipendenza non di classe. Un valore letterale Object pu\u00f2 essere provider come valore per il tipo di provider di dipendenza APP_SETTINGS che pu\u00f2 quindi essere iniettato in componenti, servizi, ecc..",
-          "InjectionToken viene utilizzato per creare un decoratore dinamico per AppSettings che pu\u00f2 essere utilizzato sui parametri del costruttore tramite un decoratore @AppSettings.",
-          "Questo codice presenta un errore poich\u00e9 non \u00e8 possibile utilizzare un'interfaccia TypeScript per il tipo generico su InjectionToken"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "915f7c6bbc5ac555058f706b",
-        "question": "Per l'esempio di moduli basati su modello seguente, quale argomento pu\u00f2 essere passato al metodo di invio nell'evento click per inviare i dati per il modulo?\n```html\n<form #form=\"ngForm\">\n  <input type=\"text\" ngModel=\"firstName\" />\n  <input type=\"text\" ngModel=\"lastName\" />\n  <button (click)=\"submit()\">Save</button>\n</form>\n```",
-        "answer": "submit(form.value)",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "submit(form.value)"
-        ],
-        "options": [
-          "submit(form.value)",
-          "invia($event)",
-          "submit(ngForm.value)",
-          "submit(Nome, cognome)"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a99b2354fa2b58e5c66a6964",
-        "question": "Qual \u00e8 lo scopo della configurazione della propriet\u00e0 prelodingStrategy in questo codice router?\n```ts\nRouterModule.forRoot(\n  ...{\n    preloadingStrategy: PreloadAllModules,\n  },\n);\n```",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [
-          "Abilita la possibilit\u00e0 di contrassegnare i singoli percorsi per il precaricamento.",
-          "Precarica tutte le dipendenze per le route, creando istanze di servizi al primo avvio dell'app",
-          "Assicura che tutti i moduli vengano integrati in un singolo file bundle del modulo app.",
-          "Configura il router per caricare immediatamente tutte le route che hanno una propriet\u00e0 loadChildren (route che vengono in genere caricate quando richiesto)"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "78adca7ca3986ff3d835154e",
-        "question": "Qual \u00e8 un modo alternativo per scrivere questo markup per associare il valore del campo della classe `userName` al `h1` propriet\u00e0 element title?\n```html\n<h1 [title]=\"userName\">Current user is {{ userName }}</h1>\n```",
-        "answer": "title=\"{{ userName }}\"",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "title=\"{{ userName }}\""
-        ],
-        "options": [
-          "title=\"userName\"",
-          "title=\"{{ userName }}\"",
-          "title=\"{{ 'userName' }}\"",
-          "L'unico modo per farlo \u00e8 usare le parentesi quadre."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "175b05f8701a621519582b7c",
-        "question": "Cos'\u00e8 il `async` pipe facendo in questo esempio?\n```ts\n@Component({\n  selector: 'app-users',\n  template: '<div *ngFor=\"let user of users | async\">{{ user.name }}</div>',\n})\nexport class UsersComponent implements OnInit {\n  users;\n  constructor(private httpClient: HttpClient) {}\n  ngOnInit(): void {\n    this.users = this.httpClient.get<{ name: string }>('users');\n  }\n}\n```",
-        "answer": "Si sta abbonando all'osservabile restituito dal `HttpClient.get` e il wrapping del valore restituito in modo che possa essere ripetuto nella finestra di dialogo `ngFor`.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Si sta abbonando all'osservabile restituito dal `HttpClient.get` e il wrapping del valore restituito in modo che possa essere ripetuto nella finestra di dialogo `ngFor`."
-        ],
-        "options": [
-          "Non sta facendo nulla, poich\u00e9 la pipe asincrona non pu\u00f2 essere utilizzata in un `ngFor` affermazione.",
-          "Sta configurando il `ngFor` per supportare pi\u00f9 elenchi di utenti contemporaneamente.",
-          "Si sta abbonando all'osservabile restituito dal `HttpClient.get` e il wrapping del valore restituito in modo che possa essere ripetuto nella finestra di dialogo `ngFor`.",
-          "Consente a tutti gli utenti di partecipare al `users` da eseguire il rendering contemporaneamente al DOM."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bb08bcb2d098f25aefc50e30",
-        "question": "Come utilizzeresti questa direttiva nel markup in base al suo valore di selezione\n```ts\n@Directive({\n\tselector: '[appTruncate]'\n})\nexport class TruncateDirective{\n\t. . .\n}\n```",
-        "answer": "`html <p appTruncate>Some long text</p> `",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`html <p appTruncate>Some long text</p> `"
-        ],
-        "options": [
-          "`html <p data-directive=\"appTruncate\">Some long text </p> `",
-          "`html <p appTruncate>Some long text</p> `",
-          "`html <p app-truncate>Some long text</p> `",
-          "`html <app-truncate>Some long text</app-truncate> `"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "67d7f7ab001d8ddd039898a9",
-        "question": "Quale hook del ciclo di vita pu\u00f2 essere utilizzato su un componente per monitorare tutte le modifiche ai valori @Input su quel componente?",
-        "answer": "ngOnChanges",
-        "explanation": "[Come rilevare quando un valore @Input() cambia in Angular?](https://stackoverflow.com/a/44686085/1573267)",
-        "hint": null,
-        "correctAnswer": [
-          "ngOnChanges"
-        ],
-        "options": [
-          "ngOnInit",
-          "ngChanges",
-          "ngAfterInputChange",
-          "ngOnChanges"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f2659657940509103b492f79",
-        "question": "Quale sarebbe un esempio di utilizzo della sintassi del modello di questa pipe personalizzata?\n```ts\n@Pipe({ name: 'truncate' })\nexport class TruncatePipe implements PipeTransform {\n\ttransform(value: string, maxLength: number, showEllipsis: boolean){\n\t\tconst newValue = maxLength ? value.substr(0, maxLength): value;\n\t\treturn showEllipsis ? '${newValue}...` : newValue;\n\t}\n}\n```",
-        "answer": "{( 'del testo lungo' | troncare:10 })",
-        "explanation": "\\[ricontrolla le risposte]",
-        "hint": null,
-        "correctAnswer": [
-          "{( 'del testo lungo' | troncare:10 })"
-        ],
-        "options": [
-          "{( 'del testo lungo' | troncare:10 })",
-          "{( 'some long text' | truncate:10:true })",
-          "{( 'un po' di testo lungo' | troncare })",
-          "tutte queste risposte"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7b04ed3b0912b00bb691989b",
-        "question": "Quale comando Angular CLI verr\u00e0 eseguito per generare un oggetto UsersComponent e aggiungerlo a SharedModule (nel file shared.module.ts nell'applicazione)?",
-        "answer": null,
-        "explanation": "\\[ricontrolla le risposte]",
-        "hint": null,
-        "correctAnswer": [],
-        "options": [
-          "ng genera componente --newModule=shared",
-          "ng genera utenti componenti --module=shared",
-          "ng genera utenti componenti --shared",
-          "ng genera componente --add=shared"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "83435f4a75002afbdf557b21",
-        "question": "Come \u00e8 possibile riscrivere questo markup in modo che il contenitore div non sia necessario nel rendering DOM finale\n```ts\n<div *ngIf=\"location\">\n\t<h1>{{ location.name }}</h1>\n\t<p>{{ location.description }}</p>\n</div>\n```",
-        "answer": "&shy;",
-        "explanation": "```ts\n<div *ngIf=\"location\">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n{{ endNgIf }}\n```\n```ts\n<ng-template *ngIf=\"location\">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n</ng-template>\n```\n```ts\n<div *ngIf=\"location\" [display]=\" ' hidden' \">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n</div>\n```\n```ts\n<ng-container *ngIf=\"location\">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n</ng-container>\n```\n\\[ricontrolla le risposte]",
-        "hint": null,
-        "correctAnswer": [
-          "&shy;"
-        ],
-        "options": [
-          "&shy;",
-          "&shy;",
-          "&shy;",
-          "&shy;"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "caaee0cef540b6d9048bc2ff",
-        "question": "Descrivi l'utilizzo di questo codice:\n```ts\nexport interface AppSettings {\n  title: string;\n  version: number;\n}\n```",
-        "answer": null,
-        "explanation": "\\[ricontrolla le risposte]",
-        "hint": null,
-        "correctAnswer": [],
-        "options": [
-          "Questo codice \u00e8 un errore poich\u00e9 non \u00e8 possibile utilizzare un'interfaccia TypeScript per il tipo generico su InjectionToken.",
-          "InjectionToken viene utilizzato per creare un token provider per una dipendenza non di classe. Un oggetto lieteral pu\u00f2 essere fornito come valore per il tipo di provider di dipendenza APP_SETTINGS che pu\u00f2 quindi essere iniettato in componenti, servizi e cos\u00ec via.",
-          "InjectionToken aggiunge un'istanza di AppSettings al provider roote tramite la chiamata del costruttore InjectionToken, rendendola automaticamente disponibile a tutti i NgModules, servizi e componenti attraverso l'applicazione Angular senza la necessit\u00e0 di iniettarla da nessuna parte.",
-          "InjectionToken viene utilizzato per creare un decoratore dinamico per AppSettings che pu\u00f2 essere utilizzato sui parametri del costruttore tramite un decoratore @AppSettings."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "22fa734cf3cf8d4aab1994ee",
-        "question": "Quali utilit\u00e0 Angular, se presenti, sono necessarie per eseguire lo unit test di un servizio senza dipendenze del costruttore?",
-        "answer": "La classe TestBed \u00e8 necessaria per creare un'istanza del servizio.",
-        "explanation": "[Unit test angolari](https://angular.io/guide/testing-services) - ricontrollare le risposte",
-        "hint": null,
-        "correctAnswer": [
-          "La classe TestBed \u00e8 necessaria per creare un'istanza del servizio."
-        ],
-        "options": [
-          "\u00c8 necessario il metodo helper By.css()",
-          "Per eseguire il servizio per lo unit test \u00e8 necessario uno staffaggio di testo.",
-          "Nessuno. \u00c8 possibile creare un'istanza di un servizio e testare l'unit\u00e0 da solo.",
-          "La classe TestBed \u00e8 necessaria per creare un'istanza del servizio."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "95bccbca328fdb369c8f0e72",
-        "question": "Qual \u00e8 la differenza tra canActivate e le protezioni del percorso CanLoad?",
-        "answer": "CanLoad viene usato all'avvio dell'app per consentire o negare l'aggiunta di route alla tabella di route. CanActivate viene utilizzato per gestire l'accesso ai percorsi nel momento in cui vengono richiesti.",
-        "explanation": "[CanActivate vs Canload](https://stackoverflow.com/questions/42026045/difference-between-angulars-canload-and-canactivate#:~:text=canActivate%20is%20used%20to%20prevent,not%20authorized%20to%20do%20so.) CanActivate impedisce l'accesso sui percorsi, CanLoad impedisce il caricamento lento.",
-        "hint": null,
-        "correctAnswer": [
-          "CanLoad viene usato all'avvio dell'app per consentire o negare l'aggiunta di route alla tabella di route. CanActivate viene utilizzato per gestire l'accesso ai percorsi nel momento in cui vengono richiesti."
-        ],
-        "options": [
-          "CanActivate viene utilizzato per controllare l'accesso. CanLoad viene utilizzato per precaricare i dati per il percorso.",
-          "CanLoad viene usato all'avvio dell'app per consentire o negare l'aggiunta di route alla tabella di route. CanActivate viene utilizzato per gestire l'accesso ai percorsi nel momento in cui vengono richiesti.",
-          "CanActivate e CanLoad fanno esattamente la stessa cosa.",
-          "CanLoad impedisce la consegna e il caricamento di un intero NgModule. CanActivate interrompe il routing a un componente in tale NgModule, ma tale modulo \u00e8 ancora caricato."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7e8545d8d7637dddee704235",
-        "question": "A cosa serve la propriet\u00e0 outlet in questo oggetto definizione router?\n```ts\n{\n\tpath: 'document',\n\tcomponent: DocumentComponent,\n\toutlet: 'document-box'\n}\n```",
-        "answer": "Eravamo soliti prendere di mira un <router-outlet> con l'attributo name che corrisponde al valore stringa come percorso per il documentComponent di cui eseguire il rendering quando viene instradato.",
-        "explanation": "[Uscita angolare](https://angular.io/api/router/RouterOutlet) - ricontrolla la risposta",
-        "hint": null,
-        "correctAnswer": [
-          "Eravamo soliti prendere di mira un <router-outlet> con l'attributo name che corrisponde al valore stringa come percorso per il documentComponent di cui eseguire il rendering quando viene instradato."
-        ],
-        "options": [
-          "individuer\u00e0 tutte le istanze di <document-box> nel DOM e inserire un elemento DocumentComponent al loro interno durante la navigazione del percorso.",
-          "Dichiara che il DocumentComponent pu\u00f2 essere utilizzato come figlio per un <<document-box> oltre ad essere instradato a.",
-          "Eravamo soliti prendere di mira un <router-outlet> con l'attributo name che corrisponde al valore stringa come percorso per il documentComponent di cui eseguire il rendering quando viene instradato.",
-          "\u00c8 una fonte di energia per il router. (sicuramente non la risposta :P)"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
+    "slug": "angolare",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
+      {
+        "id": "7ed903210a4426bca0ab5de3",
+        "language": "it",
+        "title": "Angolare",
+        "description": "Seeded from angular/angular-quiz-it.md",
+        "questions": [
+          {
+            "id": "d87083a6f5f19ee50136f9ab",
+            "question": "Qual \u00e8 lo scopo del decoratore ViewChild in questa classe di componenti?\n```ts\n@Component({\n    ...\n    template: '<p #bio></p>'\n})\nexport class UserDetailsComponent {\n    @ViewChild('bio') bio;\n}\n```",
+            "answer": "Fornisce l'accesso dall'interno della classe componente all'oggetto ElementRef per il `<p>` con la variabile di riferimento del modello bio nella visualizzazione del modello del componente.",
+            "explanation": "[DigitalOcean - viewchild-access-component](https://www.digitalocean.com/community/tutorials/angular-viewchild-access-component)",
+            "hint": null,
+            "correctAnswer": [
+              "Fornisce l'accesso dall'interno della classe componente all'oggetto ElementRef per il `<p>` con la variabile di riferimento del modello bio nella visualizzazione del modello del componente."
+            ],
+            "options": [
+              "Fornisce l'accesso dall'interno della classe componente all'oggetto ElementRef per il `<p>` con la variabile di riferimento del modello bio nella visualizzazione del modello del componente.",
+              "Indica che il `<p>` di cui viene eseguito il rendering come figlio della visualizzazione padre che utilizza questo componente.",
+              "Rende il `<p>` nel modello supporta la proiezione del contenuto.",
+              "Rende il `<p>` visibile nel rendering finale. Se il #bio \u00e8 stato utilizzato nel modello e il @ViewChild non \u00e8 stato utilizzato nella classe, Angular nasconder\u00e0 automaticamente il valore `<p>` che ha #bio su di esso."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "ca6721d0dfd99c4abf650521",
+            "question": "Quale metodo viene utilizzato per collegare un FormControl a un elemento di input DOM nativo in moduli reattivi?",
+            "answer": "Utilizzare la direttiva formControlName e impostare il valore uguale al nome della stringa assegnato a FormControl.",
+            "explanation": "[Angular.io - Gruppi di moduli reattivi](https://angular.io/guide/reactive-forms#creating-nested-form-groups)",
+            "hint": null,
+            "correctAnswer": [
+              "Utilizzare la direttiva formControlName e impostare il valore uguale al nome della stringa assegnato a FormControl."
+            ],
+            "options": [
+              "Aggiungere il nome della stringa assegnato a FormControl a un attributo denominato controlli nella finestra di dialogo <form> per indicare quali campi deve includere.",
+              "Utilizzare la sintassi di associazione tra parentesi quadre attorno all'attributo value sull'elemento DOM e impostarlo uguale a un'istanza di FormControl.",
+              "Utilizzare la direttiva formControlName e impostare il valore uguale al nome della stringa assegnato a FormControl.",
+              "Utilizzare il nome della stringa assegnato a FormControl come valore per l'attributo id dell'elemento DOM."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "3999047c53b1ab01b16f9cfc",
+            "question": "Qual \u00e8 la differenza tra il `paramMap` E la `queryParamMap` sul `ActivatedRoute` classe?",
+            "answer": "Entrambi sono Osservabili contenenti valori della stringa URL della route richiesta. ParamMap contiene i valori dei parametri presenti nel percorso URL e queryParamMap contiene i parametri di query URL.",
+            "explanation": "[StackOverflow](https://stackoverflow.com/a/49617621)",
+            "hint": null,
+            "correctAnswer": [
+              "Entrambi sono Osservabili contenenti valori della stringa URL della route richiesta. ParamMap contiene i valori dei parametri presenti nel percorso URL e queryParamMap contiene i parametri di query URL."
+            ],
+            "options": [
+              "ParamMap \u00e8 un oggetto letterale dei parametri nel percorso URL di una route. QueryParamMap \u00e8 un Observable di quegli stessi parametri.",
+              "ParamMap \u00e8 un Oggetto osservabile che contiene i valori dei parametri che fanno parte del percorso URL di una route. QueryParamMap \u00e8 un metodo che accetta una matrice di chiavi e viene utilizzato per trovare parametri specifici in paramMap.",
+              "paramMap \u00e8 il nome legacy di Angular 3. Il nuovo nome \u00e8 queryParamMap.",
+              "Entrambi sono Osservabili contenenti valori della stringa URL della route richiesta. ParamMap contiene i valori dei parametri presenti nel percorso URL e queryParamMap contiene i parametri di query URL."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "02816a7a54e16ddb9100d9f0",
+            "question": "In base al seguente utilizzo della pipe asincrona e supponendo che il campo della classe users sia un Observable, quante sottoscrizioni agli utenti Observable vengono effettuate?\n```html\n<h2>Names</h2>\n<div *ngFor=\"let user of users | async\">{{ user.name }}</div>\n<h2>Ages</h2>\n<div *ngFor=\"let user of users | async\">{{ user.age }}</div>\n<h2>Genders</h2>\n<div *ngFor=\"let user of users | async\">{{ user.gender }}</div>\n```",
+            "answer": "Tre. Ce n'\u00e8 uno per ogni pipe asincrona.",
+            "explanation": "[UltimateCourses](https://ultimatecourses.com/blog/angular-ngfor-async-pipe)",
+            "hint": null,
+            "correctAnswer": [
+              "Tre. Ce n'\u00e8 uno per ogni pipe asincrona."
+            ],
+            "options": [
+              "Nessuno. La pipe asincrona non viene sottoscritta automaticamente.",
+              "Nessuno. La sintassi del modello non \u00e8 corretta.",
+              "Tre. Ce n'\u00e8 uno per ogni pipe asincrona.",
+              "Uno. La pipe asincrona memorizza internamente observables per tipo."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "3c52d73b75ecfcc387ea15f0",
+            "question": "Come \u00e8 possibile utilizzare HttpClient per inviare una richiesta POST a un endpoint da una funzione addOrder in questo OrderService?\n```ts\nexport class OrderService {\n  constructor(private httpClient: HttpClient) {}\n  addOrder(order: Order) {\n    // Missing line\n  }\n}\n```",
+            "answer": "this.httpClient.post<Order>(this.orderUrl, order).subscribe();",
+            "explanation": "[Angular.io - Invio di dati al server](https://angular.io/guide/http#sending-data-to-a-server)",
+            "hint": null,
+            "correctAnswer": [
+              "this.httpClient.post<Order>(this.orderUrl, order).subscribe();"
+            ],
+            "options": [
+              "this.httpClient.url(this.orderUrl).post(order);",
+              "this.httpClient.send(this.orderUrl, order);",
+              "this.httpClient.post<Order>(this.orderUrl, ordine);",
+              "this.httpClient.post<Order>(this.orderUrl, order).subscribe();"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "8127031a8386eba387e44066",
+            "question": "A cosa serve il metodo RouterModule.forRoot?",
+            "answer": "Registrazione delle definizioni di route a livello di applicazione radice.",
+            "explanation": "[O ' REILLY](https://www.oreilly.com/library/view/switching-to-angular/9781788620703/c9e90774-0e10-410b-bd20-d3e9e0b8d117.xhtml)",
+            "hint": null,
+            "correctAnswer": [
+              "Registrazione delle definizioni di route a livello di applicazione radice."
+            ],
+            "options": [
+              "Registrazione di tutti i provider che si intende utilizzare nei componenti instradati.",
+              "Registrazione delle definizioni di route a livello di applicazione radice.",
+              "Indicando che Angular dovrebbe fare il tifo per i tuoi percorsi per avere successo.",
+              "Dichiarando che si intende utilizzare il routing solo a livello di radice."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "093a087acb815ad2b7528761",
+            "question": "Su quali elementi DOM corrisponder\u00e0 questo selettore di metadati dei componenti?\n```ts\n@Component({\n    selector: 'app-user-card',\n    . . .\n})\n```",
+            "answer": "Tutte le istanze di `<app-user-card></app-user-card>`.",
+            "explanation": "[Angular.io - Metadati dei componenti](https://angular.io/guide/architecture-components#component-metadata)",
+            "hint": null,
+            "correctAnswer": [
+              "Tutte le istanze di `<app-user-card></app-user-card>`."
+            ],
+            "options": [
+              "Qualsiasi elemento con l'attributo app-user-card, ad esempio `<div app-user-card></div>`.",
+              "La prima istanza di `<app-user-card></app-user-card>`.",
+              "Tutte le istanze di `<app-user-card></app-user-card>`.",
+              "Tutte le istanze di `<user-card></user-card>`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "ab68b77675b6c33359c224a0",
+            "question": "Qual \u00e8 la sintassi del modello corretta per l'utilizzo della direttiva strutturale ngFor incorporata per eseguire il rendering di un elenco di productNames?",
+            "answer": "&shy;",
+            "explanation": "```ts\n<ul>\n<li [ngFor]=\"let productName of productNames\">{{ productName }}</li>\n</ul>\n```\n```ts\n<ul>\n<li ngFor=\"let productName of productNames\">{{ productName }}</li>\n</ul>\n```\n```ts\n<ul>\n<li *ngFor=\"let productName of productNames\">{{ productName }}</li>\n</ul>\n```\n```ts\n<ul>\n<? for productName in productNames { ?>\n<li>{{ productName }}</li>\n<? } ?>\n</ul>\n```\n[Angular.io - Direttive strutturali](https://angular.io/guide/built-in-directives#listing-items-with-ngfor)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "81c19f1e7c09f0182fea455c",
+            "question": "Quali sono le propriet\u00e0 dei metadati del decoratore a due componenti utilizzate per impostare gli stili CSS per un componente?",
+            "answer": "stili e styleUrls.",
+            "explanation": "[Angular.io - Stili dei componenti](https://angular.io/guide/component-styles)",
+            "hint": null,
+            "correctAnswer": [
+              "stili e styleUrls."
+            ],
+            "options": [
+              "viewEncapsulation e viewEncapsulationFiles.",
+              "Ce n'\u00e8 solo uno ed \u00e8 la propriet\u00e0 denominata css.",
+              "css e cssUrl.",
+              "stili e styleUrls."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "8bbef16883982b20a444a868",
+            "question": "Con la classe di componenti seguente, quale sintassi del modello verr\u00e0 utilizzata nel modello per visualizzare il valore del campo della classe title?\n```ts\n@Component({\n  selector: 'app-title-card',\n  template: '',\n})\nclass TitleCardComponent {\n  title = 'User Data';\n}\n```",
+            "answer": "`{{ title }}`",
+            "explanation": "[Angular.io - Interpolazione di stringhe o Interpolazione di testo](https://angular.io/guide/interpolation)",
+            "hint": null,
+            "correctAnswer": [
+              "`{{ title }}`"
+            ],
+            "options": [
+              "`{{ 'title' }}`",
+              "`{{ title }}`",
+              "`[title]`",
+              "Un campo di classe non pu\u00f2 essere visualizzato in un modello tramite la sintassi del modello."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "7c7f77059e86012da5ae018c",
+            "question": "Qual \u00e8 lo scopo del metodo valueChanges in un oggetto FormControl?",
+            "answer": "\u00c8 un osservabile che emette ogni volta che il valore del controllo cambia, in modo da poter reagire a nuovi valori e prendere decisioni logiche in quel momento.",
+            "explanation": "[Angular.io - Visualizzazione di un valore di controllo from](https://angular.io/guide/reactive-forms#displaying-a-form-control-value)",
+            "hint": null,
+            "correctAnswer": [
+              "\u00c8 un osservabile che emette ogni volta che il valore del controllo cambia, in modo da poter reagire a nuovi valori e prendere decisioni logiche in quel momento."
+            ],
+            "options": [
+              "Viene utilizzato per configurare i valori consentiti per il controllo.",
+              "Viene utilizzato per modificare il valore di un controllo in un nuovo valore. Si chiamerebbe tale metodo e si passerebbe il nuovo valore per il campo modulo. Supporta anche il passaggio di una matrice di valori che possono essere impostati nel tempo.",
+              "Restituisce un valore booleano in base a se il valore del controllo \u00e8 diverso dal valore con cui \u00e8 stato inizializzato.",
+              "\u00c8 un osservabile che emette ogni volta che il valore del controllo cambia, in modo da poter reagire a nuovi valori e prendere decisioni logiche in quel momento."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "1a29a55d8796f266a0f2e3cc",
+            "question": "Quale direttiva viene utilizzata per collegare un `<a>` tag al routing?",
+            "answer": "routerLink",
+            "explanation": "[Angular.io - RouterLink](https://angular.io/api/router/RouterLink#description)",
+            "hint": null,
+            "correctAnswer": [
+              "routerLink"
+            ],
+            "options": [
+              "routeTo",
+              "routerLink",
+              "routePath",
+              "appLink"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "0e7fbdc8ae68b0f85d26baeb",
+            "question": "A cosa serve il decoratore Output in questa classe di componenti?\n```ts\n@Component({\n    selector: 'app-shopping-cart',\n    . . .\n})\nexport class ShoppingCartComponent {\n    @Output() itemTotalChanged = new EventEmitter();\n}\n```",
+            "answer": "Fornisce un modo per associare gli eventi al `itemTotalChanged` campo di classe, in questo modo: `<app-shopping-cart (itemTotalChanged)=\"logNewTotal($event)\"></app-shopping-cart>`.",
+            "explanation": "[Angular.io - Invio di dati al componente padre](https://angular.io/guide/inputs-outputs#sending-data-to-a-parent-component)",
+            "hint": null,
+            "correctAnswer": [
+              "Fornisce un modo per associare gli eventi al `itemTotalChanged` campo di classe, in questo modo: `<app-shopping-cart (itemTotalChanged)=\"logNewTotal($event)\"></app-shopping-cart>`."
+            ],
+            "options": [
+              "Rende il `itemTotalChanged` campo di classe pubblico.",
+              "Fornisce un modo per associare i valori al `itemTotalChanged` campo di classe, in questo modo: `<app-shopping-cart [itemTotalChanged]=\"newTotal\"></app-shopping-cart>`.",
+              "Fornisce un modo per associare gli eventi al `itemTotalChanged` campo di classe, in questo modo: `<app-shopping-cart (itemTotalChanged)=\"logNewTotal($event)\"></app-shopping-cart>`.",
+              "\u00c8 semplicemente un modo per mettere un commento davanti a un campo di classe per la documentazione."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "700cf3963970e2b10597ace8",
+            "question": "Qual \u00e8 la differenza tra questi due esempi di markup per la gestione condizionale della visualizzazione?\n```html\n<div *ngIf=\"isVisible\">Active</div>\n<div [hidden]=\"!isVisible\">Active</div>\n```",
+            "answer": "Il `ngIf` non esegue il rendering del div nel DOM se l'espressione \u00e8 false. Le `hidden` l'utilizzo della propriet\u00e0 nasconde il contenuto div nel riquadro di visualizzazione del browser, ma il div \u00e8 ancora nel DOM.",
+            "explanation": "[StackOverflow](https://stackoverflow.com/a/39778145)",
+            "hint": null,
+            "correctAnswer": [
+              "Il `ngIf` non esegue il rendering del div nel DOM se l'espressione \u00e8 false. Le `hidden` l'utilizzo della propriet\u00e0 nasconde il contenuto div nel riquadro di visualizzazione del browser, ma il div \u00e8 ancora nel DOM."
+            ],
+            "options": [
+              "Il `ngIf` \u00e8 una scorciatoia per l'altro esempio. Quando Angular elabora tale direttiva, scrive un elemento div nel DOM con la propriet\u00e0 nascosta.",
+              "Sono fondamentalmente gli stessi.",
+              "Il `ngIf` non esegue il rendering del div nel DOM se l'espressione \u00e8 false. Le `hidden` l'utilizzo della propriet\u00e0 nasconde il contenuto div nel riquadro di visualizzazione del browser, ma il div \u00e8 ancora nel DOM.",
+              "Il `ngIf` \u00e8 valido, ma l'uso del `hidden` \u00e8 errata e generer\u00e0 un errore."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "32b529fa760755ba473879fb",
+            "question": "Come \u00e8 possibile disabilitare il pulsante di invio quando il modulo presenta errori in questo esempio di moduli basati su modelli?\n```html\n<form #userForm=\"ngForm\">\n  <input type=\"text\" ngModel name=\"firstName\" required />\n  <input type=\"text\" ngModel name=\"lastName\" required />\n  <button (click)=\"submit(userForm.value)\">Save</button>\n</form>\n```",
+            "answer": "&shy;",
+            "explanation": "```html\n<button (click)=\"submit(userForm.value)\" disable=\"userForm.invalid\">Save</button>\n```\n```html\n<button (click)=\"submit(userForm.value)\" [disabled]=\"userForm.invalid\">Save</button>\n```\n```html\n<button (click)=\"submit(userForm.value)\" [ngForm.disabled]=\"userForm.valid\">Save</button>\n```\n```html\n<button (click)=\"submit(userForm.value)\" *ngIf=\"userForm.valid\">Save</button>\n```\n[Angular.io - Invia il modulo con ngSubmit](https://angular.io/guide/forms#submit-the-form-with-ngsubmit)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "07153a83cb907ddb7625be9f",
+            "question": "Si desidera vedere quali file verrebbero generati creando un nuovo componente della scheda contatto. Quale comando useresti?",
+            "answer": "ng generare la scheda contatto del componente --dry-run",
+            "explanation": "[Angular.io - ng genera opzioni](https://angular.io/cli/generate#options)",
+            "hint": null,
+            "correctAnswer": [
+              "ng generare la scheda contatto del componente --dry-run"
+            ],
+            "options": [
+              "ng generare la scheda contatto del componente --dry-run",
+              "ng generare la scheda contatto del componente --no-files",
+              "ng genera componente componente --dry",
+              "ng genera componente --exclude"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "831bc324466644cfb9110721",
+            "question": "In base al componente seguente, quale sintassi del modello verr\u00e0 utilizzata per associare il campo titleText di TitleCardComponent alla propriet\u00e0 title dell'elemento h1?\n```ts\n@Component({\n  selector: 'app-title-card',\n  template: '<h1 title=\"User Data\"> {{titleText}}</h1>',\n})\nexport class TitleCardComponent {\n  titleText = 'User Data';\n}\n```",
+            "answer": "`<h1 [title]=\"titleText\">{{ titleText }}</h1>`",
+            "explanation": "[Angular.io - Interpolazione delle stringhe](https://angular.io/guide/interpolation)",
+            "hint": null,
+            "correctAnswer": [
+              "`<h1 [title]=\"titleText\">{{ titleText }}</h1>`"
+            ],
+            "options": [
+              "`<h1 data-title=\"titleText\">{{ titleText }}</h1>`",
+              "`<h1 title=\"titleText\">{{ titleText }}</h1>`",
+              "`<h1 [title]=\"titleText\">{{ titleText }}</h1>`",
+              "`<h1 titleText>{{ titleText }}</h1>`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "f09ff92810a607de32955474",
+            "question": "Cosa sono gli hook angolari per il ciclo di vita?",
+            "answer": "metodi denominati riservati per componenti e direttive che Angular chiamer\u00e0 durante i tempi impostati nella sua esecuzione e possono essere utilizzati per attingere a quei momenti del ciclo di vita",
+            "explanation": "[Angular.io - Ganci per il ciclo di vita](https://angular.io/guide/lifecycle-hooks)",
+            "hint": null,
+            "correctAnswer": [
+              "metodi denominati riservati per componenti e direttive che Angular chiamer\u00e0 durante i tempi impostati nella sua esecuzione e possono essere utilizzati per attingere a quei momenti del ciclo di vita"
+            ],
+            "options": [
+              "logger per monitorare lo stato di salute di un'app Angular",
+              "provider che possono essere utilizzati per tenere traccia delle istanze dei componenti",
+              "pipe incorporate che possono essere utilizzate nei modelli per eventi DOM",
+              "metodi denominati riservati per componenti e direttive che Angular chiamer\u00e0 durante i tempi impostati nella sua esecuzione e possono essere utilizzati per attingere a quei momenti del ciclo di vita"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "4913efb68d87c68fa9d2bc0a",
+            "question": "Scegli la descrizione migliore per questo codice di sintassi del modello:\n```html\n<span>Boss: {{job?.bossName}} </span>\n```",
+            "answer": "Sta usando l'operatore di navigazione sicura (?) sul campo di lavoro. Se il campo job non \u00e8 definito, l'accesso a bossName verr\u00e0 ignorato e non si verificher\u00e0 alcun errore.",
+            "explanation": "[StackOverflow](https://stackoverflow.com/a/60182134)",
+            "hint": null,
+            "correctAnswer": [
+              "Sta usando l'operatore di navigazione sicura (?) sul campo di lavoro. Se il campo job non \u00e8 definito, l'accesso a bossName verr\u00e0 ignorato e non si verificher\u00e0 alcun errore."
+            ],
+            "options": [
+              "Il ? \u00e8 l'abbreviazione per la pipe asincrona. Il valore del lavoro deve essere un Osservabile.",
+              "Sta usando l'operatore di navigazione sicura (?) sul campo di lavoro. Se il campo job non \u00e8 definito, l'accesso a bossName verr\u00e0 ignorato e non si verificher\u00e0 alcun errore.",
+              "Si \u00e8 verificato un errore nella sintassi del modello. Le? non \u00e8 valido qui.",
+              "Sta giocando il valore del lavoro se ne ha uno; in caso contrario, viene visualizzato il bossName."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "d527e792b37f5626053949d4",
+            "question": "Come si configura una definizione di route per un oggetto UserDetailComponent che supporta il percorso URL user/23 (dove 23 rappresenta l'ID dell'utente richiesto)?",
+            "answer": "`{ path: 'user/:id', component: UserDetailComponent }`",
+            "explanation": "[CodeCraft - Percorsi parametrizzati](https://codecraft.tv/courses/angular/routing/parameterised-routes/#_configuration)",
+            "hint": null,
+            "correctAnswer": [
+              "`{ path: 'user/:id', component: UserDetailComponent }`"
+            ],
+            "options": [
+              "`{ path: 'user/:id', component: UserDetailComponent }`",
+              "`{ url: 'user/:id', routedComponent: UserDetailComponent }`",
+              "`{ routedPath: 'user/:id', component: UserDetailComponent }`",
+              "`{ destination: new UserDetailComponent(), route: 'user/:id' }`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "8f612a44a85e580841181724",
+            "question": "Cosa stanno facendo i decoratori HostListener e il decoratore HostBinding in questa direttiva?\n```ts\n@Directive({\n  selector: '[appCallout]',\n})\nexport class CalloutDirective {\n  @HostBinding('style.font-weight') fontWeight = 'normal';\n  @HostListener('mouseenter')\n  onMouseEnter() {\n    this.fontWeight = 'bold';\n  }\n  @HostListener('mouseleave')\n  onMouseLeave() {\n    this.fontWeight = 'normal';\n  }\n}\n```",
+            "answer": "Stanno impostando il campo CalloutDirective.fontWeight in base al fatto che il mouse sia o meno sopra l'elemento DOM. HostListener imposta quindi la propriet\u00e0 CSS font-weight sul valore fontWeight.",
+            "explanation": "[DigitalOcean](https://www.digitalocean.com/community/tutorials/angular-hostbinding-hostlistener)",
+            "hint": null,
+            "correctAnswer": [
+              "Stanno impostando il campo CalloutDirective.fontWeight in base al fatto che il mouse sia o meno sopra l'elemento DOM. HostListener imposta quindi la propriet\u00e0 CSS font-weight sul valore fontWeight."
+            ],
+            "options": [
+              "Stanno impostando il campo CalloutDirective.fontWeight in base al fatto che il mouse sia o meno sopra l'elemento DOM. HostListener imposta quindi la propriet\u00e0 CSS font-weight sul valore fontWeight.",
+              "Stanno istituendo la direttiva per verificare l'elemento DOM su cui si trova. Se sono stati aggiunti binding di evento per l'ingresso e l'uscita del mouse, utilizzer\u00e0 questo codice. Altrimenti non accadr\u00e0 nulla.",
+              "Questo \u00e8 un uso scorretto di HostListener e HostBinding. I decoratori HostListener e HostBinding non fanno nulla sulle direttive; funzionano solo se utilizzati su componenti.",
+              "Se l'elemento DOM su cui \u00e8 posizionata questa direttiva ha la propriet\u00e0 CSS font-weight impostata su di esso, gli eventi mouseenter e mouseleave verranno generati."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "31c24385dd4350d407629694",
+            "question": "Quale sintassi del modello angolare \u00e8 possibile utilizzare in questo campo modulo basato su modello per accedere al valore del campo e verificare la convalida all'interno del markup del modello?\n```html\n<input type=\"text\" ngModel name=\"firstName\" required minlength=\"4\" />\n<span *ngIf=\"\">Invalid field data</span>\n```",
+            "answer": "\u00c8 possibile utilizzare una variabile di riferimento del modello e la funzionalit\u00e0 exportAs della direttiva ngModel.",
+            "explanation": "[Angular.io -Mostra e nascondi errore di convalida ](https://angular.io/guide/forms#show-and-hide-validation-error-messages)\n[Medio](https://medium.com/@agoiabeladeyemi/template-driven-forms-in-angular-4a3a5ad960de)",
+            "hint": null,
+            "correctAnswer": [
+              "\u00c8 possibile utilizzare una variabile di riferimento del modello e la funzionalit\u00e0 exportAs della direttiva ngModel."
+            ],
+            "options": [
+              "\u00c8 possibile utilizzare una variabile di riferimento del modello e la funzionalit\u00e0 exportAs della direttiva ngModel.",
+              "\u00c8 possibile utilizzare la direttiva ngModel in combinazione con il nome del campo di input.",
+              "\u00c8 possibile utilizzare una variabile di riferimento del modello per l'elemento di input HTML e quindi selezionare la propriet\u00e0 valid da tale.",
+              "Non \u00e8 possibile accedere al valore del campo con i moduli basati su modelli. \u00c8 necessario utilizzare moduli reattivi per questo."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "6ebb685afd142b84dc04274b",
+            "question": "Qual \u00e8 il tipo di valore che verr\u00e0 archiviato nella variabile di riferimento del modello headerText in questo markup?\n```html\n<h1 #headerText>User List</h1>\n```",
+            "answer": "un Angular ElementRef, un wrapper attorno a un elemento nativo",
+            "explanation": "[Pluralsight - Variabile di riferimento del modello](https://www.pluralsight.com/guides/how-to-use-template-reference-variables-in-angular)",
+            "hint": null,
+            "correctAnswer": [
+              "un Angular ElementRef, un wrapper attorno a un elemento nativo"
+            ],
+            "options": [
+              "un Angular ElementRef, un wrapper attorno a un elemento nativo",
+              "il testo interno del `<h1>` elemento",
+              "una classe di componenti di intestazione",
+              "il tipo di elemento DOM nativo htmlHeadingElement"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "7d26a82b77982917b8c8dbfb",
+            "question": "Qual \u00e8 la differenza, se presente, della logica di codice risultante basata su queste due configurazioni del provider?\n```ts\n[{ provide: FormattedLogger, useClass: Logger }][{ provide: FormattedLogger, useExisting: Logger }];\n```",
+            "answer": "La sintassi useClass indica all'iniettore di creare una nuova istanza di Logger e di associarla al token FormattedLogger. La sintassi useExisting si riferisce a un'istanza di oggetto gi\u00e0 esistente dichiarata come Logger.",
+            "explanation": "[Angular.io - Provider di dipendenze](https://angular.io/guide/dependency-injection-providers#defining-providers)\n[TektutorialHub](https://www.tektutorialshub.com/angular/angular-providers/)",
+            "hint": null,
+            "correctAnswer": [
+              "La sintassi useClass indica all'iniettore di creare una nuova istanza di Logger e di associarla al token FormattedLogger. La sintassi useExisting si riferisce a un'istanza di oggetto gi\u00e0 esistente dichiarata come Logger."
+            ],
+            "options": [
+              "Sono gli stessi. Entrambi si tradurranno in una nuova istanza di Logger associata al token FormattedLogger.",
+              "La sintassi useClass indica all'iniettore di creare una nuova istanza di Logger e di associarla al token FormattedLogger. La sintassi useExisting si riferisce a un'istanza di oggetto gi\u00e0 esistente dichiarata come Logger.",
+              "Entrambi si sbagliano. Un tipo forte non pu\u00f2 essere utilizzato per useClass o useExisting.",
+              "Sono gli stessi. Entrambi faranno s\u00ec che il token FormattedLogger sia un alias per l'istanza di Logger."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "29959aaf0f52a5b6ca8064fb",
+            "question": "Qual \u00e8 lo scopo della propriet\u00e0 data (vista nell'esempio seguente) in una configurazione di route?\n```ts\n  {\n      path: 'customers',\n      component: CustomerListComponent,\n      data: { accountSection: true }\n  }\n```",
+            "answer": "un modo per includere dati statici di sola lettura associati alla route che possono essere recuperati da ActivatedRoute",
+            "explanation": "[TektutorialsHub](https://www.tektutorialshub.com/angular/angular-pass-data-to-route/#:~:text=Angular%20allows%20us%20to%20pass,of%20the%20history%20state%20object)\n[StackOverflow](https://stackoverflow.com/a/36835156)",
+            "hint": null,
+            "correctAnswer": [
+              "un modo per includere dati statici di sola lettura associati alla route che possono essere recuperati da ActivatedRoute"
+            ],
+            "options": [
+              "un mapping chiave/valore per l'impostazione di valori @Input sull'istanza del componente instradato",
+              "un modo per includere dati statici di sola lettura associati alla route che possono essere recuperati da ActivatedRoute",
+              "una propriet\u00e0 sulla route che pu\u00f2 essere utilizzata per caricare dati dinamici per la route",
+              "un oggetto che verr\u00e0 iniettato automaticamente nel costruttore del componente instradato."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "82a1eaf906090a6b659a1df0",
+            "question": "Come funziona il built-in `ngIf` direttiva strutturale modificare il DOM renderizzato in base a questa sintassi del modello?\n```ts\n@Component({\n  selector: 'app-product',\n  template: '<div *ngIf=\"product\">{{ product.name }}</div>',\n})\nexport class ProductComponent {\n  @Input() product;\n}\n```",
+            "answer": "Se il campo della classe di prodotto \u00e8 \"truthy\", il DOM renderizzato includer\u00e0 il `<div>` con il valore del `product.name` campo. Se non \u00e8 \"veritiero\", il DOM renderizzato non conterr\u00e0 il `<div>` elemento.",
+            "explanation": "[Riferimento (angular.io)](https://angular.io/api/common/NgIf)",
+            "hint": null,
+            "correctAnswer": [
+              "Se il campo della classe di prodotto \u00e8 \"truthy\", il DOM renderizzato includer\u00e0 il `<div>` con il valore del `product.name` campo. Se non \u00e8 \"veritiero\", il DOM renderizzato non conterr\u00e0 il `<div>` elemento."
+            ],
+            "options": [
+              "Il `<div>` funge da segnaposto. Se il campo della classe di prodotto \u00e8 \"truthy\", l'opzione `<div>` verr\u00e0 sostituito solo dal `product.name` valore; in caso contrario, non verr\u00e0 eseguito il rendering di nulla.",
+              "Il `<div>` verr\u00e0 sempre renderizzato e, se il campo di prodotto \u00e8 \"veritiero\", il `<div>` conterr\u00e0 l'elemento `product.name` valore; In caso contrario, verr\u00e0 eseguito il rendering del comando `<div>` elemento senza valore.",
+              "Produce un errore, dal momento che ngIf non \u00e8 una direttiva strutturale incorporata.",
+              "Se il campo della classe di prodotto \u00e8 \"truthy\", il DOM renderizzato includer\u00e0 il `<div>` con il valore del `product.name` campo. Se non \u00e8 \"veritiero\", il DOM renderizzato non conterr\u00e0 il `<div>` elemento."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "f762addecdd1184d510027e2",
+            "question": "Che cosa fa questo codice?\n```ts\n@NgModule({\n  declarations: [AppComponent],\n  imports: [BrowserModule],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\nplatformBrowserDynamic().bootstrapModule(AppModule);\n```",
+            "answer": "Dichiara un modulo Angular denominato AppModule che contiene un componente bootstrap denominato AppComponent. Quindi registra quel modulo con Angular, in modo che l'app possa avviarsi.",
+            "explanation": "[Angular.io - Il NgModule di base](https://angular.io/guide/ngmodules#the-basic-ngmodule)",
+            "hint": null,
+            "correctAnswer": [
+              "Dichiara un modulo Angular denominato AppModule che contiene un componente bootstrap denominato AppComponent. Quindi registra quel modulo con Angular, in modo che l'app possa avviarsi."
+            ],
+            "options": [
+              "Esegue uno unit test per un NgModule.",
+              "Fornisce un modo per codificare la struttura del documento di un'applicazione Angular. Il @NgModule \u00e8 una forma di commento del codice inline che viene ignorato dal compilatore TypeScript ma viene visualizzato con una formattazione speciale nelle applicazioni dell'editor di codice.",
+              "Dichiara un modulo Angular denominato AppModule e lo rende disponibile per il lazy loading in tutta l'applicazione.",
+              "Dichiara un modulo Angular denominato AppModule che contiene un componente bootstrap denominato AppComponent. Quindi registra quel modulo con Angular, in modo che l'app possa avviarsi."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "5dc51daf0211dafe910b4c44",
+            "question": "Quale scelta descrive meglio ci\u00f2 che il _risolvere_ in questa configurazione di route?\n```ts\n{\n   path: ':id',\n   component: UserComponent,\n   resolve: {\n     user: UserResolverService\n   }\n}\n```",
+            "answer": "Prima di caricare il _Componente utente_, il router si iscriver\u00e0 al _Osservabile_ restituito da un _risolvere_ nella finestra di dialogo _Metodo UserResolverService_. Questa tecnica pu\u00f2 essere utilizzata per ottenere dati precaricati per un _rotta_.",
+            "explanation": "[angular.io](https://angular.io/api/router/Resolve)",
+            "hint": null,
+            "correctAnswer": [
+              "Prima di caricare il _Componente utente_, il router si iscriver\u00e0 al _Osservabile_ restituito da un _risolvere_ nella finestra di dialogo _Metodo UserResolverService_. Questa tecnica pu\u00f2 essere utilizzata per ottenere dati precaricati per un _rotta_."
+            ],
+            "options": [
+              "Prima di caricare il _Componente utente_, il router si iscriver\u00e0 al _Osservabile_ restituito da un _risolvere_ nella finestra di dialogo _Metodo UserResolverService_. Questa tecnica pu\u00f2 essere utilizzata per ottenere dati precaricati per un _rotta_.",
+              "Dopo il _rotta_ viene eseguita la risoluzione e il componente viene caricato e sottoposto a rendering, il parametro _Metodo UserResolverService_ avr\u00e0 un metodo denominato _utente_ esecuzione che ripulir\u00e0 tutte le connessioni dati aperte.",
+              "Si \u00e8 verificato un errore. Il nome della propriet\u00e0 corretto \u00e8 _onResolve_.",
+              "Il _Componente utente_ avr\u00e0 un parametro nel suo costruttore per *utente*E la _router_ gestir\u00e0 l'iniezione di un valore per questo da una chiamata a un _utente_ nella finestra di dialogo _Metodo UserResolverService_."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "b8f033e51e74695b2eccde92",
+            "question": "Qual \u00e8 lo scopo del decoratore ContentChildren in questa classe di componenti?\n```ts\n@Component({\n . . .\n template: '<ng-content></ng-content\u203a'\n})\nexport class TabsListComponent {\n @ContentChildren(TabComponent) tabs;\n}\n```",
+            "answer": "Fornisce l'accesso dall'interno della classe componente a qualsiasi _TabComponente_ Componenti che sono stati proiettati nel contenuto nella finestra di dialogo <ng-content> per questo componente.",
+            "explanation": "[betterprogramming.pub](https://betterprogramming.pub/understanding-contentchildren-with-an-example-e76ce78968db)",
+            "hint": null,
+            "correctAnswer": [
+              "Fornisce l'accesso dall'interno della classe componente a qualsiasi _TabComponente_ Componenti che sono stati proiettati nel contenuto nella finestra di dialogo <ng-content> per questo componente."
+            ],
+            "options": [
+              "Se presente _TabsComponente_ Gli elementi vengono aggiunti alla finestra di dialogo _TabsListaComponente_ modello, verranno inseriti nel modello <ng-content> in fase di esecuzione.",
+              "Crea _TabComponente_ componenti nella finestra di dialogo _TabsListaComponente_ modello quando un modello _TabsListaComponente_ viene creata un'istanza.",
+              "Fornisce l'accesso dall'interno della classe componente a qualsiasi _TabComponente_ Componenti che sono stati proiettati nel contenuto nella finestra di dialogo <ng-content> per questo componente.",
+              "Limita gli elementi consentiti che possono essere inseriti in un _TabsListaComponente_ per consentire solo _TabComponente_ elementi."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "194be2c1f1d19f3e3156e724",
+            "question": "Affinch\u00e9 Angular possa elaborare i componenti in un'applicazione, dove devono essere registrati i tipi di componenti?",
+            "answer": "in una propriet\u00e0 di metadati del decoratore NgModule denominata _Dichiarazioni_",
+            "explanation": "[angular.io](https://angular.io/guide/ngmodule-api#ngmodule-metadata)",
+            "hint": null,
+            "correctAnswer": [
+              "in una propriet\u00e0 di metadati del decoratore NgModule denominata _Dichiarazioni_"
+            ],
+            "options": [
+              "all'interno di un tag di script nel file index.html",
+              "in un tag di metadati del decoratore NgModule denominato _Componenti_",
+              "Non \u00e8 necessaria alcuna registrazione, \u00e8 sufficiente includere i file dei componenti in una directory dell'app.",
+              "in una propriet\u00e0 di metadati del decoratore NgModule denominata _Dichiarazioni_"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "fde71f3e2d6064481192fd6f",
+            "question": "Qual \u00e8 lo scopo del `fixture.detectChanges()` chiamare in questo unit test?\n```ts\nTestBed.configureTestingModule({\n  declarations: [UserCardComponent],\n});\nlet fixture = TestBed.createComponent(UserCardComponent);\nfixture.detectChanges();\nexpect(fixture.nativeElement.querySelector('h1').textContent).toContain(\n  fixture.componentInstance.title,\n);\n```",
+            "answer": "Forza Angular a eseguire il rilevamento delle modifiche, che eseguir\u00e0 il rendering del _UserCardComponent_ prima di poter convalidare il relativo modello.",
+            "explanation": "[angular.io](https://angular.io/api/core/testing/ComponentFixture#detectChanges)",
+            "hint": null,
+            "correctAnswer": [
+              "Forza Angular a eseguire il rilevamento delle modifiche, che eseguir\u00e0 il rendering del _UserCardComponent_ prima di poter convalidare il relativo modello."
+            ],
+            "options": [
+              "Tiene traccia di eventuali modifiche Ul e fallir\u00e0 lo unit test se ne vengono effettuate.",
+              "Viene utilizzato per garantire la stabilit\u00e0 del modello di componente tra pi\u00f9 unit test nell'intero gruppo di test.",
+              "Forza Angular a eseguire il rilevamento delle modifiche, che eseguir\u00e0 il rendering del _UserCardComponent_ prima di poter convalidare il relativo modello.",
+              "Viene utilizzato per registrare gli eventi di rilevamento delle modifiche nella console durante le esecuzioni degli unit test."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "ac10d058fbac97d5947bb73d",
+            "question": "Che aspetto avr\u00e0 il segmento url in base alla seguente chiamata al `Router.navigate` quando goToUser viene passato il valore 15?\n```ts\nexport class ToolsComponent {\n  constructor(private router: Router) {}\n  goToUser(id: number) {\n    this.router.navigate(['user', id]);\n  }\n}\n```",
+            "answer": "/utente/15",
+            "explanation": "[angular.io](https://angular.io/api/router/Router#navigate)",
+            "hint": null,
+            "correctAnswer": [
+              "/utente/15"
+            ],
+            "options": [
+              "/utente/15",
+              "/utente?id=15",
+              "/utente:15",
+              "/utente;id=15"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "b8a7faab41e06c46f2faab61",
+            "question": "Quando un servizio viene fornito per root e viene anche aggiunto alla configurazione del provider per un modulo lazy-loaded, quale istanza di tale servizio fornisce l'iniettore ai costruttori nel modulo lazy-loaded?",
+            "answer": "Una nuova istanza di tale servizio viene creata quando il modulo \u00e8 pigro caricato.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Una nuova istanza di tale servizio viene creata quando il modulo \u00e8 pigro caricato."
+            ],
+            "options": [
+              "Una nuova istanza di tale servizio viene creata quando il modulo \u00e8 pigro caricato.",
+              "Non \u00e8 consentito fornire un servizio dello stesso tipo a livello di modulo lazy-loaded.",
+              "Se un'istanza del servizio non \u00e8 stata ancora creata a livello radice. ne creer\u00e0 uno l\u00ec e poi lo user\u00e0.",
+              "Una singola istanza di quel servizio viene sempre istanziata alla radice ed \u00e8 l'unica mai utilizzata, anche all'interno di moduli pigri."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "ce376334f1b1ec274a5fee2d",
+            "question": "Cosa sta facendo il decoratore HostBinding in questa direttiva?\n```ts\n@Directive({\n  selector: ' [appHighlight] ',\n})\nexport class HighlightDirective {\n  @HostBinding('class.highlighted') highlight = true;\n}\n```",
+            "answer": "Sta aggiungendo la classe CSS denominata evidenziata a qualsiasi elemento DOM che ha la direttiva appHighlight su di esso.",
+            "explanation": "[StackOverflow](https://stackoverflow.com/a/46207423)",
+            "hint": null,
+            "correctAnswer": [
+              "Sta aggiungendo la classe CSS denominata evidenziata a qualsiasi elemento DOM che ha la direttiva appHighlight su di esso."
+            ],
+            "options": [
+              "Sta aggiungendo la classe CSS denominata evidenziata a qualsiasi elemento DOM che ha la direttiva appHighlight su di esso.",
+              "HostBinding non fa nulla sulle direttive, solo sui componenti.",
+              "Sta specificando se l'elemento host ottiene la classe evidenziata aggiunta al suo attributo class, quindi l'evidenziazione del campo della classe di direttiva verr\u00e0 impostata su true; e se non viene aggiunto sull'host verr\u00e0 impostato su false.",
+              "Sta creando uno stile in linea sull'elemento host con una propriet\u00e0 CSS denominata highlight impostata su true."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "2a08fe7c3a011e6c2066aca7",
+            "question": "Nei moduli reattivi, quale tipo di classe di modulo Angular viene utilizzato sul DOM nativo <form> elemento per cablarlo?",
+            "answer": "`FormGroup`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`FormGroup`"
+            ],
+            "options": [
+              "`FormArray`",
+              "`FormControl`",
+              "`FormGroup`",
+              "`all of these answers`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "245140c48f8803d04df011a0",
+            "question": "Supponendo che il nome utente FormControl sia stato configurato con un validatore minLength, come \u00e8 possibile impostare una visualizzazione degli errori nel seguente markup dei moduli reattivi per il campo nome utente?\n```html\n<form [formGroup]=\"form\"\u203a\n  <input type=\"text\" formControlName= \"username\"\u203a\n  ...\n</form>\n```",
+            "answer": "&shy;",
+            "explanation": "```ts\n<span *ngIf=\"username.minLength.invalid\"\u203a\nUsername length is not valid\n</span>\n```\n```ts\n<input type=\"text\" formControlName=\"username\" [showMinLength]=\"true\"\u203a\n```\n```ts\n<span *ngIf=\"form.get('username').getError('minLength') as minLengthError\">\nUsername must be at least {{ minLengthError.requiredLength }} characters.\n</span>\n```\n```ts\n<input type=\"text\" formControlName=\"username\" #userName=\"ngModer\">\n<span *ngIf=\"userName.errors.minlength\"\u203a\nUsername must be at least {{ userName.errors.minlength.requiredLength }} characters.\n</span>\n```\n[Codice](https://codecraft.tv/courses/angular/forms/template-driven/)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "71172858713da024b17e830e",
+            "question": "In che modo la modalit\u00e0 di incapsulamento della vista emulata gestisce i CSS per un componente?",
+            "answer": "Crea attributi univoci per gli elementi DOM e definisce gli ambiti dei selettori CSS scritti in tali ID attributo.",
+            "explanation": "[Angular.io](https://angular.io/guide/view-encapsulation#inspecting-generated-css)",
+            "hint": null,
+            "correctAnswer": [
+              "Crea attributi univoci per gli elementi DOM e definisce gli ambiti dei selettori CSS scritti in tali ID attributo."
+            ],
+            "options": [
+              "Rende il CSS esattamente come l'hai scritto senza alcuna modifica.",
+              "Fa uso di markup DOM ombra e CSS.",
+              "Crea attributi univoci per gli elementi DOM e definisce gli ambiti dei selettori CSS scritti in tali ID attributo.",
+              "Esegue il rendering di tutte le regole CSS che scrivi come CSS in linea su tutti gli elementi DOM su cui le usi nel modello."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "3497e64c31a86c8fc3dd08e7",
+            "question": "Con la seguente configurazione di TestBed, cosa \u00e8 possibile utilizzare per accedere al DOM renderizzato per UserCardComponent?\n```ts\nTestBed.configureTestingModule({\n  declarations: [UserCardComponent],\n});\nlet fixture = TestBed.createComponent(UserCardComponent);\n```",
+            "answer": "`fixture.nativeElement`",
+            "explanation": "[StackOverflow](https://stackoverflow.com/a/56504773)\n[Angular.io](https://angular.io/guide/testing-components-basics#nativeelement)",
+            "hint": null,
+            "correctAnswer": [
+              "`fixture.nativeElement`"
+            ],
+            "options": [
+              "`fixture.componentTemplate`",
+              "`fixture.getComponentHtml()`",
+              "`fixture.nativeElement`",
+              "`fixture.componentInstance.template `"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "d22f3bd7eb7fd039199afae3",
+            "question": "Dati questi due componenti, cosa verr\u00e0 renderizzato al DOM in base all'utilizzo del markup?\n```ts\n@Component({\n selector: 'app-card',\n template: '<h1>Data Card</h1><ng-content></ng-content>'\n})\nexport class CardComponent { }\n@Component({\n selector: 'app-bio',\n template: '<ng-content></ng-content>.\n})\nexport class BioComponent { }\n// markup usage:\n<app-card><app-bio>Been around for four years.</app-bio></app-card>\n```",
+            "answer": "&shy;",
+            "explanation": "```ts\n<app-card>\n<h1>Data Card</hl>\n<app-bio>\nBeen around for four years.\n</app-bio>\n</app-card>\n```\n```ts\n<h1>Data Card</h1>\n<app-bio>\nBeen around for four years.\n</app-bio>\n```\n```ts\n<app-card>\n<h1>Data Card</hl>\n<ng-content></ng-content>\n<app-bio>\nBeen around for four years.\n<ng-content></ng-content>\n</app-bio>\n</app-card>\n```\n```ts\n<app-card>\n<h1>Data Card</hl>\n</app-card>\n```",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "7f3a4a9fb8f77abb3c48428d",
+            "question": "Dato il componente app-title-card nel codice seguente, quale DOM eseguir\u00e0 il rendering del componente app-user-card?\n```ts\n@Component({\n   selector: 'app-user-card',\n   template: '<app-title-card></app-title-card><p>Jenny Smith</p>'\n})\n@Component({\n   selector: 'app-title-card',\n   template: '<h1>User Data</hl>'\n})\n// usage of user card component in parent component html\n<app-user-card></app-user-card>\n```",
+            "answer": "&shy;",
+            "explanation": "```ts\n<app-user-card>\n<app-title-card>\n<h1>User Data</h1>\n</app-title-card>\n<p>Jenny Smith</p>\n</app-user-card>\n```\n```ts\n<h1>User Data</h1>\n<p>Jenny Smith<p>\n```\n```ts\n<app-user-card>\n<app-title-card></app-title-card>\n</app-user-card>\n```\n```ts\n<div app-user-card>\n<h1 app-title-card>User Data</h1>\n<p>Jenny Smith</p>\n</div>\n```",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "5183ac8381f3bb3d9e03ec20",
+            "question": "Scegli il codice corrispondente per la registrazione del provider personalizzato che il decoratore @Inject () sta cercando:\n```ts\nconstructor(@Inject('Logger') private logger) { }\n```",
+            "answer": "&shy;",
+            "explanation": "```ts\nproviders: [Logger];\n```\n```ts\nproviders: [{ provide: 'Logger', useClass: Logger }];\n```\n```ts\n@Injectable({\nprovidedln: 'root'\n})\n```\n```ts\nproviders: [{ provide: 'Logger' }];\n```\n[StackOverflow](https://stackoverflow.com/a/37315355)\n[TektutorialHub](https://www.tektutorialshub.com/angular/angular-injector-injectable-inject/)\n[Angular.io - Dependency Injection In Azione](https://angular.io/guide/dependency-injection-in-action#supply-a-custom-provider-with-inject)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "4597380b599dcb89d4163aa3",
+            "question": "Quale scelta descrive meglio il seguente utilizzo del metodo HttpClient.get nel metodo della classe getsettings?\n```ts\nexport class SettingsService {\n    constructor(private httpClient: HttpClient) { }\n    ...\ngetSettings()\n{\n    return this.httpClient.get<Settings>(this.settingsUrl)\n        .pipe(\n            retry(3)\n        );\n}}\n```",
+            "answer": "Quando viene sottoscritto il risultato del metodo getSettings, verr\u00e0 effettuata la chiamata HTTP GET; se fallisce, verr\u00e0 ritentato fino a tre volte prima che si arrenda e restituisca un errore.",
+            "explanation": "[learnrxjs.io](https://www.learnrxjs.io/learn-rxjs/operators/error_handling/retry)\n[dev.to](https://dev.to/gparlakov/how-does-rxjs-retry-work-412p)",
+            "hint": null,
+            "correctAnswer": [
+              "Quando viene sottoscritto il risultato del metodo getSettings, verr\u00e0 effettuata la chiamata HTTP GET; se fallisce, verr\u00e0 ritentato fino a tre volte prima che si arrenda e restituisca un errore."
+            ],
+            "options": [
+              "Il metodo pipe RxJs \u00e8 un alias per il metodo subscribe, quindi una chiamata a `getSettings` eseguir\u00e0 la query get. L'operatore di ripetizione dei tentativi viene utilizzato per indicare alla chiamata di pipe di riprovare la query get tre volte.",
+              "Produrr\u00e0 un errore in fase di esecuzione perch\u00e9 il metodo pipe non \u00e8 disponibile al di fuori del `Httpclient.get` chiamare.",
+              "Ogni singola chiamata al metodo getSettings comporter\u00e0 che Httpclient effettui tre richieste get totali a settingsUrl, il che non \u00e8 l'ideale perch\u00e9 ci saranno sempre due chiamate extra che non sono necessarie. L'operatore di ripetizione tentativi non deve essere utilizzato in questo modo.",
+              "Quando viene sottoscritto il risultato del metodo getSettings, verr\u00e0 effettuata la chiamata HTTP GET; se fallisce, verr\u00e0 ritentato fino a tre volte prima che si arrenda e restituisca un errore."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "2cb50a852e53a66a1a92885c",
+            "question": "Quando un servizio richiede un'installazione per inizializzare lo stato predefinito tramite un metodo, come \u00e8 possibile assicurarsi che tale metodo venga richiamato prima che il servizio venga iniettato ovunque?",
+            "answer": "Utilizzare un provider di fabbrica a livello di AppModule radice che dipende dal servizio per chiamare tale metodo di servizio.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Utilizzare un provider di fabbrica a livello di AppModule radice che dipende dal servizio per chiamare tale metodo di servizio."
+            ],
+            "options": [
+              "Inserire invece la logica di quel metodo di servizio nel costruttore del servizio.",
+              "Utilizzare un provider di fabbrica a livello di AppModule radice che dipende dal servizio per chiamare tale metodo di servizio.",
+              "non \u00e8 possibile farlo all'avvio dell'applicazione; puoi farlo solo a livello di componente.",
+              "Creare un'istanza di un'istanza del servizio a livello globale (ambito finestra) e quindi chiamare tale metodo."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "5328e103c058fdfed4995069",
+            "question": "Quale affermazione descrive meglio questo utilizzo del TestBed?\n```ts\nconst spy = jasmine.createSpyObj('DataService', ['getUsersFromApi']);\nTestBed.configureTestingModule({\n  providers: [UserService, { provide: DataService, useValue: spy }],\n});\nconst userService = TestBed.get(UserService);\n```",
+            "answer": "Il TestBed impalca un NgModule con due provider e gestisce qualsiasi iniezione di dipendenza. Se una classe Angular richiede DataService nel relativo costruttore, TestBed inietter\u00e0 spy in tale costruttore.",
+            "explanation": "- `All other tests be ignored, including tests that assert results against one of these providers and a non-defined provider.`\n`Although it will work when multiple providers in this configuration are asserted against in a single test.`",
+            "hint": null,
+            "correctAnswer": [
+              "Il TestBed impalca un NgModule con due provider e gestisce qualsiasi iniezione di dipendenza. Se una classe Angular richiede DataService nel relativo costruttore, TestBed inietter\u00e0 spy in tale costruttore."
+            ],
+            "options": [
+              "Il TestBed \u00e8 richiesto ogni volta che si desidera utilizzare un oggetto spia in uno unit test per un provider Angular.",
+              "Il TestBed viene utilizzato per testare la vista di un componente.",
+              "Il TestBed impalca un NgModule con due provider e gestisce qualsiasi iniezione di dipendenza. Se una classe Angular richiede DataService nel relativo costruttore, TestBed inietter\u00e0 spy in tale costruttore.",
+              "Il TestBed sta configurando il test runner per dirgli di eseguire solo test per i due provider elencati nel suo array di provider."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "4d0e746fed0822db31678a09",
+            "question": "Qual \u00e8 la differenza principale tra un componente e una direttiva?",
+            "answer": "Un componente ha un modello e una direttiva no.",
+            "explanation": "[StackOverflow](https://stackoverflow.com/a/34616190)",
+            "hint": null,
+            "correctAnswer": [
+              "Un componente ha un modello e una direttiva no."
+            ],
+            "options": [
+              "Un componente utilizza una propriet\u00e0 di metadati del selettore e una direttiva no.",
+              "Una direttiva pu\u00f2 essere utilizzata per aggiungere eventi personalizzati al DOM e un componente non pu\u00f2.",
+              "Un componente ha un modello e una direttiva no.",
+              "Una direttiva pu\u00f2 essere destinata solo agli elementi DOM nativi."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "b3847e065e56d7f8956889af",
+            "question": "Cosa si potrebbe aggiungere a questa classe di direttiva per consentire di impostare la lunghezza del troncato durante l'utilizzo della direttiva nel markup?\n```ts\n  @Directive({\n      selector: '[appTruncate]'\n  })\n  export class TruncateDirective {\n      . . .\n  }\n  // example of desired usage:\n  <p [appTruncate]=\"10\">Some very long text here</p>\n```",
+            "answer": "`@Input() appTruncate: number;`",
+            "explanation": "[Angular.io](https://angular.io/guide/attribute-directives#passing-values-into-an-attribute-directive)\n[StackOverflow](https://stackoverflow.com/a/46303049)",
+            "hint": null,
+            "correctAnswer": [
+              "`@Input() appTruncate: number;`"
+            ],
+            "options": [
+              "`@Input() appTruncate: number;`",
+              "`@Output() appTruncate;`",
+              "`constructor(maxLength: number) { }`",
+              "`Nothing. The directive selector cannot be used to pass in values to the directive.`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "24dc1470f1c1f643c852861b",
+            "question": "Come \u00e8 possibile passare i parametri di query a questo `HttpClient.get` richiesta?\n```ts\nexport class OrderService {\n  constructor(private httpClient: HttpClient) {}\n  getOrdersByYear(year: number): Observable<Order[]> {\n    return this.httpClient.get<Order[]>(this.ordersUrl);\n  }\n}\n```",
+            "answer": "&shy;",
+            "explanation": "```ts\nconst options = { params: new HttpParams().set('year', year) };\nreturn this.httpClient.get<Order[]>(this.ordersUrl, options);\n```\n```ts\ngetOrdersByYear(year: number): Observable<Order[]> {\nreturn this.httpClient.addParam('year', year).get<Order[]>(this.ordersUrl, year);\n}\n```\n[StackOverflow](https://stackoverflow.com/a/34475594)\n[TektutorialHub](https://www.tektutorialshub.com/angular/angular-pass-url-parameters-query-strings/#httpparams)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "`return this.httpClient.get<Order[]>(this.ordersUrl, {'year': year})`",
+              "`return this.httpClient.get<Order[]>(this.ordersUrl, year)`",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "9823fee2faabd653d236ad00",
+            "question": "Supponendo il `DataService` \u00e8 stato registrato nei provider per l'applicazione, quale risposta descrive meglio cosa succede in base al costruttore di questo componente?\n```ts\n    @Component({\n        ...\n    })\n    export class OrderHistoryComponent {\n        constructor(private dataService: DataService) {}\n        ...\n    }\n```",
+            "answer": "Quando Angular crea una nuova istanza del `OrderHistoryComponent`, l'iniettore fornir\u00e0 un'istanza di un `DataService` al primo argomento del costruttore del componente. Il costruttore `dataService` verr\u00e0 utilizzato per impostare un campo di istanza privata con lo stesso nome sull'istanza.",
+            "explanation": "[StackOverflow](https://stackoverflow.com/a/49755822)\n[Angular.io - Iniezione di dipendenze](https://angular.io/guide/dependency-injection)",
+            "hint": null,
+            "correctAnswer": [
+              "Quando Angular crea una nuova istanza del `OrderHistoryComponent`, l'iniettore fornir\u00e0 un'istanza di un `DataService` al primo argomento del costruttore del componente. Il costruttore `dataService` verr\u00e0 utilizzato per impostare un campo di istanza privata con lo stesso nome sull'istanza."
+            ],
+            "options": [
+              "Dichiara che il `OrderHistoryComponent` avr\u00e0 la propria versione di un `DataService` e che non dovrebbe mai utilizzare istanze esistenti. Le `DataService` dovrebbe essere istanziato all'interno della classe come campo privato affinch\u00e9 questo codice sia completo e funzionante.",
+              "Quando Angular crea una nuova istanza del `OrderHistoryComponent`, l'iniettore fornir\u00e0 un'istanza di un `DataService` al primo argomento del costruttore del componente. Il costruttore `dataService` verr\u00e0 utilizzato per impostare un campo di istanza privata con lo stesso nome sull'istanza.",
+              "Fornisce un modo per eseguire solo test dei componenti; il costruttore non viene utilizzato nell'esecuzione effettiva dell'applicazione Angular.",
+              "Consente all'elemento personalizzato a cui \u00e8 destinato il componente di avere una propriet\u00e0 personalizzata denominata `dataService` che pu\u00f2 essere utilizzato per associare un `DataService` istanza a."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "ea9f4ef6872b779b8ff2fa84",
+            "question": "Completare questo markup utilizzando il comando `ngIf` direttiva per implementare un altro caso che visualizzer\u00e0 il testo \"L'utente non \u00e8 attivo\":\n```ts\n<div *ngIf=\"userIsActive; else inactive\">\n  Currently active!\n</div>\n```",
+            "answer": "&shy;",
+            "explanation": "```ts\n<div #inactive>User is not active.</div>\n```\n```ts\n<div *ngIf=\"inactive\">\nUser is not active.\n</div>\n```\n```ts\n<ng-template #else=\"inactive\">\n<div>User is not active.</div>\n</ng-template>\n```\n```ts\n<ng-template #inactive>\n<div>User is not active.</div>\n</ng-template>\n```\n[Angular.io](https://angular.io/api/common/NgIf)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "868bfd949d492eb4d7918cfa",
+            "question": "Qual \u00e8 la sintassi corretta per una definizione di route per caricare pigramente un modulo di feature?",
+            "answer": "&shy;",
+            "explanation": "```\n{\npath: 'users',\nlazy: './users/users.module#UsersModule'\n}\n```\n```\n{\npath: 'users',\nloadChildren: () => import('./users/users.module').then(m => m.UserModule)\n}\n```\n```\n{\npath: 'users',\nloadChildren: './users/users.module#UsersModule'\n}\n```\n```\n{\npath: 'users',\nmodule: UsersModule\n}\n```\n[Angular.io - Moduli di caricamento pigro](https://angular.io/guide/lazy-loading-ngmodules)",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "15368c2c5421f862acd60b75",
+            "question": "Descrivere come viene impostata e configurata la convalida in questo esempio di moduli reattivi:\n```ts\nexport class UserFormControl implements OnInit {\n    ...\n    ngOnInit() {\n        this.form = this.formBuilder.group({\n            username: this.formBuilder.control('',\n                [Validators.required, Validators.minLength(5), this.unique]),\n        )};\n    }\n    unique(control: FormControl) {\n        return control.value !== 'admin' ? null: {notUnique: true};\n    }\n}\n```",
+            "answer": "Il `FormControl` per `username` si sta configurando con tre validatori: il `required` e `minLength` validatori che provengono da Angular e una funzione di convalida personalizzata denominata `unique` che verifica la presenza del valore non uguale alla stringa `admin`.",
+            "explanation": "[Angular.io - Convalida del modulo](https://angular.io/guide/form-validation)\n[Angular University Blog](https://blog.angular-university.io/angular-custom-validators/)",
+            "hint": null,
+            "correctAnswer": [
+              "Il `FormControl` per `username` si sta configurando con tre validatori: il `required` e `minLength` validatori che provengono da Angular e una funzione di convalida personalizzata denominata `unique` che verifica la presenza del valore non uguale alla stringa `admin`."
+            ],
+            "options": [
+              "Il `FormControl` per `username` viene configurato per escludere tre validatori dai validatori che \u00e8 consentito utilizzare.",
+              "Il `FormControl` per `username` si sta configurando per consentire l'utilizzo di tre possibili validatori: `required, maxLength`e uno personalizzato denominato `unique`. Per abilitarli `validators`, una direttiva di convalida dovrebbe essere inserita nei campi modulo nel markup.",
+              "La convalida non pu\u00f2 essere impostata in questo modo in forme reattive.",
+              "Il `FormControl` per `username` si sta configurando con tre validatori: il `required` e `minLength` validatori che provengono da Angular e una funzione di convalida personalizzata denominata `unique` che verifica la presenza del valore non uguale alla stringa `admin`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "ab52ee6db79d346b7c55db9f",
+            "question": "Cosa fa il decoratore iniettabile in questa classe di servizio?\n```ts\n@Injectable({\n    providedIn: 'root'\n)}\nexport class DataService { }\n```",
+            "answer": "Registra un provider per il servizio nell'iniettore dell'applicazione radice, rendendo disponibile una singola istanza di esso in tutta l'applicazione.",
+            "explanation": "[Angular.io](https://angular.io/guide/providers#providing-a-service)",
+            "hint": null,
+            "correctAnswer": [
+              "Registra un provider per il servizio nell'iniettore dell'applicazione radice, rendendo disponibile una singola istanza di esso in tutta l'applicazione."
+            ],
+            "options": [
+              "Registra un provider per il servizio che \u00e8 disponibile solo a livello di modulo root, non per eventuali moduli figlio.",
+              "Registra un provider per il servizio nell'iniettore dell'applicazione radice, rendendo disponibile una singola istanza di esso in tutta l'applicazione.",
+              "Fa in modo che il servizio possa essere iniettato solo nel componente bootstrapped per l'applicazione.",
+              "Imposta una regola di tempo di compilazione che consente di inserire il tipo di servizio solo nella propriet\u00e0 dei metadati dei provider della radice NgModule."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "aa814ac71d38f06bfca5d328",
+            "question": "Descrivi l'utilizzo di questo codice\n```ts\nexport interface AppSettings {\n  title: string;\n  version: number;\n}\nexport const APP_SETTINGS = new InjectionToken<AppSettings>('app.settings');\n```",
+            "answer": "InjectionToken viene utilizzato per creare un token provider per una dipendenza non di classe. Un valore letterale Object pu\u00f2 essere provider come valore per il tipo di provider di dipendenza APP_SETTINGS che pu\u00f2 quindi essere iniettato in componenti, servizi, ecc..",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "InjectionToken viene utilizzato per creare un token provider per una dipendenza non di classe. Un valore letterale Object pu\u00f2 essere provider come valore per il tipo di provider di dipendenza APP_SETTINGS che pu\u00f2 quindi essere iniettato in componenti, servizi, ecc.."
+            ],
+            "options": [
+              "InjectionToken aggiunge un'istanza di AppSettings al provider root tramite la chiamata del costruttore InjectionToken, rendendola automaticamente disponibile a tutti i NgModules, servizi e componenti in tutta l'applicazione Angular senza la necessit\u00e0 di iniettarla da nessuna parte.",
+              "InjectionToken viene utilizzato per creare un token provider per una dipendenza non di classe. Un valore letterale Object pu\u00f2 essere provider come valore per il tipo di provider di dipendenza APP_SETTINGS che pu\u00f2 quindi essere iniettato in componenti, servizi, ecc..",
+              "InjectionToken viene utilizzato per creare un decoratore dinamico per AppSettings che pu\u00f2 essere utilizzato sui parametri del costruttore tramite un decoratore @AppSettings.",
+              "Questo codice presenta un errore poich\u00e9 non \u00e8 possibile utilizzare un'interfaccia TypeScript per il tipo generico su InjectionToken"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "915f7c6bbc5ac555058f706b",
+            "question": "Per l'esempio di moduli basati su modello seguente, quale argomento pu\u00f2 essere passato al metodo di invio nell'evento click per inviare i dati per il modulo?\n```html\n<form #form=\"ngForm\">\n  <input type=\"text\" ngModel=\"firstName\" />\n  <input type=\"text\" ngModel=\"lastName\" />\n  <button (click)=\"submit()\">Save</button>\n</form>\n```",
+            "answer": "submit(form.value)",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "submit(form.value)"
+            ],
+            "options": [
+              "submit(form.value)",
+              "invia($event)",
+              "submit(ngForm.value)",
+              "submit(Nome, cognome)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "a99b2354fa2b58e5c66a6964",
+            "question": "Qual \u00e8 lo scopo della configurazione della propriet\u00e0 prelodingStrategy in questo codice router?\n```ts\nRouterModule.forRoot(\n  ...{\n    preloadingStrategy: PreloadAllModules,\n  },\n);\n```",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [
+              "Abilita la possibilit\u00e0 di contrassegnare i singoli percorsi per il precaricamento.",
+              "Precarica tutte le dipendenze per le route, creando istanze di servizi al primo avvio dell'app",
+              "Assicura che tutti i moduli vengano integrati in un singolo file bundle del modulo app.",
+              "Configura il router per caricare immediatamente tutte le route che hanno una propriet\u00e0 loadChildren (route che vengono in genere caricate quando richiesto)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "78adca7ca3986ff3d835154e",
+            "question": "Qual \u00e8 un modo alternativo per scrivere questo markup per associare il valore del campo della classe `userName` al `h1` propriet\u00e0 element title?\n```html\n<h1 [title]=\"userName\">Current user is {{ userName }}</h1>\n```",
+            "answer": "title=\"{{ userName }}\"",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "title=\"{{ userName }}\""
+            ],
+            "options": [
+              "title=\"userName\"",
+              "title=\"{{ userName }}\"",
+              "title=\"{{ 'userName' }}\"",
+              "L'unico modo per farlo \u00e8 usare le parentesi quadre."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "175b05f8701a621519582b7c",
+            "question": "Cos'\u00e8 il `async` pipe facendo in questo esempio?\n```ts\n@Component({\n  selector: 'app-users',\n  template: '<div *ngFor=\"let user of users | async\">{{ user.name }}</div>',\n})\nexport class UsersComponent implements OnInit {\n  users;\n  constructor(private httpClient: HttpClient) {}\n  ngOnInit(): void {\n    this.users = this.httpClient.get<{ name: string }>('users');\n  }\n}\n```",
+            "answer": "Si sta abbonando all'osservabile restituito dal `HttpClient.get` e il wrapping del valore restituito in modo che possa essere ripetuto nella finestra di dialogo `ngFor`.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Si sta abbonando all'osservabile restituito dal `HttpClient.get` e il wrapping del valore restituito in modo che possa essere ripetuto nella finestra di dialogo `ngFor`."
+            ],
+            "options": [
+              "Non sta facendo nulla, poich\u00e9 la pipe asincrona non pu\u00f2 essere utilizzata in un `ngFor` affermazione.",
+              "Sta configurando il `ngFor` per supportare pi\u00f9 elenchi di utenti contemporaneamente.",
+              "Si sta abbonando all'osservabile restituito dal `HttpClient.get` e il wrapping del valore restituito in modo che possa essere ripetuto nella finestra di dialogo `ngFor`.",
+              "Consente a tutti gli utenti di partecipare al `users` da eseguire il rendering contemporaneamente al DOM."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "bb08bcb2d098f25aefc50e30",
+            "question": "Come utilizzeresti questa direttiva nel markup in base al suo valore di selezione\n```ts\n@Directive({\n\tselector: '[appTruncate]'\n})\nexport class TruncateDirective{\n\t. . .\n}\n```",
+            "answer": "`html <p appTruncate>Some long text</p> `",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`html <p appTruncate>Some long text</p> `"
+            ],
+            "options": [
+              "`html <p data-directive=\"appTruncate\">Some long text </p> `",
+              "`html <p appTruncate>Some long text</p> `",
+              "`html <p app-truncate>Some long text</p> `",
+              "`html <app-truncate>Some long text</app-truncate> `"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "67d7f7ab001d8ddd039898a9",
+            "question": "Quale hook del ciclo di vita pu\u00f2 essere utilizzato su un componente per monitorare tutte le modifiche ai valori @Input su quel componente?",
+            "answer": "ngOnChanges",
+            "explanation": "[Come rilevare quando un valore @Input() cambia in Angular?](https://stackoverflow.com/a/44686085/1573267)",
+            "hint": null,
+            "correctAnswer": [
+              "ngOnChanges"
+            ],
+            "options": [
+              "ngOnInit",
+              "ngChanges",
+              "ngAfterInputChange",
+              "ngOnChanges"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "f2659657940509103b492f79",
+            "question": "Quale sarebbe un esempio di utilizzo della sintassi del modello di questa pipe personalizzata?\n```ts\n@Pipe({ name: 'truncate' })\nexport class TruncatePipe implements PipeTransform {\n\ttransform(value: string, maxLength: number, showEllipsis: boolean){\n\t\tconst newValue = maxLength ? value.substr(0, maxLength): value;\n\t\treturn showEllipsis ? '${newValue}...` : newValue;\n\t}\n}\n```",
+            "answer": "{( 'del testo lungo' | troncare:10 })",
+            "explanation": "\\[ricontrolla le risposte]",
+            "hint": null,
+            "correctAnswer": [
+              "{( 'del testo lungo' | troncare:10 })"
+            ],
+            "options": [
+              "{( 'del testo lungo' | troncare:10 })",
+              "{( 'some long text' | truncate:10:true })",
+              "{( 'un po' di testo lungo' | troncare })",
+              "tutte queste risposte"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "7b04ed3b0912b00bb691989b",
+            "question": "Quale comando Angular CLI verr\u00e0 eseguito per generare un oggetto UsersComponent e aggiungerlo a SharedModule (nel file shared.module.ts nell'applicazione)?",
+            "answer": null,
+            "explanation": "\\[ricontrolla le risposte]",
+            "hint": null,
+            "correctAnswer": [],
+            "options": [
+              "ng genera componente --newModule=shared",
+              "ng genera utenti componenti --module=shared",
+              "ng genera utenti componenti --shared",
+              "ng genera componente --add=shared"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "83435f4a75002afbdf557b21",
+            "question": "Come \u00e8 possibile riscrivere questo markup in modo che il contenitore div non sia necessario nel rendering DOM finale\n```ts\n<div *ngIf=\"location\">\n\t<h1>{{ location.name }}</h1>\n\t<p>{{ location.description }}</p>\n</div>\n```",
+            "answer": "&shy;",
+            "explanation": "```ts\n<div *ngIf=\"location\">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n{{ endNgIf }}\n```\n```ts\n<ng-template *ngIf=\"location\">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n</ng-template>\n```\n```ts\n<div *ngIf=\"location\" [display]=\" ' hidden' \">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n</div>\n```\n```ts\n<ng-container *ngIf=\"location\">\n<h1>{{ location.name }}</h1>\n<p>{{ location.description }}</p>\n</ng-container>\n```\n\\[ricontrolla le risposte]",
+            "hint": null,
+            "correctAnswer": [
+              "&shy;"
+            ],
+            "options": [
+              "&shy;",
+              "&shy;",
+              "&shy;",
+              "&shy;"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "caaee0cef540b6d9048bc2ff",
+            "question": "Descrivi l'utilizzo di questo codice:\n```ts\nexport interface AppSettings {\n  title: string;\n  version: number;\n}\n```",
+            "answer": null,
+            "explanation": "\\[ricontrolla le risposte]",
+            "hint": null,
+            "correctAnswer": [],
+            "options": [
+              "Questo codice \u00e8 un errore poich\u00e9 non \u00e8 possibile utilizzare un'interfaccia TypeScript per il tipo generico su InjectionToken.",
+              "InjectionToken viene utilizzato per creare un token provider per una dipendenza non di classe. Un oggetto lieteral pu\u00f2 essere fornito come valore per il tipo di provider di dipendenza APP_SETTINGS che pu\u00f2 quindi essere iniettato in componenti, servizi e cos\u00ec via.",
+              "InjectionToken aggiunge un'istanza di AppSettings al provider roote tramite la chiamata del costruttore InjectionToken, rendendola automaticamente disponibile a tutti i NgModules, servizi e componenti attraverso l'applicazione Angular senza la necessit\u00e0 di iniettarla da nessuna parte.",
+              "InjectionToken viene utilizzato per creare un decoratore dinamico per AppSettings che pu\u00f2 essere utilizzato sui parametri del costruttore tramite un decoratore @AppSettings."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "22fa734cf3cf8d4aab1994ee",
+            "question": "Quali utilit\u00e0 Angular, se presenti, sono necessarie per eseguire lo unit test di un servizio senza dipendenze del costruttore?",
+            "answer": "La classe TestBed \u00e8 necessaria per creare un'istanza del servizio.",
+            "explanation": "[Unit test angolari](https://angular.io/guide/testing-services) - ricontrollare le risposte",
+            "hint": null,
+            "correctAnswer": [
+              "La classe TestBed \u00e8 necessaria per creare un'istanza del servizio."
+            ],
+            "options": [
+              "\u00c8 necessario il metodo helper By.css()",
+              "Per eseguire il servizio per lo unit test \u00e8 necessario uno staffaggio di testo.",
+              "Nessuno. \u00c8 possibile creare un'istanza di un servizio e testare l'unit\u00e0 da solo.",
+              "La classe TestBed \u00e8 necessaria per creare un'istanza del servizio."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "95bccbca328fdb369c8f0e72",
+            "question": "Qual \u00e8 la differenza tra canActivate e le protezioni del percorso CanLoad?",
+            "answer": "CanLoad viene usato all'avvio dell'app per consentire o negare l'aggiunta di route alla tabella di route. CanActivate viene utilizzato per gestire l'accesso ai percorsi nel momento in cui vengono richiesti.",
+            "explanation": "[CanActivate vs Canload](https://stackoverflow.com/questions/42026045/difference-between-angulars-canload-and-canactivate#:~:text=canActivate%20is%20used%20to%20prevent,not%20authorized%20to%20do%20so.) CanActivate impedisce l'accesso sui percorsi, CanLoad impedisce il caricamento lento.",
+            "hint": null,
+            "correctAnswer": [
+              "CanLoad viene usato all'avvio dell'app per consentire o negare l'aggiunta di route alla tabella di route. CanActivate viene utilizzato per gestire l'accesso ai percorsi nel momento in cui vengono richiesti."
+            ],
+            "options": [
+              "CanActivate viene utilizzato per controllare l'accesso. CanLoad viene utilizzato per precaricare i dati per il percorso.",
+              "CanLoad viene usato all'avvio dell'app per consentire o negare l'aggiunta di route alla tabella di route. CanActivate viene utilizzato per gestire l'accesso ai percorsi nel momento in cui vengono richiesti.",
+              "CanActivate e CanLoad fanno esattamente la stessa cosa.",
+              "CanLoad impedisce la consegna e il caricamento di un intero NgModule. CanActivate interrompe il routing a un componente in tale NgModule, ma tale modulo \u00e8 ancora caricato."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          },
+          {
+            "id": "7e8545d8d7637dddee704235",
+            "question": "A cosa serve la propriet\u00e0 outlet in questo oggetto definizione router?\n```ts\n{\n\tpath: 'document',\n\tcomponent: DocumentComponent,\n\toutlet: 'document-box'\n}\n```",
+            "answer": "Eravamo soliti prendere di mira un <router-outlet> con l'attributo name che corrisponde al valore stringa come percorso per il documentComponent di cui eseguire il rendering quando viene instradato.",
+            "explanation": "[Uscita angolare](https://angular.io/api/router/RouterOutlet) - ricontrolla la risposta",
+            "hint": null,
+            "correctAnswer": [
+              "Eravamo soliti prendere di mira un <router-outlet> con l'attributo name che corrisponde al valore stringa come percorso per il documentComponent di cui eseguire il rendering quando viene instradato."
+            ],
+            "options": [
+              "individuer\u00e0 tutte le istanze di <document-box> nel DOM e inserire un elemento DocumentComponent al loro interno durante la navigazione del percorso.",
+              "Dichiara che il DocumentComponent pu\u00f2 essere utilizzato come figlio per un <<document-box> oltre ad essere instradato a.",
+              "Eravamo soliti prendere di mira un <router-outlet> con l'attributo name che corrisponde al valore stringa come percorso per il documentComponent di cui eseguire il rendering quando viene instradato.",
+              "\u00c8 una fonte di energia per il router. (sicuramente non la risposta :P)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "7ed903210a4426bca0ab5de3",
+            "quizzId": "63a81213f574a5b346888e6c"
+          }
+        ]
       }
     ]
   },
   "meta": {
     "source": "angular/angular-quiz-it.md",
-    "language": "it",
-    "generatedAt": "2025-12-09T14:56:14.007113+00:00",
+    "languages": [
+      "it"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.027678+00:00",
     "warnings": [
       "Question 55 has no marked correct answers",
       "Question 61 has no marked correct answers",

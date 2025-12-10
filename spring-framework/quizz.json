@@ -1,0 +1,1615 @@
+{
+  "quizz": {
+    "id": "989c4b56d003b1d996a54144",
+    "slug": "spring-framework",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
+      {
+        "id": "989c4b56d003b1d996a54144-en",
+        "language": "en",
+        "title": "Spring Framework",
+        "description": "Seeded from spring-framework/spring-framework-quiz.md",
+        "questions": [
+          {
+            "id": "021162f65f381ca5c7740a5f",
+            "question": "How filters are used in Spring Web?",
+            "answer": "Filters are called before a request hits the DispatcherServlet. They allow for interception-style, chained processing of web requests for security, timeouts, and other purposes.",
+            "explanation": "[HandlerInterceptors vs. Filters in Spring MVC](https://www.baeldung.com/spring-mvc-handlerinterceptor-vs-filter). Also there is no such thing as DispatcherRequestServlet in Spring.",
+            "hint": null,
+            "correctAnswer": [
+              "Filters are called before a request hits the DispatcherServlet. They allow for interception-style, chained processing of web requests for security, timeouts, and other purposes."
+            ],
+            "options": [
+              "Filters are called before a request hits the DispatcherServlet. They allow for interception-style, chained processing of web requests for security, timeouts, and other purposes.",
+              "Filters are used with a checksum algorithm that will filter invalid bytes out of a byte stream request body and allow for processing of HTTP requests from the DispatcherRequestServlet.",
+              "Filters are used with a checksum algorithm that will filter invalid bytes out of an octet stream a multipart upload and allow for chained processing of WebDispatcherServlet requests.",
+              "Filters are used to validate request parameters out of the byte stream request body and allow for processing of requests from the DispatcherRequestServlet."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "dbbc7353bc0010df9fa6f656",
+            "question": "How is a resource defined in the context of a REST service?",
+            "answer": "It is an abstract concept that represents a typed object, data, relationships, and a set of methods that operate on it that is accessed via a URI.",
+            "explanation": "[Rest Service in Spring](https://spring.io/guides/tutorials/rest/)",
+            "hint": null,
+            "correctAnswer": [
+              "It is an abstract concept that represents a typed object, data, relationships, and a set of methods that operate on it that is accessed via a URI."
+            ],
+            "options": [
+              "A resource is the actual String literal that composes a URI that is accessed on a RESTful web service.",
+              "It is an abstract concept that represents a typed object, data, relationships, and a set of methods that operate on it that is accessed via a URI.",
+              "A REST service has a pool of resources composed of allocations of memory that allow a request to be processed.",
+              "A resource for a REST service is an explicit allocation of a thread or CPU cycles to allow a request to be processed."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "066e42d2eaf319da2f8d89d3",
+            "question": "Which of these is a valid Advice annotation?",
+            "answer": "@AfterReturning",
+            "explanation": "[Spring Advice Type Annotation](https://www.baeldung.com/spring-aop-advice-tutorial)",
+            "hint": null,
+            "correctAnswer": ["@AfterReturning"],
+            "options": ["@AfterError", "@AfterReturning", "@AfterException", "@AfterExecution"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "0064d7b44500f01ba98b6e7e",
+            "question": "What does a ViewResolver do?",
+            "answer": "It generates a view by mapping a logical view name returned by a controller method to a view technology.",
+            "explanation": "[View Resolution in Spring MVC](https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-servlet/viewresolver.html)",
+            "hint": null,
+            "correctAnswer": [
+              "It generates a view by mapping a logical view name returned by a controller method to a view technology."
+            ],
+            "options": [
+              "It supports internationalization of web applications by detecting a user's locale.",
+              "It generates a view by mapping a logical view name returned by a controller method to a view technology.",
+              "It creates a unique view determined by the uers's browser type,supporting cross-browser compatibility.",
+              "It maps custom parameters to SQL views in the database, allowing for dynamic content to be created in the response."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "e47803f9de3f5e620fcb9371",
+            "question": "How are Spring Data repositories implemented by Spring at runtime?",
+            "answer": "A JDK proxy instance is created, which backs the repository interface, and a MethodInterceptor intercepts calls to the instance and routes as required.",
+            "explanation": "[Explained QnA](https://stackoverflow.com/questions/38509882/how-are-spring-data-repositories-actually-implemented)",
+            "hint": null,
+            "correctAnswer": [
+              "A JDK proxy instance is created, which backs the repository interface, and a MethodInterceptor intercepts calls to the instance and routes as required."
+            ],
+            "options": [
+              "Spring automatically generated code for you based on your YAML config that defined a MethodInterceptor chain that intercept calls to the instance and computed SQL on the fly.",
+              "A JDK proxy instance is created, which backs the repository interface, and a MethodInterceptor intercepts calls to the instance and routes as required.",
+              "The Spring JDK proxy creates a separate runtime process that acts as an intermediary between the database and the Web server, and intercepts calls to the instance and handles requests.",
+              "Spring automatically generated code for you based on your XML config files that define a SpringMethodAutoGeneration factory that intercepts calls to the instance and creates dynamic method that computer SQL on the fly."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "61e0742fe6dd1781f9369f13",
+            "question": "What is SpEL and how is it used in Spring?",
+            "answer": "SpEL(Spring Expression Language) supports boolean and relational operators and regular expressions, and is used for querying a graph of objects at runtime.",
+            "explanation": "[Spring Expression Documentation](https://docs.spring.io/spring-framework/docs/3.0.x/reference/expressions.html)",
+            "hint": null,
+            "correctAnswer": [
+              "SpEL(Spring Expression Language) supports boolean and relational operators and regular expressions, and is used for querying a graph of objects at runtime."
+            ],
+            "options": [
+              "SpEL(Spring Expression Language) runs in the JVM and can act as a drop-in replacement for Groovy or other languages.",
+              "SpEL(Spring Expression Language) supports boolean and relational operators and regular expressions, and is used for querying a graph of objects at runtime.",
+              "SpEL(Spring Expression Language) allows you to build, configure,and execute tasks such as building artifacts and downloading object dependencies.",
+              "SpEL(Spring Expression Language) natively transpiles one JVM language to another, allowing for greater flexibility."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "f403f86f9ac37d155e3d2e67",
+            "question": "The process of linking aspects with other objects to create an advised object is called",
+            "answer": "weaving",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["weaving"],
+            "options": ["dynamic chaining", "banding", "weaving", "interleaving"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "e4a178dc7c60ac45187056cb",
+            "question": "How are JDK Dynamic proxies and CGLIB proxies used in Spring?",
+            "answer": "JDK Dynamic proxy can proxy only interface, so it is used if the target implements at least one interface. A CGLIB proxy can create a proxy by subclassing and is used if the target does not implement an interface.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "JDK Dynamic proxy can proxy only interface, so it is used if the target implements at least one interface. A CGLIB proxy can create a proxy by subclassing and is used if the target does not implement an interface."
+            ],
+            "options": [
+              "JDK Dynamic proxy can proxy only interface, so it is used if the target implements at least one interface. A CGLIB proxy can create a proxy by subclassing and is used if the target does not implement an interface.",
+              "Only JDK Dynamic proxies are used in the Spring Bean Lifecycle. CGLIB proxies are used only for integrating with other frameworks.",
+              "Only CGLIB proxies are used in the Spring Bean Lifecycle. JDK Dynamic proxies are used only for integrating with other frameworks.",
+              "JDK Dynamic proxy can only using an abstract class extended by a target. A CGLIB proxy can create a proxy through bytecode interweaving and is used if the target does not extend an abstract class."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "2a6de8c5af429d9e055caae5",
+            "question": "Which of these is not a valid method on the JoinPoint interface?",
+            "answer": "getExceptions()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["getExceptions()"],
+            "options": ["getArgs()", "getExceptions()", "getSignature()", "getTarget()"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "6cbbfe6926f202b265ff4ff1",
+            "question": "In what order do the @PostConstruct annotated method, the init-method parameter method on beans and the afterPropertiesSet() method execute?",
+            "answer": "1. @PostConstruct 2. afterPropertiesSet() 3. init-method",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["1. @PostConstruct 2. afterPropertiesSet() 3. init-method"],
+            "options": [
+              "1. afterPropertiesSet() 2. init-method 3. @PostConstruct",
+              "1. @PostConstruct 2. afterPropertiesSet() 3. init-method",
+              "1. init-method 2. afterPropertiesSet() 3. @PostConstruct",
+              "You cannot use these methods together-you must choose only one."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "f4cb90f65bc163957b54249d",
+            "question": "What is the function of the `@Transactional` annotation at the class level?",
+            "answer": "It creates a proxy that implements the same interface(s) as the annotated class, allowing Spring to inject behaviors before, after, or around method calls into the object being proxied.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It creates a proxy that implements the same interface(s) as the annotated class, allowing Spring to inject behaviors before, after, or around method calls into the object being proxied."
+            ],
+            "options": [
+              "It's a transaction attribute configured by `spring.security.transactions.xml` config file that uses Spring's transaction implementation and validation code.",
+              "It's a transaction that must actively validate by the bytecode of a transaction using Spring's `TransactionBytecodeValidator` class. Default Transaction behavior rolls back on validation exception but commits on proper validation",
+              "It creates a proxy that implements the same interface(s) as the annotated class, allowing Spring to inject behaviors before, after, or around method calls into the object being proxied.",
+              "It's a transaction that must be actively validated by Spring's `TransactionValidator` class using Spring's transaction validation code. Default Transaction behavior rolls back on validation exception."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "fd103f58c57c65eb08a7f7cd",
+            "question": "Which is a valid example of the output from this code (ignoring logging statements) ?\n```java\n@SpringBootApplication\npublic class App {\n     public static void main(String args[]) {\n          SpringApplication.run(App.class, args);\n          System.out.println(\"startup\");\n     }\n}\npublic class Print implements InitializingBean {\n     @Override\n     public void afterPropertiesSet() throws Exception {\n          System.out.println(\"init\");\n     }\n}\n```",
+            "answer": "startup",
+            "explanation": "init\nExplanation: SpringApplication.run method returns the created Context, so main method will continue running and print \"startup\". Class Print is not a Spring Bean, because it is not annotated with @Component, so it will not be initialized.",
+            "hint": null,
+            "correctAnswer": ["startup"],
+            "options": ["Nothing will print", "startup", "init", "startup"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "0aff4db9526426381f3e527b",
+            "question": "Which println statement would you remove to stop this code throwing a null pointer exception?\n```java\n@Component\npublic class Test implements InitializingBean {\n     @Autowired\n     ApplicationContext context;\n     @Autowired\n     static SimpleDateFormat formatter;\n     @Override\n     public void afterPropertiesSet() throws Exception {\n          System.out.println(context.containsBean(\"formatter\") + \" \");\n          System.out.println(context.getBean(\"formatter\").getClass());\n          System.out.println(formatter.getClass());\n          System.out.println(context.getClass());\n     }\n}\n@Configuration\nclass TestConfig {\n     @Bean\n     public SimpleDateFormat formatter() {\n          return new SimpleDateFormat();\n     }\n}\n```",
+            "answer": "formatter.getClass()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["formatter.getClass()"],
+            "options": [
+              "formatter.getClass()",
+              "context.getClass()",
+              "context.getBean(\"formatter\").getClass()",
+              "context.containsBean(\"formatter\")"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "5a3ee953346a44c3b965c0f2",
+            "question": "What is the root interface for accessing a Spring bean container?",
+            "answer": "BeanFactory",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["BeanFactory"],
+            "options": [
+              "SpringInitContainer",
+              "ResourceLoader",
+              "ApplicationEventPublisher",
+              "BeanFactory"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "b8809dc86eaecb023104f0bd",
+            "question": "Which annotation can be used within Spring Security to apply method level security?",
+            "answer": "@Secured",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["@Secured"],
+            "options": ["@Secured", "@RequiresRole", "@RestrictedTo", "@SecurePath"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "274d9e8cb881bc314bdf186e",
+            "question": "What is the result of calling the map controller method using the HTTP request GET localhost:8080/map?foo=foo&bar=bar ?\n```java\n@RestController\npublic class SampleController {\n     @RequestMapping(\"/map\")\n     public String map(@RequestParam(\"bar\") String foo, @RequestParam(\"foo\") String bar) {\n          return bar + foo;\n     }\n}\n```",
+            "answer": "foobar",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["foobar"],
+            "options": [
+              "An InvalidParameterNameMappingException is thrown at runtime.",
+              "barfoo",
+              "foobar",
+              "A status code of 400 Bad Request is returned."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "3d233df2beb5e1cce3938bc7",
+            "question": "What is the purpose of the @Lazy annotation and why would you use it?",
+            "answer": "It can be applied to a bean so that the bean is not created and injected until it is needed. It can help speed up startup time for your application.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It can be applied to a bean so that the bean is not created and injected until it is needed. It can help speed up startup time for your application."
+            ],
+            "options": [
+              "It prevents a bean from being created and injected until you run a specific CLI command. It reduces complexity in the application.",
+              "It can be applied to a bean so that the bean is not persisted in the database. It reduces the number of database operations.",
+              "It can be applied to a bean so that the bean is not created and injected until it is needed. It can help speed up startup time for your application.",
+              "It prevents a bean from being created and injected until it receives a HTTP request to a callback hook. It reduces disk footprint."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "6194d140c4f2c259a7bc5e57",
+            "question": "What is dependency injection?",
+            "answer": "a method by which objects define dependencies they need as abstractions that allows the framework to instantiate and configure them in a central location at runtime.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "a method by which objects define dependencies they need as abstractions that allows the framework to instantiate and configure them in a central location at runtime."
+            ],
+            "options": [
+              "a method by which objects define dependencies they need as abstractions that allows the framework to instantiate and configure them in a central location at runtime.",
+              "a paradigm where dependent code is injected into the bytecode of a Java application on a remote server.",
+              "a way of injecting remote dependencies into a pre-packaged JAR file from the file system.",
+              "a way of injecting remote dependencies into a pre-packaged WAR file from the file system."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "f5b02b6a8cd43681b8553b27",
+            "question": "What is a RESTful web service?",
+            "answer": "Representational State Transfer an architectural style for creating web services that includes client-server architecture, statelessness, cacheability, a layered system, and a uniform interface.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Representational State Transfer an architectural style for creating web services that includes client-server architecture, statelessness, cacheability, a layered system, and a uniform interface."
+            ],
+            "options": [
+              "Reactive Enterprise Status Transfer is a web service comprising a set of guidelines and technical constraints for web services that monitor and alert of a set of mission-critical resources.",
+              "Representational State Transfer an architectural style for creating web services that includes client-server architecture, statelessness, cacheability, a layered system, and a uniform interface.",
+              "Redundant Enumerated State Transfer is a web service that provides redundancy in the case of failure and outlines technical constraints for web services that have access to resources.",
+              "Reactive Enterprise State Transfer is a web service comprising a set of guidelines and technical constraints for web services y that have access to resources and are async in nature."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "0bbd177e42781880183d0fb6",
+            "question": "What happens when a class is annotated with the @Controller annotation?",
+            "answer": "A controller bean definition is defined in the servlet's WebApplicationContext. The class is marked as a web component, and you can map requests to controller methods.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "A controller bean definition is defined in the servlet's WebApplicationContext. The class is marked as a web component, and you can map requests to controller methods."
+            ],
+            "options": [
+              "A controller bean definition is defined in the servlet's WebApplicationContext. The class is marked as a web component, and you can map requests to controller methods.",
+              "A controller bean definition is defined in the Web Context, and Web Servlet is marked as a component that reads mapped controller requests from an XML config file.",
+              "A controller bean definition is defined in the Tomcat Context, and the Controller Servlet is marked as a web component that reads mapped controller requests from a YAML config file.",
+              "A controller bean definition is defined in the Servlet Context, and the Controller Servlet is marked as a component that reads mapped controller requests from an XML config file."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "c545b20c0243c5f4046851f2",
+            "question": "Which property can be used to change the port of a Spring application?",
+            "answer": "server.port",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["server.port"],
+            "options": ["Port", "spring.port", "spring.settings.port", "server.port"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "3aad3ce6ceaef6271a19993d",
+            "question": "What is the purpose of the @ResponseBody annotation?",
+            "answer": "to indicate whether a handler method return value should be bound to the web response body in servlet environments",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "to indicate whether a handler method return value should be bound to the web response body in servlet environments"
+            ],
+            "options": [
+              "to validate the char array contained in a response to ensure that it is a valid character encoding",
+              "to generate a local byte stream from the body of a response that allows a request to be scanned for security risks",
+              "to indicate whether a handler method return value should be bound to the web response body in servlet environments",
+              "to ensure a ThreadLocal byte stream that allows a response to be encoded for reading directly into a socket stream"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "538a7be4b2745fddadeed0e3",
+            "question": "How are mocking frameworks such as Mockito used with Spring?",
+            "answer": "Mockito can use annotations or factory methods to create mock objects that may be injected into tests in place of dependencies. The behavior of mocks can be explicitly configured.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Mockito can use annotations or factory methods to create mock objects that may be injected into tests in place of dependencies. The behavior of mocks can be explicitly configured."
+            ],
+            "options": [
+              "Mockito will spin up a mock web service hosted in a Docker container that can respond to HTTP requests to mock out third-party APIs.",
+              "Mockito can use annotations or factory methods to create mock objects that may be injected into tests in place of dependencies. The behavior of mocks can be explicitly configured.",
+              "Mockito will create mock users to repeatedly perform requests against your Spring application to test your app's ability to take load.",
+              "Mockito will spin up a mock web service hosted in a Docker container that can respond to RPC calls to mock out remote resources."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "ff3b1420ecfa957b4ed26b66",
+            "question": "What is the name of the central servlet that dispatches requests to controllers?",
+            "answer": "DispatcherServlet",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["DispatcherServlet"],
+            "options": [
+              "DispatchingDelegatorServlet",
+              "DispatcherServlet",
+              "Router",
+              "FrontControllerServlet"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "a085ba2cf9da34e0670e8e52",
+            "question": "What is the purpose of the Spring IoC (Inversion of Control) container?",
+            "answer": "It instantiates and configures objects, supplied at runtime, to classes that define them as a dependency.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It instantiates and configures objects, supplied at runtime, to classes that define them as a dependency."
+            ],
+            "options": [
+              "It instantiates and configures objects, supplied at runtime, to classes that define them as a dependency.",
+              "It allows the front-end code to manage the ResponseBody objects provided by a back-end REST API.",
+              "It allows a database to define business objects via a shared schema at compile time.",
+              "It facilitates a remote server to configure a local application."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "6edf7b446539f328a9dc2135",
+            "question": "What is component scanning?",
+            "answer": "feature that scans packages for classes with specific annotations and, when found, creates their bean definitions within the IoC container",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "feature that scans packages for classes with specific annotations and, when found, creates their bean definitions within the IoC container"
+            ],
+            "options": [
+              "feature that scans packages for classes with specific annotations and, when found, creates their bean definitions within the IoC container",
+              "paradigm where bytecode is actively scanned to identify additional optimizations to inject into components in the application context",
+              "a method by which cloud repositories are scanned to identify components for injection into an IoC container",
+              "a method by which binary data in a database is searched to identify components for injection into the IoC container"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "604c45b539d1d84b2968c6c9",
+            "question": "What does @SpringBootApplication do?",
+            "answer": "This compound annotation applies the @Bootable, @Springify, and @StandardConfig annotations that launch a CLI tool after launching the Spring Boot WAR file that will guide you through a series of prompts to set up your app.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "This compound annotation applies the @Bootable, @Springify, and @StandardConfig annotations that launch a CLI tool after launching the Spring Boot WAR file that will guide you through a series of prompts to set up your app."
+            ],
+            "options": [
+              "This annotation takes the String literal passed into the annotation as a parameter and automatically generates all the code for your application as per the passed in template parameter.",
+              "This compound annotation applies the @Bootable, @Springify, and @StandardConfig annotations that launch a CLI tool after launching the Spring Boot WAR file that will guide you through a series of prompts to set up your app.",
+              "This annotation scans the provided spring-boot-config-construction.yaml file in your root directory and automatically generates all the code for your application as defined in the YAML file."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "f1ebf4a26e4264846d58e2ae",
+            "question": "How does Spring Data facilitate queries against a datastore?",
+            "answer": "Queries are derived from the signatures of methods on a Spring Data repository that contain keywords in their name for constructing the query logic.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Queries are derived from the signatures of methods on a Spring Data repository that contain keywords in their name for constructing the query logic."
+            ],
+            "options": [
+              "Queries are explicitly coded in repository implementations using the Spring Data CriteriaBuilder.",
+              "Query metadata is stored in the underlying datastore and retrieved at runtime per repository.",
+              "Queries are derived from the signatures of methods on a Spring Data repository that contain keywords in their name for constructing the query logic.",
+              "A spring-data-queries.xml file contains queries within entity tags that specify the query logic for each repository."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "53fb85bd88898a6731b1c050",
+            "question": "How does Spring generate bean names for classes annotated with @Component that do not specify a name?",
+            "answer": "It uses the short name of the class with the first letter in lowercase.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It uses the short name of the class with the first letter in lowercase."
+            ],
+            "options": [
+              "It uses the short name of the class with the first letter in lowercase.",
+              "It uses the short name of the class.",
+              "It uses the short name of the class in uppercase.",
+              "It uses the canonical name of the class in lowercase."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "7fece838ab3de463aa66d3d2",
+            "question": "What is the delegating filter proxy?",
+            "answer": "It's the servlet filter proxy delegating to a filter bean specified in web.xml. All calls to the filter proxy will be delegated to that servlet filter bean.",
+            "explanation": "[Overview and Need for DelegatingFilterProxy in Spring](https://www.baeldung.com/spring-delegating-filter-proxy)",
+            "hint": null,
+            "correctAnswer": [
+              "It's the servlet filter proxy delegating to a filter bean specified in web.xml. All calls to the filter proxy will be delegated to that servlet filter bean."
+            ],
+            "options": [
+              "It's the servlet filter chain proxy that handles all requests to the route defined in spring.security.xml. All calls to the filter proxy are forwarded to the ErrorDispatcherServlet.",
+              "It's the servlet filter chain that handles requests to the route defined in spring.security.factories. All calls to the filter proxy y are forwarded to the ErrorServlet.",
+              "It's the servlet filter proxy delegating to a filter bean specified in web.xml. All calls to the filter proxy will be delegated to that servlet filter bean.",
+              "It's the web servlet daemon filter proxy that delegates to a bean specified in spring.security.factories. All calls to the filter proxy that do not contain a proper route will return an error."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "b968cf6c14cd1b07382169f3",
+            "question": "What value does Spring Boot Actuator provide?",
+            "answer": "It helps monitor and manage a Spring Boot application by providing endpoints such as health checks, auditing, metrics gathering, and HTTP tracing.",
+            "explanation": "[Spring Boot Actuator](https://www.baeldung.com/spring-boot-actuators)",
+            "hint": null,
+            "correctAnswer": [
+              "It helps monitor and manage a Spring Boot application by providing endpoints such as health checks, auditing, metrics gathering, and HTTP tracing."
+            ],
+            "options": [
+              "It helps monitor and manage a Spring Boot application by providing endpoints such as health checks, auditing, metrics gathering, and HTTP tracing.",
+              "It provides out-of-the-box functionality that integrates with third-party metrics platforms to automatically scale up and down the number of threads in threadpools.",
+              "It's a CLI that allows you to modify the configuration of a running Spring Boot application without the need for restarting or downtime.",
+              "It provides out-of-the-box functionality that integrates with third-party metrics platforms to automatically scale up and down the number of instances of the Spring Boot application."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "b6c7836b342b0e6e845c1c05",
+            "question": "What is the purpose of the @ContextConfiguration annotation in a JUnit Test?",
+            "answer": "It defines metadata at the class-level to determine how to load or configure an ApplicationContext in Spring integration tests.",
+            "explanation": "[@ContextConfiguration Example in Spring Test](https://www.concretepage.com/spring-5/contextconfiguration-example-spring-test)",
+            "hint": null,
+            "correctAnswer": [
+              "It defines metadata at the class-level to determine how to load or configure an ApplicationContext in Spring integration tests."
+            ],
+            "options": [
+              "It introspects the local machine and automatically provisions resources based on certain contextual configuration files.",
+              "It automatically generates comments for annotated classes on autowired dependencies to provide additional context about dependencies.",
+              "It defines metadata at the class-level to determine how to load or configure an ApplicationContext in Spring integration tests.",
+              "It automatically generates JavaDocs for annotated classes to provide additional context about the purpose of the class."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "ea65a26e6513cd141dabbd36",
+            "question": "How are authentication and authorization different?",
+            "answer": "Authentication is validating that users are who they claim to be. Authorization is granting access to specific resources and functions.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Authentication is validating that users are who they claim to be. Authorization is granting access to specific resources and functions."
+            ],
+            "options": [
+              "Authentication is the act of granting access to specific resources and functions based on config settings. Authorization is the act of introspecting a user's credentials to ensure they are not impersonating another user.",
+              "Authentication is the act of verifying certain resources and functions are actually valid. Authorization is the act of verifying a user's credentials have not expired.",
+              "Authentication is the act of verifying that certain resources and functions actually exist in the database. Authorization is the act of verifying a user's credentials to ensure they are valid.",
+              "Authentication is validating that users are who they claim to be. Authorization is granting access to specific resources and functions."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "4a390cfb4ea59eabf5624bbe",
+            "question": "What is the purpose of the @RequestBody annotation?",
+            "answer": "to indicate whether an annotated handler method parameter should be bound to the web request body, which is converted by an HttpMessageConverter",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "to indicate whether an annotated handler method parameter should be bound to the web request body, which is converted by an HttpMessageConverter"
+            ],
+            "options": [
+              "to create a ThreadLocal byte stream that allows a request to be encoded for reading directly into a database",
+              "to automatically generate a ThreadLocal byte stream from the body of a request that allows a request to scanned for security risks",
+              "to indicate whether an annotated handler method parameter should be bound to the web request body, which is converted by an HttpMessageConverter",
+              "to automatically validate the characters contained in a request to ensure that they are a valid character encoding"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "005fde95049a6151b6b22386",
+            "question": "What is the DispatcherServlet and what is its function?",
+            "answer": "It is a servlet that dispatches HTTP requests to registered handlers/controllers for processing.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It is a servlet that dispatches HTTP requests to registered handlers/controllers for processing."
+            ],
+            "options": [
+              "The DispatcherServlet process daemon assigns a separate Web Servlet Container process to each HTTP request that comes into the web server.",
+              "It is a servlet that dispatches HTTP requests to registered handlers/controllers for processing.",
+              "The DispatcherServlet API assigns a separate Web Servlet Node process to each additional HTTP request that comes into the web server.",
+              "It is a servlet that dispatches an array of background daemon processes that allocate memory and CPU cycles to each request."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "b51df2e5295a30629822a47c",
+            "question": "What is Spring Boot autoconfiguration?",
+            "answer": "It's an opinionated, intelligent method of introspecting an app to configure beans that are likely to be needed. This configuration can be overridden over time with manual configuration.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It's an opinionated, intelligent method of introspecting an app to configure beans that are likely to be needed. This configuration can be overridden over time with manual configuration."
+            ],
+            "options": [
+              "It triggers a local automated review of configuration files such as web.xml and detects possible security issues or automatically resolves circular dependencies.",
+              "It triggers an automated review of configuration by a web-based agent that reviews your existing web.xml file and detects possible security issues.",
+              "It's an opinionated, intelligent method of introspecting an app to configure beans that are likely to be needed. This configuration can be overridden over time with manual configuration.",
+              "It provides plug-in functionality while editing your web.xml and other config files that will autocomplete common dependencies while typing."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "1c7e1cda26a28bbeeb3a9c54",
+            "question": "Which are valid steps to take to enable JPA in Spring Boot?",
+            "answer": "Add an @EnableJpaRepositories annotation to your configuration class and create a Spring Data Repository.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Add an @EnableJpaRepositories annotation to your configuration class and create a Spring Data Repository."
+            ],
+            "options": [
+              "Add an @EnableJpaRepositories annotation to your configuration class and create a Spring Data Repository.",
+              "Add an @EnableJpaEntities annotation to your configuration class, create a Spring Data YAML configuration file, and manually update the Spring XML config files to define your repository locations.",
+              "Add an @EnableDbFunctionality annotation to your configuration class, create a Spring Data XML configuration file, and manually update the Spring factories file to define your repositories.",
+              "Add an @InitJpaEntities annotation to your configuration class, create a Spring Data properties configuration file, and manually update the Spring startup parameters to define your repository locations."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "d0e275ef3b4c8bef50caa21e",
+            "question": "What is a transaction in the context of Spring Data?",
+            "answer": "a sequence of actions representing a single unit of work managed as a single operation that can be either committed or rolled back",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "a sequence of actions representing a single unit of work managed as a single operation that can be either committed or rolled back"
+            ],
+            "options": [
+              "a version-controlled schema change that is applied to a database",
+              "a sequence of actions representing a single unit of work managed as a single operation that can be either committed or rolled back",
+              "an encoded message and response between various shards of a database",
+              "an exchange or interaction between various worker nodes in a multithreaded environment"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "6e939d23dfb8fb0814aaa22d",
+            "question": "Modularization of a concern that cuts across multiple classes is known as a(n)`____`.",
+            "answer": "aspect",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["aspect"],
+            "options": ["multiclass", "aspect", "crosscut", "sidecut"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "2e172461c97453f90a223b5c",
+            "question": "How do you inject a dependency into a Spring bean?",
+            "answer": "Any of the above.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Any of the above."],
+            "options": [
+              "Use field injection.",
+              "Annotate a Setter method with the @Autowired annotation.",
+              "Specify parameters in the constructor with an optional @Autowired annotation.",
+              "Any of the above."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "6d8578ca8fad722db29266fa",
+            "question": "Consider the properties file application.properties. How would you load the property my.property?\n```java\nmy.property=Test\n```",
+            "answer": "D",
+            "explanation": "```java\n@Prop(\"${my.property}\")\nprivate String val;\n```\n```java\n@GetVal(\"my.property\")\nprivate String val;\n```\n```java\n@GetProperty(\"${my.property}\")\nprivate String val;\n```\n```java\n@Value(\"${my.property}\")\nprivate String val;\n```",
+            "hint": null,
+            "correctAnswer": ["D"],
+            "options": ["A", "B", "C", "D"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "ed8d41bff81e6d0e3b47d0ac",
+            "question": "What is a bean in the context of Spring?",
+            "answer": "a managed dependency defined by configuration metadata that can be injected into downstream classes",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "a managed dependency defined by configuration metadata that can be injected into downstream classes"
+            ],
+            "options": [
+              "a managed dependency defined by configuration metadata that can be injected into downstream classes",
+              "a binary-encoded, agnostic, named entity that is translatable between different data formats",
+              "a payload that is transferable between different services in a Service-Oriented Architecture (SOA)",
+              "a discrete piece of data that is encoded in a binary format for persisting to a file system"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "ea1365420a12f9a73275c45e",
+            "question": "Which property is given precedence by Spring?",
+            "answer": "profile-specific application-{profile}.properties files",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["profile-specific application-{profile}.properties files"],
+            "options": [
+              "application properties located in an application.properties file outside the application.jar",
+              "@PropertySource annotations on configuration classes",
+              "profile-specific application-{profile}.properties files",
+              "application properties located in an application.properties file inside the application.jar"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "3087c7b36f52c2ec5f711e97",
+            "question": "In the Spring Bean lifecycle pictured, what should the third step of the process be?\n![diagram](images/spring-framework_q44.png)",
+            "answer": "Instance bean objects",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Instance bean objects"],
+            "options": [
+              "Persist bean definitions into a database",
+              "Instance bean objects",
+              "De-normalize bean definition",
+              "Use reflection to inject bean objects into the servlet container"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [
+              {
+                "id": "8006e6c99c99dc049b581258",
+                "url": "/Users/arslankaleem/Workspace/Junk/linkedin-skill-assessments-quizzes/spring-framework/images/spring-framework_q44.png",
+                "type": "question"
+              }
+            ],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "ecef5d3029307d1f3541ff6a",
+            "question": "What Spring Boot property is used to set the logging level for the entire application in the application.properties file?",
+            "answer": "logging.level.root",
+            "explanation": "[Logging in Spring Boot](https://www.baeldung.com/spring-boot-logging)",
+            "hint": null,
+            "correctAnswer": ["logging.level.root"],
+            "options": ["logging.settings", "log.level", "root.logger.level", "logging.level.root"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "7454a38390676bc79c240563",
+            "question": "What is a Spring bean uniquely identified?",
+            "answer": "a unique String name",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["a unique String name"],
+            "options": [
+              "an autogenerated UUID",
+              "a unique String name",
+              "an auto-incremented Integer ID",
+              "an ID derived from its location in memory"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "383d889a9cbe49b6de467b9d",
+            "question": "What is the difference between a JAR and a WAR distribution in Spring Boot?",
+            "answer": "Spring Boot can create a self-executable JAR file that contains all the dependencies and an embedded Servlet container. A WAR file has to be deployed to an existing web container such as Tomcat.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Spring Boot can create a self-executable JAR file that contains all the dependencies and an embedded Servlet container. A WAR file has to be deployed to an existing web container such as Tomcat."
+            ],
+            "options": [
+              "Spring Boot can create a self-executable WAR file that runs without needing a servlet container. A JAR file has to be deployed to an existing web container such as Tomcat with separate files for dependencies.",
+              "Spring Boot can create a JAR file that contains bytecode that interacts directly with the OS without needing a servlet container. A WAR file has to be deployed to an existing web container such as Tomcat with separate files for dependencies.",
+              "The Spring Boot JAR file will be deployed to a Servlet container such as Tomcat on an existing running web server locally. The WAR file will be deployed to a cloud-based servlet container.",
+              "Spring Boot can create a self-executable JAR file that contains all the dependencies and an embedded Servlet container. A WAR file has to be deployed to an existing web container such as Tomcat."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "4b87e13e5221a3b89972a1a5",
+            "question": "How does the transaction propagation setting impact the behavior of transactions?",
+            "answer": "It enforces that a logical transaction scope is created for each method that determines rollback-only status, with an outer transaction scope being logically independent from the inner transaction scope.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It enforces that a logical transaction scope is created for each method that determines rollback-only status, with an outer transaction scope being logically independent from the inner transaction scope."
+            ],
+            "options": [
+              "It ensures that transactions that are committed to the database are propagated to all the shards of a clustered database system.",
+              "It enforces that a logical transaction scope is created for each method that determines rollback-only status, with an outer transaction scope being logically independent from the inner transaction scope.",
+              "It guarantees that transactions that are submitted to the database cluster are propagated to all the nodes of a clustered database cloud.",
+              "None of the above"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "5fad81989623de6e0ab84334",
+            "question": "What is printed when this code is run as a @SpringBootApplication?\n```java\n@Component\npublic class Test implements InitializingBean {\n     @Autowired\n     ApplicationContext context;\n     private TestService service;\n     public void setService(TestService service) {\n          this.service = service;\n     }\n     @Override\n     public void afterPropertiesSet() throws Exception {\n          System.out.print(context.containsBean(\"testService\") + \" \");\n          System.out.println(service.getClass());\n     }\n}\n@Service\nclass TestService {}\n```",
+            "answer": "a null pointer stacktrace",
+            "explanation": "Explanation: missing `@Autowired` on `private TestService service` or on the setter",
+            "hint": null,
+            "correctAnswer": ["a null pointer stacktrace"],
+            "options": [
+              "a null pointer stacktrace",
+              "true null",
+              "true package.TestService",
+              "false package.TestService"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "3d68334b277e79ba44dd8c3b",
+            "question": "To register a custom filter that applies only to certain URL patterns, you should remove the **\\_** annotation from the filter class and register a @Bean of type `_` in Spring @Configuration.",
+            "answer": "@Component; FilterRegistrationBean",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["@Component; FilterRegistrationBean"],
+            "options": [
+              "@RequestMapping; WebRequest",
+              "@Controller; URLFilter",
+              "@WebFilter; ServletContextInitializer",
+              "@Component; FilterRegistrationBean"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "f98459a12e8dbbe1321bfb2f",
+            "question": "What is the correct term for each definition bellow?\n1. A predicate that matches join points.\n2. A point during the execution of a program, such as the execution of a method or the handling of an exception.\n3. An action taken by an aspect at a particular join point.",
+            "answer": "&shy;",
+            "explanation": "```\n1. Pointcut\n2. Advice\n3. Join point\n```\n```\n1. Join point\n2. Pointcut\n3. Advice\n```\n```\n1. Advice\n2. Pointcut\n3. Join point\n```\n```\n1. Pointcut\n2. Join point\n3. Advice\n```",
+            "hint": null,
+            "correctAnswer": ["&shy;"],
+            "options": ["&shy;", "&shy;", "&shy;", "&shy;"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "ef901b71b0692e9141b890db",
+            "question": "How should passwords be stored?",
+            "answer": "Passwords should be hashed using an adaptive one-way function such as bcrypt.",
+            "explanation": "Explanation: sha-1 is not considered secure anymore: https://en.wikipedia.org/wiki/SHA-1#Attacks . With bcrypt you can select more complex hashes https://en.wikipedia.org/wiki/Bcrypt",
+            "hint": null,
+            "correctAnswer": [
+              "Passwords should be hashed using an adaptive one-way function such as bcrypt."
+            ],
+            "options": [
+              "Passwords should be hashed using an adaptive one-way function such as bcrypt.",
+              "Passwords can be stored in a BASE64 encoded format if they are stored in a private database.",
+              "Passwords should be salted and hashed using the MD5 algorithm.",
+              "Passwords should be hashed using the SHA-1 algorithm, then salted to provide defence against rainbow table attacks."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "3b2105c97525538ae3de1264",
+            "question": "What methods does this Pointcut expression reference?\n`@target(com.linkedin.annotation.Loggable)`",
+            "answer": "any join point where the target object has a @Loggable annotation",
+            "explanation": "[Difference between @target and @within (Spring AOP)](https://stackoverflow.com/questions/51124771/difference-between-target-and-within-spring-aop)",
+            "hint": null,
+            "correctAnswer": ["any join point where the target object has a @Loggable annotation"],
+            "options": [
+              "any join point where the target object has a @Loggable annotation",
+              "any join point where the executing method has a @Loggable annotation",
+              "any method that implements Loggable",
+              "any method that extends Loggable"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "75180756c58a696b30f91889",
+            "question": "What is printed when this code is run as a @SpringBootApplication?\n```java\n@Component\npublic class Test implements InitializingBean {\n     @Autowired\n     ApplicationContext context;\n     @Autowired\n     SimpleDateFormat formatter;\n     @Override\n     public void afterPropertiesSet() throws Exception {\n          System.out.println(context.containsBean(\"formatter\"));\n          System.out.println(formatter.getClass());\n     }\n}\n@Configuration\nclass TestConfig2 {\n    @Bean\n    public final SimpleDateFormat formatter() {\n        return new SimpleDateFormat();\n    }\n}\n```",
+            "answer": "a BeanDefinitionParsingException stacktrace",
+            "explanation": "&emsp; class java.text.SimpleDateFormat <br />\n&emsp; SimpleDateFormat <br />\nExplanation: `@Bean`-method in `@Configuration` must be overridable. Remove the `final` keyword to fix.",
+            "hint": null,
+            "correctAnswer": ["a BeanDefinitionParsingException stacktrace"],
+            "options": [
+              "true <br />",
+              "true <br />",
+              "a NullPointerException stacktrace",
+              "a BeanDefinitionParsingException stacktrace"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "d544074b3dea3fb16e253512",
+            "question": "What is the purpose of a web application context?",
+            "answer": "It provides configuration for a web application that is read-only while running. Also, it adds a **getServletContext()** method and defines an attribute name to which the root context must be bound in the bootstrap process.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It provides configuration for a web application that is read-only while running. Also, it adds a **getServletContext()** method and defines an attribute name to which the root context must be bound in the bootstrap process."
+            ],
+            "options": [
+              "Configures a web application that is able to be deleted and re-created during runtime through hot swap. It adds a **recreateContext()** method and defines a root WebDaemon that must be bound to in the bootstrap process.",
+              "It configures a Spring application that is able to be modified on the fly during runtime through bytecode re-encoding. Also it adds an **updateContext()** method and defines a root WebServlet that must be bound to in the bootstrap process.",
+              "It provides configuration for a web application that is read-only while running. Also, it adds a **getServletContext()** method and defines an attribute name to which the root context must be bound in the bootstrap process.",
+              "It provides configuration for a Spring application that is updatable on the fly during runtime through bytecode weaving. Also it adds an **updateServletContext()** method and defines a root servlet that must be bound to in the bootstrap process."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "8a04cd8f3d4e40403b9384ad",
+            "question": "What is Spring AOP?",
+            "answer": "Aspect-Oriented Programming enables the modularization of cross-cutting concerns so that repeated boilerplate logic, such as logging code, does not pollute business logic.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Aspect-Oriented Programming enables the modularization of cross-cutting concerns so that repeated boilerplate logic, such as logging code, does not pollute business logic."
+            ],
+            "options": [
+              "Aspect-Oriented Programming allows you to define different cross-cutting aspects that isolate beans to be available only in certain environments and profiles.",
+              "Aspect-Oriented Programming enables you to perform profiling, which lets you develop different cross-cutting JVM performance-tuning profiles for different aspects of your applications.",
+              "Aspect-Oriented Programming enables the modularization of cross-cutting concerns so that repeated boilerplate logic, such as logging code, does not pollute business logic.",
+              "Aspect-Oriented Programming enables you to persist cross-cutting data across modularized shards of your database."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "00f2a276bba3aeb07f2d64fe",
+            "question": "Assuming username and password authentication is in place, what method on the Authentication object can be used to obtain the username?",
+            "answer": "getPrincipal",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["getPrincipal"],
+            "options": ["getPrincipal", "getUsername", "getUser", "getDn"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "b1ce451eebccc7167fc11459",
+            "question": "Assuming no additional configuration is provided, what is the first selection criteria Spring uses to choose a bean when autowiring a property?",
+            "answer": "bean name",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["bean name"],
+            "options": ["bean name", "bean type", "bean size", "None of the above"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "931cee727459ed87de3c896a",
+            "question": "What is the result of calling the map controller method using the following HTTP request?\n```\nPOST localhost:8080/map\n{\"b\" : \"b\", \"d\" : \"d\"}\n```\n```java\n@RestController\npublic class SampleController {\n    @RequestMapping(\"/map\")\n    public String map(@RequestBody SampleObject sampleObject) {\n        return sampleObject.getB() + sampleObject.getC();\n    }\n}\n```\n```java\npublic class SampleObject {\n    String b;\n    String c;\n    public String getB() { return b; }\n    public void setB() { this.b = b; }\n    public String getC() { return c; }\n    public void setC() { this.c = c; }\n}\n```",
+            "answer": "The text \"bnull\" is returned in the response body.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["The text \"bnull\" is returned in the response body."],
+            "options": [
+              "An InvalidRequestBodyException is thrown at runtime.",
+              "A MissingPropertyException is thrown at runtime.",
+              "The text \"bnull\" is returned in the response body.",
+              "The text \"a\" is returned in th response body."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "57392242713259f5caf3fd17",
+            "question": "What effect does private static have on the object service below?\n```java\n@SpringBootApplication\npublic class Question14 {\n    @Autowired\n    private static Service service;\n    public static void main(String[] args) {\n        SpringApplication.run(Question14.class, args);\n    }\n}\n@Component\nclass Service {}\n```",
+            "answer": "The application will compile and run, but service will not be autowired because you cannot autowire a static class member.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The application will compile and run, but service will not be autowired because you cannot autowire a static class member."
+            ],
+            "options": [
+              "The application will result in a compile error because you can't autowire a private variable.",
+              "The application will compile and run, and service will have its dependency correctly injected by Spring.",
+              "The application will compile and run, but service will not be autowired because you cannot autowire a static class member.",
+              "The application will result in a compile error because you attempted to autowire a static variable."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "6d536a1b9b3a549c6b8746fb",
+            "question": "What is a security context?",
+            "answer": "The security context includes details of the principal currently using the app, which is stored by default in a `ThreadLocal` in an `Authentication` object.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The security context includes details of the principal currently using the app, which is stored by default in a `ThreadLocal` in an `Authentication` object."
+            ],
+            "options": [
+              "The security context includes details of the principal currently using the app, which is stored by default in a `ThreadLocal` in an `Authentication` object.",
+              "The security context holds a list of all users and their encrypted passwords in memory and a list of resources that users are able to access.",
+              "The security context includes information about safe network IDs and IP addresses that are able to access the system.",
+              "The security context includes information about permissions on the local file system describing how local file resources can be accessed."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "94aadc3a30e2d39deb7dd274",
+            "question": "How might you map an incoming request to a controller method?",
+            "answer": "Annotate a controller method with `@RequestMapping`, or a HTTP verb-specific annotation with a String URI pattern parameter (and other params as needed), which is supported through a `RequestMappingHandlerMapping/Adapter`.",
+            "explanation": "[Spring RequestMapping](https://www.baeldung.com/spring-requestmapping). Spring does not use naming conventions for web requests (unlike e.g. for the Data Repositories)",
+            "hint": null,
+            "correctAnswer": [
+              "Annotate a controller method with `@RequestMapping`, or a HTTP verb-specific annotation with a String URI pattern parameter (and other params as needed), which is supported through a `RequestMappingHandlerMapping/Adapter`."
+            ],
+            "options": [
+              "Annotate a Controller class with `@Controller`. Then, using a specific naming convention for the methods, the `RequestMappingHandlerAdapter` will automatically configure your endpoints with the proper HTTP verb and URI.",
+              "Register a controller as a bean. Then, using a specific naming convention for the methods, the `RequestMappingHandlerAdapter` will automatically configure your endpoints based on values from the YAML config file.",
+              "Annotate a controller method with `@RequestMapping`, or a HTTP verb-specific annotation with a String URI pattern parameter (and other params as needed), which is supported through a `RequestMappingHandlerMapping/Adapter`.",
+              "Register a controller as a bean. Then, using a specific naming convention for the methods, the RequestMappingHandlerAdapter will automatically configure your endpoints based on values passed into the bean definition."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "6e4c126a31a6d469e33618eb",
+            "question": "What methods does the Pointcut expression below reference?\n`execution(* setter*(..))`",
+            "answer": "any method with a name that begins with String \"setter\"",
+            "explanation": "[baeldung](https://www.baeldung.com/spring-aop-pointcut-tutorial#1-execution)",
+            "hint": null,
+            "correctAnswer": ["any method with a name that begins with String \"setter\""],
+            "options": [
+              "any method with a name that contains the String \"setter\" with a single parameter",
+              "any method with a name that begins with String \"setter\" with a single parameter",
+              "any method with a name that begins with String \"setter\"",
+              "any method with a name that contains the String \"setter\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "16d44156593c67b74605dab1",
+            "question": "What pattern does Spring MVC implement to delegate request processing to controllers?",
+            "answer": "Front Controller",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Front Controller"],
+            "options": ["Front Controller", "Facade", "Reactive Chain", "Observer"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "406b50240d8352c6772a72ad",
+            "question": "What methods does this Pointcut expression?\n`within(com.linkedin.service..*)`",
+            "answer": "any join point within the service package or one of its subpackages",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "any join point within the service package or one of its subpackages"
+            ],
+            "options": [
+              "any join point only within the service package",
+              "any join point within the service package or one of its subpackages",
+              "any method in a class that autowires a service bean",
+              "This is not valid Pointcut expression"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "76c98e5f40e02592b0243c07",
+            "question": "What is the output from invoking this Actuator endpoint in an unmodified Spring Boot application generated using Spring Intializr?\n`/shutdown`",
+            "answer": "The request would fail because the endpoint is disabled by default.",
+            "explanation": "Reason: By default, all the endpoints are enabled in Spring Boot Application except /shutdown; this is, naturally, part of the Actuator endpoints.",
+            "hint": null,
+            "correctAnswer": [
+              "The request would fail because the endpoint is disabled by default."
+            ],
+            "options": [
+              "The request would fail because the endpoint is disabled by default.",
+              "The Spring Boot app would return a URL and a list of currently running processes, and ask you to confirm the shutdown command.",
+              "The Spring Boot app would return a URL to confirm the shutdown command.",
+              "The Spring Boot app would begin shutting down."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "3b1907dd39d427e636be63c6",
+            "question": "How can you access the application context in a Spring integration test?",
+            "answer": "Test classes can implement the ApplicationContextAware interface or autowire the ApplicationContext.",
+            "explanation": "[spring(dot)io](https://spring.io/blog/2011/06/21/spring-3-1-m2-testing-with-configuration-classes-and-profiles#:~:text=By%20default%20the%20ApplicationContext%20is,%40Resource%20%2C%20or%20%40Inject%20.)",
+            "hint": null,
+            "correctAnswer": [
+              "Test classes can implement the ApplicationContextAware interface or autowire the ApplicationContext."
+            ],
+            "options": [
+              "The context is present in a ThreadLocal so you can just call getSpringApplicationContextInstance() anywhere in a test to get the current context.",
+              "Test classes can implement the ApplicationContextAware interface or autowire the ApplicationContext.",
+              "The context is automatically injected in every test so you can just call getSpringApplicationContextInstance() anywhere in a test to get the current context.",
+              "You can just add the parameter Context context to any method so that the context is automatically wired in."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "cbe17ca868639e869a779d95",
+            "question": "What interface can be specified as a parameter in a controller method signature to handle file uploads?",
+            "answer": "MultipartFile",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["MultipartFile"],
+            "options": ["FilePath", "MultipartFile", "File", "MvcFile"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "45484dabc487309f44e7f717",
+            "question": "What is the purpose of this endpoint?\n```java\n@GetMapping(\"api/v1/domain/resource/{id}\")\npublic Pojo getPojo(@PathVariable(\"id\") String id) {\n  return testService.getPojo(id);\n}\n```",
+            "answer": "This endpoint is designed to return JSON mapped to the object type Pojo with the passed in id.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "This endpoint is designed to return JSON mapped to the object type Pojo with the passed in id."
+            ],
+            "options": [
+              "This endpoint is designed to delete an object of the typetype Pojo with the passed in path variable",
+              "This endpoint is designed to return JSON mapped to the object type Pojo with the passed in id.",
+              "This endpoint returns the path variable that describes the Pojo's location within the container.",
+              "This endpoint is designed to update an existing resource of the object type Pojo with the passed in id."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "620526a5df451b61775e306a",
+            "question": "What property can be used to set the active Spring profiles",
+            "answer": "spring.profiles.active",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["spring.profiles.active"],
+            "options": [
+              "active.profile",
+              "active.spring.profiles",
+              "spring.profiles.active",
+              "profiles"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "3e854f6764a06160f9c498f8",
+            "question": "Which statement is true regarding loading and instantiation of Spring factories?",
+            "answer": "During startup, the SpringFactoriesLoader gets a list of config and collects all the files in META-INF directory from dependencies. Then it builds a composite list for application context configurations.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "During startup, the SpringFactoriesLoader gets a list of config and collects all the files in META-INF directory from dependencies. Then it builds a composite list for application context configurations."
+            ],
+            "options": [
+              "During startup, the SpringFactoryInitializr collects all files in the CONFIG-INF directory from each dependency and downloads binaries to run each file.",
+              "During startup, the SpringFactoriesLoader gets a list of config and collects all the files in META-INF directory from dependencies. Then it builds a composite list for application context configurations.",
+              "During shutdown, the SpringFactoryDestructor collects all the files in META-INF directory from each dependency and begins shutting down each thread and process.",
+              "During startup and shutdown, the SpringFactoryInitializr downloads project configs for all configured dependencies."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "888b6a236fa9cc424a3fc4b1",
+            "question": "What methods does this Pointcut expression reference?\n```java\n     execution(* com.linkedin.TestService.*(..))\n```",
+            "answer": "all methods of classes in the com.linkedin.TestService package",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["all methods of classes in the com.linkedin.TestService package"],
+            "options": [
+              "all methods of classes in the com.linkedin.TestService package",
+              "all methods of classes in the com.linkedin.TestService package annotated with @Service",
+              "This Pointcut is not valid.",
+              "all methods defined by the TestService interface"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "cc4150be87d7b6d3b495e392",
+            "question": "When configuring an application, which configuration is given precedence by Spring?",
+            "answer": "profile specific application-{profile}.properties files located outside the application.jar",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "profile specific application-{profile}.properties files located outside the application.jar"
+            ],
+            "options": [
+              "profile specific application-{profile}.properties files",
+              "Java System Properties",
+              "application properties located in an application.properties file inside the application.jar",
+              "profile specific application-{profile}.properties files located outside the application.jar"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "506037130af1c721cb0e1864",
+            "question": "What interface is used to represent a permission in Spring Security?",
+            "answer": "AccessRule",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["AccessRule"],
+            "options": ["GrantedAuthority", "SecurityChain", "PermissionMatrix", "AccessRule"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "2257ad3041523df26fca7aa9",
+            "question": "What is the difference between constructor injection and setter injection?",
+            "answer": "You can't use constructor injection for partial injection.",
+            "explanation": "[Explanation] There are many key differences between constructor injection and setter injection.\nPartial dependency: can be injected using setter injection but it is not possible by constructor. Suppose there are 3 properties in a class, having 3 arg constructor and setters methods. In such case, if you want to pass information for only one property, it is possible by setter method only.\nOverriding: Setter injection overrides the constructor injection. If we use both constructor and setter injection, IOC container will use the setter injection.\nChanges: We can easily change the value by setter injection. It doesn't create a new bean instance always like constructor. So setter injection is flexible than constructor injection.",
+            "hint": null,
+            "correctAnswer": ["You can't use constructor injection for partial injection."],
+            "options": [
+              "Constructor injection overrides setter injection.",
+              "Setter injection creates a new instance if any modification occurs.",
+              "You can't use constructor injection for partial injection.",
+              "Constructor injection is more flexible than setter injection."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "d1cc25766f2f974e2c9b2b5f",
+            "question": "Which println would you remove to stop this code from throwing a null pointer exception?\n```java\n@Component\npublic class Test implements InitializingBean {\n     @Autowired\n     ApplicationContext context;\n     @Autowired\n     static SimpleDateFormat formatter;\n     @Override\n     public void afterPropertiesSet() throws Exception {\n          System.out.println(context.containsBean(\"formatter\") + \" \");\n          System.out.println(context.getBean(\"formatter\").getClass());\n          System.out.println(formatter.getClass());\n          System.out.println(context.getClass());\n     }\n}\n@Configuration\nclass TestConfig {\n     @Bean\n     public SimpleDateFormat formatter() {\n          return new SimpleDateFormat();\n     }\n}\n```",
+            "answer": "context.getBean(\"formatter\").getClass()",
+            "explanation": "Explanation: Here only one line can throw NPE. Calling getClass() from context.getBean(\"formatter\") can potentially throw NPE if context.getBean(\"formatter\") will return null.",
+            "hint": null,
+            "correctAnswer": ["context.getBean(\"formatter\").getClass()"],
+            "options": [
+              "formatter.getClass()",
+              "context.containsBean(\"formatter\")",
+              "context.getBean(\"formatter\").getClass()",
+              "context.getClass()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "da11bc47c699c623c1873ef3",
+            "question": "What is the default rollback policy?",
+            "answer": "When an instance or subclass of RuntimeException is thrown, this triggers a rollback, while any checked Exception does not.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "When an instance or subclass of RuntimeException is thrown, this triggers a rollback, while any checked Exception does not."
+            ],
+            "options": [
+              "A rollback is triggered during any error that occurs during the transaction.",
+              "When an instance or subclass of Exception is thrown, this triggers a rollback, while any runtime exceptions do not.",
+              "Anytime an instance or subclass of Throwable is thrown, this triggers a rollback.",
+              "When an instance or subclass of RuntimeException is thrown, this triggers a rollback, while any checked Exception does not."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "43f29115058b0feba1957307",
+            "question": "What is the difference between a CrudRepository and a JpaRepository?",
+            "answer": "The CrudRepository exposes a superset of interface methods containing every datastore-specific method supported by Spring data. The JpaRepository contains only those specific to Spring Data JPA.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The CrudRepository exposes a superset of interface methods containing every datastore-specific method supported by Spring data. The JpaRepository contains only those specific to Spring Data JPA."
+            ],
+            "options": [
+              "The CrudRepository extends the PagingAndSortingRepository, while the JpaRepository does not.",
+              "The CrudRepository exposes a superset of interface methods containing every datastore-specific method supported by Spring data. The JpaRepository contains only those specific to Spring Data JPA.",
+              "The CrudRepository is a base interface within Spring Data core that exposes a dedicated set of functions. The JpaRepository is a store-specific interface that exposes functionality specific to JPA.",
+              "The CrudRepository is part of the Java EE API, while JpaRepository is specific to Spring Data."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "936a21eed4f6b58ffd45ba5a",
+            "question": "What is the security filter chain?",
+            "answer": "It's a servlet filter chain where each filter has a specific responsibility such as security context, user and password authorization, exception translation, or filter security interception, processed in order.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It's a servlet filter chain where each filter has a specific responsibility such as security context, user and password authorization, exception translation, or filter security interception, processed in order."
+            ],
+            "options": [
+              "It's a security filter chain that provides authentication with manual intervention such that multiple administrators of the system are able to approve users with auditability and traceability.",
+              "It's a series of user-completed activities—such as password authorization, token verification, and many others—that require multiple factors of authentication to increase the level of security in the system.",
+              "It's a servlet filter chain where each filter has a specific responsibility such as security context, user and password authorization, exception translation, or filter security interception, processed in order.",
+              "It's a security filter chain that consumes multiple factors of authentication—such as password, token verification, biometrics, and IP whitelisting—to successfully log a user into the system."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "5719f2f402ddae9debe9fd3e",
+            "question": "Which is not a valid stereotype annotation?",
+            "answer": "@HtmlController",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["@HtmlController"],
+            "options": ["@Component", "@Service", "@HtmlController", "@Controller"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "cfeec29112593dcfec1bac9c",
+            "question": "Which statement is true regarding loading and instantiation of Spring factories?",
+            "answer": "During startup, the SpringFactoriesLoader gets a list of configs and collects all the files in META-INF directory from dependencies. Then it builds a composite list for application context configurations.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "During startup, the SpringFactoriesLoader gets a list of configs and collects all the files in META-INF directory from dependencies. Then it builds a composite list for application context configurations."
+            ],
+            "options": [
+              "During startup, the SpringFactoriesLoader gets a list of configs and collects all the files in META-INF directory from dependencies. Then it builds a composite list for application context configurations.",
+              "During shutdown, the SpringFactoryDestructor collects all the files in META-INF directory from each dependency and begins shutting down each thread and process.",
+              "During startup, the SpringFactoryInitializr collects all files in the CONFIG-INF directory from each dependency and downloads binaries to run each file.",
+              "During startup and shutdown, the SpringFactoryInitializr downloads project configs for all configured dependencies."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "2eae59091dec99e4931939fe",
+            "question": "What is a transaction isolation level?",
+            "answer": "the level of visibility and access a transaction has to the units of work of other transactions such as uncommitted writes",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "the level of visibility and access a transaction has to the units of work of other transactions such as uncommitted writes"
+            ],
+            "options": [
+              "executing each transaction in its own dedicated threadpool to facilitate thread isolation",
+              "facilitating each transaction to occur on its own dedicated vCPU to guarantee throughput",
+              "the level of visibility and access a transaction has to the units of work of other transactions such as uncommitted writes",
+              "executing each transaction on its own process to provide resource isolation"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "5edd22dce11032238135739b",
+            "question": "What does the statement \"Spring offers fully-typed advice\" mean?",
+            "answer": "You work with an array of a Generic type T[] instead of Object[] arrays.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "You work with an array of a Generic type T[] instead of Object[] arrays."
+            ],
+            "options": [
+              "You declare the parameters you need in the advice signature rather than work with Object[] arrays.",
+              "You work with a collection of Objects that need to be explicitly casted.",
+              "You work with an array of a Generic type T[] instead of Object[] arrays.",
+              "You are able to undo type erasure in the Object[] that is exposed"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "095926a4146a2d73938907d4",
+            "question": "Which are considered to be typical, common, cross-cutting concerns that would be a good fit for AOP? (Choose 3)\n- A. Creating SQL queries\n    - B. Logging\n    - C. Filtering, sorting and transforming data\n    - D. Transaction management\n    - E. Audit logging\n    - F. Business logic",
+            "answer": "B, D, E",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["B, D, E"],
+            "options": ["A, D, F", "D, E, F", "A, B, F", "B, D, E"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "da172ed91874acea2177a7e6",
+            "question": "Which of the Service implementations will be created first?\n```java\n@SpringBootApplication\npublic class App {\n     @Autowired\n     Service service;\n     public static void main(String[] args) {\n          SpringApplication.run(App.class, args);\n     }\n}\n@Primary\n@Component\nclass Service2Impl implements Service {\n    Service2Impl() {\n        System.out.println(\"Service2\");\n    }\n}\n@Component(\"Service\")\nclass Service1Impl implements Service {\n    Service1Impl() {\n        System.out.println(\"Service1\");\n    }\n}\ninterface Service{}\n```",
+            "answer": "Service2",
+            "explanation": "Explaination: [Primary indicates that a bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Primary.html)",
+            "hint": null,
+            "correctAnswer": ["Service2"],
+            "options": [
+              "Service1",
+              "Service2",
+              "A NullPointerException is thrown at runtime.",
+              "There is no way to know until runtime."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "6ac007a0f62062a92c74c46a",
+            "question": "What methods does this Pointcut expression reference?\n```java\n     execution(* com.linkedin.service..*.*(..))\n```",
+            "answer": "all methods defined in the service package or one of its subpackages",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "all methods defined in the service package or one of its subpackages"
+            ],
+            "options": [
+              "all methods defined in the service package or one of its subpackages",
+              "all methods defined in the service package",
+              "all methods defined in a service interface",
+              "The pointcut is invalid."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "de9bde07ce54d15649e3e066",
+            "question": "Which is not a core facet of Spring's ecosystem?",
+            "answer": "Spring Bootstrap",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["Spring Bootstrap"],
+            "options": ["Spring Data", "Spring MVC", "Spring Bootstrap", "Spring Cloud"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          },
+          {
+            "id": "d0179c41bcdbffa2848cc70c",
+            "question": "A\\_ is a key-value map of data used to render the page, and the \\_ is a template of the page that is filled with data.",
+            "answer": "view; model",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": ["view; model"],
+            "options": ["model; view", "hashmap; servlet", "view; model", "request; view"],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "989c4b56d003b1d996a54144-en",
+            "quizzId": "989c4b56d003b1d996a54144"
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {
+    "languages": ["en"],
+    "sources": ["spring-framework/spring-framework-quiz.md"],
+    "generatedAt": "2025-12-09T22:59:14.692Z",
+    "warnings": []
+  }
+}

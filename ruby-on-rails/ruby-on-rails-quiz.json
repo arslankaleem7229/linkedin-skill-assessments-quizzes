@@ -1,1458 +1,1627 @@
 {
   "quizz": {
     "id": "dadb0187f6befd61b5d43cad",
-    "title": "Ruby on Rails",
-    "description": "Seeded from ruby-on-rails/ruby-on-rails-quiz.md",
-    "createdById": "seed-user",
-    "questions": [
-      {
-        "id": "62a2e556b2aff60e26ad20c1",
-        "question": "When rendering a partial in a view, how would you pass local variables for rendering?",
-        "answer": "`<%= render partial: \"nav\", locals: {selected: \"about\"}`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`<%= render partial: \"nav\", locals: {selected: \"about\"}`"
-        ],
-        "options": [
-          "`<%= render partial: \"nav\", globals: {selected: \"about\"} %>`",
-          "`<%= render partial: \"nav\", selected: \"about\"}%>`",
-          "`<%= render partial: \"nav\", local_variables: {selected: \"about\"} %>`",
-          "`<%= render partial: \"nav\", locals: {selected: \"about\"}`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3f463d5bea82f599a4ee0822",
-        "question": "Within a Rails controller, which code will prevent the parent controller's before_action `:get_feature` from running?",
-        "answer": "`skip_before_action :get_feature`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`skip_before_action :get_feature`"
-        ],
-        "options": [
-          "`skip_before_action :get_feature`",
-          "`skip :get_feature, except: []`",
-          "`prevent_action :get_feature`",
-          "`:redis_cache_store`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3a65f2cd87ea76dc2d439086",
-        "question": "Which statement correctly describes a difference between the form helper methods `form_tag` and `form_for`?",
-        "answer": "The `form_tag` method typically expects a URL as its first argument, while the `form_for` method typically expects a model object.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "The `form_tag` method typically expects a URL as its first argument, while the `form_for` method typically expects a model object."
-        ],
-        "options": [
-          "The `form_tag` method is for basic forms, while the `form_for` method is for multipart forms that include file uploads.",
-          "The `form_tag` method is for HTTP requests, while the `form_for` method is for AJAX requests.",
-          "The `form_tag` method typically expects a URL as its first argument, while the `form_for` method typically expects a model object.",
-          "The `form_tag` method is evaluated at runtime, while the `form_for` method is precompiled and cached."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3145b336e41a0b516919285f",
-        "question": "What is `before_action` (formerly known as `before_filter`)?",
-        "answer": "A method in a controller that is executed before the controller action method",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "A method in a controller that is executed before the controller action method"
-        ],
-        "options": [
-          "A trigger that is executed before an alteration of an object's state",
-          "A method that is executed before an ActiveRecord model is saved",
-          "A callback that fires before an event is handled",
-          "A method in a controller that is executed before the controller action method"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "53c7c0b07a8b3feecbaeac99",
-        "question": "Which module can you use to encapsulate a cohesive chunk of functionality into a mixin?",
-        "answer": "`ActiveSupport::Concern`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`ActiveSupport::Concern`"
-        ],
-        "options": [
-          "`ActiveSupport::Concern`",
-          "`RailsHelper.CommonClass`",
-          "`ActiveJob::Mixin`",
-          "`ActiveSupport::Module`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3af866a1dc9e5dc3c4c36f42",
-        "question": "In Rails, which code would you use to define a route that handles both the `PUT` and `PATCH` `REST HTTP` verbs?",
-        "answer": "`match 'items', to 'items#update', via: [:put, :patch]`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`match 'items', to 'items#update', via: [:put, :patch]`"
-        ],
-        "options": [
-          "`put :items, include: patch`",
-          "`put 'items', to: 'items#update'`",
-          "`match 'items', to 'items#update', via: [:put, :patch]`",
-          "`match :items, using: put && patch`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7466ddd65b80f1cdd5aad0f1",
-        "question": "Which choice includes standard REST HTTP verbs?",
-        "answer": "GET, POST, PATCH, DELETE",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "GET, POST, PATCH, DELETE"
-        ],
-        "options": [
-          "GET, POST, PATCH, DELETE",
-          "REDIRECT, RENDER, SESSION, COOKIE",
-          "INDEX, SHOW, NEW, CREATE, EDIT, UPDATE, DESTROY",
-          "CREATE, READ, UPDATE, DELETE"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "13756ea79192b0a090214d25",
-        "question": "Which ActiveRecord query prevents SQL injection?",
-        "answer": "`Product.where(\"name = ?\", @keyword`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`Product.where(\"name = ?\", @keyword`"
-        ],
-        "options": [
-          "`Product.where(\"name = #{@keyword}\")`",
-          "`Product.where(\"name = \" << @keyword}`",
-          "`Product.where(\"name = ?\", @keyword`",
-          "`Product.where(\"name = \" + h(@keyword)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "59af0a8d1d1e68193969682d",
-        "question": "Given this code, which statement about the database table \"documents\" could be expected to be _true_?\n```rb\nclass Document < ActiveRecord::Base\n  belongs_to :documentable, polymorphic: true\nend\nclass Product < ActiveRecord::Base\n  has_many :documents, as: :documentable\nend\nclass Service < ActiveRecord::Base\n  has_many :documents, as: :documentable\nend\n```",
-        "answer": "It would include columns for `:documentable_id` and `:documentable_type`.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "It would include columns for `:documentable_id` and `:documentable_type`."
-        ],
-        "options": [
-          "It would include a column for `:type`.",
-          "It would include columns for `:documentable_id` and `:documentable_type`.",
-          "It would include columns for `:documentable` and `:type`.",
-          "It would include a column for `:polymorphic_type`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4c715797f98df91643043eb7",
-        "question": "Are instance variables set within a controller method accessible within a view?",
-        "answer": "Yes, any instance variables that are set in an action method on a controller can be accessed and displayed in a view.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Yes, any instance variables that are set in an action method on a controller can be accessed and displayed in a view."
-        ],
-        "options": [
-          "Yes, any instance variables that are set in an action method on a controller can be accessed and displayed in a view.",
-          "Yes, instance variables set within an action method are accessible within a view, but only when render is explicitly called inside the action method.",
-          "No, instance variables in a controller are private and are not accessible.",
-          "No, instance variables can never be set in a controller action method."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "aa82d02f63a3c19f3bf179cc",
-        "question": "When a validation of a field in a Rails model fails, where are the messages for validation errors stored?",
-        "answer": "`my_model.errors[:field]`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`my_model.errors[:field]`"
-        ],
-        "options": [
-          "`my_model.errors[:field]`",
-          "`my_model.get_errors_for(:field)`",
-          "`my_model.field.error`",
-          "`my_model.all_errors.select(:field)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c395dc560e2bf80b9113a7d0",
-        "question": "If a database table of users contains the following rows, and `id` is the primary key, which statement would return only an object whose `last_name` is \"Cordero\"?\n```ruby\n-------------------------------\n| id | first_name | last_name |\n|----|------------|-----------|\n| 1  | Alice      | Anderson  |\n| 2  | Bob        | Buckner   |\n| 3  | Carrie     | Cordero   |\n| 4  | Devon      | Dupre     |\n| 5  | Carrie     | Eastman   |\n-------------------------------\n```",
-        "answer": "`User.find(3)`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`User.find(3)`"
-        ],
-        "options": [
-          "`User.where(first_name: \"Carrie\")`",
-          "`User.not.where(id: [1, 2, 4, 5])`",
-          "`User.find_by(first_name: \"Cordero\")`",
-          "`User.find(3)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3c6ba322e5d7d9429e96e6c8",
-        "question": "How would you generate a drop-down menu that allows the user to select from a collection of product names?",
-        "answer": "`<%= collection_select(:product, :product_id, Product.all, :id, :name) %>`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`<%= collection_select(:product, :product_id, Product.all, :id, :name) %>`"
-        ],
-        "options": [
-          "`<%= select_tag(@products) %>`",
-          "`<%= collection_select(@products) %>`",
-          "`<select name=\"product_id\"> <%= @products.each do |product| %> <option value=\"<%= product.id %>\"/> <% end %></select>`",
-          "`<%= collection_select(:product, :product_id, Product.all, :id, :name) %>`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7c6b81a6eaab23e5a0945d90",
-        "question": "For a Rails validator, how would you define an error message for the model attribute `address` with the message \"This address is invalid\"?",
-        "answer": "`model.errors[:address] << \"This address is invalid\"`",
-        "explanation": "[Custom Validator](https://guides.rubyonrails.org/v5.2/active_record_validations.html#custom-validators)",
-        "hint": null,
-        "correctAnswer": [
-          "`model.errors[:address] << \"This address is invalid\"`"
-        ],
-        "options": [
-          "`model.errors = This address is invalid`",
-          "`errors(model, :address) << \"This address is invalid\"`",
-          "`display_error_for(model, :address, \"This address is invalid\")`",
-          "`model.errors[:address] << \"This address is invalid\"`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "dad0024c5d41f65ddc25ee50",
-        "question": "Given the URL helper `product_path(@product)`, which statement would be expected to be _false_?",
-        "answer": "If sent using the POST HTTP method, the URL would create a new product in the database.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "If sent using the POST HTTP method, the URL would create a new product in the database."
-        ],
-        "options": [
-          "If sent using the PATCH HTTP method, the URL could be used to update a product in the database.",
-          "If sent using the POST HTTP method, the URL would create a new product in the database.",
-          "If sent using the GET HTTP method, the URL would execute the show action in ProductsController.",
-          "If sent using the DELETE HTTP method, the URL would call the destroy action by default."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "894d7e9fd0fcea7b15e8a9ce",
-        "question": "Given this code, which choice would be expected to be a _true_ statement if the user requests the index action?\n```rb\nclass DocumentsController < ApplicationController\n  before_action :require_login\n  def index\n    @documents = Document.visible.sorted\n  end\nend\n```",
-        "answer": "The index action will not be run if the `require_login` method calls render or `redirect_to`.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "The index action will not be run if the `require_login` method calls render or `redirect_to`."
-        ],
-        "options": [
-          "The user's documents will be loaded.",
-          "The index action will run normally because `:index` is not listed as an argument to `before_action`.",
-          "The `require_login` method will automatically log in the user before running the index action.",
-          "The index action will not be run if the `require_login` method calls render or `redirect_to`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4d21728a594351645f8fa626",
-        "question": "In Rails, how would you cache a partial template that is rendered?",
-        "answer": "`render partial: 'shared/menu', cached: true`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`render partial: 'shared/menu', cached: true`"
-        ],
-        "options": [
-          "`render partial: 'shared/menu', cached: true`",
-          "`render_with_cache partial: 'shared/menu'`",
-          "`render partial: 'shared/menu'`",
-          "`render partial: 'shared/menu', cached_with_variables: {}`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f4202001934607c66ef5b00f",
-        "question": "What is the reason for using Concerns in Rails?",
-        "answer": "Concerns allow modularity and code reuse in models, controllers, and other classes.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Concerns allow modularity and code reuse in models, controllers, and other classes."
-        ],
-        "options": [
-          "Concerns allow modularity and code reuse in models, controllers, and other classes.",
-          "Concerns are used to separate class methods from models.",
-          "Concerns are used to increase security of Rails applications.",
-          "Concerns are used to refactor Rails views."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fc80e76ccf79616da215a9de",
-        "question": "When using an ActiveRecord model, which method will create the model instance in memory and save it to the database?",
-        "answer": "`create`",
-        "explanation": "[Reference](https://medium.com/@de.usmanusa/difference-between-create-new-and-save-methods-in-activerecord-ea135085a08c)",
-        "hint": null,
-        "correctAnswer": [
-          "`create`"
-        ],
-        "options": [
-          "`build`",
-          "`new`",
-          "`create`",
-          "`save`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c50bbc8da370f2aa51a980b4",
-        "question": "You are using an existing database that has a table named `coffee_orders`. What would the ActiveRecord model be named in order to use that table?",
-        "answer": "`CoffeeOrder`",
-        "explanation": "[Reference](https://guides.rubyonrails.org/active_record_basics.html#naming-conventions)",
-        "hint": null,
-        "correctAnswer": [
-          "`CoffeeOrder`"
-        ],
-        "options": [
-          "`CoffeeOrders`",
-          "`Coffee_Orders`",
-          "`Coffee_Order`",
-          "`CoffeeOrder`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f27bb67f85d02964e62868b3",
-        "question": "In ActiveRecord, what is the difference between the `has_many` and `has_many :through` associations?",
-        "answer": "Both are one-to-many associations but with `has_many :through`, the declaring model can associate through a third model.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Both are one-to-many associations but with `has_many :through`, the declaring model can associate through a third model."
-        ],
-        "options": [
-          "The `has_many: through` association is the one-to-many equivalent to the `belongs_to` one-to-one association.",
-          "Both associations are identical, and `has_many: through` is maintained only for legacy purposes.",
-          "The `has_many` association is a one-to-many association, while `has_many: through` is a one-to-one association that matches through a third model.",
-          "Both are one-to-many associations but with `has_many :through`, the declaring model can associate through a third model."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cb17da2fd52c6c8c090cbccd",
-        "question": "How do you add Ruby code inside Rails views and have its result outputted in the HTML file?",
-        "answer": "Create an embedded Ruby file (.html.erb) and surround the Ruby code with `<%= %>`.",
-        "explanation": "[Reference](https://guides.rubyonrails.org/action_view_overview.html#erb)",
-        "hint": null,
-        "correctAnswer": [
-          "Create an embedded Ruby file (.html.erb) and surround the Ruby code with `<%= %>`."
-        ],
-        "options": [
-          "Create an embedded Ruby file (.html.erb) and surround the Ruby code with `<% %>`.",
-          "Insert Ruby code inside standard HTML files and surround it with `<% %>`. The web server will handle the rest.",
-          "Create an embedded Ruby file (.html.erb) and surround the Ruby code with `<%= %>`.",
-          "Put the code in an .rb file and include it in a `<link>` tag of an HTML file."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "70f19072053bdd40c9024ff7",
-        "question": "How would you render a view using a different layout in an ERB HTML view?",
-        "answer": "`<% render 'view', layout: 'mobile' %>`",
-        "explanation": "[Reference](https://stackoverflow.com/a/19277971)",
-        "hint": null,
-        "correctAnswer": [
-          "`<% render 'view', layout: 'mobile' %>`"
-        ],
-        "options": [
-          "`<% render 'view_mobile' %>`",
-          "`<% render 'view', use_layout: 'mobile' %>`",
-          "`<% render 'view', layout: 'mobile' %>`",
-          "`<% render_with_layout 'view', 'mobile' %>`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d5c867deac6e32b36ebb400b",
-        "question": "Given this controller code, which choice describes the expected behavior if parameters are submitted to the update action that includes values for the product's name, style, color, and price?\n```rb\nclass ProductController < ActionController::Base\n  def update\n    @product = Product.find(params[:id])\n    if @product.update(product_params)\n      redirect_to(product_path(@product))\n    else\n      render('edit')\n    end\n  end\n  private\n  def product_params\n    params.require(:product).permit(:name, :style, :color)\n  end\nend\n```",
-        "answer": "The product will be updated with the values for name, style, and color, but the value for price will be ignored.",
-        "explanation": "[Reference](https://stackoverflow.com/a/19277971)",
-        "hint": null,
-        "correctAnswer": [
-          "The product will be updated with the values for name, style, and color, but the value for price will be ignored."
-        ],
-        "options": [
-          "The product will not be updated and the edit template will be rendered.",
-          "The product will not be updated and the controller will raise an ActiveModel::ForbiddenAttributes exception.",
-          "The product will be updated with the values for name, style, and color, but the value for price will be ignored.",
-          "The product will be updated with the values for name, style, color, and price."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4d24eaccee3c731ab96ab08a",
-        "question": "A Rails project has ActiveRecord classes defined for Classroom and Student. If instances of these classes are related so that students are assigned the ID of one particular classroom, which choice shows the correct associations to define?",
-        "answer": "D",
-        "explanation": "```rb\nclass Classroom < ActiveRecord::Base\nbelongs_to :students, class_name: 'Student'\nend\nclass Student < ActiveRecord::Base\nbelongs_to :classrooms, class_name: 'Classroom'\nend\n```\n```rb\nclass Student < ActiveRecord::Base\nhas_many :classrooms, dependent: true\nend\nclass Classroom < ActiveRecord::Base\nhas_many :students, dependent: false\nend\n```\n```rb\nclass Student < ActiveRecord::Base\nhas_many :classrooms\nend\nclass Classroom < ActiveRecord::Base\nbelongs_to :student\nend\n```\n```rb\nclass Classroom < ActiveRecord::Base\nhas_many :students\nend\nclass Student < ActiveRecord::Base\nbelongs_to :classroom\nend\n```",
-        "hint": null,
-        "correctAnswer": [
-          "D"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d7f47bcae666c302b0832581",
-        "question": "Where should you put images, JavaScript, and CSS so that they get processed by the asset pipeline?",
-        "answer": "app/assets",
-        "explanation": "[Reference: RoR folder structure](https://images.app.goo.gl/CfKZPEQcGExfSx5C6)",
-        "hint": null,
-        "correctAnswer": [
-          "app/assets"
-        ],
-        "options": [
-          "app/static",
-          "app/images",
-          "app/assets",
-          "app/views"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "27e46a50d2f91601438e948a",
-        "question": "If the Rails asset pipeline is being used to serve JavaScript files, how would you include a link to one of those JavaScript files in a view?",
-        "answer": "`<%= javascript_include_tag 'main' %>`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`<%= javascript_include_tag 'main' %>`"
-        ],
-        "options": [
-          "`<script src=\"/main.js\"></script>`",
-          "`<%= javascript_include_tag 'main' %>`",
-          "`<%= javascript_tag 'main' %>`",
-          "`<!-- include_javascript 'main' -->`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7c37f86a2cdfee9dcbf8ccac",
-        "question": "In Rails, what caching stores can be used?",
-        "answer": "MemoryStore, FileStore, MemCacheStore, RedisCacheStore, and NullStore",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "MemoryStore, FileStore, MemCacheStore, RedisCacheStore, and NullStore"
-        ],
-        "options": [
-          "MemCacheStore, MongoDBStore, MemoryStore, and FileStore",
-          "MemoryStore, FileStore, and CacheCacheStore",
-          "MemoryStore, FileStore, MemCacheStore, RedisCacheStore, and NullStore",
-          "MemoryStore, FileStore, MySQLStore, and RedisCacheStore"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "430f72fc22cd29cb3dd07969",
-        "question": "What is the correct way to generate a ProductsController with an index action using only the command-line tools bundled with Rails?",
-        "answer": "`rails generate controller Products index`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`rails generate controller Products index`"
-        ],
-        "options": [
-          "`rails generate controller --options {name: \"Products\", actions: \"index\"}`",
-          "`rails generate controller --name Products --action index`",
-          "`rails generate controller Products index`",
-          "`rails generate ProductsController --actions index`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "efe966a6d954bc798ca4a5d7",
-        "question": "If a model class is named Product, in which database table will ActiveRecord store and retrieve model instances?",
-        "answer": "`products`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`products`"
-        ],
-        "options": [
-          "`product_table`",
-          "`all_products`",
-          "`products_table`",
-          "`products`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6b480323bc699476c807497c",
-        "question": "What is a popular alternative template language for generating views in a Rails app that is focused on simple abstracted markup?",
-        "answer": "Haml",
-        "explanation": "[Reference](https://medium.com/@bretcameron/so-you-think-you-know-html-7813c03f8ff6)",
-        "hint": null,
-        "correctAnswer": [
-          "Haml"
-        ],
-        "options": [
-          "Mustache",
-          "Haml",
-          "Liquid",
-          "Tilt"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b9ce279cd9752274f6718936",
-        "question": "When Ruby methods add an exclamation point at the end of their name (such as `sort!`), what does it typically indicate?",
-        "answer": "It is a more powerful or destructive version of the method.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "It is a more powerful or destructive version of the method."
-        ],
-        "options": [
-          "The method executes using \"sudo\" privileges.",
-          "Any ending line return will be omitted from the result.",
-          "The method will ignore exceptions that occur during execution.",
-          "It is a more powerful or destructive version of the method."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2ee894cbf99dfbdc5cf7dbb1",
-        "question": "What options below would cause the method `#decrypt_data` to be run?\n```rb\nclass MyModel < ApplicationRecord\n  after_find :decrypt_data\nend\n```",
-        "answer": "`MyModel.first.update(field: 'example')`; `MyModel.first.destroy`",
-        "explanation": "[Reference](https://guides.rubyonrails.org/active_record_callbacks.html#running-callbacks)",
-        "hint": null,
-        "correctAnswer": [
-          "`MyModel.first.update(field: 'example')`",
-          "`MyModel.first.destroy`"
-        ],
-        "options": [
-          "`MyModel.first.update(field: 'example')`",
-          "`MyModel.where(id: 42)`",
-          "`MyModel.first.destroy`",
-          "`MyModel.new(field: 'new instance')`"
-        ],
-        "nature": "ChooseMany",
-        "attachments": []
-      },
-      {
-        "id": "d2d7cd96963450c2085d0253",
-        "question": "Which Rails helper would you use in the application view to protect against CSRF (Cross-Site Request Forgery) attacks?",
-        "answer": "`csrf_meta_tags`",
-        "explanation": "[Reference](https://api.rubyonrails.org/classes/ActionView/Helpers/CsrfHelper.html)",
-        "hint": null,
-        "correctAnswer": [
-          "`csrf_meta_tags`"
-        ],
-        "options": [
-          "`csrf_protection`",
-          "`csrf_helper`",
-          "`csrf_meta_tags`",
-          "`csrf`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "153a2d613758870a9226d491",
-        "question": "In the model `User` you have the code shown below. When saving the model and `model.is_admin` is set to true, which callback will be called?\n```rb\nbefore_save :encrypt_data, unless: ->(model) { model.is_admin }\nafter_save :clear_cache, if: ->(model) { model.is_admin }\nbefore_destroy :notify_admin_users, if: ->(model) { model.is_admin }\n```",
-        "answer": "`clear_cache`",
-        "explanation": "[Explanation]:\nWhen saving the User model and model.is_admin is set to true, the after_save callback will be called.\nThe before_save callback with the unless: ->(model) { model.is_admin } condition will not be called because the is_admin attribute is true.\nThe before_destroy callback with the if: ->(model) { model.is_admin } condition will be called if the is_admin attribute is true and the record is being destroyed, but this is not relevant to the scenario of saving the User model.\nTherefore, only the after_save callback with the if: ->(model) { model.is_admin } condition will be called in this scenario. This callback will be triggered after the record has been saved, if the is_admin attribute is true. In this case, the clear_cache method will be called.",
-        "hint": null,
-        "correctAnswer": [
-          "`clear_cache`"
-        ],
-        "options": [
-          "`encrypt_data`",
-          "`clear_cache`",
-          "`notify_admin_users`",
-          "None of these callbacks will be called when `is_admin` is true."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "97deba5b9b18ecd516c3ef42",
-        "question": "In a Rails controller, what does the code `params.permit(:name, :sku)` do?",
-        "answer": "It filters out submitted form parameters that are not named `:name` or `:sku` to make forms more secure.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "It filters out submitted form parameters that are not named `:name` or `:sku` to make forms more secure."
-        ],
-        "options": [
-          "It filters out all parameters.",
-          "It filters out submitted form parameters that are not named `:name` or `:sku` to make forms more secure.",
-          "It raises an error if parameters that are not named `:name` or `:sku` are found.",
-          "It raises an error if the `:name` and `:sku` parameters are set to `nil`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6bb67a8bce8b5935c5828de7",
-        "question": "Review the code below. Which Ruby operator should be used to fill in the blank so that the `sort` method executes properly?\n```rb\n[5,8,2,6,1,3].sort {|v1,v2| v1 ___ v2}\n```",
-        "answer": "`<=>`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`<=>`"
-        ],
-        "options": [
-          "`=>`",
-          "`<==>`",
-          "`<=>`",
-          "`||`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2acf31fa40a90812f6d28742",
-        "question": "You made a spelling mistake while creating a table for bank accounts. Which code would you expect to see in a migration to fix the error?",
-        "answer": "A",
-        "explanation": "```ruby\nclass IAmADummy < ActiveRecord::Migration\ndef change\nrename_column :accounts, :account_hodler, :account_holder\nend\nend\n```\n```ruby\nclass FixSpellling < ActiveRecord::Migration\ndef change\nrename :accounts, :account_hodler, :account_holder\nend\nend\n```\n```ruby\nclass CoffeeNeeded < ActiveRecord::Migration\ndef change\nremove_column :accounts, :account_hodler\nadd_column :accounts, :account_holder\nend\nend\n```\n```ruby\nclass OopsIDidItAgain < ActiveRecord::Migration\ndef rename\n:accounts, :account_hodler, :account_holder\nend\nend\n```",
-        "hint": null,
-        "correctAnswer": [
-          "A"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1de2429100dd3c5f7edf6692",
-        "question": "Which HTML is closes to what this code would output?\n```ruby\n<% check_box(:post, :visible) %>\n```",
-        "answer": "A",
-        "explanation": "```html\n<input type=\"hidden\" name=\"post[visible]\" value=\"0\" />\n<input type=\"checkbox\" name=\"post[visible]\" value=\"1\" />\n```\n```html\n<checkbox name=\"post[visible]\" value=\"1\" />\n```\n```html\n<input type=\"checkbox\" name=\"post[visible]\" value=\"1\" data-default-value=\"0\" />\n```\n```html\n<input type=\"checkbox\" name=\"post[visible]\" value=\"1\" />\n```\n[Reference](https://apidock.com/rails/ActionView/Helpers/FormHelper/check_box)",
-        "hint": null,
-        "correctAnswer": [
-          "A"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9ef8c1bafb4c58258fcd29a4",
-        "question": "There is a bug in this code. The logout message is not appearing on the login template. What is the cause?\n```ruby\nclass AccessController < ActionController::Base\n  def destroy\n    session[:admin_id] = nil\n    flash[:notice] = \"\"You have been logged out\"\"\n    render('login')\nend\n```",
-        "answer": "This is an invalid syntax to use to assign values to flash[:notice]",
-        "explanation": "[Explanation]:\nThe cause of the bug is a syntax error in the line that sets the value of the flash[:notice] message. The string literal \"You have been logged out\" is not properly enclosed in the surrounding string literal.",
-        "hint": null,
-        "correctAnswer": [
-          "This is an invalid syntax to use to assign values to flash[:notice]"
-        ],
-        "options": [
-          "The string assigned to flash[:notice] will not be available until the next browser request.",
-          "An instance variable should be used for flash[:notice]",
-          "This is an invalid syntax to use to assign values to flash[:notice]",
-          "The previous value of flash[:notice] will not be cleared automatically"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "fa48c252ed7aaafe42585258",
-        "question": "Which statement about ActiveRecord models is true?",
-        "answer": "An instance of an ActiveRecord model will have attributes that match the columns in a corresponding database table.",
-        "explanation": "[Reference](https://api.rubyonrails.org/classes/ActiveRecord/Base.html)",
-        "hint": null,
-        "correctAnswer": [
-          "An instance of an ActiveRecord model will have attributes that match the columns in a corresponding database table."
-        ],
-        "options": [
-          "Each database column requires adding a matching attr_accessor declaration in the ActiveRecord model.",
-          "All attributes in an ActiveRecord model are read-only declared as writable using attr_accessible",
-          "An instance of an ActiveRecord model will have attributes that match the columns in a corresponding database table.",
-          "ActiveRecord models can have only attributes that have a matching database column"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "095f8c5e9b9350078bb7d539",
-        "question": "What is the correct way to assign a value to the session?",
-        "answer": "D",
-        "explanation": "```ruby\n$_SESSION['user_id'] = user.id\n```\n```ruby\n@session ||= Session.new << user.id\n```\n```ruby\nsession_save(:user_id, user.id)\n```\n```ruby\nsession[:user_id] = user.id\n```\n[Reference](https://guides.rubyonrails.org/v7.1/action_controller_overview.html#session)",
-        "hint": null,
-        "correctAnswer": [
-          "D"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f26adef4adb962b2b9be4ebe",
-        "question": "Which choice best describes the expected value of @result?\n```ruby\n@result = Article.first.tags.build(name: 'Urgent')\n```",
-        "answer": "an unsaved Tag instance",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "an unsaved Tag instance"
-        ],
-        "options": [
-          "either true or false",
-          "an unsaved Tag instance",
-          "a saved Tag instance",
-          "an array of Tag instances"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6963d98f35a391b6fcde233d",
-        "question": "What is the correct syntax for inserting a dynamic title tag into the header of your page from within an ERB view template?",
-        "answer": "B",
-        "explanation": "```ruby\n<% render :head do %>\n<title>My page title</title>\n<% end %>\n```\n```ruby\n<% content_for :head do %>\n<title>My page title</title>\n<% end %>\n```\n```ruby\n<% render \"shared/head, locals: {title: \"My page title\"} %>\n```\n```ruby\n<% tield :head do %>\n<title>My page title</title>\n<% end %>\n```",
-        "hint": null,
-        "correctAnswer": [
-          "B"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8499c509f1f1c1105ec4d117",
-        "question": "How would you validate that a project's name is not blank, is fewer than 50 characters, and is unique?",
-        "answer": "A",
-        "explanation": "```ruby\nclass Project\nvalidates :name, presence: true, length: { maximum: 50 }, uniqueness: true\nend\n```\n```ruby\nclass Project\nvalidate_attribute :name, [:presence, :uniqueness], :length => 1..50\nend\n```\n```ruby\nclass Project\nvalidate_before_save :name, [:presence, [:length, 50], :uniqueness], :length => 1..50\nend\n```\n```ruby\nclass Project\nvalidates_presense_of :name, :unique => true\nvalidates_length_of :name, :maximum => 50\nend\n```",
-        "hint": null,
-        "correctAnswer": [
-          "A"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "df15dd5de92d116decb90633",
-        "question": "If a product has a user-uploadable photo, which ActiveStorage method should fill in the blank?\n```ruby\nclass Product << ApplicationRecord\n  ____ :photo\nend\n```",
-        "answer": "has_one_attached",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "has_one_attached"
-        ],
-        "options": [
-          "has_one_attached",
-          "has_image",
-          "attached_file",
-          "acts_as_attachment"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9fc8d71f164c64c6618dc05c",
-        "question": "If the only route defined is resources :products, what is an example of a URL that could be generated by this link_to method?\n```ruby\nlink_to('Link', {controller: 'products', action: 'index', page: 3})\n```",
-        "answer": "A",
-        "explanation": "```ruby\n/products?page=3\n```\n```ruby\n/products/index/3\n```\n```ruby\n/products/page/3\n```\n```ruby\n/products/index/page/3\n```",
-        "hint": null,
-        "correctAnswer": [
-          "A"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3fb30f13fa1bbafded08c46d",
-        "question": "Which part of the Rails framework is primarily responsible for making decisions about how to respond to a browser request?",
-        "answer": "controller",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "controller"
-        ],
-        "options": [
-          "view",
-          "controller",
-          "ActiveRecord",
-          "model"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1774e4b6b6c70da4a97b9482",
-        "question": "If User is an ActiveRecord class, which choice would be expected to return an array?",
-        "answer": "User.where(last_name: 'Smith')",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "User.where(last_name: 'Smith')"
-        ],
-        "options": [
-          "User.where(last_name: 'Smith')",
-          "User.find_or_create(last_name: 'Smith')",
-          "User.find_by_last_name('Smith')",
-          "User.find('Smith')"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "78960b8ee6a3f5cbc41abad8",
-        "question": "Which choice is not a valid Rails route?",
-        "answer": "route \"products/index\", to: \"products/index\", via: :get",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "route \"products/index\", to: \"products/index\", via: :get"
-        ],
-        "options": [
-          "route \"products/index\", to: \"products/index\", via: :get",
-          "match \"products/index\", to: \"products#index\", via: :get",
-          "root \"products/index\"",
-          "get \"products/index\""
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a682b00230cfe01a3cb0e3f4",
-        "question": "Given a table of blog_posts and a related table of comments (comments made on each blog post), which ActiveRecord query will retrieve all blog posts with comments created during @range?",
-        "answer": "BlogPost.joins (:comments).where(comments: {created_at: @range})",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "BlogPost.joins (:comments).where(comments: {created_at: @range})"
-        ],
-        "options": [
-          "BlogPost.joins (:comments).where(comments: {created_at: @range})",
-          "BlogPost.where(['comments.created_at', @range])",
-          "BlogPost.preload (\"comments.created_at\").where(created_at: @range)",
-          "BlogPost.includes (:comments).where('comments.created_at' => @range)"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e8a2ddd48d9fcf11941a72ea",
-        "question": "Given this Category model with an attribute for \"name\", what code would fill in the blank so that it sets saved_name to a string that is the category name that existed before the name was changed?\n```ruby\nclass Category < ActiveRecord::Base\n  # has a database column for :name\nend\ncategory = Category.first\ncategory.name = 'News'\nsaved_name = _____\n```",
-        "answer": "category.name_was",
-        "explanation": "[Reference](https://api.rubyonrails.org/v7.1/classes/ActiveModel/Dirty.html#method-i-2A_was)",
-        "hint": null,
-        "correctAnswer": [
-          "category.name_was"
-        ],
-        "options": [
-          "category.name_was",
-          "category.saved(:name)",
-          "category.changes[:name]",
-          "category.name_changed?"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5199252db0a4c7bfc3e0813a",
-        "question": "Given two models, what is the issue with the query used to fetch them?\n```ruby\nclass LineItem < ApplicationRecord\nend\nclass Order < ApplicationRecord\n  has_many :line_items\nend\nOrder.limit(3).each { |order| puts order.line_items }\n```",
-        "answer": "This query will result in the N+1 query issue. Three orders will result in four queries.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "This query will result in the N+1 query issue. Three orders will result in four queries."
-        ],
-        "options": [
-          "This query will result in extensive caching, and you will have to then deal with caching issues.",
-          "This query will result in the N+1 query issue. Three orders will result in four queries.",
-          "This query will result in the 1 query issue. Three orders will result in one query.",
-          "There are no issues with this query, and you are correctly limiting the number of Order models that will be loaded."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bab8db552bfabc0ad5b5e9c6",
-        "question": "Which choice is an _incorrect_ way to render a partial?",
-        "answer": "`<%= render(template: 'shared/product', with: @products) %>`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`<%= render(template: 'shared/product', with: @products) %>`"
-        ],
-        "options": [
-          "`<%= render(:partial => 'shared/product') %>`",
-          "`<%= render('shared/product', :collection => @products) %>`",
-          "`<%= render(template: 'shared/product', with: @products) %>`",
-          "`<%= render('shared/product', locals: { product: @product }) %>`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bec93d371ba0ccb6f07b1ce4",
-        "question": "Which code sample will skip running the `login_required` \"before\" filter on the `get_posts` controller action?",
-        "answer": "`skip_before_action :login_required, only: [:get_posts]`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`skip_before_action :login_required, only: [:get_posts]`"
-        ],
-        "options": [
-          "`before_action :login_required, skip: [:get_posts]`",
-          "`skip_before_action :login_required, except: [:get_posts]`",
-          "`skip_before_action :login_required, only: [:get_posts]`",
-          "`skip_action before: :login_required, only: [:get_posts]`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0114eec2de14d94c0ea4c652",
-        "question": "Within a Rails model with a `cache_key` method, which code snippet will expire the cache whenever the model is updated?",
-        "answer": "C",
-        "explanation": "```ruby\nafter_update_commit do\ndestroy\nend\n```\n```ruby\nafter_destroy do\nRails.cache.delete(cache_key)\nend\n```\n```ruby\nafter_update_commit do\nRails.cache.delete(cache_key)\nend\n```\n```ruby\nafter_update_commit do\nRails.cache.destroy(cache_key)\nend\n```\n[Reference](https://api.rubyonrails.org/classes/ActiveSupport/Cache/Store.html#method-i-delete)",
-        "hint": null,
-        "correctAnswer": [
-          "C"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ab6a25614166c7d7ef390e00",
-        "question": "After this migration has been executed, which statement would be true?\n```ruby\nclass CreateGalleries < ActiveRecord::Migration\n  def change\n    create_table :galleries do |t|\n      t.string :name, :bg_color\n      t.integer :position\n      t.boolean :visible, default: false\n      t.timestamps\n    end\n  end\nend\n```",
-        "answer": "The galleries table will include a column named \"updated_at\".; The galleries table will contain exactly seven columns.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "The galleries table will include a column named \"updated_at\".",
-          "The galleries table will contain exactly seven columns."
-        ],
-        "options": [
-          "The galleries table will have no primary key.",
-          "The galleries table will include a column named \"updated_at\".",
-          "The galleries table will contain exactly seven columns.",
-          "The galleries table will have an index on the position column."
-        ],
-        "nature": "ChooseMany",
-        "attachments": []
-      },
-      {
-        "id": "8bc31d9069cbed8fb11bcffe",
-        "question": "Which code would you add to return a 404 to the API caller if the user is not found in the database?\n```ruby\nclass UsersController < ApplicationController\n  def show\n    @user = User.find(params[:id])\n    render json: @user, status: :ok,\n    # Missing code\nend\n```",
-        "answer": "C",
-        "explanation": "```ruby\nrescue => e\nlogger.info e\nend\n```\n```ruby\nrescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response\n```\n```ruby\nrescue ActiveRecord::RecordNotFound\nrender json: { message: 'User not found' }, status: :not_found\nend\n```\n```ruby\nraise ActiveRecord::RecordNotFound\nrender json: { message: 'User not found' }, status: :user_not_found\nend\n```",
-        "hint": null,
-        "correctAnswer": [
-          "C"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "419c2c92dac7c7c80c2ea95b",
-        "question": "What decides which controller receives which requests?",
-        "answer": "router",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "router"
-        ],
-        "options": [
-          "model",
-          "view",
-          "web server",
-          "router"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3b973468446e4342134f286f",
-        "question": "WHich helper method escapes HTML and also formats line breaksin a text string?",
-        "answer": "simple_format",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "simple_format"
-        ],
-        "options": [
-          "sanitize",
-          "escape_html",
-          "simple_format",
-          "raw"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8cc000069eefa363624abc20",
-        "question": "Given this code, and assuming `@user` is an instance of `User` that has an assigned location, which choice would be used to return the user's city?\n```ruby\n    class Location < ActiveRecord::Base\n        # has database columns for :city, :state\n        has_many :users\n    end\n    class User < ActiveRecord::Base\n        belongs_to :location\n        delegate :city, :state, to: :location, allow_nil: true, prefix: true\n    end\n```",
-        "answer": "`@user.location_city`",
-        "explanation": "[Reference](https://apidock.com/rails/Module/delegate)\n[Reference](https://itnext.io/understanding-delegate-in-ruby-on-rails-i-wish-i-knew-before-5edd341bad47)",
-        "hint": null,
-        "correctAnswer": [
-          "`@user.location_city`"
-        ],
-        "options": [
-          "`@user.user_city`",
-          "`@user.location_city`",
-          "`@user.city`",
-          "`@user.try(:city)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7d4ad066c7632f68586fa42f",
-        "question": "Where would this code most likely be found in a Rails project?\n`scope :active, lambda { where(:active => true) }`",
-        "answer": "an ActiveRecord model",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "an ActiveRecord model"
-        ],
-        "options": [
-          "an ActiveRecord model",
-          "an ActionView template",
-          "an ApplicationHelper file",
-          "an ActionController controller"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8f904450026399546f9a3d29",
-        "question": "What is a standard prerequisite for implementing Single Table Inheritance (STI)?",
-        "answer": "The database table used for STI must have a column named \"type\".",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "The database table used for STI must have a column named \"type\"."
-        ],
-        "options": [
-          "The models used for STI must mix in the module `ActiveRecord::STI`",
-          "All models used for STI must include \"self.abstract_class=true\".",
-          "All database tables used for STI must be related to each other using a foreign key.",
-          "The database table used for STI must have a column named \"type\"."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c315cbc3bc00c6543b579913",
-        "question": "A way that views can share reusable code, such as formatting a date, is called a \\_?",
-        "answer": "helper",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "helper"
-        ],
-        "options": [
-          "helper",
-          "utility",
-          "controller",
-          "formatter"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "880d15c85c6c882a5ad732fb",
-        "question": "How do you add Ruby code inside Rails views and have its result outputted in the HTML file?",
-        "answer": "Create an embedded Ruby file `(.html.erb)` and surround the Ruby code with `<%= %>`.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Create an embedded Ruby file `(.html.erb)` and surround the Ruby code with `<%= %>`."
-        ],
-        "options": [
-          "Insert Ruby code inside standard HTML files and surround it with `<% %>`. The web server will handle the rest.",
-          "Create an embedded Ruby file `(.html.erb)` and surround the Ruby code with `<% %>`",
-          "Put the code in `an.rb. file` and include it in a `<link>` tag of an HTML file.",
-          "Create an embedded Ruby file `(.html.erb)` and surround the Ruby code with `<%= %>`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d904e3b83e351f3f2378c911",
-        "question": "You are working with a large database of portfolios that sometimes have an associated image. Which statement best explains the purpose of includes(:image) in this code?\n```ruby\n@portfolios = Portfolio.includes(:image).limit(20)\n@portfolios.each do |portfolio|\n    puts portfolio.image.caption\nend\n```",
-        "answer": "It will execute two database queries instead of 21 database queries.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "It will execute two database queries instead of 21 database queries."
-        ],
-        "options": [
-          "It preloads the images files using asset pipeline.",
-          "It selects only portfolios that have an image attached.",
-          "It includes the number of associated images when determining how many records to return.",
-          "It will execute two database queries instead of 21 database queries."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "67afde978bdefe53ae62dab1",
-        "question": "What is RVM?",
-        "answer": "Ruby Version Manager",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Ruby Version Manager"
-        ],
-        "options": [
-          "Rails Validation Model",
-          "Rails Version Manager",
-          "Rails View Model",
-          "Ruby Version Manager"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8fd9a199e0a217d94d86eef8",
-        "question": "Which line of inquiry would you follow after receiving this error message: No route matches [POST] \"/burrito/create\"?",
-        "answer": "Check that there is a `post` route that matches \"/burrito/create\" in your routes.rb file.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Check that there is a `post` route that matches \"/burrito/create\" in your routes.rb file."
-        ],
-        "options": [
-          "Check that there is a matching path for \"/burrito/create\" in you paths.rb file.",
-          "Check that there is a `post` route that matches \"/burrito/create\" in your routes.rb file.",
-          "Add the line `resources :burritos` to your routes.rb file.",
-          "Check that there is a `get` route that matches \"burrito/create\" in your paths.rb file."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5f459da0256ca29c08aca05d",
-        "question": "Which controller action is `not` in danger of returning double render errors?",
-        "answer": "D",
-        "explanation": "```ruby\ndef show\nif params[:detailed] == \"1\"\nredirect_to(action: 'detailed_show')\nend\nrender('show')\nend\n```\n```ruby\ndef show\nrender('detailed_show') if params[:detailed] == \"1\"\nrender('show') and return\nend\n```\n```ruby\ndef show\nif params[:detailed] == \"1\"\nrender('detailed_show')\nend\nrender('show')\nend\n```\n```ruby\ndef show\nif params[:detailed] == \"1\"\nrender('detailed_show')\nend\nend\n```",
-        "hint": null,
-        "correctAnswer": [
-          "D"
-        ],
-        "options": [
-          "A",
-          "B",
-          "C",
-          "D"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1c20f1205ce45b103dd4bc30",
-        "question": "Which keyword is used in a layout to identify a section where content from the view should be inserted?",
-        "answer": "yield",
-        "explanation": "[Reference](https://guides.rubyonrails.org/layouts_and_rendering.html)",
-        "hint": null,
-        "correctAnswer": [
-          "yield"
-        ],
-        "options": [
-          "render",
-          "puts",
-          "view_content",
-          "yield"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4bf935c7ce1be9f2d3d1ed7c",
-        "question": "Check the following Ruby code and replace `__BLOCK__` with the correct code to achieve the result.\n```ruby\nclass TodoList\n  def initialize\n    @todos = []\n  end\n  def add_todo(todo)\n    @todos << todo\n  end\n  def __BLOCK__\n    @todos.map { |todo| \"- #{todo}\" }.join(\"\\n\")\nend\nwork = TodoList.new\nwork.add_todo(\"Commit\")\nwork.add_todo(\"PR\")\nwork.add_todo(\"Merge\")\nputs work\n=> - Commit\n=> - PR\n=> - Merge\n```",
-        "answer": "to_s",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "to_s"
-        ],
-        "options": [
-          "to_s",
-          "work",
-          "inspect",
-          "**str**"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "18a424b552f9b8bf5dc15dc5",
-        "question": "What decides which controller receives which requests?",
-        "answer": "router",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "router"
-        ],
-        "options": [
-          "web server",
-          "router",
-          "view",
-          "model"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bfabdf674546c44b0c11d7cc",
-        "question": "Which statement about this code will always be true?\n```ruby\nclass UserController < ActionController::Base\n  def show\n    @user = User.find_by_id(session[:user_id])\n    @user ||= User.first\n  end\nend\n```",
-        "answer": "If `User.find_by_id ` returns nil or false, the variable `@user` will be set to the object returned by `User.first`.",
-        "explanation": "[Reference](https://www.rubyguides.com/2018/07/ruby-operators/) #Assignment_Operators",
-        "hint": null,
-        "correctAnswer": [
-          "If `User.find_by_id ` returns nil or false, the variable `@user` will be set to the object returned by `User.first`."
-        ],
-        "options": [
-          "The variable `@user` will be set to the object returned by `User.first` unless `session[:user_id]` has a value.",
-          "The result of `User.find_by_id` is irrelevant because the variable `@user` will always be set to the object returned by `User.first`.",
-          "If `User.find_by_id` does not raise an exception, the variable `@user` will be set to the object returned by `User.first`.",
-          "If `User.find_by_id ` returns nil or false, the variable `@user` will be set to the object returned by `User.first`."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "aa71638b358feefe4a26a93f",
-        "question": "When defining a resource route, seven routes are defined by default. Which two methods allow defining additional routes on the resource?",
-        "answer": "member, collection",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "member, collection"
-        ],
-        "options": [
-          "only, except",
-          "match, resolve",
-          "action, path",
-          "member, collection"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a1a036fec2b51f7cd72d577e",
-        "question": "You are rendering a partial with this code. What will display the user's name?\n`<%= render partial: 'user_info', object: { name: 'user' } %>`",
-        "answer": "`<%= user_info[:name] %>`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`<%= user_info[:name] %>`"
-        ],
-        "options": [
-          "`<%= locals.user_info.name %>`",
-          "`<%= object.name %>`",
-          "`<%= user_info[:name] %>`",
-          "`<%= @user.name %>`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "61c9f146aec6579cfb375a94",
-        "question": "Once this form is submitted, which code in the controller would retrieve the string for :name?\n```ruby\n<%= form_for(@category) do |f| %>\n  <%= f.text_field(:name) %>\n<% end %>\n```",
-        "answer": "`params[:category][:name]`",
-        "explanation": "[Reference](https://apidock.com/rails/ActionView/Helpers/FormHelper/form_for)",
-        "hint": null,
-        "correctAnswer": [
-          "`params[:category][:name]`"
-        ],
-        "options": [
-          "`params[:name]`",
-          "`@params.name`",
-          "`params.require(:category).permit(:name)`",
-          "`params[:category][:name]`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3299f294c36ab817d6c67de1",
-        "question": "Which missing line would best show the correct usage of strong parameters?\n```ruby\nclass ProjectsController < ActionController::Base\n  def create\n    Project.create(project_params)\n  end\n  private\n  def project_params\n    # Missing line\n  end\nend\n```",
-        "answer": "`params.require(:project).permit(:name, :visible, :description)`",
-        "explanation": "[Strong Params](https://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)",
-        "hint": null,
-        "correctAnswer": [
-          "`params.require(:project).permit(:name, :visible, :description)`"
-        ],
-        "options": [
-          "`params[:project].allow(:name, :visible, :description)`",
-          "`params[:project].allowed`",
-          "`params.permit(:project).allow(:name, :visible, :description)`",
-          "`params.require(:project).permit(:name, :visible, :description)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4e88520b6d02abd23a43df80",
-        "question": "What is the purpose of the rake db:migrate command?",
-        "answer": "`To migrate the database schema to the latest version.`",
-        "explanation": "[Reference](https://guides.rubyonrails.org/v3.2/migrations.html#:~:text=Active%20Record%20tracks%20which%20migrations,the%20structure%20of%20your%20database.)",
-        "hint": null,
-        "correctAnswer": [
-          "`To migrate the database schema to the latest version.`"
-        ],
-        "options": [
-          "`To create a new database for the Rails application.`",
-          "`To migrate the database schema to the latest version.`",
-          "`To seed the database with initial data.`",
-          "`To test the database connection.`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d9ff4482ab101701095f0f13",
-        "question": "What is the execution result of the following Ruby code?\n```ruby\nclass A\n  def self.get_self\n    self.class\n  end\n  def get_self\n    self\n  end\nend\np \"#{A.get_self.class} #{A.new.get_self.class}\"\n```",
-        "answer": "`Class A`",
-        "explanation": "[Reference](https://www.ignacio.al/self-class-ruby.html)",
-        "hint": null,
-        "correctAnswer": [
-          "`Class A`"
-        ],
-        "options": [
-          "`Class Class`",
-          "`A A`",
-          "`A Class`",
-          "`Class A`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "eefbbf0f1e1ad961deb96908",
-        "question": "Given the following model class and view , which code snippet should you use to fetch the correct results, and avoid the N+1 query issue?\n```ruby\nclass Movies < ApplicationRecord\n  def recent_reviews\n    # Return the latest 10 reviews\n  end\nend\n```\n```ruby\n<%= @movie.recent_reviews.each do |review| %>\n  <div>\n    <header><%= review.critic.name %></header>\n    <div><%= review.comment %></div>\n  </div>\n<% end %>\n```",
-        "answer": "`@movie.reviews.includes(:critic).order(created_at: :desc).limit(10)`",
-        "explanation": "[Reference](https://hackernoon.com/differences-between-includes-and-joins-in-ruby-on-rails-1r2s35oj)",
-        "hint": null,
-        "correctAnswer": [
-          "`@movie.reviews.includes(:critic).order(created_at: :desc).limit(10)`"
-        ],
-        "options": [
-          "`@movie.reviews.order(created_at: :desc).limit(10)`",
-          "`@movie.reviews.joins(:critic).order(created_at: :desc).limit(10)`",
-          "`@movie.reviews.includes(:critic).order(created_at: :desc).limit(10)`",
-          "`@movie.reviews.references(:critic).order(created_at: :desc).limit(10)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
+    "slug": "ruby-on-rails",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
+      {
+        "id": "c04e48bd84e0594802a104e0",
+        "language": "md",
+        "title": "Ruby on Rails",
+        "description": "Seeded from ruby-on-rails/ruby-on-rails-quiz.md",
+        "questions": [
+          {
+            "id": "62a2e556b2aff60e26ad20c1",
+            "question": "When rendering a partial in a view, how would you pass local variables for rendering?",
+            "answer": "`<%= render partial: \"nav\", locals: {selected: \"about\"}`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`<%= render partial: \"nav\", locals: {selected: \"about\"}`"
+            ],
+            "options": [
+              "`<%= render partial: \"nav\", globals: {selected: \"about\"} %>`",
+              "`<%= render partial: \"nav\", selected: \"about\"}%>`",
+              "`<%= render partial: \"nav\", local_variables: {selected: \"about\"} %>`",
+              "`<%= render partial: \"nav\", locals: {selected: \"about\"}`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "3f463d5bea82f599a4ee0822",
+            "question": "Within a Rails controller, which code will prevent the parent controller's before_action `:get_feature` from running?",
+            "answer": "`skip_before_action :get_feature`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`skip_before_action :get_feature`"
+            ],
+            "options": [
+              "`skip_before_action :get_feature`",
+              "`skip :get_feature, except: []`",
+              "`prevent_action :get_feature`",
+              "`:redis_cache_store`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "3a65f2cd87ea76dc2d439086",
+            "question": "Which statement correctly describes a difference between the form helper methods `form_tag` and `form_for`?",
+            "answer": "The `form_tag` method typically expects a URL as its first argument, while the `form_for` method typically expects a model object.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The `form_tag` method typically expects a URL as its first argument, while the `form_for` method typically expects a model object."
+            ],
+            "options": [
+              "The `form_tag` method is for basic forms, while the `form_for` method is for multipart forms that include file uploads.",
+              "The `form_tag` method is for HTTP requests, while the `form_for` method is for AJAX requests.",
+              "The `form_tag` method typically expects a URL as its first argument, while the `form_for` method typically expects a model object.",
+              "The `form_tag` method is evaluated at runtime, while the `form_for` method is precompiled and cached."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "3145b336e41a0b516919285f",
+            "question": "What is `before_action` (formerly known as `before_filter`)?",
+            "answer": "A method in a controller that is executed before the controller action method",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "A method in a controller that is executed before the controller action method"
+            ],
+            "options": [
+              "A trigger that is executed before an alteration of an object's state",
+              "A method that is executed before an ActiveRecord model is saved",
+              "A callback that fires before an event is handled",
+              "A method in a controller that is executed before the controller action method"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "53c7c0b07a8b3feecbaeac99",
+            "question": "Which module can you use to encapsulate a cohesive chunk of functionality into a mixin?",
+            "answer": "`ActiveSupport::Concern`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`ActiveSupport::Concern`"
+            ],
+            "options": [
+              "`ActiveSupport::Concern`",
+              "`RailsHelper.CommonClass`",
+              "`ActiveJob::Mixin`",
+              "`ActiveSupport::Module`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "3af866a1dc9e5dc3c4c36f42",
+            "question": "In Rails, which code would you use to define a route that handles both the `PUT` and `PATCH` `REST HTTP` verbs?",
+            "answer": "`match 'items', to 'items#update', via: [:put, :patch]`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`match 'items', to 'items#update', via: [:put, :patch]`"
+            ],
+            "options": [
+              "`put :items, include: patch`",
+              "`put 'items', to: 'items#update'`",
+              "`match 'items', to 'items#update', via: [:put, :patch]`",
+              "`match :items, using: put && patch`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "7466ddd65b80f1cdd5aad0f1",
+            "question": "Which choice includes standard REST HTTP verbs?",
+            "answer": "GET, POST, PATCH, DELETE",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "GET, POST, PATCH, DELETE"
+            ],
+            "options": [
+              "GET, POST, PATCH, DELETE",
+              "REDIRECT, RENDER, SESSION, COOKIE",
+              "INDEX, SHOW, NEW, CREATE, EDIT, UPDATE, DESTROY",
+              "CREATE, READ, UPDATE, DELETE"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "13756ea79192b0a090214d25",
+            "question": "Which ActiveRecord query prevents SQL injection?",
+            "answer": "`Product.where(\"name = ?\", @keyword`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`Product.where(\"name = ?\", @keyword`"
+            ],
+            "options": [
+              "`Product.where(\"name = #{@keyword}\")`",
+              "`Product.where(\"name = \" << @keyword}`",
+              "`Product.where(\"name = ?\", @keyword`",
+              "`Product.where(\"name = \" + h(@keyword)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "59af0a8d1d1e68193969682d",
+            "question": "Given this code, which statement about the database table \"documents\" could be expected to be _true_?\n```rb\nclass Document < ActiveRecord::Base\n  belongs_to :documentable, polymorphic: true\nend\nclass Product < ActiveRecord::Base\n  has_many :documents, as: :documentable\nend\nclass Service < ActiveRecord::Base\n  has_many :documents, as: :documentable\nend\n```",
+            "answer": "It would include columns for `:documentable_id` and `:documentable_type`.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It would include columns for `:documentable_id` and `:documentable_type`."
+            ],
+            "options": [
+              "It would include a column for `:type`.",
+              "It would include columns for `:documentable_id` and `:documentable_type`.",
+              "It would include columns for `:documentable` and `:type`.",
+              "It would include a column for `:polymorphic_type`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "4c715797f98df91643043eb7",
+            "question": "Are instance variables set within a controller method accessible within a view?",
+            "answer": "Yes, any instance variables that are set in an action method on a controller can be accessed and displayed in a view.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Yes, any instance variables that are set in an action method on a controller can be accessed and displayed in a view."
+            ],
+            "options": [
+              "Yes, any instance variables that are set in an action method on a controller can be accessed and displayed in a view.",
+              "Yes, instance variables set within an action method are accessible within a view, but only when render is explicitly called inside the action method.",
+              "No, instance variables in a controller are private and are not accessible.",
+              "No, instance variables can never be set in a controller action method."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "aa82d02f63a3c19f3bf179cc",
+            "question": "When a validation of a field in a Rails model fails, where are the messages for validation errors stored?",
+            "answer": "`my_model.errors[:field]`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`my_model.errors[:field]`"
+            ],
+            "options": [
+              "`my_model.errors[:field]`",
+              "`my_model.get_errors_for(:field)`",
+              "`my_model.field.error`",
+              "`my_model.all_errors.select(:field)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "c395dc560e2bf80b9113a7d0",
+            "question": "If a database table of users contains the following rows, and `id` is the primary key, which statement would return only an object whose `last_name` is \"Cordero\"?\n```ruby\n-------------------------------\n| id | first_name | last_name |\n|----|------------|-----------|\n| 1  | Alice      | Anderson  |\n| 2  | Bob        | Buckner   |\n| 3  | Carrie     | Cordero   |\n| 4  | Devon      | Dupre     |\n| 5  | Carrie     | Eastman   |\n-------------------------------\n```",
+            "answer": "`User.find(3)`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`User.find(3)`"
+            ],
+            "options": [
+              "`User.where(first_name: \"Carrie\")`",
+              "`User.not.where(id: [1, 2, 4, 5])`",
+              "`User.find_by(first_name: \"Cordero\")`",
+              "`User.find(3)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "3c6ba322e5d7d9429e96e6c8",
+            "question": "How would you generate a drop-down menu that allows the user to select from a collection of product names?",
+            "answer": "`<%= collection_select(:product, :product_id, Product.all, :id, :name) %>`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`<%= collection_select(:product, :product_id, Product.all, :id, :name) %>`"
+            ],
+            "options": [
+              "`<%= select_tag(@products) %>`",
+              "`<%= collection_select(@products) %>`",
+              "`<select name=\"product_id\"> <%= @products.each do |product| %> <option value=\"<%= product.id %>\"/> <% end %></select>`",
+              "`<%= collection_select(:product, :product_id, Product.all, :id, :name) %>`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "7c6b81a6eaab23e5a0945d90",
+            "question": "For a Rails validator, how would you define an error message for the model attribute `address` with the message \"This address is invalid\"?",
+            "answer": "`model.errors[:address] << \"This address is invalid\"`",
+            "explanation": "[Custom Validator](https://guides.rubyonrails.org/v5.2/active_record_validations.html#custom-validators)",
+            "hint": null,
+            "correctAnswer": [
+              "`model.errors[:address] << \"This address is invalid\"`"
+            ],
+            "options": [
+              "`model.errors = This address is invalid`",
+              "`errors(model, :address) << \"This address is invalid\"`",
+              "`display_error_for(model, :address, \"This address is invalid\")`",
+              "`model.errors[:address] << \"This address is invalid\"`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "dad0024c5d41f65ddc25ee50",
+            "question": "Given the URL helper `product_path(@product)`, which statement would be expected to be _false_?",
+            "answer": "If sent using the POST HTTP method, the URL would create a new product in the database.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "If sent using the POST HTTP method, the URL would create a new product in the database."
+            ],
+            "options": [
+              "If sent using the PATCH HTTP method, the URL could be used to update a product in the database.",
+              "If sent using the POST HTTP method, the URL would create a new product in the database.",
+              "If sent using the GET HTTP method, the URL would execute the show action in ProductsController.",
+              "If sent using the DELETE HTTP method, the URL would call the destroy action by default."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "894d7e9fd0fcea7b15e8a9ce",
+            "question": "Given this code, which choice would be expected to be a _true_ statement if the user requests the index action?\n```rb\nclass DocumentsController < ApplicationController\n  before_action :require_login\n  def index\n    @documents = Document.visible.sorted\n  end\nend\n```",
+            "answer": "The index action will not be run if the `require_login` method calls render or `redirect_to`.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The index action will not be run if the `require_login` method calls render or `redirect_to`."
+            ],
+            "options": [
+              "The user's documents will be loaded.",
+              "The index action will run normally because `:index` is not listed as an argument to `before_action`.",
+              "The `require_login` method will automatically log in the user before running the index action.",
+              "The index action will not be run if the `require_login` method calls render or `redirect_to`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "4d21728a594351645f8fa626",
+            "question": "In Rails, how would you cache a partial template that is rendered?",
+            "answer": "`render partial: 'shared/menu', cached: true`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`render partial: 'shared/menu', cached: true`"
+            ],
+            "options": [
+              "`render partial: 'shared/menu', cached: true`",
+              "`render_with_cache partial: 'shared/menu'`",
+              "`render partial: 'shared/menu'`",
+              "`render partial: 'shared/menu', cached_with_variables: {}`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "f4202001934607c66ef5b00f",
+            "question": "What is the reason for using Concerns in Rails?",
+            "answer": "Concerns allow modularity and code reuse in models, controllers, and other classes.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Concerns allow modularity and code reuse in models, controllers, and other classes."
+            ],
+            "options": [
+              "Concerns allow modularity and code reuse in models, controllers, and other classes.",
+              "Concerns are used to separate class methods from models.",
+              "Concerns are used to increase security of Rails applications.",
+              "Concerns are used to refactor Rails views."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "fc80e76ccf79616da215a9de",
+            "question": "When using an ActiveRecord model, which method will create the model instance in memory and save it to the database?",
+            "answer": "`create`",
+            "explanation": "[Reference](https://medium.com/@de.usmanusa/difference-between-create-new-and-save-methods-in-activerecord-ea135085a08c)",
+            "hint": null,
+            "correctAnswer": [
+              "`create`"
+            ],
+            "options": [
+              "`build`",
+              "`new`",
+              "`create`",
+              "`save`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "c50bbc8da370f2aa51a980b4",
+            "question": "You are using an existing database that has a table named `coffee_orders`. What would the ActiveRecord model be named in order to use that table?",
+            "answer": "`CoffeeOrder`",
+            "explanation": "[Reference](https://guides.rubyonrails.org/active_record_basics.html#naming-conventions)",
+            "hint": null,
+            "correctAnswer": [
+              "`CoffeeOrder`"
+            ],
+            "options": [
+              "`CoffeeOrders`",
+              "`Coffee_Orders`",
+              "`Coffee_Order`",
+              "`CoffeeOrder`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "f27bb67f85d02964e62868b3",
+            "question": "In ActiveRecord, what is the difference between the `has_many` and `has_many :through` associations?",
+            "answer": "Both are one-to-many associations but with `has_many :through`, the declaring model can associate through a third model.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Both are one-to-many associations but with `has_many :through`, the declaring model can associate through a third model."
+            ],
+            "options": [
+              "The `has_many: through` association is the one-to-many equivalent to the `belongs_to` one-to-one association.",
+              "Both associations are identical, and `has_many: through` is maintained only for legacy purposes.",
+              "The `has_many` association is a one-to-many association, while `has_many: through` is a one-to-one association that matches through a third model.",
+              "Both are one-to-many associations but with `has_many :through`, the declaring model can associate through a third model."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "cb17da2fd52c6c8c090cbccd",
+            "question": "How do you add Ruby code inside Rails views and have its result outputted in the HTML file?",
+            "answer": "Create an embedded Ruby file (.html.erb) and surround the Ruby code with `<%= %>`.",
+            "explanation": "[Reference](https://guides.rubyonrails.org/action_view_overview.html#erb)",
+            "hint": null,
+            "correctAnswer": [
+              "Create an embedded Ruby file (.html.erb) and surround the Ruby code with `<%= %>`."
+            ],
+            "options": [
+              "Create an embedded Ruby file (.html.erb) and surround the Ruby code with `<% %>`.",
+              "Insert Ruby code inside standard HTML files and surround it with `<% %>`. The web server will handle the rest.",
+              "Create an embedded Ruby file (.html.erb) and surround the Ruby code with `<%= %>`.",
+              "Put the code in an .rb file and include it in a `<link>` tag of an HTML file."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "70f19072053bdd40c9024ff7",
+            "question": "How would you render a view using a different layout in an ERB HTML view?",
+            "answer": "`<% render 'view', layout: 'mobile' %>`",
+            "explanation": "[Reference](https://stackoverflow.com/a/19277971)",
+            "hint": null,
+            "correctAnswer": [
+              "`<% render 'view', layout: 'mobile' %>`"
+            ],
+            "options": [
+              "`<% render 'view_mobile' %>`",
+              "`<% render 'view', use_layout: 'mobile' %>`",
+              "`<% render 'view', layout: 'mobile' %>`",
+              "`<% render_with_layout 'view', 'mobile' %>`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "d5c867deac6e32b36ebb400b",
+            "question": "Given this controller code, which choice describes the expected behavior if parameters are submitted to the update action that includes values for the product's name, style, color, and price?\n```rb\nclass ProductController < ActionController::Base\n  def update\n    @product = Product.find(params[:id])\n    if @product.update(product_params)\n      redirect_to(product_path(@product))\n    else\n      render('edit')\n    end\n  end\n  private\n  def product_params\n    params.require(:product).permit(:name, :style, :color)\n  end\nend\n```",
+            "answer": "The product will be updated with the values for name, style, and color, but the value for price will be ignored.",
+            "explanation": "[Reference](https://stackoverflow.com/a/19277971)",
+            "hint": null,
+            "correctAnswer": [
+              "The product will be updated with the values for name, style, and color, but the value for price will be ignored."
+            ],
+            "options": [
+              "The product will not be updated and the edit template will be rendered.",
+              "The product will not be updated and the controller will raise an ActiveModel::ForbiddenAttributes exception.",
+              "The product will be updated with the values for name, style, and color, but the value for price will be ignored.",
+              "The product will be updated with the values for name, style, color, and price."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "4d24eaccee3c731ab96ab08a",
+            "question": "A Rails project has ActiveRecord classes defined for Classroom and Student. If instances of these classes are related so that students are assigned the ID of one particular classroom, which choice shows the correct associations to define?",
+            "answer": "D",
+            "explanation": "```rb\nclass Classroom < ActiveRecord::Base\nbelongs_to :students, class_name: 'Student'\nend\nclass Student < ActiveRecord::Base\nbelongs_to :classrooms, class_name: 'Classroom'\nend\n```\n```rb\nclass Student < ActiveRecord::Base\nhas_many :classrooms, dependent: true\nend\nclass Classroom < ActiveRecord::Base\nhas_many :students, dependent: false\nend\n```\n```rb\nclass Student < ActiveRecord::Base\nhas_many :classrooms\nend\nclass Classroom < ActiveRecord::Base\nbelongs_to :student\nend\n```\n```rb\nclass Classroom < ActiveRecord::Base\nhas_many :students\nend\nclass Student < ActiveRecord::Base\nbelongs_to :classroom\nend\n```",
+            "hint": null,
+            "correctAnswer": [
+              "D"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "d7f47bcae666c302b0832581",
+            "question": "Where should you put images, JavaScript, and CSS so that they get processed by the asset pipeline?",
+            "answer": "app/assets",
+            "explanation": "[Reference: RoR folder structure](https://images.app.goo.gl/CfKZPEQcGExfSx5C6)",
+            "hint": null,
+            "correctAnswer": [
+              "app/assets"
+            ],
+            "options": [
+              "app/static",
+              "app/images",
+              "app/assets",
+              "app/views"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "27e46a50d2f91601438e948a",
+            "question": "If the Rails asset pipeline is being used to serve JavaScript files, how would you include a link to one of those JavaScript files in a view?",
+            "answer": "`<%= javascript_include_tag 'main' %>`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`<%= javascript_include_tag 'main' %>`"
+            ],
+            "options": [
+              "`<script src=\"/main.js\"></script>`",
+              "`<%= javascript_include_tag 'main' %>`",
+              "`<%= javascript_tag 'main' %>`",
+              "`<!-- include_javascript 'main' -->`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "7c37f86a2cdfee9dcbf8ccac",
+            "question": "In Rails, what caching stores can be used?",
+            "answer": "MemoryStore, FileStore, MemCacheStore, RedisCacheStore, and NullStore",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "MemoryStore, FileStore, MemCacheStore, RedisCacheStore, and NullStore"
+            ],
+            "options": [
+              "MemCacheStore, MongoDBStore, MemoryStore, and FileStore",
+              "MemoryStore, FileStore, and CacheCacheStore",
+              "MemoryStore, FileStore, MemCacheStore, RedisCacheStore, and NullStore",
+              "MemoryStore, FileStore, MySQLStore, and RedisCacheStore"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "430f72fc22cd29cb3dd07969",
+            "question": "What is the correct way to generate a ProductsController with an index action using only the command-line tools bundled with Rails?",
+            "answer": "`rails generate controller Products index`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`rails generate controller Products index`"
+            ],
+            "options": [
+              "`rails generate controller --options {name: \"Products\", actions: \"index\"}`",
+              "`rails generate controller --name Products --action index`",
+              "`rails generate controller Products index`",
+              "`rails generate ProductsController --actions index`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "efe966a6d954bc798ca4a5d7",
+            "question": "If a model class is named Product, in which database table will ActiveRecord store and retrieve model instances?",
+            "answer": "`products`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`products`"
+            ],
+            "options": [
+              "`product_table`",
+              "`all_products`",
+              "`products_table`",
+              "`products`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "6b480323bc699476c807497c",
+            "question": "What is a popular alternative template language for generating views in a Rails app that is focused on simple abstracted markup?",
+            "answer": "Haml",
+            "explanation": "[Reference](https://medium.com/@bretcameron/so-you-think-you-know-html-7813c03f8ff6)",
+            "hint": null,
+            "correctAnswer": [
+              "Haml"
+            ],
+            "options": [
+              "Mustache",
+              "Haml",
+              "Liquid",
+              "Tilt"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "b9ce279cd9752274f6718936",
+            "question": "When Ruby methods add an exclamation point at the end of their name (such as `sort!`), what does it typically indicate?",
+            "answer": "It is a more powerful or destructive version of the method.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It is a more powerful or destructive version of the method."
+            ],
+            "options": [
+              "The method executes using \"sudo\" privileges.",
+              "Any ending line return will be omitted from the result.",
+              "The method will ignore exceptions that occur during execution.",
+              "It is a more powerful or destructive version of the method."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "2ee894cbf99dfbdc5cf7dbb1",
+            "question": "What options below would cause the method `#decrypt_data` to be run?\n```rb\nclass MyModel < ApplicationRecord\n  after_find :decrypt_data\nend\n```",
+            "answer": "`MyModel.first.update(field: 'example')`; `MyModel.first.destroy`",
+            "explanation": "[Reference](https://guides.rubyonrails.org/active_record_callbacks.html#running-callbacks)",
+            "hint": null,
+            "correctAnswer": [
+              "`MyModel.first.update(field: 'example')`",
+              "`MyModel.first.destroy`"
+            ],
+            "options": [
+              "`MyModel.first.update(field: 'example')`",
+              "`MyModel.where(id: 42)`",
+              "`MyModel.first.destroy`",
+              "`MyModel.new(field: 'new instance')`"
+            ],
+            "nature": "ChooseMany",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "d2d7cd96963450c2085d0253",
+            "question": "Which Rails helper would you use in the application view to protect against CSRF (Cross-Site Request Forgery) attacks?",
+            "answer": "`csrf_meta_tags`",
+            "explanation": "[Reference](https://api.rubyonrails.org/classes/ActionView/Helpers/CsrfHelper.html)",
+            "hint": null,
+            "correctAnswer": [
+              "`csrf_meta_tags`"
+            ],
+            "options": [
+              "`csrf_protection`",
+              "`csrf_helper`",
+              "`csrf_meta_tags`",
+              "`csrf`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "153a2d613758870a9226d491",
+            "question": "In the model `User` you have the code shown below. When saving the model and `model.is_admin` is set to true, which callback will be called?\n```rb\nbefore_save :encrypt_data, unless: ->(model) { model.is_admin }\nafter_save :clear_cache, if: ->(model) { model.is_admin }\nbefore_destroy :notify_admin_users, if: ->(model) { model.is_admin }\n```",
+            "answer": "`clear_cache`",
+            "explanation": "[Explanation]:\nWhen saving the User model and model.is_admin is set to true, the after_save callback will be called.\nThe before_save callback with the unless: ->(model) { model.is_admin } condition will not be called because the is_admin attribute is true.\nThe before_destroy callback with the if: ->(model) { model.is_admin } condition will be called if the is_admin attribute is true and the record is being destroyed, but this is not relevant to the scenario of saving the User model.\nTherefore, only the after_save callback with the if: ->(model) { model.is_admin } condition will be called in this scenario. This callback will be triggered after the record has been saved, if the is_admin attribute is true. In this case, the clear_cache method will be called.",
+            "hint": null,
+            "correctAnswer": [
+              "`clear_cache`"
+            ],
+            "options": [
+              "`encrypt_data`",
+              "`clear_cache`",
+              "`notify_admin_users`",
+              "None of these callbacks will be called when `is_admin` is true."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "97deba5b9b18ecd516c3ef42",
+            "question": "In a Rails controller, what does the code `params.permit(:name, :sku)` do?",
+            "answer": "It filters out submitted form parameters that are not named `:name` or `:sku` to make forms more secure.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It filters out submitted form parameters that are not named `:name` or `:sku` to make forms more secure."
+            ],
+            "options": [
+              "It filters out all parameters.",
+              "It filters out submitted form parameters that are not named `:name` or `:sku` to make forms more secure.",
+              "It raises an error if parameters that are not named `:name` or `:sku` are found.",
+              "It raises an error if the `:name` and `:sku` parameters are set to `nil`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "6bb67a8bce8b5935c5828de7",
+            "question": "Review the code below. Which Ruby operator should be used to fill in the blank so that the `sort` method executes properly?\n```rb\n[5,8,2,6,1,3].sort {|v1,v2| v1 ___ v2}\n```",
+            "answer": "`<=>`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`<=>`"
+            ],
+            "options": [
+              "`=>`",
+              "`<==>`",
+              "`<=>`",
+              "`||`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "2acf31fa40a90812f6d28742",
+            "question": "You made a spelling mistake while creating a table for bank accounts. Which code would you expect to see in a migration to fix the error?",
+            "answer": "A",
+            "explanation": "```ruby\nclass IAmADummy < ActiveRecord::Migration\ndef change\nrename_column :accounts, :account_hodler, :account_holder\nend\nend\n```\n```ruby\nclass FixSpellling < ActiveRecord::Migration\ndef change\nrename :accounts, :account_hodler, :account_holder\nend\nend\n```\n```ruby\nclass CoffeeNeeded < ActiveRecord::Migration\ndef change\nremove_column :accounts, :account_hodler\nadd_column :accounts, :account_holder\nend\nend\n```\n```ruby\nclass OopsIDidItAgain < ActiveRecord::Migration\ndef rename\n:accounts, :account_hodler, :account_holder\nend\nend\n```",
+            "hint": null,
+            "correctAnswer": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "1de2429100dd3c5f7edf6692",
+            "question": "Which HTML is closes to what this code would output?\n```ruby\n<% check_box(:post, :visible) %>\n```",
+            "answer": "A",
+            "explanation": "```html\n<input type=\"hidden\" name=\"post[visible]\" value=\"0\" />\n<input type=\"checkbox\" name=\"post[visible]\" value=\"1\" />\n```\n```html\n<checkbox name=\"post[visible]\" value=\"1\" />\n```\n```html\n<input type=\"checkbox\" name=\"post[visible]\" value=\"1\" data-default-value=\"0\" />\n```\n```html\n<input type=\"checkbox\" name=\"post[visible]\" value=\"1\" />\n```\n[Reference](https://apidock.com/rails/ActionView/Helpers/FormHelper/check_box)",
+            "hint": null,
+            "correctAnswer": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "9ef8c1bafb4c58258fcd29a4",
+            "question": "There is a bug in this code. The logout message is not appearing on the login template. What is the cause?\n```ruby\nclass AccessController < ActionController::Base\n  def destroy\n    session[:admin_id] = nil\n    flash[:notice] = \"\"You have been logged out\"\"\n    render('login')\nend\n```",
+            "answer": "This is an invalid syntax to use to assign values to flash[:notice]",
+            "explanation": "[Explanation]:\nThe cause of the bug is a syntax error in the line that sets the value of the flash[:notice] message. The string literal \"You have been logged out\" is not properly enclosed in the surrounding string literal.",
+            "hint": null,
+            "correctAnswer": [
+              "This is an invalid syntax to use to assign values to flash[:notice]"
+            ],
+            "options": [
+              "The string assigned to flash[:notice] will not be available until the next browser request.",
+              "An instance variable should be used for flash[:notice]",
+              "This is an invalid syntax to use to assign values to flash[:notice]",
+              "The previous value of flash[:notice] will not be cleared automatically"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "fa48c252ed7aaafe42585258",
+            "question": "Which statement about ActiveRecord models is true?",
+            "answer": "An instance of an ActiveRecord model will have attributes that match the columns in a corresponding database table.",
+            "explanation": "[Reference](https://api.rubyonrails.org/classes/ActiveRecord/Base.html)",
+            "hint": null,
+            "correctAnswer": [
+              "An instance of an ActiveRecord model will have attributes that match the columns in a corresponding database table."
+            ],
+            "options": [
+              "Each database column requires adding a matching attr_accessor declaration in the ActiveRecord model.",
+              "All attributes in an ActiveRecord model are read-only declared as writable using attr_accessible",
+              "An instance of an ActiveRecord model will have attributes that match the columns in a corresponding database table.",
+              "ActiveRecord models can have only attributes that have a matching database column"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "095f8c5e9b9350078bb7d539",
+            "question": "What is the correct way to assign a value to the session?",
+            "answer": "D",
+            "explanation": "```ruby\n$_SESSION['user_id'] = user.id\n```\n```ruby\n@session ||= Session.new << user.id\n```\n```ruby\nsession_save(:user_id, user.id)\n```\n```ruby\nsession[:user_id] = user.id\n```\n[Reference](https://guides.rubyonrails.org/v7.1/action_controller_overview.html#session)",
+            "hint": null,
+            "correctAnswer": [
+              "D"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "f26adef4adb962b2b9be4ebe",
+            "question": "Which choice best describes the expected value of @result?\n```ruby\n@result = Article.first.tags.build(name: 'Urgent')\n```",
+            "answer": "an unsaved Tag instance",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "an unsaved Tag instance"
+            ],
+            "options": [
+              "either true or false",
+              "an unsaved Tag instance",
+              "a saved Tag instance",
+              "an array of Tag instances"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "6963d98f35a391b6fcde233d",
+            "question": "What is the correct syntax for inserting a dynamic title tag into the header of your page from within an ERB view template?",
+            "answer": "B",
+            "explanation": "```ruby\n<% render :head do %>\n<title>My page title</title>\n<% end %>\n```\n```ruby\n<% content_for :head do %>\n<title>My page title</title>\n<% end %>\n```\n```ruby\n<% render \"shared/head, locals: {title: \"My page title\"} %>\n```\n```ruby\n<% tield :head do %>\n<title>My page title</title>\n<% end %>\n```",
+            "hint": null,
+            "correctAnswer": [
+              "B"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "8499c509f1f1c1105ec4d117",
+            "question": "How would you validate that a project's name is not blank, is fewer than 50 characters, and is unique?",
+            "answer": "A",
+            "explanation": "```ruby\nclass Project\nvalidates :name, presence: true, length: { maximum: 50 }, uniqueness: true\nend\n```\n```ruby\nclass Project\nvalidate_attribute :name, [:presence, :uniqueness], :length => 1..50\nend\n```\n```ruby\nclass Project\nvalidate_before_save :name, [:presence, [:length, 50], :uniqueness], :length => 1..50\nend\n```\n```ruby\nclass Project\nvalidates_presense_of :name, :unique => true\nvalidates_length_of :name, :maximum => 50\nend\n```",
+            "hint": null,
+            "correctAnswer": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "df15dd5de92d116decb90633",
+            "question": "If a product has a user-uploadable photo, which ActiveStorage method should fill in the blank?\n```ruby\nclass Product << ApplicationRecord\n  ____ :photo\nend\n```",
+            "answer": "has_one_attached",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "has_one_attached"
+            ],
+            "options": [
+              "has_one_attached",
+              "has_image",
+              "attached_file",
+              "acts_as_attachment"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "9fc8d71f164c64c6618dc05c",
+            "question": "If the only route defined is resources :products, what is an example of a URL that could be generated by this link_to method?\n```ruby\nlink_to('Link', {controller: 'products', action: 'index', page: 3})\n```",
+            "answer": "A",
+            "explanation": "```ruby\n/products?page=3\n```\n```ruby\n/products/index/3\n```\n```ruby\n/products/page/3\n```\n```ruby\n/products/index/page/3\n```",
+            "hint": null,
+            "correctAnswer": [
+              "A"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "3fb30f13fa1bbafded08c46d",
+            "question": "Which part of the Rails framework is primarily responsible for making decisions about how to respond to a browser request?",
+            "answer": "controller",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "controller"
+            ],
+            "options": [
+              "view",
+              "controller",
+              "ActiveRecord",
+              "model"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "1774e4b6b6c70da4a97b9482",
+            "question": "If User is an ActiveRecord class, which choice would be expected to return an array?",
+            "answer": "User.where(last_name: 'Smith')",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "User.where(last_name: 'Smith')"
+            ],
+            "options": [
+              "User.where(last_name: 'Smith')",
+              "User.find_or_create(last_name: 'Smith')",
+              "User.find_by_last_name('Smith')",
+              "User.find('Smith')"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "78960b8ee6a3f5cbc41abad8",
+            "question": "Which choice is not a valid Rails route?",
+            "answer": "route \"products/index\", to: \"products/index\", via: :get",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "route \"products/index\", to: \"products/index\", via: :get"
+            ],
+            "options": [
+              "route \"products/index\", to: \"products/index\", via: :get",
+              "match \"products/index\", to: \"products#index\", via: :get",
+              "root \"products/index\"",
+              "get \"products/index\""
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "a682b00230cfe01a3cb0e3f4",
+            "question": "Given a table of blog_posts and a related table of comments (comments made on each blog post), which ActiveRecord query will retrieve all blog posts with comments created during @range?",
+            "answer": "BlogPost.joins (:comments).where(comments: {created_at: @range})",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "BlogPost.joins (:comments).where(comments: {created_at: @range})"
+            ],
+            "options": [
+              "BlogPost.joins (:comments).where(comments: {created_at: @range})",
+              "BlogPost.where(['comments.created_at', @range])",
+              "BlogPost.preload (\"comments.created_at\").where(created_at: @range)",
+              "BlogPost.includes (:comments).where('comments.created_at' => @range)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "e8a2ddd48d9fcf11941a72ea",
+            "question": "Given this Category model with an attribute for \"name\", what code would fill in the blank so that it sets saved_name to a string that is the category name that existed before the name was changed?\n```ruby\nclass Category < ActiveRecord::Base\n  # has a database column for :name\nend\ncategory = Category.first\ncategory.name = 'News'\nsaved_name = _____\n```",
+            "answer": "category.name_was",
+            "explanation": "[Reference](https://api.rubyonrails.org/v7.1/classes/ActiveModel/Dirty.html#method-i-2A_was)",
+            "hint": null,
+            "correctAnswer": [
+              "category.name_was"
+            ],
+            "options": [
+              "category.name_was",
+              "category.saved(:name)",
+              "category.changes[:name]",
+              "category.name_changed?"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "5199252db0a4c7bfc3e0813a",
+            "question": "Given two models, what is the issue with the query used to fetch them?\n```ruby\nclass LineItem < ApplicationRecord\nend\nclass Order < ApplicationRecord\n  has_many :line_items\nend\nOrder.limit(3).each { |order| puts order.line_items }\n```",
+            "answer": "This query will result in the N+1 query issue. Three orders will result in four queries.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "This query will result in the N+1 query issue. Three orders will result in four queries."
+            ],
+            "options": [
+              "This query will result in extensive caching, and you will have to then deal with caching issues.",
+              "This query will result in the N+1 query issue. Three orders will result in four queries.",
+              "This query will result in the 1 query issue. Three orders will result in one query.",
+              "There are no issues with this query, and you are correctly limiting the number of Order models that will be loaded."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "bab8db552bfabc0ad5b5e9c6",
+            "question": "Which choice is an _incorrect_ way to render a partial?",
+            "answer": "`<%= render(template: 'shared/product', with: @products) %>`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`<%= render(template: 'shared/product', with: @products) %>`"
+            ],
+            "options": [
+              "`<%= render(:partial => 'shared/product') %>`",
+              "`<%= render('shared/product', :collection => @products) %>`",
+              "`<%= render(template: 'shared/product', with: @products) %>`",
+              "`<%= render('shared/product', locals: { product: @product }) %>`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "bec93d371ba0ccb6f07b1ce4",
+            "question": "Which code sample will skip running the `login_required` \"before\" filter on the `get_posts` controller action?",
+            "answer": "`skip_before_action :login_required, only: [:get_posts]`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`skip_before_action :login_required, only: [:get_posts]`"
+            ],
+            "options": [
+              "`before_action :login_required, skip: [:get_posts]`",
+              "`skip_before_action :login_required, except: [:get_posts]`",
+              "`skip_before_action :login_required, only: [:get_posts]`",
+              "`skip_action before: :login_required, only: [:get_posts]`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "0114eec2de14d94c0ea4c652",
+            "question": "Within a Rails model with a `cache_key` method, which code snippet will expire the cache whenever the model is updated?",
+            "answer": "C",
+            "explanation": "```ruby\nafter_update_commit do\ndestroy\nend\n```\n```ruby\nafter_destroy do\nRails.cache.delete(cache_key)\nend\n```\n```ruby\nafter_update_commit do\nRails.cache.delete(cache_key)\nend\n```\n```ruby\nafter_update_commit do\nRails.cache.destroy(cache_key)\nend\n```\n[Reference](https://api.rubyonrails.org/classes/ActiveSupport/Cache/Store.html#method-i-delete)",
+            "hint": null,
+            "correctAnswer": [
+              "C"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "ab6a25614166c7d7ef390e00",
+            "question": "After this migration has been executed, which statement would be true?\n```ruby\nclass CreateGalleries < ActiveRecord::Migration\n  def change\n    create_table :galleries do |t|\n      t.string :name, :bg_color\n      t.integer :position\n      t.boolean :visible, default: false\n      t.timestamps\n    end\n  end\nend\n```",
+            "answer": "The galleries table will include a column named \"updated_at\".; The galleries table will contain exactly seven columns.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The galleries table will include a column named \"updated_at\".",
+              "The galleries table will contain exactly seven columns."
+            ],
+            "options": [
+              "The galleries table will have no primary key.",
+              "The galleries table will include a column named \"updated_at\".",
+              "The galleries table will contain exactly seven columns.",
+              "The galleries table will have an index on the position column."
+            ],
+            "nature": "ChooseMany",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "8bc31d9069cbed8fb11bcffe",
+            "question": "Which code would you add to return a 404 to the API caller if the user is not found in the database?\n```ruby\nclass UsersController < ApplicationController\n  def show\n    @user = User.find(params[:id])\n    render json: @user, status: :ok,\n    # Missing code\nend\n```",
+            "answer": "C",
+            "explanation": "```ruby\nrescue => e\nlogger.info e\nend\n```\n```ruby\nrescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response\n```\n```ruby\nrescue ActiveRecord::RecordNotFound\nrender json: { message: 'User not found' }, status: :not_found\nend\n```\n```ruby\nraise ActiveRecord::RecordNotFound\nrender json: { message: 'User not found' }, status: :user_not_found\nend\n```",
+            "hint": null,
+            "correctAnswer": [
+              "C"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "419c2c92dac7c7c80c2ea95b",
+            "question": "What decides which controller receives which requests?",
+            "answer": "router",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "router"
+            ],
+            "options": [
+              "model",
+              "view",
+              "web server",
+              "router"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "3b973468446e4342134f286f",
+            "question": "WHich helper method escapes HTML and also formats line breaksin a text string?",
+            "answer": "simple_format",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "simple_format"
+            ],
+            "options": [
+              "sanitize",
+              "escape_html",
+              "simple_format",
+              "raw"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "8cc000069eefa363624abc20",
+            "question": "Given this code, and assuming `@user` is an instance of `User` that has an assigned location, which choice would be used to return the user's city?\n```ruby\n    class Location < ActiveRecord::Base\n        # has database columns for :city, :state\n        has_many :users\n    end\n    class User < ActiveRecord::Base\n        belongs_to :location\n        delegate :city, :state, to: :location, allow_nil: true, prefix: true\n    end\n```",
+            "answer": "`@user.location_city`",
+            "explanation": "[Reference](https://apidock.com/rails/Module/delegate)\n[Reference](https://itnext.io/understanding-delegate-in-ruby-on-rails-i-wish-i-knew-before-5edd341bad47)",
+            "hint": null,
+            "correctAnswer": [
+              "`@user.location_city`"
+            ],
+            "options": [
+              "`@user.user_city`",
+              "`@user.location_city`",
+              "`@user.city`",
+              "`@user.try(:city)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "7d4ad066c7632f68586fa42f",
+            "question": "Where would this code most likely be found in a Rails project?\n`scope :active, lambda { where(:active => true) }`",
+            "answer": "an ActiveRecord model",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "an ActiveRecord model"
+            ],
+            "options": [
+              "an ActiveRecord model",
+              "an ActionView template",
+              "an ApplicationHelper file",
+              "an ActionController controller"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "8f904450026399546f9a3d29",
+            "question": "What is a standard prerequisite for implementing Single Table Inheritance (STI)?",
+            "answer": "The database table used for STI must have a column named \"type\".",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The database table used for STI must have a column named \"type\"."
+            ],
+            "options": [
+              "The models used for STI must mix in the module `ActiveRecord::STI`",
+              "All models used for STI must include \"self.abstract_class=true\".",
+              "All database tables used for STI must be related to each other using a foreign key.",
+              "The database table used for STI must have a column named \"type\"."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "c315cbc3bc00c6543b579913",
+            "question": "A way that views can share reusable code, such as formatting a date, is called a \\_?",
+            "answer": "helper",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "helper"
+            ],
+            "options": [
+              "helper",
+              "utility",
+              "controller",
+              "formatter"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "880d15c85c6c882a5ad732fb",
+            "question": "How do you add Ruby code inside Rails views and have its result outputted in the HTML file?",
+            "answer": "Create an embedded Ruby file `(.html.erb)` and surround the Ruby code with `<%= %>`.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Create an embedded Ruby file `(.html.erb)` and surround the Ruby code with `<%= %>`."
+            ],
+            "options": [
+              "Insert Ruby code inside standard HTML files and surround it with `<% %>`. The web server will handle the rest.",
+              "Create an embedded Ruby file `(.html.erb)` and surround the Ruby code with `<% %>`",
+              "Put the code in `an.rb. file` and include it in a `<link>` tag of an HTML file.",
+              "Create an embedded Ruby file `(.html.erb)` and surround the Ruby code with `<%= %>`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "d904e3b83e351f3f2378c911",
+            "question": "You are working with a large database of portfolios that sometimes have an associated image. Which statement best explains the purpose of includes(:image) in this code?\n```ruby\n@portfolios = Portfolio.includes(:image).limit(20)\n@portfolios.each do |portfolio|\n    puts portfolio.image.caption\nend\n```",
+            "answer": "It will execute two database queries instead of 21 database queries.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It will execute two database queries instead of 21 database queries."
+            ],
+            "options": [
+              "It preloads the images files using asset pipeline.",
+              "It selects only portfolios that have an image attached.",
+              "It includes the number of associated images when determining how many records to return.",
+              "It will execute two database queries instead of 21 database queries."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "67afde978bdefe53ae62dab1",
+            "question": "What is RVM?",
+            "answer": "Ruby Version Manager",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Ruby Version Manager"
+            ],
+            "options": [
+              "Rails Validation Model",
+              "Rails Version Manager",
+              "Rails View Model",
+              "Ruby Version Manager"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "8fd9a199e0a217d94d86eef8",
+            "question": "Which line of inquiry would you follow after receiving this error message: No route matches [POST] \"/burrito/create\"?",
+            "answer": "Check that there is a `post` route that matches \"/burrito/create\" in your routes.rb file.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Check that there is a `post` route that matches \"/burrito/create\" in your routes.rb file."
+            ],
+            "options": [
+              "Check that there is a matching path for \"/burrito/create\" in you paths.rb file.",
+              "Check that there is a `post` route that matches \"/burrito/create\" in your routes.rb file.",
+              "Add the line `resources :burritos` to your routes.rb file.",
+              "Check that there is a `get` route that matches \"burrito/create\" in your paths.rb file."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "5f459da0256ca29c08aca05d",
+            "question": "Which controller action is `not` in danger of returning double render errors?",
+            "answer": "D",
+            "explanation": "```ruby\ndef show\nif params[:detailed] == \"1\"\nredirect_to(action: 'detailed_show')\nend\nrender('show')\nend\n```\n```ruby\ndef show\nrender('detailed_show') if params[:detailed] == \"1\"\nrender('show') and return\nend\n```\n```ruby\ndef show\nif params[:detailed] == \"1\"\nrender('detailed_show')\nend\nrender('show')\nend\n```\n```ruby\ndef show\nif params[:detailed] == \"1\"\nrender('detailed_show')\nend\nend\n```",
+            "hint": null,
+            "correctAnswer": [
+              "D"
+            ],
+            "options": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "1c20f1205ce45b103dd4bc30",
+            "question": "Which keyword is used in a layout to identify a section where content from the view should be inserted?",
+            "answer": "yield",
+            "explanation": "[Reference](https://guides.rubyonrails.org/layouts_and_rendering.html)",
+            "hint": null,
+            "correctAnswer": [
+              "yield"
+            ],
+            "options": [
+              "render",
+              "puts",
+              "view_content",
+              "yield"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "4bf935c7ce1be9f2d3d1ed7c",
+            "question": "Check the following Ruby code and replace `__BLOCK__` with the correct code to achieve the result.\n```ruby\nclass TodoList\n  def initialize\n    @todos = []\n  end\n  def add_todo(todo)\n    @todos << todo\n  end\n  def __BLOCK__\n    @todos.map { |todo| \"- #{todo}\" }.join(\"\\n\")\nend\nwork = TodoList.new\nwork.add_todo(\"Commit\")\nwork.add_todo(\"PR\")\nwork.add_todo(\"Merge\")\nputs work\n=> - Commit\n=> - PR\n=> - Merge\n```",
+            "answer": "to_s",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "to_s"
+            ],
+            "options": [
+              "to_s",
+              "work",
+              "inspect",
+              "**str**"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "18a424b552f9b8bf5dc15dc5",
+            "question": "What decides which controller receives which requests?",
+            "answer": "router",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "router"
+            ],
+            "options": [
+              "web server",
+              "router",
+              "view",
+              "model"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "bfabdf674546c44b0c11d7cc",
+            "question": "Which statement about this code will always be true?\n```ruby\nclass UserController < ActionController::Base\n  def show\n    @user = User.find_by_id(session[:user_id])\n    @user ||= User.first\n  end\nend\n```",
+            "answer": "If `User.find_by_id ` returns nil or false, the variable `@user` will be set to the object returned by `User.first`.",
+            "explanation": "[Reference](https://www.rubyguides.com/2018/07/ruby-operators/) #Assignment_Operators",
+            "hint": null,
+            "correctAnswer": [
+              "If `User.find_by_id ` returns nil or false, the variable `@user` will be set to the object returned by `User.first`."
+            ],
+            "options": [
+              "The variable `@user` will be set to the object returned by `User.first` unless `session[:user_id]` has a value.",
+              "The result of `User.find_by_id` is irrelevant because the variable `@user` will always be set to the object returned by `User.first`.",
+              "If `User.find_by_id` does not raise an exception, the variable `@user` will be set to the object returned by `User.first`.",
+              "If `User.find_by_id ` returns nil or false, the variable `@user` will be set to the object returned by `User.first`."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "aa71638b358feefe4a26a93f",
+            "question": "When defining a resource route, seven routes are defined by default. Which two methods allow defining additional routes on the resource?",
+            "answer": "member, collection",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "member, collection"
+            ],
+            "options": [
+              "only, except",
+              "match, resolve",
+              "action, path",
+              "member, collection"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "a1a036fec2b51f7cd72d577e",
+            "question": "You are rendering a partial with this code. What will display the user's name?\n`<%= render partial: 'user_info', object: { name: 'user' } %>`",
+            "answer": "`<%= user_info[:name] %>`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`<%= user_info[:name] %>`"
+            ],
+            "options": [
+              "`<%= locals.user_info.name %>`",
+              "`<%= object.name %>`",
+              "`<%= user_info[:name] %>`",
+              "`<%= @user.name %>`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "61c9f146aec6579cfb375a94",
+            "question": "Once this form is submitted, which code in the controller would retrieve the string for :name?\n```ruby\n<%= form_for(@category) do |f| %>\n  <%= f.text_field(:name) %>\n<% end %>\n```",
+            "answer": "`params[:category][:name]`",
+            "explanation": "[Reference](https://apidock.com/rails/ActionView/Helpers/FormHelper/form_for)",
+            "hint": null,
+            "correctAnswer": [
+              "`params[:category][:name]`"
+            ],
+            "options": [
+              "`params[:name]`",
+              "`@params.name`",
+              "`params.require(:category).permit(:name)`",
+              "`params[:category][:name]`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "3299f294c36ab817d6c67de1",
+            "question": "Which missing line would best show the correct usage of strong parameters?\n```ruby\nclass ProjectsController < ActionController::Base\n  def create\n    Project.create(project_params)\n  end\n  private\n  def project_params\n    # Missing line\n  end\nend\n```",
+            "answer": "`params.require(:project).permit(:name, :visible, :description)`",
+            "explanation": "[Strong Params](https://guides.rubyonrails.org/action_controller_overview.html#strong-parameters)",
+            "hint": null,
+            "correctAnswer": [
+              "`params.require(:project).permit(:name, :visible, :description)`"
+            ],
+            "options": [
+              "`params[:project].allow(:name, :visible, :description)`",
+              "`params[:project].allowed`",
+              "`params.permit(:project).allow(:name, :visible, :description)`",
+              "`params.require(:project).permit(:name, :visible, :description)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "4e88520b6d02abd23a43df80",
+            "question": "What is the purpose of the rake db:migrate command?",
+            "answer": "`To migrate the database schema to the latest version.`",
+            "explanation": "[Reference](https://guides.rubyonrails.org/v3.2/migrations.html#:~:text=Active%20Record%20tracks%20which%20migrations,the%20structure%20of%20your%20database.)",
+            "hint": null,
+            "correctAnswer": [
+              "`To migrate the database schema to the latest version.`"
+            ],
+            "options": [
+              "`To create a new database for the Rails application.`",
+              "`To migrate the database schema to the latest version.`",
+              "`To seed the database with initial data.`",
+              "`To test the database connection.`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "d9ff4482ab101701095f0f13",
+            "question": "What is the execution result of the following Ruby code?\n```ruby\nclass A\n  def self.get_self\n    self.class\n  end\n  def get_self\n    self\n  end\nend\np \"#{A.get_self.class} #{A.new.get_self.class}\"\n```",
+            "answer": "`Class A`",
+            "explanation": "[Reference](https://www.ignacio.al/self-class-ruby.html)",
+            "hint": null,
+            "correctAnswer": [
+              "`Class A`"
+            ],
+            "options": [
+              "`Class Class`",
+              "`A A`",
+              "`A Class`",
+              "`Class A`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          },
+          {
+            "id": "eefbbf0f1e1ad961deb96908",
+            "question": "Given the following model class and view , which code snippet should you use to fetch the correct results, and avoid the N+1 query issue?\n```ruby\nclass Movies < ApplicationRecord\n  def recent_reviews\n    # Return the latest 10 reviews\n  end\nend\n```\n```ruby\n<%= @movie.recent_reviews.each do |review| %>\n  <div>\n    <header><%= review.critic.name %></header>\n    <div><%= review.comment %></div>\n  </div>\n<% end %>\n```",
+            "answer": "`@movie.reviews.includes(:critic).order(created_at: :desc).limit(10)`",
+            "explanation": "[Reference](https://hackernoon.com/differences-between-includes-and-joins-in-ruby-on-rails-1r2s35oj)",
+            "hint": null,
+            "correctAnswer": [
+              "`@movie.reviews.includes(:critic).order(created_at: :desc).limit(10)`"
+            ],
+            "options": [
+              "`@movie.reviews.order(created_at: :desc).limit(10)`",
+              "`@movie.reviews.joins(:critic).order(created_at: :desc).limit(10)`",
+              "`@movie.reviews.includes(:critic).order(created_at: :desc).limit(10)`",
+              "`@movie.reviews.references(:critic).order(created_at: :desc).limit(10)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "c04e48bd84e0594802a104e0",
+            "quizzId": "dadb0187f6befd61b5d43cad"
+          }
+        ]
       }
     ]
   },
   "meta": {
     "source": "ruby-on-rails/ruby-on-rails-quiz.md",
-    "language": "md",
-    "generatedAt": "2025-12-09T14:56:14.450109+00:00",
+    "languages": [
+      "md"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.500518+00:00",
     "warnings": []
   }
 }

@@ -1,910 +1,1019 @@
 {
   "quizz": {
     "id": "821fb027de4f0d9d8871c6d7",
-    "title": "AWS Lambda",
-    "description": "Seeded from aws-lambda/aws-lambda-quiz-es.md",
-    "createdById": "seed-user",
-    "questions": [
+    "slug": "aws-lambda",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
       {
-        "id": "2dd9eeff488ec744a0a19a74",
-        "question": "\u00bfC\u00f3mo puede aumentar los recursos de CPU para Lambda?",
-        "answer": "Increase the configured memory value",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Increase the configured memory value"
-        ],
-        "options": [
-          "Increase the configured CPU value",
-          "Increase the configured timeout value",
-          "Increase the configured memory value",
-          "Increase the configured concurrency value"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6d61440799386107d53647f1",
-        "question": "\u00bfC\u00f3mo se puede proporcionar c\u00f3digo o contenido adicional para Lambda?",
-        "answer": "layers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "layers"
-        ],
-        "options": [
-          "blocks",
-          "layers",
-          "aliases",
-          "handlers"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ccd79bf0de09434909264452",
-        "question": "\u00bfC\u00f3mo puede Step Functions llamar a Lambdas?",
-        "answer": "both of these answers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "both of these answers"
-        ],
-        "options": [
-          "in sequence",
-          "both of these answers",
-          "neither of these answers",
-          "in parallel"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "393bcc6ef53d0183bb4344d5",
-        "question": "\u00bfQu\u00e9 comando de la AWS CLI invoca una funci\u00f3n?",
-        "answer": "aws lambda invoke --function-name ReturnBucketName outputfile.txt",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "aws lambda invoke --function-name ReturnBucketName outputfile.txt"
-        ],
-        "options": [
-          "aws lambda invoke --function ReturnBucketName outputfile.txt",
-          "aws lambda execute --function-name ReturnBucketName outputfile.txt",
-          "aws lambda invoke --function-name ReturnBucketName outputfile.txt",
-          "aws lambda execute --function ReturnBucketName outputfile.txt"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9a08d5fa03b167f651ca63a7",
-        "question": "\u00bfQu\u00e9 a\u00f1ade capacidades de rastreo a un Lambda?",
-        "answer": "AWS X-Ray",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "AWS X-Ray"
-        ],
-        "options": [
-          "AWS Trace",
-          "CloudStack",
-          "CloudTrail",
-          "AWS X-Ray"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5fd3addb2e92d1e8a9581c1d",
-        "question": "Debe crear una canalizaci\u00f3n de integraci\u00f3n/implementaci\u00f3n continua para un conjunto de Lambdas. \u00bfQu\u00e9 debes hacer?",
-        "answer": "Create CloudFormation templates and deploy them using AWS CodePipeline.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Create CloudFormation templates and deploy them using AWS CodePipeline."
-        ],
-        "options": [
-          "Create configuration files and deploy them using AWS CodePipeline.",
-          "Create CloudFormation templates and deploy them using AWS CodeBuild",
-          "Create configuration file and deploy using AWS CodeBuild",
-          "Create CloudFormation templates and deploy them using AWS CodePipeline."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bce075fa6a06d696554d54c2",
-        "question": "\u00bfQu\u00e9 se puede utilizar para supervisar las invocaciones de funciones?",
-        "answer": "CLoudTrail",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "CLoudTrail"
-        ],
-        "options": [
-          "API Gateway",
-          "S3",
-          "SAS",
-          "CLoudTrail"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c40d6bedc9dfbcf0d71f4819",
-        "question": "Es una pr\u00e1ctica recomendada de AWS habilitar el registro de Lambda mediante cu\u00e1l de estos m\u00e9todos.",
-        "answer": "Use Lambda metrics and CloudWatch alarms.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Use Lambda metrics and CloudWatch alarms."
-        ],
-        "options": [
-          "Use S3 metrics and CloudWatch alarms",
-          "Create custom metrics within your Lambda code.",
-          "Create custom metrics within your CloudWatch code.",
-          "Use Lambda metrics and CloudWatch alarms."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "36307770565f98b69bca668e",
-        "question": "\u00bfQu\u00e9 se puede proporcionar para las variables de entorno?",
-        "answer": "an AWS KMS key",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "an AWS KMS key"
-        ],
-        "options": [
-          "an SSL certificate",
-          "a bitmask",
-          "an AWS KMS key",
-          "an HTTP protocol"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ef4086b5d4484cfb142cf402",
-        "question": "\u00bfLas lambdas permiten ejecutar qu\u00e9 otras cosas?",
-        "answer": "all of these answers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "all of these answers"
-        ],
-        "options": [
-          "binaries.",
-          "all of these answers",
-          "executables",
-          "Shell scripts"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6978849fdd4f7ac974782e54",
-        "question": "\u00bfEn qu\u00e9 estilo debe escribir c\u00f3digo Lambda?",
-        "answer": "stateless",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "stateless"
-        ],
-        "options": [
-          "MVC",
-          "virtual",
-          "stateless",
-          "protocol"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "22f4e825b48a05bc2fa9c906",
-        "question": "\u00bfC\u00f3mo puede un desarrollador proporcionar c\u00f3digo Lambda?",
-        "answer": "all of these answers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "all of these answers"
-        ],
-        "options": [
-          "by uploading a .zip file",
-          "all of these answers",
-          "by editing inline",
-          "from an S3 bucket"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "59abad7b9eb0ed729ecce32d",
-        "question": "Est\u00e1 probando el rendimiento de Lambda para comprobar que ha establecido el tama\u00f1o de memoria correctamente. \u00bfD\u00f3nde se verifica la sobrecarga de ejecuci\u00f3n?",
-        "answer": "Lambda logs.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Lambda logs."
-        ],
-        "options": [
-          "CLoudWatch logs",
-          "DynamoDB logs",
-          "S3 logs",
-          "Lambda logs."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "10705d1a9e0687a6680dcfde",
-        "question": "\u00bfQu\u00e9 facilita la entrega continua de Lambdas?",
-        "answer": "CodeDeploy",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "CodeDeploy"
-        ],
-        "options": [
-          "CodeStack",
-          "ElasticStack",
-          "Mobile Hub",
-          "CodeDeploy"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3281d0e7cc0db7bb1a937e01",
-        "question": "\u00bfC\u00f3mo se asignan los recursos inform\u00e1ticos a Lambdas?",
-        "answer": "proportionally",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "proportionally"
-        ],
-        "options": [
-          "proportionally",
-          "equally",
-          "periodically",
-          "daily"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "79ee08067c3eba058b57e298",
-        "question": "\u00bfPuede restringir el \u00e1mbito de los permisos de un usuario especificando qu\u00e9 dos elementos de una pol\u00edtica de IAM?",
-        "answer": "resources and conditions",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "resources and conditions"
-        ],
-        "options": [
-          "resources and users",
-          "resources and conditions",
-          "events and users",
-          "events and conditions"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1e563fcc6bc75f3eaaea6441",
-        "question": "\u00bfQu\u00e9 incluye el registro de Lambda?",
-        "answer": "logging streams",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "logging streams"
-        ],
-        "options": [
-          "logging streams",
-          "rotating streams",
-          "logging events",
-          "advancing log groups"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "031f0c9e934e19938eab1157",
-        "question": "\u00bfQu\u00e9 puede no hacer AWS Amplify por un Lambda?",
-        "answer": "be an event source",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "be an event source"
-        ],
-        "options": [
-          "create a Lambda",
-          "be an event source",
-          "assign an IAM role",
-          "delete a Lambda"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4bbadcc686718a841bc3d7b8",
-        "question": "\u00bfC\u00f3mo se crea un Lambda en un lenguaje de programaci\u00f3n que AWS no admite?",
-        "answer": "Create a Lambda layer with a custom runtime and reference the layer in your lambda",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Create a Lambda layer with a custom runtime and reference the layer in your lambda"
-        ],
-        "options": [
-          "Create a Lambda function with a custom runtime and reference the function in your Lambda",
-          "Create a Lambda layer with a custom runtime and reference the layer in your lambda",
-          "You cannot use Lambda in this situation",
-          "Create a Lambda function with a custom runtime"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bc2feb8dcacd2b95f3f28027",
-        "question": "\u00bfEn qu\u00e9 se enumeran los recursos posteriores?",
-        "answer": "the Lambda configuration",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "the Lambda configuration"
-        ],
-        "options": [
-          "the execution policy",
-          "the Lambda configuration",
-          "the Lambda nodes",
-          "the IAM user"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3cba75a7befc3339fd0c3881",
-        "question": "\u00bfCu\u00e1l es una etiqueta equivalente y v\u00e1lida para un par de Lambdas?",
-        "answer": "department:Sales,department:sales",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "department:Sales,department:sales"
-        ],
-        "options": [
-          "department:Sales,department:Sales",
-          "department:Sales,department:sales",
-          "aws:demo;aws:demo",
-          "aws:demo;aws:DEMO"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "74ed1cb630de6ac0f9453ede",
-        "question": "Las conexiones salientes de Lambdas deben ser `_`.",
-        "answer": "both of these answers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "both of these answers"
-        ],
-        "options": [
-          "neither of these answers",
-          "UDP/IP",
-          "TCP/IP",
-          "both of these answers"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b8e7f72d79e83e2294759dea",
-        "question": "\u00bfC\u00f3mo se configuran las acciones de CloudWatch?",
-        "answer": "manually",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "manually"
-        ],
-        "options": [
-          "automatically",
-          "none of these answers",
-          "manually",
-          "ad hoc"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3fcf49dfb5f2141125daaf14",
-        "question": "Est\u00e1 probando la aplicaci\u00f3n basada en secuencias y el Lambda asociado. La pr\u00e1ctica recomendada de AWS le aconseja que pruebe variando qu\u00e9.",
-        "answer": "batch and record sizes",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "batch and record sizes"
-        ],
-        "options": [
-          "stream and record sizes",
-          "stream and shard sizes",
-          "batch and record sizes",
-          "batch and shard sizes"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "76ac89d3508a4e67168d201a",
-        "question": "Debe hacer que su Lambda est\u00e9 disponible para los servicios en varias VPC. \u00bfA qu\u00e9 te dedicas?",
-        "answer": "Configure all application VPCs to be peered.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Configure all application VPCs to be peered."
-        ],
-        "options": [
-          "Place each subnet in a VPC. Associate all subnets to your Lambda.",
-          "Place all subnets in a VPC. Associate all subnets to your Lambda.",
-          "Configure your Lambda to be available to multiple VPCs.",
-          "Configure all application VPCs to be peered."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0f6d505bc35e34ede13344d5",
-        "question": "\u00bfC\u00f3mo se calcula el costo asociado con la funci\u00f3n Lambda?",
-        "answer": "compute time",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "compute time"
-        ],
-        "options": [
-          "number of function calls",
-          "amount of code run",
-          "compute time",
-          "amount of infrastructure used"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1875c9d16c0dc93586436c94",
-        "question": "\u00bfCu\u00e1l es la forma m\u00e1s r\u00e1pida de empezar a usar Lambda?",
-        "answer": "Use a blueprint.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Use a blueprint."
-        ],
-        "options": [
-          "Author a Lambda from scratch.",
-          "Use a blueprint.",
-          "Use a .zip deployment package.",
-          "Use the serverless app repository."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "47e838c0e97e73c2013e0892",
-        "question": "\u00bfD\u00f3nde se asigna el espacio en disco para las funciones de Lambda?",
-        "answer": "/tmp",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "/tmp"
-        ],
-        "options": [
-          "/tmp",
-          "/default",
-          "/temp",
-          "/ds"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "99d083b62c4709f6e4325055",
-        "question": "\u00bfC\u00f3mo se detiene un Lambda en ejecuci\u00f3n que est\u00e1 atascado en un bucle recursivo?",
-        "answer": "Set the function concurrent execution limit to 0 while you update the code.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Set the function concurrent execution limit to 0 while you update the code."
-        ],
-        "options": [
-          "Delete the function.",
-          "Set the function concurrent execution limit to 0 while you update the code.",
-          "Reset the function.",
-          "Set the function concurrent execution limit to 100 while you update the code."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "33d97d5eaf0cab302b676fb4",
-        "question": "\u00bfCu\u00e1les son las pr\u00e1cticas recomendadas de AWS para la configuraci\u00f3n de Lambda?",
-        "answer": "Overprovision memory to run your functions faster and reduce your costs. Do not overprovision your function timeout settings.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Overprovision memory to run your functions faster and reduce your costs. Do not overprovision your function timeout settings."
-        ],
-        "options": [
-          "Overprovision memory to run your functions faster and reduce your costs. Do not overprovision your function timeout settings.",
-          "Overprovision memory and your function timeout settings to run your functions faster and reduce your costs.",
-          "Do not overprovision memory. Overprovision your function timeout settings to run your functions faster and reduce costs.",
-          "Do not overprovision memory. Do not overprovision your function timeout settings to run your functions faster and reduce costs."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "708e3a3d55f0986fd3c35d10",
-        "question": "\u00bfLos permisos b\u00e1sicos de Lambda incluyen permisos para qu\u00e9?",
-        "answer": "updating log groups",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "updating log groups"
-        ],
-        "options": [
-          "removing log groups",
-          "none of these answers",
-          "creating log groups",
-          "updating log groups"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e4c34854311e59094910ceee",
-        "question": "\u00bfC\u00f3mo se almacenan las variables de entorno?",
-        "answer": "key-value pairs",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "key-value pairs"
-        ],
-        "options": [
-          "DynamoDB tables",
-          "key-value pairs",
-          "S3 buckets",
-          "none of these answers"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d903562f6cc9839a70e9b746",
-        "question": "Debe utilizar un Lambda para proporcionar l\u00f3gica de backend a su sitio web. \u00bfQu\u00e9 servicio utiliza para que su Lambda est\u00e9 disponible para su sitio web?",
-        "answer": "API Gateway",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "API Gateway"
-        ],
-        "options": [
-          "S3",
-          "API Gateway",
-          "X-Ray",
-          "DynamoDB"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "85d6c8570cc96c98cb1a8aa9",
-        "question": "Est\u00e1 creando un Lambda para activar el cambio a archivos en un bucket de S3. \u00bfD\u00f3nde debe poner el nombre del bucket?",
-        "answer": "in a Lambda environment variable",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "in a Lambda environment variable"
-        ],
-        "options": [
-          "in the Lambda function code",
-          "in a Lambda environment variable",
-          "in the Lambda tags",
-          "in another S3 bucket"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4820a4d9a75c3c60dd2e6722",
-        "question": "\u00bfQu\u00e9 acci\u00f3n es necesaria para poder probar un Lambda?",
-        "answer": "Configure a test event",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Configure a test event"
-        ],
-        "options": [
-          "Deploy the Lambda",
-          "Export the function",
-          "none of these answers",
-          "Configure a test event"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "993d1a493b1db783126ca08a",
-        "question": "\u00bfQu\u00e9 tipo de paquetes puede utilizar con Node.js para Lambdas?",
-        "answer": "NPM",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "NPM"
-        ],
-        "options": [
-          "Fleece",
-          "NPM",
-          "none of these answers",
-          "Pod"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "dea421f7dc9714a38c94029c",
-        "question": "\u00bfLos lambdas se supervisan de forma predeterminada mediante qu\u00e9 servicio?",
-        "answer": "CloudWatch",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "CloudWatch"
-        ],
-        "options": [
-          "CloudTrail",
-          "CloudWatch",
-          "CloudFormation",
-          "LogWatch"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d95aaf66702a4bde8bfe27af",
-        "question": "\u00bfQu\u00e9 puede desencadenar la ejecuci\u00f3n de una funci\u00f3n de Lambda?",
-        "answer": "an SNS topic",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "an SNS topic"
-        ],
-        "options": [
-          "a table definition",
-          "queue isolation",
-          "STS Write",
-          "an SNS topic"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "523f9631713e2a4b805b69e1",
-        "question": "Debe establecer un desencadenador de eventos de S3 en Lambda para que responda cuando se agreguen datos al bucket desde otro bucket de S3. \u00bfQu\u00e9 tipo de evento configura?",
-        "answer": "PUT",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "PUT"
-        ],
-        "options": [
-          "POST",
-          "\"All object create events\"",
-          "PUT",
-          "COPY"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "62b9091202f13ca56b824c95",
-        "question": "Para que Lambdas sea m\u00e1s comprobable, \u00bfes una pr\u00e1ctica recomendada de AWS separar cu\u00e1l de ellos?",
-        "answer": "Lambda handler from core logic",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Lambda handler from core logic"
-        ],
-        "options": [
-          "Lambda configuration from logging code",
-          "Lambda handler from logging code",
-          "Lambda handler from core logic",
-          "Lambda configuration from core logic"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5ec66a97d4d62f590215851b",
-        "question": "\u00bfQu\u00e9 se incluye en un paquete de implementaci\u00f3n de Lambda exportado?",
-        "answer": "Zip file of all related files",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Zip file of all related files"
-        ],
-        "options": [
-          "YAML definition",
-          "CloudFormation stack configuration",
-          "SAML deployment stack",
-          "Zip file of all related files"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c081b0d6e7d141d058a9e5c7",
-        "question": "\u00bfCu\u00e1ndo se puede cambiar el rol de ejecuci\u00f3n de un Lambda?",
-        "answer": "anytime via configuration",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "anytime via configuration"
-        ],
-        "options": [
-          "only at creation",
-          "only before deployment",
-          "never",
-          "anytime via configuration"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e0880732c718415b77cc3fa7",
-        "question": "\u00bfCu\u00e1l es la relaci\u00f3n entre la plantilla SAM y los archivos de plantilla de CloudFormation?",
-        "answer": "Las plantillas SAM son un superconjunto de plantillas de CloudFormation. Las plantillas SAM incluyen tipos de recursos adicionales.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Las plantillas SAM son un superconjunto de plantillas de CloudFormation. Las plantillas SAM incluyen tipos de recursos adicionales."
-        ],
-        "options": [
-          "Las plantillas SAM son un superconjunto de plantillas de CloudFormation. Las plantillas SAM incluyen tipos de recursos adicionales.",
-          "Las plantillas SAM tienen cierta superposici\u00f3n con las plantillas de CloudFormation. Las plantillas SAM y CloudFormation incluyen tipos de recursos que no est\u00e1n en el otro tipo de plantilla.",
-          "Las plantillas de CloudFormation son un superconjunto de plantillas SAM. Las plantillas de CloudFormation incluyen tipos de recursos adicionales.",
-          "Las plantillas SAM son un nombre diferente para las plantillas de CloudFormation. Ambos tipos de plantilla incluyen los mismos tipos de recursos."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0935f18ec16414c98d01c654",
-        "question": "\u00bfQu\u00e9 servicio implementa Lambdas regionalmente?",
-        "answer": "CloudFront",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "CloudFront"
-        ],
-        "options": [
-          "EdgeCloud",
-          "CloudEdge",
-          "CloudFront",
-          "CloudStack"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "70997111f8611fc622e2a845",
-        "question": "\u00bfQu\u00e9 lenguaje de programaci\u00f3n admite AWS Lambda?",
-        "answer": "all of these answers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "all of these answers"
-        ],
-        "options": [
-          "custom",
-          "all of these answers",
-          "Java",
-          "Ruby"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ef990d276a47fa5e7039aa48",
-        "question": "Debe configurar un mecanismo para establecer controles que le notifiquen cuando tenga un pico en la simultaneidad de Lambda. \u00bfQu\u00e9 debes hacer?",
-        "answer": "Implemente una alarma de CloudWatch que le notifique cuando las m\u00e9tricas de la funci\u00f3n superen su umbral. Cree un presupuesto de AWS para supervisar los costos.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Implemente una alarma de CloudWatch que le notifique cuando las m\u00e9tricas de la funci\u00f3n superen su umbral. Cree un presupuesto de AWS para supervisar los costos."
-        ],
-        "options": [
-          "Implemente una alarma de CloudTrail que le notifique cuando las m\u00e9tricas de funci\u00f3n superen su umbral. Cree un presupuesto de AWS para supervisar los costos.",
-          "Implemente una alarma de CloudWatch que le notifique cuando las m\u00e9tricas de la funci\u00f3n superen su umbral. Cree un presupuesto de AWS para supervisar los costos.",
-          "Implemente una alarma de CloudWatch que le notifique cuando las m\u00e9tricas de la funci\u00f3n superen su umbral. Cree un AWS CostMonitor para supervisar los costos.",
-          "Implemente una alarma de CloudTrail que le notifique cuando las m\u00e9tricas de funci\u00f3n superen su umbral. Cree un AWS CostMonitor para supervisar los costos."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a1d681d1870237b8529970e1",
-        "question": "Desea minimizar el tiempo de inicio en fr\u00edo de Lambda. \u00bfA qu\u00e9 te dedicas?",
-        "answer": null,
-        "explanation": "[Referencia] (https://aws.amazon.com/blogs/compute/new-for-aws-lambda-predictable-start-up-times-with-provisioned-concurrency/",
-        "hint": null,
-        "correctAnswer": [],
-        "options": [
-          "Agregue c\u00f3digo adicional para comprobar si la cach\u00e9 transitoria, o el directorio /tmp, tiene los datos que almacen\u00f3.",
-          "Agregue c\u00f3digo adicional para verificar si la cach\u00e9 permanente, o el directorio /cache, tiene los datos que almacen\u00f3.",
-          "No hacer nada. AWS minimiza la hora de inicio de cols de forma predeterminada.",
-          "Cree un Lambda de calentamiento que llame a su Lambda cada minuto"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3986e90895e427746a557fee",
-        "question": "\u00bfCu\u00e1ndo se almacena el c\u00f3digo Lambda cifrado?",
-        "answer": "en reposo",
-        "explanation": "[Referencia](https://docs.aws.amazon.com/whitepapers/latest/security-overview-aws-lambda/lambda-functions-and-layers.html)",
-        "hint": null,
-        "correctAnswer": [
-          "en reposo"
-        ],
-        "options": [
-          "en reposo",
-          "en tiempo de ejecuci\u00f3n",
-          "en el despliegue",
-          "ninguna de estas respuestas"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "384ccd370ad65521c746df20",
-        "question": "Cuando se utiliza una directiva basada en recursos para conceder a un servicio, recurso o cuenta acceso a la funci\u00f3n, \u00bfc\u00f3mo se puede aplicar el \u00e1mbito de ese permiso?",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [
-          "en el nivel de funci\u00f3n en el nivel de funci\u00f3n",
-          "en el nivel de alias o funci\u00f3n en el nivel de alias o funci\u00f3n",
-          "en el nivel de versi\u00f3n, alias o funci\u00f3n en el nivel de versi\u00f3n, alias o funci\u00f3n",
-          "a nivel de versi\u00f3n o funci\u00f3n"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cc2d0ac84213066c464d6fb4",
-        "question": "Lambda puede leer eventos de qu\u00e9 otros servicios de AWS? (ref-https://docs.aws.amazon.com/lambda/latest/dg/lambda-servicios.html)",
-        "answer": null,
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [],
-        "options": [
-          "Kinesis, S3 y SQS",
-          "Kinesis, S3 y SNS",
-          "Kinesis, DynamoDB y SNS",
-          "Kinesis, DynamoDB y SQS"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
+        "id": "9d40054096da9762395e6a52",
+        "language": "es",
+        "title": "AWS Lambda",
+        "description": "Seeded from aws-lambda/aws-lambda-quiz-es.md",
+        "questions": [
+          {
+            "id": "2dd9eeff488ec744a0a19a74",
+            "question": "\u00bfC\u00f3mo puede aumentar los recursos de CPU para Lambda?",
+            "answer": "Increase the configured memory value",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Increase the configured memory value"
+            ],
+            "options": [
+              "Increase the configured CPU value",
+              "Increase the configured timeout value",
+              "Increase the configured memory value",
+              "Increase the configured concurrency value"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "6d61440799386107d53647f1",
+            "question": "\u00bfC\u00f3mo se puede proporcionar c\u00f3digo o contenido adicional para Lambda?",
+            "answer": "layers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "layers"
+            ],
+            "options": [
+              "blocks",
+              "layers",
+              "aliases",
+              "handlers"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "ccd79bf0de09434909264452",
+            "question": "\u00bfC\u00f3mo puede Step Functions llamar a Lambdas?",
+            "answer": "both of these answers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "both of these answers"
+            ],
+            "options": [
+              "in sequence",
+              "both of these answers",
+              "neither of these answers",
+              "in parallel"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "393bcc6ef53d0183bb4344d5",
+            "question": "\u00bfQu\u00e9 comando de la AWS CLI invoca una funci\u00f3n?",
+            "answer": "aws lambda invoke --function-name ReturnBucketName outputfile.txt",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "aws lambda invoke --function-name ReturnBucketName outputfile.txt"
+            ],
+            "options": [
+              "aws lambda invoke --function ReturnBucketName outputfile.txt",
+              "aws lambda execute --function-name ReturnBucketName outputfile.txt",
+              "aws lambda invoke --function-name ReturnBucketName outputfile.txt",
+              "aws lambda execute --function ReturnBucketName outputfile.txt"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "9a08d5fa03b167f651ca63a7",
+            "question": "\u00bfQu\u00e9 a\u00f1ade capacidades de rastreo a un Lambda?",
+            "answer": "AWS X-Ray",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "AWS X-Ray"
+            ],
+            "options": [
+              "AWS Trace",
+              "CloudStack",
+              "CloudTrail",
+              "AWS X-Ray"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "5fd3addb2e92d1e8a9581c1d",
+            "question": "Debe crear una canalizaci\u00f3n de integraci\u00f3n/implementaci\u00f3n continua para un conjunto de Lambdas. \u00bfQu\u00e9 debes hacer?",
+            "answer": "Create CloudFormation templates and deploy them using AWS CodePipeline.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Create CloudFormation templates and deploy them using AWS CodePipeline."
+            ],
+            "options": [
+              "Create configuration files and deploy them using AWS CodePipeline.",
+              "Create CloudFormation templates and deploy them using AWS CodeBuild",
+              "Create configuration file and deploy using AWS CodeBuild",
+              "Create CloudFormation templates and deploy them using AWS CodePipeline."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "bce075fa6a06d696554d54c2",
+            "question": "\u00bfQu\u00e9 se puede utilizar para supervisar las invocaciones de funciones?",
+            "answer": "CLoudTrail",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "CLoudTrail"
+            ],
+            "options": [
+              "API Gateway",
+              "S3",
+              "SAS",
+              "CLoudTrail"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "c40d6bedc9dfbcf0d71f4819",
+            "question": "Es una pr\u00e1ctica recomendada de AWS habilitar el registro de Lambda mediante cu\u00e1l de estos m\u00e9todos.",
+            "answer": "Use Lambda metrics and CloudWatch alarms.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Use Lambda metrics and CloudWatch alarms."
+            ],
+            "options": [
+              "Use S3 metrics and CloudWatch alarms",
+              "Create custom metrics within your Lambda code.",
+              "Create custom metrics within your CloudWatch code.",
+              "Use Lambda metrics and CloudWatch alarms."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "36307770565f98b69bca668e",
+            "question": "\u00bfQu\u00e9 se puede proporcionar para las variables de entorno?",
+            "answer": "an AWS KMS key",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "an AWS KMS key"
+            ],
+            "options": [
+              "an SSL certificate",
+              "a bitmask",
+              "an AWS KMS key",
+              "an HTTP protocol"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "ef4086b5d4484cfb142cf402",
+            "question": "\u00bfLas lambdas permiten ejecutar qu\u00e9 otras cosas?",
+            "answer": "all of these answers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "all of these answers"
+            ],
+            "options": [
+              "binaries.",
+              "all of these answers",
+              "executables",
+              "Shell scripts"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "6978849fdd4f7ac974782e54",
+            "question": "\u00bfEn qu\u00e9 estilo debe escribir c\u00f3digo Lambda?",
+            "answer": "stateless",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "stateless"
+            ],
+            "options": [
+              "MVC",
+              "virtual",
+              "stateless",
+              "protocol"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "22f4e825b48a05bc2fa9c906",
+            "question": "\u00bfC\u00f3mo puede un desarrollador proporcionar c\u00f3digo Lambda?",
+            "answer": "all of these answers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "all of these answers"
+            ],
+            "options": [
+              "by uploading a .zip file",
+              "all of these answers",
+              "by editing inline",
+              "from an S3 bucket"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "59abad7b9eb0ed729ecce32d",
+            "question": "Est\u00e1 probando el rendimiento de Lambda para comprobar que ha establecido el tama\u00f1o de memoria correctamente. \u00bfD\u00f3nde se verifica la sobrecarga de ejecuci\u00f3n?",
+            "answer": "Lambda logs.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Lambda logs."
+            ],
+            "options": [
+              "CLoudWatch logs",
+              "DynamoDB logs",
+              "S3 logs",
+              "Lambda logs."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "10705d1a9e0687a6680dcfde",
+            "question": "\u00bfQu\u00e9 facilita la entrega continua de Lambdas?",
+            "answer": "CodeDeploy",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "CodeDeploy"
+            ],
+            "options": [
+              "CodeStack",
+              "ElasticStack",
+              "Mobile Hub",
+              "CodeDeploy"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "3281d0e7cc0db7bb1a937e01",
+            "question": "\u00bfC\u00f3mo se asignan los recursos inform\u00e1ticos a Lambdas?",
+            "answer": "proportionally",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "proportionally"
+            ],
+            "options": [
+              "proportionally",
+              "equally",
+              "periodically",
+              "daily"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "79ee08067c3eba058b57e298",
+            "question": "\u00bfPuede restringir el \u00e1mbito de los permisos de un usuario especificando qu\u00e9 dos elementos de una pol\u00edtica de IAM?",
+            "answer": "resources and conditions",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "resources and conditions"
+            ],
+            "options": [
+              "resources and users",
+              "resources and conditions",
+              "events and users",
+              "events and conditions"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "1e563fcc6bc75f3eaaea6441",
+            "question": "\u00bfQu\u00e9 incluye el registro de Lambda?",
+            "answer": "logging streams",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "logging streams"
+            ],
+            "options": [
+              "logging streams",
+              "rotating streams",
+              "logging events",
+              "advancing log groups"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "031f0c9e934e19938eab1157",
+            "question": "\u00bfQu\u00e9 puede no hacer AWS Amplify por un Lambda?",
+            "answer": "be an event source",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "be an event source"
+            ],
+            "options": [
+              "create a Lambda",
+              "be an event source",
+              "assign an IAM role",
+              "delete a Lambda"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "4bbadcc686718a841bc3d7b8",
+            "question": "\u00bfC\u00f3mo se crea un Lambda en un lenguaje de programaci\u00f3n que AWS no admite?",
+            "answer": "Create a Lambda layer with a custom runtime and reference the layer in your lambda",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Create a Lambda layer with a custom runtime and reference the layer in your lambda"
+            ],
+            "options": [
+              "Create a Lambda function with a custom runtime and reference the function in your Lambda",
+              "Create a Lambda layer with a custom runtime and reference the layer in your lambda",
+              "You cannot use Lambda in this situation",
+              "Create a Lambda function with a custom runtime"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "bc2feb8dcacd2b95f3f28027",
+            "question": "\u00bfEn qu\u00e9 se enumeran los recursos posteriores?",
+            "answer": "the Lambda configuration",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "the Lambda configuration"
+            ],
+            "options": [
+              "the execution policy",
+              "the Lambda configuration",
+              "the Lambda nodes",
+              "the IAM user"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "3cba75a7befc3339fd0c3881",
+            "question": "\u00bfCu\u00e1l es una etiqueta equivalente y v\u00e1lida para un par de Lambdas?",
+            "answer": "department:Sales,department:sales",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "department:Sales,department:sales"
+            ],
+            "options": [
+              "department:Sales,department:Sales",
+              "department:Sales,department:sales",
+              "aws:demo;aws:demo",
+              "aws:demo;aws:DEMO"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "74ed1cb630de6ac0f9453ede",
+            "question": "Las conexiones salientes de Lambdas deben ser `_`.",
+            "answer": "both of these answers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "both of these answers"
+            ],
+            "options": [
+              "neither of these answers",
+              "UDP/IP",
+              "TCP/IP",
+              "both of these answers"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "b8e7f72d79e83e2294759dea",
+            "question": "\u00bfC\u00f3mo se configuran las acciones de CloudWatch?",
+            "answer": "manually",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "manually"
+            ],
+            "options": [
+              "automatically",
+              "none of these answers",
+              "manually",
+              "ad hoc"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "3fcf49dfb5f2141125daaf14",
+            "question": "Est\u00e1 probando la aplicaci\u00f3n basada en secuencias y el Lambda asociado. La pr\u00e1ctica recomendada de AWS le aconseja que pruebe variando qu\u00e9.",
+            "answer": "batch and record sizes",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "batch and record sizes"
+            ],
+            "options": [
+              "stream and record sizes",
+              "stream and shard sizes",
+              "batch and record sizes",
+              "batch and shard sizes"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "76ac89d3508a4e67168d201a",
+            "question": "Debe hacer que su Lambda est\u00e9 disponible para los servicios en varias VPC. \u00bfA qu\u00e9 te dedicas?",
+            "answer": "Configure all application VPCs to be peered.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Configure all application VPCs to be peered."
+            ],
+            "options": [
+              "Place each subnet in a VPC. Associate all subnets to your Lambda.",
+              "Place all subnets in a VPC. Associate all subnets to your Lambda.",
+              "Configure your Lambda to be available to multiple VPCs.",
+              "Configure all application VPCs to be peered."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "0f6d505bc35e34ede13344d5",
+            "question": "\u00bfC\u00f3mo se calcula el costo asociado con la funci\u00f3n Lambda?",
+            "answer": "compute time",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "compute time"
+            ],
+            "options": [
+              "number of function calls",
+              "amount of code run",
+              "compute time",
+              "amount of infrastructure used"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "1875c9d16c0dc93586436c94",
+            "question": "\u00bfCu\u00e1l es la forma m\u00e1s r\u00e1pida de empezar a usar Lambda?",
+            "answer": "Use a blueprint.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Use a blueprint."
+            ],
+            "options": [
+              "Author a Lambda from scratch.",
+              "Use a blueprint.",
+              "Use a .zip deployment package.",
+              "Use the serverless app repository."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "47e838c0e97e73c2013e0892",
+            "question": "\u00bfD\u00f3nde se asigna el espacio en disco para las funciones de Lambda?",
+            "answer": "/tmp",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "/tmp"
+            ],
+            "options": [
+              "/tmp",
+              "/default",
+              "/temp",
+              "/ds"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "99d083b62c4709f6e4325055",
+            "question": "\u00bfC\u00f3mo se detiene un Lambda en ejecuci\u00f3n que est\u00e1 atascado en un bucle recursivo?",
+            "answer": "Set the function concurrent execution limit to 0 while you update the code.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Set the function concurrent execution limit to 0 while you update the code."
+            ],
+            "options": [
+              "Delete the function.",
+              "Set the function concurrent execution limit to 0 while you update the code.",
+              "Reset the function.",
+              "Set the function concurrent execution limit to 100 while you update the code."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "33d97d5eaf0cab302b676fb4",
+            "question": "\u00bfCu\u00e1les son las pr\u00e1cticas recomendadas de AWS para la configuraci\u00f3n de Lambda?",
+            "answer": "Overprovision memory to run your functions faster and reduce your costs. Do not overprovision your function timeout settings.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Overprovision memory to run your functions faster and reduce your costs. Do not overprovision your function timeout settings."
+            ],
+            "options": [
+              "Overprovision memory to run your functions faster and reduce your costs. Do not overprovision your function timeout settings.",
+              "Overprovision memory and your function timeout settings to run your functions faster and reduce your costs.",
+              "Do not overprovision memory. Overprovision your function timeout settings to run your functions faster and reduce costs.",
+              "Do not overprovision memory. Do not overprovision your function timeout settings to run your functions faster and reduce costs."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "708e3a3d55f0986fd3c35d10",
+            "question": "\u00bfLos permisos b\u00e1sicos de Lambda incluyen permisos para qu\u00e9?",
+            "answer": "updating log groups",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "updating log groups"
+            ],
+            "options": [
+              "removing log groups",
+              "none of these answers",
+              "creating log groups",
+              "updating log groups"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "e4c34854311e59094910ceee",
+            "question": "\u00bfC\u00f3mo se almacenan las variables de entorno?",
+            "answer": "key-value pairs",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "key-value pairs"
+            ],
+            "options": [
+              "DynamoDB tables",
+              "key-value pairs",
+              "S3 buckets",
+              "none of these answers"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "d903562f6cc9839a70e9b746",
+            "question": "Debe utilizar un Lambda para proporcionar l\u00f3gica de backend a su sitio web. \u00bfQu\u00e9 servicio utiliza para que su Lambda est\u00e9 disponible para su sitio web?",
+            "answer": "API Gateway",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "API Gateway"
+            ],
+            "options": [
+              "S3",
+              "API Gateway",
+              "X-Ray",
+              "DynamoDB"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "85d6c8570cc96c98cb1a8aa9",
+            "question": "Est\u00e1 creando un Lambda para activar el cambio a archivos en un bucket de S3. \u00bfD\u00f3nde debe poner el nombre del bucket?",
+            "answer": "in a Lambda environment variable",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "in a Lambda environment variable"
+            ],
+            "options": [
+              "in the Lambda function code",
+              "in a Lambda environment variable",
+              "in the Lambda tags",
+              "in another S3 bucket"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "4820a4d9a75c3c60dd2e6722",
+            "question": "\u00bfQu\u00e9 acci\u00f3n es necesaria para poder probar un Lambda?",
+            "answer": "Configure a test event",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Configure a test event"
+            ],
+            "options": [
+              "Deploy the Lambda",
+              "Export the function",
+              "none of these answers",
+              "Configure a test event"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "993d1a493b1db783126ca08a",
+            "question": "\u00bfQu\u00e9 tipo de paquetes puede utilizar con Node.js para Lambdas?",
+            "answer": "NPM",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "NPM"
+            ],
+            "options": [
+              "Fleece",
+              "NPM",
+              "none of these answers",
+              "Pod"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "dea421f7dc9714a38c94029c",
+            "question": "\u00bfLos lambdas se supervisan de forma predeterminada mediante qu\u00e9 servicio?",
+            "answer": "CloudWatch",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "CloudWatch"
+            ],
+            "options": [
+              "CloudTrail",
+              "CloudWatch",
+              "CloudFormation",
+              "LogWatch"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "d95aaf66702a4bde8bfe27af",
+            "question": "\u00bfQu\u00e9 puede desencadenar la ejecuci\u00f3n de una funci\u00f3n de Lambda?",
+            "answer": "an SNS topic",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "an SNS topic"
+            ],
+            "options": [
+              "a table definition",
+              "queue isolation",
+              "STS Write",
+              "an SNS topic"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "523f9631713e2a4b805b69e1",
+            "question": "Debe establecer un desencadenador de eventos de S3 en Lambda para que responda cuando se agreguen datos al bucket desde otro bucket de S3. \u00bfQu\u00e9 tipo de evento configura?",
+            "answer": "PUT",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "PUT"
+            ],
+            "options": [
+              "POST",
+              "\"All object create events\"",
+              "PUT",
+              "COPY"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "62b9091202f13ca56b824c95",
+            "question": "Para que Lambdas sea m\u00e1s comprobable, \u00bfes una pr\u00e1ctica recomendada de AWS separar cu\u00e1l de ellos?",
+            "answer": "Lambda handler from core logic",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Lambda handler from core logic"
+            ],
+            "options": [
+              "Lambda configuration from logging code",
+              "Lambda handler from logging code",
+              "Lambda handler from core logic",
+              "Lambda configuration from core logic"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "5ec66a97d4d62f590215851b",
+            "question": "\u00bfQu\u00e9 se incluye en un paquete de implementaci\u00f3n de Lambda exportado?",
+            "answer": "Zip file of all related files",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Zip file of all related files"
+            ],
+            "options": [
+              "YAML definition",
+              "CloudFormation stack configuration",
+              "SAML deployment stack",
+              "Zip file of all related files"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "c081b0d6e7d141d058a9e5c7",
+            "question": "\u00bfCu\u00e1ndo se puede cambiar el rol de ejecuci\u00f3n de un Lambda?",
+            "answer": "anytime via configuration",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "anytime via configuration"
+            ],
+            "options": [
+              "only at creation",
+              "only before deployment",
+              "never",
+              "anytime via configuration"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "e0880732c718415b77cc3fa7",
+            "question": "\u00bfCu\u00e1l es la relaci\u00f3n entre la plantilla SAM y los archivos de plantilla de CloudFormation?",
+            "answer": "Las plantillas SAM son un superconjunto de plantillas de CloudFormation. Las plantillas SAM incluyen tipos de recursos adicionales.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Las plantillas SAM son un superconjunto de plantillas de CloudFormation. Las plantillas SAM incluyen tipos de recursos adicionales."
+            ],
+            "options": [
+              "Las plantillas SAM son un superconjunto de plantillas de CloudFormation. Las plantillas SAM incluyen tipos de recursos adicionales.",
+              "Las plantillas SAM tienen cierta superposici\u00f3n con las plantillas de CloudFormation. Las plantillas SAM y CloudFormation incluyen tipos de recursos que no est\u00e1n en el otro tipo de plantilla.",
+              "Las plantillas de CloudFormation son un superconjunto de plantillas SAM. Las plantillas de CloudFormation incluyen tipos de recursos adicionales.",
+              "Las plantillas SAM son un nombre diferente para las plantillas de CloudFormation. Ambos tipos de plantilla incluyen los mismos tipos de recursos."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "0935f18ec16414c98d01c654",
+            "question": "\u00bfQu\u00e9 servicio implementa Lambdas regionalmente?",
+            "answer": "CloudFront",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "CloudFront"
+            ],
+            "options": [
+              "EdgeCloud",
+              "CloudEdge",
+              "CloudFront",
+              "CloudStack"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "70997111f8611fc622e2a845",
+            "question": "\u00bfQu\u00e9 lenguaje de programaci\u00f3n admite AWS Lambda?",
+            "answer": "all of these answers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "all of these answers"
+            ],
+            "options": [
+              "custom",
+              "all of these answers",
+              "Java",
+              "Ruby"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "ef990d276a47fa5e7039aa48",
+            "question": "Debe configurar un mecanismo para establecer controles que le notifiquen cuando tenga un pico en la simultaneidad de Lambda. \u00bfQu\u00e9 debes hacer?",
+            "answer": "Implemente una alarma de CloudWatch que le notifique cuando las m\u00e9tricas de la funci\u00f3n superen su umbral. Cree un presupuesto de AWS para supervisar los costos.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Implemente una alarma de CloudWatch que le notifique cuando las m\u00e9tricas de la funci\u00f3n superen su umbral. Cree un presupuesto de AWS para supervisar los costos."
+            ],
+            "options": [
+              "Implemente una alarma de CloudTrail que le notifique cuando las m\u00e9tricas de funci\u00f3n superen su umbral. Cree un presupuesto de AWS para supervisar los costos.",
+              "Implemente una alarma de CloudWatch que le notifique cuando las m\u00e9tricas de la funci\u00f3n superen su umbral. Cree un presupuesto de AWS para supervisar los costos.",
+              "Implemente una alarma de CloudWatch que le notifique cuando las m\u00e9tricas de la funci\u00f3n superen su umbral. Cree un AWS CostMonitor para supervisar los costos.",
+              "Implemente una alarma de CloudTrail que le notifique cuando las m\u00e9tricas de funci\u00f3n superen su umbral. Cree un AWS CostMonitor para supervisar los costos."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "a1d681d1870237b8529970e1",
+            "question": "Desea minimizar el tiempo de inicio en fr\u00edo de Lambda. \u00bfA qu\u00e9 te dedicas?",
+            "answer": null,
+            "explanation": "[Referencia] (https://aws.amazon.com/blogs/compute/new-for-aws-lambda-predictable-start-up-times-with-provisioned-concurrency/",
+            "hint": null,
+            "correctAnswer": [],
+            "options": [
+              "Agregue c\u00f3digo adicional para comprobar si la cach\u00e9 transitoria, o el directorio /tmp, tiene los datos que almacen\u00f3.",
+              "Agregue c\u00f3digo adicional para verificar si la cach\u00e9 permanente, o el directorio /cache, tiene los datos que almacen\u00f3.",
+              "No hacer nada. AWS minimiza la hora de inicio de cols de forma predeterminada.",
+              "Cree un Lambda de calentamiento que llame a su Lambda cada minuto"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "3986e90895e427746a557fee",
+            "question": "\u00bfCu\u00e1ndo se almacena el c\u00f3digo Lambda cifrado?",
+            "answer": "en reposo",
+            "explanation": "[Referencia](https://docs.aws.amazon.com/whitepapers/latest/security-overview-aws-lambda/lambda-functions-and-layers.html)",
+            "hint": null,
+            "correctAnswer": [
+              "en reposo"
+            ],
+            "options": [
+              "en reposo",
+              "en tiempo de ejecuci\u00f3n",
+              "en el despliegue",
+              "ninguna de estas respuestas"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "384ccd370ad65521c746df20",
+            "question": "Cuando se utiliza una directiva basada en recursos para conceder a un servicio, recurso o cuenta acceso a la funci\u00f3n, \u00bfc\u00f3mo se puede aplicar el \u00e1mbito de ese permiso?",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [
+              "en el nivel de funci\u00f3n en el nivel de funci\u00f3n",
+              "en el nivel de alias o funci\u00f3n en el nivel de alias o funci\u00f3n",
+              "en el nivel de versi\u00f3n, alias o funci\u00f3n en el nivel de versi\u00f3n, alias o funci\u00f3n",
+              "a nivel de versi\u00f3n o funci\u00f3n"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          },
+          {
+            "id": "cc2d0ac84213066c464d6fb4",
+            "question": "Lambda puede leer eventos de qu\u00e9 otros servicios de AWS? (ref-https://docs.aws.amazon.com/lambda/latest/dg/lambda-servicios.html)",
+            "answer": null,
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [],
+            "options": [
+              "Kinesis, S3 y SQS",
+              "Kinesis, S3 y SNS",
+              "Kinesis, DynamoDB y SNS",
+              "Kinesis, DynamoDB y SQS"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "9d40054096da9762395e6a52",
+            "quizzId": "821fb027de4f0d9d8871c6d7"
+          }
+        ]
       }
     ]
   },
   "meta": {
     "source": "aws-lambda/aws-lambda-quiz-es.md",
-    "language": "es",
-    "generatedAt": "2025-12-09T14:56:14.058063+00:00",
+    "languages": [
+      "es"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.077592+00:00",
     "warnings": [
       "Question 47 has no marked correct answers",
       "Question 49 has no marked correct answers",

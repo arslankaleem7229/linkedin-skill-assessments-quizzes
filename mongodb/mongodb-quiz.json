@@ -1,2140 +1,2385 @@
 {
   "quizz": {
     "id": "ebee15929f583a0cf8bca77c",
-    "title": "MongoDB",
-    "description": "Seeded from mongodb/mongodb-quiz.md",
-    "createdById": "seed-user",
-    "questions": [
-      {
-        "id": "baa0ec861a028cf219553e6c",
-        "question": "Which command adds members to the replica set from MongoDB shell?",
-        "answer": "`rs.add(\"<hostname>\")`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`rs.add(\"<hostname>\")`"
-        ],
-        "options": [
-          "`rs.add(\"<hostname>\")`",
-          "`replicaSetAdd(\"<hostname>\")`",
-          "`rs.insert(\"<hostname>\")`",
-          "`replica.add(\"<hostname>\")`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c256f5b0336821e36ab3bc9b",
-        "question": "Which MongoDB shell command should you use to back up a database?",
-        "answer": "mongodump",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "mongodump"
-        ],
-        "options": [
-          "restore",
-          "backup",
-          "mongobackup",
-          "mongodump"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "187ce5784711707cbe3f111b",
-        "question": "Which shell query displays all citizens with an age greater than or equal to 21?",
-        "answer": "`db.citizens.find({age: {$gte: 21}})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.citizens.find({age: {$gte: 21}})`"
-        ],
-        "options": [
-          "`db.citizens.select('WHERE age >= 21')`",
-          "`db.citizens.where('age >= 21')`",
-          "`db.citizens.find('WHERE age >= 21')`",
-          "`db.citizens.find({age: {$gte: 21}})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "966cbeca4876a84b9e1ad007",
-        "question": "What does a MongoDB collection consist of?",
-        "answer": "documents",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "documents"
-        ],
-        "options": [
-          "data",
-          "documents",
-          "fields",
-          "rows"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "80761ab619e3f3b84f638395",
-        "question": "Given an ObjectId in `_id`, how do you get the time it was created?",
-        "answer": "`_id.getTimestamp()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`_id.getTimestamp()`"
-        ],
-        "options": [
-          "`getDateTime(_id)`",
-          "`_id.createDate()`",
-          "`_id.getTimestamp()`",
-          "`_id.getDateTime()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0fbffceb0f6161ec619beabf",
-        "question": "Given a cursor named myCursor, which command returns a boolean value?",
-        "answer": "`myCursor.hasNext()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`myCursor.hasNext()`"
-        ],
-        "options": [
-          "`myCursor.hasNext()`",
-          "`myCursor.sort()`",
-          "`myCursor.next()`",
-          "`myCursor.find()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2bee998cc4c49e263cff6464",
-        "question": "Which command returns a specific document in the user's collection?",
-        "answer": "`db.users.find({_id: 1})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.users.find({_id: 1})`"
-        ],
-        "options": [
-          "`db.users.find({_id: 1})`",
-          "`db.users.seek({_id: 1})`",
-          "`db.users.query({_id: 1})`",
-          "`db.query.users({_id: 1})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b2a07f41ddf0a056d5af7453",
-        "question": "To import a JSON array into Mongo, what flags are needed with MongoDBimport?",
-        "answer": "`--jsonArray`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`--jsonArray`"
-        ],
-        "options": [
-          "`--type jsonArray`",
-          "`--json`",
-          "`--type json`",
-          "`--jsonArray`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6f864ebf3fa4e4a4d57bdaae",
-        "question": "Choose the shell command that connects to a MongoDB database.",
-        "answer": "mongo",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "mongo"
-        ],
-        "options": [
-          "mongo",
-          "mongod",
-          "mongoconnect",
-          "dbconnect"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3c4f5016dc9f894f5fb0f216",
-        "question": "In the MongoDB shell, how can you tell if an index was used with a query?",
-        "answer": "`db.customers.find({lastName: 'smith'}).explain()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.find({lastName: 'smith'}).explain()`"
-        ],
-        "options": [
-          "`db.customers.find({lastName: 'smith'}).explain()`",
-          "`db.customers.find({lastName: 'smith'}).perf()`",
-          "`db.customers.find({lastName: 'smith'}).plan()`",
-          "`db.customers.find({lastName: 'smith'}).usedIndex()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a10680dd208efef69fa47cfb",
-        "question": "Suppose your aggregation pipeline terminated with an exception referring to exceeded memory limit. What is the best way to resolve the issue?",
-        "answer": "Set allowDiskUse to true.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Set allowDiskUse to true."
-        ],
-        "options": [
-          "Set useMemory to twice amount indicated in exception.",
-          "Switch a 64 bit instance of MongoDB.",
-          "Increase the memory of the MongoDB server.",
-          "Set allowDiskUse to true."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "02f834087e13cdd6ad212da7",
-        "question": "What is the recommended way to delete a user?",
-        "answer": "`db.dropUser(\"user\")`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.dropUser(\"user\")`"
-        ],
-        "options": [
-          "`db.deleteUser(\"user\")`",
-          "`db.removeUser(\"user\") DEPRECATED`",
-          "`db.remove(\"user\")`",
-          "`db.dropUser(\"user\")`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "83779700f7caf5b775f8368b",
-        "question": "What the primary database in a replica set fails, when does failover begin?",
-        "answer": "immediately",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "immediately"
-        ],
-        "options": [
-          "once the primary has been down for 10 minutes",
-          "once the primary reboots",
-          "immediately",
-          "after the administrator reboots the primary"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bb3ae55b5f8ae0ae4faf1c3e",
-        "question": "What is the correct option to set up Kerberos when starting MongoDBd?",
-        "answer": "`--setParameter authenticationMechanisms=GSSAPI`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`--setParameter authenticationMechanisms=GSSAPI`"
-        ],
-        "options": [
-          "`--setParameter authenticationMechanisms=GSSAPI`",
-          "`--setAuthentication=GSSAPI`",
-          "`--setParam auth=K`",
-          "`--setAuth method=Kerberos`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2eaf8d8dc7835fd1380de56a",
-        "question": "What is the purpose of an arbiter in a replica set?",
-        "answer": "It casts the tie-breaking vote in an election.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "It casts the tie-breaking vote in an election."
-        ],
-        "options": [
-          "It monitors replica set and sends email in case of failure",
-          "It casts the tie-breaking vote in an election.",
-          "It holds a backup copy of the database.",
-          "It reboots the failed server."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "c183c3c94d19ab4c26ad6840",
-        "question": "You want to know how many types of items you have in each category. Which query does this?",
-        "answer": "`db.product.aggregate($group: {_id: \"$category\", count: {$sum:1}})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.product.aggregate($group: {_id: \"$category\", count: {$sum:1}})`"
-        ],
-        "options": [
-          "`db.product.group({_id: \"$category\", count: {$sum:1}})`",
-          "`db.product.aggregate($sum: {_id: \"$category\", count: {$group:1}})`",
-          "`db.product.aggregate($group: {_id: \"$category\", count: {$sum:1}})`",
-          "`db.product.aggregate($count: {_id: \"$category\", count: {$group:1}})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cf55c7e0c9690de326380568",
-        "question": "To restrict the number of records coming back from a query, which command should you use?",
-        "answer": "limit",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "limit"
-        ],
-        "options": [
-          "take",
-          "limit",
-          "max",
-          "skip"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "abed8a16101ac9fa039bb9a3",
-        "question": "You have a collection named restaurants with the geographical information stored in the location property, how do you create a geospatial index on it?",
-        "answer": "`db.restaurants.createIndex({location: \"2dsphere\"})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.restaurants.createIndex({location: \"2dsphere\"})`"
-        ],
-        "options": [
-          "`db.restaurants.createIndex({location: \"2dsphere\"})`",
-          "`db.restaurants.geospatial({location: \"2dsphere\"})`",
-          "`db.restaurants.createIndex(\"2dsphere\":\"location\")`",
-          "`db.restaurants.createIndex({geospatial: \"location\"})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "25e6a58475c8073007f5b8e3",
-        "question": "How do you find documents with a matching item in an embedded array?",
-        "answer": "`db.customers.find ({\"jobs\":\"secretary\"})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.find ({\"jobs\":\"secretary\"})`"
-        ],
-        "options": [
-          "`db.customers.findmatch ({\"jobs\":\"secretary\"})`",
-          "`db.customers.find ({\"jobs:secretary\"})`",
-          "`db.customers.find ({\"jobs\":[\"secretary\"]})`",
-          "`db.customers.find ({\"jobs\":\"secretary\"})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bbcb6da6619c0f7678e359f4",
-        "question": "Which query bypasses the first 5 customers and returns the next 10?",
-        "answer": "`db.customers.find({}).skip(5).limit(10)`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.find({}).skip(5).limit(10)`"
-        ],
-        "options": [
-          "`db.customers.find({}, {skip: 5, limit: 10})`",
-          "`db.customers.find({}.page(5).take(10))`",
-          "`db.customers.find({}).skip(5).take(10)`",
-          "`db.customers.find({}).skip(5).limit(10)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b94ffb0114e4fe5398782b3c",
-        "question": "How do you create a text index?",
-        "answer": "`db.customers.createIndex({firstName: \"text\", lastName: \"text\"})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.createIndex({firstName: \"text\", lastName: \"text\"})`"
-        ],
-        "options": [
-          "`db.customers.createIndex({firstName, lastName})`",
-          "`db.customers.createTextIndex({firstName, lastName})`",
-          "`db.customers.createIndex({firstName: \"text\", lastName: \"text\"})`",
-          "`db.customers.createText({firstName: 1, lastName: 1})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ea1efe705512dbf39ed1ac25",
-        "question": "Assuming you have customers collection with a firstName and lastName field, which is the correct MongoDB shell command to create an index on lastName, then firstName both ascending?",
-        "answer": "`db.customers.createIndex({lastName:1, firstName: 1})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.createIndex({lastName:1, firstName: 1})`"
-        ],
-        "options": [
-          "`db.customers.createIndex(\"lastName, firstName, ASC\")`",
-          "`db.customers.addIndex({lastName:\"ASC\", firstName: \"ASC\"})`",
-          "`db.customers.newIndex({lastName:1, firstName:1})`",
-          "`db.customers.createIndex({lastName:1, firstName: 1})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2309618ef6eaa481eb3eb1d7",
-        "question": "One of the documents in your collection has an \\_id based upon an older database design and you want to change it. You write an update command to find the document and replace the \\_id but the \\_id isn't changed. How should you fix the issue?",
-        "answer": "You can't. Once set, the \\_id field cannot be changed.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "You can't. Once set, the \\_id field cannot be changed."
-        ],
-        "options": [
-          "Set the replace option to true.",
-          "Use the replaceOne() command instead.",
-          "You can't. Once set, the \\_id field cannot be changed.",
-          "Use the updateOne() command instead."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b18513348ca063cd424fb10c",
-        "question": "A compound index allows you to \\_ ?",
-        "answer": "Use more than one field per index.",
-        "explanation": "[Reference](https://www.mongodb.com/docs/v6.0/core/index-compound/)",
-        "hint": null,
-        "correctAnswer": [
-          "Use more than one field per index."
-        ],
-        "options": [
-          "Calculate interest quickly.",
-          "Accomplish nothing, since compound indexes aren't allowed in Mongo.",
-          "Use more than one field per index.",
-          "Combine fields in different collations."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ba07b76787449a8a8dcc0830",
-        "question": "Why are ad-hoc queries useful?",
-        "answer": "They run faster than indexed queries.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "They run faster than indexed queries."
-        ],
-        "options": [
-          "They do not have to use the same operators.",
-          "You do not need to structure the database to support them.",
-          "They autogenerate reports.",
-          "They run faster than indexed queries."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e435257ebce39a135157f281",
-        "question": "How often do the members of a replica set send heartbeats to each other?",
-        "answer": "every 2 seconds",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "every 2 seconds"
-        ],
-        "options": [
-          "every 2 minutes",
-          "every 5 seconds",
-          "every 2 seconds",
-          "every 10 seconds"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "90a0f959fd56193009773720",
-        "question": "Which command returns all of the documents in the customers collection?",
-        "answer": "`db.customers.find();`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.find();`"
-        ],
-        "options": [
-          "`db.customers.all();`",
-          "`db.find().customers();`",
-          "`db.customers.find();`",
-          "`db.customers.show();`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5a37e04d78c4324ad072a87b",
-        "question": "Given a cursor named myCursor, pointing to the customers collection, how to you get basic info about it?",
-        "answer": "`myCursor.explain()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`myCursor.explain()`"
-        ],
-        "options": [
-          "`myCursor.stats()`",
-          "`myCursor.dump()`",
-          "`myCursor.info()`",
-          "`myCursor.explain()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "371979d73069e09a205cac4e",
-        "question": "What is true about indexes?",
-        "answer": "They speed up read access while slowing down writes.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "They speed up read access while slowing down writes."
-        ],
-        "options": [
-          "They speed up read access while slowing down writes.",
-          "They secure the database from intruders.",
-          "They speed up reads and writes.",
-          "They speed up write access while slowing down reads."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "13c843ff7570f8ffbbc4fd78",
-        "question": "What is the preferred format to store geospatial data in MongoDB?",
-        "answer": "GeoJSON",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "GeoJSON"
-        ],
-        "options": [
-          "Latitude, longitude",
-          "XML",
-          "GeoJSON",
-          "BSON"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f72a6a6993e8afa758254e74",
-        "question": "Which programming language is used to write MongoDB queries? (_Alternative_: In the MongoDB shell, what programming language is used to make queries?)",
-        "answer": "JavaScript",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "JavaScript"
-        ],
-        "options": [
-          "Python",
-          "JavaScript",
-          "SQL",
-          "TypeScript"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "17818292dae1475ce5c5379b",
-        "question": "You have two text fields in your document and you'd like both to be quickly searchable. What should you do?",
-        "answer": "Create a text index on each field.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Create a text index on each field."
-        ],
-        "options": [
-          "Create a text index on each field.",
-          "MongoDB is not able to do this.",
-          "Create a compound text index using both fields.",
-          "Create a text index on one field and a single field index on the other."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "081aba65859d8e35afc37f48",
-        "question": "To import a CSV file into MongoDB, which command should you issue?",
-        "answer": "mongoimport",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "mongoimport"
-        ],
-        "options": [
-          "mongorestore",
-          "mongoi",
-          "upload",
-          "mongoimport"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ce3895dfbeb4ad36ea17e7ea",
-        "question": "In an MongoDB mapReduce command, the reduce function should \\_.",
-        "answer": "not access the data",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "not access the data"
-        ],
-        "options": [
-          "access the database",
-          "be called only when the key has a single value",
-          "access the database only to perform read operations",
-          "not access the data"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0c9012ba5242080cfc197e1d",
-        "question": "On a newly created collection, which field will have an index?",
-        "answer": "the `_id` field",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "the `_id` field"
-        ],
-        "options": [
-          "the name field",
-          "the ObjectId field",
-          "the `_id` field",
-          "no field will have an index"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b96761832b6434c74076ef9b",
-        "question": "You have a collection of thousands of students. You'd like to return the second set of 20 documents from the sorted collection. What is the proper order in which to apply the operations?",
-        "answer": "sort, skip, limit",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "sort, skip, limit"
-        ],
-        "options": [
-          "limit, skip, sort",
-          "sort, limit, skip",
-          "limit, sort, skip",
-          "sort, skip, limit"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ecb8ad757b926aa947b0887a",
-        "question": "You would like the stats() command to return kilobytes instead of bytes. Which command should you run?",
-        "answer": "`db.vehicle.stats(1024)`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.vehicle.stats(1024)`"
-        ],
-        "options": [
-          "`db.vehicle.stats(1024)`",
-          "`db.vehicle.stats(\"kilobytes\")`",
-          "`db.vehicle.stats(true)`",
-          "`db.vehicle.stats(\"kb\")`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d2a893816ef65fa239941224",
-        "question": "You want to modify an existing index. What is the best way to do this?",
-        "answer": "Delete the original index and create a new index.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Delete the original index and create a new index."
-        ],
-        "options": [
-          "Use the `reIndex()` command to modify the index.",
-          "Delete the original index and create a new index.",
-          "Call the `createIndex()` command with the update option.",
-          "Use the `updateIndex()` command."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "76dfdcaf28f0b85e860a669d",
-        "question": "You need to delete the index you created on the description field. Which command will accomplish this?",
-        "answer": "`db.vehicle.dropIndex(\"description_text\")`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.vehicle.dropIndex(\"description_text\")`"
-        ],
-        "options": [
-          "`db.vehicle.dropIndex(\"description_text\")`",
-          "`db.vehicle.dropIndex({\"description\":\"text\"})`",
-          "`db.vehicle.removeIndex({\"description\":\"text\"})`",
-          "`db.vehicle.removeIndex(\"description_text\")`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "02189aaef47970d9005aea8e",
-        "question": "You would like to know how many different categories you have. Which query will best get the job done?",
-        "answer": "`db.vehicle.distinct(\"category\").length`",
-        "explanation": "**Note**: count() works with find(...) but length works with distinct",
-        "hint": null,
-        "correctAnswer": [
-          "`db.vehicle.distinct(\"category\").length`"
-        ],
-        "options": [
-          "`db.vehicle.distinct(\"category\")`",
-          "`db.vehicle.unique(\"category\")`",
-          "`db.vehicle.distinct(\"category\").count()`",
-          "`db.vehicle.distinct(\"category\").length`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bfedef26fa3e22eebf7e0e97",
-        "question": "From the MongoDB shell, how do you create a new document in the customers collection?",
-        "answer": "`db.customers.save({name: \"Bob\"})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.save({name: \"Bob\"})`"
-        ],
-        "options": [
-          "`db.customers.add({name: \"Bob\"})`",
-          "`db.customers.save({name: \"Bob\"})`",
-          "`db.customers.create({name: \"Bob\"})`",
-          "`db.customers.new({name: \"Bob\"})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bb416896a5daa36ef7287b8a",
-        "question": "Which field is required of all MongoDB documents?",
-        "answer": "`_id`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`_id`"
-        ],
-        "options": [
-          "`_id`",
-          "`_name`",
-          "ObjectId",
-          "mongoDB is schema-less so no field is required"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5d1637e578e51a840d519cf1",
-        "question": "A MongoDB instance has at least what three files?",
-        "answer": "data, namespace, and journal",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "data, namespace, and journal"
-        ],
-        "options": [
-          "data, namespace, and journal",
-          "namespace, journal, and log",
-          "journal, data, and database",
-          "data, log, and journal"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "341bdddada5c4709a2b44a18",
-        "question": "You'd like a set of documents to be returned in last name, ascending order. Which query will accomplish this?",
-        "answer": "`db.persons.find().sort({lastName: 1}}`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.persons.find().sort({lastName: 1}}`"
-        ],
-        "options": [
-          "`db.persons.find().sort({lastName: -1}}`",
-          "`db.persons.find().sort({lastName: 1}}`",
-          "`db.persons.find().sort({lastName: ascending}}`",
-          "`db.persons.find().sort({lastName: $asc}}`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8d53350c64a39bb684fd35ae",
-        "question": "What is NOT a standard role in MongoDB?",
-        "answer": "delete collections",
-        "explanation": "[Reference](https://www.mongodb.com/docs/v6.0/reference/built-in-roles/#backup-and-restoration-roles)",
-        "hint": null,
-        "correctAnswer": [
-          "delete collections"
-        ],
-        "options": [
-          "restore",
-          "read/write",
-          "dbadmin",
-          "delete collections"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "74bd8018bdda022816fb4ca7",
-        "question": "Which MongoDB shell command deletes a single document?",
-        "answer": "`db.customers.remove({_id: 1});`",
-        "explanation": "**Note:** db.collection.remove() is deprecated in the new mongosh. Use db.collection.deleteOne() or db.collection.deleteMany().\nReferences:\n[db.collection.remove()](https://www.mongodb.com/docs/v6.0/reference/method/db.collection.remove/)\n[db.collection.delete()](https://www.mongodb.com/docs/mongodb-shell/crud/delete/)",
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.remove({_id: 1});`"
-        ],
-        "options": [
-          "`db.customers.delete({_id: 1});`",
-          "`db.customers.drop({_id: 1});`",
-          "`db.drop.customers({_id: 1});`",
-          "`db.customers.remove({_id: 1});`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4e0eccbe4ba7615e0f50fc03",
-        "question": "Using the MongoDB shell, how do you remove the customer collection and its indexes?",
-        "answer": "`db.customers.drop();`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.drop();`"
-        ],
-        "options": [
-          "`db.customers.remove({}).indexes();`",
-          "`db.customers.remove({});`",
-          "`db.customers.drop();`",
-          "`db.customers.delete();`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "661db3630c3f78a17e0ad243",
-        "question": "By default, applications direct their read operations to which member of the replica set?",
-        "answer": "primary",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "primary"
-        ],
-        "options": [
-          "primary",
-          "arbiter",
-          "secondary",
-          "backup"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7263674a95e4dde81f2be9e0",
-        "question": "You need to get the names of all the indexes on your current collection. What is the best way to accomplish this?",
-        "answer": "`db.people.getIndexes();`",
-        "explanation": "**Note:** An alternative method in the mongosh shell is listIndexes()\n[Reference](https://www.mongodb.com/docs/v6.0/reference/command/listIndexes/#mongodb-dbcommand-dbcmd.listIndexes)",
-        "hint": null,
-        "correctAnswer": [
-          "`db.people.getIndexes();`"
-        ],
-        "options": [
-          "`db.people.getName();`",
-          "`db.people.reIndex({names: 1});`",
-          "`db.people.getIndexKeys();`",
-          "`db.people.getIndexes();`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cbba8c9a183313e723028054",
-        "question": "You are going to do a series of updates to multiple records. You find setting the multi option of the update() command too tiresome. What should you do instead?",
-        "answer": "Use the updateMany() command instead",
-        "explanation": "**Note:** An alternative method for db is .update()\n[Reference](https://www.mongodb.com/docs/v6.0/reference/command/update/#mongodb-dbcommand-dbcmd.update)",
-        "hint": null,
-        "correctAnswer": [
-          "Use the updateMany() command instead"
-        ],
-        "options": [
-          "Use the replaceMany() command instead",
-          "Use the updateMulti() command instead",
-          "Use the updateMany() command instead",
-          "Set the global multi option to True"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3e8a7436b0027d042eaf010f",
-        "question": "To cleanly shut down MongoDB, what command should you use from the MongoDB shell?",
-        "answer": "db.shutdownServer()",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "db.shutdownServer()"
-        ],
-        "options": [
-          "quit()",
-          "exit()",
-          "db.shutdownServer()",
-          "db.shutdown()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5785b1a2cfc5d2e6f368e2cb",
-        "question": "Given a customer collection which includes fields for gender and city, which aggregate pipeline shows the number of female customers in each city? (_Alternative_: How can you view the execution performance statistics for a query?)",
-        "answer": "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number: {$sum: 1}}}, {$sort :{number: -1}}])`",
-        "explanation": "**Note:** If you want to analyze the performance of a query use .explain(\"executionStats\")\n[Reference](https://www.mongodb.com/docs/v6.0/tutorial/analyze-query-plan/)",
-        "hint": null,
-        "correctAnswer": [
-          "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number: {$sum: 1}}}, {$sort :{number: -1}}])`"
-        ],
-        "options": [
-          "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number: {$sum: 1}}}, {$sort :{number: -1}}])`",
-          "`db.members.find({$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number: {$sum: 1}}}.$sort ({number: -1})`",
-          "`db.members.find([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number: {$sum: 1}}}, {$sort :{number: -1}}])`",
-          "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$sort :{number: -1}}])`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4dabf6f88c0a04c0eafa8c44",
-        "question": "When no parameters are passed to `explain()`, what mode does it run in?",
-        "answer": "queryPlanner mode",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "queryPlanner mode"
-        ],
-        "options": [
-          "wireTiger mode",
-          "executionStats mode",
-          "queryPlanner mode",
-          "allPlansExecution mode"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cd5edcafcfcfe34a82d974e1",
-        "question": "What is the correct query to find all of the people who have a home phone number defined?",
-        "answer": "`db.person.find({homePhone: {$exists: true}});`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.person.find({homePhone: {$exists: true}});`"
-        ],
-        "options": [
-          "`db.person.find({exists: 'homePhone'});`",
-          "`db.person.exists({homePhone: true});`",
-          "`db.person.find({homePhone: {$exists: true}});`",
-          "`db.person.has('homePhone');`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "e0bc604cbfadb8794996deac",
-        "question": "Which file in the MongoDB directly holds the MongoDB daemon?",
-        "answer": "mongod",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "mongod"
-        ],
-        "options": [
-          "mongodb",
-          "mongo-daemon",
-          "daemon",
-          "mongod"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f10424cc5e540407ad651af0",
-        "question": "You have just secured your previously unsecured MongoDB server, but the server is still not requiring authentication. What is the best option?",
-        "answer": "Restart the `mongod` process.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Restart the `mongod` process."
-        ],
-        "options": [
-          "Restart the `mongod` process.",
-          "Issue the `secure()` command.",
-          "Issue the `mongoimport` command.",
-          "Issue the `authenticate()` command."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "137497fee10e7dba30b81013",
-        "question": "What is the most accurate statement regarding MongoDB and ad hoc queries?",
-        "answer": "MongoDB allows ad hoc queries.",
-        "explanation": "**Note:** You don't need an index to perform ad hoc queries. Only pick one choice\n[Reference](https://www.mongodb.com/docs/v6.3/query-api/)",
-        "hint": null,
-        "correctAnswer": [
-          "MongoDB allows ad hoc queries."
-        ],
-        "options": [
-          "MongoDB does not allow ad hoc queries; all queries require an index.",
-          "Ad hoc queries are allowed only in the paid version.",
-          "Ad hoc queries are allowed only through the ad hoc command.",
-          "MongoDB allows ad hoc queries."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "05ca3f71bd452065e474ec87",
-        "question": "In MongoDB, what does a projection do?",
-        "answer": "allows you to select which fields should be in the return data",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "allows you to select which fields should be in the return data"
-        ],
-        "options": [
-          "allows you to do a calculation on the results",
-          "allows you to run queries on the server",
-          "allows you to select which fields should be in the return data",
-          "allows you to format the results for a display"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "bad4773161d1cc2886716bf4",
-        "question": "To remove a database and all of its records from MongoDB, what operator should you use?",
-        "answer": "`dropDatabase()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`dropDatabase()`"
-        ],
-        "options": [
-          "`dropDatabase()`",
-          "`removeAll()`",
-          "`clear()`",
-          "`deleteDatabase()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8ead110490b25448ba8442ad",
-        "question": "What option can be passed to start the MongoDB shell without connecting to a database?",
-        "answer": "`-nodb`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`-nodb`"
-        ],
-        "options": [
-          "`-db=null`",
-          "`--shell-only`",
-          "`--free`",
-          "`-nodb`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "3797969c09dd2cf4e30382df",
-        "question": "How can you improve the appearance of the output JSON that contains the `_id`?",
-        "answer": "`Use db.collection.find().pretty()`",
-        "explanation": "[Reference:](https://www.mongodb.com/docs/manual/reference/method/cursor.pretty/)",
-        "hint": null,
-        "correctAnswer": [
-          "`Use db.collection.find().pretty()`"
-        ],
-        "options": [
-          "`Use db.collection.set({$_id:pretty})`",
-          "`Use db.collection.find().pretty()`",
-          "`Use db.collection.format(numeric)`",
-          "`Use $_id = value`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8698573fbeb79b27d00bc0f0",
-        "question": "What happens to a Replica set oplog if it runs out of memory?",
-        "answer": "`The oplog is capped collection and can't run out of memory`",
-        "explanation": "**Argument:**\n_Why \"The oplog will be saved on one of the secondary servers.\" is wrong:_\n> MongoDB applies database operations on the primary and then records the operations on the primary's oplog. The secondary members then copy and apply these operations in an asynchronous process. All replica set members contain a copy of the oplog, in the local.oplog.rs collection, which allows them to maintain the current state of the database.\n_Reasoning behind the right answer:_\n> The oplog (operations log) is a special capped collection that keeps a rolling record of all operations that modify the data stored in your databases.\n> Unlike other capped collections, the oplog can grow past its configured size limit to avoid deleting the majority commit point.",
-        "hint": null,
-        "correctAnswer": [
-          "`The oplog is capped collection and can't run out of memory`"
-        ],
-        "options": [
-          "`The oplog will be saved on one of the secondary servers.`",
-          "`The oplog is capped collection and can't run out of memory`",
-          "`The MongoDB instance will fail`",
-          "`The oplog will stop recording logging information`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ba4478a94f9070b45e7148f6",
-        "question": "MongoDB ships with a variety of files. Which file runs the MongoDB shell?",
-        "answer": "mongo",
-        "explanation": "**Note:** mongosh is the new mongo shell, mongo is deprecated.\nStarting in MongoDB v5.0,\nmongosh\nreplaces mongo as the preferred shell.\n[Reference:] (https://www.mongodb.com/docs/mongodb-shell/)",
-        "hint": null,
-        "correctAnswer": [
-          "mongo"
-        ],
-        "options": [
-          "mongo",
-          "mongo-s",
-          "shell",
-          "mongo-shell"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6ea82da806c4efc21e0cca08",
-        "question": "How can you view the execution performance statistics for a query?",
-        "answer": "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number:{$sum:1}}}, {$sort: {number:-1}}]).explain(\"executionStats\")`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number:{$sum:1}}}, {$sort: {number:-1}}]).explain(\"executionStats\")`"
-        ],
-        "options": [
-          "`db.performance.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id:{city:\"$city\"}, number: {$sum: 1}}}, {$sort : {number: -1}}])`",
-          "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number:{$sum:1}}}, {$sort: {number:-1}}]).explain(\"executionStats\")`",
-          "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group:{_id: {city: \"$city\"}, number: {$sum: 1}}}, {$sort: {number: -1}}]).explain()`",
-          "`db.members.aggregate([ {$match: {gender: \"\"\"Female\"\"\"}}, {$group: {_id: {city: \"\"\"$city\"\"\"}, number: {$sum:1}}}, {$sort: {number: -1}}]).number()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "48ea3f47be4db448d98730c4",
-        "question": "From the MongoDB shell, how do you execute a JavaScript file named list.js?",
-        "answer": "`load('list.js)`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`load('list.js)`"
-        ],
-        "options": [
-          "`node 'list.js'`",
-          "`exec('list.js)`",
-          "`run('list.js)`",
-          "`load('list.js)`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "57fc9e1115670462fe89a5fe",
-        "question": "Which MongoDB shell query will sort the customer's collection by name descending?",
-        "answer": "`db.customers.find({}).sort({name: -1})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.find({}).sort({name: -1})`"
-        ],
-        "options": [
-          "`db.customers.sort({name: -1}.find({})`",
-          "`db.customers.sort({name: -1})`",
-          "`db.customers.find({}).sort({name: -1})`",
-          "`db.customers.find({}).sort({name: 1})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "913dd576b2531e9de8e1be40",
-        "question": "Suppose you are using the `mongoimport` command to import personnel data and there is a unique index on the email field. What happens when there are duplicate emails in the import?",
-        "answer": "The import command doesn't import the bad document but does import the rest.",
-        "explanation": "**Note:** By default, mongoimport continues an operation when it encounters duplicate key and document validation errors.\n[Reference](https://www.mongodb.com/docs/database-tools/mongoimport/#std-option-mongoimport.--stopOnError)",
-        "hint": null,
-        "correctAnswer": [
-          "The import command doesn't import the bad document but does import the rest."
-        ],
-        "options": [
-          "The import command aborts without importing any records.",
-          "The import command imports records upto but not including the record, and then aborts.",
-          "The import command doesn't import the bad document but does import the rest.",
-          "The import command prompts you to correct the bad record."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d5c67e1f23a6aa0f141d7b5a",
-        "question": "You have a collection with millions of documents. Each time you attempt to sort. MongoDB runs out of memory. What might help?",
-        "answer": "Create an index on the field you are sorting.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Create an index on the field you are sorting."
-        ],
-        "options": [
-          "Use the purge operator before the sort.",
-          "Return the entire collection and sort on the client.",
-          "Pass the --more-memory option.",
-          "Create an index on the field you are sorting."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "32d1999dd395d92153e0c818",
-        "question": "You need to be able to quickly find a word in a text field. What should you do?",
-        "answer": "Create a text index on the field and do a $text Query.",
-        "explanation": "Argument: You need a text index in order to perform a $text query on a field. $text query uses the text index under the hood\nReferences:\n[$text query](https://www.mongodb.com/docs/v6.0/reference/operator/query/text/#examples)\n[Text index](https://www.mongodb.com/docs/v6.0/core/index-text/)",
-        "hint": null,
-        "correctAnswer": [
-          "Create a text index on the field and do a $text Query."
-        ],
-        "options": [
-          "Create a text index on the field and do a $text Query.",
-          "Create a single field index in descending order, and do a query for the word.",
-          "Do a $text query.",
-          "Create a $regex on the fields, and do a $regex query."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "002e679b11c37c21f78ee53f",
-        "question": "Which field is always included in a projection unless specifically excluded?",
-        "answer": "`_id`",
-        "explanation": "[Reference](https://docs.mongodb.com/manual/reference/operator/aggregation/project/#definition)",
-        "hint": null,
-        "correctAnswer": [
-          "`_id`"
-        ],
-        "options": [
-          "index",
-          "Name",
-          "`_id`",
-          "row number"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5624d5decfeb02a8201dac75",
-        "question": "After installing MongoDB on your machine, what must you do before launching Mongo?",
-        "answer": "Create a data directory.",
-        "explanation": "Note: The question in case is ambiguous. In the mongo docs, on the Windows Installation section, it clearly specifies the need for creating a data directory. However, that does not seem to be the case for Unix based systems. So, that gives use the closest possible solution for a specific platform. If we extrapolate that to the question, that seems to be the most reasonable solution.\n[mongodb site](https://docs.mongodb.com/manual/tutorial/verify-mongodb-packages/#verify-integrity-of-mongodb-packages)",
-        "hint": null,
-        "correctAnswer": [
-          "Create a data directory."
-        ],
-        "options": [
-          "Create a user account.",
-          "Register online.",
-          "Create a data directory.",
-          "Establish security credentials."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "868a3691ff375eb2339ffc4a",
-        "question": "How does a --jsonArray file need to be structured?",
-        "answer": "as a properly formatted JSON array",
-        "explanation": "[Section blog](https://www.section.io/engineering-education/handling-json-in-mongodb/)",
-        "hint": null,
-        "correctAnswer": [
-          "as a properly formatted JSON array"
-        ],
-        "options": [
-          "as a properly formatted JSON array",
-          "as YAML",
-          "as plain text",
-          "as a BSON object"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "f10d890fe360ed4aab87a306",
-        "question": "From the MongoDB shell, how do you display all of a database's memory usage?",
-        "answer": "`db.stats()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.stats()`"
-        ],
-        "options": [
-          "`db.size()`",
-          "`db.info()`",
-          "`db.memory()`",
-          "`db.stats()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "32edf5e3802acbdc3c0091f6",
-        "question": "How do you create a new MongoDB user?",
-        "answer": "`db.createUser({})`",
-        "explanation": "[MongoDB documentation](https://docs.mongodb.com/manual/tutorial/create-users/)",
-        "hint": null,
-        "correctAnswer": [
-          "`db.createUser({})`"
-        ],
-        "options": [
-          "`db.createUser({})`",
-          "`db.insert({user: 1})`",
-          "`db.customers.newUser({})`",
-          "`db.newUser({})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "85e79ff81c74bdd1a2052fef",
-        "question": "What is the internal data structure of a MongoDB document?",
-        "answer": "BSON (Binary JSON)",
-        "explanation": "[MongoDB documentation](https://www.mongodb.com/docs/manual/core/document/)\n[JSON and BSON](https://www.mongodb.com/json-and-bson)",
-        "hint": null,
-        "correctAnswer": [
-          "BSON (Binary JSON)"
-        ],
-        "options": [
-          "JSON (JavaScript Object Notation)",
-          "BSON (Binary JSON)",
-          "ORM (object relational mode)",
-          "MBF (MongoDB binary format)"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ddc8089f8e0b7917d4138924",
-        "question": "Which projection shows only the FirstName and lastName fields of a document in the customers collection?",
-        "answer": "`db.customers.find({}, {_id:0, firstName: 1, lastName: 1})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.find({}, {_id:0, firstName: 1, lastName: 1})`"
-        ],
-        "options": [
-          "`db.customers.find({}, {firstName: 1, lastName: 1})`",
-          "`db.customers.find({}, {_id:0, firstName: 1, lastName: 1})`",
-          "`db.customers.find({_id: 0, year: 1, maek: 1, model: 1})`",
-          "`db.customers.find({}).project({firstName: 1, lastName: 1})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b98c87cb007ef2a8dcc16a79",
-        "question": "Documents in mongodb are atomic at the \\_\\_\\_ level",
-        "answer": "document",
-        "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/core/write-operations-atomicity/#:~:text=In%20MongoDB%2C%20a%20write%20operation,documents%20within%20a%20single%20document.)",
-        "hint": null,
-        "correctAnswer": [
-          "document"
-        ],
-        "options": [
-          "database",
-          "field",
-          "no",
-          "document"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "07fcc19cd80d0d4a4f08a6b5",
-        "question": "What should the priority of a member be in order to prevent it from becoming the primary in replica set?",
-        "answer": "0",
-        "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/tutorial/configure-secondary-only-replica-set-member/#assign-priority-value-of-0)",
-        "hint": null,
-        "correctAnswer": [
-          "0"
-        ],
-        "options": [
-          "1",
-          "null",
-          "0",
-          "-1"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d85ae22e1f11ba75f733b270",
-        "question": "You need to add an index to the large name collection in your production database. You do not want to have disruption of service for your users and you can't afford to have a team to do the work during after hours. What should you do?",
-        "answer": "Use the createIndex() command with the option background = true.",
-        "explanation": "[MongoDB reference](https://www.mongodb.com/docs/v4.0/reference/method/db.collection.createIndex/#options)\n_Concurrency Changed in version 4.2._\n_MongoDB uses an optimized build process that obtains and holds an exclusive lock on the specified collection at the start and end of the index build. All subsequent operations on the collection must wait until createIndex() releases the exclusive lock._\n_createIndex() allows interleaving read and write operations during the majority of the index build._\nFor more information on the locking behavior of\ncreateIndex(), see Index Builds on Populated Collections.",
-        "hint": null,
-        "correctAnswer": [
-          "Use the createIndex() command with the option background = true."
-        ],
-        "options": [
-          "Use the reIndex() command to add the index quickly.",
-          "Use the createIndex() command with the option background = true.",
-          "Use the createIndex() command.",
-          "Use the createIndex() command with the option parallel = true."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "7e013755d9fbff595055bbf5",
-        "question": "When using aggregation $convert. which is not a parameter?",
-        "answer": "output",
-        "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/reference/operator/aggregation/convert/#definition)",
-        "hint": null,
-        "correctAnswer": [
-          "output"
-        ],
-        "options": [
-          "input",
-          "output",
-          "to",
-          "onError"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b3f96a7931c09a2466785122",
-        "question": "All tag values in tag sets must be \\_.",
-        "answer": "strings",
-        "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/core/read-preference-tags/)",
-        "hint": null,
-        "correctAnswer": [
-          "strings"
-        ],
-        "options": [
-          "JSON",
-          "integers",
-          "strings",
-          "XML"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "58f25bb6e24656bf25294acd",
-        "question": "When using the mongoimport command, how can you drop the database before importing?",
-        "answer": "Drop the database manually before importing.",
-        "explanation": "Argument: There is no -d option in the docs (https://www.mongodb.com/docs/database-tools/mongoimport/#options.)\n**Note:** Assuming you are asked to drop a collection instead while importing, the use the --drop option.",
-        "hint": null,
-        "correctAnswer": [
-          "Drop the database manually before importing."
-        ],
-        "options": [
-          "Use the -d option.",
-          "Use the mongooverwrite command instead of mongoimport.",
-          "Use the -drop option.",
-          "Drop the database manually before importing."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d7f35982702b01fe755b1a9e",
-        "question": "To import a CSV file into MongoDB, which command should you issue?",
-        "answer": "mongoimport",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "mongoimport"
-        ],
-        "options": [
-          "upload",
-          "mongorestore",
-          "mongoi",
-          "mongoimport"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ea1aad8ff8268267dd50bfd4",
-        "question": "A critical record must be replicated to the two other servers in the set. Which query guarantees that it is inserted as desired?",
-        "answer": "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { w: 2, j:true, wtimeout: 5000} })`",
-        "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/reference/write-concern/)",
-        "hint": null,
-        "correctAnswer": [
-          "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { w: 2, j:true, wtimeout: 5000} })`"
-        ],
-        "options": [
-          "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { w: 2, wtimeout: 5000} })`",
-          "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { j: true} })`",
-          "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { w: 2, j:false, wtimeout: 5000} })`",
-          "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { w: 2, j:true, wtimeout: 5000} })`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a0ace1697528123d0ae80abd",
-        "question": "What is the name of the default file used to configure MongoDB?",
-        "answer": "mongod.conf",
-        "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/reference/configuration-options/)",
-        "hint": null,
-        "correctAnswer": [
-          "mongod.conf"
-        ],
-        "options": [
-          "mongo.config",
-          "mongod.conf",
-          "config.sys",
-          ".mdbconfig"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "89849073afdf09cc12777ce8",
-        "question": "After using the dropIndexes() command on your collection, one index remains.What can you do to drop the the remaining index?",
-        "answer": "The required_id index cannot be deleted.",
-        "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/reference/method/db.collection.dropIndex/)",
-        "hint": null,
-        "correctAnswer": [
-          "The required_id index cannot be deleted."
-        ],
-        "options": [
-          "Use dropIndexes({all:1}) with the all parameter.",
-          "The required_id index cannot be deleted.",
-          "Call dropIndex({\"<em>id</em>\":1}) to force its removal.",
-          "Call dropIndex({\"<em>id</em>\"}) to force its removal."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ca95eab1f6d8a74922ccbed9",
-        "question": "To scale horizontally, what does MongoDB use?",
-        "answer": "sharding",
-        "explanation": "[MongoDB reference](https://www.mongodb.com/basics/scaling)",
-        "hint": null,
-        "correctAnswer": [
-          "sharding"
-        ],
-        "options": [
-          "sharding",
-          "replication",
-          "partition",
-          "backup"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "267ba792374207fb077774dd",
-        "question": "Your database collection holds web session information. One field, lastActivity, holds the timestamp of when the user was last active. You want to delete the user session after 30 minutes of inactivity. What is your best option?",
-        "answer": "Create a TTL index on the lastActivity field and set expireAfterSeconds to 1800.",
-        "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/core/index-ttl/)",
-        "hint": null,
-        "correctAnswer": [
-          "Create a TTL index on the lastActivity field and set expireAfterSeconds to 1800."
-        ],
-        "options": [
-          "Create Javascript function called via an interval timeout to delete all records older than 30 minutes.",
-          "Create a TTL index on the lastActivity field and set expireAfterSeconds to 1800.",
-          "You have to create a stored procedure.",
-          "Every time you create a new record for expired older records and delete them."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "95f511f3d09737b42207194d",
-        "question": "In the MongoDB shell, how can you tell if an index was used with a query?",
-        "answer": "`db.customers.find({lastName: 'smith'}).explain()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.find({lastName: 'smith'}).explain()`"
-        ],
-        "options": [
-          "`db.customers.find({lastName: 'smith'}).explain()`",
-          "`db.customers.find({lastName: 'smith'}).perf()`",
-          "`db.customers.find({lastName: 'smith'}).plan()`",
-          "`db.customers.find({lastName: 'smith'}).usedIndex()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "870e48fcd76b83a185fe1cda",
-        "question": "You need to be able to quickly find a word in a text field. What should you do?",
-        "answer": "Create a text index on the field and do a $text Query.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Create a text index on the field and do a $text Query."
-        ],
-        "options": [
-          "Create a text index on the field and do a $text Query.",
-          "Create a single field index in descending order, and do a query for the word.",
-          "Do a $text query.",
-          "Create a $regex on the fields, and do a $regex query."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "9d1a55f2a8179be4413a899a",
-        "question": "What is the name of the default file used to configure MongoDB?",
-        "answer": "mongod.conf",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "mongod.conf"
-        ],
-        "options": [
-          "mongo.config",
-          "mongod.conf",
-          "config.sys",
-          ".mdbconfig"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "a7befc5a48791eaa0c69707a",
-        "question": "You have a collection named restaurants with the geographical information stored in the location property, how do you create a geospatial index on it?",
-        "answer": "`db.restaurants.createIndex({location: \"2dsphere\"})`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.restaurants.createIndex({location: \"2dsphere\"})`"
-        ],
-        "options": [
-          "`db.restaurants.createIndex({location: \"2dsphere\"})`",
-          "`db.restaurants.geospatial({location: \"2dsphere\"})`",
-          "`db.restaurants.createIndex(\"2dsphere\":\"location\")`",
-          "`db.restaurants.createIndex({geospatial: \"location\"})`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "4506a9f91357c16e7a4d84ca",
-        "question": "What happens to a Replica set oplog if it runs out of memory?",
-        "answer": "`The oplog is capped collection and can't run out of memory`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`The oplog is capped collection and can't run out of memory`"
-        ],
-        "options": [
-          "`The oplog will be saved on one of the secondary servers.`",
-          "`The oplog is capped collection and can't run out of memory`",
-          "`The MongoDB instance will fail`",
-          "`The oplog will stop recording logging information`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "2054e77a76767583c66b48d4",
-        "question": "Using the MongoDB shell, how do you remove the customer collection and its indexes?",
-        "answer": "`db.customers.drop();`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`db.customers.drop();`"
-        ],
-        "options": [
-          "`db.customers.remove({}).indexes();`",
-          "`db.customers.remove({});`",
-          "`db.customers.drop();`",
-          "`db.customers.delete();`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "988e40deb6be1c7df2232baa",
-        "question": "What is the primary advantage of using MongoDB as a NoSQL database over traditional relational databases?",
-        "answer": "Schema flexibility",
-        "explanation": "_Explanation_ : MongoDB's primary advantage as a NoSQL database over traditional relational databases is its schema flexibility.",
-        "hint": null,
-        "correctAnswer": [
-          "Schema flexibility"
-        ],
-        "options": [
-          "Better support for complex joins",
-          "Schema flexibility",
-          "ACID compliance",
-          "Fixed data structure"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "eadb75e53a8fbab63941a389",
-        "question": "What is a Replica Set in MongoDB?",
-        "answer": "A group of MongoDB servers that maintain the same data set",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "A group of MongoDB servers that maintain the same data set"
-        ],
-        "options": [
-          "A set of related database collections",
-          "A group of MongoDB servers that maintain the same data set",
-          "A type of database index in MongoDB",
-          "A query language for MongoDB"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "1114ca3017e6632ac2b1b54b",
-        "question": "Which command is used to create a new database in MongoDB?",
-        "answer": "`use`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`use`"
-        ],
-        "options": [
-          "`createDatabase()`",
-          "`useDatabase()`",
-          "`db.createDatabase()`",
-          "`use`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "358e220bf58e325a1c7e854a",
-        "question": "What is the default port number for MongoDB?",
-        "answer": "27017",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "27017"
-        ],
-        "options": [
-          "27017",
-          "3306",
-          "5432",
-          "8080"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "94bbfdef337de0675a6f5dcd",
-        "question": "Which of the following is a BSON data type in MongoDB?",
-        "answer": "Date",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Date"
-        ],
-        "options": [
-          "Integer",
-          "Float",
-          "Date",
-          "String"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "839079dbc96ad35df9cdd158",
-        "question": "What is the purpose of an index in MongoDB?",
-        "answer": "To improve query performance",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "To improve query performance"
-        ],
-        "options": [
-          "To define the structure of a document",
-          "To improve query performance",
-          "To group related documents together",
-          "To store binary data"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "8a955ffcd8badb4d3b36250e",
-        "question": "Which operator is used for equality in MongoDB queries?",
-        "answer": "`$eq`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`$eq`"
-        ],
-        "options": [
-          "`$eq`",
-          "`$ne`",
-          "`$gt`",
-          "`$lt`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b589d6863f6069fa0a49ba57",
-        "question": "What is the role of the `mongod` process in MongoDB?",
-        "answer": "It is the primary daemon process for the MongoDB server",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "It is the primary daemon process for the MongoDB server"
-        ],
-        "options": [
-          "It is the MongoDB shell",
-          "It is the primary daemon process for the MongoDB server",
-          "It is responsible for data replication",
-          "It is a tool for importing and exporting data"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "b2a6014e667ad3abe0054991",
-        "question": "Which method is used to remove a single document from a collection in MongoDB?",
-        "answer": "deleteOne()",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "deleteOne()"
-        ],
-        "options": [
-          "deleteOne()",
-          "removeOne()",
-          "drop()",
-          "remove()"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "49bd3924cfcc981ae2cf167e",
-        "question": "What is a GridFS in MongoDB?",
-        "answer": "A way to store large files in MongoDB",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "A way to store large files in MongoDB"
-        ],
-        "options": [
-          "A distributed file system",
-          "A system for managing database transactions",
-          "A way to store large files in MongoDB",
-          "A type of database index"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "5276083cc722dea688a6fb97",
-        "question": "Which aggregation stage in MongoDB is used to group documents by a specified expression and apply an accumulator expression to each group?",
-        "answer": "`$group`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`$group`"
-        ],
-        "options": [
-          "`$group`",
-          "`$match`",
-          "`$project`",
-          "`$sort`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6c7330c34e59e272a021c25b",
-        "question": "What is sharding in MongoDB?",
-        "answer": "The process of distributing data across multiple servers",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "The process of distributing data across multiple servers"
-        ],
-        "options": [
-          "The process of dividing a database into multiple collections",
-          "The process of dividing a collection into multiple documents",
-          "The process of dividing a database into multiple smaller databases",
-          "The process of distributing data across multiple servers"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "cd1578024bf2ea5888287b5e",
-        "question": "Which operation is used to update a document in MongoDB?",
-        "answer": "`update()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`update()`"
-        ],
-        "options": [
-          "`update()`",
-          "`modify()`",
-          "`change()`",
-          "`set()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "dffcbcd970d8ae6d199ef078",
-        "question": "What is a TTL index in MongoDB?",
-        "answer": "An index that automatically expires documents after a specified amount of time",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "An index that automatically expires documents after a specified amount of time"
-        ],
-        "options": [
-          "An index used for full-text search",
-          "An index that automatically expires documents after a specified amount of time",
-          "An index used for sorting documents in descending order",
-          "An index used for geospatial queries"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d9b2c5a107da00dc45358b04",
-        "question": "Which command is used to limit the number of documents returned in a MongoDB query?",
-        "answer": "`limit()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`limit()`"
-        ],
-        "options": [
-          "`limit()`",
-          "`count()`",
-          "`max()`",
-          "`skip()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "38258c6c31569a629772c9c8",
-        "question": "What is a compound index in MongoDB?",
-        "answer": "An index that combines multiple fields",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "An index that combines multiple fields"
-        ],
-        "options": [
-          "An index that combines multiple fields",
-          "An index that spans multiple collections",
-          "An index used for complex mathematical operations",
-          "An index used for querying nested documents"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "d683a92208587b9cf51ee3be",
-        "question": "Which operator is used to perform a logical OR operation in MongoDB queries?",
-        "answer": "`$or`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`$or`"
-        ],
-        "options": [
-          "`$or`",
-          "`$and`",
-          "`$not`",
-          "`$nor`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "840144dd4f673954a37ae829",
-        "question": "What is a covered query in MongoDB?",
-        "answer": "A query that uses a covered index",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "A query that uses a covered index"
-        ],
-        "options": [
-          "A query that returns covered documents",
-          "A query that covers multiple collections",
-          "A query that uses a covered cursor",
-          "A query that uses a covered index"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "0abea532682acfd737aafd2d",
-        "question": "Which method is used to create an index in MongoDB?",
-        "answer": "`createIndex()`",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "`createIndex()`"
-        ],
-        "options": [
-          "`addIndex()`",
-          "`index()`",
-          "`createIndex()`",
-          "`makeIndex()`"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ba2fddca2a9166038bf0a81f",
-        "question": "What is a compound shard key in MongoDB?",
-        "answer": "A key made up of multiple fields used for sharding",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "A key made up of multiple fields used for sharding"
-        ],
-        "options": [
-          "A key made up of multiple fields used for sharding",
-          "A key used for encrypting data",
-          "A key used for sorting documents in ascending order",
-          "A key used for grouping documents"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "6406943c54ba916788abda3a",
-        "question": "What is the purpose of the `mongos` process in MongoDB?",
-        "answer": "It is a routing service for sharded clusters",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "It is a routing service for sharded clusters"
-        ],
-        "options": [
-          "It is a tool for monitoring server performance",
-          "It is a tool for managing database backups",
-          "It is a routing service for sharded clusters",
-          "It is a tool for importing and exporting data"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "585ac8547f1c0594a271d5a4",
-        "question": "With regards to indexes, what is the difference between dropping a collection and deleting all documents in a collection?",
-        "answer": "drop() removes the collection and indexes; deleteMany({}) removes documents only (indexes remain).",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "drop() removes the collection and indexes; deleteMany({}) removes documents only (indexes remain)."
-        ],
-        "options": [
-          "drop() removes the collection and indexes; deleteMany({}) removes documents only (indexes remain).",
-          "drop() removes docs but keeps indexes.",
-          "Both actions behave the same.",
-          "deleteMany() also removes indexes automatically."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "caf28fc0af6d7ce05d04d915",
-        "question": "Which operation invalidates all active cursors on a collection?",
-        "answer": "Dropping the collection",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "Dropping the collection"
-        ],
-        "options": [
-          "Dropping the collection",
-          "Running a find() query",
-          "Creating an index",
-          "Updating multiple documents"
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
-      },
-      {
-        "id": "ebc9672dd18846f73bdc6c9a",
-        "question": "What happens to the _id index when you clone a collection using db.collection.aggregate([{ $out: \"newCol\" }])?",
-        "answer": "A new _id index is automatically created on newCol.",
-        "explanation": null,
-        "hint": null,
-        "correctAnswer": [
-          "A new _id index is automatically created on newCol."
-        ],
-        "options": [
-          "The original _id index is copied exactly.",
-          "The new collection has no _id index.",
-          "A new _id index is automatically created on newCol.",
-          "The _id index is created only if explicitly specified."
-        ],
-        "nature": "ChooseOne",
-        "attachments": []
+    "slug": "mongodb",
+    "createdById": "cmiz68drf00004eqsc3izonqy",
+    "sets": [
+      {
+        "id": "40969c73aade52a01879f9d9",
+        "language": "md",
+        "title": "MongoDB",
+        "description": "Seeded from mongodb/mongodb-quiz.md",
+        "questions": [
+          {
+            "id": "baa0ec861a028cf219553e6c",
+            "question": "Which command adds members to the replica set from MongoDB shell?",
+            "answer": "`rs.add(\"<hostname>\")`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`rs.add(\"<hostname>\")`"
+            ],
+            "options": [
+              "`rs.add(\"<hostname>\")`",
+              "`replicaSetAdd(\"<hostname>\")`",
+              "`rs.insert(\"<hostname>\")`",
+              "`replica.add(\"<hostname>\")`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "c256f5b0336821e36ab3bc9b",
+            "question": "Which MongoDB shell command should you use to back up a database?",
+            "answer": "mongodump",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "mongodump"
+            ],
+            "options": [
+              "restore",
+              "backup",
+              "mongobackup",
+              "mongodump"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "187ce5784711707cbe3f111b",
+            "question": "Which shell query displays all citizens with an age greater than or equal to 21?",
+            "answer": "`db.citizens.find({age: {$gte: 21}})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.citizens.find({age: {$gte: 21}})`"
+            ],
+            "options": [
+              "`db.citizens.select('WHERE age >= 21')`",
+              "`db.citizens.where('age >= 21')`",
+              "`db.citizens.find('WHERE age >= 21')`",
+              "`db.citizens.find({age: {$gte: 21}})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "966cbeca4876a84b9e1ad007",
+            "question": "What does a MongoDB collection consist of?",
+            "answer": "documents",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "documents"
+            ],
+            "options": [
+              "data",
+              "documents",
+              "fields",
+              "rows"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "80761ab619e3f3b84f638395",
+            "question": "Given an ObjectId in `_id`, how do you get the time it was created?",
+            "answer": "`_id.getTimestamp()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`_id.getTimestamp()`"
+            ],
+            "options": [
+              "`getDateTime(_id)`",
+              "`_id.createDate()`",
+              "`_id.getTimestamp()`",
+              "`_id.getDateTime()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "0fbffceb0f6161ec619beabf",
+            "question": "Given a cursor named myCursor, which command returns a boolean value?",
+            "answer": "`myCursor.hasNext()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`myCursor.hasNext()`"
+            ],
+            "options": [
+              "`myCursor.hasNext()`",
+              "`myCursor.sort()`",
+              "`myCursor.next()`",
+              "`myCursor.find()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "2bee998cc4c49e263cff6464",
+            "question": "Which command returns a specific document in the user's collection?",
+            "answer": "`db.users.find({_id: 1})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.users.find({_id: 1})`"
+            ],
+            "options": [
+              "`db.users.find({_id: 1})`",
+              "`db.users.seek({_id: 1})`",
+              "`db.users.query({_id: 1})`",
+              "`db.query.users({_id: 1})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "b2a07f41ddf0a056d5af7453",
+            "question": "To import a JSON array into Mongo, what flags are needed with MongoDBimport?",
+            "answer": "`--jsonArray`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`--jsonArray`"
+            ],
+            "options": [
+              "`--type jsonArray`",
+              "`--json`",
+              "`--type json`",
+              "`--jsonArray`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "6f864ebf3fa4e4a4d57bdaae",
+            "question": "Choose the shell command that connects to a MongoDB database.",
+            "answer": "mongo",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "mongo"
+            ],
+            "options": [
+              "mongo",
+              "mongod",
+              "mongoconnect",
+              "dbconnect"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "3c4f5016dc9f894f5fb0f216",
+            "question": "In the MongoDB shell, how can you tell if an index was used with a query?",
+            "answer": "`db.customers.find({lastName: 'smith'}).explain()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.find({lastName: 'smith'}).explain()`"
+            ],
+            "options": [
+              "`db.customers.find({lastName: 'smith'}).explain()`",
+              "`db.customers.find({lastName: 'smith'}).perf()`",
+              "`db.customers.find({lastName: 'smith'}).plan()`",
+              "`db.customers.find({lastName: 'smith'}).usedIndex()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "a10680dd208efef69fa47cfb",
+            "question": "Suppose your aggregation pipeline terminated with an exception referring to exceeded memory limit. What is the best way to resolve the issue?",
+            "answer": "Set allowDiskUse to true.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Set allowDiskUse to true."
+            ],
+            "options": [
+              "Set useMemory to twice amount indicated in exception.",
+              "Switch a 64 bit instance of MongoDB.",
+              "Increase the memory of the MongoDB server.",
+              "Set allowDiskUse to true."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "02f834087e13cdd6ad212da7",
+            "question": "What is the recommended way to delete a user?",
+            "answer": "`db.dropUser(\"user\")`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.dropUser(\"user\")`"
+            ],
+            "options": [
+              "`db.deleteUser(\"user\")`",
+              "`db.removeUser(\"user\") DEPRECATED`",
+              "`db.remove(\"user\")`",
+              "`db.dropUser(\"user\")`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "83779700f7caf5b775f8368b",
+            "question": "What the primary database in a replica set fails, when does failover begin?",
+            "answer": "immediately",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "immediately"
+            ],
+            "options": [
+              "once the primary has been down for 10 minutes",
+              "once the primary reboots",
+              "immediately",
+              "after the administrator reboots the primary"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "bb3ae55b5f8ae0ae4faf1c3e",
+            "question": "What is the correct option to set up Kerberos when starting MongoDBd?",
+            "answer": "`--setParameter authenticationMechanisms=GSSAPI`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`--setParameter authenticationMechanisms=GSSAPI`"
+            ],
+            "options": [
+              "`--setParameter authenticationMechanisms=GSSAPI`",
+              "`--setAuthentication=GSSAPI`",
+              "`--setParam auth=K`",
+              "`--setAuth method=Kerberos`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "2eaf8d8dc7835fd1380de56a",
+            "question": "What is the purpose of an arbiter in a replica set?",
+            "answer": "It casts the tie-breaking vote in an election.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It casts the tie-breaking vote in an election."
+            ],
+            "options": [
+              "It monitors replica set and sends email in case of failure",
+              "It casts the tie-breaking vote in an election.",
+              "It holds a backup copy of the database.",
+              "It reboots the failed server."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "c183c3c94d19ab4c26ad6840",
+            "question": "You want to know how many types of items you have in each category. Which query does this?",
+            "answer": "`db.product.aggregate($group: {_id: \"$category\", count: {$sum:1}})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.product.aggregate($group: {_id: \"$category\", count: {$sum:1}})`"
+            ],
+            "options": [
+              "`db.product.group({_id: \"$category\", count: {$sum:1}})`",
+              "`db.product.aggregate($sum: {_id: \"$category\", count: {$group:1}})`",
+              "`db.product.aggregate($group: {_id: \"$category\", count: {$sum:1}})`",
+              "`db.product.aggregate($count: {_id: \"$category\", count: {$group:1}})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "cf55c7e0c9690de326380568",
+            "question": "To restrict the number of records coming back from a query, which command should you use?",
+            "answer": "limit",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "limit"
+            ],
+            "options": [
+              "take",
+              "limit",
+              "max",
+              "skip"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "abed8a16101ac9fa039bb9a3",
+            "question": "You have a collection named restaurants with the geographical information stored in the location property, how do you create a geospatial index on it?",
+            "answer": "`db.restaurants.createIndex({location: \"2dsphere\"})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.restaurants.createIndex({location: \"2dsphere\"})`"
+            ],
+            "options": [
+              "`db.restaurants.createIndex({location: \"2dsphere\"})`",
+              "`db.restaurants.geospatial({location: \"2dsphere\"})`",
+              "`db.restaurants.createIndex(\"2dsphere\":\"location\")`",
+              "`db.restaurants.createIndex({geospatial: \"location\"})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "25e6a58475c8073007f5b8e3",
+            "question": "How do you find documents with a matching item in an embedded array?",
+            "answer": "`db.customers.find ({\"jobs\":\"secretary\"})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.find ({\"jobs\":\"secretary\"})`"
+            ],
+            "options": [
+              "`db.customers.findmatch ({\"jobs\":\"secretary\"})`",
+              "`db.customers.find ({\"jobs:secretary\"})`",
+              "`db.customers.find ({\"jobs\":[\"secretary\"]})`",
+              "`db.customers.find ({\"jobs\":\"secretary\"})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "bbcb6da6619c0f7678e359f4",
+            "question": "Which query bypasses the first 5 customers and returns the next 10?",
+            "answer": "`db.customers.find({}).skip(5).limit(10)`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.find({}).skip(5).limit(10)`"
+            ],
+            "options": [
+              "`db.customers.find({}, {skip: 5, limit: 10})`",
+              "`db.customers.find({}.page(5).take(10))`",
+              "`db.customers.find({}).skip(5).take(10)`",
+              "`db.customers.find({}).skip(5).limit(10)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "b94ffb0114e4fe5398782b3c",
+            "question": "How do you create a text index?",
+            "answer": "`db.customers.createIndex({firstName: \"text\", lastName: \"text\"})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.createIndex({firstName: \"text\", lastName: \"text\"})`"
+            ],
+            "options": [
+              "`db.customers.createIndex({firstName, lastName})`",
+              "`db.customers.createTextIndex({firstName, lastName})`",
+              "`db.customers.createIndex({firstName: \"text\", lastName: \"text\"})`",
+              "`db.customers.createText({firstName: 1, lastName: 1})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "ea1efe705512dbf39ed1ac25",
+            "question": "Assuming you have customers collection with a firstName and lastName field, which is the correct MongoDB shell command to create an index on lastName, then firstName both ascending?",
+            "answer": "`db.customers.createIndex({lastName:1, firstName: 1})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.createIndex({lastName:1, firstName: 1})`"
+            ],
+            "options": [
+              "`db.customers.createIndex(\"lastName, firstName, ASC\")`",
+              "`db.customers.addIndex({lastName:\"ASC\", firstName: \"ASC\"})`",
+              "`db.customers.newIndex({lastName:1, firstName:1})`",
+              "`db.customers.createIndex({lastName:1, firstName: 1})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "2309618ef6eaa481eb3eb1d7",
+            "question": "One of the documents in your collection has an \\_id based upon an older database design and you want to change it. You write an update command to find the document and replace the \\_id but the \\_id isn't changed. How should you fix the issue?",
+            "answer": "You can't. Once set, the \\_id field cannot be changed.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "You can't. Once set, the \\_id field cannot be changed."
+            ],
+            "options": [
+              "Set the replace option to true.",
+              "Use the replaceOne() command instead.",
+              "You can't. Once set, the \\_id field cannot be changed.",
+              "Use the updateOne() command instead."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "b18513348ca063cd424fb10c",
+            "question": "A compound index allows you to \\_ ?",
+            "answer": "Use more than one field per index.",
+            "explanation": "[Reference](https://www.mongodb.com/docs/v6.0/core/index-compound/)",
+            "hint": null,
+            "correctAnswer": [
+              "Use more than one field per index."
+            ],
+            "options": [
+              "Calculate interest quickly.",
+              "Accomplish nothing, since compound indexes aren't allowed in Mongo.",
+              "Use more than one field per index.",
+              "Combine fields in different collations."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "ba07b76787449a8a8dcc0830",
+            "question": "Why are ad-hoc queries useful?",
+            "answer": "They run faster than indexed queries.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "They run faster than indexed queries."
+            ],
+            "options": [
+              "They do not have to use the same operators.",
+              "You do not need to structure the database to support them.",
+              "They autogenerate reports.",
+              "They run faster than indexed queries."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "e435257ebce39a135157f281",
+            "question": "How often do the members of a replica set send heartbeats to each other?",
+            "answer": "every 2 seconds",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "every 2 seconds"
+            ],
+            "options": [
+              "every 2 minutes",
+              "every 5 seconds",
+              "every 2 seconds",
+              "every 10 seconds"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "90a0f959fd56193009773720",
+            "question": "Which command returns all of the documents in the customers collection?",
+            "answer": "`db.customers.find();`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.find();`"
+            ],
+            "options": [
+              "`db.customers.all();`",
+              "`db.find().customers();`",
+              "`db.customers.find();`",
+              "`db.customers.show();`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "5a37e04d78c4324ad072a87b",
+            "question": "Given a cursor named myCursor, pointing to the customers collection, how to you get basic info about it?",
+            "answer": "`myCursor.explain()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`myCursor.explain()`"
+            ],
+            "options": [
+              "`myCursor.stats()`",
+              "`myCursor.dump()`",
+              "`myCursor.info()`",
+              "`myCursor.explain()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "371979d73069e09a205cac4e",
+            "question": "What is true about indexes?",
+            "answer": "They speed up read access while slowing down writes.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "They speed up read access while slowing down writes."
+            ],
+            "options": [
+              "They speed up read access while slowing down writes.",
+              "They secure the database from intruders.",
+              "They speed up reads and writes.",
+              "They speed up write access while slowing down reads."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "13c843ff7570f8ffbbc4fd78",
+            "question": "What is the preferred format to store geospatial data in MongoDB?",
+            "answer": "GeoJSON",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "GeoJSON"
+            ],
+            "options": [
+              "Latitude, longitude",
+              "XML",
+              "GeoJSON",
+              "BSON"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "f72a6a6993e8afa758254e74",
+            "question": "Which programming language is used to write MongoDB queries? (_Alternative_: In the MongoDB shell, what programming language is used to make queries?)",
+            "answer": "JavaScript",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "JavaScript"
+            ],
+            "options": [
+              "Python",
+              "JavaScript",
+              "SQL",
+              "TypeScript"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "17818292dae1475ce5c5379b",
+            "question": "You have two text fields in your document and you'd like both to be quickly searchable. What should you do?",
+            "answer": "Create a text index on each field.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Create a text index on each field."
+            ],
+            "options": [
+              "Create a text index on each field.",
+              "MongoDB is not able to do this.",
+              "Create a compound text index using both fields.",
+              "Create a text index on one field and a single field index on the other."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "081aba65859d8e35afc37f48",
+            "question": "To import a CSV file into MongoDB, which command should you issue?",
+            "answer": "mongoimport",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "mongoimport"
+            ],
+            "options": [
+              "mongorestore",
+              "mongoi",
+              "upload",
+              "mongoimport"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "ce3895dfbeb4ad36ea17e7ea",
+            "question": "In an MongoDB mapReduce command, the reduce function should \\_.",
+            "answer": "not access the data",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "not access the data"
+            ],
+            "options": [
+              "access the database",
+              "be called only when the key has a single value",
+              "access the database only to perform read operations",
+              "not access the data"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "0c9012ba5242080cfc197e1d",
+            "question": "On a newly created collection, which field will have an index?",
+            "answer": "the `_id` field",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "the `_id` field"
+            ],
+            "options": [
+              "the name field",
+              "the ObjectId field",
+              "the `_id` field",
+              "no field will have an index"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "b96761832b6434c74076ef9b",
+            "question": "You have a collection of thousands of students. You'd like to return the second set of 20 documents from the sorted collection. What is the proper order in which to apply the operations?",
+            "answer": "sort, skip, limit",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "sort, skip, limit"
+            ],
+            "options": [
+              "limit, skip, sort",
+              "sort, limit, skip",
+              "limit, sort, skip",
+              "sort, skip, limit"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "ecb8ad757b926aa947b0887a",
+            "question": "You would like the stats() command to return kilobytes instead of bytes. Which command should you run?",
+            "answer": "`db.vehicle.stats(1024)`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.vehicle.stats(1024)`"
+            ],
+            "options": [
+              "`db.vehicle.stats(1024)`",
+              "`db.vehicle.stats(\"kilobytes\")`",
+              "`db.vehicle.stats(true)`",
+              "`db.vehicle.stats(\"kb\")`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "d2a893816ef65fa239941224",
+            "question": "You want to modify an existing index. What is the best way to do this?",
+            "answer": "Delete the original index and create a new index.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Delete the original index and create a new index."
+            ],
+            "options": [
+              "Use the `reIndex()` command to modify the index.",
+              "Delete the original index and create a new index.",
+              "Call the `createIndex()` command with the update option.",
+              "Use the `updateIndex()` command."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "76dfdcaf28f0b85e860a669d",
+            "question": "You need to delete the index you created on the description field. Which command will accomplish this?",
+            "answer": "`db.vehicle.dropIndex(\"description_text\")`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.vehicle.dropIndex(\"description_text\")`"
+            ],
+            "options": [
+              "`db.vehicle.dropIndex(\"description_text\")`",
+              "`db.vehicle.dropIndex({\"description\":\"text\"})`",
+              "`db.vehicle.removeIndex({\"description\":\"text\"})`",
+              "`db.vehicle.removeIndex(\"description_text\")`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "02189aaef47970d9005aea8e",
+            "question": "You would like to know how many different categories you have. Which query will best get the job done?",
+            "answer": "`db.vehicle.distinct(\"category\").length`",
+            "explanation": "**Note**: count() works with find(...) but length works with distinct",
+            "hint": null,
+            "correctAnswer": [
+              "`db.vehicle.distinct(\"category\").length`"
+            ],
+            "options": [
+              "`db.vehicle.distinct(\"category\")`",
+              "`db.vehicle.unique(\"category\")`",
+              "`db.vehicle.distinct(\"category\").count()`",
+              "`db.vehicle.distinct(\"category\").length`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "bfedef26fa3e22eebf7e0e97",
+            "question": "From the MongoDB shell, how do you create a new document in the customers collection?",
+            "answer": "`db.customers.save({name: \"Bob\"})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.save({name: \"Bob\"})`"
+            ],
+            "options": [
+              "`db.customers.add({name: \"Bob\"})`",
+              "`db.customers.save({name: \"Bob\"})`",
+              "`db.customers.create({name: \"Bob\"})`",
+              "`db.customers.new({name: \"Bob\"})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "bb416896a5daa36ef7287b8a",
+            "question": "Which field is required of all MongoDB documents?",
+            "answer": "`_id`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`_id`"
+            ],
+            "options": [
+              "`_id`",
+              "`_name`",
+              "ObjectId",
+              "mongoDB is schema-less so no field is required"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "5d1637e578e51a840d519cf1",
+            "question": "A MongoDB instance has at least what three files?",
+            "answer": "data, namespace, and journal",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "data, namespace, and journal"
+            ],
+            "options": [
+              "data, namespace, and journal",
+              "namespace, journal, and log",
+              "journal, data, and database",
+              "data, log, and journal"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "341bdddada5c4709a2b44a18",
+            "question": "You'd like a set of documents to be returned in last name, ascending order. Which query will accomplish this?",
+            "answer": "`db.persons.find().sort({lastName: 1}}`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.persons.find().sort({lastName: 1}}`"
+            ],
+            "options": [
+              "`db.persons.find().sort({lastName: -1}}`",
+              "`db.persons.find().sort({lastName: 1}}`",
+              "`db.persons.find().sort({lastName: ascending}}`",
+              "`db.persons.find().sort({lastName: $asc}}`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "8d53350c64a39bb684fd35ae",
+            "question": "What is NOT a standard role in MongoDB?",
+            "answer": "delete collections",
+            "explanation": "[Reference](https://www.mongodb.com/docs/v6.0/reference/built-in-roles/#backup-and-restoration-roles)",
+            "hint": null,
+            "correctAnswer": [
+              "delete collections"
+            ],
+            "options": [
+              "restore",
+              "read/write",
+              "dbadmin",
+              "delete collections"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "74bd8018bdda022816fb4ca7",
+            "question": "Which MongoDB shell command deletes a single document?",
+            "answer": "`db.customers.remove({_id: 1});`",
+            "explanation": "**Note:** db.collection.remove() is deprecated in the new mongosh. Use db.collection.deleteOne() or db.collection.deleteMany().\nReferences:\n[db.collection.remove()](https://www.mongodb.com/docs/v6.0/reference/method/db.collection.remove/)\n[db.collection.delete()](https://www.mongodb.com/docs/mongodb-shell/crud/delete/)",
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.remove({_id: 1});`"
+            ],
+            "options": [
+              "`db.customers.delete({_id: 1});`",
+              "`db.customers.drop({_id: 1});`",
+              "`db.drop.customers({_id: 1});`",
+              "`db.customers.remove({_id: 1});`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "4e0eccbe4ba7615e0f50fc03",
+            "question": "Using the MongoDB shell, how do you remove the customer collection and its indexes?",
+            "answer": "`db.customers.drop();`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.drop();`"
+            ],
+            "options": [
+              "`db.customers.remove({}).indexes();`",
+              "`db.customers.remove({});`",
+              "`db.customers.drop();`",
+              "`db.customers.delete();`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "661db3630c3f78a17e0ad243",
+            "question": "By default, applications direct their read operations to which member of the replica set?",
+            "answer": "primary",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "primary"
+            ],
+            "options": [
+              "primary",
+              "arbiter",
+              "secondary",
+              "backup"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "7263674a95e4dde81f2be9e0",
+            "question": "You need to get the names of all the indexes on your current collection. What is the best way to accomplish this?",
+            "answer": "`db.people.getIndexes();`",
+            "explanation": "**Note:** An alternative method in the mongosh shell is listIndexes()\n[Reference](https://www.mongodb.com/docs/v6.0/reference/command/listIndexes/#mongodb-dbcommand-dbcmd.listIndexes)",
+            "hint": null,
+            "correctAnswer": [
+              "`db.people.getIndexes();`"
+            ],
+            "options": [
+              "`db.people.getName();`",
+              "`db.people.reIndex({names: 1});`",
+              "`db.people.getIndexKeys();`",
+              "`db.people.getIndexes();`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "cbba8c9a183313e723028054",
+            "question": "You are going to do a series of updates to multiple records. You find setting the multi option of the update() command too tiresome. What should you do instead?",
+            "answer": "Use the updateMany() command instead",
+            "explanation": "**Note:** An alternative method for db is .update()\n[Reference](https://www.mongodb.com/docs/v6.0/reference/command/update/#mongodb-dbcommand-dbcmd.update)",
+            "hint": null,
+            "correctAnswer": [
+              "Use the updateMany() command instead"
+            ],
+            "options": [
+              "Use the replaceMany() command instead",
+              "Use the updateMulti() command instead",
+              "Use the updateMany() command instead",
+              "Set the global multi option to True"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "3e8a7436b0027d042eaf010f",
+            "question": "To cleanly shut down MongoDB, what command should you use from the MongoDB shell?",
+            "answer": "db.shutdownServer()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "db.shutdownServer()"
+            ],
+            "options": [
+              "quit()",
+              "exit()",
+              "db.shutdownServer()",
+              "db.shutdown()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "5785b1a2cfc5d2e6f368e2cb",
+            "question": "Given a customer collection which includes fields for gender and city, which aggregate pipeline shows the number of female customers in each city? (_Alternative_: How can you view the execution performance statistics for a query?)",
+            "answer": "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number: {$sum: 1}}}, {$sort :{number: -1}}])`",
+            "explanation": "**Note:** If you want to analyze the performance of a query use .explain(\"executionStats\")\n[Reference](https://www.mongodb.com/docs/v6.0/tutorial/analyze-query-plan/)",
+            "hint": null,
+            "correctAnswer": [
+              "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number: {$sum: 1}}}, {$sort :{number: -1}}])`"
+            ],
+            "options": [
+              "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number: {$sum: 1}}}, {$sort :{number: -1}}])`",
+              "`db.members.find({$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number: {$sum: 1}}}.$sort ({number: -1})`",
+              "`db.members.find([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number: {$sum: 1}}}, {$sort :{number: -1}}])`",
+              "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$sort :{number: -1}}])`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "4dabf6f88c0a04c0eafa8c44",
+            "question": "When no parameters are passed to `explain()`, what mode does it run in?",
+            "answer": "queryPlanner mode",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "queryPlanner mode"
+            ],
+            "options": [
+              "wireTiger mode",
+              "executionStats mode",
+              "queryPlanner mode",
+              "allPlansExecution mode"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "cd5edcafcfcfe34a82d974e1",
+            "question": "What is the correct query to find all of the people who have a home phone number defined?",
+            "answer": "`db.person.find({homePhone: {$exists: true}});`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.person.find({homePhone: {$exists: true}});`"
+            ],
+            "options": [
+              "`db.person.find({exists: 'homePhone'});`",
+              "`db.person.exists({homePhone: true});`",
+              "`db.person.find({homePhone: {$exists: true}});`",
+              "`db.person.has('homePhone');`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "e0bc604cbfadb8794996deac",
+            "question": "Which file in the MongoDB directly holds the MongoDB daemon?",
+            "answer": "mongod",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "mongod"
+            ],
+            "options": [
+              "mongodb",
+              "mongo-daemon",
+              "daemon",
+              "mongod"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "f10424cc5e540407ad651af0",
+            "question": "You have just secured your previously unsecured MongoDB server, but the server is still not requiring authentication. What is the best option?",
+            "answer": "Restart the `mongod` process.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Restart the `mongod` process."
+            ],
+            "options": [
+              "Restart the `mongod` process.",
+              "Issue the `secure()` command.",
+              "Issue the `mongoimport` command.",
+              "Issue the `authenticate()` command."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "137497fee10e7dba30b81013",
+            "question": "What is the most accurate statement regarding MongoDB and ad hoc queries?",
+            "answer": "MongoDB allows ad hoc queries.",
+            "explanation": "**Note:** You don't need an index to perform ad hoc queries. Only pick one choice\n[Reference](https://www.mongodb.com/docs/v6.3/query-api/)",
+            "hint": null,
+            "correctAnswer": [
+              "MongoDB allows ad hoc queries."
+            ],
+            "options": [
+              "MongoDB does not allow ad hoc queries; all queries require an index.",
+              "Ad hoc queries are allowed only in the paid version.",
+              "Ad hoc queries are allowed only through the ad hoc command.",
+              "MongoDB allows ad hoc queries."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "05ca3f71bd452065e474ec87",
+            "question": "In MongoDB, what does a projection do?",
+            "answer": "allows you to select which fields should be in the return data",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "allows you to select which fields should be in the return data"
+            ],
+            "options": [
+              "allows you to do a calculation on the results",
+              "allows you to run queries on the server",
+              "allows you to select which fields should be in the return data",
+              "allows you to format the results for a display"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "bad4773161d1cc2886716bf4",
+            "question": "To remove a database and all of its records from MongoDB, what operator should you use?",
+            "answer": "`dropDatabase()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`dropDatabase()`"
+            ],
+            "options": [
+              "`dropDatabase()`",
+              "`removeAll()`",
+              "`clear()`",
+              "`deleteDatabase()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "8ead110490b25448ba8442ad",
+            "question": "What option can be passed to start the MongoDB shell without connecting to a database?",
+            "answer": "`-nodb`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`-nodb`"
+            ],
+            "options": [
+              "`-db=null`",
+              "`--shell-only`",
+              "`--free`",
+              "`-nodb`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "3797969c09dd2cf4e30382df",
+            "question": "How can you improve the appearance of the output JSON that contains the `_id`?",
+            "answer": "`Use db.collection.find().pretty()`",
+            "explanation": "[Reference:](https://www.mongodb.com/docs/manual/reference/method/cursor.pretty/)",
+            "hint": null,
+            "correctAnswer": [
+              "`Use db.collection.find().pretty()`"
+            ],
+            "options": [
+              "`Use db.collection.set({$_id:pretty})`",
+              "`Use db.collection.find().pretty()`",
+              "`Use db.collection.format(numeric)`",
+              "`Use $_id = value`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "8698573fbeb79b27d00bc0f0",
+            "question": "What happens to a Replica set oplog if it runs out of memory?",
+            "answer": "`The oplog is capped collection and can't run out of memory`",
+            "explanation": "**Argument:**\n_Why \"The oplog will be saved on one of the secondary servers.\" is wrong:_\n> MongoDB applies database operations on the primary and then records the operations on the primary's oplog. The secondary members then copy and apply these operations in an asynchronous process. All replica set members contain a copy of the oplog, in the local.oplog.rs collection, which allows them to maintain the current state of the database.\n_Reasoning behind the right answer:_\n> The oplog (operations log) is a special capped collection that keeps a rolling record of all operations that modify the data stored in your databases.\n> Unlike other capped collections, the oplog can grow past its configured size limit to avoid deleting the majority commit point.",
+            "hint": null,
+            "correctAnswer": [
+              "`The oplog is capped collection and can't run out of memory`"
+            ],
+            "options": [
+              "`The oplog will be saved on one of the secondary servers.`",
+              "`The oplog is capped collection and can't run out of memory`",
+              "`The MongoDB instance will fail`",
+              "`The oplog will stop recording logging information`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "ba4478a94f9070b45e7148f6",
+            "question": "MongoDB ships with a variety of files. Which file runs the MongoDB shell?",
+            "answer": "mongo",
+            "explanation": "**Note:** mongosh is the new mongo shell, mongo is deprecated.\nStarting in MongoDB v5.0,\nmongosh\nreplaces mongo as the preferred shell.\n[Reference:] (https://www.mongodb.com/docs/mongodb-shell/)",
+            "hint": null,
+            "correctAnswer": [
+              "mongo"
+            ],
+            "options": [
+              "mongo",
+              "mongo-s",
+              "shell",
+              "mongo-shell"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "6ea82da806c4efc21e0cca08",
+            "question": "How can you view the execution performance statistics for a query?",
+            "answer": "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number:{$sum:1}}}, {$sort: {number:-1}}]).explain(\"executionStats\")`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number:{$sum:1}}}, {$sort: {number:-1}}]).explain(\"executionStats\")`"
+            ],
+            "options": [
+              "`db.performance.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id:{city:\"$city\"}, number: {$sum: 1}}}, {$sort : {number: -1}}])`",
+              "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group: {_id: {city: \"$city\"}, number:{$sum:1}}}, {$sort: {number:-1}}]).explain(\"executionStats\")`",
+              "`db.members.aggregate([ {$match: {gender: \"Female\"}}, {$group:{_id: {city: \"$city\"}, number: {$sum: 1}}}, {$sort: {number: -1}}]).explain()`",
+              "`db.members.aggregate([ {$match: {gender: \"\"\"Female\"\"\"}}, {$group: {_id: {city: \"\"\"$city\"\"\"}, number: {$sum:1}}}, {$sort: {number: -1}}]).number()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "48ea3f47be4db448d98730c4",
+            "question": "From the MongoDB shell, how do you execute a JavaScript file named list.js?",
+            "answer": "`load('list.js)`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`load('list.js)`"
+            ],
+            "options": [
+              "`node 'list.js'`",
+              "`exec('list.js)`",
+              "`run('list.js)`",
+              "`load('list.js)`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "57fc9e1115670462fe89a5fe",
+            "question": "Which MongoDB shell query will sort the customer's collection by name descending?",
+            "answer": "`db.customers.find({}).sort({name: -1})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.find({}).sort({name: -1})`"
+            ],
+            "options": [
+              "`db.customers.sort({name: -1}.find({})`",
+              "`db.customers.sort({name: -1})`",
+              "`db.customers.find({}).sort({name: -1})`",
+              "`db.customers.find({}).sort({name: 1})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "913dd576b2531e9de8e1be40",
+            "question": "Suppose you are using the `mongoimport` command to import personnel data and there is a unique index on the email field. What happens when there are duplicate emails in the import?",
+            "answer": "The import command doesn't import the bad document but does import the rest.",
+            "explanation": "**Note:** By default, mongoimport continues an operation when it encounters duplicate key and document validation errors.\n[Reference](https://www.mongodb.com/docs/database-tools/mongoimport/#std-option-mongoimport.--stopOnError)",
+            "hint": null,
+            "correctAnswer": [
+              "The import command doesn't import the bad document but does import the rest."
+            ],
+            "options": [
+              "The import command aborts without importing any records.",
+              "The import command imports records upto but not including the record, and then aborts.",
+              "The import command doesn't import the bad document but does import the rest.",
+              "The import command prompts you to correct the bad record."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "d5c67e1f23a6aa0f141d7b5a",
+            "question": "You have a collection with millions of documents. Each time you attempt to sort. MongoDB runs out of memory. What might help?",
+            "answer": "Create an index on the field you are sorting.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Create an index on the field you are sorting."
+            ],
+            "options": [
+              "Use the purge operator before the sort.",
+              "Return the entire collection and sort on the client.",
+              "Pass the --more-memory option.",
+              "Create an index on the field you are sorting."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "32d1999dd395d92153e0c818",
+            "question": "You need to be able to quickly find a word in a text field. What should you do?",
+            "answer": "Create a text index on the field and do a $text Query.",
+            "explanation": "Argument: You need a text index in order to perform a $text query on a field. $text query uses the text index under the hood\nReferences:\n[$text query](https://www.mongodb.com/docs/v6.0/reference/operator/query/text/#examples)\n[Text index](https://www.mongodb.com/docs/v6.0/core/index-text/)",
+            "hint": null,
+            "correctAnswer": [
+              "Create a text index on the field and do a $text Query."
+            ],
+            "options": [
+              "Create a text index on the field and do a $text Query.",
+              "Create a single field index in descending order, and do a query for the word.",
+              "Do a $text query.",
+              "Create a $regex on the fields, and do a $regex query."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "002e679b11c37c21f78ee53f",
+            "question": "Which field is always included in a projection unless specifically excluded?",
+            "answer": "`_id`",
+            "explanation": "[Reference](https://docs.mongodb.com/manual/reference/operator/aggregation/project/#definition)",
+            "hint": null,
+            "correctAnswer": [
+              "`_id`"
+            ],
+            "options": [
+              "index",
+              "Name",
+              "`_id`",
+              "row number"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "5624d5decfeb02a8201dac75",
+            "question": "After installing MongoDB on your machine, what must you do before launching Mongo?",
+            "answer": "Create a data directory.",
+            "explanation": "Note: The question in case is ambiguous. In the mongo docs, on the Windows Installation section, it clearly specifies the need for creating a data directory. However, that does not seem to be the case for Unix based systems. So, that gives use the closest possible solution for a specific platform. If we extrapolate that to the question, that seems to be the most reasonable solution.\n[mongodb site](https://docs.mongodb.com/manual/tutorial/verify-mongodb-packages/#verify-integrity-of-mongodb-packages)",
+            "hint": null,
+            "correctAnswer": [
+              "Create a data directory."
+            ],
+            "options": [
+              "Create a user account.",
+              "Register online.",
+              "Create a data directory.",
+              "Establish security credentials."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "868a3691ff375eb2339ffc4a",
+            "question": "How does a --jsonArray file need to be structured?",
+            "answer": "as a properly formatted JSON array",
+            "explanation": "[Section blog](https://www.section.io/engineering-education/handling-json-in-mongodb/)",
+            "hint": null,
+            "correctAnswer": [
+              "as a properly formatted JSON array"
+            ],
+            "options": [
+              "as a properly formatted JSON array",
+              "as YAML",
+              "as plain text",
+              "as a BSON object"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "f10d890fe360ed4aab87a306",
+            "question": "From the MongoDB shell, how do you display all of a database's memory usage?",
+            "answer": "`db.stats()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.stats()`"
+            ],
+            "options": [
+              "`db.size()`",
+              "`db.info()`",
+              "`db.memory()`",
+              "`db.stats()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "32edf5e3802acbdc3c0091f6",
+            "question": "How do you create a new MongoDB user?",
+            "answer": "`db.createUser({})`",
+            "explanation": "[MongoDB documentation](https://docs.mongodb.com/manual/tutorial/create-users/)",
+            "hint": null,
+            "correctAnswer": [
+              "`db.createUser({})`"
+            ],
+            "options": [
+              "`db.createUser({})`",
+              "`db.insert({user: 1})`",
+              "`db.customers.newUser({})`",
+              "`db.newUser({})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "85e79ff81c74bdd1a2052fef",
+            "question": "What is the internal data structure of a MongoDB document?",
+            "answer": "BSON (Binary JSON)",
+            "explanation": "[MongoDB documentation](https://www.mongodb.com/docs/manual/core/document/)\n[JSON and BSON](https://www.mongodb.com/json-and-bson)",
+            "hint": null,
+            "correctAnswer": [
+              "BSON (Binary JSON)"
+            ],
+            "options": [
+              "JSON (JavaScript Object Notation)",
+              "BSON (Binary JSON)",
+              "ORM (object relational mode)",
+              "MBF (MongoDB binary format)"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "ddc8089f8e0b7917d4138924",
+            "question": "Which projection shows only the FirstName and lastName fields of a document in the customers collection?",
+            "answer": "`db.customers.find({}, {_id:0, firstName: 1, lastName: 1})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.find({}, {_id:0, firstName: 1, lastName: 1})`"
+            ],
+            "options": [
+              "`db.customers.find({}, {firstName: 1, lastName: 1})`",
+              "`db.customers.find({}, {_id:0, firstName: 1, lastName: 1})`",
+              "`db.customers.find({_id: 0, year: 1, maek: 1, model: 1})`",
+              "`db.customers.find({}).project({firstName: 1, lastName: 1})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "b98c87cb007ef2a8dcc16a79",
+            "question": "Documents in mongodb are atomic at the \\_\\_\\_ level",
+            "answer": "document",
+            "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/core/write-operations-atomicity/#:~:text=In%20MongoDB%2C%20a%20write%20operation,documents%20within%20a%20single%20document.)",
+            "hint": null,
+            "correctAnswer": [
+              "document"
+            ],
+            "options": [
+              "database",
+              "field",
+              "no",
+              "document"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "07fcc19cd80d0d4a4f08a6b5",
+            "question": "What should the priority of a member be in order to prevent it from becoming the primary in replica set?",
+            "answer": "0",
+            "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/tutorial/configure-secondary-only-replica-set-member/#assign-priority-value-of-0)",
+            "hint": null,
+            "correctAnswer": [
+              "0"
+            ],
+            "options": [
+              "1",
+              "null",
+              "0",
+              "-1"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "d85ae22e1f11ba75f733b270",
+            "question": "You need to add an index to the large name collection in your production database. You do not want to have disruption of service for your users and you can't afford to have a team to do the work during after hours. What should you do?",
+            "answer": "Use the createIndex() command with the option background = true.",
+            "explanation": "[MongoDB reference](https://www.mongodb.com/docs/v4.0/reference/method/db.collection.createIndex/#options)\n_Concurrency Changed in version 4.2._\n_MongoDB uses an optimized build process that obtains and holds an exclusive lock on the specified collection at the start and end of the index build. All subsequent operations on the collection must wait until createIndex() releases the exclusive lock._\n_createIndex() allows interleaving read and write operations during the majority of the index build._\nFor more information on the locking behavior of\ncreateIndex(), see Index Builds on Populated Collections.",
+            "hint": null,
+            "correctAnswer": [
+              "Use the createIndex() command with the option background = true."
+            ],
+            "options": [
+              "Use the reIndex() command to add the index quickly.",
+              "Use the createIndex() command with the option background = true.",
+              "Use the createIndex() command.",
+              "Use the createIndex() command with the option parallel = true."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "7e013755d9fbff595055bbf5",
+            "question": "When using aggregation $convert. which is not a parameter?",
+            "answer": "output",
+            "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/reference/operator/aggregation/convert/#definition)",
+            "hint": null,
+            "correctAnswer": [
+              "output"
+            ],
+            "options": [
+              "input",
+              "output",
+              "to",
+              "onError"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "b3f96a7931c09a2466785122",
+            "question": "All tag values in tag sets must be \\_.",
+            "answer": "strings",
+            "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/core/read-preference-tags/)",
+            "hint": null,
+            "correctAnswer": [
+              "strings"
+            ],
+            "options": [
+              "JSON",
+              "integers",
+              "strings",
+              "XML"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "58f25bb6e24656bf25294acd",
+            "question": "When using the mongoimport command, how can you drop the database before importing?",
+            "answer": "Drop the database manually before importing.",
+            "explanation": "Argument: There is no -d option in the docs (https://www.mongodb.com/docs/database-tools/mongoimport/#options.)\n**Note:** Assuming you are asked to drop a collection instead while importing, the use the --drop option.",
+            "hint": null,
+            "correctAnswer": [
+              "Drop the database manually before importing."
+            ],
+            "options": [
+              "Use the -d option.",
+              "Use the mongooverwrite command instead of mongoimport.",
+              "Use the -drop option.",
+              "Drop the database manually before importing."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "d7f35982702b01fe755b1a9e",
+            "question": "To import a CSV file into MongoDB, which command should you issue?",
+            "answer": "mongoimport",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "mongoimport"
+            ],
+            "options": [
+              "upload",
+              "mongorestore",
+              "mongoi",
+              "mongoimport"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "ea1aad8ff8268267dd50bfd4",
+            "question": "A critical record must be replicated to the two other servers in the set. Which query guarantees that it is inserted as desired?",
+            "answer": "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { w: 2, j:true, wtimeout: 5000} })`",
+            "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/reference/write-concern/)",
+            "hint": null,
+            "correctAnswer": [
+              "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { w: 2, j:true, wtimeout: 5000} })`"
+            ],
+            "options": [
+              "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { w: 2, wtimeout: 5000} })`",
+              "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { j: true} })`",
+              "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { w: 2, j:false, wtimeout: 5000} })`",
+              "`db.inventory.insert({ prodid: \"tab1122\", qty : 10}, { writeConcern: { w: 2, j:true, wtimeout: 5000} })`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "a0ace1697528123d0ae80abd",
+            "question": "What is the name of the default file used to configure MongoDB?",
+            "answer": "mongod.conf",
+            "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/reference/configuration-options/)",
+            "hint": null,
+            "correctAnswer": [
+              "mongod.conf"
+            ],
+            "options": [
+              "mongo.config",
+              "mongod.conf",
+              "config.sys",
+              ".mdbconfig"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "89849073afdf09cc12777ce8",
+            "question": "After using the dropIndexes() command on your collection, one index remains.What can you do to drop the the remaining index?",
+            "answer": "The required_id index cannot be deleted.",
+            "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/reference/method/db.collection.dropIndex/)",
+            "hint": null,
+            "correctAnswer": [
+              "The required_id index cannot be deleted."
+            ],
+            "options": [
+              "Use dropIndexes({all:1}) with the all parameter.",
+              "The required_id index cannot be deleted.",
+              "Call dropIndex({\"<em>id</em>\":1}) to force its removal.",
+              "Call dropIndex({\"<em>id</em>\"}) to force its removal."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "ca95eab1f6d8a74922ccbed9",
+            "question": "To scale horizontally, what does MongoDB use?",
+            "answer": "sharding",
+            "explanation": "[MongoDB reference](https://www.mongodb.com/basics/scaling)",
+            "hint": null,
+            "correctAnswer": [
+              "sharding"
+            ],
+            "options": [
+              "sharding",
+              "replication",
+              "partition",
+              "backup"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "267ba792374207fb077774dd",
+            "question": "Your database collection holds web session information. One field, lastActivity, holds the timestamp of when the user was last active. You want to delete the user session after 30 minutes of inactivity. What is your best option?",
+            "answer": "Create a TTL index on the lastActivity field and set expireAfterSeconds to 1800.",
+            "explanation": "[MongoDB reference](https://www.mongodb.com/docs/manual/core/index-ttl/)",
+            "hint": null,
+            "correctAnswer": [
+              "Create a TTL index on the lastActivity field and set expireAfterSeconds to 1800."
+            ],
+            "options": [
+              "Create Javascript function called via an interval timeout to delete all records older than 30 minutes.",
+              "Create a TTL index on the lastActivity field and set expireAfterSeconds to 1800.",
+              "You have to create a stored procedure.",
+              "Every time you create a new record for expired older records and delete them."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "95f511f3d09737b42207194d",
+            "question": "In the MongoDB shell, how can you tell if an index was used with a query?",
+            "answer": "`db.customers.find({lastName: 'smith'}).explain()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.find({lastName: 'smith'}).explain()`"
+            ],
+            "options": [
+              "`db.customers.find({lastName: 'smith'}).explain()`",
+              "`db.customers.find({lastName: 'smith'}).perf()`",
+              "`db.customers.find({lastName: 'smith'}).plan()`",
+              "`db.customers.find({lastName: 'smith'}).usedIndex()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "870e48fcd76b83a185fe1cda",
+            "question": "You need to be able to quickly find a word in a text field. What should you do?",
+            "answer": "Create a text index on the field and do a $text Query.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Create a text index on the field and do a $text Query."
+            ],
+            "options": [
+              "Create a text index on the field and do a $text Query.",
+              "Create a single field index in descending order, and do a query for the word.",
+              "Do a $text query.",
+              "Create a $regex on the fields, and do a $regex query."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "9d1a55f2a8179be4413a899a",
+            "question": "What is the name of the default file used to configure MongoDB?",
+            "answer": "mongod.conf",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "mongod.conf"
+            ],
+            "options": [
+              "mongo.config",
+              "mongod.conf",
+              "config.sys",
+              ".mdbconfig"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "a7befc5a48791eaa0c69707a",
+            "question": "You have a collection named restaurants with the geographical information stored in the location property, how do you create a geospatial index on it?",
+            "answer": "`db.restaurants.createIndex({location: \"2dsphere\"})`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.restaurants.createIndex({location: \"2dsphere\"})`"
+            ],
+            "options": [
+              "`db.restaurants.createIndex({location: \"2dsphere\"})`",
+              "`db.restaurants.geospatial({location: \"2dsphere\"})`",
+              "`db.restaurants.createIndex(\"2dsphere\":\"location\")`",
+              "`db.restaurants.createIndex({geospatial: \"location\"})`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "4506a9f91357c16e7a4d84ca",
+            "question": "What happens to a Replica set oplog if it runs out of memory?",
+            "answer": "`The oplog is capped collection and can't run out of memory`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`The oplog is capped collection and can't run out of memory`"
+            ],
+            "options": [
+              "`The oplog will be saved on one of the secondary servers.`",
+              "`The oplog is capped collection and can't run out of memory`",
+              "`The MongoDB instance will fail`",
+              "`The oplog will stop recording logging information`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "2054e77a76767583c66b48d4",
+            "question": "Using the MongoDB shell, how do you remove the customer collection and its indexes?",
+            "answer": "`db.customers.drop();`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`db.customers.drop();`"
+            ],
+            "options": [
+              "`db.customers.remove({}).indexes();`",
+              "`db.customers.remove({});`",
+              "`db.customers.drop();`",
+              "`db.customers.delete();`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "988e40deb6be1c7df2232baa",
+            "question": "What is the primary advantage of using MongoDB as a NoSQL database over traditional relational databases?",
+            "answer": "Schema flexibility",
+            "explanation": "_Explanation_ : MongoDB's primary advantage as a NoSQL database over traditional relational databases is its schema flexibility.",
+            "hint": null,
+            "correctAnswer": [
+              "Schema flexibility"
+            ],
+            "options": [
+              "Better support for complex joins",
+              "Schema flexibility",
+              "ACID compliance",
+              "Fixed data structure"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "eadb75e53a8fbab63941a389",
+            "question": "What is a Replica Set in MongoDB?",
+            "answer": "A group of MongoDB servers that maintain the same data set",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "A group of MongoDB servers that maintain the same data set"
+            ],
+            "options": [
+              "A set of related database collections",
+              "A group of MongoDB servers that maintain the same data set",
+              "A type of database index in MongoDB",
+              "A query language for MongoDB"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "1114ca3017e6632ac2b1b54b",
+            "question": "Which command is used to create a new database in MongoDB?",
+            "answer": "`use`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`use`"
+            ],
+            "options": [
+              "`createDatabase()`",
+              "`useDatabase()`",
+              "`db.createDatabase()`",
+              "`use`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "358e220bf58e325a1c7e854a",
+            "question": "What is the default port number for MongoDB?",
+            "answer": "27017",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "27017"
+            ],
+            "options": [
+              "27017",
+              "3306",
+              "5432",
+              "8080"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "94bbfdef337de0675a6f5dcd",
+            "question": "Which of the following is a BSON data type in MongoDB?",
+            "answer": "Date",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Date"
+            ],
+            "options": [
+              "Integer",
+              "Float",
+              "Date",
+              "String"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "839079dbc96ad35df9cdd158",
+            "question": "What is the purpose of an index in MongoDB?",
+            "answer": "To improve query performance",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "To improve query performance"
+            ],
+            "options": [
+              "To define the structure of a document",
+              "To improve query performance",
+              "To group related documents together",
+              "To store binary data"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "8a955ffcd8badb4d3b36250e",
+            "question": "Which operator is used for equality in MongoDB queries?",
+            "answer": "`$eq`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`$eq`"
+            ],
+            "options": [
+              "`$eq`",
+              "`$ne`",
+              "`$gt`",
+              "`$lt`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "b589d6863f6069fa0a49ba57",
+            "question": "What is the role of the `mongod` process in MongoDB?",
+            "answer": "It is the primary daemon process for the MongoDB server",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It is the primary daemon process for the MongoDB server"
+            ],
+            "options": [
+              "It is the MongoDB shell",
+              "It is the primary daemon process for the MongoDB server",
+              "It is responsible for data replication",
+              "It is a tool for importing and exporting data"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "b2a6014e667ad3abe0054991",
+            "question": "Which method is used to remove a single document from a collection in MongoDB?",
+            "answer": "deleteOne()",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "deleteOne()"
+            ],
+            "options": [
+              "deleteOne()",
+              "removeOne()",
+              "drop()",
+              "remove()"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "49bd3924cfcc981ae2cf167e",
+            "question": "What is a GridFS in MongoDB?",
+            "answer": "A way to store large files in MongoDB",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "A way to store large files in MongoDB"
+            ],
+            "options": [
+              "A distributed file system",
+              "A system for managing database transactions",
+              "A way to store large files in MongoDB",
+              "A type of database index"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "5276083cc722dea688a6fb97",
+            "question": "Which aggregation stage in MongoDB is used to group documents by a specified expression and apply an accumulator expression to each group?",
+            "answer": "`$group`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`$group`"
+            ],
+            "options": [
+              "`$group`",
+              "`$match`",
+              "`$project`",
+              "`$sort`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "6c7330c34e59e272a021c25b",
+            "question": "What is sharding in MongoDB?",
+            "answer": "The process of distributing data across multiple servers",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "The process of distributing data across multiple servers"
+            ],
+            "options": [
+              "The process of dividing a database into multiple collections",
+              "The process of dividing a collection into multiple documents",
+              "The process of dividing a database into multiple smaller databases",
+              "The process of distributing data across multiple servers"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "cd1578024bf2ea5888287b5e",
+            "question": "Which operation is used to update a document in MongoDB?",
+            "answer": "`update()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`update()`"
+            ],
+            "options": [
+              "`update()`",
+              "`modify()`",
+              "`change()`",
+              "`set()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "dffcbcd970d8ae6d199ef078",
+            "question": "What is a TTL index in MongoDB?",
+            "answer": "An index that automatically expires documents after a specified amount of time",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "An index that automatically expires documents after a specified amount of time"
+            ],
+            "options": [
+              "An index used for full-text search",
+              "An index that automatically expires documents after a specified amount of time",
+              "An index used for sorting documents in descending order",
+              "An index used for geospatial queries"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "d9b2c5a107da00dc45358b04",
+            "question": "Which command is used to limit the number of documents returned in a MongoDB query?",
+            "answer": "`limit()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`limit()`"
+            ],
+            "options": [
+              "`limit()`",
+              "`count()`",
+              "`max()`",
+              "`skip()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "38258c6c31569a629772c9c8",
+            "question": "What is a compound index in MongoDB?",
+            "answer": "An index that combines multiple fields",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "An index that combines multiple fields"
+            ],
+            "options": [
+              "An index that combines multiple fields",
+              "An index that spans multiple collections",
+              "An index used for complex mathematical operations",
+              "An index used for querying nested documents"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "d683a92208587b9cf51ee3be",
+            "question": "Which operator is used to perform a logical OR operation in MongoDB queries?",
+            "answer": "`$or`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`$or`"
+            ],
+            "options": [
+              "`$or`",
+              "`$and`",
+              "`$not`",
+              "`$nor`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "840144dd4f673954a37ae829",
+            "question": "What is a covered query in MongoDB?",
+            "answer": "A query that uses a covered index",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "A query that uses a covered index"
+            ],
+            "options": [
+              "A query that returns covered documents",
+              "A query that covers multiple collections",
+              "A query that uses a covered cursor",
+              "A query that uses a covered index"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "0abea532682acfd737aafd2d",
+            "question": "Which method is used to create an index in MongoDB?",
+            "answer": "`createIndex()`",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "`createIndex()`"
+            ],
+            "options": [
+              "`addIndex()`",
+              "`index()`",
+              "`createIndex()`",
+              "`makeIndex()`"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "ba2fddca2a9166038bf0a81f",
+            "question": "What is a compound shard key in MongoDB?",
+            "answer": "A key made up of multiple fields used for sharding",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "A key made up of multiple fields used for sharding"
+            ],
+            "options": [
+              "A key made up of multiple fields used for sharding",
+              "A key used for encrypting data",
+              "A key used for sorting documents in ascending order",
+              "A key used for grouping documents"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "6406943c54ba916788abda3a",
+            "question": "What is the purpose of the `mongos` process in MongoDB?",
+            "answer": "It is a routing service for sharded clusters",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "It is a routing service for sharded clusters"
+            ],
+            "options": [
+              "It is a tool for monitoring server performance",
+              "It is a tool for managing database backups",
+              "It is a routing service for sharded clusters",
+              "It is a tool for importing and exporting data"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "585ac8547f1c0594a271d5a4",
+            "question": "With regards to indexes, what is the difference between dropping a collection and deleting all documents in a collection?",
+            "answer": "drop() removes the collection and indexes; deleteMany({}) removes documents only (indexes remain).",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "drop() removes the collection and indexes; deleteMany({}) removes documents only (indexes remain)."
+            ],
+            "options": [
+              "drop() removes the collection and indexes; deleteMany({}) removes documents only (indexes remain).",
+              "drop() removes docs but keeps indexes.",
+              "Both actions behave the same.",
+              "deleteMany() also removes indexes automatically."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "caf28fc0af6d7ce05d04d915",
+            "question": "Which operation invalidates all active cursors on a collection?",
+            "answer": "Dropping the collection",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "Dropping the collection"
+            ],
+            "options": [
+              "Dropping the collection",
+              "Running a find() query",
+              "Creating an index",
+              "Updating multiple documents"
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          },
+          {
+            "id": "ebc9672dd18846f73bdc6c9a",
+            "question": "What happens to the _id index when you clone a collection using db.collection.aggregate([{ $out: \"newCol\" }])?",
+            "answer": "A new _id index is automatically created on newCol.",
+            "explanation": null,
+            "hint": null,
+            "correctAnswer": [
+              "A new _id index is automatically created on newCol."
+            ],
+            "options": [
+              "The original _id index is copied exactly.",
+              "The new collection has no _id index.",
+              "A new _id index is automatically created on newCol.",
+              "The _id index is created only if explicitly specified."
+            ],
+            "nature": "ChooseOne",
+            "attachments": [],
+            "setId": "40969c73aade52a01879f9d9",
+            "quizzId": "ebee15929f583a0cf8bca77c"
+          }
+        ]
       }
     ]
   },
   "meta": {
     "source": "mongodb/mongodb-quiz.md",
-    "language": "md",
-    "generatedAt": "2025-12-09T14:56:14.372013+00:00",
+    "languages": [
+      "md"
+    ],
+    "generatedAt": "2025-12-09T23:10:17.416700+00:00",
     "warnings": []
   }
 }
